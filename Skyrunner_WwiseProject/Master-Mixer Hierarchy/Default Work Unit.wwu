@@ -9,6 +9,34 @@
 							<ObjectRef Name="System" ID="{E91ADA0B-490E-4228-84AF-22DC5116ACA0}" WorkUnitID="{69D16C6A-8CBD-41F2-91C9-0ADAE7074EDE}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="PlayerMaster" ID="{880F05A2-569A-4D55-B7A0-1CD87FD195D0}">
+							<ChildrenList>
+								<Bus Name="PlayerLocomotion" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}"/>
+								<Bus Name="PlayerWeapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}"/>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="NPCMaster" ID="{94354A62-2693-4A27-B098-F5FDE5B577C5}"/>
+						<Bus Name="AmbientMaster" ID="{1260EBDA-2D71-42A1-A3E2-A2832FF41985}">
+							<ChildrenList>
+								<Bus Name="AmbientBeds" ID="{3D306ABA-2B79-4C6F-B0C4-887FF5287F6F}">
+									<ChildrenList>
+										<Bus Name="2DAmbientBeds" ID="{9F89B372-3238-4882-829C-1D743E3D17E7}"/>
+									</ChildrenList>
+								</Bus>
+								<Bus Name="3DAmbience" ID="{7F98D6D4-F50F-4CD2-AA30-29F04ADD57C2}"/>
+								<Bus Name="2DAmbience" ID="{7444C4FB-63F6-4F2E-9A73-66D09EEEFAE1}"/>
+							</ChildrenList>
+						</Bus>
+						<AuxBus Name="Reverbs" ID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}">
+							<ChildrenList>
+								<AuxBus Name="LargeRoom" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"/>
+								<AuxBus Name="SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}"/>
+								<AuxBus Name="Cave" ID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}"/>
+							</ChildrenList>
+						</AuxBus>
+						<Bus Name="UIMaster" ID="{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}"/>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

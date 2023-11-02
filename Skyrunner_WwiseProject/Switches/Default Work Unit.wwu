@@ -1,6 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{C36F0D05-B855-4511-9237-C96EA2F8E413}" SchemaVersion="110">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{C36F0D05-B855-4511-9237-C96EA2F8E413}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{C36F0D05-B855-4511-9237-C96EA2F8E413}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="GroundMaterialSwitch" ID="{9D29D1E1-5500-4801-B968-D812A1417C9E}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="20"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Ice" ID="{FB0B8B6F-9F97-49C4-AFB6-3AA7208FAD66}"/>
+						<Switch Name="Snow" ID="{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}"/>
+						<Switch Name="Gravel" ID="{08A1937D-A457-41B0-A1DD-40DEEB125E58}"/>
+						<Switch Name="Metal" ID="{067272CA-59B0-48BD-81F5-F5600CE65A57}"/>
+						<Switch Name="Wood" ID="{31D40FF0-50B0-41F0-8BED-7D8E39644E38}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_GroundMaterial" ID="{05992564-76FB-4584-948F-C0F4109BF542}"/>
+						<Curve Name="" ID="{2D52C7FA-C19A-45AB-888C-704219BD7E0A}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>1</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>2</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>3</XPos>
+									<YPos>4</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>4</XPos>
+									<YPos>5</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>5</XPos>
+									<YPos>5</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+				<SwitchGroup Name="PlayerSpeedSwitch" ID="{3CDF8300-7330-4784-9075-47D68391D5E2}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Stopped" ID="{2C307309-F91B-4D77-AF29-DEBCBFD72347}"/>
+						<Switch Name="Accelerate" ID="{12994FF5-E12F-4682-A9D9-C114B53C047E}"/>
+						<Switch Name="Deccelerate" ID="{B13D4583-8F5A-41CD-8B7A-BC3CAE69F206}"/>
+						<Switch Name="FullSpeed" ID="{DBB88A42-5CC6-4FB2-B398-E90BD1F134AA}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="PlayerHealth" ID="{6ED19CFE-6D91-4B73-A8B1-241649EF7F14}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="FullHealth" ID="{5D504B7C-85C6-45FE-8CB6-29AA4525A874}"/>
+						<Switch Name="LowHealth" ID="{33B1FD86-53B4-4D7C-9F4C-1D6268B3B4B7}"/>
+						<Switch Name="NearDeath" ID="{6F790B04-FCD5-4F29-9A8B-7BB513A34A6B}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>
