@@ -25,3 +25,7 @@ void ATimeManager::Tick(float DeltaTime)
 
 }
 
+void ATimeManager::SetTimeScale(const float newScale)
+{
+	timeScale = newScale;
+}

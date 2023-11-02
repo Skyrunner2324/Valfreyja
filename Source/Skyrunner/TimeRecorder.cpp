@@ -3,6 +3,10 @@
 
 #include "TimeRecorder.h"
 
+#include "TimeManager.h"
+#include "Kismet/GameplayStatics.h"
+
+
 // Sets default values for this component's properties
 UTimeRecorder::UTimeRecorder()
 {
@@ -10,7 +14,6 @@ UTimeRecorder::UTimeRecorder()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 
-	// ...
 }
 
 
@@ -19,8 +22,12 @@ void UTimeRecorder::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
-	
+	oldTransform = GetOwner()->GetTransform();
+
+	// retrieve the only ATimeManager object
+	TArray<AActor*> arr;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATimeManager::StaticClass(), arr);
+	timeManager = (ATimeManager*)arr[0];
 }
 
 
@@ -29,6 +36,12 @@ void UTimeRecorder::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	// ...
+	// TODO : upgrade
+
+	// TODO : naive rotation
+	FVector dir = GetOwner()->GetTransform().GetLocation() - oldTransform.GetLocation();
+	GetOwner()->SetActorLocation(oldTransform.GetLocation() + dir * timeManager->GetTimeScale());
+
+	oldTransform = GetOwner()->GetTransform();
 }
 

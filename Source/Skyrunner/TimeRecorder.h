@@ -20,17 +20,22 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-public:	
+private:	
 	// pointer to global ATimeManager object
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(EditAnywhere)
 	class ATimeManager* timeManager;
 
+	FTransform oldTransform;
+
+
+	// TODO : find a way to affect properties update (before tick)
 	// array of every property that should be affected by time manager
+	UPROPERTY(EditAnywhere)
+	TArray<UActorComponent*> properties;
 
 
 
-
-
+public:
 
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
