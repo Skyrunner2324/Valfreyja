@@ -7,6 +7,9 @@
 #include "TimeManager.h"
 #include "MathUtil.h"
 
+#include "DebugLog.h"
+
+
 // Sets default values for this component's properties
 UTimeRecorder::UTimeRecorder()
 {
@@ -33,7 +36,9 @@ void UTimeRecorder::BeginPlay()
 void UTimeRecorder::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
+	localTime += localTimeScale * DeltaTime * timeManager->GetTimeScale();
+	deltaTime = localTimeScale * DeltaTime;
+	managedDeltaTime = localTimeScale * DeltaTime * timeManager->GetTimeScale();
 
 
 #if 0 // deprecated
@@ -81,5 +86,7 @@ void UTimeRecorder::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 
 	oldTransform = GetOwner()->GetTransform();
 #endif
+
+	DebugLogPerFrame(FColor::Red, TEXT("%f"), localTime);
 }
 

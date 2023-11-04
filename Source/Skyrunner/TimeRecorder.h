@@ -25,6 +25,10 @@ private:
 	UPROPERTY(EditAnywhere)
 	class ATimeManager* timeManager;
 
+	UPROPERTY(EditAnywhere)
+	float localTimeScale = 1.f;
+
+
 	FTransform oldTransform;
 
 
@@ -32,6 +36,17 @@ private:
 	// array of every property that should be affected by time manager
 	UPROPERTY(EditAnywhere)
 	TArray<UActorComponent*> properties;
+
+
+public:
+
+	UPROPERTY(BlueprintReadOnly)
+	float localTime = 0.f;
+
+	UPROPERTY(BlueprintReadOnly)
+	float deltaTime = 0.f;
+	UPROPERTY(BlueprintReadOnly)
+	float managedDeltaTime = 0.f;
 
 
 

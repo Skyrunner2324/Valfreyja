@@ -6,10 +6,13 @@
 #include "Kismet/GameplayStatics.h"
 #include "TimeRecorder.h"
 
+#include "DebugLog.h"
+
+
 // Sets default values
 ATimeManager::ATimeManager()
 {
-	PrimaryActorTick.bCanEverTick = false;
+	PrimaryActorTick.bCanEverTick = true;
 
 }
 
@@ -19,15 +22,23 @@ void ATimeManager::BeginPlay()
 	Super::BeginPlay();
 
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AActor::StaticClass(), recorders);
+#if 0 // deprecated
 	for (auto& r : recorders)
 	{
 		auto* component = r->GetComponentByClass<UTimeRecorder>();
 		if (component)
-			r->CustomTimeDilation = timeScale;
+			r->CustomTimeDilation = globalTimeScale;
 	}
+#endif
+}
+
+void ATimeManager::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	DebugLogPerFrame(FColor::Yellow, TEXT("Application time : %f"), GetWorld()->GetTimeSeconds());
 }
 
 void ATimeManager::SetTimeScale(const float newScale)
 {
-	timeScale = newScale;
+	globalTimeScale = newScale;
 }

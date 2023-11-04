@@ -25,7 +25,7 @@ private:
 	// time scale
 	// affects every UTimeRecorderObject
 	UPROPERTY(EditAnywhere)
-	float timeScale = 1.f;
+	float globalTimeScale = 1.f;
 
 
 protected:
@@ -33,9 +33,11 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
+	virtual void Tick(float DeltaTime) override;
+
 	UFUNCTION(BlueprintCallable)
 	void SetTimeScale(const float newScale);
 
 	UFUNCTION(BlueprintCallable)
-	inline float GetTimeScale() const { return timeScale; }
+	inline float GetTimeScale() const { return globalTimeScale; }
 };
