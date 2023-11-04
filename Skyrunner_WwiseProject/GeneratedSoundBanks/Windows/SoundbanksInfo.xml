@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="971909502" Type="User" Language="SFX" Hash="{EC3064F4-53B7-89D7-344A-17082FA16595}">
+			<ShortName>MasterSoundbank</ShortName>
+			<Path>MasterSoundbank.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A96BFD60-084F-B4D3-904E-6C11FB28E611}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="309309195" Name="2DAmbience"/>
+				<Bus Id="1182634443" Name="AmbientBeds"/>
+				<Bus Id="1301074112" Name="3DAmbience"/>
+				<Bus Id="1459460693" Name="AmbientMaster"/>
+				<Bus Id="1992125169" Name="UIMaster"/>
+				<Bus Id="2033911932" Name="NPCMaster"/>
+				<Bus Id="2343802269" Name="PlayerLocomotion"/>
+				<Bus Id="2901534458" Name="PlayerWeapon"/>
+				<Bus Id="3538689948" Name="PlayerMaster"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="4152869693" Name="2DAmbientBeds"/>
+			</Busses>
+			<AuxBusses>
+				<AuxBus Id="187046019" Name="LargeRoom">
+					<AuxBusRefs>
+						<AuxBusRef Id="3545700988" Name="Reverbs"/>
+					</AuxBusRefs>
+				</AuxBus>
+				<AuxBus Id="2933838247" Name="SmallRoom">
+					<AuxBusRefs>
+						<AuxBusRef Id="3545700988" Name="Reverbs"/>
+					</AuxBusRefs>
+				</AuxBus>
+				<AuxBus Id="3545700988" Name="Reverbs"/>
+				<AuxBus Id="4122393694" Name="Cave">
+					<AuxBusRefs>
+						<AuxBusRef Id="3545700988" Name="Reverbs"/>
+					</AuxBusRefs>
+				</AuxBus>
+			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="262290038" Name="RTPC_Distance"/>
+				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
+				<GameParameter Id="3699472177" Name="RTPC_GroundMaterial"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="1045871717" Name="GameStatus">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="984691642" Name="InGame"/>
+						<State Id="3374585465" Name="InMenu"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2064552269" Name="AreaState">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1880927217" Name="Ambiance_01example"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3285234865" Name="PlayerState">
+					<States>
+						<State Id="655265632" Name="Alive"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2044049779" Name="Dead"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="151362964" Name="PlayerHealth">
+					<Switches>
+						<Switch Id="898449699" Name="NearDeath"/>
+						<Switch Id="1017222595" Name="LowHealth"/>
+						<Switch Id="2429688720" Name="FullHealth"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="524731881" Name="AmbBiomeType">
+					<Switches>
+						<Switch Id="513139656" Name="Mountain"/>
+						<Switch Id="3945572659" Name="Village"/>
+						<Switch Id="4122393694" Name="Cave"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1044534455" Name="GroundMaterialSwitch">
+					<GameParameterRef Id="3699472177"/>
+					<Switches>
+						<Switch Id="344481046" Name="Ice"/>
+						<Switch Id="787898836" Name="Snow"/>
+						<Switch Id="1863277117" Name="Rocks"/>
+						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="2473969246" Name="Metal"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2051106367" Name="PlayerSpeedSwitch">
+					<Switches>
+						<Switch Id="211667952" Name="Deccelerate"/>
+						<Switch Id="2383244719" Name="FullSpeed"/>
+						<Switch Id="2904797076" Name="Stopped"/>
+						<Switch Id="3089599978" Name="Accelerate"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{A312E416-4FDF-3312-65E2-BD18AA89384D}</FileHash>
+</SoundBanksInfo>

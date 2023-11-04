@@ -5,7 +5,17 @@
 			<ChildrenList>
 				<ControlSurfaceSession Name="Default Control Surface Session" ID="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}">
 					<ChildrenList>
-						<ControlSurfaceBindingGroup Name="Global" ID="{69436EBC-E6BE-4F67-B35C-863AA6A85945}"/>
+						<ControlSurfaceBindingGroup Name="Global" ID="{69436EBC-E6BE-4F67-B35C-863AA6A85945}">
+							<ChildrenList>
+								<ControlSurfaceBinding Name="Binding" ID="{0B9A65A0-E1B1-42B5-BDB5-6F0C18298C66}">
+									<PropertyList>
+										<Property Name="HardwareControllerKey" Type="string" Value="APC40 mkII~Ch.1~Note-On~91"/>
+										<Property Name="TargetName" Type="string" Value="TransportPlayStop"/>
+										<Property Name="TargetType" Type="int16" Value="2"/>
+									</PropertyList>
+								</ControlSurfaceBinding>
+							</ChildrenList>
+						</ControlSurfaceBindingGroup>
 						<ControlSurfaceBindingGroup Name="Current Selection" ID="{3C3FC5A9-1DC3-4CB4-B244-5DF9F346EA83}">
 							<PropertyList>
 								<Property Name="GroupType" Type="int16" Value="4"/>
@@ -23,6 +33,22 @@
 							<PropertyList>
 								<Property Name="GroupType" Type="int16" Value="3"/>
 							</PropertyList>
+							<ChildrenList>
+								<ControlSurfaceBindingGroup Name="Play" ID="{1BA4DE55-36A2-4F96-BA6A-3B1725CDAD5B}">
+									<PropertyList>
+										<Property Name="GroupType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ChildrenList>
+										<ControlSurfaceBinding Name="Binding" ID="{D5776392-D93C-40A0-B176-152F04A23123}">
+											<PropertyList>
+												<Property Name="HardwareControllerKey" Type="string" Value="APC40 mkII~Ch.1~Note-On~32"/>
+												<Property Name="TargetName" Type="string" Value="TransportPlay"/>
+												<Property Name="TargetType" Type="int16" Value="1"/>
+											</PropertyList>
+										</ControlSurfaceBinding>
+									</ChildrenList>
+								</ControlSurfaceBindingGroup>
+							</ChildrenList>
 						</ControlSurfaceBindingGroup>
 					</ChildrenList>
 				</ControlSurfaceSession>
