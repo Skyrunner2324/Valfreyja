@@ -42,3 +42,21 @@ public:
 
 		
 };
+
+
+inline FTransform operator-(const FTransform& a, const FTransform& b)
+{
+	FTransform out;
+	out.SetLocation(a.GetLocation() - b.GetLocation());
+	out.SetRotation(a.GetRotation() - b.GetRotation());
+	out.SetScale3D(a.GetScale3D() - b.GetScale3D());
+	return out;
+}
+inline FTransform operator*(const FTransform& a, const float& b)
+{
+	FTransform out;
+	out.SetLocation(a.GetLocation() * b);
+	out.SetRotation(a.GetRotation() * b);
+	out.SetScale3D(a.GetScale3D() * b);
+	return out;
+}

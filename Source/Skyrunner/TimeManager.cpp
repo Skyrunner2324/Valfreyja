@@ -3,11 +3,13 @@
 
 #include "TimeManager.h"
 
+#include "Kismet/GameplayStatics.h"
+#include "TimeRecorder.h"
+
 // Sets default values
 ATimeManager::ATimeManager()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 }
 
@@ -15,14 +17,14 @@ ATimeManager::ATimeManager()
 void ATimeManager::BeginPlay()
 {
 	Super::BeginPlay();
-	
-}
 
-// Called every frame
-void ATimeManager::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AActor::StaticClass(), recorders);
+	for (auto& r : recorders)
+	{
+		auto* component = r->GetComponentByClass<UTimeRecorder>();
+		if (component)
+			r->CustomTimeDilation = timeScale;
+	}
 }
 
 void ATimeManager::SetTimeScale(const float newScale)

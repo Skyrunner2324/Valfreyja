@@ -19,7 +19,7 @@ public:
 private:
 	// array of every UTimeRecorder objects
 	UPROPERTY(EditAnywhere)
-	TArray<class UTimeRecorder*> recorders;
+	TArray<class AActor*> recorders;
 
 
 	// time scale
@@ -33,9 +33,6 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 	UFUNCTION(BlueprintCallable)
 	void SetTimeScale(const float newScale);
 
