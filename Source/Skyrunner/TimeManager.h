@@ -33,6 +33,10 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
+	UPROPERTY(BlueprintReadOnly)
+	float globalTime = 0.f;
+
+
 	virtual void Tick(float DeltaTime) override;
 
 	UFUNCTION(BlueprintCallable)

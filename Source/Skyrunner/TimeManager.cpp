@@ -22,19 +22,20 @@ void ATimeManager::BeginPlay()
 	Super::BeginPlay();
 
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AActor::StaticClass(), recorders);
-#if 0 // deprecated
 	for (auto& r : recorders)
 	{
 		auto* component = r->GetComponentByClass<UTimeRecorder>();
+#if 0 // deprecated
 		if (component)
 			r->CustomTimeDilation = globalTimeScale;
-	}
 #endif
+	}
 }
 
 void ATimeManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	globalTime += DeltaTime;
 	DebugLogPerFrame(FColor::Yellow, TEXT("Application time : %f"), GetWorld()->GetTimeSeconds());
 }
 
