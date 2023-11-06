@@ -13,6 +13,7 @@
 				<Language Name="SFX" ID="{92625F99-AC41-4EA2-864F-0C58057395F5}"/>
 			</LanguageList>
 			<PropertyList>
+				<Property Name="AutoSoundBankEnabled" Type="bool" Value="True"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
 						<Value Platform="Mac"></Value>
@@ -21,12 +22,12 @@
 				</Property>
 				<Property Name="ExternalSourcesOutputPath" Type="string">
 					<ValueList>
-						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
-						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+						<Value Platform="Mac">GeneratedSoundBanks\Mac</Value>
+						<Value Platform="Windows">GeneratedSoundBanks\Windows</Value>
 					</ValueList>
 				</Property>
 				<Property Name="LicenseKey" Type="string" Value="PHByb2plY3QgaWQ9IjE1NTI2IiBtYXNrPSJRR0tXMjI0MSIgZW5jPSIwIj48bGljZW5zZSBpZD0iMSIgbmFtZT0iV3dpc2UiIHR5cGU9IjMiIHBsYXRmb3Jtcz0iMiwzLDQsMTAsMTIsMTMsMTQsMTUsMjgiIGV4cGlyZXM9IjIwMjQtMDktMDIiICAvPjxsaWNlbnNlIGlkPSIyMiIgbmFtZT0iTGV2ZWwgQSBMaWNlbnNlIiB0eXBlPSIzIiBwbGF0Zm9ybXM9IjIsMyw0LDEwLDEyLDEzLDE0LDE1LDI4IiBleHBpcmVzPSIyMDI0LTA5LTAyIiAgLz48bGljZW5zZSBpZD0iMjEiIG5hbWU9Ik1haW50ZW5hbmNlIiB0eXBlPSIzIiBwbGF0Zm9ybXM9IjIsMyw0LDEwLDEyLDEzLDE0LDE1LDI4IiBleHBpcmVzPSIyMDI0LTA5LTAyIiAgLz48bGljZW5zZSBpZD0iMjUiIG5hbWU9IkFsbCBXd2lzZSBQbHVnLUlucyIgdHlwZT0iMyIgIGV4cGlyZXM9IjIwMjQtMDktMDIiICAvPjwvcHJvamVjdD4=|A6BQSruWAvCZQNhBiI64V8lDhJWHM7AvS2n7sl69K7IwmnVa3UslMC9o0WiU2QoZElFJrV9/KGv5JgEiXqH9iafcWOU40xJCDnVeP6/jEO3ua/sdta8EnaNLxGAaygRUMrX8WjVO2SOPnTtG93Lko/Stnw0WU6FiTd6bMNmetgfbkTEKVR3qWhk/3Lw/qWosukOavnt/oSwl8izoRDW/62SNr1yKrSEywEJvPV5gH2STw3sqdINw38cijJHTa4Fa6U347pK1ij1XMo0TDLFn2gnfpYttX/JS70P9lzFhjk3LrQZv5cDsw+OC5B1BmP2vfNWvoe3kuF+EoCFPGtRAEA=="/>
-				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks\"/>
+				<Property Name="SoundBankHeaderFilePath" Type="string" Value="SoundBanks"/>
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
@@ -59,6 +60,10 @@
 				</Property>
 				<Property Name="WwiseVersionWhenCreated" Type="string" Value="Branch=wwise_v2022.1|Build=8316|VersionName=v2022.1.8|Config=Release"/>
 			</PropertyList>
+			<MiscSettings>
+				<MiscSettingEntry Name="Cache"><![CDATA[.cache]]></MiscSettingEntry>
+				<MiscSettingEntry Name="Originals"><![CDATA[Originals]]></MiscSettingEntry>
+			</MiscSettings>
 			<SharedValues>
 				<SharedPropertyList ClassName="AudioFileSource" PluginType="0" CompanyID="1" PluginID="0">
 					<PropertyList>
@@ -9157,7 +9162,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="2" CompanyID="0" PluginID="119">
+				<SharedPropertyList ClassName="SoundSeed Air Wind" PluginType="2" CompanyID="0" PluginID="119">
 					<PropertyList>
 						<Property Name="AttenuationRollOff" Type="Real32">
 							<ValueList>
@@ -9316,7 +9321,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="2" CompanyID="0" PluginID="120">
+				<SharedPropertyList ClassName="SoundSeed Air Woosh" PluginType="2" CompanyID="0" PluginID="120">
 					<PropertyList>
 						<Property Name="AttenuationRollOff" Type="Real32">
 							<ValueList>
@@ -9450,7 +9455,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="0" CompanyID="0" PluginID="121">
+				<SharedPropertyList ClassName="Deflector" PluginType="0" CompanyID="0" PluginID="121">
 					<PropertyList>
 						<Property Name="Frequency" Type="Real32">
 							<ValueList>
@@ -9479,7 +9484,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="0" CompanyID="0" PluginID="122">
+				<SharedPropertyList ClassName="Deflector" PluginType="0" CompanyID="0" PluginID="122">
 					<PropertyList>
 						<Property Name="Anchor" Type="bool">
 							<ValueList>
@@ -10517,7 +10522,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
-				<SharedPropertyList ClassName="" PluginType="3" CompanyID="0" PluginID="171">
+				<SharedPropertyList ClassName="Wwise Reflect" PluginType="3" CompanyID="0" PluginID="171">
 					<PropertyList>
 						<Property Name="BaseTextureFrequency" Type="Real32">
 							<ValueList>
@@ -11467,6 +11472,218 @@
 						<Property Name="Color" Type="int16">
 							<ValueList>
 								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverrideColor" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</SharedPropertyList>
+				<SharedPropertyList ClassName="Wwise Motion Generator (Deprecated)" PluginType="2" CompanyID="0" PluginID="405">
+					<PropertyList>
+						<Property Name="AttackTime" Type="Real32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Color" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="DecayTime" Type="Real32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Duration" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="DurationType" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverrideColor" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Period" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="PeriodMultiplier" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="ReleaseTime" Type="Real32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="SustainLevel" Type="Real32">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+						<Property Name="SustainTime" Type="Real32">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</SharedPropertyList>
+				<SharedPropertyList ClassName="Wwise Motion Source" PluginType="2" CompanyID="0" PluginID="409">
+					<PropertyList>
+						<Property Name="Channel1" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Channel2" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Channel3" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Channel4" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="ChannelConfig" Type="int16">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Color" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="DriverA" Type="Real32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="DriverB" Type="Real32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="DriverC" Type="Real32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="DriverD" Type="Real32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="DriverE" Type="Real32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="DriverF" Type="Real32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="DriverG" Type="Real32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="DriverH" Type="Real32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="High1" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="High2" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="LeftTrigger" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Low1" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Low2" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverrideColor" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="RightTrigger" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</SharedPropertyList>
+				<SharedPropertyList ClassName="Wwise Motion" PluginType="7" CompanyID="0" PluginID="507">
+					<PropertyList>
+						<Property Name="BypassEffect" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="BypassEffect0" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="BypassEffect1" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="BypassEffect2" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="BypassEffect3" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Color" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>True</Value>
 							</ValueList>
 						</Property>
 						<Property Name="OverrideColor" Type="bool">

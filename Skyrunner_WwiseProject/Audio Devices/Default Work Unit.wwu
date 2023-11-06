@@ -3,9 +3,17 @@
 	<AudioDevices>
 		<WorkUnit Name="Default Work Unit" ID="{69D16C6A-8CBD-41F2-91C9-0ADAE7074EDE}" PersistMode="Standalone">
 			<ChildrenList>
-				<AudioDevice Name="System" ID="{E91ADA0B-490E-4228-84AF-22DC5116ACA0}" PluginName="System" CompanyID="0" PluginID="174" PluginType="7"/>
-				<AudioDevice Name="No_Output" ID="{774E1237-A515-4B31-837A-95C75247259A}" PluginName="No Output" CompanyID="0" PluginID="181" PluginType="7"/>
-				<AudioDevice Name="Wwise_Motion" ID="{A1910A99-796D-4CC8-AD66-6424E6264687}" PluginName="Wwise Motion" CompanyID="0" PluginID="507" PluginType="7"/>
+				<AudioDevice Name="System" ID="{E91ADA0B-490E-4228-84AF-22DC5116ACA0}" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+					<PropertyList>
+						<Property Name="Allow3DAudio" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</AudioDevice>
+				<AudioDevice Name="Controller_Speaker" ID="{DBAC18E4-4565-4995-8D85-16A16A6DEC90}" PluginName="Controller Speaker" CompanyID="0" PluginID="179" PluginType="7"/>
+				<AudioDevice Name="No_Output" ID="{2DB002A7-F406-43F8-98EB-46545A451293}" PluginName="No Output" CompanyID="0" PluginID="181" PluginType="7"/>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioDevices>
