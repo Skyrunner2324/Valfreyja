@@ -96,17 +96,12 @@ void UTimeRecorder::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 	auto movement = GetOwner()->GetComponentByClass<UPrimitiveComponent>();
 	if (movement)
 	{
-		static FVector oldVelocity = { 0.f, 0.f, 0.f };
-		static FVector oldAngularVelocity = { 0.f, 0.f, 0.f };
-
-		DebugLogVector(oldVelocity);
-		if (!FMath::IsNearlyZero(oldVelocity.SquaredLength()))
-			movement->SetPhysicsLinearVelocity(oldVelocity);// * timeManager->GetTimeScale());
-		if (!FMath::IsNearlyZero(oldAngularVelocity.SquaredLength()))
-			movement->SetPhysicsAngularVelocityInRadians(oldAngularVelocity);// * timeManager->GetTimeScale());
-
-		oldVelocity = movement->GetPhysicsLinearVelocity();
-		oldAngularVelocity = movement->GetPhysicsAngularVelocityInRadians();
+		movement->AddVelocityChangeImpulseAtLocation(-movement->GetPhysicsLinearVelocity() *
+			(1.f - timeManager->GetTimeScale()) *
+			(1.f - localTimeScale) *
+			managedDeltaTime *
+			60.f,
+			movement->GetCenterOfMass());
 	}
 }
 
