@@ -9,6 +9,8 @@
 
 #include "DebugLog.h"
 
+#include "Components/PrimitiveComponent.h"
+
 
 // Sets default values for this component's properties
 UTimeRecorder::UTimeRecorder()
@@ -68,7 +70,7 @@ void UTimeRecorder::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 		rectifiedScaleLerp = FMath::Lerp(oldTransform.GetScale3D(),
 			GetOwner()->GetActorScale(),
 			timeManager->GetTimeScale());
-}
+	}
 
 
 #if 0
@@ -90,5 +92,21 @@ void UTimeRecorder::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 	DebugLogPerFrame(FColor::Red, TEXT("%f"), localTime);
 
 	// TODO : tick update recovery
+
+	auto movement = GetOwner()->GetComponentByClass<UPrimitiveComponent>();
+	if (movement)
+	{
+		static FVector oldVelocity = { 0.f, 0.f, 0.f };
+		static FVector oldAngularVelocity = { 0.f, 0.f, 0.f };
+
+		DebugLogVector(oldVelocity);
+		if (!FMath::IsNearlyZero(oldVelocity.SquaredLength()))
+			movement->SetPhysicsLinearVelocity(oldVelocity);// * timeManager->GetTimeScale());
+		if (!FMath::IsNearlyZero(oldAngularVelocity.SquaredLength()))
+			movement->SetPhysicsAngularVelocityInRadians(oldAngularVelocity);// * timeManager->GetTimeScale());
+
+		oldVelocity = movement->GetPhysicsLinearVelocity();
+		oldAngularVelocity = movement->GetPhysicsAngularVelocityInRadians();
+	}
 }
 
