@@ -88,5 +88,7 @@ void UTimeRecorder::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 #endif
 
 	DebugLogPerFrame(FColor::Red, TEXT("%f"), localTime);
+
+	// TODO : tick update recovery
 }
 
