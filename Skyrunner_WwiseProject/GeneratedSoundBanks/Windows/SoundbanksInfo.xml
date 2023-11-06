@@ -9,25 +9,28 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="187046019" Type="Bus" Language="SFX" Hash="{7C875E5B-FEB0-57A2-9A7A-E6335E587E70}">
+		<SoundBank Id="187046019" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{7C875E5B-FEB0-57A2-9A7A-E6335E587E70}">
+			<ObjectPath>LargeRoom</ObjectPath>
 			<ShortName>LargeRoom</ShortName>
 			<Path>Bus/LargeRoom.bnk</Path>
 			<AuxBusses>
-				<AuxBus Id="187046019" Name="LargeRoom">
+				<AuxBus Id="187046019" Name="LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<AuxBusRefs>
-						<AuxBusRef Id="3545700988" Name="Reverbs"/>
+						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="903081441" Type="Event" Language="SFX" Hash="{5CFFEFC3-DDA5-D07E-30D4-CF1967590716}">
+		<SoundBank Id="903081441" Type="Event" GUID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}" Language="SFX" Hash="{5CFFEFC3-DDA5-D07E-30D4-CF1967590716}">
+			<ObjectPath>Play_AmbienceMain</ObjectPath>
 			<ShortName>Play_AmbienceMain</ShortName>
 			<Path>Event/Play_AmbienceMain.bnk</Path>
 			<Events>
-				<Event Id="903081441" Name="Play_AmbienceMain"/>
+				<Event Id="903081441" Name="Play_AmbienceMain" ObjectPath="\Events\Ambience\Play_AmbienceMain" GUID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="971909502" Type="User" Language="SFX" Hash="{96B755B5-9A68-51A5-67AF-27AD81032D46}">
+		<SoundBank Id="971909502" Type="User" GUID="{73E808A7-564E-44B8-BCF3-CDA908FACC1B}" Language="SFX" Hash="{96B755B5-9A68-51A5-67AF-27AD81032D46}">
+			<ObjectPath>\SoundBanks\Default Work Unit\MasterSoundbank</ObjectPath>
 			<ShortName>MasterSoundbank</ShortName>
 			<Path>MasterSoundbank.bnk</Path>
 			<Media>
@@ -153,29 +156,29 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2484145022" Name="Play_Stop_TestBeep_Loop"/>
-				<Event Id="2439571424" Name="Play_Stop_TestBeep_Loop_3D"/>
-				<Event Id="1955951874" Name="Play_TestBeep">
+				<Event Id="2484145022" Name="Play_Stop_TestBeep_Loop" ObjectPath="\Events\TestEvents\Play_Stop_TestBeep_Loop" GUID="{A5E90370-96BE-450D-B970-BCFBC429B56F}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2439571424" Name="Play_Stop_TestBeep_Loop_3D" ObjectPath="\Events\TestEvents\Play_Stop_TestBeep_Loop_3D" GUID="{90FA6150-F2C6-4AEA-9823-D63B27B43CA6}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1955951874" Name="Play_TestBeep" ObjectPath="\Events\TestEvents\Play_TestBeep" GUID="{BA048CFB-5B21-4BC8-B6D1-60EC051A774E}" DurationType="OneShot" DurationMin="0.051583335" DurationMax="0.051583335">
 					<MediaRefs>
 						<MediaRef Id="469165162"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1681067324" Name="Play_TestBeep_3D">
+				<Event Id="1681067324" Name="Play_TestBeep_3D" ObjectPath="\Events\TestEvents\Play_TestBeep_3D" GUID="{73F63A69-87C9-4351-80D1-2E2A8E58CA86}" MaxAttenuation="50" DurationType="OneShot" DurationMin="0.051583335" DurationMax="0.051583335">
 					<MediaRefs>
 						<MediaRef Id="469165162"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="523232931" Name="Play_TestBeep_Loop">
+				<Event Id="523232931" Name="Play_TestBeep_Loop" ObjectPath="\Events\TestEvents\Play_TestBeep_Loop" GUID="{29088148-6827-4D6A-8542-7D2208093511}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="653948235"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3475882615" Name="Play_TestBeep_Loop_3D">
+				<Event Id="3475882615" Name="Play_TestBeep_Loop_3D" ObjectPath="\Events\TestEvents\Play_TestBeep_Loop_3D" GUID="{AD494000-0055-4CEE-9621-35691A0B6C38}" MaxAttenuation="50" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="653948235"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4253963815" Name="Play_TestDistance">
+				<Event Id="4253963815" Name="Play_TestDistance" ObjectPath="\Events\Debug\Play_TestDistance" GUID="{81018338-1AD3-438A-9EE3-B58AA19CB625}" DurationType="OneShot" DurationMin="1.125" DurationMax="1.125">
 					<MediaRefs>
 						<MediaRef Id="58325639"/>
 						<MediaRef Id="90606403"/>
@@ -209,142 +212,146 @@
 				</Event>
 			</Events>
 			<GameParameters>
-				<GameParameter Id="262290038" Name="RTPC_Distance"/>
+				<GameParameter Id="262290038" Name="RTPC_Distance" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Distance" GUID="{EF3CABA9-5812-4B07-97BE-69A25DA3E423}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C5B68DC2-FF16-7389-FE93-1DA8AB584C28}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{C5B68DC2-FF16-7389-FE93-1DA8AB584C28}">
+			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<AudioDevices>
-					<Plugin Id="1334442663" Name="Controller_Speaker" LibName="Controller Speaker" LibId="11730951"/>
-					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
-					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+					<Plugin Id="1334442663" Name="Controller_Speaker" ObjectPath="\Audio Devices\Default Work Unit\Controller_Speaker" GUID="{DBAC18E4-4565-4995-8D85-16A16A6DEC90}" LibName="Controller Speaker" LibId="11730951"/>
+					<Plugin Id="2317455096" Name="No_Output" ObjectPath="\Audio Devices\Default Work Unit\No_Output" GUID="{2DB002A7-F406-43F8-98EB-46545A451293}" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" ObjectPath="\Audio Devices\Default Work Unit\System" GUID="{E91ADA0B-490E-4228-84AF-22DC5116ACA0}" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="309309195" Name="2DAmbience"/>
-				<Bus Id="1182634443" Name="AmbientBeds"/>
-				<Bus Id="1301074112" Name="3DAmbience"/>
-				<Bus Id="1459460693" Name="AmbientMaster"/>
-				<Bus Id="1992125169" Name="UIMaster"/>
-				<Bus Id="2033911932" Name="NPCMaster"/>
-				<Bus Id="2343802269" Name="PlayerLocomotion"/>
-				<Bus Id="2452310558" Name="WwiseMotion"/>
-				<Bus Id="2901534458" Name="PlayerWeapon"/>
-				<Bus Id="3538689948" Name="PlayerMaster"/>
-				<Bus Id="3803692087" Name="Master Audio Bus"/>
-				<Bus Id="4152869693" Name="2DAmbientBeds"/>
+				<Bus Id="309309195" Name="2DAmbience" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\2DAmbience" GUID="{7444C4FB-63F6-4F2E-9A73-66D09EEEFAE1}"/>
+				<Bus Id="1182634443" Name="AmbientBeds" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\AmbientBeds" GUID="{3D306ABA-2B79-4C6F-B0C4-887FF5287F6F}"/>
+				<Bus Id="1301074112" Name="3DAmbience" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\3DAmbience" GUID="{7F98D6D4-F50F-4CD2-AA30-29F04ADD57C2}"/>
+				<Bus Id="1459460693" Name="AmbientMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster" GUID="{1260EBDA-2D71-42A1-A3E2-A2832FF41985}"/>
+				<Bus Id="1992125169" Name="UIMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UIMaster" GUID="{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}"/>
+				<Bus Id="2033911932" Name="NPCMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\NPCMaster" GUID="{94354A62-2693-4A27-B098-F5FDE5B577C5}"/>
+				<Bus Id="2343802269" Name="PlayerLocomotion" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerLocomotion" GUID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}"/>
+				<Bus Id="2452310558" Name="WwiseMotion" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\WwiseMotion" GUID="{A725A1F7-24D8-429B-98AE-EDE935A1E857}"/>
+				<Bus Id="2901534458" Name="PlayerWeapon" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerWeapon" GUID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}"/>
+				<Bus Id="3538689948" Name="PlayerMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster" GUID="{880F05A2-569A-4D55-B7A0-1CD87FD195D0}"/>
+				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
+				<Bus Id="4152869693" Name="2DAmbientBeds" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\AmbientBeds\2DAmbientBeds" GUID="{9F89B372-3238-4882-829C-1D743E3D17E7}"/>
 			</Busses>
 			<AuxBusses>
-				<AuxBus Id="187046019" Name="LargeRoom">
+				<AuxBus Id="187046019" Name="LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<AuxBusRefs>
-						<AuxBusRef Id="3545700988" Name="Reverbs"/>
+						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
-				<AuxBus Id="2933838247" Name="SmallRoom">
+				<AuxBus Id="2933838247" Name="SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
 					<AuxBusRefs>
-						<AuxBusRef Id="3545700988" Name="Reverbs"/>
+						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
-				<AuxBus Id="3545700988" Name="Reverbs"/>
-				<AuxBus Id="4122393694" Name="Cave">
+				<AuxBus Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
 					<AuxBusRefs>
-						<AuxBusRef Id="3545700988" Name="Reverbs"/>
+						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
-				<GameParameter Id="262290038" Name="RTPC_Distance"/>
-				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
-				<GameParameter Id="3699472177" Name="RTPC_GroundMaterial"/>
+				<GameParameter Id="262290038" Name="RTPC_Distance" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Distance" GUID="{EF3CABA9-5812-4B07-97BE-69A25DA3E423}"/>
+				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
+				<GameParameter Id="3699472177" Name="RTPC_GroundMaterial" ObjectPath="\Game Parameters\Default Work Unit\RTPC_GroundMaterial" GUID="{05992564-76FB-4584-948F-C0F4109BF542}"/>
 			</GameParameters>
 			<StateGroups>
-				<StateGroup Id="1045871717" Name="GameStatus">
+				<StateGroup Id="1045871717" Name="GameStatus" ObjectPath="\States\Default Work Unit\GameStatus" GUID="{B166225D-6EEC-4395-A414-2DC03ECCF043}">
 					<States>
-						<State Id="748895195" Name="None"/>
-						<State Id="984691642" Name="InGame"/>
-						<State Id="3374585465" Name="InMenu"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\GameStatus\None" GUID="{EEB277E0-9352-480D-A6FB-C308E6B7BD09}"/>
+						<State Id="984691642" Name="InGame" ObjectPath="\States\Default Work Unit\GameStatus\InGame" GUID="{EC4A1A3A-9F40-4265-A536-AB6230BB833D}"/>
+						<State Id="3374585465" Name="InMenu" ObjectPath="\States\Default Work Unit\GameStatus\InMenu" GUID="{B2F321F7-4EE8-4AFD-AE95-8524E71A2A7B}"/>
 					</States>
 				</StateGroup>
-				<StateGroup Id="2064552269" Name="AreaState">
+				<StateGroup Id="2064552269" Name="AreaState" ObjectPath="\States\Default Work Unit\AreaState" GUID="{8264E7EF-9D1C-45D6-B03F-CCD0B6C66735}">
 					<States>
-						<State Id="748895195" Name="None"/>
-						<State Id="1880927217" Name="Ambiance_01example"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\AreaState\None" GUID="{504FBF30-E002-4A18-B350-C7CE6E0AA564}"/>
+						<State Id="1880927217" Name="Ambiance_01example" ObjectPath="\States\Default Work Unit\AreaState\Ambiance_01example" GUID="{0C96FB59-0D86-4D67-B5C0-EC9F48690B9E}"/>
 					</States>
 				</StateGroup>
-				<StateGroup Id="3285234865" Name="PlayerState">
+				<StateGroup Id="3285234865" Name="PlayerState" ObjectPath="\States\Default Work Unit\PlayerState" GUID="{1F5D3752-7753-44D3-B02C-6D8D6A18F0B8}">
 					<States>
-						<State Id="655265632" Name="Alive"/>
-						<State Id="748895195" Name="None"/>
-						<State Id="2044049779" Name="Dead"/>
+						<State Id="655265632" Name="Alive" ObjectPath="\States\Default Work Unit\PlayerState\Alive" GUID="{D8FCB979-65E8-4710-9966-57163709C91A}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\PlayerState\None" GUID="{080CA12A-25D3-44EF-BAA8-88A78B97D364}"/>
+						<State Id="2044049779" Name="Dead" ObjectPath="\States\Default Work Unit\PlayerState\Dead" GUID="{286888B3-6EE4-46E1-BEFB-B22637C040E5}"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
-				<SwitchGroup Id="151362964" Name="PlayerHealth">
+				<SwitchGroup Id="151362964" Name="PlayerHealth" ObjectPath="\Switches\Default Work Unit\PlayerHealth" GUID="{6ED19CFE-6D91-4B73-A8B1-241649EF7F14}">
 					<Switches>
-						<Switch Id="898449699" Name="NearDeath"/>
-						<Switch Id="1017222595" Name="LowHealth"/>
-						<Switch Id="2429688720" Name="FullHealth"/>
+						<Switch Id="898449699" Name="NearDeath" ObjectPath="\Switches\Default Work Unit\PlayerHealth\NearDeath" GUID="{6F790B04-FCD5-4F29-9A8B-7BB513A34A6B}"/>
+						<Switch Id="1017222595" Name="LowHealth" ObjectPath="\Switches\Default Work Unit\PlayerHealth\LowHealth" GUID="{33B1FD86-53B4-4D7C-9F4C-1D6268B3B4B7}"/>
+						<Switch Id="2429688720" Name="FullHealth" ObjectPath="\Switches\Default Work Unit\PlayerHealth\FullHealth" GUID="{5D504B7C-85C6-45FE-8CB6-29AA4525A874}"/>
 					</Switches>
 				</SwitchGroup>
-				<SwitchGroup Id="524731881" Name="AmbBiomeType">
+				<SwitchGroup Id="524731881" Name="AmbBiomeType" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType" GUID="{5B10E42B-0908-4108-AA6C-167CED4078D5}">
 					<Switches>
-						<Switch Id="513139656" Name="Mountain"/>
-						<Switch Id="3945572659" Name="Village"/>
-						<Switch Id="4122393694" Name="Cave"/>
+						<Switch Id="513139656" Name="Mountain" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType\Mountain" GUID="{A4AFF0DE-5F41-4B08-AEFC-DACFEA9C64EE}"/>
+						<Switch Id="3945572659" Name="Village" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType\Village" GUID="{0850F707-F78B-4F5E-9519-A7CAAEFFA71A}"/>
+						<Switch Id="4122393694" Name="Cave" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType\Cave" GUID="{ED2B295B-B79E-4052-82D7-4EE5DB0E0BBC}"/>
 					</Switches>
 				</SwitchGroup>
-				<SwitchGroup Id="1044534455" Name="GroundMaterialSwitch">
+				<SwitchGroup Id="1044534455" Name="GroundMaterialSwitch" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch" GUID="{9D29D1E1-5500-4801-B968-D812A1417C9E}">
 					<GameParameterRef Id="3699472177"/>
 					<Switches>
-						<Switch Id="344481046" Name="Ice"/>
-						<Switch Id="787898836" Name="Snow"/>
-						<Switch Id="1863277117" Name="Rocks"/>
-						<Switch Id="2058049674" Name="Wood"/>
-						<Switch Id="2473969246" Name="Metal"/>
+						<Switch Id="344481046" Name="Ice" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\Ice" GUID="{FB0B8B6F-9F97-49C4-AFB6-3AA7208FAD66}"/>
+						<Switch Id="787898836" Name="Snow" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\Snow" GUID="{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}"/>
+						<Switch Id="1863277117" Name="Rocks" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\Rocks" GUID="{08A1937D-A457-41B0-A1DD-40DEEB125E58}"/>
+						<Switch Id="2058049674" Name="Wood" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\Wood" GUID="{31D40FF0-50B0-41F0-8BED-7D8E39644E38}"/>
+						<Switch Id="2473969246" Name="Metal" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\Metal" GUID="{067272CA-59B0-48BD-81F5-F5600CE65A57}"/>
 					</Switches>
 				</SwitchGroup>
-				<SwitchGroup Id="2051106367" Name="PlayerSpeedSwitch">
+				<SwitchGroup Id="2051106367" Name="PlayerSpeedSwitch" ObjectPath="\Switches\Default Work Unit\PlayerSpeedSwitch" GUID="{3CDF8300-7330-4784-9075-47D68391D5E2}">
 					<Switches>
-						<Switch Id="211667952" Name="Deccelerate"/>
-						<Switch Id="2383244719" Name="FullSpeed"/>
-						<Switch Id="2904797076" Name="Stopped"/>
-						<Switch Id="3089599978" Name="Accelerate"/>
+						<Switch Id="211667952" Name="Deccelerate" ObjectPath="\Switches\Default Work Unit\PlayerSpeedSwitch\Deccelerate" GUID="{B13D4583-8F5A-41CD-8B7A-BC3CAE69F206}"/>
+						<Switch Id="2383244719" Name="FullSpeed" ObjectPath="\Switches\Default Work Unit\PlayerSpeedSwitch\FullSpeed" GUID="{DBB88A42-5CC6-4FB2-B398-E90BD1F134AA}"/>
+						<Switch Id="2904797076" Name="Stopped" ObjectPath="\Switches\Default Work Unit\PlayerSpeedSwitch\Stopped" GUID="{2C307309-F91B-4D77-AF29-DEBCBFD72347}"/>
+						<Switch Id="3089599978" Name="Accelerate" ObjectPath="\Switches\Default Work Unit\PlayerSpeedSwitch\Accelerate" GUID="{12994FF5-E12F-4682-A9D9-C114B53C047E}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2933838247" Type="Bus" Language="SFX" Hash="{8D0ABC20-5D29-DFDF-7489-FDAA82DC7A20}">
+		<SoundBank Id="2933838247" Type="Bus" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" Language="SFX" Hash="{8D0ABC20-5D29-DFDF-7489-FDAA82DC7A20}">
+			<ObjectPath>SmallRoom</ObjectPath>
 			<ShortName>SmallRoom</ShortName>
 			<Path>Bus/SmallRoom.bnk</Path>
 			<AuxBusses>
-				<AuxBus Id="2933838247" Name="SmallRoom">
+				<AuxBus Id="2933838247" Name="SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
 					<AuxBusRefs>
-						<AuxBusRef Id="3545700988" Name="Reverbs"/>
+						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3545700988" Type="Bus" Language="SFX" Hash="{997BFE1F-41FE-DF55-17D0-D1BA947FDD53}">
+		<SoundBank Id="3545700988" Type="Bus" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}" Language="SFX" Hash="{997BFE1F-41FE-DF55-17D0-D1BA947FDD53}">
+			<ObjectPath>Reverbs</ObjectPath>
 			<ShortName>Reverbs</ShortName>
 			<Path>Bus/Reverbs.bnk</Path>
 			<AuxBusses>
-				<AuxBus Id="3545700988" Name="Reverbs"/>
+				<AuxBus Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="4122393694" Type="Bus" Language="SFX" Hash="{A35DBB55-EE78-86A7-E358-FB7836AFB5DF}">
+		<SoundBank Id="4122393694" Type="Bus" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" Language="SFX" Hash="{A35DBB55-EE78-86A7-E358-FB7836AFB5DF}">
+			<ObjectPath>Cave</ObjectPath>
 			<ShortName>Cave</ShortName>
 			<Path>Bus/Cave.bnk</Path>
 			<AuxBusses>
-				<AuxBus Id="4122393694" Name="Cave">
+				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
 					<AuxBusRefs>
-						<AuxBusRef Id="3545700988" Name="Reverbs"/>
+						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{56AD1D3A-E50D-AC99-59D8-234D858D7AB0}</FileHash>
+	<FileHash>{E2D2BA5C-C071-F131-71EA-3F468DE340B4}</FileHash>
 </SoundBanksInfo>
