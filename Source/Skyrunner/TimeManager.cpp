@@ -37,6 +37,8 @@ void ATimeManager::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	globalTime += DeltaTime;
 	DebugLogPerFrame(FColor::Yellow, TEXT("Application time : %f"), GetWorld()->GetTimeSeconds());
+
+	GetWorldSettings()->SetTimeDilation(globalTimeScale);
 }
 
 void ATimeManager::SetTimeScale(const float newScale)

@@ -42,66 +42,8 @@ void UTimeRecorder::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 	deltaTime = localTimeScale * DeltaTime;
 	managedDeltaTime = localTimeScale * DeltaTime * timeManager->GetTimeScale();
 
-
-#if 0 // deprecated
-	FVector rectifiedLocationLerp = oldTransform.GetLocation();
-	FQuat rectifiedRotationSlerp = oldTransform.GetRotation();
-	FVector rectifiedScaleLerp = oldTransform.GetScale3D();
-
-	const FTransform& newTransform = GetOwner()->GetTransform();
-	const FTransform diffTransform = newTransform - oldTransform;
-
-
-	// rectification done after transform update
-	if (diffTransform.GetLocation().SquaredLength() > TMathUtilConstants<float>::Epsilon)
-	{
-		rectifiedLocationLerp = FMath::Lerp(oldTransform.GetLocation(),
-			GetOwner()->GetActorLocation(),
-			timeManager->GetTimeScale());
-	}
-	if (diffTransform.GetRotation().GetAngle() > TMathUtilConstants<float>::Epsilon)
-	{
-		rectifiedRotationSlerp = FQuat::Slerp(oldTransform.GetRotation(),
-			GetOwner()->GetActorRotation().Quaternion(),
-			timeManager->GetTimeScale());
-	}
-	if (diffTransform.GetScale3D().SquaredLength() > TMathUtilConstants<float>::Epsilon)
-	{
-		rectifiedScaleLerp = FMath::Lerp(oldTransform.GetScale3D(),
-			GetOwner()->GetActorScale(),
-			timeManager->GetTimeScale());
-	}
-
-
-#if 0
-	GetOwner()->SetActorLocation(rectifiedLocationLerp, true);
-	GetOwner()->SetActorRotation(rectifiedRotationSlerp);
-	GetOwner()->SetActorScale3D(rectifiedScaleLerp);
-#else
-	FTransform scaledDiff = diffTransform * timeManager->GetTimeScale();
-	FTransform rectifiedTransform = oldTransform + scaledDiff;
-	GetOwner()->SetActorLocation(rectifiedTransform.GetLocation());
-	GetOwner()->SetActorRotation(rectifiedTransform.GetRotation());
-	GetOwner()->SetActorScale3D(rectifiedTransform.GetScale3D());
-#endif
-
-
-	oldTransform = GetOwner()->GetTransform();
-#endif
-
 	DebugLogPerFrame(FColor::Red, TEXT("%f"), localTime);
 
-	// TODO : tick update recovery
-
-	auto movement = GetOwner()->GetComponentByClass<UPrimitiveComponent>();
-	if (movement)
-	{
-		movement->AddVelocityChangeImpulseAtLocation(-movement->GetPhysicsLinearVelocity() *
-			(1.f - timeManager->GetTimeScale()) *
-			(1.f - localTimeScale) *
-			managedDeltaTime *
-			60.f,
-			movement->GetCenterOfMass());
-	}
+	GetOwner()->CustomTimeDilation = localTimeScale;
 }
 
