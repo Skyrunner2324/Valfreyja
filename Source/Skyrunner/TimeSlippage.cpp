@@ -34,6 +34,7 @@ void ATimeSlippage::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	globalTime += DeltaTime;
+	globalManagedDeltaTime = DeltaTime * globalTimeScale;
 
 
 	// application time debug display

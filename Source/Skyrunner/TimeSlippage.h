@@ -35,6 +35,8 @@ protected:
 public:	
 	UPROPERTY(BlueprintReadOnly)
 	float globalTime = 0.f;
+	UPROPERTY(BlueprintReadOnly)
+	float globalManagedDeltaTime = 0.f;
 
 	UPROPERTY(BlueprintReadOnly)
 	bool bIsDilated = false;

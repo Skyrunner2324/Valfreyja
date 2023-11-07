@@ -7,12 +7,12 @@
 #include "TimeSlippageModifier.generated.h"
 
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class SKYRUNNER_API UTimeSlippageModifier : public UActorComponent
 {
 	GENERATED_BODY()
 
-public:	
+public:
 	// Sets default values for this component's properties
 	UTimeSlippageModifier();
 
@@ -20,7 +20,7 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-private:	
+private:
 	// pointer to global ATimeSlippage object
 	UPROPERTY(EditAnywhere)
 	class ATimeSlippage* timeSlippage;
@@ -29,15 +29,18 @@ private:
 	float localTimeScale = 1.f;
 
 
-public:
+protected:
+	// locally managed delta time
+	UPROPERTY(BlueprintReadOnly)
+	float deltaTime = 0.f;
 
 	UPROPERTY(BlueprintReadOnly)
 	float localTime = 0.f;
 
+
+public:
 	UPROPERTY(BlueprintReadOnly)
-	float deltaTime = 0.f;
-	UPROPERTY(BlueprintReadOnly)
-	float managedDeltaTime = 0.f;
+	float localManagedDeltaTime = 0.f;
 
 
 

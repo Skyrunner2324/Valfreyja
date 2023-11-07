@@ -38,9 +38,9 @@ void UTimeSlippageModifier::BeginPlay()
 void UTimeSlippageModifier::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	localTime += localTimeScale * DeltaTime * timeSlippage->GetGlobalTimeScale();
 	deltaTime = localTimeScale * DeltaTime;
-	managedDeltaTime = localTimeScale * DeltaTime * timeSlippage->GetGlobalTimeScale();
+	localManagedDeltaTime = localTimeScale * timeSlippage->globalManagedDeltaTime;
+	localTime += localManagedDeltaTime;
 
 	DebugLogPerFrame(FColor::Red, TEXT("%f"), localTime);
 
