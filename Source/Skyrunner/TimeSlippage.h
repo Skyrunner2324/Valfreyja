@@ -4,22 +4,22 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "TimeManager.generated.h"
+#include "TimeSlippage.generated.h"
 
 UCLASS()
-class SKYRUNNER_API ATimeManager : public AActor
+class SKYRUNNER_API ATimeSlippage : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	ATimeManager();
+	ATimeSlippage();
 
 
 private:
 	// array of every UTimeRecorder objects
 	UPROPERTY(EditAnywhere)
-	TArray<class AActor*> recorders;
+	TArray<class AActor*> modifiers;
 
 
 	// time scale
@@ -36,12 +36,18 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	float globalTime = 0.f;
 
+	UPROPERTY(BlueprintReadOnly)
+	bool bIsDilated = false;
 
+
+	// TODO : deactivate
 	virtual void Tick(float DeltaTime) override;
 
+
+	// TODO : lerp
 	UFUNCTION(BlueprintCallable)
-	void SetTimeScale(const float newScale);
+	void SetGlobalTimeScale(const float newScale);
 
 	UFUNCTION(BlueprintCallable)
-	inline float GetTimeScale() const { return globalTimeScale; }
+	inline float GetGlobalTimeScale() const { return globalTimeScale; }
 };
