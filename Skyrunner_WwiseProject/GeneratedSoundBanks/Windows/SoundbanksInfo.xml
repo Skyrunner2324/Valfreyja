@@ -21,15 +21,7 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="903081441" Type="Event" GUID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}" Language="SFX" Hash="{5CFFEFC3-DDA5-D07E-30D4-CF1967590716}">
-			<ObjectPath>Play_AmbienceMain</ObjectPath>
-			<ShortName>Play_AmbienceMain</ShortName>
-			<Path>Event/Play_AmbienceMain.bnk</Path>
-			<Events>
-				<Event Id="903081441" Name="Play_AmbienceMain" ObjectPath="\Events\Ambience\Play_AmbienceMain" GUID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="971909502" Type="User" GUID="{73E808A7-564E-44B8-BCF3-CDA908FACC1B}" Language="SFX" Hash="{96B755B5-9A68-51A5-67AF-27AD81032D46}">
+		<SoundBank Id="971909502" Type="User" GUID="{73E808A7-564E-44B8-BCF3-CDA908FACC1B}" Language="SFX" Hash="{CD40939E-13C4-DA94-1420-6483EA3666AA}">
 			<ObjectPath>\SoundBanks\Default Work Unit\MasterSoundbank</ObjectPath>
 			<ShortName>MasterSoundbank</ShortName>
 			<Path>MasterSoundbank.bnk</Path>
@@ -114,6 +106,10 @@
 					<ShortName>Placeholders\250.wav</ShortName>
 					<CachePath>SFX/Placeholders/250_10C4C929.wem</CachePath>
 				</File>
+				<File Id="734031120" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Placeholders\amb_meteo_wind.wav</ShortName>
+					<CachePath>SFX/Placeholders/amb_meteo_wind_10C4C929.wem</CachePath>
+				</File>
 				<File Id="770231662" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Placeholders\25.wav</ShortName>
 					<CachePath>SFX/Placeholders/25_10C4C929.wem</CachePath>
@@ -156,6 +152,16 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="903081441" Name="Play_AmbienceMain" ObjectPath="\Events\Ambience\Play_AmbienceMain" GUID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="524731881" Id="513139656" GUID="{A4AFF0DE-5F41-4B08-AEFC-DACFEA9C64EE}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="734031120"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="2484145022" Name="Play_Stop_TestBeep_Loop" ObjectPath="\Events\TestEvents\Play_Stop_TestBeep_Loop" GUID="{A5E90370-96BE-450D-B970-BCFBC429B56F}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2439571424" Name="Play_Stop_TestBeep_Loop_3D" ObjectPath="\Events\TestEvents\Play_Stop_TestBeep_Loop_3D" GUID="{90FA6150-F2C6-4AEA-9823-D63B27B43CA6}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1955951874" Name="Play_TestBeep" ObjectPath="\Events\TestEvents\Play_TestBeep" GUID="{BA048CFB-5B21-4BC8-B6D1-60EC051A774E}" DurationType="OneShot" DurationMin="0.051583335" DurationMax="0.051583335">
@@ -214,6 +220,15 @@
 			<GameParameters>
 				<GameParameter Id="262290038" Name="RTPC_Distance" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Distance" GUID="{EF3CABA9-5812-4B07-97BE-69A25DA3E423}"/>
 			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="524731881" Name="AmbBiomeType" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType" GUID="{5B10E42B-0908-4108-AA6C-167CED4078D5}">
+					<Switches>
+						<Switch Id="513139656" Name="Mountain" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType\Mountain" GUID="{A4AFF0DE-5F41-4B08-AEFC-DACFEA9C64EE}"/>
+						<Switch Id="3945572659" Name="Village" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType\Village" GUID="{0850F707-F78B-4F5E-9519-A7CAAEFFA71A}"/>
+						<Switch Id="4122393694" Name="Cave" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType\Cave" GUID="{ED2B295B-B79E-4052-82D7-4EE5DB0E0BBC}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{C5B68DC2-FF16-7389-FE93-1DA8AB584C28}">
 			<ObjectPath>Init</ObjectPath>
@@ -353,5 +368,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E2D2BA5C-C071-F131-71EA-3F468DE340B4}</FileHash>
+	<FileHash>{93D9F72E-34A6-E476-69C4-6998F76064A4}</FileHash>
 </SoundBanksInfo>

@@ -3,7 +3,17 @@
 	<Events>
 		<WorkUnit Name="Ambience" ID="{A10A7E68-CD67-4727-B3F0-FCFC016B119E}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_AmbienceMain" ID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}"/>
+				<Event Name="Play_AmbienceMain" ID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}">
+					<ChildrenList>
+						<Action Name="" ID="{C7A210E6-4C30-43B3-941D-CE8C7FECAE51}" ShortID="204513722">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Amb_MainBiomeSwitch" ID="{00956273-A2D8-4DAA-9E00-0BA44EE000FD}" WorkUnitID="{08EA2C82-B862-4DCC-981A-58179263B7B6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

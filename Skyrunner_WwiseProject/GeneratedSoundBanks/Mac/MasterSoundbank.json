@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{73E808A7-564E-44B8-BCF3-CDA908FACC1B}",
     "Language": "SFX",
-    "Hash": "{96B755B5-9A68-51A5-67AF-27AD81032D46}",
+    "Hash": "{CD40939E-13C4-DA94-1420-6483EA3666AA}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\MasterSoundbank",
     "ShortName": "MasterSoundbank",
     "Path": "MasterSoundbank.bnk",
@@ -176,6 +176,14 @@
       "CachePath": "SFX/Placeholders/250_10C4C929.wem"
      },
      {
+      "Id": "734031120",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Placeholders\\amb_meteo_wind.wav",
+      "CachePath": "SFX/Placeholders/amb_meteo_wind_10C4C929.wem"
+     },
+     {
       "Id": "770231662",
       "Language": "SFX",
       "Streaming": "false",
@@ -257,6 +265,29 @@
      }
     ],
     "Events": [
+     {
+      "Id": "903081441",
+      "Name": "Play_AmbienceMain",
+      "ObjectPath": "\\Events\\Ambience\\Play_AmbienceMain",
+      "GUID": "{551300EA-C047-48F9-A1CA-75F08BC14E0B}",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "524731881",
+         "Id": "513139656",
+         "GUID": "{A4AFF0DE-5F41-4B08-AEFC-DACFEA9C64EE}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "734031120"
+         }
+        ]
+       }
+      ]
+     },
      {
       "Id": "2484145022",
       "Name": "Play_Stop_TestBeep_Loop",
@@ -434,9 +465,37 @@
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_Distance",
       "GUID": "{EF3CABA9-5812-4B07-97BE-69A25DA3E423}"
      }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "524731881",
+      "Name": "AmbBiomeType",
+      "ObjectPath": "\\Switches\\AmbienceSwitches\\AmbBiomeType",
+      "GUID": "{5B10E42B-0908-4108-AA6C-167CED4078D5}",
+      "Switches": [
+       {
+        "Id": "513139656",
+        "Name": "Mountain",
+        "ObjectPath": "\\Switches\\AmbienceSwitches\\AmbBiomeType\\Mountain",
+        "GUID": "{A4AFF0DE-5F41-4B08-AEFC-DACFEA9C64EE}"
+       },
+       {
+        "Id": "3945572659",
+        "Name": "Village",
+        "ObjectPath": "\\Switches\\AmbienceSwitches\\AmbBiomeType\\Village",
+        "GUID": "{0850F707-F78B-4F5E-9519-A7CAAEFFA71A}"
+       },
+       {
+        "Id": "4122393694",
+        "Name": "Cave",
+        "ObjectPath": "\\Switches\\AmbienceSwitches\\AmbBiomeType\\Cave",
+        "GUID": "{ED2B295B-B79E-4052-82D7-4EE5DB0E0BBC}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{7AC740D5-0F0C-EAD2-4709-71FB9397FFF8}"
+  "FileHash": "{EBB6661E-55D6-C92E-C405-95DCDADAE2BB}"
  }
 }
