@@ -20,6 +20,8 @@ ATimeSlippage::ATimeSlippage()
 void ATimeSlippage::BeginPlay()
 {
 	Super::BeginPlay();
+	SetGlobalTimeScale(globalTimeScale);
+
 
 	// reference to every recorders
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AActor::StaticClass(), modifiers);

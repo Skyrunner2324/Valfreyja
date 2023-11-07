@@ -24,6 +24,8 @@ UTimeSlippageModifier::UTimeSlippageModifier()
 void UTimeSlippageModifier::BeginPlay()
 {
 	Super::BeginPlay();
+	SetLocalTimeScale(localTimeScale);
+
 
 	// retrieve the only ATimeSlippage object
 	TArray<AActor*> arr;
