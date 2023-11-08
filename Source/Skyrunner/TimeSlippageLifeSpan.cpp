@@ -3,27 +3,25 @@
 
 #include "TimeSlippageLifeSpan.h"
 
+#include "TimeSlippage.h"
 #include "TimeSlippageModifier.h"
 
-// Sets default values for this component's properties
+
 UTimeSlippageLifeSpan::UTimeSlippageLifeSpan()
 {
 	PrimaryComponentTick.bCanEverTick = true;
-
-	// ...
 }
 
 
-// Called when the game starts
 void UTimeSlippageLifeSpan::BeginPlay()
 {
 	Super::BeginPlay();
-
-	// ...
+	timeSlippage = ATimeSlippage::Get(GetWorld());
+	// TODO : make this class derived from modifier class
+	//timeSlippage->modifiers.Add(this);
 }
 
 
-// Called every frame
 void UTimeSlippageLifeSpan::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
@@ -36,8 +34,6 @@ void UTimeSlippageLifeSpan::TickComponent(float DeltaTime, ELevelTick TickType, 
 	if (modifier)
 		lifeSpanStamp += modifier->localManagedDeltaTime;
 	else
-	{
-		//lifeSpanStamp += // TODO : globalManagedDeltaTime;
-	}
+		lifeSpanStamp += timeSlippage->globalManagedDeltaTime;
 }
 

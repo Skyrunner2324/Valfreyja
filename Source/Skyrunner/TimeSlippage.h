@@ -10,29 +10,30 @@ UCLASS()
 class SKYRUNNER_API ATimeSlippage : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	ATimeSlippage();
 
 
 private:
-	// array of every UTimeRecorder objects
-	UPROPERTY(EditAnywhere)
-	TArray<class AActor*> modifiers;
-
-
 	// time scale
-	// affects every UTimeRecorderObject
+	// affects every UTimeSlippageModifier and UTimeSlippageLifeSpan objects
 	UPROPERTY(EditAnywhere)
 	float globalTimeScale = 1.f;
 
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
+	// array of every UTimeSlippageModifier and UTimeSlippageLifeSpan objects
+	// UTimeSlippageModifier and UTimeSlippageLifeSpan components will automatically
+	// add their owner game actor to this array
+	UPROPERTY(BlueprintReadOnly)
+	TArray<class UTimeSlippageModifier*> modifiers;
+
+
 	UPROPERTY(BlueprintReadOnly)
 	float globalTime = 0.f;
 	UPROPERTY(BlueprintReadOnly)
@@ -44,6 +45,9 @@ public:
 
 	// TODO : deactivate
 	virtual void Tick(float DeltaTime) override;
+
+
+	static ATimeSlippage* Get(UWorld* world);
 
 
 	// TODO : lerp

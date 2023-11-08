@@ -4,30 +4,19 @@
 #include "TimeSlippage.h"
 
 #include "Kismet/GameplayStatics.h"
-#include "TimeSlippageModifier.h"
 
 #include "DebugLog.h"
 
 
-// Sets default values
 ATimeSlippage::ATimeSlippage()
 {
 	PrimaryActorTick.bCanEverTick = true;
-
 }
 
-// Called when the game starts or when spawned
 void ATimeSlippage::BeginPlay()
 {
 	Super::BeginPlay();
 	SetGlobalTimeScale(globalTimeScale);
-
-
-	// reference to every recorders
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AActor::StaticClass(), modifiers);
-	//for (auto& r : modifiers)
-	//{
-	//}
 }
 
 void ATimeSlippage::Tick(float DeltaTime)
@@ -41,10 +30,17 @@ void ATimeSlippage::Tick(float DeltaTime)
 	DebugLogPerFrame(FColor::Yellow, TEXT("Application time : %f"), GetWorld()->GetTimeSeconds());
 }
 
+ATimeSlippage* ATimeSlippage::Get(UWorld* world)
+{
+	return Cast<ATimeSlippage>(UGameplayStatics::GetActorOfClass(world, ATimeSlippage::StaticClass()));
+}
+
 void ATimeSlippage::SetGlobalTimeScale(const float newScale)
 {
 	globalTimeScale = newScale;
 	GetWorldSettings()->SetTimeDilation(globalTimeScale);
 
 	bIsDilated = newScale != 1.f;
+
+	// TODO : OnGlobalTimeScaleChange()
 }

@@ -13,23 +13,30 @@ class SKYRUNNER_API UTimeSlippageModifier : public UActorComponent
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this component's properties
 	UTimeSlippageModifier();
 
 protected:
-	// Called when the game starts
 	virtual void BeginPlay() override;
 
 private:
-	// pointer to global ATimeSlippage object
+	// changes local time scale in order to reach global time scale of spcified value
 	UPROPERTY(EditAnywhere)
-	class ATimeSlippage* timeSlippage;
+	float localTimeScaleTarget = 1.f;
+
+	// override target value with specified constant local time scale
+	UPROPERTY(EditAnywhere)
+	bool bOverrideTarget = false;
 
 	UPROPERTY(EditAnywhere)
 	float localTimeScale = 1.f;
 
 
 protected:
+	// pointer to global ATimeSlippage object
+	UPROPERTY(BlueprintReadOnly)
+	class ATimeSlippage* timeSlippage;
+
+
 	// locally managed delta time
 	UPROPERTY(BlueprintReadOnly)
 	float deltaTime = 0.f;
@@ -46,7 +53,6 @@ public:
 
 public:
 
-	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 

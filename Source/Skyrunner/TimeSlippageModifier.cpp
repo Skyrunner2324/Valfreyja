@@ -5,11 +5,8 @@
 
 #include "Kismet/GameplayStatics.h"
 #include "TimeSlippage.h"
-#include "MathUtil.h"
 
 #include "DebugLog.h"
-
-#include "Components/PrimitiveComponent.h"
 
 
 // Sets default values for this component's properties
@@ -25,12 +22,8 @@ void UTimeSlippageModifier::BeginPlay()
 {
 	Super::BeginPlay();
 	SetLocalTimeScale(localTimeScale);
-
-
-	// retrieve the only ATimeSlippage object
-	TArray<AActor*> arr;
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATimeSlippage::StaticClass(), arr);
-	timeSlippage = (ATimeSlippage*)arr[0];
+	timeSlippage = ATimeSlippage::Get(GetWorld());
+	timeSlippage->modifiers.Add(this);
 }
 
 
@@ -42,8 +35,11 @@ void UTimeSlippageModifier::TickComponent(float DeltaTime, ELevelTick TickType, 
 	localManagedDeltaTime = localTimeScale * timeSlippage->globalManagedDeltaTime;
 	localTime += localManagedDeltaTime;
 
-	DebugLogPerFrame(FColor::Red, TEXT("%f"), localTime);
+	//DebugLogPerFrame(FColor::Red, TEXT("%f"), localTime);
 
+	// TODO : event OnGlobalTimeScaleChange()
+	if (timeSlippage->GetGlobalTimeScale() != 0.f)
+		SetLocalTimeScale(localTimeScaleTarget / timeSlippage->GetGlobalTimeScale());
 }
 
 void UTimeSlippageModifier::SetLocalTimeScale(const float newScale)

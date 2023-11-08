@@ -22,16 +22,19 @@ private:
 	float lifeSpan = 0.f;
 
 
+protected:
+	// pointer to global ATimeSlippage object
+	UPROPERTY(BlueprintReadOnly)
+	class ATimeSlippage* timeSlippage;
+
+
 public:	
-	// Sets default values for this component's properties
 	UTimeSlippageLifeSpan();
 
 protected:
-	// Called when the game starts
 	virtual void BeginPlay() override;
 
 public:	
-	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 		
