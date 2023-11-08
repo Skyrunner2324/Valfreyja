@@ -22,12 +22,15 @@ void ATimeSlippage::BeginPlay()
 void ATimeSlippage::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	globalTime += DeltaTime;
-	globalManagedDeltaTime = DeltaTime * globalTimeScale;
+	applicationTime = GetWorld()->RealTimeSeconds;
+	globalTime = GetWorld()->TimeSeconds;
+	// no need to "manage" deltatime
+	globalManagedDeltaTime = DeltaTime/* * globalTimeScale*/;
 
 
 	// application time debug display
-	DebugLogPerFrame(FColor::Yellow, TEXT("Application time : %f"), GetWorld()->GetTimeSeconds());
+	DebugLogPerFrame(FColor::Yellow, TEXT("Global time : %f"), globalTime);
+	DebugLogPerFrame(FColor::Yellow, TEXT("Application time : %f"), applicationTime);
 }
 
 ATimeSlippage* ATimeSlippage::Get(UWorld* world)

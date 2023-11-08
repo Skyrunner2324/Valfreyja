@@ -38,7 +38,7 @@ void UTimeSlippageModifier::TickComponent(float DeltaTime, ELevelTick TickType, 
 	//DebugLogPerFrame(FColor::Red, TEXT("%f"), localTime);
 
 	// TODO : event OnGlobalTimeScaleChange()
-	if (timeSlippage->GetGlobalTimeScale() != 0.f)
+	if (!bOverrideTarget && timeSlippage->GetGlobalTimeScale() != 0.f)
 		SetLocalTimeScale(localTimeScaleTarget / timeSlippage->GetGlobalTimeScale());
 }
 

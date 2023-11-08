@@ -35,6 +35,8 @@ public:
 
 
 	UPROPERTY(BlueprintReadOnly)
+	float applicationTime = 0.f;
+	UPROPERTY(BlueprintReadOnly)
 	float globalTime = 0.f;
 	UPROPERTY(BlueprintReadOnly)
 	float globalManagedDeltaTime = 0.f;

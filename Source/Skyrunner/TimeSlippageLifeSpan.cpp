@@ -6,6 +6,8 @@
 #include "TimeSlippage.h"
 #include "TimeSlippageModifier.h"
 
+#include "DebugLog.h"
+
 
 UTimeSlippageLifeSpan::UTimeSlippageLifeSpan()
 {
@@ -19,6 +21,8 @@ void UTimeSlippageLifeSpan::BeginPlay()
 	timeSlippage = ATimeSlippage::Get(GetWorld());
 	// TODO : make this class derived from modifier class
 	//timeSlippage->modifiers.Add(this);
+
+	lifeSpanStamp = timeSlippage->globalTime;
 }
 
 
@@ -26,14 +30,7 @@ void UTimeSlippageLifeSpan::TickComponent(float DeltaTime, ELevelTick TickType, 
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	if (lifeSpanStamp >= lifeSpan)
+	if (timeSlippage->globalTime - lifeSpanStamp >= lifeSpan)
 		GetOwner()->Destroy();
-
-	// TODO : clean
-	auto modifier = GetOwner()->GetComponentByClass<UTimeSlippageModifier>();
-	if (modifier)
-		lifeSpanStamp += modifier->localManagedDeltaTime;
-	else
-		lifeSpanStamp += timeSlippage->globalManagedDeltaTime;
 }
 

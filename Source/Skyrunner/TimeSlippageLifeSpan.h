@@ -13,7 +13,7 @@ class SKYRUNNER_API UTimeSlippageLifeSpan : public UActorComponent
 	GENERATED_BODY()
 
 private:
-	// time stamp
+	// time stamp (when created)
 	float lifeSpanStamp = 0.f;
 
 
