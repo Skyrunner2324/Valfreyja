@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{55B3AA57-EF3A-6832-28B7-4FD02618B944}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{221CB4FA-5DCE-8481-7D16-E44D066583C2}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -45,10 +45,18 @@
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="262290038" Name="RTPC_Distance" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Distance" GUID="{EF3CABA9-5812-4B07-97BE-69A25DA3E423}"/>
+				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 				<GameParameter Id="3699472177" Name="RTPC_GroundMaterial" ObjectPath="\Game Parameters\Default Work Unit\RTPC_GroundMaterial" GUID="{05992564-76FB-4584-948F-C0F4109BF542}"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="210497749" Name="SlowMoState" ObjectPath="\States\Default Work Unit\SlowMoState" GUID="{C19D1B16-633A-4DFE-AD60-F8C6C952E8FA}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\SlowMoState\None" GUID="{89E459A9-DE01-4F01-B027-4F4E114C6509}"/>
+						<State Id="1160234136" Name="Normal" ObjectPath="\States\Default Work Unit\SlowMoState\Normal" GUID="{072BF153-B258-43FA-94CF-16316D610E02}"/>
+						<State Id="3236148094" Name="Slowmo" ObjectPath="\States\Default Work Unit\SlowMoState\Slowmo" GUID="{AFDA4DC4-406A-4780-8079-7FD697CED6BF}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="1045871717" Name="GameStatus" ObjectPath="\States\Default Work Unit\GameStatus" GUID="{B166225D-6EEC-4395-A414-2DC03ECCF043}">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\GameStatus\None" GUID="{EEB277E0-9352-480D-A6FB-C308E6B7BD09}"/>
@@ -106,5 +114,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BAF3D6C6-433D-E491-6041-684021BF5FBC}</FileHash>
+	<FileHash>{7C3773D1-C2BD-4305-DAC8-39D78EA1EEBA}</FileHash>
 </SoundBanksInfo>
