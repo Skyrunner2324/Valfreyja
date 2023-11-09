@@ -3,12 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "TimeSlippageModifier.h"
 #include "TimeSlippageLifeSpan.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class SKYRUNNER_API UTimeSlippageLifeSpan : public UActorComponent
+class SKYRUNNER_API UTimeSlippageLifeSpan : public UTimeSlippageModifier
 {
 	GENERATED_BODY()
 
@@ -20,12 +20,6 @@ private:
 	// < 0.f is forever, 0.f is instant death, time is in seconds (with time slippage)
 	UPROPERTY(EditAnywhere)
 	float lifeSpan = 0.f;
-
-
-protected:
-	// pointer to global ATimeSlippage object
-	UPROPERTY(BlueprintReadOnly)
-	class ATimeSlippage* timeSlippage;
 
 
 public:	

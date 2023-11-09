@@ -3,10 +3,9 @@
 
 #include "TimeSlippageLifeSpan.h"
 
-#include "TimeSlippage.h"
-#include "TimeSlippageModifier.h"
+#include "../TimeSlippage.h"
 
-#include "DebugLog.h"
+#include "../Utils/DebugLog.h"
 
 
 UTimeSlippageLifeSpan::UTimeSlippageLifeSpan()
@@ -18,9 +17,7 @@ UTimeSlippageLifeSpan::UTimeSlippageLifeSpan()
 void UTimeSlippageLifeSpan::BeginPlay()
 {
 	Super::BeginPlay();
-	timeSlippage = ATimeSlippage::Get(GetWorld());
-	// TODO : make this class derived from modifier class
-	//timeSlippage->modifiers.Add(this);
+	UTimeSlippageModifier::BeginPlay();
 
 	lifeSpanStamp = timeSlippage->globalTime;
 }

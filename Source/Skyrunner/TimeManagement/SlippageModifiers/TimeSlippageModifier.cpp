@@ -4,9 +4,9 @@
 #include "TimeSlippageModifier.h"
 
 #include "Kismet/GameplayStatics.h"
-#include "TimeSlippage.h"
+#include "../TimeSlippage.h"
 
-#include "DebugLog.h"
+#include "../Utils/DebugLog.h"
 
 
 // Sets default values for this component's properties
