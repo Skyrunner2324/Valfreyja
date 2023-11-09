@@ -34,10 +34,16 @@ public:
 	TArray<class UTimeSlippageModifier*> modifiers;
 
 
+	// actual app time
 	UPROPERTY(BlueprintReadOnly)
 	float applicationTime = 0.f;
+	// dilated app time
 	UPROPERTY(BlueprintReadOnly)
 	float globalTime = 0.f;
+	// actual delta time
+	UPROPERTY(BlueprintReadOnly)
+	float applicationDeltaTime = 0.f;
+	// dilated delta time
 	UPROPERTY(BlueprintReadOnly)
 	float globalManagedDeltaTime = 0.f;
 

@@ -27,11 +27,11 @@ private:
 	UPROPERTY(EditAnywhere)
 	bool bOverrideTarget = false;
 
+protected:
 	UPROPERTY(EditAnywhere)
 	float localTimeScale = 1.f;
 
 
-protected:
 	// pointer to global ATimeSlippage object
 	UPROPERTY(BlueprintReadOnly)
 	class ATimeSlippage* timeSlippage;

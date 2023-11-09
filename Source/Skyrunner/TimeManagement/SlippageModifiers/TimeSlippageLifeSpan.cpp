@@ -16,7 +16,6 @@ UTimeSlippageLifeSpan::UTimeSlippageLifeSpan()
 
 void UTimeSlippageLifeSpan::BeginPlay()
 {
-	Super::BeginPlay();
 	UTimeSlippageModifier::BeginPlay();
 
 	lifeSpanStamp = timeSlippage->globalTime;
@@ -25,7 +24,7 @@ void UTimeSlippageLifeSpan::BeginPlay()
 
 void UTimeSlippageLifeSpan::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	UTimeSlippageModifier::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	if (timeSlippage->globalTime - lifeSpanStamp >= lifeSpan)
 		GetOwner()->Destroy();

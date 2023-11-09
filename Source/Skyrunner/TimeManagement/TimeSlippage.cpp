@@ -24,6 +24,7 @@ void ATimeSlippage::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	applicationTime = GetWorld()->RealTimeSeconds;
 	globalTime = GetWorld()->TimeSeconds;
+	applicationDeltaTime = GetWorld()->DeltaRealTimeSeconds;
 	// no need to "manage" deltatime
 	globalManagedDeltaTime = DeltaTime/* * globalTimeScale*/;
 
