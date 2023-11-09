@@ -4,7 +4,7 @@
 #include "TimeSlippageModifier.h"
 
 #include "Kismet/GameplayStatics.h"
-#include "../TimeSlippage.h"
+#include "TimeSlippage.h"
 
 #include "../Utils/DebugLog.h"
 

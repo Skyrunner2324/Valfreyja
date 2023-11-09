@@ -26,6 +26,7 @@ void UTimeSlippageNiagaraSimulation::TickComponent(float DeltaTime, ELevelTick T
 {
 	UTimeSlippageModifier::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	// TODO : OnTimeScaleChanged() -> set all niagara components to unpaused
 	//if (!timeSlippage->bIsDilated)
 	//	return;
 

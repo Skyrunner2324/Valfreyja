@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "TimeSlippageModifier.h"
+#include "../TimeSlippageModifier.h"
 #include "TimeSlippageNiagaraSimulation.generated.h"
 
 
