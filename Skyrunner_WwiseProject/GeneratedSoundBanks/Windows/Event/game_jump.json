@@ -10,21 +10,22 @@
     "Type": "Event",
     "GUID": "{F22270AD-A873-4083-8853-CDF26CCD012F}",
     "Language": "SFX",
-    "Hash": "{D2B37003-EF8B-939D-70DE-5E27CBC259FD}",
+    "Hash": "{AE16D8AA-07B4-BB29-B601-D59E31899946}",
     "ObjectPath": "game_jump",
     "ShortName": "game_jump",
     "Path": "Event/game_jump.bnk",
-    "Media": [
-     {
-      "Id": "1026364026",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Placeholders\\player_jump.wav",
-      "Path": "Media/1026364026.wem",
-      "CachePath": "SFX/Placeholders/player_jump_10C4C929.wem"
-     }
-    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "1010974337",
+       "Name": "Soundseed Air Woosh",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\game_jump\\Soundseed Air Woosh",
+       "GUID": "{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}",
+       "LibName": "SoundSeed Air Woosh",
+       "LibId": "7864322"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2509828642",
@@ -32,17 +33,19 @@
       "ObjectPath": "\\Events\\Game\\Player\\game_jump",
       "GUID": "{F22270AD-A873-4083-8853-CDF26CCD012F}",
       "DurationType": "OneShot",
-      "DurationMin": "0.14504166",
-      "DurationMax": "0.14504166",
-      "MediaRefs": [
-       {
-        "Id": "1026364026"
-       }
-      ]
+      "DurationMin": "0.5",
+      "DurationMax": "0.5",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "1010974337"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{3D6FED86-C218-72DD-719C-B1C8D292CCC2}"
+  "FileHash": "{6386B438-8324-9487-7470-0C129C9E1315}"
  }
 }

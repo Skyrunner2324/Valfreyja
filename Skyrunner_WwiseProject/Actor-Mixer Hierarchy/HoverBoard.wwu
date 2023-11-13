@@ -17,6 +17,41 @@
 						</Reference>
 					</ReferenceList>
 				</BlendContainer>
+				<Sound Name="HoverWind" ID="{9B4AD9A0-3C3E-4B67-B9F8-25CE5FC4D51D}" ShortID="236940080">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SourcePlugin Name="Soundseed Air Wind" ID="{18F4FB7B-DE04-40E6-A69B-DEEF180CC535}" ShortID="810116914" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
+							<PropertyList>
+								<Property Name="Duration" Type="Real64" Value="7"/>
+								<Property Name="Gustiness" Type="Real32" Value="0.47"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<PluginData/>
+							<PluginInnerObjectList>
+								<List Name="Deflectors">
+									<PluginInnerObject Name="" ID="{352D520C-49C9-4D5B-A6D8-C7404904847C}" PluginName="Deflector" CompanyID="0" PluginID="121">
+										<PropertyList>
+											<Property Name="Frequency" Type="Real32" Value="483"/>
+										</PropertyList>
+									</PluginInnerObject>
+								</List>
+							</PluginInnerObjectList>
+						</SourcePlugin>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Soundseed Air Wind" ID="{18F4FB7B-DE04-40E6-A69B-DEEF180CC535}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

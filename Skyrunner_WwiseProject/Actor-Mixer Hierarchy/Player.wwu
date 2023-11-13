@@ -83,16 +83,65 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="player_jump" ID="{BE791AA1-8B6E-45C1-9C80-9744F0727C8B}">
+						<SourcePlugin Name="Soundseed Air Woosh" ID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" ShortID="1010974337" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
+							<PropertyList>
+								<Property Name="SpeedAutomate" Type="bool" Value="True"/>
+							</PropertyList>
 							<Language>SFX</Language>
-							<AudioFile>Placeholders\player_jump.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="1026364026"/>
-							</MediaIDList>
-						</AudioFileSource>
+							<PluginData>
+	<WooshData>
+		<CurveList Version="1">
+			<CurveInfo Name="Speed">
+				<Curve Name="" ID="{6880FAA3-81CC-4687-9738-3C1361651F96}">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="1"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>0</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>0.25</XPos>
+							<YPos>100</YPos>
+							<Flags>0</Flags>
+						</Point>
+						<Point>
+							<XPos>0.5</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+		</CurveList>
+		<Path Version="1">
+			<Path2D Name="" ID="{86C9DF47-B87B-4EE7-8552-3EB5BFAF880C}">
+				<PropertyList>
+					<Property Name="LinearTime" Type="bool" Value="False"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0</YPos>
+						<Flags>12</Flags>
+						<Time>0</Time>
+					</Point>
+				</PointList>
+			</Path2D>
+		</Path>
+	</WooshData>
+</PluginData>
+							<PluginInnerObjectList>
+								<List Name="Deflectors">
+									<PluginInnerObject Name="" ID="{49A592F2-E406-452B-96D2-72911A45A308}" PluginName="Deflector" CompanyID="0" PluginID="122"/>
+								</List>
+							</PluginInnerObjectList>
+						</SourcePlugin>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="player_jump" ID="{BE791AA1-8B6E-45C1-9C80-9744F0727C8B}" Platform="Linked"/>
+						<ActiveSource Name="Soundseed Air Woosh" ID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="game_death" ID="{EDAE9780-3460-48E5-A94B-4EC0246BD54C}" ShortID="626767501">
@@ -371,28 +420,6 @@
 						<ActiveSource Name="game_zipline_off" ID="{B23D777A-85BA-4627-AF78-2688B03BB028}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="game_weapon_reload" ID="{C8C7C4E7-3EDA-419C-8C92-00AC23260CB5}" ShortID="90319146">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="game_weapon_reload" ID="{6A8C48D3-9C55-4761-B1BB-6C9E0CF4600C}">
-							<Language>SFX</Language>
-							<AudioFile>Placeholders\game_weapon_reload.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="412718022"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="game_weapon_reload" ID="{6A8C48D3-9C55-4761-B1BB-6C9E0CF4600C}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="game_health_pickup" ID="{BEA83BA8-6F62-4DAC-BCE5-A79F9A2FBF61}" ShortID="747907137">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -415,28 +442,54 @@
 						<ActiveSource Name="game_health_pickup" ID="{BBA7AFA6-DB93-47A6-BD9C-D2AF9CDB6FC6}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="game_weapon_shoot" ID="{360701BA-6E3F-429B-9D78-779B39AEC382}" ShortID="918745258">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-						</Reference>
-					</ReferenceList>
+				<Folder Name="Weapons" ID="{721F29A2-8FAA-48B6-80AB-1F6FDC43F322}" ShortID="590136439">
 					<ChildrenList>
-						<AudioFileSource Name="game_weapon_shoot" ID="{18C6D448-B236-429A-9D4E-52802CC35E64}">
-							<Language>SFX</Language>
-							<AudioFile>Placeholders\game_weapon_shoot.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="870552716"/>
-							</MediaIDList>
-						</AudioFileSource>
+						<Sound Name="game_weapon_shoot" ID="{360701BA-6E3F-429B-9D78-779B39AEC382}" ShortID="918745258">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="game_weapon_shoot" ID="{18C6D448-B236-429A-9D4E-52802CC35E64}">
+									<Language>SFX</Language>
+									<AudioFile>Placeholders\game_weapon_shoot.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="870552716"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="game_weapon_shoot" ID="{18C6D448-B236-429A-9D4E-52802CC35E64}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="game_weapon_reload" ID="{C8C7C4E7-3EDA-419C-8C92-00AC23260CB5}" ShortID="90319146">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="game_weapon_reload" ID="{6A8C48D3-9C55-4761-B1BB-6C9E0CF4600C}">
+									<Language>SFX</Language>
+									<AudioFile>Placeholders\game_weapon_reload.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="412718022"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="game_weapon_reload" ID="{6A8C48D3-9C55-4761-B1BB-6C9E0CF4600C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="game_weapon_shoot" ID="{18C6D448-B236-429A-9D4E-52802CC35E64}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

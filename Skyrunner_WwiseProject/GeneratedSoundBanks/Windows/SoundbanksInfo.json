@@ -14,6 +14,43 @@
   "DialogueEvents": [],
   "SoundBanks": [
    {
+    "Id": "29886932",
+    "Type": "Event",
+    "GUID": "{AA3F18C1-9D36-4D56-9C8A-BA65E19E9C0B}",
+    "Language": "SFX",
+    "Hash": "{9B29B0EE-A587-FCBF-64C4-0E7E7A5A46D7}",
+    "ObjectPath": "game_weapon_overheat_lp",
+    "ShortName": "game_weapon_overheat_lp",
+    "Path": "Event/game_weapon_overheat_lp.bnk",
+    "Media": [
+     {
+      "Id": "994768342",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\game_shield_pickup.wav",
+      "Path": "Media/994768342.wem",
+      "CachePath": "SFX/Placeholders/game_shield_pickup_10C4C929.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "29886932",
+      "Name": "game_weapon_overheat_lp",
+      "ObjectPath": "\\Events\\Game\\Weapon\\game_weapon_overheat_lp",
+      "GUID": "{AA3F18C1-9D36-4D56-9C8A-BA65E19E9C0B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.928",
+      "DurationMax": "0.928",
+      "MediaRefs": [
+       {
+        "Id": "994768342"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "187046019",
     "Type": "Bus",
     "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
@@ -124,6 +161,43 @@
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
+     }
+    ]
+   },
+   {
+    "Id": "810881797",
+    "Type": "Event",
+    "GUID": "{A6DE13AD-5D29-475A-86AC-3110535E8909}",
+    "Language": "SFX",
+    "Hash": "{9CD50360-E0DD-A645-CA17-F97E56EE52ED}",
+    "ObjectPath": "game_weapon_shoot_shotgun",
+    "ShortName": "game_weapon_shoot_shotgun",
+    "Path": "Event/game_weapon_shoot_shotgun.bnk",
+    "Media": [
+     {
+      "Id": "870552716",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\game_weapon_shoot.wav",
+      "Path": "Media/870552716.wem",
+      "CachePath": "SFX/Placeholders/game_weapon_shoot_10C4C929.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "810881797",
+      "Name": "game_weapon_shoot_shotgun",
+      "ObjectPath": "\\Events\\Game\\Weapon\\game_weapon_shoot_shotgun",
+      "GUID": "{A6DE13AD-5D29-475A-86AC-3110535E8909}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.122666664",
+      "DurationMax": "0.122666664",
+      "MediaRefs": [
+       {
+        "Id": "870552716"
+       }
+      ]
      }
     ]
    },
@@ -622,20 +696,35 @@
     "Type": "Event",
     "GUID": "{C5F304BB-9F06-42C3-BEE9-4C60F33F28DB}",
     "Language": "SFX",
-    "Hash": "{88EAD474-1723-8EA0-7265-95F8A480869A}",
+    "Hash": "{5D66F70D-6A9D-98E6-4BF6-2B2A96AF8C6D}",
     "ObjectPath": "game_dash",
     "ShortName": "game_dash",
     "Path": "Event/game_dash.bnk",
+    "Media": [
+     {
+      "Id": "36710723",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\player_dash.wav",
+      "Path": "Media/36710723.wem",
+      "CachePath": "SFX/Placeholders/player_dash_10C4C929.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "1026755362",
       "Name": "game_dash",
       "ObjectPath": "\\Events\\Game\\Player\\game_dash",
       "GUID": "{C5F304BB-9F06-42C3-BEE9-4C60F33F28DB}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.42395833",
+      "DurationMax": "0.42395833",
+      "MediaRefs": [
+       {
+        "Id": "36710723"
+       }
+      ]
      }
     ]
    },
@@ -644,7 +733,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{63C837FF-95A0-AA80-9824-6E28E8F6E997}",
+    "Hash": "{33299EA8-D7E1-6958-E71D-F6F714D18617}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -1077,28 +1166,6 @@
     ]
    },
    {
-    "Id": "1946551313",
-    "Type": "Event",
-    "GUID": "{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}",
-    "Language": "SFX",
-    "Hash": "{53F79533-20EC-1125-D2AE-8F5153BD44FB}",
-    "ObjectPath": "game_slide",
-    "ShortName": "game_slide",
-    "Path": "Event/game_slide.bnk",
-    "Events": [
-     {
-      "Id": "1946551313",
-      "Name": "game_slide",
-      "ObjectPath": "\\Events\\Game\\Player\\game_slide",
-      "GUID": "{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
-     }
-    ]
-   },
-   {
     "Id": "2024222415",
     "Type": "Event",
     "GUID": "{8914833C-41B7-4962-9AF6-5229DDCF1F68}",
@@ -1121,24 +1188,77 @@
     ]
    },
    {
+    "Id": "2441153304",
+    "Type": "Event",
+    "GUID": "{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}",
+    "Language": "SFX",
+    "Hash": "{98844BCE-8B14-E387-B6E9-F1AE4573CBCC}",
+    "ObjectPath": "game_slide_lp",
+    "ShortName": "game_slide_lp",
+    "Path": "Event/game_slide_lp.bnk",
+    "Media": [
+     {
+      "Id": "129424093",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\player_slide.wav",
+      "Path": "Media/129424093.wem",
+      "CachePath": "SFX/Placeholders/player_slide_D79FB2B7.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2441153304",
+      "Name": "game_slide_lp",
+      "ObjectPath": "\\Events\\Game\\Player\\game_slide_lp",
+      "GUID": "{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "129424093"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "2509828642",
     "Type": "Event",
     "GUID": "{F22270AD-A873-4083-8853-CDF26CCD012F}",
     "Language": "SFX",
-    "Hash": "{E6E0BC50-0907-4F90-CF49-71FB24CC745D}",
+    "Hash": "{AE16D8AA-07B4-BB29-B601-D59E31899946}",
     "ObjectPath": "game_jump",
     "ShortName": "game_jump",
     "Path": "Event/game_jump.bnk",
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "1010974337",
+       "Name": "Soundseed Air Woosh",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\game_jump\\Soundseed Air Woosh",
+       "GUID": "{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}",
+       "LibName": "SoundSeed Air Woosh",
+       "LibId": "7864322"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2509828642",
       "Name": "game_jump",
       "ObjectPath": "\\Events\\Game\\Player\\game_jump",
       "GUID": "{F22270AD-A873-4083-8853-CDF26CCD012F}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.5",
+      "DurationMax": "0.5",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "1010974337"
+        }
+       ]
+      }
      }
     ]
    },
@@ -1253,28 +1373,6 @@
     ]
    },
    {
-    "Id": "2823463937",
-    "Type": "Event",
-    "GUID": "{4666F21B-17C8-4FCB-9DCA-7EC402ACA7D9}",
-    "Language": "SFX",
-    "Hash": "{FC5F23E5-1E1B-6212-DA71-0002F271C681}",
-    "ObjectPath": "game_wallslide",
-    "ShortName": "game_wallslide",
-    "Path": "Event/game_wallslide.bnk",
-    "Events": [
-     {
-      "Id": "2823463937",
-      "Name": "game_wallslide",
-      "ObjectPath": "\\Events\\Game\\Player\\game_wallslide",
-      "GUID": "{4666F21B-17C8-4FCB-9DCA-7EC402ACA7D9}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
-     }
-    ]
-   },
-   {
     "Id": "2848413666",
     "Type": "Event",
     "GUID": "{19B21076-A7DA-45EE-AA85-E86C9BF01313}",
@@ -1345,20 +1443,203 @@
     ]
    },
    {
+    "Id": "2952673576",
+    "Type": "Event",
+    "GUID": "{4666F21B-17C8-4FCB-9DCA-7EC402ACA7D9}",
+    "Language": "SFX",
+    "Hash": "{E5905661-CACD-69F7-1744-65BE676A359B}",
+    "ObjectPath": "game_wallslide_lp",
+    "ShortName": "game_wallslide_lp",
+    "Path": "Event/game_wallslide_lp.bnk",
+    "Media": [
+     {
+      "Id": "615287922",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\player_wallslide.wav",
+      "Path": "Media/615287922.wem",
+      "CachePath": "SFX/Placeholders/player_wallslide_D79FB2B7.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2952673576",
+      "Name": "game_wallslide_lp",
+      "ObjectPath": "\\Events\\Game\\Player\\game_wallslide_lp",
+      "GUID": "{4666F21B-17C8-4FCB-9DCA-7EC402ACA7D9}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "615287922"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "3100906049",
+    "Type": "Event",
+    "GUID": "{529351FE-8B1F-49C3-8A22-C12E928FF330}",
+    "Language": "SFX",
+    "Hash": "{A03E0B27-ED33-A17C-7C15-3E73C2CA35BD}",
+    "ObjectPath": "game_weapon_switch",
+    "ShortName": "game_weapon_switch",
+    "Path": "Event/game_weapon_switch.bnk",
+    "Media": [
+     {
+      "Id": "412718022",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\game_weapon_reload.wav",
+      "Path": "Media/412718022.wem",
+      "CachePath": "SFX/Placeholders/game_weapon_reload_10C4C929.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3100906049",
+      "Name": "game_weapon_switch",
+      "ObjectPath": "\\Events\\Game\\Weapon\\game_weapon_switch",
+      "GUID": "{529351FE-8B1F-49C3-8A22-C12E928FF330}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.6465833",
+      "DurationMax": "2.6465833",
+      "MediaRefs": [
+       {
+        "Id": "412718022"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "3191113924",
+    "Type": "Event",
+    "GUID": "{EEABD1AC-C871-41C1-836E-6397FD3D79D7}",
+    "Language": "SFX",
+    "Hash": "{D1973F06-D854-FB1C-A6A5-7AEBAEBBBA10}",
+    "ObjectPath": "game_weapon_shoot_pistol",
+    "ShortName": "game_weapon_shoot_pistol",
+    "Path": "Event/game_weapon_shoot_pistol.bnk",
+    "Media": [
+     {
+      "Id": "870552716",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\game_weapon_shoot.wav",
+      "Path": "Media/870552716.wem",
+      "CachePath": "SFX/Placeholders/game_weapon_shoot_10C4C929.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3191113924",
+      "Name": "game_weapon_shoot_pistol",
+      "ObjectPath": "\\Events\\Game\\Weapon\\game_weapon_shoot_pistol",
+      "GUID": "{EEABD1AC-C871-41C1-836E-6397FD3D79D7}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.122666664",
+      "DurationMax": "0.122666664",
+      "MediaRefs": [
+       {
+        "Id": "870552716"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "3286659280",
+    "Type": "Event",
+    "GUID": "{2FF21578-7EAF-4BAA-91DF-58F3EC500EFE}",
+    "Language": "SFX",
+    "Hash": "{3EDFAEC4-C3C7-C858-ADB0-FE6C806CD775}",
+    "ObjectPath": "game_weapon_shoot_smg",
+    "ShortName": "game_weapon_shoot_smg",
+    "Path": "Event/game_weapon_shoot_smg.bnk",
+    "Media": [
+     {
+      "Id": "870552716",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\game_weapon_shoot.wav",
+      "Path": "Media/870552716.wem",
+      "CachePath": "SFX/Placeholders/game_weapon_shoot_10C4C929.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3286659280",
+      "Name": "game_weapon_shoot_smg",
+      "ObjectPath": "\\Events\\Game\\Weapon\\game_weapon_shoot_smg",
+      "GUID": "{2FF21578-7EAF-4BAA-91DF-58F3EC500EFE}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.122666664",
+      "DurationMax": "0.122666664",
+      "MediaRefs": [
+       {
+        "Id": "870552716"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "3433403748",
     "Type": "Event",
     "GUID": "{D3AA67A4-87C8-4130-911C-00AE5EEE3A54}",
     "Language": "SFX",
-    "Hash": "{594779E1-1F8C-2656-7900-6501FDD36F1C}",
+    "Hash": "{1D6C7887-53D8-A06C-DBFE-77C7F5CB263B}",
     "ObjectPath": "game_death",
     "ShortName": "game_death",
     "Path": "Event/game_death.bnk",
+    "Media": [
+     {
+      "Id": "413608025",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\player_death.wav",
+      "Path": "Media/413608025.wem",
+      "CachePath": "SFX/Placeholders/player_death_10C4C929.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "3433403748",
       "Name": "game_death",
       "ObjectPath": "\\Events\\Game\\Player\\game_death",
       "GUID": "{D3AA67A4-87C8-4130-911C-00AE5EEE3A54}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.88016665",
+      "DurationMax": "0.88016665",
+      "MediaRefs": [
+       {
+        "Id": "413608025"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "3504247360",
+    "Type": "Event",
+    "GUID": "{91E04682-06C1-41C3-8BC4-F5796F558620}",
+    "Language": "SFX",
+    "Hash": "{4024FEE7-10D7-2998-DB0C-BDB37E4EF1C7}",
+    "ObjectPath": "stop_game_slide",
+    "ShortName": "stop_game_slide",
+    "Path": "Event/stop_game_slide.bnk",
+    "Events": [
+     {
+      "Id": "3504247360",
+      "Name": "stop_game_slide",
+      "ObjectPath": "\\Events\\Game\\Player\\stop_game_slide",
+      "GUID": "{91E04682-06C1-41C3-8BC4-F5796F558620}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -1389,16 +1670,90 @@
     "Type": "Event",
     "GUID": "{E70AC961-E4C1-4F27-8D35-AC47C3EC2805}",
     "Language": "SFX",
-    "Hash": "{C4B45443-C12C-B8AC-219A-5077A4CDC423}",
+    "Hash": "{28D28467-DD66-C9E2-1D7A-5FEA45B72B2B}",
     "ObjectPath": "game_land",
     "ShortName": "game_land",
     "Path": "Event/game_land.bnk",
+    "Media": [
+     {
+      "Id": "1026811673",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\player_land.wav",
+      "Path": "Media/1026811673.wem",
+      "CachePath": "SFX/Placeholders/player_land_10C4C929.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "3642868517",
       "Name": "game_land",
       "ObjectPath": "\\Events\\Game\\Player\\game_land",
       "GUID": "{E70AC961-E4C1-4F27-8D35-AC47C3EC2805}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.17454167",
+      "DurationMax": "0.17454167",
+      "MediaRefs": [
+       {
+        "Id": "1026811673"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "3943563605",
+    "Type": "Event",
+    "GUID": "{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}",
+    "Language": "SFX",
+    "Hash": "{88AFD6CA-8ABE-D806-E92C-A2529ACEC896}",
+    "ObjectPath": "game_grap_shot",
+    "ShortName": "game_grap_shot",
+    "Path": "Event/game_grap_shot.bnk",
+    "Media": [
+     {
+      "Id": "642346148",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\player_grap_shot.wav",
+      "Path": "Media/642346148.wem",
+      "CachePath": "SFX/Placeholders/player_grap_shot_10C4C929.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3943563605",
+      "Name": "game_grap_shot",
+      "ObjectPath": "\\Events\\Game\\Grap\\game_grap_shot",
+      "GUID": "{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.4296875",
+      "DurationMax": "0.4296875",
+      "MediaRefs": [
+       {
+        "Id": "642346148"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "3985030068",
+    "Type": "Event",
+    "GUID": "{2ED24474-7C6A-4243-9411-21105E6B92AF}",
+    "Language": "SFX",
+    "Hash": "{61A28EBA-0FBC-6E77-AF06-AC71635D73E3}",
+    "ObjectPath": "stop_game_wallslide",
+    "ShortName": "stop_game_wallslide",
+    "Path": "Event/stop_game_wallslide.bnk",
+    "Events": [
+     {
+      "Id": "3985030068",
+      "Name": "stop_game_wallslide",
+      "ObjectPath": "\\Events\\Game\\Player\\stop_game_wallslide",
+      "GUID": "{2ED24474-7C6A-4243-9411-21105E6B92AF}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -1431,8 +1786,30 @@
       ]
      }
     ]
+   },
+   {
+    "Id": "4134554492",
+    "Type": "Event",
+    "GUID": "{5C34145E-D33C-4A87-8375-E5D2BFE47B54}",
+    "Language": "SFX",
+    "Hash": "{4185A0F8-F7D0-AD47-4950-DCCC75C26C82}",
+    "ObjectPath": "stop_game_weapon_overheat",
+    "ShortName": "stop_game_weapon_overheat",
+    "Path": "Event/stop_game_weapon_overheat.bnk",
+    "Events": [
+     {
+      "Id": "4134554492",
+      "Name": "stop_game_weapon_overheat",
+      "ObjectPath": "\\Events\\Game\\Weapon\\stop_game_weapon_overheat",
+      "GUID": "{5C34145E-D33C-4A87-8375-E5D2BFE47B54}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
    }
   ],
-  "FileHash": "{AA23057D-BA92-FAE7-FD24-DED983A5AD08}"
+  "FileHash": "{BCF16116-2C86-CB7E-8682-E55215006F60}"
  }
 }
