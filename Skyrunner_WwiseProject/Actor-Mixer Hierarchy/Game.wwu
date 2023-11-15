@@ -47,9 +47,84 @@
 										<ActiveSource Name="game_weapon_shoot" ID="{18C6D448-B236-429A-9D4E-52802CC35E64}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="game_weapon_shoot_grenadelauncher" ID="{58706C08-305A-4D51-AC01-A5290E2628F0}" ShortID="300794130">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="game_weapon_shoot_grenadelauncher" ID="{99991947-18BC-4464-883C-83D487169C2E}">
+											<Language>SFX</Language>
+											<AudioFile>Placeholders\game_weapon_shoot_grenadelauncher.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="324871314"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="game_weapon_shoot_grenadelauncher" ID="{99991947-18BC-4464-883C-83D487169C2E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="game_weapon_shoot_machinegun" ID="{5020077C-24E2-46F5-88F9-1926B82B2FBD}" ShortID="782041294">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="game_weapon_shoot_machinegun" ID="{40C8A1D4-7915-46D3-84FE-718C0CC5B304}">
+											<Language>SFX</Language>
+											<AudioFile>Placeholders\game_weapon_shoot_machinegun.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="759953172"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="game_weapon_shoot_machinegun" ID="{40C8A1D4-7915-46D3-84FE-718C0CC5B304}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="game_weapon_shoot_shotgun" ID="{DCDEA920-D5F0-4CB2-ADE9-70136387DF80}" ShortID="1064202294">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="game_weapon_shoot_shotgun" ID="{71DF3D80-8677-471E-A191-CD60B3BAC8BD}">
+											<Language>SFX</Language>
+											<AudioFile>Placeholders\game_weapon_shoot_shotgun.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="353061919"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="game_weapon_shoot_shotgun" ID="{71DF3D80-8677-471E-A191-CD60B3BAC8BD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<GroupingInfo>
 								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="game_weapon_shoot_grenadelauncher" ID="{58706C08-305A-4D51-AC01-A5290E2628F0}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="game_weapon_shoot_shotgun" ID="{DCDEA920-D5F0-4CB2-ADE9-70136387DF80}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="game_weapon_shoot_machinegun" ID="{5020077C-24E2-46F5-88F9-1926B82B2FBD}"/>
+									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="game_weapon_shoot_pistol" ID="{360701BA-6E3F-429B-9D78-779B39AEC382}"/>
 									</GroupingBehavior>
@@ -59,6 +134,24 @@
 										<SwitchRef Name="Pistol" ID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"/>
 										<ItemList>
 											<ItemRef Name="game_weapon_shoot_pistol" ID="{360701BA-6E3F-429B-9D78-779B39AEC382}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+										<ItemList>
+											<ItemRef Name="game_weapon_shoot_grenadelauncher" ID="{58706C08-305A-4D51-AC01-A5290E2628F0}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="MachineGun" ID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+										<ItemList>
+											<ItemRef Name="game_weapon_shoot_machinegun" ID="{5020077C-24E2-46F5-88F9-1926B82B2FBD}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Shotgun" ID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+										<ItemList>
+											<ItemRef Name="game_weapon_shoot_shotgun" ID="{DCDEA920-D5F0-4CB2-ADE9-70136387DF80}"/>
 										</ItemList>
 									</Grouping>
 								</GroupingList>
