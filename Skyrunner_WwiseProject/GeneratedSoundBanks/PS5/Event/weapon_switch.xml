@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="283915908" Type="Event" GUID="{529351FE-8B1F-49C3-8A22-C12E928FF330}" Language="SFX" Hash="{3958C86C-737A-5F0A-0D26-70ABC7324BC1}">
+		<SoundBank Id="283915908" Type="Event" GUID="{320EAD8E-718C-462E-A1F1-4AD653892209}" Language="SFX" Hash="{00CEA0FE-B814-D6E8-2A23-0B23FC27471B}">
 			<ObjectPath>weapon_switch</ObjectPath>
 			<ShortName>weapon_switch</ShortName>
 			<Path>Event/weapon_switch.bnk</Path>
@@ -9,17 +9,33 @@
 				<File Id="412718022" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\game_weapon_reload.wav</ShortName>
 					<Path>Media/412718022.wem</Path>
-					<CachePath>SFX/Placeholders/game_weapon_reload_10C4C929.wem</CachePath>
+					<CachePath>SFX/Placeholders/game_weapon_reload_430B9F8D.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="283915908" Name="weapon_switch" ObjectPath="\Events\Game\Weapon\weapon_switch" GUID="{529351FE-8B1F-49C3-8A22-C12E928FF330}" DurationType="OneShot" DurationMin="2.6465833" DurationMax="2.6465833">
-					<MediaRefs>
-						<MediaRef Id="412718022"/>
-					</MediaRefs>
+				<Event Id="283915908" Name="weapon_switch" ObjectPath="\Events\Game\Weapon\weapon_switch" GUID="{320EAD8E-718C-462E-A1F1-4AD653892209}" DurationType="OneShot" DurationMin="0.55864555" DurationMax="0.55864555">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="324443136" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="412718022"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
+					<States>
+						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+						<State Id="324443136" Name="Pistol" ObjectPath="\States\Default Work Unit\WeaponState\Pistol" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+						<State Id="2958002925" Name="GrenadeLauncher" ObjectPath="\States\Default Work Unit\WeaponState\GrenadeLauncher" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+						<State Id="3678545986" Name="MachineGun" ObjectPath="\States\Default Work Unit\WeaponState\MachineGun" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{45889993-2BBB-D83D-7F38-E07DD6FB2B65}</FileHash>
+	<FileHash>{3303DE51-A0D4-F7E7-7E8A-6D27848AD7E6}</FileHash>
 </SoundBanksInfo>

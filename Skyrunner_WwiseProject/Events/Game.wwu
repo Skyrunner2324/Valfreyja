@@ -9,34 +9,12 @@
 			<ChildrenList>
 				<Folder Name="Weapon" ID="{8983EACC-2E73-4DAF-A057-4813D0A7779C}" ShortID="500072785">
 					<ChildrenList>
-						<Event Name="weapon_shoot_pistol" ID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}">
+						<Event Name="player_shoot" ID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}">
 							<ChildrenList>
 								<Action Name="" ID="{2376938F-E38F-41E5-A02C-18EF439EEBA8}" ShortID="343528449">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="game_weapon_shoot" ID="{360701BA-6E3F-429B-9D78-779B39AEC382}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="weapon_shoot_shotgun" ID="{A6DE13AD-5D29-475A-86AC-3110535E8909}">
-							<ChildrenList>
-								<Action Name="" ID="{FF0769EF-E319-4FDB-BB0A-7C1503F1677E}" ShortID="160427513">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="game_weapon_shoot" ID="{360701BA-6E3F-429B-9D78-779B39AEC382}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="weapon_shoot_smg" ID="{2FF21578-7EAF-4BAA-91DF-58F3EC500EFE}">
-							<ChildrenList>
-								<Action Name="" ID="{58FA3CE3-9A49-4045-97BA-7879EC0FD2D6}" ShortID="190252437">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="game_weapon_shoot" ID="{360701BA-6E3F-429B-9D78-779B39AEC382}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+											<ObjectRef Name="game_weapon_shoot" ID="{7AB9AD82-2070-4C79-B217-7E83631F2128}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -53,18 +31,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="weapon_switch" ID="{529351FE-8B1F-49C3-8A22-C12E928FF330}">
-							<ChildrenList>
-								<Action Name="" ID="{ED683F0B-022B-4FB4-82BA-997490F7157B}" ShortID="158746691">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="game_weapon_reload" ID="{C8C7C4E7-3EDA-419C-8C92-00AC23260CB5}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="stop_weapon_overheat_lp" ID="{5C34145E-D33C-4A87-8375-E5D2BFE47B54}">
+						<Event Name="weapon_overheat_stoplp" ID="{5C34145E-D33C-4A87-8375-E5D2BFE47B54}">
 							<ChildrenList>
 								<Action Name="" ID="{19040243-798F-4B3E-934B-80C68A5F7B62}" ShortID="526704346">
 									<PropertyList>
@@ -73,6 +40,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="game_shield_pickup" ID="{0166BC32-CB07-42C9-B465-04957BD4D4F7}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="weapon_switch" ID="{320EAD8E-718C-462E-A1F1-4AD653892209}">
+							<ChildrenList>
+								<Action Name="" ID="{A6675BE5-5F4F-4237-9955-5EFFDBC6E030}" ShortID="786774759">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="game_weapon_switch" ID="{C7DEEAFC-C8C0-4273-ABCF-9E54CFDE588E}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -104,7 +82,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="player_slide_lp" ID="{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}">
+						<Event Name="player_slide" ID="{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}">
 							<ChildrenList>
 								<Action Name="" ID="{26136573-F596-4407-A98F-31F28017EA40}" ShortID="711070668">
 									<ReferenceList>
@@ -157,20 +135,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="game_wallslide" ID="{BDD7EC25-5B32-4F59-93C9-8D50073A3E77}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="player_slide_stoplp" ID="{91E04682-06C1-41C3-8BC4-F5796F558620}">
-							<ChildrenList>
-								<Action Name="" ID="{6233EA67-0A31-4845-942B-11B8CA424EC3}" ShortID="467395156">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="game_slide" ID="{0F8FE257-4D33-4454-AADA-B67BCA030904}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

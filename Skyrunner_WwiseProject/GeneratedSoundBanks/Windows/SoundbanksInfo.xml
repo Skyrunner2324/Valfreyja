@@ -37,7 +37,7 @@
 				<Event Id="233293630" Name="enemy_gunner_shot" ObjectPath="\Events\Enemy\enemy_gunner_shot" GUID="{85FE7A46-F893-42AA-8787-F5597C4AF630}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="283915908" Type="Event" GUID="{529351FE-8B1F-49C3-8A22-C12E928FF330}" Language="SFX" Hash="{3958C86C-737A-5F0A-0D26-70ABC7324BC1}">
+		<SoundBank Id="283915908" Type="Event" GUID="{320EAD8E-718C-462E-A1F1-4AD653892209}" Language="SFX" Hash="{00CEA0FE-B814-D6E8-2A23-0B23FC27471B}">
 			<ObjectPath>weapon_switch</ObjectPath>
 			<ShortName>weapon_switch</ShortName>
 			<Path>Event/weapon_switch.bnk</Path>
@@ -45,16 +45,32 @@
 				<File Id="412718022" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\game_weapon_reload.wav</ShortName>
 					<Path>Media/412718022.wem</Path>
-					<CachePath>SFX/Placeholders/game_weapon_reload_10C4C929.wem</CachePath>
+					<CachePath>SFX/Placeholders/game_weapon_reload_430B9F8D.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="283915908" Name="weapon_switch" ObjectPath="\Events\Game\Weapon\weapon_switch" GUID="{529351FE-8B1F-49C3-8A22-C12E928FF330}" DurationType="OneShot" DurationMin="2.6465833" DurationMax="2.6465833">
-					<MediaRefs>
-						<MediaRef Id="412718022"/>
-					</MediaRefs>
+				<Event Id="283915908" Name="weapon_switch" ObjectPath="\Events\Game\Weapon\weapon_switch" GUID="{320EAD8E-718C-462E-A1F1-4AD653892209}" DurationType="OneShot" DurationMin="0.55864555" DurationMax="0.55864555">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="324443136" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="412718022"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
+					<States>
+						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+						<State Id="324443136" Name="Pistol" ObjectPath="\States\Default Work Unit\WeaponState\Pistol" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+						<State Id="2958002925" Name="GrenadeLauncher" ObjectPath="\States\Default Work Unit\WeaponState\GrenadeLauncher" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+						<State Id="3678545986" Name="MachineGun" ObjectPath="\States\Default Work Unit\WeaponState\MachineGun" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 		<SoundBank Id="468545274" Type="Event" GUID="{39206078-B8DE-40F6-9ABE-8A92C812BBBA}" Language="SFX" Hash="{82DF3E23-449F-207A-DBB9-0D49B0A87336}">
 			<ObjectPath>enemy_sniper_shot</ObjectPath>
@@ -62,14 +78,6 @@
 			<Path>Event/enemy_sniper_shot.bnk</Path>
 			<Events>
 				<Event Id="468545274" Name="enemy_sniper_shot" ObjectPath="\Events\Enemy\enemy_sniper_shot" GUID="{39206078-B8DE-40F6-9ABE-8A92C812BBBA}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="788250642" Type="Event" GUID="{5C34145E-D33C-4A87-8375-E5D2BFE47B54}" Language="SFX" Hash="{61BCF06B-E96E-9297-6372-DF76FB6FF22F}">
-			<ObjectPath>stop_weapon_overheat_lp</ObjectPath>
-			<ShortName>stop_weapon_overheat_lp</ShortName>
-			<Path>Event/stop_weapon_overheat_lp.bnk</Path>
-			<Events>
-				<Event Id="788250642" Name="stop_weapon_overheat_lp" ObjectPath="\Events\Game\Weapon\stop_weapon_overheat_lp" GUID="{5C34145E-D33C-4A87-8375-E5D2BFE47B54}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="971909502" Type="User" GUID="{73E808A7-564E-44B8-BCF3-CDA908FACC1B}" Language="SFX" Hash="{2CE7FBD6-644C-8DAC-F470-1F0E7DA106E1}">
@@ -319,7 +327,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{B8B0CC16-3DD8-7BEF-EEBB-AF8FD3AB1820}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{0FD783B1-FA6E-3AD5-C355-1BA050171FB0}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -396,6 +404,15 @@
 						<State Id="2044049779" Name="Dead" ObjectPath="\States\Default Work Unit\PlayerState\Dead" GUID="{286888B3-6EE4-46E1-BEFB-B22637C040E5}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
+					<States>
+						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+						<State Id="324443136" Name="Pistol" ObjectPath="\States\Default Work Unit\WeaponState\Pistol" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+						<State Id="2958002925" Name="GrenadeLauncher" ObjectPath="\States\Default Work Unit\WeaponState\GrenadeLauncher" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+						<State Id="3678545986" Name="MachineGun" ObjectPath="\States\Default Work Unit\WeaponState\MachineGun" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+					</States>
+				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="151362964" Name="PlayerHealth" ObjectPath="\Switches\Default Work Unit\PlayerHealth" GUID="{6ED19CFE-6D91-4B73-A8B1-241649EF7F14}">
@@ -451,33 +468,6 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1393950542" Type="Event" GUID="{A6DE13AD-5D29-475A-86AC-3110535E8909}" Language="SFX" Hash="{FBC4F089-3123-5CD4-1BF6-4A72598B2CCB}">
-			<ObjectPath>weapon_shoot_shotgun</ObjectPath>
-			<ShortName>weapon_shoot_shotgun</ShortName>
-			<Path>Event/weapon_shoot_shotgun.bnk</Path>
-			<Media>
-				<File Id="870552716" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\game_weapon_shoot.wav</ShortName>
-					<Path>Media/870552716.wem</Path>
-					<CachePath>SFX/Placeholders/game_weapon_shoot_10C4C929.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="1393950542" Name="weapon_shoot_shotgun" ObjectPath="\Events\Game\Weapon\weapon_shoot_shotgun" GUID="{A6DE13AD-5D29-475A-86AC-3110535E8909}" DurationType="OneShot" DurationMin="0.122666664" DurationMax="0.122666664">
-					<MediaRefs>
-						<MediaRef Id="870552716"/>
-					</MediaRefs>
-				</Event>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="1468114183" Type="Event" GUID="{91E04682-06C1-41C3-8BC4-F5796F558620}" Language="SFX" Hash="{C9DA3BC9-94BB-CC97-080C-208CA2BDD8A6}">
-			<ObjectPath>player_slide_stoplp</ObjectPath>
-			<ShortName>player_slide_stoplp</ShortName>
-			<Path>Event/player_slide_stoplp.bnk</Path>
-			<Events>
-				<Event Id="1468114183" Name="player_slide_stoplp" ObjectPath="\Events\Game\Player\player_slide_stoplp" GUID="{91E04682-06C1-41C3-8BC4-F5796F558620}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
 		<SoundBank Id="1547305881" Type="Event" GUID="{1EAF38A2-E048-4AB3-991B-FC3608514236}" Language="SFX" Hash="{DA58B9B9-2029-E93F-3860-0A84EE395DA3}">
 			<ObjectPath>shield_pickup</ObjectPath>
 			<ShortName>shield_pickup</ShortName>
@@ -492,25 +482,6 @@
 			<Path>Event/player_wallslide_stoplp.bnk</Path>
 			<Events>
 				<Event Id="1682875947" Name="player_wallslide_stoplp" ObjectPath="\Events\Game\Player\player_wallslide_stoplp" GUID="{2ED24474-7C6A-4243-9411-21105E6B92AF}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="2000974343" Type="Event" GUID="{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}" Language="SFX" Hash="{964F457A-00C7-5068-632E-CEFB1E86FDD7}">
-			<ObjectPath>player_slide_lp</ObjectPath>
-			<ShortName>player_slide_lp</ShortName>
-			<Path>Event/player_slide_lp.bnk</Path>
-			<Media>
-				<File Id="129424093" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\player_slide.wav</ShortName>
-					<Path>Media/129424093.wem</Path>
-					<CachePath>SFX/Placeholders/player_slide_D79FB2B7.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="2000974343" Name="player_slide_lp" ObjectPath="\Events\Game\Player\player_slide_lp" GUID="{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="129424093"/>
-					</MediaRefs>
-				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="2024222415" Type="Event" GUID="{8914833C-41B7-4962-9AF6-5229DDCF1F68}" Language="SFX" Hash="{4C511C57-4130-BC54-6666-4B6112AD6D76}">
@@ -540,12 +511,39 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="2395602551" Type="Event" GUID="{5C34145E-D33C-4A87-8375-E5D2BFE47B54}" Language="SFX" Hash="{4937D141-012A-FE7B-3EE1-D540D4E2C5D3}">
+			<ObjectPath>weapon_overheat_stoplp</ObjectPath>
+			<ShortName>weapon_overheat_stoplp</ShortName>
+			<Path>Event/weapon_overheat_stoplp.bnk</Path>
+			<Events>
+				<Event Id="2395602551" Name="weapon_overheat_stoplp" ObjectPath="\Events\Game\Weapon\weapon_overheat_stoplp" GUID="{5C34145E-D33C-4A87-8375-E5D2BFE47B54}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="2569008858" Type="Event" GUID="{2189C011-A358-4102-9707-D283558C2E34}" Language="SFX" Hash="{08F842AF-F8E2-2691-BA1A-5E089A3FF122}">
 			<ObjectPath>enemy_bomber_shot</ObjectPath>
 			<ShortName>enemy_bomber_shot</ShortName>
 			<Path>Event/enemy_bomber_shot.bnk</Path>
 			<Events>
 				<Event Id="2569008858" Name="enemy_bomber_shot" ObjectPath="\Events\Enemy\enemy_bomber_shot" GUID="{2189C011-A358-4102-9707-D283558C2E34}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="2609528332" Type="Event" GUID="{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}" Language="SFX" Hash="{C807E00D-AAFD-174A-3625-7DCE188DE12F}">
+			<ObjectPath>player_slide</ObjectPath>
+			<ShortName>player_slide</ShortName>
+			<Path>Event/player_slide.bnk</Path>
+			<Media>
+				<File Id="129424093" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\player_slide.wav</ShortName>
+					<Path>Media/129424093.wem</Path>
+					<CachePath>SFX/Placeholders/player_slide_28B0270B.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2609528332" Name="player_slide" ObjectPath="\Events\Game\Player\player_slide" GUID="{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}" DurationType="OneShot" DurationMin="1.3259103" DurationMax="1.3259103">
+					<MediaRefs>
+						<MediaRef Id="129424093"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="2644790697" Type="Event" GUID="{528674B7-E690-4AD6-8217-32726F835B11}" Language="SFX" Hash="{B8012CF4-949F-D3AD-CA67-258D75700D92}">
@@ -673,10 +671,10 @@
 				<Event Id="3731941266" Name="health_pickup" ObjectPath="\Events\Game\Pickup\health_pickup" GUID="{824CD4D8-FA76-451F-8462-B36BA9055F65}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3987102555" Type="Event" GUID="{2FF21578-7EAF-4BAA-91DF-58F3EC500EFE}" Language="SFX" Hash="{5A3BDAFC-2DBD-9748-9CB0-4257ECFF271F}">
-			<ObjectPath>weapon_shoot_smg</ObjectPath>
-			<ShortName>weapon_shoot_smg</ShortName>
-			<Path>Event/weapon_shoot_smg.bnk</Path>
+		<SoundBank Id="4004702906" Type="Event" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" Language="SFX" Hash="{2ED84E4A-5ABF-AB96-CBB1-28450E8E0F45}">
+			<ObjectPath>player_shoot</ObjectPath>
+			<ShortName>player_shoot</ShortName>
+			<Path>Event/player_shoot.bnk</Path>
 			<Media>
 				<File Id="870552716" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\game_weapon_shoot.wav</ShortName>
@@ -685,12 +683,28 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3987102555" Name="weapon_shoot_smg" ObjectPath="\Events\Game\Weapon\weapon_shoot_smg" GUID="{2FF21578-7EAF-4BAA-91DF-58F3EC500EFE}" DurationType="OneShot" DurationMin="0.122666664" DurationMax="0.122666664">
-					<MediaRefs>
-						<MediaRef Id="870552716"/>
-					</MediaRefs>
+				<Event Id="4004702906" Name="player_shoot" ObjectPath="\Events\Game\Weapon\player_shoot" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" DurationType="OneShot" DurationMin="0.122666664" DurationMax="0.122666664">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="324443136" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="870552716"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
+					<States>
+						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+						<State Id="324443136" Name="Pistol" ObjectPath="\States\Default Work Unit\WeaponState\Pistol" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+						<State Id="2958002925" Name="GrenadeLauncher" ObjectPath="\States\Default Work Unit\WeaponState\GrenadeLauncher" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+						<State Id="3678545986" Name="MachineGun" ObjectPath="\States\Default Work Unit\WeaponState\MachineGun" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 		<SoundBank Id="4122393694" Type="Bus" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" Language="SFX" Hash="{A35DBB55-EE78-86A7-E358-FB7836AFB5DF}">
 			<ObjectPath>Cave</ObjectPath>
@@ -712,25 +726,6 @@
 				<Event Id="4253579710" Name="ammo_pickup" ObjectPath="\Events\Game\Pickup\ammo_pickup" GUID="{A931F877-391B-4CC5-8D83-9FABA2DD43E1}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4283856269" Type="Event" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" Language="SFX" Hash="{054FE5BF-FD29-1866-54DD-57E2213F5110}">
-			<ObjectPath>weapon_shoot_pistol</ObjectPath>
-			<ShortName>weapon_shoot_pistol</ShortName>
-			<Path>Event/weapon_shoot_pistol.bnk</Path>
-			<Media>
-				<File Id="870552716" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\game_weapon_shoot.wav</ShortName>
-					<Path>Media/870552716.wem</Path>
-					<CachePath>SFX/Placeholders/game_weapon_shoot_10C4C929.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="4283856269" Name="weapon_shoot_pistol" ObjectPath="\Events\Game\Weapon\weapon_shoot_pistol" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" DurationType="OneShot" DurationMin="0.122666664" DurationMax="0.122666664">
-					<MediaRefs>
-						<MediaRef Id="870552716"/>
-					</MediaRefs>
-				</Event>
-			</Events>
-		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EF39E88E-E260-FC9C-0533-FD064DD8C60F}</FileHash>
+	<FileHash>{AA93B880-3D06-B6A0-861E-1A4FB5CAB573}</FileHash>
 </SoundBanksInfo>

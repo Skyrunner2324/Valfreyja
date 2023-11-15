@@ -8,9 +8,9 @@
    {
     "Id": "283915908",
     "Type": "Event",
-    "GUID": "{529351FE-8B1F-49C3-8A22-C12E928FF330}",
+    "GUID": "{320EAD8E-718C-462E-A1F1-4AD653892209}",
     "Language": "SFX",
-    "Hash": "{3958C86C-737A-5F0A-0D26-70ABC7324BC1}",
+    "Hash": "{00CEA0FE-B814-D6E8-2A23-0B23FC27471B}",
     "ObjectPath": "weapon_switch",
     "ShortName": "weapon_switch",
     "Path": "Event/weapon_switch.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\game_weapon_reload.wav",
       "Path": "Media/412718022.wem",
-      "CachePath": "SFX/Placeholders/game_weapon_reload_10C4C929.wem"
+      "CachePath": "SFX/Placeholders/game_weapon_reload_430B9F8D.wem"
      }
     ],
     "Events": [
@@ -30,19 +30,70 @@
       "Id": "283915908",
       "Name": "weapon_switch",
       "ObjectPath": "\\Events\\Game\\Weapon\\weapon_switch",
-      "GUID": "{529351FE-8B1F-49C3-8A22-C12E928FF330}",
+      "GUID": "{320EAD8E-718C-462E-A1F1-4AD653892209}",
       "DurationType": "OneShot",
-      "DurationMin": "2.6465833",
-      "DurationMax": "2.6465833",
-      "MediaRefs": [
+      "DurationMin": "0.55864555",
+      "DurationMax": "0.55864555",
+      "SwitchContainers": [
        {
-        "Id": "412718022"
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "4232248784",
+         "Id": "324443136",
+         "GUID": "{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "412718022"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "4232248784",
+      "Name": "WeaponState",
+      "ObjectPath": "\\States\\Default Work Unit\\WeaponState",
+      "GUID": "{912BC3CC-7356-4483-9C97-B04B3D54A890}",
+      "States": [
+       {
+        "Id": "51683977",
+        "Name": "Shotgun",
+        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\Shotgun",
+        "GUID": "{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"
+       },
+       {
+        "Id": "324443136",
+        "Name": "Pistol",
+        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\Pistol",
+        "GUID": "{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\None",
+        "GUID": "{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"
+       },
+       {
+        "Id": "2958002925",
+        "Name": "GrenadeLauncher",
+        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\GrenadeLauncher",
+        "GUID": "{ACC1E46C-A618-469B-9673-D48B071A1004}"
+       },
+       {
+        "Id": "3678545986",
+        "Name": "MachineGun",
+        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\MachineGun",
+        "GUID": "{8105387B-710D-4FB0-8111-2A5293F2E07E}"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{94AFC13A-49E3-837C-1159-70FC8F188F1D}"
+  "FileHash": "{F9FCE987-C37F-7997-C43E-B2255F935121}"
  }
 }
