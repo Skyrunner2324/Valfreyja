@@ -9,7 +9,7 @@
 			<ChildrenList>
 				<Folder Name="Weapon" ID="{8983EACC-2E73-4DAF-A057-4813D0A7779C}" ShortID="500072785">
 					<PropertyList>
-						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="Color" Type="int16" Value="17"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
@@ -70,7 +70,7 @@
 					<ChildrenList>
 						<Event Name="player_jump" ID="{F22270AD-A873-4083-8853-CDF26CCD012F}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -85,7 +85,7 @@
 						</Event>
 						<Event Name="player_land" ID="{E70AC961-E4C1-4F27-8D35-AC47C3EC2805}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -100,7 +100,7 @@
 						</Event>
 						<Event Name="player_slide" ID="{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -130,7 +130,7 @@
 						</Event>
 						<Event Name="player_dash" ID="{C5F304BB-9F06-42C3-BEE9-4C60F33F28DB}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -165,7 +165,7 @@
 				</Folder>
 				<Folder Name="Grap" ID="{71F1E230-BFD5-4409-A611-829F3C5759A3}" ShortID="103088789">
 					<PropertyList>
-						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="Color" Type="int16" Value="17"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
@@ -182,6 +182,39 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="game_grap_woosh" ID="{3A64FC17-1CF8-4D36-8540-3802578E578D}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Hoverboard" ID="{7A744AE2-E499-4B1C-83F8-0BE82952DBFD}" ShortID="257193171">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Play_Hoverboard" ID="{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}">
+							<ChildrenList>
+								<Action Name="" ID="{EC36AF79-2554-43A3-8A30-750127C7380F}" ShortID="851122336">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HoverWind" ID="{9B4AD9A0-3C3E-4B67-B9F8-25CE5FC4D51D}" WorkUnitID="{2F915AE1-C7F4-4717-B1CE-27EA444BC3C6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{27282A8D-66EC-422D-B088-C057AD9F3CC2}" ShortID="225184563">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HoverBlendEngine" ID="{65184FAA-2215-4CBC-A089-461A4B932FBC}" WorkUnitID="{2F915AE1-C7F4-4717-B1CE-27EA444BC3C6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A3E7B3BB-0266-48BC-ACB3-8D36E4BAC41C}" ShortID="466617320">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="HoverSurface" ID="{D57E96B1-E0DA-4813-A371-F50D39261518}" WorkUnitID="{2F915AE1-C7F4-4717-B1CE-27EA444BC3C6}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

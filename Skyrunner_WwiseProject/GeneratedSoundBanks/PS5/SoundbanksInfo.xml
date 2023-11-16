@@ -104,7 +104,7 @@
 				<Event Id="468545274" Name="enemy_sniper_shot" ObjectPath="\Events\Enemy\enemy_sniper_shot" GUID="{39206078-B8DE-40F6-9ABE-8A92C812BBBA}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="971909502" Type="User" GUID="{73E808A7-564E-44B8-BCF3-CDA908FACC1B}" Language="SFX" Hash="{2CE7FBD6-644C-8DAC-F470-1F0E7DA106E1}">
+		<SoundBank Id="971909502" Type="User" GUID="{73E808A7-564E-44B8-BCF3-CDA908FACC1B}" Language="SFX" Hash="{B8188812-F8D9-FD05-53A8-485032AC1D62}">
 			<ObjectPath>\SoundBanks\Default Work Unit\MasterSoundbank</ObjectPath>
 			<ShortName>MasterSoundbank</ShortName>
 			<Path>MasterSoundbank.bnk</Path>
@@ -302,6 +302,7 @@
 			</Events>
 			<GameParameters>
 				<GameParameter Id="262290038" Name="RTPC_Distance" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Distance" GUID="{EF3CABA9-5812-4B07-97BE-69A25DA3E423}"/>
+				<GameParameter Id="1941422799" Name="RTPC_CameraElevation" ObjectPath="\Game Parameters\Default Work Unit\RTPC_CameraElevation" GUID="{83642008-1105-44D2-A729-CBA3014166C7}"/>
 			</GameParameters>
 			<SwitchGroups>
 				<SwitchGroup Id="524731881" Name="AmbBiomeType" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType" GUID="{5B10E42B-0908-4108-AA6C-167CED4078D5}">
@@ -391,7 +392,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{B1523615-F13B-BE15-CBAF-C0F549AD139D}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{BC4D800B-B1DA-8169-5F4E-BD08BFC2A145}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -436,6 +437,7 @@
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="262290038" Name="RTPC_Distance" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Distance" GUID="{EF3CABA9-5812-4B07-97BE-69A25DA3E423}"/>
+				<GameParameter Id="1941422799" Name="RTPC_CameraElevation" ObjectPath="\Game Parameters\Default Work Unit\RTPC_CameraElevation" GUID="{83642008-1105-44D2-A729-CBA3014166C7}"/>
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 				<GameParameter Id="3699472177" Name="RTPC_GroundMaterial" ObjectPath="\Game Parameters\Default Work Unit\RTPC_GroundMaterial" GUID="{05992564-76FB-4584-948F-C0F4109BF542}"/>
@@ -718,7 +720,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4004702906" Type="Event" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" Language="SFX" Hash="{167A9835-4FD4-2413-65B6-7E30F42F0E06}">
+		<SoundBank Id="4004702906" Type="Event" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" Language="SFX" Hash="{FC03C666-9963-B6F3-CD1A-93CB7D318F18}">
 			<ObjectPath>player_shoot</ObjectPath>
 			<ShortName>player_shoot</ShortName>
 			<Path>Event/player_shoot.bnk</Path>
@@ -798,6 +800,53 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
+		<SoundBank Id="4128491144" Type="Event" GUID="{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}" Language="SFX" Hash="{0ADFAF33-3818-938F-7A03-2EAD96C9A6BD}">
+			<ObjectPath>Play_Hoverboard</ObjectPath>
+			<ShortName>Play_Hoverboard</ShortName>
+			<Path>Event/Play_Hoverboard.bnk</Path>
+			<Plugins>
+				<Custom>
+					<Plugin Id="10075561" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\HoverBoard\HoverSurface\HoverOnSnow\Soundseed Air Woosh" GUID="{7B4BAEFE-CD09-4435-8934-D3AE8F203DC6}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+					<Plugin Id="810116914" Name="Soundseed Air Wind" ObjectPath="\Actor-Mixer Hierarchy\HoverBoard\HoverWind\Soundseed Air Wind" GUID="{18F4FB7B-DE04-40E6-A69B-DEEF180CC535}" LibName="SoundSeed Air Wind" LibId="7798786"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="4128491144" Name="Play_Hoverboard" ObjectPath="\Events\Game\Hoverboard\Play_Hoverboard" GUID="{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}" DurationType="Infinite">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="810116914"/>
+						</Custom>
+					</PluginRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="787898836" GUID="{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}" Default="true"/>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="10075561"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="1941422799" Name="RTPC_CameraElevation" ObjectPath="\Game Parameters\Default Work Unit\RTPC_CameraElevation" GUID="{83642008-1105-44D2-A729-CBA3014166C7}"/>
+				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
+				<GameParameter Id="3699472177" Name="RTPC_GroundMaterial" ObjectPath="\Game Parameters\Default Work Unit\RTPC_GroundMaterial" GUID="{05992564-76FB-4584-948F-C0F4109BF542}"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="1044534455" Name="GroundMaterialSwitch" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch" GUID="{9D29D1E1-5500-4801-B968-D812A1417C9E}">
+					<GameParameterRef Id="3699472177"/>
+					<Switches>
+						<Switch Id="344481046" Name="Ice" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\Ice" GUID="{FB0B8B6F-9F97-49C4-AFB6-3AA7208FAD66}"/>
+						<Switch Id="787898836" Name="Snow" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\Snow" GUID="{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}"/>
+						<Switch Id="1863277117" Name="Rocks" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\Rocks" GUID="{08A1937D-A457-41B0-A1DD-40DEEB125E58}"/>
+						<Switch Id="2058049674" Name="Wood" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\Wood" GUID="{31D40FF0-50B0-41F0-8BED-7D8E39644E38}"/>
+						<Switch Id="2473969246" Name="Metal" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\Metal" GUID="{067272CA-59B0-48BD-81F5-F5600CE65A57}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FAFFB18A-ADE4-5794-AC0C-795E69E53051}</FileHash>
+	<FileHash>{09D8FE00-682F-BF1F-4D03-B32E15E16B32}</FileHash>
 </SoundBanksInfo>
