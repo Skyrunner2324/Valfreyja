@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1365959272" Type="Event" GUID="{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}" Language="SFX" Hash="{1FD88EBB-DBF3-B9B9-EB6A-2053716B9EC7}">
+		<SoundBank Id="1365959272" Type="Event" GUID="{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}" Language="SFX" Hash="{8C3CC911-5F03-2826-B297-514462ED037B}">
 			<ObjectPath>grap_shot</ObjectPath>
 			<ShortName>grap_shot</ShortName>
 			<Path>Event/grap_shot.bnk</Path>
@@ -12,14 +12,24 @@
 					<CachePath>SFX/Placeholders/player_grap_shot_10C4C929.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="1018588396" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Game\Grap\game_grap_woosh\Soundseed Air Woosh" GUID="{A341E8D9-733C-420F-858A-0DA3151904E5}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+				</Custom>
+			</Plugins>
 			<Events>
-				<Event Id="1365959272" Name="grap_shot" ObjectPath="\Events\Game\Grap\grap_shot" GUID="{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}" DurationType="OneShot" DurationMin="0.4296875" DurationMax="0.4296875">
+				<Event Id="1365959272" Name="grap_shot" ObjectPath="\Events\Game\Grap\grap_shot" GUID="{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}" DurationType="OneShot" DurationMin="0.7" DurationMax="0.7">
 					<MediaRefs>
 						<MediaRef Id="642346148"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="1018588396"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{303E73A8-62BF-775A-3D31-DADD6303BAD1}</FileHash>
+	<FileHash>{3B3DB572-CFE6-9FC9-2A9D-7582E6925B7D}</FileHash>
 </SoundBanksInfo>

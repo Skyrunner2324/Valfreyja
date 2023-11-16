@@ -396,8 +396,8 @@
 								<Property Name="FadeInDuration" Type="Real64" Value="0.116833773087071"/>
 								<Property Name="FadeOutDuration" Type="Real64" Value="0.220686015831135"/>
 								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="TrimBegin" Type="Real64" Value="3.50068601583114"/>
-								<Property Name="TrimEnd" Type="Real64" Value="4.8265963060686"/>
+								<Property Name="TrimBegin" Type="Real64" Value="2.11644164284079"/>
+								<Property Name="TrimEnd" Type="Real64" Value="2.70672492343194"/>
 							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>Placeholders\player_slide.wav</AudioFile>
@@ -421,6 +421,9 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="player_land" ID="{4046AC67-13C4-4E52-B93D-8B5BF25E8886}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>Placeholders\player_land.wav</AudioFile>
 							<MediaIDList>
@@ -479,28 +482,6 @@
 						<ActiveSource Name="player_death" ID="{CC1FACFF-8992-4D49-ADFB-9F8F5963148C}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="game_grap_shot" ID="{87049EC6-A228-4E62-BB17-D25F07B8DDA2}" ShortID="558668865">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="player_grap_shot" ID="{0F34A3B9-198D-48D3-A14F-415477CD733A}">
-							<Language>SFX</Language>
-							<AudioFile>Placeholders\player_grap_shot.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="642346148"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="player_grap_shot" ID="{0F34A3B9-198D-48D3-A14F-415477CD733A}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="game_hit" ID="{E02A0768-161F-4DA5-B131-3933D85581C9}" ShortID="224004650">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -557,9 +538,10 @@
 					<ChildrenList>
 						<SourcePlugin Name="Soundseed Air Woosh" ID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" ShortID="631246921" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 							<PropertyList>
-								<Property Name="Duration" Type="Real64" Value="0.1"/>
+								<Property Name="Duration" Type="Real64" Value="0.15"/>
 								<Property Name="Speed" Type="Real32" Value="50"/>
 								<Property Name="SpeedAutomate" Type="bool" Value="True"/>
+								<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="5"/>
 							</PropertyList>
 							<Language>SFX</Language>
 							<PluginData>
@@ -577,12 +559,12 @@
 							<Flags>5</Flags>
 						</Point>
 						<Point>
-							<XPos>0.05</XPos>
+							<XPos>0.075</XPos>
 							<YPos>100</YPos>
 							<Flags>0</Flags>
 						</Point>
 						<Point>
-							<XPos>0.1</XPos>
+							<XPos>0.15</XPos>
 							<YPos>0</YPos>
 							<Flags>37</Flags>
 						</Point>
@@ -611,8 +593,14 @@
 								<List Name="Deflectors">
 									<PluginInnerObject Name="" ID="{EAC13854-2008-45EF-9E15-C0139361B597}" PluginName="Deflector" CompanyID="0" PluginID="122">
 										<PropertyList>
-											<Property Name="Frequency" Type="Real32" Value="239"/>
+											<Property Name="Frequency" Type="Real32" Value="92"/>
 											<Property Name="Gain" Type="Real32" Value="-10"/>
+											<Property Name="QFactor" Type="Real32" Value="38.11"/>
+										</PropertyList>
+									</PluginInnerObject>
+									<PluginInnerObject Name="" ID="{41777E59-ED02-41FC-BB97-AEFCE23D16AB}" PluginName="Deflector" CompanyID="0" PluginID="122">
+										<PropertyList>
+											<Property Name="Gain" Type="Real32" Value="-22"/>
 										</PropertyList>
 									</PluginInnerObject>
 								</List>
@@ -733,6 +721,115 @@
 						<ActiveSource Name="game_health_pickup" ID="{BBA7AFA6-DB93-47A6-BD9C-D2AF9CDB6FC6}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Folder Name="Grap" ID="{11E135C0-B075-46B0-9083-E8DF86D70761}" ShortID="902859210">
+					<ChildrenList>
+						<Sound Name="game_grap_shot" ID="{87049EC6-A228-4E62-BB17-D25F07B8DDA2}" ShortID="558668865">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="player_grap_shot" ID="{0F34A3B9-198D-48D3-A14F-415477CD733A}">
+									<Language>SFX</Language>
+									<AudioFile>Placeholders\player_grap_shot.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="642346148"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="player_grap_shot" ID="{0F34A3B9-198D-48D3-A14F-415477CD733A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="game_grap_woosh" ID="{3A64FC17-1CF8-4D36-8540-3802578E578D}" ShortID="796402596">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>0.2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Soundseed Air Woosh" ID="{A341E8D9-733C-420F-858A-0DA3151904E5}" ShortID="1018588396" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
+									<PropertyList>
+										<Property Name="SpeedAutomate" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<PluginData>
+	<WooshData>
+		<CurveList Version="1">
+			<CurveInfo Name="Speed">
+				<Curve Name="" ID="{94A64A96-E8CE-4E77-96BE-8E8AE030479B}">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="1"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>0</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>0.25</XPos>
+							<YPos>100</YPos>
+							<Flags>0</Flags>
+						</Point>
+						<Point>
+							<XPos>0.5</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+		</CurveList>
+		<Path Version="1">
+			<Path2D Name="" ID="{0BB9EFAA-F791-4653-8D4D-F5FA693D2876}">
+				<PropertyList>
+					<Property Name="LinearTime" Type="bool" Value="False"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0</YPos>
+						<Flags>12</Flags>
+						<Time>0</Time>
+					</Point>
+				</PointList>
+			</Path2D>
+		</Path>
+	</WooshData>
+</PluginData>
+									<PluginInnerObjectList>
+										<List Name="Deflectors">
+											<PluginInnerObject Name="" ID="{6B8564E1-D698-4BE9-9840-01DAF995B9E4}" PluginName="Deflector" CompanyID="0" PluginID="122"/>
+											<PluginInnerObject Name="" ID="{74FAD4C9-D1E8-4158-A4B0-E405EC449A07}" PluginName="Deflector" CompanyID="0" PluginID="122">
+												<PropertyList>
+													<Property Name="Frequency" Type="Real32" Value="200"/>
+												</PropertyList>
+											</PluginInnerObject>
+										</List>
+									</PluginInnerObjectList>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Soundseed Air Woosh" ID="{A341E8D9-733C-420F-858A-0DA3151904E5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

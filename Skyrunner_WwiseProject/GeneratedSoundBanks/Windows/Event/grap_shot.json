@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}",
     "Language": "SFX",
-    "Hash": "{1FD88EBB-DBF3-B9B9-EB6A-2053716B9EC7}",
+    "Hash": "{8C3CC911-5F03-2826-B297-514462ED037B}",
     "ObjectPath": "grap_shot",
     "ShortName": "grap_shot",
     "Path": "Event/grap_shot.bnk",
@@ -25,6 +25,18 @@
       "CachePath": "SFX/Placeholders/player_grap_shot_10C4C929.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "1018588396",
+       "Name": "Soundseed Air Woosh",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Game\\Grap\\game_grap_woosh\\Soundseed Air Woosh",
+       "GUID": "{A341E8D9-733C-420F-858A-0DA3151904E5}",
+       "LibName": "SoundSeed Air Woosh",
+       "LibId": "7864322"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1365959272",
@@ -32,17 +44,24 @@
       "ObjectPath": "\\Events\\Game\\Grap\\grap_shot",
       "GUID": "{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}",
       "DurationType": "OneShot",
-      "DurationMin": "0.4296875",
-      "DurationMax": "0.4296875",
+      "DurationMin": "0.7",
+      "DurationMax": "0.7",
       "MediaRefs": [
        {
         "Id": "642346148"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "1018588396"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{D2783C83-05D1-7A24-BE42-E713BF353515}"
+  "FileHash": "{0D521BE5-B8DD-F2A6-DD80-1FC4E1AE7F0E}"
  }
 }

@@ -765,7 +765,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{0FD783B1-FA6E-3AD5-C355-1BA050171FB0}",
+    "Hash": "{6BF144BC-99AD-72FD-77B5-6C2F46720AA3}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -971,6 +971,32 @@
         "Name": "Slowmo",
         "ObjectPath": "\\States\\Default Work Unit\\SlowMoState\\Slowmo",
         "GUID": "{AFDA4DC4-406A-4780-8079-7FD697CED6BF}"
+       }
+      ]
+     },
+     {
+      "Id": "1028956444",
+      "Name": "OveheatState",
+      "ObjectPath": "\\States\\Default Work Unit\\OveheatState",
+      "GUID": "{A74A891A-788B-4671-88FF-BD4BD54BA5A1}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\OveheatState\\None",
+        "GUID": "{67AF48C7-A75C-4D7B-858A-AD60FD1B6F6B}"
+       },
+       {
+        "Id": "2997083226",
+        "Name": "Cooling",
+        "ObjectPath": "\\States\\Default Work Unit\\OveheatState\\Cooling",
+        "GUID": "{B67CB436-4346-4444-A643-6498CFF346F7}"
+       },
+       {
+        "Id": "4048013415",
+        "Name": "Overheating",
+        "ObjectPath": "\\States\\Default Work Unit\\OveheatState\\Overheating",
+        "GUID": "{2E6517B5-411E-49A7-93D2-E64A035D6F13}"
        }
       ]
      },
@@ -1218,7 +1244,7 @@
     "Type": "Event",
     "GUID": "{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}",
     "Language": "SFX",
-    "Hash": "{1FD88EBB-DBF3-B9B9-EB6A-2053716B9EC7}",
+    "Hash": "{8C3CC911-5F03-2826-B297-514462ED037B}",
     "ObjectPath": "grap_shot",
     "ShortName": "grap_shot",
     "Path": "Event/grap_shot.bnk",
@@ -1233,6 +1259,18 @@
       "CachePath": "SFX/Placeholders/player_grap_shot_10C4C929.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "1018588396",
+       "Name": "Soundseed Air Woosh",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Game\\Grap\\game_grap_woosh\\Soundseed Air Woosh",
+       "GUID": "{A341E8D9-733C-420F-858A-0DA3151904E5}",
+       "LibName": "SoundSeed Air Woosh",
+       "LibId": "7864322"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1365959272",
@@ -1240,13 +1278,20 @@
       "ObjectPath": "\\Events\\Game\\Grap\\grap_shot",
       "GUID": "{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}",
       "DurationType": "OneShot",
-      "DurationMin": "0.4296875",
-      "DurationMax": "0.4296875",
+      "DurationMin": "0.7",
+      "DurationMax": "0.7",
       "MediaRefs": [
        {
         "Id": "642346148"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "1018588396"
+        }
+       ]
+      }
      }
     ]
    },
@@ -1321,7 +1366,7 @@
     "Type": "Event",
     "GUID": "{C5F304BB-9F06-42C3-BEE9-4C60F33F28DB}",
     "Language": "SFX",
-    "Hash": "{2D5FFD8B-1E2E-38E6-1BF5-20B7941F61D7}",
+    "Hash": "{1A1969B5-B9E0-FC0C-460A-B78CFE44D0D7}",
     "ObjectPath": "player_dash",
     "ShortName": "player_dash",
     "Path": "Event/player_dash.bnk",
@@ -1344,8 +1389,8 @@
       "ObjectPath": "\\Events\\Game\\Player\\player_dash",
       "GUID": "{C5F304BB-9F06-42C3-BEE9-4C60F33F28DB}",
       "DurationType": "OneShot",
-      "DurationMin": "0.1",
-      "DurationMax": "0.1",
+      "DurationMin": "0.15",
+      "DurationMax": "0.15",
       "PluginRefs": {
        "Custom": [
         {
@@ -1405,7 +1450,7 @@
     "Type": "Event",
     "GUID": "{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}",
     "Language": "SFX",
-    "Hash": "{C807E00D-AAFD-174A-3625-7DCE188DE12F}",
+    "Hash": "{E33D7A2B-6746-F54F-44FC-575B819DC206}",
     "ObjectPath": "player_slide",
     "ShortName": "player_slide",
     "Path": "Event/player_slide.bnk",
@@ -1417,7 +1462,7 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\player_slide.wav",
       "Path": "Media/129424093.wem",
-      "CachePath": "SFX/Placeholders/player_slide_28B0270B.wem"
+      "CachePath": "SFX/Placeholders/player_slide_591F0B6F.wem"
      }
     ],
     "Events": [
@@ -1427,8 +1472,8 @@
       "ObjectPath": "\\Events\\Game\\Player\\player_slide",
       "GUID": "{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}",
       "DurationType": "OneShot",
-      "DurationMin": "1.3259103",
-      "DurationMax": "1.3259103",
+      "DurationMin": "0.5902833",
+      "DurationMax": "0.5902833",
       "MediaRefs": [
        {
         "Id": "129424093"
@@ -1925,6 +1970,6 @@
     ]
    }
   ],
-  "FileHash": "{0E6F40F4-6316-A66F-5BF5-DFF14CEE943F}"
+  "FileHash": "{40E63B48-1186-ADF0-9842-CE570856545E}"
  }
 }

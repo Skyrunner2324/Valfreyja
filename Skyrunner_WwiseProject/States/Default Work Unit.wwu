@@ -19,6 +19,7 @@
 				<StateGroup Name="PlayerState" ID="{1F5D3752-7753-44D3-B02C-6D8D6A18F0B8}">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
@@ -28,6 +29,9 @@
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="SlowMoState" ID="{C19D1B16-633A-4DFE-AD60-F8C6C952E8FA}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{89E459A9-DE01-4F01-B027-4F4E114C6509}"/>
 						<State Name="Normal" ID="{072BF153-B258-43FA-94CF-16316D610E02}"/>
@@ -35,12 +39,25 @@
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
 						<State Name="Shotgun" ID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
 						<State Name="MachineGun" ID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
 						<State Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
 						<State Name="Pistol" ID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="OveheatState" ID="{A74A891A-788B-4671-88FF-BD4BD54BA5A1}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{67AF48C7-A75C-4D7B-858A-AD60FD1B6F6B}"/>
+						<State Name="Cooling" ID="{B67CB436-4346-4444-A643-6498CFF346F7}"/>
+						<State Name="Overheating" ID="{2E6517B5-411E-49A7-93D2-E64A035D6F13}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>
