@@ -172,7 +172,84 @@
 									<ObjectRef Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
 								</Reference>
 							</ReferenceList>
-							<GroupingInfo/>
+							<ChildrenList>
+								<Sound Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}" ShortID="801876267">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>33</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="game_ammo_pickup" ID="{AB4B450C-D830-4C6C-9381-F88812401D5C}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.101466530710173"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0838201775431862"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.367632357645554"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.583800183941139"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Placeholders\game_ammo_pickup.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="976126733"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="game_ammo_pickup" ID="{AB4B450C-D830-4C6C-9381-F88812401D5C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Pistol" ID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"/>
+										<ItemList>
+											<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+										<ItemList>
+											<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="MachineGun" ID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+										<ItemList>
+											<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Shotgun" ID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+										<ItemList>
+											<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="None" ID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+										<ItemList>
+											<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
 						</SwitchContainer>
 						<SwitchContainer Name="game_weapon_switch" ID="{C7DEEAFC-C8C0-4273-ABCF-9E54CFDE588E}" ShortID="433373838">
 							<ReferenceList>

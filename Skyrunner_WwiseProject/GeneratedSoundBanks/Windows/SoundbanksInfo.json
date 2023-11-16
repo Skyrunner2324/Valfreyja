@@ -688,19 +688,19 @@
     "Type": "Event",
     "GUID": "{AA3F18C1-9D36-4D56-9C8A-BA65E19E9C0B}",
     "Language": "SFX",
-    "Hash": "{3D1DBC16-76A6-FD12-923E-707BABF609F8}",
+    "Hash": "{EFAF6C23-A60A-5289-1F12-F5D13399200E}",
     "ObjectPath": "weapon_overheat_lp",
     "ShortName": "weapon_overheat_lp",
     "Path": "Event/weapon_overheat_lp.bnk",
     "Media": [
      {
-      "Id": "994768342",
+      "Id": "976126733",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Placeholders\\game_shield_pickup.wav",
-      "Path": "Media/994768342.wem",
-      "CachePath": "SFX/Placeholders/game_shield_pickup_10C4C929.wem"
+      "ShortName": "Placeholders\\game_ammo_pickup.wav",
+      "Path": "Media/976126733.wem",
+      "CachePath": "SFX/Placeholders/game_ammo_pickup_978CD8A0.wem"
      }
     ],
     "Events": [
@@ -709,12 +709,113 @@
       "Name": "weapon_overheat_lp",
       "ObjectPath": "\\Events\\Game\\Weapon\\weapon_overheat_lp",
       "GUID": "{AA3F18C1-9D36-4D56-9C8A-BA65E19E9C0B}",
-      "DurationType": "OneShot",
-      "DurationMin": "0.928",
-      "DurationMax": "0.928",
-      "MediaRefs": [
+      "DurationType": "Infinite",
+      "SwitchContainers": [
        {
-        "Id": "994768342"
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "4232248784",
+         "Id": "324443136",
+         "GUID": "{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "976126733"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "4232248784",
+         "Id": "2958002925",
+         "GUID": "{ACC1E46C-A618-469B-9673-D48B071A1004}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "976126733"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "4232248784",
+         "Id": "3678545986",
+         "GUID": "{8105387B-710D-4FB0-8111-2A5293F2E07E}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "976126733"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "4232248784",
+         "Id": "51683977",
+         "GUID": "{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "976126733"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "4232248784",
+         "Id": "748895195",
+         "GUID": "{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "976126733"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "4232248784",
+      "Name": "WeaponState",
+      "ObjectPath": "\\States\\Default Work Unit\\WeaponState",
+      "GUID": "{912BC3CC-7356-4483-9C97-B04B3D54A890}",
+      "States": [
+       {
+        "Id": "51683977",
+        "Name": "Shotgun",
+        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\Shotgun",
+        "GUID": "{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"
+       },
+       {
+        "Id": "324443136",
+        "Name": "Pistol",
+        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\Pistol",
+        "GUID": "{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\None",
+        "GUID": "{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"
+       },
+       {
+        "Id": "2958002925",
+        "Name": "GrenadeLauncher",
+        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\GrenadeLauncher",
+        "GUID": "{ACC1E46C-A618-469B-9673-D48B071A1004}"
+       },
+       {
+        "Id": "3678545986",
+        "Name": "MachineGun",
+        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\MachineGun",
+        "GUID": "{8105387B-710D-4FB0-8111-2A5293F2E07E}"
        }
       ]
      }
@@ -765,7 +866,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{6BF144BC-99AD-72FD-77B5-6C2F46720AA3}",
+    "Hash": "{3F0E300C-BE79-6A8C-C1A2-C99C994E6227}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -971,32 +1072,6 @@
         "Name": "Slowmo",
         "ObjectPath": "\\States\\Default Work Unit\\SlowMoState\\Slowmo",
         "GUID": "{AFDA4DC4-406A-4780-8079-7FD697CED6BF}"
-       }
-      ]
-     },
-     {
-      "Id": "1028956444",
-      "Name": "OveheatState",
-      "ObjectPath": "\\States\\Default Work Unit\\OveheatState",
-      "GUID": "{A74A891A-788B-4671-88FF-BD4BD54BA5A1}",
-      "States": [
-       {
-        "Id": "748895195",
-        "Name": "None",
-        "ObjectPath": "\\States\\Default Work Unit\\OveheatState\\None",
-        "GUID": "{67AF48C7-A75C-4D7B-858A-AD60FD1B6F6B}"
-       },
-       {
-        "Id": "2997083226",
-        "Name": "Cooling",
-        "ObjectPath": "\\States\\Default Work Unit\\OveheatState\\Cooling",
-        "GUID": "{B67CB436-4346-4444-A643-6498CFF346F7}"
-       },
-       {
-        "Id": "4048013415",
-        "Name": "Overheating",
-        "ObjectPath": "\\States\\Default Work Unit\\OveheatState\\Overheating",
-        "GUID": "{2E6517B5-411E-49A7-93D2-E64A035D6F13}"
        }
       ]
      },
@@ -1406,7 +1481,7 @@
     "Type": "Event",
     "GUID": "{5C34145E-D33C-4A87-8375-E5D2BFE47B54}",
     "Language": "SFX",
-    "Hash": "{4937D141-012A-FE7B-3EE1-D540D4E2C5D3}",
+    "Hash": "{6FB9705F-4294-51D8-395A-4C22B79DE583}",
     "ObjectPath": "weapon_overheat_stoplp",
     "ShortName": "weapon_overheat_stoplp",
     "Path": "Event/weapon_overheat_stoplp.bnk",
@@ -1970,6 +2045,6 @@
     ]
    }
   ],
-  "FileHash": "{40E63B48-1186-ADF0-9842-CE570856545E}"
+  "FileHash": "{F9937023-3337-1BFF-BF30-AF3E7C9335E6}"
  }
 }

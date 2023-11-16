@@ -1,25 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1092496599" Type="Event" GUID="{AA3F18C1-9D36-4D56-9C8A-BA65E19E9C0B}" Language="SFX" Hash="{3D1DBC16-76A6-FD12-923E-707BABF609F8}">
+		<SoundBank Id="1092496599" Type="Event" GUID="{AA3F18C1-9D36-4D56-9C8A-BA65E19E9C0B}" Language="SFX" Hash="{EFAF6C23-A60A-5289-1F12-F5D13399200E}">
 			<ObjectPath>weapon_overheat_lp</ObjectPath>
 			<ShortName>weapon_overheat_lp</ShortName>
 			<Path>Event/weapon_overheat_lp.bnk</Path>
 			<Media>
-				<File Id="994768342" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\game_shield_pickup.wav</ShortName>
-					<Path>Media/994768342.wem</Path>
-					<CachePath>SFX/Placeholders/game_shield_pickup_10C4C929.wem</CachePath>
+				<File Id="976126733" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\game_ammo_pickup.wav</ShortName>
+					<Path>Media/976126733.wem</Path>
+					<CachePath>SFX/Placeholders/game_ammo_pickup_978CD8A0.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1092496599" Name="weapon_overheat_lp" ObjectPath="\Events\Game\Weapon\weapon_overheat_lp" GUID="{AA3F18C1-9D36-4D56-9C8A-BA65E19E9C0B}" DurationType="OneShot" DurationMin="0.928" DurationMax="0.928">
-					<MediaRefs>
-						<MediaRef Id="994768342"/>
-					</MediaRefs>
+				<Event Id="1092496599" Name="weapon_overheat_lp" ObjectPath="\Events\Game\Weapon\weapon_overheat_lp" GUID="{AA3F18C1-9D36-4D56-9C8A-BA65E19E9C0B}" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="324443136" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="976126733"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+							<MediaRefs>
+								<MediaRef Id="976126733"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+							<MediaRefs>
+								<MediaRef Id="976126733"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+							<MediaRefs>
+								<MediaRef Id="976126733"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+							<MediaRefs>
+								<MediaRef Id="976126733"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
+					<States>
+						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+						<State Id="324443136" Name="Pistol" ObjectPath="\States\Default Work Unit\WeaponState\Pistol" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+						<State Id="2958002925" Name="GrenadeLauncher" ObjectPath="\States\Default Work Unit\WeaponState\GrenadeLauncher" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+						<State Id="3678545986" Name="MachineGun" ObjectPath="\States\Default Work Unit\WeaponState\MachineGun" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E068C3E1-44B2-2314-298A-80362925AD0C}</FileHash>
+	<FileHash>{961191B2-1103-BB5B-F44D-35C1D244DC59}</FileHash>
 </SoundBanksInfo>
