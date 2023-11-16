@@ -8,6 +8,10 @@
 			</PropertyList>
 			<ChildrenList>
 				<Folder Name="Weapon" ID="{8983EACC-2E73-4DAF-A057-4813D0A7779C}" ShortID="500072785">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Event Name="player_shoot" ID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}">
 							<ChildrenList>
@@ -59,8 +63,16 @@
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{C17573D7-C483-43BF-A080-3F811D573161}" ShortID="162261198">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Event Name="player_jump" ID="{F22270AD-A873-4083-8853-CDF26CCD012F}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{E0829671-8FC2-48E5-918C-74E5DC05F988}" ShortID="132240114">
 									<ReferenceList>
@@ -72,6 +84,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="player_land" ID="{E70AC961-E4C1-4F27-8D35-AC47C3EC2805}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{5EFF5816-A547-40DE-BF2C-85997996702A}" ShortID="489467302">
 									<ReferenceList>
@@ -83,6 +99,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="player_slide" ID="{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{26136573-F596-4407-A98F-31F28017EA40}" ShortID="711070668">
 									<ReferenceList>
@@ -94,17 +114,25 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="player_wallslide_lp" ID="{4666F21B-17C8-4FCB-9DCA-7EC402ACA7D9}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{E60F34E7-19C7-4538-9CE3-6EB12C896256}" ShortID="75896947">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="game_wallslide" ID="{BDD7EC25-5B32-4F59-93C9-8D50073A3E77}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+											<ObjectRef Name="game_wallslide_lp" ID="{BDD7EC25-5B32-4F59-93C9-8D50073A3E77}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="player_dash" ID="{C5F304BB-9F06-42C3-BEE9-4C60F33F28DB}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{73B6F40F-01AB-4FFF-960E-84910778F235}" ShortID="735400020">
 									<ReferenceList>
@@ -115,18 +143,11 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="player_death" ID="{D3AA67A4-87C8-4130-911C-00AE5EEE3A54}">
-							<ChildrenList>
-								<Action Name="" ID="{056B7353-1741-433E-95F2-4E5A356DFD0F}" ShortID="218281381">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="game_death" ID="{EDAE9780-3460-48E5-A94B-4EC0246BD54C}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="player_wallslide_stoplp" ID="{2ED24474-7C6A-4243-9411-21105E6B92AF}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{1974C14B-2F36-41B0-99D3-AA918BC0C556}" ShortID="899410522">
 									<PropertyList>
@@ -134,7 +155,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="game_wallslide" ID="{BDD7EC25-5B32-4F59-93C9-8D50073A3E77}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+											<ObjectRef Name="game_wallslide_lp" ID="{BDD7EC25-5B32-4F59-93C9-8D50073A3E77}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -142,15 +163,11 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Zipline" ID="{CAA847CC-65EF-47BA-88D9-1DDA1D81E060}" ShortID="748927025"/>
-				<Folder Name="Pickup" ID="{17D416FE-A508-4134-A0D1-3C09FB5599CA}" ShortID="400072140">
-					<ChildrenList>
-						<Event Name="ammo_pickup" ID="{A931F877-391B-4CC5-8D83-9FABA2DD43E1}"/>
-						<Event Name="health_pickup" ID="{824CD4D8-FA76-451F-8462-B36BA9055F65}"/>
-						<Event Name="shield_pickup" ID="{1EAF38A2-E048-4AB3-991B-FC3608514236}"/>
-					</ChildrenList>
-				</Folder>
 				<Folder Name="Grap" ID="{71F1E230-BFD5-4409-A611-829F3C5759A3}" ShortID="103088789">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Event Name="grap_shot" ID="{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}">
 							<ChildrenList>

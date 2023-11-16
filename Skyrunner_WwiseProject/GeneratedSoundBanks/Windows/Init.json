@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{3F0E300C-BE79-6A8C-C1A2-C99C994E6227}",
+    "Hash": "{A6561558-F8B4-D30A-8197-9AFFF7B9D7B4}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -50,6 +50,12 @@
       "GUID": "{7444C4FB-63F6-4F2E-9A73-66D09EEEFAE1}"
      },
      {
+      "Id": "986618877",
+      "Name": "PlayerWeapons",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerWeapons",
+      "GUID": "{F894E37D-7A93-4E9D-88BB-6560520EEBD6}"
+     },
+     {
       "Id": "1182634443",
       "Name": "AmbientBeds",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\AmbientMaster\\AmbientBeds",
@@ -60,6 +66,12 @@
       "Name": "3DAmbience",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\AmbientMaster\\3DAmbience",
       "GUID": "{7F98D6D4-F50F-4CD2-AA30-29F04ADD57C2}"
+     },
+     {
+      "Id": "1350496757",
+      "Name": "PlayerMovement",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerMovement",
+      "GUID": "{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}"
      },
      {
       "Id": "1459460693",
@@ -80,22 +92,10 @@
       "GUID": "{94354A62-2693-4A27-B098-F5FDE5B577C5}"
      },
      {
-      "Id": "2343802269",
-      "Name": "PlayerLocomotion",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerLocomotion",
-      "GUID": "{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}"
-     },
-     {
       "Id": "2452310558",
       "Name": "WwiseMotion",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\WwiseMotion",
       "GUID": "{A725A1F7-24D8-429B-98AE-EDE935A1E857}"
-     },
-     {
-      "Id": "2901534458",
-      "Name": "PlayerWeapon",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerWeapon",
-      "GUID": "{F894E37D-7A93-4E9D-88BB-6560520EEBD6}"
      },
      {
       "Id": "3538689948",
@@ -242,6 +242,38 @@
         "Name": "InMenu",
         "ObjectPath": "\\States\\Default Work Unit\\GameStatus\\InMenu",
         "GUID": "{B2F321F7-4EE8-4AFD-AE95-8524E71A2A7B}"
+       }
+      ]
+     },
+     {
+      "Id": "1350496757",
+      "Name": "PlayerMovement",
+      "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement",
+      "GUID": "{B3F9B62E-2D08-41B6-8A1A-D6874DFA7336}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\None",
+        "GUID": "{97700067-F4AC-4FF8-A1EE-276A96992D3A}"
+       },
+       {
+        "Id": "1050421051",
+        "Name": "Air",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Air",
+        "GUID": "{6D041D05-AF22-4F45-900B-66D481DDF645}"
+       },
+       {
+        "Id": "2108779961",
+        "Name": "Wall",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Wall",
+        "GUID": "{1DF46885-9897-478D-8246-46D5CF982C5E}"
+       },
+       {
+        "Id": "2528658256",
+        "Name": "Ground",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Ground",
+        "GUID": "{6A68E123-5F52-43BC-ACE2-3F382E01BED2}"
        }
       ]
      },
@@ -459,6 +491,6 @@
     ]
    }
   ],
-  "FileHash": "{CFA04C24-DDDF-8AE4-0215-4F0490ED6463}"
+  "FileHash": "{CD8B848F-5DF6-2786-002A-DD7A7A2A3BF3}"
  }
 }

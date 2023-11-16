@@ -354,7 +354,7 @@
 			<Path>Event/player_jump.bnk</Path>
 			<Plugins>
 				<Custom>
-					<Plugin Id="1010974337" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Game\game_jump\Soundseed Air Woosh" GUID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+					<Plugin Id="1010974337" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\Movements\game_jump\Soundseed Air Woosh" GUID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
 				</Custom>
 			</Plugins>
 			<Events>
@@ -367,7 +367,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{EF3467B1-F052-D3F2-4EB8-E3E3CD2EC9C7}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{B1523615-F13B-BE15-CBAF-C0F549AD139D}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -380,14 +380,14 @@
 			</Plugins>
 			<Busses>
 				<Bus Id="309309195" Name="2DAmbience" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\2DAmbience" GUID="{7444C4FB-63F6-4F2E-9A73-66D09EEEFAE1}"/>
+				<Bus Id="986618877" Name="PlayerWeapons" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerWeapons" GUID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}"/>
 				<Bus Id="1182634443" Name="AmbientBeds" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\AmbientBeds" GUID="{3D306ABA-2B79-4C6F-B0C4-887FF5287F6F}"/>
 				<Bus Id="1301074112" Name="3DAmbience" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\3DAmbience" GUID="{7F98D6D4-F50F-4CD2-AA30-29F04ADD57C2}"/>
+				<Bus Id="1350496757" Name="PlayerMovement" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerMovement" GUID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}"/>
 				<Bus Id="1459460693" Name="AmbientMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster" GUID="{1260EBDA-2D71-42A1-A3E2-A2832FF41985}"/>
 				<Bus Id="1992125169" Name="UIMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UIMaster" GUID="{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}"/>
 				<Bus Id="2033911932" Name="NPCMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\NPCMaster" GUID="{94354A62-2693-4A27-B098-F5FDE5B577C5}"/>
-				<Bus Id="2343802269" Name="PlayerLocomotion" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerLocomotion" GUID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}"/>
 				<Bus Id="2452310558" Name="WwiseMotion" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\WwiseMotion" GUID="{A725A1F7-24D8-429B-98AE-EDE935A1E857}"/>
-				<Bus Id="2901534458" Name="PlayerWeapon" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerWeapon" GUID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}"/>
 				<Bus Id="3538689948" Name="PlayerMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster" GUID="{880F05A2-569A-4D55-B7A0-1CD87FD195D0}"/>
 				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Bus Id="4152869693" Name="2DAmbientBeds" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\AmbientBeds\2DAmbientBeds" GUID="{9F89B372-3238-4882-829C-1D743E3D17E7}"/>
@@ -429,6 +429,14 @@
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\GameStatus\None" GUID="{EEB277E0-9352-480D-A6FB-C308E6B7BD09}"/>
 						<State Id="984691642" Name="InGame" ObjectPath="\States\Default Work Unit\GameStatus\InGame" GUID="{EC4A1A3A-9F40-4265-A536-AB6230BB833D}"/>
 						<State Id="3374585465" Name="InMenu" ObjectPath="\States\Default Work Unit\GameStatus\InMenu" GUID="{B2F321F7-4EE8-4AFD-AE95-8524E71A2A7B}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1350496757" Name="PlayerMovement" ObjectPath="\States\Default Work Unit\PlayerMovement" GUID="{B3F9B62E-2D08-41B6-8A1A-D6874DFA7336}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\PlayerMovement\None" GUID="{97700067-F4AC-4FF8-A1EE-276A96992D3A}"/>
+						<State Id="1050421051" Name="Air" ObjectPath="\States\Default Work Unit\PlayerMovement\Air" GUID="{6D041D05-AF22-4F45-900B-66D481DDF645}"/>
+						<State Id="2108779961" Name="Wall" ObjectPath="\States\Default Work Unit\PlayerMovement\Wall" GUID="{1DF46885-9897-478D-8246-46D5CF982C5E}"/>
+						<State Id="2528658256" Name="Ground" ObjectPath="\States\Default Work Unit\PlayerMovement\Ground" GUID="{6A68E123-5F52-43BC-ACE2-3F382E01BED2}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="2064552269" Name="AreaState" ObjectPath="\States\Default Work Unit\AreaState" GUID="{8264E7EF-9D1C-45D6-B03F-CCD0B6C66735}">
@@ -502,7 +510,7 @@
 			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="1018588396" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Game\Grap\game_grap_woosh\Soundseed Air Woosh" GUID="{A341E8D9-733C-420F-858A-0DA3151904E5}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+					<Plugin Id="1018588396" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\Movements\Grap\game_grap_woosh\Soundseed Air Woosh" GUID="{A341E8D9-733C-420F-858A-0DA3151904E5}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
 				</Custom>
 			</Plugins>
 			<Events>
@@ -516,14 +524,6 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="1547305881" Type="Event" GUID="{1EAF38A2-E048-4AB3-991B-FC3608514236}" Language="SFX" Hash="{DA58B9B9-2029-E93F-3860-0A84EE395DA3}">
-			<ObjectPath>shield_pickup</ObjectPath>
-			<ShortName>shield_pickup</ShortName>
-			<Path>Event/shield_pickup.bnk</Path>
-			<Events>
-				<Event Id="1547305881" Name="shield_pickup" ObjectPath="\Events\Game\Pickup\shield_pickup" GUID="{1EAF38A2-E048-4AB3-991B-FC3608514236}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="1682875947" Type="Event" GUID="{2ED24474-7C6A-4243-9411-21105E6B92AF}" Language="SFX" Hash="{AB32DF23-6524-DCDB-05D3-E196E9832833}">
@@ -548,7 +548,7 @@
 			<Path>Event/player_dash.bnk</Path>
 			<Plugins>
 				<Custom>
-					<Plugin Id="631246921" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Game\game_dash\Soundseed Air Woosh" GUID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+					<Plugin Id="631246921" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\Movements\game_dash\Soundseed Air Woosh" GUID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
 				</Custom>
 			</Plugins>
 			<Events>
@@ -648,25 +648,6 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3083087645" Type="Event" GUID="{D3AA67A4-87C8-4130-911C-00AE5EEE3A54}" Language="SFX" Hash="{0CF8F360-3AC9-3CF1-44D7-72390D7F2557}">
-			<ObjectPath>player_death</ObjectPath>
-			<ShortName>player_death</ShortName>
-			<Path>Event/player_death.bnk</Path>
-			<Media>
-				<File Id="413608025" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\player_death.wav</ShortName>
-					<Path>Media/413608025.wem</Path>
-					<CachePath>SFX/Placeholders/player_death_10C4C929.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="3083087645" Name="player_death" ObjectPath="\Events\Game\Player\player_death" GUID="{D3AA67A4-87C8-4130-911C-00AE5EEE3A54}" DurationType="OneShot" DurationMin="0.88016665" DurationMax="0.88016665">
-					<MediaRefs>
-						<MediaRef Id="413608025"/>
-					</MediaRefs>
-				</Event>
-			</Events>
-		</SoundBank>
 		<SoundBank Id="3155517227" Type="Event" GUID="{4666F21B-17C8-4FCB-9DCA-7EC402ACA7D9}" Language="SFX" Hash="{43968CC1-7A23-F41D-CBC6-3A71087465F4}">
 			<ObjectPath>player_wallslide_lp</ObjectPath>
 			<ShortName>player_wallslide_lp</ShortName>
@@ -694,7 +675,7 @@
 				<AuxBus Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3629196698" Type="Event" GUID="{E70AC961-E4C1-4F27-8D35-AC47C3EC2805}" Language="SFX" Hash="{12724087-A74C-BFE6-7B56-134B06136B3C}">
+		<SoundBank Id="3629196698" Type="Event" GUID="{E70AC961-E4C1-4F27-8D35-AC47C3EC2805}" Language="SFX" Hash="{CB7E37FA-5998-DE1E-92CB-B9CA91FE4B37}">
 			<ObjectPath>player_land</ObjectPath>
 			<ShortName>player_land</ShortName>
 			<Path>Event/player_land.bnk</Path>
@@ -702,23 +683,15 @@
 				<File Id="1026811673" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\player_land.wav</ShortName>
 					<Path>Media/1026811673.wem</Path>
-					<CachePath>SFX/Placeholders/player_land_10C4C929.wem</CachePath>
+					<CachePath>SFX/Placeholders/player_land_F18F3CCA.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3629196698" Name="player_land" ObjectPath="\Events\Game\Player\player_land" GUID="{E70AC961-E4C1-4F27-8D35-AC47C3EC2805}" DurationType="OneShot" DurationMin="0.17454167" DurationMax="0.17454167">
+				<Event Id="3629196698" Name="player_land" ObjectPath="\Events\Game\Player\player_land" GUID="{E70AC961-E4C1-4F27-8D35-AC47C3EC2805}" DurationType="OneShot" DurationMin="0.051760633" DurationMax="0.051760633">
 					<MediaRefs>
 						<MediaRef Id="1026811673"/>
 					</MediaRefs>
 				</Event>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="3731941266" Type="Event" GUID="{824CD4D8-FA76-451F-8462-B36BA9055F65}" Language="SFX" Hash="{E2C54013-AEA6-E991-1720-70D4181A47D5}">
-			<ObjectPath>health_pickup</ObjectPath>
-			<ShortName>health_pickup</ShortName>
-			<Path>Event/health_pickup.bnk</Path>
-			<Events>
-				<Event Id="3731941266" Name="health_pickup" ObjectPath="\Events\Game\Pickup\health_pickup" GUID="{824CD4D8-FA76-451F-8462-B36BA9055F65}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="4004702906" Type="Event" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" Language="SFX" Hash="{167A9835-4FD4-2413-65B6-7E30F42F0E06}">
@@ -801,14 +774,6 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="4253579710" Type="Event" GUID="{A931F877-391B-4CC5-8D83-9FABA2DD43E1}" Language="SFX" Hash="{0090D847-4C1E-ACC5-6C03-075EE6FA0530}">
-			<ObjectPath>ammo_pickup</ObjectPath>
-			<ShortName>ammo_pickup</ShortName>
-			<Path>Event/ammo_pickup.bnk</Path>
-			<Events>
-				<Event Id="4253579710" Name="ammo_pickup" ObjectPath="\Events\Game\Pickup\ammo_pickup" GUID="{A931F877-391B-4CC5-8D83-9FABA2DD43E1}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B6CC7C22-C023-5B59-DDB2-1B45A5E094E5}</FileHash>
+	<FileHash>{618C305B-5F57-B555-E51A-2594A05296A9}</FileHash>
 </SoundBanksInfo>
