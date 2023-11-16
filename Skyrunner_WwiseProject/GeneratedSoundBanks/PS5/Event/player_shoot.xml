@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
+	<SoundBanks>
+		<SoundBank Id="4004702906" Type="Event" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" Language="SFX" Hash="{167A9835-4FD4-2413-65B6-7E30F42F0E06}">
+			<ObjectPath>player_shoot</ObjectPath>
+			<ShortName>player_shoot</ShortName>
+			<Path>Event/player_shoot.bnk</Path>
+			<Media>
+				<File Id="324871314" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\game_weapon_shoot_grenadelauncher.wav</ShortName>
+					<Path>Media/324871314.wem</Path>
+					<CachePath>SFX/Placeholders/game_weapon_shoot_grenadelauncher_10C4C929.wem</CachePath>
+				</File>
+				<File Id="353061919" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\game_weapon_shoot_shotgun.wav</ShortName>
+					<Path>Media/353061919.wem</Path>
+					<CachePath>SFX/Placeholders/game_weapon_shoot_shotgun_10C4C929.wem</CachePath>
+				</File>
+				<File Id="759953172" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\game_weapon_shoot_machinegun.wav</ShortName>
+					<Path>Media/759953172.wem</Path>
+					<CachePath>SFX/Placeholders/game_weapon_shoot_machinegun_10C4C929.wem</CachePath>
+				</File>
+				<File Id="870552716" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\game_weapon_shoot.wav</ShortName>
+					<Path>Media/870552716.wem</Path>
+					<CachePath>SFX/Placeholders/game_weapon_shoot_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="4004702906" Name="player_shoot" ObjectPath="\Events\Game\Weapon\player_shoot" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" DurationType="OneShot" DurationMin="0.122666664" DurationMax="3.5416667">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="324443136" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="870552716"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+							<MediaRefs>
+								<MediaRef Id="324871314"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+							<MediaRefs>
+								<MediaRef Id="759953172"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+							<MediaRefs>
+								<MediaRef Id="353061919"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
+					<States>
+						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+						<State Id="324443136" Name="Pistol" ObjectPath="\States\Default Work Unit\WeaponState\Pistol" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+						<State Id="2958002925" Name="GrenadeLauncher" ObjectPath="\States\Default Work Unit\WeaponState\GrenadeLauncher" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+						<State Id="3678545986" Name="MachineGun" ObjectPath="\States\Default Work Unit\WeaponState\MachineGun" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{B8C41C50-5325-9506-CDDE-6145CB433BB1}</FileHash>
+</SoundBanksInfo>
