@@ -65,23 +65,23 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="game_weapon_shoot_grenadelauncher" ID="{99991947-18BC-4464-883C-83D487169C2E}">
+										<AudioFileSource Name="Grenade_Launcher_ODY-0020-055" ID="{86A2CFC1-57AB-4048-831C-8A14A17AE61C}">
 											<PropertyList>
-												<Property Name="VolumeOffset" Type="Real64">
-													<ValueList>
-														<Value>-5.1</Value>
-													</ValueList>
-												</Property>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00622513661202184"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.404633879781421"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.392183606557377"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.26370273224044"/>
 											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>Placeholders\game_weapon_shoot_grenadelauncher.wav</AudioFile>
+											<AudioFile>Grenade_Launcher_ODY-0020-055.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="324871314"/>
+												<MediaID ID="767258260"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="game_weapon_shoot_grenadelauncher" ID="{99991947-18BC-4464-883C-83D487169C2E}" Platform="Linked"/>
+										<ActiveSource Name="Grenade_Launcher_ODY-0020-055" ID="{86A2CFC1-57AB-4048-831C-8A14A17AE61C}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="game_weapon_shoot_machinegun" ID="{5020077C-24E2-46F5-88F9-1926B82B2FBD}" ShortID="782041294">
@@ -348,6 +348,239 @@
 										<SwitchRef Name="None" ID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
 										<ItemList>
 											<ItemRef Name="game_weapon_switch_default" ID="{29A88FA9-AE60-4A62-A279-AB7F038BFF45}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="game_weapon_impact" ID="{1FE7DF60-8A52-4F21-99CB-94B62E3ACA00}" ShortID="771585963">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="att_impact" ID="{58D8F917-39B3-400F-A5E4-2C0279339FEC}" WorkUnitID="{E0A49B89-8FEC-494B-BA9D-1C10F5725A8F}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="3DMaster" ID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SwitchContainer Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}" ShortID="1030767237">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="IceSurface" ID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="WeaponSurfaceCollision" ID="{DF6301E3-DB84-4607-9CDE-AFF2BF4E3A65}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="bullet_impact_ice" ID="{04A7AAC6-41DD-400B-9974-8C23F2BBF023}" ShortID="980626936">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="att_impact" ID="{58D8F917-39B3-400F-A5E4-2C0279339FEC}" WorkUnitID="{E0A49B89-8FEC-494B-BA9D-1C10F5725A8F}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="3DMaster" ID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="bullet_impact_concrete_brick_01" ID="{83BDDAF0-EBAC-4443-A8B6-B282CD616491}" ShortID="897904223">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{B6438683-0308-422A-B067-906EC900C3C4}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="682"/>
+																			<Property Name="Min" Type="Real64" Value="-506"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-10</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="bullet_impact_concrete_brick_01" ID="{EF7EAC49-209D-48D1-9F1E-DC7FC2D291D6}">
+															<Language>SFX</Language>
+															<AudioFile>Placeholders\bullet_impact_concrete_brick_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="283789798"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="bullet_impact_concrete_brick_01" ID="{EF7EAC49-209D-48D1-9F1E-DC7FC2D291D6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{5BDD7B63-3B2D-41D1-874F-C9995F412C59}"/>
+											</PositioningInfo>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="bullet_impact_ice" ID="{04A7AAC6-41DD-400B-9974-8C23F2BBF023}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="IceSurface" ID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"/>
+												<ItemList>
+													<ItemRef Name="bullet_impact_ice" ID="{04A7AAC6-41DD-400B-9974-8C23F2BBF023}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="grenade_impact" ID="{CA0C569C-7A49-4D9A-9099-EB5A30046273}" ShortID="212433246">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="IceSurface" ID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="WeaponSurfaceCollision" ID="{DF6301E3-DB84-4607-9CDE-AFF2BF4E3A65}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="grenade_impact_ice" ID="{BE386251-869A-443A-9D8B-3500FA429118}" ShortID="880244806">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Grenade_Explosion_ODY-1279-080" ID="{04529A92-2F51-40E0-8574-2AD9F571BCA0}" ShortID="99242114">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Grenade_Explosion_ODY-1279-080" ID="{6C22820A-6C84-4503-845B-614E182ECCF6}">
+															<Language>SFX</Language>
+															<AudioFile>Grenade_Explosion_ODY-1279-080.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="285816151"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Grenade_Explosion_ODY-1279-080" ID="{6C22820A-6C84-4503-845B-614E182ECCF6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="grenade_impact_ice" ID="{BE386251-869A-443A-9D8B-3500FA429118}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="IceSurface" ID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"/>
+												<ItemList>
+													<ItemRef Name="grenade_impact_ice" ID="{BE386251-869A-443A-9D8B-3500FA429118}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+							</ChildrenList>
+							<PositioningInfo>
+								<Position Name="" ID="{F946C4D0-9F26-4EAB-87D2-02D9B755B212}"/>
+							</PositioningInfo>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="grenade_impact" ID="{CA0C569C-7A49-4D9A-9099-EB5A30046273}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Pistol" ID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"/>
+										<ItemList>
+											<ItemRef Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+										<ItemList>
+											<ItemRef Name="grenade_impact" ID="{CA0C569C-7A49-4D9A-9099-EB5A30046273}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="MachineGun" ID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+										<ItemList>
+											<ItemRef Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Shotgun" ID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+										<ItemList>
+											<ItemRef Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="None" ID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+										<ItemList>
+											<ItemRef Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}"/>
 										</ItemList>
 									</Grouping>
 								</GroupingList>

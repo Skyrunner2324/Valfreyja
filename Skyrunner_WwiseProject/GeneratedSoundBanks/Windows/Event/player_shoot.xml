@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="4004702906" Type="Event" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" Language="SFX" Hash="{FC03C666-9963-B6F3-CD1A-93CB7D318F18}">
+		<SoundBank Id="4004702906" Type="Event" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" Language="SFX" Hash="{5A933732-7606-08BC-F5D2-D38ED8A714FA}">
 			<ObjectPath>player_shoot</ObjectPath>
 			<ShortName>player_shoot</ShortName>
 			<Path>Event/player_shoot.bnk</Path>
 			<Media>
-				<File Id="324871314" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\game_weapon_shoot_grenadelauncher.wav</ShortName>
-					<Path>Media/324871314.wem</Path>
-					<CachePath>SFX/Placeholders/game_weapon_shoot_grenadelauncher_10C4C929.wem</CachePath>
-				</File>
 				<File Id="353061919" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\game_weapon_shoot_shotgun.wav</ShortName>
 					<Path>Media/353061919.wem</Path>
@@ -21,6 +16,11 @@
 					<Path>Media/759953172.wem</Path>
 					<CachePath>SFX/Placeholders/game_weapon_shoot_machinegun_10C4C929.wem</CachePath>
 				</File>
+				<File Id="767258260" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Grenade_Launcher_ODY-0020-055.wav</ShortName>
+					<Path>Media/767258260.wem</Path>
+					<CachePath>SFX/Grenade_Launcher_ODY-0020-055_CF1E6E47.wem</CachePath>
+				</File>
 				<File Id="870552716" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\game_weapon_shoot.wav</ShortName>
 					<Path>Media/870552716.wem</Path>
@@ -28,7 +28,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="4004702906" Name="player_shoot" ObjectPath="\Events\Game\Weapon\player_shoot" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" DurationType="OneShot" DurationMin="0.122666664" DurationMax="3.5416667">
+				<Event Id="4004702906" Name="player_shoot" ObjectPath="\Events\Game\Weapon\player_shoot" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" DurationType="OneShot" DurationMin="0.122666664" DurationMax="1.375">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4232248784" Id="324443136" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}" Default="true"/>
@@ -39,7 +39,7 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
 							<MediaRefs>
-								<MediaRef Id="324871314"/>
+								<MediaRef Id="767258260"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -70,5 +70,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AEEA25EC-060E-FB61-5D0E-D84884A06825}</FileHash>
+	<FileHash>{A5BEF7CA-C9EA-4E52-E260-175680DFA050}</FileHash>
 </SoundBanksInfo>

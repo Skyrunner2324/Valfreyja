@@ -52,7 +52,9 @@
 							<ChildrenList>
 								<AuxBus Name="LargeRoom" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"/>
 								<AuxBus Name="SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}"/>
-								<AuxBus Name="Cave" ID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}"/>
+								<AuxBus Name="Cave" ID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
+									<ReferenceList/>
+								</AuxBus>
 							</ChildrenList>
 						</AuxBus>
 						<Bus Name="UIMaster" ID="{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}">
@@ -60,6 +62,23 @@
 								<Property Name="Color" Type="int16" Value="18"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
+						</Bus>
+						<Bus Name="3DMaster" ID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="BusChannelConfig" Type="int32">
+									<ValueList>
+										<Value>768</Value>
+									</ValueList>
+								</Property>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="att_Generic_500m" ID="{EC93F7B6-0307-4583-85BF-3E41559366CB}" WorkUnitID="{6FEACC2C-B93F-4959-8B6D-23A3FE54BBB1}"/>
+								</Reference>
+							</ReferenceList>
 						</Bus>
 					</ChildrenList>
 					<ObjectLists>

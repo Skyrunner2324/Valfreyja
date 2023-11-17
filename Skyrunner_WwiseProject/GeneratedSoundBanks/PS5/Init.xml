@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{BC4D800B-B1DA-8169-5F4E-BD08BFC2A145}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{EAA80C17-091E-3751-AC73-3E02DD07F44A}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -14,6 +14,7 @@
 			</Plugins>
 			<Busses>
 				<Bus Id="309309195" Name="2DAmbience" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\2DAmbience" GUID="{7444C4FB-63F6-4F2E-9A73-66D09EEEFAE1}"/>
+				<Bus Id="530205154" Name="3DMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\3DMaster" GUID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}"/>
 				<Bus Id="986618877" Name="PlayerWeapons" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerWeapons" GUID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}"/>
 				<Bus Id="1182634443" Name="AmbientBeds" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\AmbientBeds" GUID="{3D306ABA-2B79-4C6F-B0C4-887FF5287F6F}"/>
 				<Bus Id="1301074112" Name="3DAmbience" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\3DAmbience" GUID="{7F98D6D4-F50F-4CD2-AA30-29F04ADD57C2}"/>
@@ -105,6 +106,11 @@
 						<Switch Id="2429688720" Name="FullHealth" ObjectPath="\Switches\Default Work Unit\PlayerHealth\FullHealth" GUID="{5D504B7C-85C6-45FE-8CB6-29AA4525A874}"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="194784494" Name="WeaponSurfaceCollision" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision" GUID="{DF6301E3-DB84-4607-9CDE-AFF2BF4E3A65}">
+					<Switches>
+						<Switch Id="3353720555" Name="IceSurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\IceSurface" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="524731881" Name="AmbBiomeType" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType" GUID="{5B10E42B-0908-4108-AA6C-167CED4078D5}">
 					<Switches>
 						<Switch Id="513139656" Name="Mountain" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType\Mountain" GUID="{A4AFF0DE-5F41-4B08-AEFC-DACFEA9C64EE}"/>
@@ -115,7 +121,7 @@
 				<SwitchGroup Id="1044534455" Name="GroundMaterialSwitch" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch" GUID="{9D29D1E1-5500-4801-B968-D812A1417C9E}">
 					<GameParameterRef Id="3699472177"/>
 					<Switches>
-						<Switch Id="344481046" Name="Ice" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\Ice" GUID="{FB0B8B6F-9F97-49C4-AFB6-3AA7208FAD66}"/>
+						<Switch Id="97194767" Name="IceGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\IceGround" GUID="{FB0B8B6F-9F97-49C4-AFB6-3AA7208FAD66}"/>
 						<Switch Id="787898836" Name="Snow" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\Snow" GUID="{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}"/>
 						<Switch Id="1863277117" Name="Rocks" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\Rocks" GUID="{08A1937D-A457-41B0-A1DD-40DEEB125E58}"/>
 						<Switch Id="2058049674" Name="Wood" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\Wood" GUID="{31D40FF0-50B0-41F0-8BED-7D8E39644E38}"/>
@@ -133,5 +139,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{70E5A276-078C-DD61-861A-7AD347F5ECDA}</FileHash>
+	<FileHash>{5F10B1CB-DFF2-97D9-EEE4-4AB77B708D32}</FileHash>
 </SoundBanksInfo>
