@@ -18,16 +18,35 @@
     "Type": "Bus",
     "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
     "Language": "SFX",
-    "Hash": "{7C875E5B-FEB0-57A2-9A7A-E6335E587E70}",
+    "Hash": "{AA7B2C03-98F0-4D5B-2CE8-9145CA5C57FC}",
     "ObjectPath": "LargeRoom",
     "ShortName": "LargeRoom",
     "Path": "Bus/LargeRoom.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "3442768367",
+       "Name": "Hall_Large_Dark",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Halls\\Hall_Large_Dark",
+       "GUID": "{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "AuxBusses": [
      {
       "Id": "187046019",
       "Name": "LargeRoom",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Reverbs\\LargeRoom",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3442768367"
+        }
+       ]
+      },
       "AuxBusRefs": [
        {
         "Id": "3545700988",
@@ -88,7 +107,7 @@
     "Type": "Event",
     "GUID": "{320EAD8E-718C-462E-A1F1-4AD653892209}",
     "Language": "SFX",
-    "Hash": "{2DCAD3EC-CD2A-A568-AD0D-C99C85B78504}",
+    "Hash": "{65260072-7AF6-93E6-BBBA-0B878735958E}",
     "ObjectPath": "weapon_switch",
     "ShortName": "weapon_switch",
     "Path": "Event/weapon_switch.bnk",
@@ -250,7 +269,7 @@
     "Type": "Event",
     "GUID": "{29088148-6827-4D6A-8542-7D2208093511}",
     "Language": "SFX",
-    "Hash": "{C6EA0C39-376E-9DA8-61D5-61C2C4A5237C}",
+    "Hash": "{631D8DBC-36FD-D67B-4B83-B61BE6549A4B}",
     "ObjectPath": "Play_TestBeep_Loop",
     "ShortName": "Play_TestBeep_Loop",
     "Path": "Event/Play_TestBeep_Loop.bnk",
@@ -277,14 +296,6 @@
         "Id": "653948235"
        }
       ]
-     }
-    ],
-    "GameParameters": [
-     {
-      "Id": "1375486620",
-      "Name": "RTPC_CameraRotation",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_CameraRotation",
-      "GUID": "{83642008-1105-44D2-A729-CBA3014166C7}"
      }
     ]
    },
@@ -377,7 +388,7 @@
     "Type": "Event",
     "GUID": "{AA3F18C1-9D36-4D56-9C8A-BA65E19E9C0B}",
     "Language": "SFX",
-    "Hash": "{EFAF6C23-A60A-5289-1F12-F5D13399200E}",
+    "Hash": "{88D8B8DE-28BE-431B-0FF5-EE673500D494}",
     "ObjectPath": "weapon_overheat_lp",
     "ShortName": "weapon_overheat_lp",
     "Path": "Event/weapon_overheat_lp.bnk",
@@ -555,11 +566,21 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{973E0094-0709-2B93-45E2-AC562D979995}",
+    "Hash": "{7CD96CFE-CE87-06CA-32D5-45911D9149D6}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "3442768367",
+       "Name": "Hall_Large_Dark",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Halls\\Hall_Large_Dark",
+       "GUID": "{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ],
      "AudioDevices": [
       {
        "Id": "1334442663",
@@ -639,14 +660,26 @@
      {
       "Id": "2033911932",
       "Name": "NPCMaster",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\NPCMaster",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\3DMaster\\NPCMaster",
       "GUID": "{94354A62-2693-4A27-B098-F5FDE5B577C5}"
+     },
+     {
+      "Id": "2093916256",
+      "Name": "EnviroMaster",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\3DMaster\\EnviroMaster",
+      "GUID": "{9F9340CC-8477-40EE-8F8A-7910D485E0C3}"
      },
      {
       "Id": "2452310558",
       "Name": "WwiseMotion",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\WwiseMotion",
       "GUID": "{A725A1F7-24D8-429B-98AE-EDE935A1E857}"
+     },
+     {
+      "Id": "3199789248",
+      "Name": "MusicMaster",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MusicMaster",
+      "GUID": "{D7372867-B444-4F36-A355-173A46D13138}"
      },
      {
       "Id": "3538689948",
@@ -673,6 +706,13 @@
       "Name": "LargeRoom",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Reverbs\\LargeRoom",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3442768367"
+        }
+       ]
+      },
       "AuxBusRefs": [
        {
         "Id": "3545700988",
@@ -723,12 +763,6 @@
       "Name": "RTPC_Distance",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_Distance",
       "GUID": "{EF3CABA9-5812-4B07-97BE-69A25DA3E423}"
-     },
-     {
-      "Id": "1375486620",
-      "Name": "RTPC_CameraRotation",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_CameraRotation",
-      "GUID": "{83642008-1105-44D2-A729-CBA3014166C7}"
      },
      {
       "Id": "2565740352",
@@ -1156,28 +1190,6 @@
     ]
    },
    {
-    "Id": "1682875947",
-    "Type": "Event",
-    "GUID": "{2ED24474-7C6A-4243-9411-21105E6B92AF}",
-    "Language": "SFX",
-    "Hash": "{AB32DF23-6524-DCDB-05D3-E196E9832833}",
-    "ObjectPath": "player_wallslide_stoplp",
-    "ShortName": "player_wallslide_stoplp",
-    "Path": "Event/player_wallslide_stoplp.bnk",
-    "Events": [
-     {
-      "Id": "1682875947",
-      "Name": "player_wallslide_stoplp",
-      "ObjectPath": "\\Events\\Game\\Player\\player_wallslide_stoplp",
-      "GUID": "{2ED24474-7C6A-4243-9411-21105E6B92AF}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
-     }
-    ]
-   },
-   {
     "Id": "1955951874",
     "Type": "Event",
     "GUID": "{BA048CFB-5B21-4BC8-B6D1-60EC051A774E}",
@@ -1538,41 +1550,6 @@
     ]
    },
    {
-    "Id": "3155517227",
-    "Type": "Event",
-    "GUID": "{4666F21B-17C8-4FCB-9DCA-7EC402ACA7D9}",
-    "Language": "SFX",
-    "Hash": "{43968CC1-7A23-F41D-CBC6-3A71087465F4}",
-    "ObjectPath": "player_wallslide_lp",
-    "ShortName": "player_wallslide_lp",
-    "Path": "Event/player_wallslide_lp.bnk",
-    "Media": [
-     {
-      "Id": "615287922",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Placeholders\\player_wallslide.wav",
-      "Path": "Media/615287922.wem",
-      "CachePath": "SFX/Placeholders/player_wallslide_D79FB2B7.wem"
-     }
-    ],
-    "Events": [
-     {
-      "Id": "3155517227",
-      "Name": "player_wallslide_lp",
-      "ObjectPath": "\\Events\\Game\\Player\\player_wallslide_lp",
-      "GUID": "{4666F21B-17C8-4FCB-9DCA-7EC402ACA7D9}",
-      "DurationType": "Infinite",
-      "MediaRefs": [
-       {
-        "Id": "615287922"
-       }
-      ]
-     }
-    ]
-   },
-   {
     "Id": "3475882615",
     "Type": "Event",
     "GUID": "{AD494000-0055-4CEE-9621-35691A0B6C38}",
@@ -1613,20 +1590,11 @@
     "Type": "Event",
     "GUID": "{7B2B9537-B71E-43D4-9310-46937A472AD5}",
     "Language": "SFX",
-    "Hash": "{DADA0011-AEAE-24B8-F059-1BDA80015C43}",
+    "Hash": "{04D9EAFE-5E03-0F0F-BBD8-419D2C6F19C1}",
     "ObjectPath": "weapon_impact",
     "ShortName": "weapon_impact",
     "Path": "Event/weapon_impact.bnk",
     "Media": [
-     {
-      "Id": "283789798",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Placeholders\\bullet_impact_concrete_brick_01.wav",
-      "Path": "Media/283789798.wem",
-      "CachePath": "SFX/Placeholders/bullet_impact_concrete_brick_01_10C4C929.wem"
-     },
      {
       "Id": "285816151",
       "Language": "SFX",
@@ -1635,6 +1603,15 @@
       "ShortName": "Grenade_Explosion_ODY-1279-080.wav",
       "Path": "Media/285816151.wem",
       "CachePath": "SFX/Grenade_Explosion_ODY-1279-080_10C4C929.wem"
+     },
+     {
+      "Id": "991022554",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav",
+      "Path": "Media/991022554.wem",
+      "CachePath": "SFX/PM_BBI_Bullet_Impact_Hit_Body_Flesh_25_3B670390.wem"
      }
     ],
     "Events": [
@@ -1643,10 +1620,18 @@
       "Name": "weapon_impact",
       "ObjectPath": "\\Events\\Game\\Weapon\\weapon_impact",
       "GUID": "{7B2B9537-B71E-43D4-9310-46937A472AD5}",
-      "MaxAttenuation": "5000",
+      "MaxAttenuation": "10000",
       "DurationType": "OneShot",
-      "DurationMin": "0.23328462",
+      "DurationMin": "0.19669332",
       "DurationMax": "2.56",
+      "AuxBusRefs": [
+       {
+        "Id": "187046019",
+        "Name": "LargeRoom",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Reverbs\\LargeRoom",
+        "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"
+       }
+      ],
       "SwitchContainers": [
        {
         "SwitchValue": {
@@ -1666,7 +1651,7 @@
           },
           "MediaRefs": [
            {
-            "Id": "283789798"
+            "Id": "991022554"
            }
           ]
          }
@@ -1715,7 +1700,7 @@
           },
           "MediaRefs": [
            {
-            "Id": "283789798"
+            "Id": "991022554"
            }
           ]
          }
@@ -1739,7 +1724,7 @@
           },
           "MediaRefs": [
            {
-            "Id": "283789798"
+            "Id": "991022554"
            }
           ]
          }
@@ -1763,7 +1748,7 @@
           },
           "MediaRefs": [
            {
-            "Id": "283789798"
+            "Id": "991022554"
            }
           ]
          }
@@ -1889,7 +1874,7 @@
     "Type": "Event",
     "GUID": "{EEABD1AC-C871-41C1-836E-6397FD3D79D7}",
     "Language": "SFX",
-    "Hash": "{5A933732-7606-08BC-F5D2-D38ED8A714FA}",
+    "Hash": "{AC6DDC3B-96F6-B662-3FC2-B56753038A43}",
     "ObjectPath": "player_shoot",
     "ShortName": "player_shoot",
     "Path": "Event/player_shoot.bnk",
@@ -1993,6 +1978,19 @@
           "Id": "353061919"
          }
         ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "4232248784",
+         "Id": "748895195",
+         "GUID": "{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "870552716"
+         }
+        ]
        }
       ]
      }
@@ -2069,7 +2067,7 @@
     "Type": "Event",
     "GUID": "{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}",
     "Language": "SFX",
-    "Hash": "{106EC818-B2E0-8A6D-5388-3AE61EED8307}",
+    "Hash": "{29C211D0-47E1-6DB0-ED8F-35DA88E19A28}",
     "ObjectPath": "Play_Hoverboard",
     "ShortName": "Play_Hoverboard",
     "Path": "Event/Play_Hoverboard.bnk",
@@ -2128,12 +2126,6 @@
      }
     ],
     "GameParameters": [
-     {
-      "Id": "1375486620",
-      "Name": "RTPC_CameraRotation",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_CameraRotation",
-      "GUID": "{83642008-1105-44D2-A729-CBA3014166C7}"
-     },
      {
       "Id": "2653406601",
       "Name": "RTPC_PlayerSpeed",
@@ -2196,7 +2188,7 @@
     "Type": "Event",
     "GUID": "{81018338-1AD3-438A-9EE3-B58AA19CB625}",
     "Language": "SFX",
-    "Hash": "{7171BB6D-2A78-7E15-14CC-745A43EE2F75}",
+    "Hash": "{C918E042-E315-81EE-63B2-ECEAABB344BD}",
     "ObjectPath": "Play_TestDistance",
     "ShortName": "Play_TestDistance",
     "Path": "Event/Play_TestDistance.bnk",
@@ -2561,6 +2553,6 @@
     ]
    }
   ],
-  "FileHash": "{222A0C02-C1D2-4CAD-8181-A3F83B949448}"
+  "FileHash": "{9BA7E479-B4E5-8D0A-B3E1-4CD91F8BF134}"
  }
 }

@@ -13,60 +13,22 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+							<ObjectRef Name="PlayerMovement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 						</Reference>
 					</ReferenceList>
-					<ObjectLists>
-						<ObjectList Name="RTPC">
-							<Reference>
-								<Local>
-									<RTPC Name="" ID="{1CB4047B-CA26-4495-A76C-D07A37809DB3}" ShortID="451593386">
-										<PropertyList>
-											<Property Name="PropertyName" Type="string" Value="Volume"/>
-										</PropertyList>
-										<ReferenceList>
-											<Reference Name="ControlInput">
-												<ObjectRef Name="RTPC_CameraRotation" ID="{83642008-1105-44D2-A729-CBA3014166C7}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-											</Reference>
-											<Reference Name="Curve">
-												<Custom>
-													<Curve Name="" ID="{692984C2-AED4-4666-BCBE-BB1668A4334A}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="3"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>-90</XPos>
-																<YPos>0</YPos>
-																<Flags>5</Flags>
-																<SegmentShape>Exp2</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>90</XPos>
-																<YPos>-8.41012</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</Custom>
-											</Reference>
-										</ReferenceList>
-									</RTPC>
-								</Local>
-							</Reference>
-						</ObjectList>
-					</ObjectLists>
 				</BlendContainer>
 				<Sound Name="HoverWind" ID="{9B4AD9A0-3C3E-4B67-B9F8-25CE5FC4D51D}" ShortID="236940080">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+							<ObjectRef Name="PlayerMovement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -99,10 +61,11 @@
 																		<XPos>0</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
+																		<SegmentShape>Log1</SegmentShape>
 																	</Point>
 																	<Point>
 																		<XPos>3000</XPos>
-																		<YPos>1111.57895</YPos>
+																		<YPos>1318.98636</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -137,7 +100,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>3000</XPos>
-																		<YPos>0.26473</YPos>
+																		<YPos>0.34189</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -207,8 +170,13 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
+																		<XPos>996.93721</XPos>
+																		<YPos>0.69914</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
 																		<XPos>3000</XPos>
-																		<YPos>0.53789</YPos>
+																		<YPos>0.83419</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -234,61 +202,24 @@
 									</PluginInnerObject>
 									<PluginInnerObject Name="" ID="{66F56DD7-6371-4165-9F00-D18E6B43B509}" PluginName="Deflector" CompanyID="0" PluginID="121">
 										<PropertyList>
-											<Property Name="PanX" Type="Real64" Value="-38.4415584415584"/>
-											<Property Name="PanY" Type="Real64" Value="54.3640897755611"/>
+											<Property Name="PanX" Type="Real64" Value="-50.3896103896103"/>
+											<Property Name="PanY" Type="Real64" Value="53.3665835411471"/>
 										</PropertyList>
 									</PluginInnerObject>
 									<PluginInnerObject Name="" ID="{2268C3CC-872B-4F24-9DB0-409D80F7517E}" PluginName="Deflector" CompanyID="0" PluginID="121">
 										<PropertyList>
 											<Property Name="Frequency" Type="Real32" Value="598"/>
-											<Property Name="PanX" Type="Real64" Value="42.0779220779221"/>
-											<Property Name="PanY" Type="Real64" Value="50.8728179551122"/>
+											<Property Name="PanX" Type="Real64" Value="72.7272727272728"/>
+											<Property Name="PanY" Type="Real64" Value="51.3715710723192"/>
 										</PropertyList>
 									</PluginInnerObject>
 								</List>
 							</PluginInnerObjectList>
 						</SourcePlugin>
 					</ChildrenList>
-					<ObjectLists>
-						<ObjectList Name="RTPC">
-							<Reference>
-								<Local>
-									<RTPC Name="" ID="{2A2001A4-D001-43F7-ACFF-F8311EA37F97}" ShortID="357592452">
-										<PropertyList>
-											<Property Name="PropertyName" Type="string" Value="Volume"/>
-										</PropertyList>
-										<ReferenceList>
-											<Reference Name="ControlInput">
-												<ObjectRef Name="RTPC_CameraRotation" ID="{83642008-1105-44D2-A729-CBA3014166C7}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-											</Reference>
-											<Reference Name="Curve">
-												<Custom>
-													<Curve Name="" ID="{0C3F04F8-3010-42B2-BFE1-324941556809}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="3"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>-90</XPos>
-																<YPos>-3.14529</YPos>
-																<Flags>5</Flags>
-																<SegmentShape>Exp2</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>90</XPos>
-																<YPos>0</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</Custom>
-											</Reference>
-										</ReferenceList>
-									</RTPC>
-								</Local>
-							</Reference>
-						</ObjectList>
-					</ObjectLists>
+					<PositioningInfo>
+						<Panner Name="" ID="{223E3C2B-6DB3-4482-8770-6EDDBAB924DE}"/>
+					</PositioningInfo>
 					<ActiveSourceList>
 						<ActiveSource Name="Soundseed Air Wind" ID="{18F4FB7B-DE04-40E6-A69B-DEEF180CC535}" Platform="Linked"/>
 					</ActiveSourceList>
@@ -302,7 +233,7 @@
 							<ObjectRef Name="Snow" ID="{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+							<ObjectRef Name="PlayerMovement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 						</Reference>
 						<Reference Name="SwitchGroupOrStateGroup">
 							<ObjectRef Name="GroundMaterialSwitch" ID="{9D29D1E1-5500-4801-B968-D812A1417C9E}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
@@ -351,7 +282,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>-96.3</YPos>
+																				<YPos>-12.13959</YPos>
 																				<Flags>5</Flags>
 																				<SegmentShape>Log3</SegmentShape>
 																			</Point>
@@ -389,10 +320,16 @@
 																				<XPos>0</XPos>
 																				<YPos>0</YPos>
 																				<Flags>5</Flags>
+																				<SegmentShape>Log1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>1001.52439</XPos>
+																				<YPos>1.12572</YPos>
+																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
 																				<XPos>3000</XPos>
-																				<YPos>0.95327</YPos>
+																				<YPos>1.49155</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -457,7 +394,7 @@
 											<PluginInnerObject Name="" ID="{135DFD11-1AAA-4E18-84F8-0781786E181D}" PluginName="Deflector" CompanyID="0" PluginID="122">
 												<PropertyList>
 													<Property Name="Frequency" Type="Real32" Value="510"/>
-													<Property Name="QFactor" Type="Real32" Value="28.12"/>
+													<Property Name="QFactor" Type="Real32" Value="8.24"/>
 												</PropertyList>
 											</PluginInnerObject>
 										</List>
@@ -469,46 +406,6 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
-					<ObjectLists>
-						<ObjectList Name="RTPC">
-							<Reference>
-								<Local>
-									<RTPC Name="" ID="{2473FE8E-9862-4346-A6F6-10B4054681F4}" ShortID="778707355">
-										<PropertyList>
-											<Property Name="PropertyName" Type="string" Value="Volume"/>
-										</PropertyList>
-										<ReferenceList>
-											<Reference Name="ControlInput">
-												<ObjectRef Name="RTPC_CameraRotation" ID="{83642008-1105-44D2-A729-CBA3014166C7}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-											</Reference>
-											<Reference Name="Curve">
-												<Custom>
-													<Curve Name="" ID="{3867FA14-7BD8-4399-9B9A-A5753F0759BF}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="3"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>-90</XPos>
-																<YPos>0</YPos>
-																<Flags>5</Flags>
-																<SegmentShape>Exp2</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>90</XPos>
-																<YPos>-10.71799</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</Custom>
-											</Reference>
-										</ReferenceList>
-									</RTPC>
-								</Local>
-							</Reference>
-						</ObjectList>
-					</ObjectLists>
 					<GroupingInfo>
 						<GroupingBehaviorList>
 							<GroupingBehavior>

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{973E0094-0709-2B93-45E2-AC562D979995}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{7CD96CFE-CE87-06CA-32D5-45911D9149D6}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<ShareSets>
+					<Plugin Id="3442768367" Name="Hall_Large_Dark" ObjectPath="\Effects\Factory Effects\RoomVerb\Halls\Hall_Large_Dark" GUID="{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="1334442663" Name="Controller_Speaker" ObjectPath="\Audio Devices\Default Work Unit\Controller_Speaker" GUID="{DBAC18E4-4565-4995-8D85-16A16A6DEC90}" LibName="Controller Speaker" LibId="11730951"/>
 					<Plugin Id="2317455096" Name="No_Output" ObjectPath="\Audio Devices\Default Work Unit\No_Output" GUID="{2DB002A7-F406-43F8-98EB-46545A451293}" LibName="No Output" LibId="11862023"/>
@@ -21,14 +24,21 @@
 				<Bus Id="1350496757" Name="PlayerMovement" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerMovement" GUID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}"/>
 				<Bus Id="1459460693" Name="AmbientMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster" GUID="{1260EBDA-2D71-42A1-A3E2-A2832FF41985}"/>
 				<Bus Id="1992125169" Name="UIMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UIMaster" GUID="{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}"/>
-				<Bus Id="2033911932" Name="NPCMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\NPCMaster" GUID="{94354A62-2693-4A27-B098-F5FDE5B577C5}"/>
+				<Bus Id="2033911932" Name="NPCMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\3DMaster\NPCMaster" GUID="{94354A62-2693-4A27-B098-F5FDE5B577C5}"/>
+				<Bus Id="2093916256" Name="EnviroMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\3DMaster\EnviroMaster" GUID="{9F9340CC-8477-40EE-8F8A-7910D485E0C3}"/>
 				<Bus Id="2452310558" Name="WwiseMotion" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\WwiseMotion" GUID="{A725A1F7-24D8-429B-98AE-EDE935A1E857}"/>
+				<Bus Id="3199789248" Name="MusicMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MusicMaster" GUID="{D7372867-B444-4F36-A355-173A46D13138}"/>
 				<Bus Id="3538689948" Name="PlayerMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster" GUID="{880F05A2-569A-4D55-B7A0-1CD87FD195D0}"/>
 				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Bus Id="4152869693" Name="2DAmbientBeds" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\AmbientBeds\2DAmbientBeds" GUID="{9F89B372-3238-4882-829C-1D743E3D17E7}"/>
 			</Busses>
 			<AuxBusses>
 				<AuxBus Id="187046019" Name="LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3442768367"/>
+						</ShareSets>
+					</PluginRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
@@ -47,7 +57,6 @@
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="262290038" Name="RTPC_Distance" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Distance" GUID="{EF3CABA9-5812-4B07-97BE-69A25DA3E423}"/>
-				<GameParameter Id="1375486620" Name="RTPC_CameraRotation" ObjectPath="\Game Parameters\Default Work Unit\RTPC_CameraRotation" GUID="{83642008-1105-44D2-A729-CBA3014166C7}"/>
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 				<GameParameter Id="3699472177" Name="RTPC_GroundMaterial" ObjectPath="\Game Parameters\Default Work Unit\RTPC_GroundMaterial" GUID="{05992564-76FB-4584-948F-C0F4109BF542}"/>
@@ -139,5 +148,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8E5CE7AE-EE7C-A59D-4041-EE745D6D5696}</FileHash>
+	<FileHash>{B0A5C715-0792-E024-4931-632308645DC1}</FileHash>
 </SoundBanksInfo>

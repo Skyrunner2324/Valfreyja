@@ -4,13 +4,6 @@
 		<WorkUnit Name="Default Work Unit" ID="{05960EF2-846C-4440-B200-DA936247A2CF}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
-					<PropertyList>
-						<Property Name="BusVolume" Type="Real64">
-							<ValueList>
-								<Value>-10</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{E91ADA0B-490E-4228-84AF-22DC5116ACA0}" WorkUnitID="{69D16C6A-8CBD-41F2-91C9-0ADAE7074EDE}"/>
@@ -26,12 +19,6 @@
 								<Bus Name="PlayerMovement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}"/>
 								<Bus Name="PlayerWeapons" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}"/>
 							</ChildrenList>
-						</Bus>
-						<Bus Name="NPCMaster" ID="{94354A62-2693-4A27-B098-F5FDE5B577C5}">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="10"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
 						</Bus>
 						<Bus Name="AmbientMaster" ID="{1260EBDA-2D71-42A1-A3E2-A2832FF41985}">
 							<PropertyList>
@@ -50,15 +37,31 @@
 						</Bus>
 						<AuxBus Name="Reverbs" ID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}">
 							<ChildrenList>
-								<AuxBus Name="LargeRoom" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"/>
-								<AuxBus Name="SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}"/>
-								<AuxBus Name="Cave" ID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
-									<ReferenceList/>
+								<AuxBus Name="LargeRoom" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
+									<PropertyList>
+										<Property Name="BusChannelConfig" Type="int32">
+											<ValueList>
+												<Value>3584</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Hall_Large_Dark" ID="{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
 								</AuxBus>
+								<AuxBus Name="SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}"/>
+								<AuxBus Name="Cave" ID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}"/>
 							</ChildrenList>
 						</AuxBus>
 						<Bus Name="UIMaster" ID="{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}">
 							<PropertyList>
+								<Property Name="BusChannelConfig" Type="int32">
+									<ValueList>
+										<Value>3840</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Color" Type="int16" Value="18"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
@@ -79,6 +82,24 @@
 									<ObjectRef Name="att_Generic_500m" ID="{EC93F7B6-0307-4583-85BF-3E41559366CB}" WorkUnitID="{6FEACC2C-B93F-4959-8B6D-23A3FE54BBB1}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Bus Name="NPCMaster" ID="{94354A62-2693-4A27-B098-F5FDE5B577C5}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="10"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</Bus>
+								<Bus Name="EnviroMaster" ID="{9F9340CC-8477-40EE-8F8A-7910D485E0C3}"/>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="MusicMaster" ID="{D7372867-B444-4F36-A355-173A46D13138}">
+							<PropertyList>
+								<Property Name="BusChannelConfig" Type="int32">
+									<ValueList>
+										<Value>3840</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 						</Bus>
 					</ChildrenList>
 					<ObjectLists>

@@ -10,11 +10,21 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{973E0094-0709-2B93-45E2-AC562D979995}",
+    "Hash": "{7CD96CFE-CE87-06CA-32D5-45911D9149D6}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "3442768367",
+       "Name": "Hall_Large_Dark",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Halls\\Hall_Large_Dark",
+       "GUID": "{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ],
      "AudioDevices": [
       {
        "Id": "1334442663",
@@ -94,14 +104,26 @@
      {
       "Id": "2033911932",
       "Name": "NPCMaster",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\NPCMaster",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\3DMaster\\NPCMaster",
       "GUID": "{94354A62-2693-4A27-B098-F5FDE5B577C5}"
+     },
+     {
+      "Id": "2093916256",
+      "Name": "EnviroMaster",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\3DMaster\\EnviroMaster",
+      "GUID": "{9F9340CC-8477-40EE-8F8A-7910D485E0C3}"
      },
      {
       "Id": "2452310558",
       "Name": "WwiseMotion",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\WwiseMotion",
       "GUID": "{A725A1F7-24D8-429B-98AE-EDE935A1E857}"
+     },
+     {
+      "Id": "3199789248",
+      "Name": "MusicMaster",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MusicMaster",
+      "GUID": "{D7372867-B444-4F36-A355-173A46D13138}"
      },
      {
       "Id": "3538689948",
@@ -128,6 +150,13 @@
       "Name": "LargeRoom",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Reverbs\\LargeRoom",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3442768367"
+        }
+       ]
+      },
       "AuxBusRefs": [
        {
         "Id": "3545700988",
@@ -178,12 +207,6 @@
       "Name": "RTPC_Distance",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_Distance",
       "GUID": "{EF3CABA9-5812-4B07-97BE-69A25DA3E423}"
-     },
-     {
-      "Id": "1375486620",
-      "Name": "RTPC_CameraRotation",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_CameraRotation",
-      "GUID": "{83642008-1105-44D2-A729-CBA3014166C7}"
      },
      {
       "Id": "2565740352",
@@ -517,6 +540,6 @@
     ]
    }
   ],
-  "FileHash": "{5DAF044A-A1B1-7AD2-545B-C0CC6DDBE9F6}"
+  "FileHash": "{FC7BF2FA-F094-D6AE-C588-F8752571E891}"
  }
 }

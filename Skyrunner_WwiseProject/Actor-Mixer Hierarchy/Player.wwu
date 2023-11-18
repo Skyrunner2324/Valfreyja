@@ -26,7 +26,7 @@
 									<ObjectRef Name="Pistol" ID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+									<ObjectRef Name="PlayerWeapons" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
 									<ObjectRef Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
@@ -169,6 +169,12 @@
 											<ItemRef Name="game_weapon_shoot_shotgun" ID="{DCDEA920-D5F0-4CB2-ADE9-70136387DF80}"/>
 										</ItemList>
 									</Grouping>
+									<Grouping>
+										<SwitchRef Name="None" ID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+										<ItemList>
+											<ItemRef Name="game_weapon_shoot_pistol" ID="{360701BA-6E3F-429B-9D78-779B39AEC382}"/>
+										</ItemList>
+									</Grouping>
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
@@ -185,7 +191,7 @@
 									<ObjectRef Name="Pistol" ID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+									<ObjectRef Name="PlayerWeapons" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
 									<ObjectRef Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
@@ -279,7 +285,7 @@
 									<ObjectRef Name="Pistol" ID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+									<ObjectRef Name="PlayerWeapons" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
 									<ObjectRef Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
@@ -356,6 +362,7 @@
 						<SwitchContainer Name="game_weapon_impact" ID="{1FE7DF60-8A52-4F21-99CB-94B62E3ACA00}" ShortID="771585963">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -368,10 +375,13 @@
 									<ObjectRef Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="3DMaster" ID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+									<ObjectRef Name="EnviroMaster" ID="{9F9340CC-8477-40EE-8F8A-7910D485E0C3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
 									<ObjectRef Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="LargeRoom" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -416,8 +426,8 @@
 																	<Modifier Name="" ID="{B6438683-0308-422A-B067-906EC900C3C4}">
 																		<PropertyList>
 																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Max" Type="Real64" Value="682"/>
-																			<Property Name="Min" Type="Real64" Value="-506"/>
+																			<Property Name="Max" Type="Real64" Value="1187"/>
+																			<Property Name="Min" Type="Real64" Value="-127"/>
 																		</PropertyList>
 																	</Modifier>
 																</ModifierInfo>
@@ -438,16 +448,21 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="bullet_impact_concrete_brick_01" ID="{EF7EAC49-209D-48D1-9F1E-DC7FC2D291D6}">
+														<AudioFileSource Name="PM_BBI_Bullet_Impact_Hit_Body_Flesh_25" ID="{E9AB18EE-ED18-47E1-8D67-8B615C43F2C7}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.136502783469945"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.52694649931694"/>
+															</PropertyList>
 															<Language>SFX</Language>
-															<AudioFile>Placeholders\bullet_impact_concrete_brick_01.wav</AudioFile>
+															<AudioFile>PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="283789798"/>
+																<MediaID ID="991022554"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="bullet_impact_concrete_brick_01" ID="{EF7EAC49-209D-48D1-9F1E-DC7FC2D291D6}" Platform="Linked"/>
+														<ActiveSource Name="PM_BBI_Bullet_Impact_Hit_Body_Flesh_25" ID="{E9AB18EE-ED18-47E1-8D67-8B615C43F2C7}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
