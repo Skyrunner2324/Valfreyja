@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{5BD389C8-C50C-A698-426E-FA3B046421CC}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{FB0E5170-0A01-E315-170E-BCAB5BD7890E}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
-				<ShareSets>
-					<Plugin Id="3442768367" Name="Hall_Large_Dark" ObjectPath="\Effects\Factory Effects\RoomVerb\Halls\Hall_Large_Dark" GUID="{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}" LibName="Wwise RoomVerb" LibId="7733251"/>
-				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="1334442663" Name="Controller_Speaker" ObjectPath="\Audio Devices\Default Work Unit\Controller_Speaker" GUID="{DBAC18E4-4565-4995-8D85-16A16A6DEC90}" LibName="Controller Speaker" LibId="11730951"/>
 					<Plugin Id="2317455096" Name="No_Output" ObjectPath="\Audio Devices\Default Work Unit\No_Output" GUID="{2DB002A7-F406-43F8-98EB-46545A451293}" LibName="No Output" LibId="11862023"/>
@@ -34,11 +31,6 @@
 			</Busses>
 			<AuxBusses>
 				<AuxBus Id="187046019" Name="LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3442768367"/>
-						</ShareSets>
-					</PluginRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
@@ -79,9 +71,13 @@
 				<StateGroup Id="1350496757" Name="PlayerMovement" ObjectPath="\States\Default Work Unit\PlayerMovement" GUID="{B3F9B62E-2D08-41B6-8A1A-D6874DFA7336}">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\PlayerMovement\None" GUID="{97700067-F4AC-4FF8-A1EE-276A96992D3A}"/>
+						<State Id="906520813" Name="Grap" ObjectPath="\States\Default Work Unit\PlayerMovement\Grap" GUID="{FE69DDCB-4524-42C1-8944-029230C04098}"/>
 						<State Id="1050421051" Name="Air" ObjectPath="\States\Default Work Unit\PlayerMovement\Air" GUID="{6D041D05-AF22-4F45-900B-66D481DDF645}"/>
+						<State Id="2043403997" Name="Rail" ObjectPath="\States\Default Work Unit\PlayerMovement\Rail" GUID="{7C348A10-0746-44D0-BEE4-7BAD55173A39}"/>
 						<State Id="2108779961" Name="Wall" ObjectPath="\States\Default Work Unit\PlayerMovement\Wall" GUID="{1DF46885-9897-478D-8246-46D5CF982C5E}"/>
 						<State Id="2528658256" Name="Ground" ObjectPath="\States\Default Work Unit\PlayerMovement\Ground" GUID="{6A68E123-5F52-43BC-ACE2-3F382E01BED2}"/>
+						<State Id="2655407367" Name="Crouch" ObjectPath="\States\Default Work Unit\PlayerMovement\Crouch" GUID="{AE6DD438-05E6-45D2-9E8A-5DF26F10FD9E}"/>
+						<State Id="3686556480" Name="Slide" ObjectPath="\States\Default Work Unit\PlayerMovement\Slide" GUID="{01F0BB54-8B03-41D4-85FB-94EB54E4D17A}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="2064552269" Name="AreaState" ObjectPath="\States\Default Work Unit\AreaState" GUID="{8264E7EF-9D1C-45D6-B03F-CCD0B6C66735}">
@@ -118,6 +114,7 @@
 				<SwitchGroup Id="194784494" Name="WeaponSurfaceCollision" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision" GUID="{DF6301E3-DB84-4607-9CDE-AFF2BF4E3A65}">
 					<Switches>
 						<Switch Id="3353720555" Name="IceSurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\IceSurface" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"/>
+						<Switch Id="3661774060" Name="EnemySurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\EnemySurface" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="524731881" Name="AmbBiomeType" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType" GUID="{5B10E42B-0908-4108-AA6C-167CED4078D5}">
@@ -148,5 +145,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5EAD4E07-36D8-D4E4-45A9-0E99BC1D790B}</FileHash>
+	<FileHash>{92EA1A55-98F4-FE09-5318-08166FFAA396}</FileHash>
 </SoundBanksInfo>

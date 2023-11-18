@@ -35,6 +35,7 @@
 						<SourcePlugin Name="Soundseed Air Wind" ID="{18F4FB7B-DE04-40E6-A69B-DEEF180CC535}" ShortID="810116914" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 							<PropertyList>
 								<Property Name="AverageVelocity" Type="Real32" Value="50"/>
+								<Property Name="AverageVelocityAutomate" Type="bool" Value="True"/>
 								<Property Name="Gustiness" Type="Real32" Value="0"/>
 								<Property Name="Variability" Type="Real32" Value="0.12"/>
 							</PropertyList>
@@ -64,7 +65,7 @@
 																		<SegmentShape>Log1</SegmentShape>
 																	</Point>
 																	<Point>
-																		<XPos>3000</XPos>
+																		<XPos>2000</XPos>
 																		<YPos>1318.98636</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -99,7 +100,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>3000</XPos>
+																		<XPos>2000</XPos>
 																		<YPos>0.34189</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -135,7 +136,7 @@
 																		<SegmentShape>Log3</SegmentShape>
 																	</Point>
 																	<Point>
-																		<XPos>3000</XPos>
+																		<XPos>2000</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -170,12 +171,12 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>996.93721</XPos>
+																		<XPos>664.624806666667</XPos>
 																		<YPos>0.69914</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>3000</XPos>
+																		<XPos>2000</XPos>
 																		<YPos>0.83419</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -190,7 +191,29 @@
 								</ObjectList>
 							</ObjectLists>
 							<Language>SFX</Language>
-							<PluginData/>
+							<PluginData>
+	<CurveList Version="1">
+		<CurveInfo Name="AverageVelocity">
+			<Curve Name="" ID="{3D3D47F4-D0E0-46E8-A156-C735FF562F3B}">
+				<PropertyList>
+					<Property Name="Flags" Type="int32" Value="1"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0</YPos>
+						<Flags>5</Flags>
+					</Point>
+					<Point>
+						<XPos>10</XPos>
+						<YPos>0</YPos>
+						<Flags>37</Flags>
+					</Point>
+				</PointList>
+			</Curve>
+		</CurveInfo>
+	</CurveList>
+</PluginData>
 							<PluginInnerObjectList>
 								<List Name="Deflectors">
 									<PluginInnerObject Name="" ID="{352D520C-49C9-4D5B-A6D8-C7404904847C}" PluginName="Deflector" CompanyID="0" PluginID="121">
@@ -202,15 +225,15 @@
 									</PluginInnerObject>
 									<PluginInnerObject Name="" ID="{66F56DD7-6371-4165-9F00-D18E6B43B509}" PluginName="Deflector" CompanyID="0" PluginID="121">
 										<PropertyList>
-											<Property Name="PanX" Type="Real64" Value="-50.3896103896103"/>
-											<Property Name="PanY" Type="Real64" Value="53.3665835411471"/>
+											<Property Name="PanX" Type="Real64" Value="-46.7532467532467"/>
+											<Property Name="PanY" Type="Real64" Value="45.3865336658354"/>
 										</PropertyList>
 									</PluginInnerObject>
 									<PluginInnerObject Name="" ID="{2268C3CC-872B-4F24-9DB0-409D80F7517E}" PluginName="Deflector" CompanyID="0" PluginID="121">
 										<PropertyList>
 											<Property Name="Frequency" Type="Real32" Value="598"/>
-											<Property Name="PanX" Type="Real64" Value="72.7272727272728"/>
-											<Property Name="PanY" Type="Real64" Value="51.3715710723192"/>
+											<Property Name="PanX" Type="Real64" Value="51.948051948052"/>
+											<Property Name="PanY" Type="Real64" Value="58.8528678304239"/>
 										</PropertyList>
 									</PluginInnerObject>
 								</List>
@@ -287,7 +310,7 @@
 																				<SegmentShape>Log3</SegmentShape>
 																			</Point>
 																			<Point>
-																				<XPos>3000</XPos>
+																				<XPos>2000</XPos>
 																				<YPos>1.92866</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -323,12 +346,12 @@
 																				<SegmentShape>Log1</SegmentShape>
 																			</Point>
 																			<Point>
-																				<XPos>1001.52439</XPos>
+																				<XPos>667.682926666667</XPos>
 																				<YPos>1.12572</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>3000</XPos>
+																				<XPos>2000</XPos>
 																				<YPos>1.49155</YPos>
 																				<Flags>37</Flags>
 																			</Point>

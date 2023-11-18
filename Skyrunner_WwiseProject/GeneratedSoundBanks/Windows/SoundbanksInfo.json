@@ -18,35 +18,16 @@
     "Type": "Bus",
     "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
     "Language": "SFX",
-    "Hash": "{AA7B2C03-98F0-4D5B-2CE8-9145CA5C57FC}",
+    "Hash": "{7C875E5B-FEB0-57A2-9A7A-E6335E587E70}",
     "ObjectPath": "LargeRoom",
     "ShortName": "LargeRoom",
     "Path": "Bus/LargeRoom.bnk",
-    "Plugins": {
-     "ShareSets": [
-      {
-       "Id": "3442768367",
-       "Name": "Hall_Large_Dark",
-       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Halls\\Hall_Large_Dark",
-       "GUID": "{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}",
-       "LibName": "Wwise RoomVerb",
-       "LibId": "7733251"
-      }
-     ]
-    },
     "AuxBusses": [
      {
       "Id": "187046019",
       "Name": "LargeRoom",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Reverbs\\LargeRoom",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "3442768367"
-        }
-       ]
-      },
       "AuxBusRefs": [
        {
         "Id": "3545700988",
@@ -388,7 +369,7 @@
     "Type": "Event",
     "GUID": "{AA3F18C1-9D36-4D56-9C8A-BA65E19E9C0B}",
     "Language": "SFX",
-    "Hash": "{88D8B8DE-28BE-431B-0FF5-EE673500D494}",
+    "Hash": "{2F84584E-DF7F-B06F-2C4E-2403C6D51A3A}",
     "ObjectPath": "weapon_overheat_lp",
     "ShortName": "weapon_overheat_lp",
     "Path": "Event/weapon_overheat_lp.bnk",
@@ -566,21 +547,11 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{7CD96CFE-CE87-06CA-32D5-45911D9149D6}",
+    "Hash": "{F1C3CBF4-EF54-04C2-E401-9C0D17A20C11}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
-     "ShareSets": [
-      {
-       "Id": "3442768367",
-       "Name": "Hall_Large_Dark",
-       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Halls\\Hall_Large_Dark",
-       "GUID": "{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}",
-       "LibName": "Wwise RoomVerb",
-       "LibId": "7733251"
-      }
-     ],
      "AudioDevices": [
       {
        "Id": "1334442663",
@@ -706,13 +677,6 @@
       "Name": "LargeRoom",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Reverbs\\LargeRoom",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "3442768367"
-        }
-       ]
-      },
       "AuxBusRefs": [
        {
         "Id": "3545700988",
@@ -849,10 +813,22 @@
         "GUID": "{97700067-F4AC-4FF8-A1EE-276A96992D3A}"
        },
        {
+        "Id": "906520813",
+        "Name": "Grap",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Grap",
+        "GUID": "{FE69DDCB-4524-42C1-8944-029230C04098}"
+       },
+       {
         "Id": "1050421051",
         "Name": "Air",
         "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Air",
         "GUID": "{6D041D05-AF22-4F45-900B-66D481DDF645}"
+       },
+       {
+        "Id": "2043403997",
+        "Name": "Rail",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Rail",
+        "GUID": "{7C348A10-0746-44D0-BEE4-7BAD55173A39}"
        },
        {
         "Id": "2108779961",
@@ -865,6 +841,18 @@
         "Name": "Ground",
         "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Ground",
         "GUID": "{6A68E123-5F52-43BC-ACE2-3F382E01BED2}"
+       },
+       {
+        "Id": "2655407367",
+        "Name": "Crouch",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Crouch",
+        "GUID": "{AE6DD438-05E6-45D2-9E8A-5DF26F10FD9E}"
+       },
+       {
+        "Id": "3686556480",
+        "Name": "Slide",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Slide",
+        "GUID": "{01F0BB54-8B03-41D4-85FB-94EB54E4D17A}"
        }
       ]
      },
@@ -991,6 +979,12 @@
         "Name": "IceSurface",
         "ObjectPath": "\\Switches\\Default Work Unit\\WeaponSurfaceCollision\\IceSurface",
         "GUID": "{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"
+       },
+       {
+        "Id": "3661774060",
+        "Name": "EnemySurface",
+        "ObjectPath": "\\Switches\\Default Work Unit\\WeaponSurfaceCollision\\EnemySurface",
+        "GUID": "{DC912065-E687-4C3C-891B-504BA636A074}"
        }
       ]
      },
@@ -1590,7 +1584,7 @@
     "Type": "Event",
     "GUID": "{7B2B9537-B71E-43D4-9310-46937A472AD5}",
     "Language": "SFX",
-    "Hash": "{04D9EAFE-5E03-0F0F-BBD8-419D2C6F19C1}",
+    "Hash": "{CF990B28-AC1D-F418-6A87-09AE8F8E6FD8}",
     "ObjectPath": "weapon_impact",
     "ShortName": "weapon_impact",
     "Path": "Event/weapon_impact.bnk",
@@ -1602,7 +1596,7 @@
       "Location": "Loose",
       "ShortName": "Grenade_Explosion_ODY-1279-080.wav",
       "Path": "Media/285816151.wem",
-      "CachePath": "SFX/Grenade_Explosion_ODY-1279-080_10C4C929.wem"
+      "CachePath": "SFX/Grenade_Explosion_ODY-1279-080_F1D720E4.wem"
      },
      {
       "Id": "991022554",
@@ -1611,7 +1605,7 @@
       "Location": "Loose",
       "ShortName": "PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav",
       "Path": "Media/991022554.wem",
-      "CachePath": "SFX/PM_BBI_Bullet_Impact_Hit_Body_Flesh_25_3B670390.wem"
+      "CachePath": "SFX/PM_BBI_Bullet_Impact_Hit_Body_Flesh_25_EAB07D6B.wem"
      }
     ],
     "Events": [
@@ -1622,16 +1616,8 @@
       "GUID": "{7B2B9537-B71E-43D4-9310-46937A472AD5}",
       "MaxAttenuation": "10000",
       "DurationType": "OneShot",
-      "DurationMin": "0.19669332",
-      "DurationMax": "2.56",
-      "AuxBusRefs": [
-       {
-        "Id": "187046019",
-        "Name": "LargeRoom",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Reverbs\\LargeRoom",
-        "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"
-       }
-      ],
+      "DurationMin": "0",
+      "DurationMax": "1.2626873",
       "SwitchContainers": [
        {
         "SwitchValue": {
@@ -1809,6 +1795,12 @@
         "Name": "IceSurface",
         "ObjectPath": "\\Switches\\Default Work Unit\\WeaponSurfaceCollision\\IceSurface",
         "GUID": "{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"
+       },
+       {
+        "Id": "3661774060",
+        "Name": "EnemySurface",
+        "ObjectPath": "\\Switches\\Default Work Unit\\WeaponSurfaceCollision\\EnemySurface",
+        "GUID": "{DC912065-E687-4C3C-891B-504BA636A074}"
        }
       ]
      }
@@ -2067,7 +2059,7 @@
     "Type": "Event",
     "GUID": "{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}",
     "Language": "SFX",
-    "Hash": "{29C211D0-47E1-6DB0-ED8F-35DA88E19A28}",
+    "Hash": "{9D245128-1948-2010-EB41-62DA2438381B}",
     "ObjectPath": "Play_Hoverboard",
     "ShortName": "Play_Hoverboard",
     "Path": "Event/Play_Hoverboard.bnk",
@@ -2553,6 +2545,6 @@
     ]
    }
   ],
-  "FileHash": "{9BA7E479-B4E5-8D0A-B3E1-4CD91F8BF134}"
+  "FileHash": "{22BA8D54-F13E-FD19-5E3B-A66D40273C68}"
  }
 }

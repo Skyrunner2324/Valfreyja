@@ -21,7 +21,10 @@
 							<ChildrenList>
 								<SourcePlugin Name="Soundseed Air Woosh" ID="{0BC857D2-CA60-4305-9AC5-D1D65F8D6A18}" ShortID="242151392" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 									<PropertyList>
+										<Property Name="Duration" Type="Real64" Value="0.3"/>
+										<Property Name="NoiseColor" Type="int16" Value="3"/>
 										<Property Name="SpeedAutomate" Type="bool" Value="True"/>
+										<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="21.6"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<PluginData>
@@ -39,12 +42,12 @@
 							<Flags>5</Flags>
 						</Point>
 						<Point>
-							<XPos>0.25</XPos>
+							<XPos>0.15</XPos>
 							<YPos>100</YPos>
 							<Flags>0</Flags>
 						</Point>
 						<Point>
-							<XPos>0.5</XPos>
+							<XPos>0.3</XPos>
 							<YPos>0</YPos>
 							<Flags>37</Flags>
 						</Point>
@@ -71,7 +74,12 @@
 </PluginData>
 									<PluginInnerObjectList>
 										<List Name="Deflectors">
-											<PluginInnerObject Name="" ID="{EB2A20B4-EFC2-41E9-861D-1132AEE8A8FF}" PluginName="Deflector" CompanyID="0" PluginID="122"/>
+											<PluginInnerObject Name="" ID="{EB2A20B4-EFC2-41E9-861D-1132AEE8A8FF}" PluginName="Deflector" CompanyID="0" PluginID="122">
+												<PropertyList>
+													<Property Name="Frequency" Type="Real32" Value="3003"/>
+													<Property Name="QFactor" Type="Real32" Value="38.97"/>
+												</PropertyList>
+											</PluginInnerObject>
 										</List>
 									</PluginInnerObjectList>
 								</SourcePlugin>

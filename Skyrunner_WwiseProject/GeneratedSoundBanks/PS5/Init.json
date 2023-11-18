@@ -10,21 +10,11 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{5BD389C8-C50C-A698-426E-FA3B046421CC}",
+    "Hash": "{FB0E5170-0A01-E315-170E-BCAB5BD7890E}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
-     "ShareSets": [
-      {
-       "Id": "3442768367",
-       "Name": "Hall_Large_Dark",
-       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Halls\\Hall_Large_Dark",
-       "GUID": "{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}",
-       "LibName": "Wwise RoomVerb",
-       "LibId": "7733251"
-      }
-     ],
      "AudioDevices": [
       {
        "Id": "1334442663",
@@ -150,13 +140,6 @@
       "Name": "LargeRoom",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Reverbs\\LargeRoom",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "3442768367"
-        }
-       ]
-      },
       "AuxBusRefs": [
        {
         "Id": "3545700988",
@@ -293,10 +276,22 @@
         "GUID": "{97700067-F4AC-4FF8-A1EE-276A96992D3A}"
        },
        {
+        "Id": "906520813",
+        "Name": "Grap",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Grap",
+        "GUID": "{FE69DDCB-4524-42C1-8944-029230C04098}"
+       },
+       {
         "Id": "1050421051",
         "Name": "Air",
         "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Air",
         "GUID": "{6D041D05-AF22-4F45-900B-66D481DDF645}"
+       },
+       {
+        "Id": "2043403997",
+        "Name": "Rail",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Rail",
+        "GUID": "{7C348A10-0746-44D0-BEE4-7BAD55173A39}"
        },
        {
         "Id": "2108779961",
@@ -309,6 +304,18 @@
         "Name": "Ground",
         "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Ground",
         "GUID": "{6A68E123-5F52-43BC-ACE2-3F382E01BED2}"
+       },
+       {
+        "Id": "2655407367",
+        "Name": "Crouch",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Crouch",
+        "GUID": "{AE6DD438-05E6-45D2-9E8A-5DF26F10FD9E}"
+       },
+       {
+        "Id": "3686556480",
+        "Name": "Slide",
+        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Slide",
+        "GUID": "{01F0BB54-8B03-41D4-85FB-94EB54E4D17A}"
        }
       ]
      },
@@ -435,6 +442,12 @@
         "Name": "IceSurface",
         "ObjectPath": "\\Switches\\Default Work Unit\\WeaponSurfaceCollision\\IceSurface",
         "GUID": "{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"
+       },
+       {
+        "Id": "3661774060",
+        "Name": "EnemySurface",
+        "ObjectPath": "\\Switches\\Default Work Unit\\WeaponSurfaceCollision\\EnemySurface",
+        "GUID": "{DC912065-E687-4C3C-891B-504BA636A074}"
        }
       ]
      },
@@ -540,6 +553,6 @@
     ]
    }
   ],
-  "FileHash": "{27C56B14-5703-2E08-E59A-A0756298D97F}"
+  "FileHash": "{C7DB513F-84EF-3FE2-26ED-707A573BB56B}"
  }
 }

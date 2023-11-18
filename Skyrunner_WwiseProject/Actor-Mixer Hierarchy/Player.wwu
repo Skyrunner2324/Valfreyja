@@ -206,6 +206,11 @@
 											</ValueList>
 										</Property>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>530</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -380,9 +385,6 @@
 								<Reference Name="SwitchGroupOrStateGroup">
 									<ObjectRef Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
 								</Reference>
-								<Reference Name="UserAuxSend0">
-									<ObjectRef Name="LargeRoom" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<SwitchContainer Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}" ShortID="1030767237">
@@ -470,9 +472,22 @@
 												<Position Name="" ID="{5BDD7B63-3B2D-41D1-874F-C9995F412C59}"/>
 											</PositioningInfo>
 										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="bullet_impact_enemy" ID="{BA14F6A5-88E7-4743-A63D-5ED7D86878CF}" ShortID="967086831">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
 									</ChildrenList>
 									<GroupingInfo>
 										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="bullet_impact_enemy" ID="{BA14F6A5-88E7-4743-A63D-5ED7D86878CF}"/>
+											</GroupingBehavior>
 											<GroupingBehavior>
 												<ItemRef Name="bullet_impact_ice" ID="{04A7AAC6-41DD-400B-9974-8C23F2BBF023}"/>
 											</GroupingBehavior>
@@ -482,6 +497,12 @@
 												<SwitchRef Name="IceSurface" ID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"/>
 												<ItemList>
 													<ItemRef Name="bullet_impact_ice" ID="{04A7AAC6-41DD-400B-9974-8C23F2BBF023}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="EnemySurface" ID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
+												<ItemList>
+													<ItemRef Name="bullet_impact_enemy" ID="{BA14F6A5-88E7-4743-A63D-5ED7D86878CF}"/>
 												</ItemList>
 											</Grouping>
 										</GroupingList>
@@ -524,6 +545,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Grenade_Explosion_ODY-1279-080" ID="{6C22820A-6C84-4503-845B-614E182ECCF6}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.521365818390775"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.26268733897595"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Grenade_Explosion_ODY-1279-080.wav</AudioFile>
 															<MediaIDList>
