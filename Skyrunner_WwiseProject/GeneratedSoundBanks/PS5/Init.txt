@@ -3,10 +3,10 @@ Switch Group	ID	Name			Wwise Object Path	Notes
 
 Switch	ID	Name	Switch Group			Notes
 	97194767	IceGround	GroundMaterialSwitch			
-	787898836	Snow	GroundMaterialSwitch			
-	1863277117	Rocks	GroundMaterialSwitch			
-	2058049674	Wood	GroundMaterialSwitch			
-	2473969246	Metal	GroundMaterialSwitch			
+	210120315	RockGround	GroundMaterialSwitch			
+	894619339	WoodGround	GroundMaterialSwitch			
+	1733120053	SnowGround	GroundMaterialSwitch			
+	3577913431	MetalGround	GroundMaterialSwitch			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	210497749	SlowMoState			\Default Work Unit\SlowMoState	
@@ -24,9 +24,13 @@ State	ID	Name	State Group			Notes
 	984691642	InGame	GameStatus			
 	3374585465	InMenu	GameStatus			
 	748895195	None	PlayerMovement			
+	906520813	Grap	PlayerMovement			
 	1050421051	Air	PlayerMovement			
+	2043403997	Rail	PlayerMovement			
 	2108779961	Wall	PlayerMovement			
 	2528658256	Ground	PlayerMovement			
+	2655407367	Crouch	PlayerMovement			
+	3686556480	Slide	PlayerMovement			
 	748895195	None	AreaState			
 	1880927217	Ambiance_01example	AreaState			
 	655265632	Alive	PlayerState			
@@ -39,11 +43,26 @@ State	ID	Name	State Group			Notes
 	3678545986	MachineGun	WeaponState			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
+	513139656	Mountain			\Factory Acoustic Textures\Textures\Mountain	
+	841620460	Concrete			\Factory Acoustic Textures\Textures\Concrete	
+	1755085759	Wood_Deep			\Factory Acoustic Textures\Textures\Wood_Deep	
+	1873957695	Anechoic			\Factory Acoustic Textures\Textures\Anechoic	
+	1970351858	Fabric			\Factory Acoustic Textures\Textures\Fabric	
+	2058049674	Wood			\Factory Acoustic Textures\Textures\Wood	
+	2412606308	Carpet			\Factory Acoustic Textures\Textures\Carpet	
 	2565740352	RTPC_SlowMo			\Default Work Unit\RTPC_SlowMo	
+	2637588553	Tile			\Factory Acoustic Textures\Textures\Tile	
+	2928161104	Curtains			\Factory Acoustic Textures\Textures\Curtains	
+	3195498748	Cork_Tiles			\Factory Acoustic Textures\Textures\Cork_Tiles	
+	3670307564	Drywall			\Factory Acoustic Textures\Textures\Drywall	
+	4168643977	Acoustic_Banner			\Factory Acoustic Textures\Textures\Acoustic_Banner	
+	4262522749	Wood_Bright			\Factory Acoustic Textures\Textures\Wood_Bright	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	309309195	2DAmbience			\Default Work Unit\Master Audio Bus\AmbientMaster\2DAmbience	
 	530205154	3DMaster			\Default Work Unit\Master Audio Bus\3DMaster	
+	985987111	Motion Factory Bus			\Default Work Unit\Motion Factory Bus	
 	986618877	PlayerWeapons			\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerWeapons	
 	1182634443	AmbientBeds			\Default Work Unit\Master Audio Bus\AmbientMaster\AmbientBeds	
 	1301074112	3DAmbience			\Default Work Unit\Master Audio Bus\AmbientMaster\3DAmbience	
@@ -60,12 +79,17 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	187046019	LargeRoom			\Default Work Unit\Master Audio Bus\Reverbs\LargeRoom	
+	1752382405	Early_Reflections			\Default Work Unit\Master Audio Bus\Reverbs\Early_Reflections	
 	2933838247	SmallRoom			\Default Work Unit\Master Audio Bus\Reverbs\SmallRoom	
 	3545700988	Reverbs			\Default Work Unit\Master Audio Bus\Reverbs	
 	4122393694	Cave			\Default Work Unit\Master Audio Bus\Reverbs\Cave	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1842579981	Reflect_Simplified	Wwise Reflect			
 
 Audio Devices	ID	Name	Type				Notes
 	1334442663	Controller_Speaker	Controller Speaker			
 	2317455096	No_Output	No Output			
 	3859886410	System	System			
+	4230635974	Default_Motion_Device	Wwise Motion			
 
