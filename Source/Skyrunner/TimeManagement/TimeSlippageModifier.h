@@ -18,11 +18,12 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
-private:
+public:
 	// changes local time scale in order to reach global time scale of spcified value
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float localTimeScaleTarget = 1.f;
 
+private:
 	// override target value with specified constant local time scale
 	UPROPERTY(EditAnywhere)
 	bool bOverrideTarget = false;
