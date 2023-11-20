@@ -7,6 +7,11 @@
 #include "TimeSlippageModifier.generated.h"
 
 
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnTimeScaleChangedDelegate, float, newScale);
+
+
+
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class SKYRUNNER_API UTimeSlippageModifier : public UActorComponent
 {
@@ -46,10 +51,13 @@ protected:
 	float localTime = 0.f;
 
 
+
 public:
 	UPROPERTY(BlueprintReadOnly)
 	float localManagedDeltaTime = 0.f;
 
+	UPROPERTY(BlueprintAssignable)
+	FOnTimeScaleChangedDelegate OnTimeScaleChanged;
 
 
 public:

@@ -7,6 +7,8 @@
 
 #include "../Utils/DebugLog.h"
 
+#include "TimeSlippageModifier.h"
+
 
 ATimeSlippage::ATimeSlippage()
 {
@@ -46,5 +48,9 @@ void ATimeSlippage::SetGlobalTimeScale(const float newScale)
 
 	bIsDilated = newScale != 1.f;
 
-	// TODO : OnGlobalTimeScaleChange()
+	// OnTimeScaleChanged
+	for (auto& mod : modifiers)
+	{
+		mod->OnTimeScaleChanged.Broadcast(newScale);
+	}
 }
