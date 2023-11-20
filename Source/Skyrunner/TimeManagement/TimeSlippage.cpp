@@ -34,6 +34,7 @@ void ATimeSlippage::Tick(float DeltaTime)
 	// application time debug display
 	DebugLogPerFrame(FColor::Yellow, TEXT("Global time : %f"), globalTime);
 	DebugLogPerFrame(FColor::Yellow, TEXT("Application time : %f"), applicationTime);
+	DebugLogPerFrame(FColor::Blue, TEXT("Modifiers array size : %d"), modifiers.Num());
 }
 
 ATimeSlippage* ATimeSlippage::Get(UWorld* world)
@@ -51,6 +52,16 @@ void ATimeSlippage::SetGlobalTimeScale(const float newScale)
 	// OnTimeScaleChanged
 	for (auto& mod : modifiers)
 	{
-		mod->OnTimeScaleChanged.Broadcast(newScale);
+		if (mod)
+		{
+			if (mod->OnTimeScaleChanged.IsBound())
+				mod->OnTimeScaleChanged.Broadcast(newScale);
+			//else
+				//DebugLog(1.f, FColor::Red, TEXT("no functions bound"));
+		}
+		else
+		{
+			//DebugLog(1.f, FColor::Red, TEXT("segfault on modifier access"));
+		}
 	}
 }

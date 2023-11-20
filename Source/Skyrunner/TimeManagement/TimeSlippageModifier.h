@@ -64,6 +64,10 @@ public:
 
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	virtual void OnComponentDestroyed(bool bDestroyingHierarchy);
+	virtual void BeginDestroy() override;
+	virtual void OnUnregister() override;
+
 
 	// TODO : lerp
 	UFUNCTION(BlueprintCallable)
