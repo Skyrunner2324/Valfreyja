@@ -45,22 +45,19 @@ void UTimeSlippageModifier::TickComponent(float DeltaTime, ELevelTick TickType, 
 void UTimeSlippageModifier::OnComponentDestroyed(bool bDestroyingHierarchy)
 {
 	Super::OnComponentDestroyed(bDestroyingHierarchy);
-
-	//DebugLog(1.f, FColor::Green, TEXT("removing modifier ref"));
-	//timeSlippage->modifiers.Remove(this);
+	if (this && timeSlippage)
+		timeSlippage->modifiers.Remove(this);
 }
 void UTimeSlippageModifier::BeginDestroy()
 {
 	// https://forums.unrealengine.com/t/crash-when-quitting-the-game-using-my-game-menu/382489
 	Super::BeginDestroy();
-
-	//DebugLog(1.f, FColor::Green, TEXT("removing modifier ref"));
 	//timeSlippage->modifiers.Remove(this);
 }
 void UTimeSlippageModifier::OnUnregister()
 {
 	Super::OnUnregister();
-	timeSlippage->modifiers.Remove(this);
+	//timeSlippage->modifiers.Remove(this);
 }
 
 void UTimeSlippageModifier::SetLocalTimeScale(const float newScale)
