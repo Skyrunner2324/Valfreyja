@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="4128491144" Type="Event" GUID="{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}" Language="SFX" Hash="{8A6A7B61-28B9-FA2B-EEB5-0086AF9A1E12}">
+		<SoundBank Id="4128491144" Type="Event" GUID="{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}" Language="SFX" Hash="{273A9221-F270-3754-4818-8CDF5C00A826}">
 			<ObjectPath>Play_Hoverboard</ObjectPath>
 			<ShortName>Play_Hoverboard</ShortName>
 			<Path>Event/Play_Hoverboard.bnk</Path>
+			<Media>
+				<File Id="642511335" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboard.wav</ShortName>
+					<Path>Media/642511335.wem</Path>
+					<CachePath>Plugins/SoundSeed Grain/Hoverboard_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
 				<Custom>
 					<Plugin Id="10075561" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\HoverBoard\HoverSurface\HoverOnSnow\Soundseed Air Woosh" GUID="{7B4BAEFE-CD09-4435-8934-D3AE8F203DC6}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+					<Plugin Id="28404726" Name="Soundseed Grain" ObjectPath="\Actor-Mixer Hierarchy\HoverBoard\HoverBlendEngine\New Sound SFX\Soundseed Grain" GUID="{44B7C0F1-EDB0-4E86-8AD6-948B7FEAF35E}" LibName="SoundSeed Grain" LibId="11993090">
+						<MediaRefs>
+							<MediaRef Id="642511335"/>
+						</MediaRefs>
+					</Plugin>
+					<Plugin Id="761803759" Name="Soundseed Grain" ObjectPath="\Actor-Mixer Hierarchy\HoverBoard\HoverBlendEngine\New Sound SFX_01\Soundseed Grain" GUID="{4D9783DA-5712-40FB-97DE-33BE46A2AD46}" LibName="SoundSeed Grain" LibId="11993090">
+						<MediaRefs>
+							<MediaRef Id="642511335"/>
+						</MediaRefs>
+					</Plugin>
 					<Plugin Id="810116914" Name="Soundseed Air Wind" ObjectPath="\Actor-Mixer Hierarchy\HoverBoard\HoverWind\Soundseed Air Wind" GUID="{18F4FB7B-DE04-40E6-A69B-DEEF180CC535}" LibName="SoundSeed Air Wind" LibId="7798786"/>
 				</Custom>
 			</Plugins>
@@ -15,6 +32,8 @@
 				<Event Id="4128491144" Name="Play_Hoverboard" ObjectPath="\Events\Game\Hoverboard\Play_Hoverboard" GUID="{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}" DurationType="Infinite">
 					<PluginRefs>
 						<Custom>
+							<PluginRef Id="28404726"/>
+							<PluginRef Id="761803759"/>
 							<PluginRef Id="810116914"/>
 						</Custom>
 					</PluginRefs>
@@ -48,5 +67,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7B2E9664-2BBE-908D-77EB-D28B2AAFE723}</FileHash>
+	<FileHash>{C5152120-BCCA-8061-31C7-DF3F7C4F51B6}</FileHash>
 </SoundBanksInfo>

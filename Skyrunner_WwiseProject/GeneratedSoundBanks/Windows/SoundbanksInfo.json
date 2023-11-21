@@ -547,12 +547,20 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{75546AC2-C1BB-7488-E949-54B9B0FAB50F}",
+    "Hash": "{0B68CAA1-DDF7-5720-4714-9010DAACD082}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
      "ShareSets": [
+      {
+       "Id": "1125262053",
+       "Name": "Blue_Distant_Echoes",
+       "ObjectPath": "\\Effects\\Factory Effects\\Stereo Delay\\Blue_Distant_Echoes",
+       "GUID": "{ABFA9875-521E-451F-AAB9-AB148847B9C0}",
+       "LibName": "Wwise Stereo Delay",
+       "LibId": "8847363"
+      },
       {
        "Id": "1842579981",
        "Name": "Reflect_Simplified",
@@ -710,7 +718,14 @@
       "Id": "3803692087",
       "Name": "Master Audio Bus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
-      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1125262053"
+        }
+       ]
+      }
      },
      {
       "Id": "4152869693",
@@ -1142,6 +1157,35 @@
         "Name": "FullHealth",
         "ObjectPath": "\\Switches\\Default Work Unit\\PlayerHealth\\FullHealth",
         "GUID": "{5D504B7C-85C6-45FE-8CB6-29AA4525A874}"
+       }
+      ]
+     },
+     {
+      "Id": "153303254",
+      "Name": "SlowMoSwitch",
+      "ObjectPath": "\\Switches\\Default Work Unit\\SlowMoSwitch",
+      "GUID": "{E62F43E3-FD02-4CCB-B110-475351C4A847}",
+      "GameParameterRef": {
+       "Id": "2565740352"
+      },
+      "Switches": [
+       {
+        "Id": "1160234136",
+        "Name": "Normal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\SlowMoSwitch\\Normal",
+        "GUID": "{F838CAFD-D955-45CC-ACEE-7FF41EDDC8D0}"
+       },
+       {
+        "Id": "1284310773",
+        "Name": "HeavySlowMo",
+        "ObjectPath": "\\Switches\\Default Work Unit\\SlowMoSwitch\\HeavySlowMo",
+        "GUID": "{47CA11C3-A675-4AF9-A48B-9245874EB1CC}"
+       },
+       {
+        "Id": "2841448996",
+        "Name": "LightSlowMo",
+        "ObjectPath": "\\Switches\\Default Work Unit\\SlowMoSwitch\\LightSlowMo",
+        "GUID": "{969E1A14-1F30-4E89-9D59-654695468FE9}"
        }
       ]
      },
@@ -2482,7 +2526,7 @@
     "Type": "Event",
     "GUID": "{EEABD1AC-C871-41C1-836E-6397FD3D79D7}",
     "Language": "SFX",
-    "Hash": "{AC6DDC3B-96F6-B662-3FC2-B56753038A43}",
+    "Hash": "{E09E3034-FABD-53DA-6606-5217DB08D233}",
     "ObjectPath": "player_shoot",
     "ShortName": "player_shoot",
     "Path": "Event/player_shoot.bnk",
@@ -2512,7 +2556,7 @@
       "Location": "Loose",
       "ShortName": "Grenade_Launcher_ODY-0020-055.wav",
       "Path": "Media/767258260.wem",
-      "CachePath": "SFX/Grenade_Launcher_ODY-0020-055_CF1E6E47.wem"
+      "CachePath": "SFX/Grenade_Launcher_ODY-0020-055_A6160AD8.wem"
      },
      {
       "Id": "870552716",
@@ -2675,10 +2719,21 @@
     "Type": "Event",
     "GUID": "{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}",
     "Language": "SFX",
-    "Hash": "{8A6A7B61-28B9-FA2B-EEB5-0086AF9A1E12}",
+    "Hash": "{273A9221-F270-3754-4818-8CDF5C00A826}",
     "ObjectPath": "Play_Hoverboard",
     "ShortName": "Play_Hoverboard",
     "Path": "Event/Play_Hoverboard.bnk",
+    "Media": [
+     {
+      "Id": "642511335",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Hoverboard.wav",
+      "Path": "Media/642511335.wem",
+      "CachePath": "Plugins/SoundSeed Grain/Hoverboard_D79FB2B7.wem"
+     }
+    ],
     "Plugins": {
      "Custom": [
       {
@@ -2688,6 +2743,32 @@
        "GUID": "{7B4BAEFE-CD09-4435-8934-D3AE8F203DC6}",
        "LibName": "SoundSeed Air Woosh",
        "LibId": "7864322"
+      },
+      {
+       "Id": "28404726",
+       "Name": "Soundseed Grain",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoard\\HoverBlendEngine\\New Sound SFX\\Soundseed Grain",
+       "GUID": "{44B7C0F1-EDB0-4E86-8AD6-948B7FEAF35E}",
+       "LibName": "SoundSeed Grain",
+       "LibId": "11993090",
+       "MediaRefs": [
+        {
+         "Id": "642511335"
+        }
+       ]
+      },
+      {
+       "Id": "761803759",
+       "Name": "Soundseed Grain",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoard\\HoverBlendEngine\\New Sound SFX_01\\Soundseed Grain",
+       "GUID": "{4D9783DA-5712-40FB-97DE-33BE46A2AD46}",
+       "LibName": "SoundSeed Grain",
+       "LibId": "11993090",
+       "MediaRefs": [
+        {
+         "Id": "642511335"
+        }
+       ]
       },
       {
        "Id": "810116914",
@@ -2708,6 +2789,12 @@
       "DurationType": "Infinite",
       "PluginRefs": {
        "Custom": [
+        {
+         "Id": "28404726"
+        },
+        {
+         "Id": "761803759"
+        },
         {
          "Id": "810116914"
         }
@@ -3161,6 +3248,6 @@
     ]
    }
   ],
-  "FileHash": "{6F357932-B19C-DACF-69AE-9C92DE1A8B59}"
+  "FileHash": "{B0318B22-0674-AA39-E1A7-E409935DE2FF}"
  }
 }

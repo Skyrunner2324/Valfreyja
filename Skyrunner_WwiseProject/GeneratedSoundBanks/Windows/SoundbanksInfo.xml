@@ -239,12 +239,13 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{75546AC2-C1BB-7488-E949-54B9B0FAB50F}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{0B68CAA1-DDF7-5720-4714-9010DAACD082}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
+					<Plugin Id="1125262053" Name="Blue_Distant_Echoes" ObjectPath="\Effects\Factory Effects\Stereo Delay\Blue_Distant_Echoes" GUID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" LibName="Wwise Stereo Delay" LibId="8847363"/>
 					<Plugin Id="1842579981" Name="Reflect_Simplified" ObjectPath="\Effects\Factory Reflect\Reflect_Simplified" GUID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" LibName="Wwise Reflect" LibId="11206659"/>
 				</ShareSets>
 				<AudioDevices>
@@ -281,7 +282,13 @@
 						<AuxBusRef Id="1752382405" Name="Early_Reflections" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Early_Reflections" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}"/>
 					</AuxBusRefs>
 				</Bus>
-				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
+				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1125262053"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="4152869693" Name="2DAmbientBeds" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\AmbientBeds\2DAmbientBeds" GUID="{9F89B372-3238-4882-829C-1D743E3D17E7}"/>
 			</Busses>
 			<AuxBusses>
@@ -392,6 +399,14 @@
 						<Switch Id="898449699" Name="NearDeath" ObjectPath="\Switches\Default Work Unit\PlayerHealth\NearDeath" GUID="{6F790B04-FCD5-4F29-9A8B-7BB513A34A6B}"/>
 						<Switch Id="1017222595" Name="LowHealth" ObjectPath="\Switches\Default Work Unit\PlayerHealth\LowHealth" GUID="{33B1FD86-53B4-4D7C-9F4C-1D6268B3B4B7}"/>
 						<Switch Id="2429688720" Name="FullHealth" ObjectPath="\Switches\Default Work Unit\PlayerHealth\FullHealth" GUID="{5D504B7C-85C6-45FE-8CB6-29AA4525A874}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="153303254" Name="SlowMoSwitch" ObjectPath="\Switches\Default Work Unit\SlowMoSwitch" GUID="{E62F43E3-FD02-4CCB-B110-475351C4A847}">
+					<GameParameterRef Id="2565740352"/>
+					<Switches>
+						<Switch Id="1160234136" Name="Normal" ObjectPath="\Switches\Default Work Unit\SlowMoSwitch\Normal" GUID="{F838CAFD-D955-45CC-ACEE-7FF41EDDC8D0}"/>
+						<Switch Id="1284310773" Name="HeavySlowMo" ObjectPath="\Switches\Default Work Unit\SlowMoSwitch\HeavySlowMo" GUID="{47CA11C3-A675-4AF9-A48B-9245874EB1CC}"/>
+						<Switch Id="2841448996" Name="LightSlowMo" ObjectPath="\Switches\Default Work Unit\SlowMoSwitch\LightSlowMo" GUID="{969E1A14-1F30-4E89-9D59-654695468FE9}"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="194784494" Name="WeaponSurfaceCollision" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision" GUID="{DF6301E3-DB84-4607-9CDE-AFF2BF4E3A65}">
@@ -903,7 +918,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4004702906" Type="Event" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" Language="SFX" Hash="{AC6DDC3B-96F6-B662-3FC2-B56753038A43}">
+		<SoundBank Id="4004702906" Type="Event" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" Language="SFX" Hash="{E09E3034-FABD-53DA-6606-5217DB08D233}">
 			<ObjectPath>player_shoot</ObjectPath>
 			<ShortName>player_shoot</ShortName>
 			<Path>Event/player_shoot.bnk</Path>
@@ -921,7 +936,7 @@
 				<File Id="767258260" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Grenade_Launcher_ODY-0020-055.wav</ShortName>
 					<Path>Media/767258260.wem</Path>
-					<CachePath>SFX/Grenade_Launcher_ODY-0020-055_CF1E6E47.wem</CachePath>
+					<CachePath>SFX/Grenade_Launcher_ODY-0020-055_A6160AD8.wem</CachePath>
 				</File>
 				<File Id="870552716" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\game_weapon_shoot.wav</ShortName>
@@ -989,13 +1004,30 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="4128491144" Type="Event" GUID="{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}" Language="SFX" Hash="{8A6A7B61-28B9-FA2B-EEB5-0086AF9A1E12}">
+		<SoundBank Id="4128491144" Type="Event" GUID="{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}" Language="SFX" Hash="{273A9221-F270-3754-4818-8CDF5C00A826}">
 			<ObjectPath>Play_Hoverboard</ObjectPath>
 			<ShortName>Play_Hoverboard</ShortName>
 			<Path>Event/Play_Hoverboard.bnk</Path>
+			<Media>
+				<File Id="642511335" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboard.wav</ShortName>
+					<Path>Media/642511335.wem</Path>
+					<CachePath>Plugins/SoundSeed Grain/Hoverboard_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
 				<Custom>
 					<Plugin Id="10075561" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\HoverBoard\HoverSurface\HoverOnSnow\Soundseed Air Woosh" GUID="{7B4BAEFE-CD09-4435-8934-D3AE8F203DC6}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+					<Plugin Id="28404726" Name="Soundseed Grain" ObjectPath="\Actor-Mixer Hierarchy\HoverBoard\HoverBlendEngine\New Sound SFX\Soundseed Grain" GUID="{44B7C0F1-EDB0-4E86-8AD6-948B7FEAF35E}" LibName="SoundSeed Grain" LibId="11993090">
+						<MediaRefs>
+							<MediaRef Id="642511335"/>
+						</MediaRefs>
+					</Plugin>
+					<Plugin Id="761803759" Name="Soundseed Grain" ObjectPath="\Actor-Mixer Hierarchy\HoverBoard\HoverBlendEngine\New Sound SFX_01\Soundseed Grain" GUID="{4D9783DA-5712-40FB-97DE-33BE46A2AD46}" LibName="SoundSeed Grain" LibId="11993090">
+						<MediaRefs>
+							<MediaRef Id="642511335"/>
+						</MediaRefs>
+					</Plugin>
 					<Plugin Id="810116914" Name="Soundseed Air Wind" ObjectPath="\Actor-Mixer Hierarchy\HoverBoard\HoverWind\Soundseed Air Wind" GUID="{18F4FB7B-DE04-40E6-A69B-DEEF180CC535}" LibName="SoundSeed Air Wind" LibId="7798786"/>
 				</Custom>
 			</Plugins>
@@ -1003,6 +1035,8 @@
 				<Event Id="4128491144" Name="Play_Hoverboard" ObjectPath="\Events\Game\Hoverboard\Play_Hoverboard" GUID="{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}" DurationType="Infinite">
 					<PluginRefs>
 						<Custom>
+							<PluginRef Id="28404726"/>
+							<PluginRef Id="761803759"/>
 							<PluginRef Id="810116914"/>
 						</Custom>
 					</PluginRefs>
@@ -1220,5 +1254,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{13D27431-D136-3002-7E67-AF893AF72AEB}</FileHash>
+	<FileHash>{E627AB4F-892D-0204-4A44-347A3A04348B}</FileHash>
 </SoundBanksInfo>

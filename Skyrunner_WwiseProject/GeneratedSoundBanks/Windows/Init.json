@@ -10,12 +10,20 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{75546AC2-C1BB-7488-E949-54B9B0FAB50F}",
+    "Hash": "{0B68CAA1-DDF7-5720-4714-9010DAACD082}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
      "ShareSets": [
+      {
+       "Id": "1125262053",
+       "Name": "Blue_Distant_Echoes",
+       "ObjectPath": "\\Effects\\Factory Effects\\Stereo Delay\\Blue_Distant_Echoes",
+       "GUID": "{ABFA9875-521E-451F-AAB9-AB148847B9C0}",
+       "LibName": "Wwise Stereo Delay",
+       "LibId": "8847363"
+      },
       {
        "Id": "1842579981",
        "Name": "Reflect_Simplified",
@@ -173,7 +181,14 @@
       "Id": "3803692087",
       "Name": "Master Audio Bus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
-      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1125262053"
+        }
+       ]
+      }
      },
      {
       "Id": "4152869693",
@@ -605,6 +620,35 @@
         "Name": "FullHealth",
         "ObjectPath": "\\Switches\\Default Work Unit\\PlayerHealth\\FullHealth",
         "GUID": "{5D504B7C-85C6-45FE-8CB6-29AA4525A874}"
+       }
+      ]
+     },
+     {
+      "Id": "153303254",
+      "Name": "SlowMoSwitch",
+      "ObjectPath": "\\Switches\\Default Work Unit\\SlowMoSwitch",
+      "GUID": "{E62F43E3-FD02-4CCB-B110-475351C4A847}",
+      "GameParameterRef": {
+       "Id": "2565740352"
+      },
+      "Switches": [
+       {
+        "Id": "1160234136",
+        "Name": "Normal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\SlowMoSwitch\\Normal",
+        "GUID": "{F838CAFD-D955-45CC-ACEE-7FF41EDDC8D0}"
+       },
+       {
+        "Id": "1284310773",
+        "Name": "HeavySlowMo",
+        "ObjectPath": "\\Switches\\Default Work Unit\\SlowMoSwitch\\HeavySlowMo",
+        "GUID": "{47CA11C3-A675-4AF9-A48B-9245874EB1CC}"
+       },
+       {
+        "Id": "2841448996",
+        "Name": "LightSlowMo",
+        "ObjectPath": "\\Switches\\Default Work Unit\\SlowMoSwitch\\LightSlowMo",
+        "GUID": "{969E1A14-1F30-4E89-9D59-654695468FE9}"
        }
       ]
      },
@@ -1124,6 +1168,6 @@
     ]
    }
   ],
-  "FileHash": "{8ED28FDF-3E53-CEA2-F10A-1D8755673532}"
+  "FileHash": "{5F7EF3A0-DEA8-2C50-40C2-7B71288ADA06}"
  }
 }
