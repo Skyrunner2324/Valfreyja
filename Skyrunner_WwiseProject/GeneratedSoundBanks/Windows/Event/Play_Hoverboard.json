@@ -1,0 +1,132 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "145",
+  "SoundBanks": [
+   {
+    "Id": "4128491144",
+    "Type": "Event",
+    "GUID": "{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}",
+    "Language": "SFX",
+    "Hash": "{8A6A7B61-28B9-FA2B-EEB5-0086AF9A1E12}",
+    "ObjectPath": "Play_Hoverboard",
+    "ShortName": "Play_Hoverboard",
+    "Path": "Event/Play_Hoverboard.bnk",
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "10075561",
+       "Name": "Soundseed Air Woosh",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoard\\HoverSurface\\HoverOnSnow\\Soundseed Air Woosh",
+       "GUID": "{7B4BAEFE-CD09-4435-8934-D3AE8F203DC6}",
+       "LibName": "SoundSeed Air Woosh",
+       "LibId": "7864322"
+      },
+      {
+       "Id": "810116914",
+       "Name": "Soundseed Air Wind",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoard\\HoverWind\\Soundseed Air Wind",
+       "GUID": "{18F4FB7B-DE04-40E6-A69B-DEEF180CC535}",
+       "LibName": "SoundSeed Air Wind",
+       "LibId": "7798786"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "4128491144",
+      "Name": "Play_Hoverboard",
+      "ObjectPath": "\\Events\\Game\\Hoverboard\\Play_Hoverboard",
+      "GUID": "{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}",
+      "DurationType": "Infinite",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "810116914"
+        }
+       ]
+      },
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1044534455",
+         "Id": "1733120053",
+         "GUID": "{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}",
+         "Default": "true"
+        },
+        "PluginRefs": {
+         "Custom": [
+          {
+           "Id": "10075561"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2653406601",
+      "Name": "RTPC_PlayerSpeed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerSpeed",
+      "GUID": "{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"
+     },
+     {
+      "Id": "3699472177",
+      "Name": "RTPC_GroundMaterial",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_GroundMaterial",
+      "GUID": "{05992564-76FB-4584-948F-C0F4109BF542}"
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1044534455",
+      "Name": "GroundMaterialSwitch",
+      "ObjectPath": "\\Switches\\Default Work Unit\\GroundMaterialSwitch",
+      "GUID": "{9D29D1E1-5500-4801-B968-D812A1417C9E}",
+      "GameParameterRef": {
+       "Id": "3699472177"
+      },
+      "Switches": [
+       {
+        "Id": "97194767",
+        "Name": "IceGround",
+        "ObjectPath": "\\Switches\\Default Work Unit\\GroundMaterialSwitch\\IceGround",
+        "GUID": "{FB0B8B6F-9F97-49C4-AFB6-3AA7208FAD66}"
+       },
+       {
+        "Id": "210120315",
+        "Name": "RockGround",
+        "ObjectPath": "\\Switches\\Default Work Unit\\GroundMaterialSwitch\\RockGround",
+        "GUID": "{08A1937D-A457-41B0-A1DD-40DEEB125E58}"
+       },
+       {
+        "Id": "894619339",
+        "Name": "WoodGround",
+        "ObjectPath": "\\Switches\\Default Work Unit\\GroundMaterialSwitch\\WoodGround",
+        "GUID": "{31D40FF0-50B0-41F0-8BED-7D8E39644E38}"
+       },
+       {
+        "Id": "1733120053",
+        "Name": "SnowGround",
+        "ObjectPath": "\\Switches\\Default Work Unit\\GroundMaterialSwitch\\SnowGround",
+        "GUID": "{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}"
+       },
+       {
+        "Id": "3577913431",
+        "Name": "MetalGround",
+        "ObjectPath": "\\Switches\\Default Work Unit\\GroundMaterialSwitch\\MetalGround",
+        "GUID": "{067272CA-59B0-48BD-81F5-F5600CE65A57}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{849AEB60-5059-1C97-044F-D4D0780EC1C9}"
+ }
+}
