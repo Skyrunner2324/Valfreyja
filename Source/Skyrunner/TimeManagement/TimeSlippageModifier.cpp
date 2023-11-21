@@ -45,7 +45,7 @@ void UTimeSlippageModifier::TickComponent(float DeltaTime, ELevelTick TickType, 
 void UTimeSlippageModifier::OnComponentDestroyed(bool bDestroyingHierarchy)
 {
 	Super::OnComponentDestroyed(bDestroyingHierarchy);
-	if (this && timeSlippage)
+	if (timeSlippage)
 		timeSlippage->modifiers.Remove(this);
 }
 void UTimeSlippageModifier::BeginDestroy()
