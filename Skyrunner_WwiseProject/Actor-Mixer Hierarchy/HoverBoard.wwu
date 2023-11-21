@@ -16,6 +16,404 @@
 							<ObjectRef Name="PlayerMovement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="New Sound SFX" ID="{11D5012B-6637-4780-9E43-4A80C94DF327}" ShortID="122062986">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Soundseed Grain" ID="{44B7C0F1-EDB0-4E86-8AD6-948B7FEAF35E}" ShortID="28404726" PluginName="SoundSeed Grain" CompanyID="0" PluginID="183">
+									<PropertyList>
+										<Property Name="Attack" Type="Real32" Value="16"/>
+										<Property Name="Duration" Type="Real32" Value="74"/>
+										<Property Name="DurationMultiplier" Type="Real32" Value="0.6"/>
+										<Property Name="FilterFreq" Type="Real32" Value="45"/>
+										<Property Name="FilterQ" Type="Real32" Value="0.41"/>
+										<Property Name="FilterType" Type="int32" Value="4"/>
+										<Property Name="GrainTime" Type="Real32" Value="75.62"/>
+										<Property Name="MarkerSelect" Type="Real32" Value="8.3"/>
+										<Property Name="ModWaveform1" Type="int32" Value="0"/>
+										<Property Name="OutputLevel" Type="Real32" Value="-6"/>
+										<Property Name="Release" Type="Real32" Value="5"/>
+										<Property Name="Speed" Type="Real32" Value="0.4"/>
+										<Property Name="Transpose" Type="Real32" Value="-51"/>
+										<Property Name="WindowMode" Type="int32" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<AudioFileSource Name="Hoverboard" ID="{8E1C3BE8-811C-44F2-B86B-0E4028604C54}">
+											<Language>SoundSeed Grain</Language>
+											<AudioFile>Hoverboard.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="642511335"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{332B6224-E281-4776-8858-975FDB11D097}" ShortID="192065188">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="OutputLevel"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<Custom>
+																	<ModulatorEnvelope Name="Modulator Envelope (Custom)" ID="{7CB0D767-1B21-4B08-A437-9324190D9D4F}" ShortID="934108728">
+																		<PropertyList>
+																			<Property Name="EnvelopeAttackTime" Type="Real64" Value="0.01"/>
+																		</PropertyList>
+																	</ModulatorEnvelope>
+																</Custom>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{B260F9C5-2071-46CD-9BC7-FBF829290485}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-96</YPos>
+																				<Flags>21</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>0</YPos>
+																				<Flags>53</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{CC6B3D9A-59FB-46B1-9707-2F7DAADD0DB1}" ShortID="408716090">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Transpose"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{4519668F-B35E-4043-BB99-7E60F11699AF}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>2000</XPos>
+																				<YPos>4189.09091</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{D31AEAAE-3840-4515-8582-3AFADF15B3A6}" ShortID="501977471">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="FilterFreq"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{EE8C2D26-B7DA-4B14-8878-0C65F8BBC259}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>4688.98685</YPos>
+																				<Flags>5</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>2000</XPos>
+																				<YPos>10564.59838</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{BA91EC73-11CF-4BFF-BD70-D0082837CF69}" ShortID="84980203">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="DurationMultiplier"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{14971E86-B031-46A8-ACA9-74325CB53FDB}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>2000</XPos>
+																				<YPos>22.72825</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+									<Language>SFX</Language>
+									<PluginData/>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Soundseed Grain" ID="{44B7C0F1-EDB0-4E86-8AD6-948B7FEAF35E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="New Sound SFX_01" ID="{FFA97BF8-0E2B-43E2-BA46-0BDC7409CD5C}" ShortID="680181692">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-24</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Soundseed Grain" ID="{4D9783DA-5712-40FB-97DE-33BE46A2AD46}" ShortID="761803759" PluginName="SoundSeed Grain" CompanyID="0" PluginID="183">
+									<PropertyList>
+										<Property Name="Attack" Type="Real32" Value="37"/>
+										<Property Name="Duration" Type="Real32" Value="74"/>
+										<Property Name="DurationMultiplier" Type="Real32" Value="0.6"/>
+										<Property Name="FilterFreq" Type="Real32" Value="45"/>
+										<Property Name="FilterQ" Type="Real32" Value="0.21"/>
+										<Property Name="GrainTime" Type="Real32" Value="75.62"/>
+										<Property Name="MarkerSelect" Type="Real32" Value="43.6"/>
+										<Property Name="ModWaveform1" Type="int32" Value="0"/>
+										<Property Name="OutputLevel" Type="Real32" Value="-10"/>
+										<Property Name="Release" Type="Real32" Value="50"/>
+										<Property Name="Speed" Type="Real32" Value="0.4"/>
+										<Property Name="Transpose" Type="Real32" Value="858"/>
+										<Property Name="WindowMode" Type="int32" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<AudioFileSource Name="Hoverboard" ID="{0CE39842-F67A-46ED-B443-1521EBB43CF4}">
+											<Language>SoundSeed Grain</Language>
+											<AudioFile>Hoverboard.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="642511335"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{CA0F2071-74DA-405C-9780-E38E300738A5}" ShortID="749972321">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="OutputLevel"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<Custom>
+																	<ModulatorEnvelope Name="Modulator Envelope (Custom)" ID="{66F33853-B490-4F15-8131-2A7035BC4A46}" ShortID="538985231">
+																		<PropertyList>
+																			<Property Name="EnvelopeAttackTime" Type="Real64" Value="0.01"/>
+																		</PropertyList>
+																	</ModulatorEnvelope>
+																</Custom>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{03F56E9F-BA81-4B73-A949-3B1A6EFEB457}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-96</YPos>
+																				<Flags>21</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>0</YPos>
+																				<Flags>53</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{22E1158F-B187-4330-BBE9-284FDFB479FF}" ShortID="885277013">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Transpose"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{E9792C14-93EF-466D-A2C6-E365047DAFE1}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>2000</XPos>
+																				<YPos>4189.09091</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{8EA6E390-CCE0-4F45-BAF8-C7609DE698CE}" ShortID="99818283">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="FilterFreq"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{141B6ED3-EA8D-431C-8AEC-615D79A99F8A}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>4688.98685</YPos>
+																				<Flags>5</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>2000</XPos>
+																				<YPos>10564.59838</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{F8FCCF0C-D299-459C-8606-1EDBDF8D8ECC}" ShortID="851617548">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="DurationMultiplier"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{DD932D4C-D09C-4D1B-8262-24BD2CDF6925}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>2000</XPos>
+																				<YPos>22.72825</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+									<Language>SFX</Language>
+									<PluginData/>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Soundseed Grain" ID="{4D9783DA-5712-40FB-97DE-33BE46A2AD46}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
 				</BlendContainer>
 				<Sound Name="HoverWind" ID="{9B4AD9A0-3C3E-4B67-B9F8-25CE5FC4D51D}" ShortID="236940080">
 					<PropertyList>
