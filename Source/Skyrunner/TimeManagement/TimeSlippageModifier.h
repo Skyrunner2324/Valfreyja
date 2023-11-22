@@ -7,9 +7,7 @@
 #include "TimeSlippageModifier.generated.h"
 
 
-
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnTimeScaleChangedDelegate, float, newScale);
-
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnTimeScaleChangedEventDelegate, float, newScale);
 
 
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
@@ -32,6 +30,15 @@ private:
 	// override target value with specified constant local time scale
 	UPROPERTY(EditAnywhere)
 	bool bOverrideTarget = false;
+
+	UPROPERTY(EditAnywhere)
+	bool bGenerateOnTimeScaleChangedEvent = true;
+
+
+	// private members only to call the BlueprintAssignable event
+	TScriptDelegate<FWeakObjectPtr> on_time_scale_changed_event;
+	UFUNCTION()
+	inline void callOnTimeScaleChangedEvent(float newScale) { OnTimeScaleChangedEvent.Broadcast(newScale); }
 
 protected:
 	UPROPERTY(EditAnywhere)
@@ -56,9 +63,6 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	float localManagedDeltaTime = 0.f;
 
-	UPROPERTY(BlueprintAssignable)
-	FOnTimeScaleChangedDelegate OnTimeScaleChanged;
-
 
 public:
 
@@ -75,4 +79,8 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	inline float GetLocalTimeScale() const { return localTimeScale; }
+
+	// delegate that will be triggered by OnTimeScaleChanged from TimeSlippage object
+	UPROPERTY(BlueprintAssignable)
+	FOnTimeScaleChangedEventDelegate OnTimeScaleChangedEvent;
 };

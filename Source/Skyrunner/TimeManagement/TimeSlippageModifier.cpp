@@ -23,7 +23,12 @@ void UTimeSlippageModifier::BeginPlay()
 	Super::BeginPlay();
 	SetLocalTimeScale(localTimeScale);
 	timeSlippage = ATimeSlippage::Get(GetWorld());
-	timeSlippage->modifiers.Add(this);
+	if (bGenerateOnTimeScaleChangedEvent)
+	{
+		on_time_scale_changed_event.BindUFunction(this, "callOnTimeScaleChangedEvent");
+		if (on_time_scale_changed_event.IsBound())
+			timeSlippage->OnTimeScaleChanged.Add(on_time_scale_changed_event);
+	}
 }
 
 
@@ -42,23 +47,23 @@ void UTimeSlippageModifier::TickComponent(float DeltaTime, ELevelTick TickType, 
 		SetLocalTimeScale(localTimeScaleTarget / timeSlippage->GetGlobalTimeScale());
 }
 
+#pragma region deprecated
 void UTimeSlippageModifier::OnComponentDestroyed(bool bDestroyingHierarchy)
 {
 	Super::OnComponentDestroyed(bDestroyingHierarchy);
-	if (timeSlippage)
-		timeSlippage->modifiers.Remove(this);
+	if (timeSlippage && on_time_scale_changed_event.IsBound())
+		timeSlippage->OnTimeScaleChanged.Remove(on_time_scale_changed_event);
 }
 void UTimeSlippageModifier::BeginDestroy()
 {
 	// https://forums.unrealengine.com/t/crash-when-quitting-the-game-using-my-game-menu/382489
 	Super::BeginDestroy();
-	//timeSlippage->modifiers.Remove(this);
 }
 void UTimeSlippageModifier::OnUnregister()
 {
 	Super::OnUnregister();
-	//timeSlippage->modifiers.Remove(this);
 }
+#pragma endregion
 
 void UTimeSlippageModifier::SetLocalTimeScale(const float newScale)
 {

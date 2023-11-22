@@ -6,6 +6,10 @@
 #include "GameFramework/Actor.h"
 #include "TimeSlippage.generated.h"
 
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnTimeScaleChangedDelegate, float, newScale);
+
+
 UCLASS()
 class SKYRUNNER_API ATimeSlippage : public AActor
 {
@@ -27,13 +31,6 @@ protected:
 	virtual void BeginPlay() override;
 
 public:
-	// array of every UTimeSlippageModifier and UTimeSlippageLifeSpan objects
-	// UTimeSlippageModifier and UTimeSlippageLifeSpan components will automatically
-	// add their owner game actor to this array
-	UPROPERTY(BlueprintReadOnly)
-	TArray<class UTimeSlippageModifier*> modifiers;
-
-
 	// actual app time
 	UPROPERTY(BlueprintReadOnly)
 	float applicationTime = 0.f;
@@ -49,6 +46,11 @@ public:
 
 	UPROPERTY(BlueprintReadOnly)
 	bool bIsDilated = false;
+
+
+	// delegate that will broadcast to every Modifier objects that
+	// global time scale has changed
+	FOnTimeScaleChangedDelegate OnTimeScaleChanged;
 
 
 	// TODO : deactivate
