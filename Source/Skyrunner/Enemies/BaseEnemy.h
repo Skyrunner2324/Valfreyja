@@ -25,6 +25,9 @@ protected:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
 	class ACharacter* playerCharacter;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
+	class USkeletalMeshComponent* skMeshComponent;
+
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 

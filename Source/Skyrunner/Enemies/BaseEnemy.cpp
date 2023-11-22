@@ -6,9 +6,10 @@
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/Character.h"
 
-#include "Components/ArrowComponent.h"
+#include "Components/ArrowComponent.h" 	
 #include "Components/SphereComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 
 // Sets default values
 ABaseEnemy::ABaseEnemy()
@@ -25,8 +26,12 @@ ABaseEnemy::ABaseEnemy()
 	arrowComponent->SetupAttachment(RootComponent);
 
 	detectionSphere = CreateDefaultSubobject<USphereComponent>(FName("Detection Sphere"));
-	detectionSphere->SetSphereRadius(1000.f);
+	detectionSphere->SetSphereRadius(2000.f);
 	detectionSphere->SetupAttachment(RootComponent);
+
+	skMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(FName("Skeletal Mesh"));
+	skMeshComponent->SetupAttachment(RootComponent);
+
 }
 
 // Called when the game starts or when spawned
