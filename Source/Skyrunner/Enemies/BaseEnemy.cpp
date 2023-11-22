@@ -39,12 +39,19 @@ void ABaseEnemy::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	// convert from bullets/s to s/bullet for easier time management
+	fireRate = 1.f / fireRate; 
+	fireCooldown = fireRate;
 }
 
 // Called every frame
 void ABaseEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	if (fireCooldown > 0.f)
+		fireCooldown -= DeltaTime;
+
 
 }
 

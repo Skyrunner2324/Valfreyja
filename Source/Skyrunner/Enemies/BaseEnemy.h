@@ -15,6 +15,13 @@ public:
 	// Sets default values for this pawn's properties
 	ABaseEnemy();
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters, 
+		meta = (ToolTip = "Fire rate, in bullets per second"))
+	float fireRate = 2.f;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
+	float fireCooldown = 0.f;
+
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
 	class UCapsuleComponent* collisionCapsule;
 
