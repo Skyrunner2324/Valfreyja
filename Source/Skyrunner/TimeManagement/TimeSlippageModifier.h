@@ -72,4 +72,7 @@ public:
 	// TODO : lerp
 	UFUNCTION(BlueprintCallable)
 	void SetLocalTimeScale(const float newScale);
+
+	UFUNCTION(BlueprintCallable)
+	inline float GetLocalTimeScale() const { return localTimeScale; }
 };
