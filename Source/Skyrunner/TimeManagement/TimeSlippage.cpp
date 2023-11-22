@@ -34,6 +34,7 @@ void ATimeSlippage::Tick(float DeltaTime)
 	// application time debug display
 	//DebugLogPerFrame(FColor::Yellow, TEXT("Global time : %f"), globalTime);
 	//DebugLogPerFrame(FColor::Yellow, TEXT("Application time : %f"), applicationTime);
+	DebugLogPerFrame(FColor::Blue, TEXT("number of bound event : %d"), OnTimeScaleChanged.GetAllObjects().Num());
 	DebugLogPerFrame(FColor::Green, TEXT("frame rate : %f"), 1.f / applicationDeltaTime);
 }
 
