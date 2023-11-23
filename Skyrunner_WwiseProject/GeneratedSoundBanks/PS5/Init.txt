@@ -1,6 +1,7 @@
 Switch Group	ID	Name			Wwise Object Path	Notes
 	153303254	SlowMoSwitch			\Default Work Unit\SlowMoSwitch	
 	1044534455	GroundMaterialSwitch			\Default Work Unit\GroundMaterialSwitch	
+	1462722741	PlayerMovementSwitch			\Default Work Unit\PlayerMovementSwitch	
 
 Switch	ID	Name	Switch Group			Notes
 	1160234136	Normal	SlowMoSwitch			
@@ -11,11 +12,16 @@ Switch	ID	Name	Switch Group			Notes
 	894619339	WoodGround	GroundMaterialSwitch			
 	1733120053	SnowGround	GroundMaterialSwitch			
 	3577913431	MetalGround	GroundMaterialSwitch			
+	906520813	Grap	PlayerMovementSwitch			
+	1050421051	Air	PlayerMovementSwitch			
+	2043403997	Rail	PlayerMovementSwitch			
+	2108779961	Wall	PlayerMovementSwitch			
+	2528658256	Ground	PlayerMovementSwitch			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	210497749	SlowMoState			\Default Work Unit\SlowMoState	
 	1045871717	GameStatus			\Default Work Unit\GameStatus	
-	1350496757	PlayerMovement			\Default Work Unit\PlayerMovement	
+	1910319788	OverheatState			\Default Work Unit\OverheatState	
 	2064552269	AreaState			\Default Work Unit\AreaState	
 	3285234865	PlayerState			\Default Work Unit\PlayerState	
 	4232248784	WeaponState			\Default Work Unit\WeaponState	
@@ -27,21 +33,15 @@ State	ID	Name	State Group			Notes
 	748895195	None	GameStatus			
 	984691642	InGame	GameStatus			
 	3374585465	InMenu	GameStatus			
-	748895195	None	PlayerMovement			
-	906520813	Grap	PlayerMovement			
-	1050421051	Air	PlayerMovement			
-	2043403997	Rail	PlayerMovement			
-	2108779961	Wall	PlayerMovement			
-	2528658256	Ground	PlayerMovement			
-	2655407367	Crouch	PlayerMovement			
-	3686556480	Slide	PlayerMovement			
+	748895195	None	OverheatState			
+	916477217	Overheat	OverheatState			
+	1024397210	CanShoot	OverheatState			
 	748895195	None	AreaState			
 	1880927217	Ambiance_01example	AreaState			
 	655265632	Alive	PlayerState			
 	748895195	None	PlayerState			
 	2044049779	Dead	PlayerState			
 	51683977	Shotgun	WeaponState			
-	324443136	Pistol	WeaponState			
 	748895195	None	WeaponState			
 	2958002925	GrenadeLauncher	WeaponState			
 	3678545986	MachineGun	WeaponState			
@@ -64,6 +64,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	4262522749	Wood_Bright			\Factory Acoustic Textures\Textures\Wood_Bright	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	135513184	testSlowMoBus			\Default Work Unit\Master Audio Bus\PlayerMaster\testSlowMoBus	
 	309309195	2DAmbience			\Default Work Unit\Master Audio Bus\AmbientMaster\2DAmbience	
 	530205154	3DMaster			\Default Work Unit\Master Audio Bus\3DMaster	
 	985987111	Motion Factory Bus			\Default Work Unit\Motion Factory Bus	
@@ -89,6 +90,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	4122393694	Cave			\Default Work Unit\Master Audio Bus\Reverbs\Cave	
 
 Effect plug-ins	ID	Name	Type				Notes
+	906256191	Pitch Shifter (Custom)	Wwise Pitch Shifter			
 	1125262053	Blue_Distant_Echoes	Wwise Stereo Delay			
 	1842579981	Reflect_Simplified	Wwise Reflect			
 

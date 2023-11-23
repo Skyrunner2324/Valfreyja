@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{0B68CAA1-DDF7-5720-4714-9010DAACD082}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{235B0061-F6FF-0382-6847-B22F7E02B162}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<Custom>
+					<Plugin Id="906256191" Name="Pitch Shifter (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\testSlowMoBus\Pitch Shifter (Custom)" GUID="{01D092C8-978F-4133-903F-D86DD0362C0E}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+				</Custom>
 				<ShareSets>
 					<Plugin Id="1125262053" Name="Blue_Distant_Echoes" ObjectPath="\Effects\Factory Effects\Stereo Delay\Blue_Distant_Echoes" GUID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" LibName="Wwise Stereo Delay" LibId="8847363"/>
 					<Plugin Id="1842579981" Name="Reflect_Simplified" ObjectPath="\Effects\Factory Reflect\Reflect_Simplified" GUID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" LibName="Wwise Reflect" LibId="11206659"/>
@@ -18,6 +21,16 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="135513184" Name="testSlowMoBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\testSlowMoBus" GUID="{834AED33-9999-44B1-8C41-8C901A0DEC57}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="906256191"/>
+						</Custom>
+						<ShareSets>
+							<PluginRef Id="1125262053"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="309309195" Name="2DAmbience" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\2DAmbience" GUID="{7444C4FB-63F6-4F2E-9A73-66D09EEEFAE1}"/>
 				<Bus Id="530205154" Name="3DMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\3DMaster" GUID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}">
 					<AuxBusRefs>
@@ -44,13 +57,7 @@
 						<AuxBusRef Id="1752382405" Name="Early_Reflections" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Early_Reflections" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}"/>
 					</AuxBusRefs>
 				</Bus>
-				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="1125262053"/>
-						</ShareSets>
-					</PluginRefs>
-				</Bus>
+				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Bus Id="4152869693" Name="2DAmbientBeds" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\AmbientBeds\2DAmbientBeds" GUID="{9F89B372-3238-4882-829C-1D743E3D17E7}"/>
 			</Busses>
 			<AuxBusses>
@@ -83,27 +90,10 @@
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="262290038" Name="RTPC_Distance" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Distance" GUID="{EF3CABA9-5812-4B07-97BE-69A25DA3E423}"/>
-				<GameParameter Id="796049864" Name="RPM" ObjectPath="\Game Parameters\Factory Motion\RPM" GUID="{9112AA05-F577-44FD-9F4E-4424158129E6}"/>
-				<GameParameter Id="822163944" Name="SS_Air_RPM" ObjectPath="\Game Parameters\Factory Soundseed Air Game Syncs\SS_Air_RPM" GUID="{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"/>
-				<GameParameter Id="1029930033" Name="SS_Air_Fury" ObjectPath="\Game Parameters\Factory Soundseed Air Game Syncs\SS_Air_Fury" GUID="{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"/>
-				<GameParameter Id="1351367891" Name="SS_Air_Fear" ObjectPath="\Game Parameters\Factory Soundseed Air Game Syncs\SS_Air_Fear" GUID="{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"/>
-				<GameParameter Id="1524500807" Name="Playback_Rate" ObjectPath="\Game Parameters\Factory Motion\Playback_Rate" GUID="{28387EE3-C13A-4316-B9C3-DB5C521624AF}"/>
-				<GameParameter Id="1656280998" Name="RPM_FA_SSGrain" ObjectPath="\Game Parameters\Factory Soundseed Grain\RPM_FA_SSGrain" GUID="{C092E65B-E5C4-4C55-8A68-576E98BBFF39}"/>
-				<GameParameter Id="1791284502" Name="Proximity_FA_SSGrain" ObjectPath="\Game Parameters\Factory Soundseed Grain\Proximity_FA_SSGrain" GUID="{05F1ABB4-7338-42BC-A378-B1E2B12EE3CB}"/>
-				<GameParameter Id="2317409760" Name="Instrument_FA_SSGrain" ObjectPath="\Game Parameters\Factory Soundseed Grain\Instrument_FA_SSGrain" GUID="{6279AF44-C082-4608-981E-9A63D1EE7555}"/>
-				<GameParameter Id="2428833394" Name="Simulation_FA_SSGrain" ObjectPath="\Game Parameters\Factory Soundseed Grain\Simulation_FA_SSGrain" GUID="{71905071-0A79-42FE-9CD6-C631171DC3A4}"/>
-				<GameParameter Id="2481728872" Name="Immersion_FA_SSGrain" ObjectPath="\Game Parameters\Factory Soundseed Grain\Immersion_FA_SSGrain" GUID="{3F41E622-166C-4532-BEF7-1DC9FF7EAB94}"/>
+				<GameParameter Id="1645844663" Name="RTPC_PlayerMovement" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerMovement" GUID="{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"/>
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
-				<GameParameter Id="2648548617" Name="SS_Air_Month" ObjectPath="\Game Parameters\Factory Soundseed Air Game Syncs\SS_Air_Month" GUID="{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"/>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
-				<GameParameter Id="2715217995" Name="Density_FA_SSGrain" ObjectPath="\Game Parameters\Factory Soundseed Grain\Density_FA_SSGrain" GUID="{63B3F29E-04F3-4887-BA1A-4D7694644B24}"/>
-				<GameParameter Id="3002758120" Name="SS_Air_Freefall" ObjectPath="\Game Parameters\Factory Soundseed Air Game Syncs\SS_Air_Freefall" GUID="{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}"/>
-				<GameParameter Id="3074696722" Name="SS_Air_Size" ObjectPath="\Game Parameters\Factory Soundseed Air Game Syncs\SS_Air_Size" GUID="{1329EBEF-A193-472E-A38C-64668B494879}"/>
-				<GameParameter Id="3203397129" Name="SS_Air_TimeOfDay" ObjectPath="\Game Parameters\Factory Soundseed Air Game Syncs\SS_Air_TimeOfDay" GUID="{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}"/>
 				<GameParameter Id="3699472177" Name="RTPC_GroundMaterial" ObjectPath="\Game Parameters\Default Work Unit\RTPC_GroundMaterial" GUID="{05992564-76FB-4584-948F-C0F4109BF542}"/>
-				<GameParameter Id="3715662592" Name="SS_Air_Storm" ObjectPath="\Game Parameters\Factory Soundseed Air Game Syncs\SS_Air_Storm" GUID="{E93F8CDB-06D1-4737-ACAF-7CD44BBED783}"/>
-				<GameParameter Id="3847924954" Name="SS_Air_Presence" ObjectPath="\Game Parameters\Factory Soundseed Air Game Syncs\SS_Air_Presence" GUID="{E3B7811A-7B2F-490F-B44F-5FE51B468041}"/>
-				<GameParameter Id="4160247818" Name="SS_Air_Turbulence" ObjectPath="\Game Parameters\Factory Soundseed Air Game Syncs\SS_Air_Turbulence" GUID="{EDA87B19-73AA-40A0-9F19-2073606DB710}"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="210497749" Name="SlowMoState" ObjectPath="\States\Default Work Unit\SlowMoState" GUID="{C19D1B16-633A-4DFE-AD60-F8C6C952E8FA}">
@@ -120,16 +110,11 @@
 						<State Id="3374585465" Name="InMenu" ObjectPath="\States\Default Work Unit\GameStatus\InMenu" GUID="{B2F321F7-4EE8-4AFD-AE95-8524E71A2A7B}"/>
 					</States>
 				</StateGroup>
-				<StateGroup Id="1350496757" Name="PlayerMovement" ObjectPath="\States\Default Work Unit\PlayerMovement" GUID="{B3F9B62E-2D08-41B6-8A1A-D6874DFA7336}">
+				<StateGroup Id="1910319788" Name="OverheatState" ObjectPath="\States\Default Work Unit\OverheatState" GUID="{0E6C50E8-1044-4E86-9061-13B8E93C62CB}">
 					<States>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\PlayerMovement\None" GUID="{97700067-F4AC-4FF8-A1EE-276A96992D3A}"/>
-						<State Id="906520813" Name="Grap" ObjectPath="\States\Default Work Unit\PlayerMovement\Grap" GUID="{FE69DDCB-4524-42C1-8944-029230C04098}"/>
-						<State Id="1050421051" Name="Air" ObjectPath="\States\Default Work Unit\PlayerMovement\Air" GUID="{6D041D05-AF22-4F45-900B-66D481DDF645}"/>
-						<State Id="2043403997" Name="Rail" ObjectPath="\States\Default Work Unit\PlayerMovement\Rail" GUID="{7C348A10-0746-44D0-BEE4-7BAD55173A39}"/>
-						<State Id="2108779961" Name="Wall" ObjectPath="\States\Default Work Unit\PlayerMovement\Wall" GUID="{1DF46885-9897-478D-8246-46D5CF982C5E}"/>
-						<State Id="2528658256" Name="Ground" ObjectPath="\States\Default Work Unit\PlayerMovement\Ground" GUID="{6A68E123-5F52-43BC-ACE2-3F382E01BED2}"/>
-						<State Id="2655407367" Name="Crouch" ObjectPath="\States\Default Work Unit\PlayerMovement\Crouch" GUID="{AE6DD438-05E6-45D2-9E8A-5DF26F10FD9E}"/>
-						<State Id="3686556480" Name="Slide" ObjectPath="\States\Default Work Unit\PlayerMovement\Slide" GUID="{01F0BB54-8B03-41D4-85FB-94EB54E4D17A}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\OverheatState\None" GUID="{080B6965-2B34-4790-87D2-62FDF2157E00}"/>
+						<State Id="916477217" Name="Overheat" ObjectPath="\States\Default Work Unit\OverheatState\Overheat" GUID="{5B81C2D1-8C94-4F96-85E7-C618DC2939D7}"/>
+						<State Id="1024397210" Name="CanShoot" ObjectPath="\States\Default Work Unit\OverheatState\CanShoot" GUID="{1545C5FF-1E2A-4398-AADB-4A6F08D15159}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="2064552269" Name="AreaState" ObjectPath="\States\Default Work Unit\AreaState" GUID="{8264E7EF-9D1C-45D6-B03F-CCD0B6C66735}">
@@ -148,7 +133,6 @@
 				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
 					<States>
 						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-						<State Id="324443136" Name="Pistol" ObjectPath="\States\Default Work Unit\WeaponState\Pistol" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
 						<State Id="2958002925" Name="GrenadeLauncher" ObjectPath="\States\Default Work Unit\WeaponState\GrenadeLauncher" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
 						<State Id="3678545986" Name="MachineGun" ObjectPath="\States\Default Work Unit\WeaponState\MachineGun" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
@@ -192,6 +176,16 @@
 						<Switch Id="894619339" Name="WoodGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\WoodGround" GUID="{31D40FF0-50B0-41F0-8BED-7D8E39644E38}"/>
 						<Switch Id="1733120053" Name="SnowGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\SnowGround" GUID="{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}"/>
 						<Switch Id="3577913431" Name="MetalGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\MetalGround" GUID="{067272CA-59B0-48BD-81F5-F5600CE65A57}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1462722741" Name="PlayerMovementSwitch" ObjectPath="\Switches\Default Work Unit\PlayerMovementSwitch" GUID="{827CE490-6004-4AAA-96C7-262E376A6054}">
+					<GameParameterRef Id="1645844663"/>
+					<Switches>
+						<Switch Id="906520813" Name="Grap" ObjectPath="\Switches\Default Work Unit\PlayerMovementSwitch\Grap" GUID="{8C01446A-44D4-4022-808A-0A29DB59D0F4}"/>
+						<Switch Id="1050421051" Name="Air" ObjectPath="\Switches\Default Work Unit\PlayerMovementSwitch\Air" GUID="{11398057-44CF-49D9-86B9-602DE588AB2F}"/>
+						<Switch Id="2043403997" Name="Rail" ObjectPath="\Switches\Default Work Unit\PlayerMovementSwitch\Rail" GUID="{37DD7533-473B-4644-905E-CEB116EB2545}"/>
+						<Switch Id="2108779961" Name="Wall" ObjectPath="\Switches\Default Work Unit\PlayerMovementSwitch\Wall" GUID="{7232886A-CF99-4D7B-8D3F-9EE6543A6E43}"/>
+						<Switch Id="2528658256" Name="Ground" ObjectPath="\Switches\Default Work Unit\PlayerMovementSwitch\Ground" GUID="{FE8392A7-A0C0-4D8D-925E-68CC1666748E}"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="2051106367" Name="PlayerSpeedSwitch" ObjectPath="\Switches\Default Work Unit\PlayerSpeedSwitch" GUID="{3CDF8300-7330-4784-9075-47D68391D5E2}">
@@ -319,5 +313,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8C813B05-71A6-45B2-5BFD-8D0C6D0DD11D}</FileHash>
+	<FileHash>{DF93E47B-F53C-6766-9A96-55BD34C52E63}</FileHash>
 </SoundBanksInfo>

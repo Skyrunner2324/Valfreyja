@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="4004702906" Type="Event" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" Language="SFX" Hash="{E09E3034-FABD-53DA-6606-5217DB08D233}">
+		<SoundBank Id="4004702906" Type="Event" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" Language="SFX" Hash="{3EE0D014-C296-7230-ECB5-FB5AB492D193}">
 			<ObjectPath>player_shoot</ObjectPath>
 			<ShortName>player_shoot</ShortName>
 			<Path>Event/player_shoot.bnk</Path>
@@ -21,21 +21,10 @@
 					<Path>Media/767258260.wem</Path>
 					<CachePath>SFX/Grenade_Launcher_ODY-0020-055_A6160AD8.wem</CachePath>
 				</File>
-				<File Id="870552716" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\game_weapon_shoot.wav</ShortName>
-					<Path>Media/870552716.wem</Path>
-					<CachePath>SFX/Placeholders/game_weapon_shoot_10C4C929.wem</CachePath>
-				</File>
 			</Media>
 			<Events>
-				<Event Id="4004702906" Name="player_shoot" ObjectPath="\Events\Game\Weapon\player_shoot" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" DurationType="OneShot" DurationMin="0.122666664" DurationMax="1.375">
+				<Event Id="4004702906" Name="player_shoot" ObjectPath="\Events\Game\Weapon\player_shoot" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" DurationType="OneShot" DurationMin="0.12891667" DurationMax="1.375">
 					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="324443136" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}" Default="true"/>
-							<MediaRefs>
-								<MediaRef Id="870552716"/>
-							</MediaRefs>
-						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
 							<MediaRefs>
@@ -57,17 +46,23 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
 							<MediaRefs>
-								<MediaRef Id="870552716"/>
+								<MediaRef Id="767258260"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 			</Events>
 			<StateGroups>
+				<StateGroup Id="1910319788" Name="OverheatState" ObjectPath="\States\Default Work Unit\OverheatState" GUID="{0E6C50E8-1044-4E86-9061-13B8E93C62CB}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\OverheatState\None" GUID="{080B6965-2B34-4790-87D2-62FDF2157E00}"/>
+						<State Id="916477217" Name="Overheat" ObjectPath="\States\Default Work Unit\OverheatState\Overheat" GUID="{5B81C2D1-8C94-4F96-85E7-C618DC2939D7}"/>
+						<State Id="1024397210" Name="CanShoot" ObjectPath="\States\Default Work Unit\OverheatState\CanShoot" GUID="{1545C5FF-1E2A-4398-AADB-4A6F08D15159}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
 					<States>
 						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-						<State Id="324443136" Name="Pistol" ObjectPath="\States\Default Work Unit\WeaponState\Pistol" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
 						<State Id="2958002925" Name="GrenadeLauncher" ObjectPath="\States\Default Work Unit\WeaponState\GrenadeLauncher" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
 						<State Id="3678545986" Name="MachineGun" ObjectPath="\States\Default Work Unit\WeaponState\MachineGun" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
@@ -76,5 +71,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{46656170-F8BB-2B7A-7E98-13C0DD4EA457}</FileHash>
+	<FileHash>{48F70EAE-53AC-B72B-E459-1A2467AA17EF}</FileHash>
 </SoundBanksInfo>

@@ -10,11 +10,21 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{D9BF53E4-3DC0-F84C-17B4-214EDD03B831}",
+    "Hash": "{3F862F5C-BC85-DCA5-40D0-3C1C3FB3EF44}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
+     "Custom": [
+      {
+       "Id": "906256191",
+       "Name": "Pitch Shifter (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\testSlowMoBus\\Pitch Shifter (Custom)",
+       "GUID": "{01D092C8-978F-4133-903F-D86DD0362C0E}",
+       "LibName": "Wwise Pitch Shifter",
+       "LibId": "8912899"
+      }
+     ],
      "ShareSets": [
       {
        "Id": "1125262053",
@@ -69,6 +79,24 @@
      ]
     },
     "Busses": [
+     {
+      "Id": "135513184",
+      "Name": "testSlowMoBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\testSlowMoBus",
+      "GUID": "{834AED33-9999-44B1-8C41-8C901A0DEC57}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "906256191"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "1125262053"
+        }
+       ]
+      }
+     },
      {
       "Id": "309309195",
       "Name": "2DAmbience",
@@ -181,14 +209,7 @@
       "Id": "3803692087",
       "Name": "Master Audio Bus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
-      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "1125262053"
-        }
-       ]
-      }
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
      },
      {
       "Id": "4152869693",
@@ -276,64 +297,10 @@
       "GUID": "{EF3CABA9-5812-4B07-97BE-69A25DA3E423}"
      },
      {
-      "Id": "796049864",
-      "Name": "RPM",
-      "ObjectPath": "\\Game Parameters\\Factory Motion\\RPM",
-      "GUID": "{9112AA05-F577-44FD-9F4E-4424158129E6}"
-     },
-     {
-      "Id": "822163944",
-      "Name": "SS_Air_RPM",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_RPM",
-      "GUID": "{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"
-     },
-     {
-      "Id": "1029930033",
-      "Name": "SS_Air_Fury",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Fury",
-      "GUID": "{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"
-     },
-     {
-      "Id": "1351367891",
-      "Name": "SS_Air_Fear",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Fear",
-      "GUID": "{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"
-     },
-     {
-      "Id": "1524500807",
-      "Name": "Playback_Rate",
-      "ObjectPath": "\\Game Parameters\\Factory Motion\\Playback_Rate",
-      "GUID": "{28387EE3-C13A-4316-B9C3-DB5C521624AF}"
-     },
-     {
-      "Id": "1656280998",
-      "Name": "RPM_FA_SSGrain",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Grain\\RPM_FA_SSGrain",
-      "GUID": "{C092E65B-E5C4-4C55-8A68-576E98BBFF39}"
-     },
-     {
-      "Id": "1791284502",
-      "Name": "Proximity_FA_SSGrain",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Grain\\Proximity_FA_SSGrain",
-      "GUID": "{05F1ABB4-7338-42BC-A378-B1E2B12EE3CB}"
-     },
-     {
-      "Id": "2317409760",
-      "Name": "Instrument_FA_SSGrain",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Grain\\Instrument_FA_SSGrain",
-      "GUID": "{6279AF44-C082-4608-981E-9A63D1EE7555}"
-     },
-     {
-      "Id": "2428833394",
-      "Name": "Simulation_FA_SSGrain",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Grain\\Simulation_FA_SSGrain",
-      "GUID": "{71905071-0A79-42FE-9CD6-C631171DC3A4}"
-     },
-     {
-      "Id": "2481728872",
-      "Name": "Immersion_FA_SSGrain",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Grain\\Immersion_FA_SSGrain",
-      "GUID": "{3F41E622-166C-4532-BEF7-1DC9FF7EAB94}"
+      "Id": "1645844663",
+      "Name": "RTPC_PlayerMovement",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerMovement",
+      "GUID": "{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"
      },
      {
       "Id": "2565740352",
@@ -342,64 +309,16 @@
       "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
      },
      {
-      "Id": "2648548617",
-      "Name": "SS_Air_Month",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Month",
-      "GUID": "{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"
-     },
-     {
       "Id": "2653406601",
       "Name": "RTPC_PlayerSpeed",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerSpeed",
       "GUID": "{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"
      },
      {
-      "Id": "2715217995",
-      "Name": "Density_FA_SSGrain",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Grain\\Density_FA_SSGrain",
-      "GUID": "{63B3F29E-04F3-4887-BA1A-4D7694644B24}"
-     },
-     {
-      "Id": "3002758120",
-      "Name": "SS_Air_Freefall",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Freefall",
-      "GUID": "{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}"
-     },
-     {
-      "Id": "3074696722",
-      "Name": "SS_Air_Size",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Size",
-      "GUID": "{1329EBEF-A193-472E-A38C-64668B494879}"
-     },
-     {
-      "Id": "3203397129",
-      "Name": "SS_Air_TimeOfDay",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_TimeOfDay",
-      "GUID": "{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}"
-     },
-     {
       "Id": "3699472177",
       "Name": "RTPC_GroundMaterial",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_GroundMaterial",
       "GUID": "{05992564-76FB-4584-948F-C0F4109BF542}"
-     },
-     {
-      "Id": "3715662592",
-      "Name": "SS_Air_Storm",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Storm",
-      "GUID": "{E93F8CDB-06D1-4737-ACAF-7CD44BBED783}"
-     },
-     {
-      "Id": "3847924954",
-      "Name": "SS_Air_Presence",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Presence",
-      "GUID": "{E3B7811A-7B2F-490F-B44F-5FE51B468041}"
-     },
-     {
-      "Id": "4160247818",
-      "Name": "SS_Air_Turbulence",
-      "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Turbulence",
-      "GUID": "{EDA87B19-73AA-40A0-9F19-2073606DB710}"
      }
     ],
     "StateGroups": [
@@ -456,58 +375,28 @@
       ]
      },
      {
-      "Id": "1350496757",
-      "Name": "PlayerMovement",
-      "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement",
-      "GUID": "{B3F9B62E-2D08-41B6-8A1A-D6874DFA7336}",
+      "Id": "1910319788",
+      "Name": "OverheatState",
+      "ObjectPath": "\\States\\Default Work Unit\\OverheatState",
+      "GUID": "{0E6C50E8-1044-4E86-9061-13B8E93C62CB}",
       "States": [
        {
         "Id": "748895195",
         "Name": "None",
-        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\None",
-        "GUID": "{97700067-F4AC-4FF8-A1EE-276A96992D3A}"
+        "ObjectPath": "\\States\\Default Work Unit\\OverheatState\\None",
+        "GUID": "{080B6965-2B34-4790-87D2-62FDF2157E00}"
        },
        {
-        "Id": "906520813",
-        "Name": "Grap",
-        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Grap",
-        "GUID": "{FE69DDCB-4524-42C1-8944-029230C04098}"
+        "Id": "916477217",
+        "Name": "Overheat",
+        "ObjectPath": "\\States\\Default Work Unit\\OverheatState\\Overheat",
+        "GUID": "{5B81C2D1-8C94-4F96-85E7-C618DC2939D7}"
        },
        {
-        "Id": "1050421051",
-        "Name": "Air",
-        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Air",
-        "GUID": "{6D041D05-AF22-4F45-900B-66D481DDF645}"
-       },
-       {
-        "Id": "2043403997",
-        "Name": "Rail",
-        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Rail",
-        "GUID": "{7C348A10-0746-44D0-BEE4-7BAD55173A39}"
-       },
-       {
-        "Id": "2108779961",
-        "Name": "Wall",
-        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Wall",
-        "GUID": "{1DF46885-9897-478D-8246-46D5CF982C5E}"
-       },
-       {
-        "Id": "2528658256",
-        "Name": "Ground",
-        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Ground",
-        "GUID": "{6A68E123-5F52-43BC-ACE2-3F382E01BED2}"
-       },
-       {
-        "Id": "2655407367",
-        "Name": "Crouch",
-        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Crouch",
-        "GUID": "{AE6DD438-05E6-45D2-9E8A-5DF26F10FD9E}"
-       },
-       {
-        "Id": "3686556480",
-        "Name": "Slide",
-        "ObjectPath": "\\States\\Default Work Unit\\PlayerMovement\\Slide",
-        "GUID": "{01F0BB54-8B03-41D4-85FB-94EB54E4D17A}"
+        "Id": "1024397210",
+        "Name": "CanShoot",
+        "ObjectPath": "\\States\\Default Work Unit\\OverheatState\\CanShoot",
+        "GUID": "{1545C5FF-1E2A-4398-AADB-4A6F08D15159}"
        }
       ]
      },
@@ -568,12 +457,6 @@
         "Name": "Shotgun",
         "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\Shotgun",
         "GUID": "{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"
-       },
-       {
-        "Id": "324443136",
-        "Name": "Pistol",
-        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\Pistol",
-        "GUID": "{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"
        },
        {
         "Id": "748895195",
@@ -736,6 +619,47 @@
         "Name": "MetalGround",
         "ObjectPath": "\\Switches\\Default Work Unit\\GroundMaterialSwitch\\MetalGround",
         "GUID": "{067272CA-59B0-48BD-81F5-F5600CE65A57}"
+       }
+      ]
+     },
+     {
+      "Id": "1462722741",
+      "Name": "PlayerMovementSwitch",
+      "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch",
+      "GUID": "{827CE490-6004-4AAA-96C7-262E376A6054}",
+      "GameParameterRef": {
+       "Id": "1645844663"
+      },
+      "Switches": [
+       {
+        "Id": "906520813",
+        "Name": "Grap",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch\\Grap",
+        "GUID": "{8C01446A-44D4-4022-808A-0A29DB59D0F4}"
+       },
+       {
+        "Id": "1050421051",
+        "Name": "Air",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch\\Air",
+        "GUID": "{11398057-44CF-49D9-86B9-602DE588AB2F}"
+       },
+       {
+        "Id": "2043403997",
+        "Name": "Rail",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch\\Rail",
+        "GUID": "{37DD7533-473B-4644-905E-CEB116EB2545}"
+       },
+       {
+        "Id": "2108779961",
+        "Name": "Wall",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch\\Wall",
+        "GUID": "{7232886A-CF99-4D7B-8D3F-9EE6543A6E43}"
+       },
+       {
+        "Id": "2528658256",
+        "Name": "Ground",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch\\Ground",
+        "GUID": "{FE8392A7-A0C0-4D8D-925E-68CC1666748E}"
        }
       ]
      },
@@ -1168,6 +1092,6 @@
     ]
    }
   ],
-  "FileHash": "{0609084D-93B1-8954-4F0B-6801584CBD93}"
+  "FileHash": "{006A7B6C-11C2-D18B-5EBB-8E94BDDB7CE7}"
  }
 }

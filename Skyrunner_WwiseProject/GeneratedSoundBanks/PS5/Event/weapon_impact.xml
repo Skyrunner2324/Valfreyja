@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="3501648838" Type="Event" GUID="{7B2B9537-B71E-43D4-9310-46937A472AD5}" Language="SFX" Hash="{E774242A-E2DB-6425-91D6-A0EC67E1C00D}">
+		<SoundBank Id="3501648838" Type="Event" GUID="{7B2B9537-B71E-43D4-9310-46937A472AD5}" Language="SFX" Hash="{5EB16C7C-FE44-9968-71E0-AE6222B63813}">
 			<ObjectPath>weapon_impact</ObjectPath>
 			<ShortName>weapon_impact</ShortName>
 			<Path>Event/weapon_impact.bnk</Path>
@@ -11,6 +11,11 @@
 					<Path>Media/285816151.wem</Path>
 					<CachePath>SFX/Grenade_Explosion_ODY-1279-080_F1D720E4.wem</CachePath>
 				</File>
+				<File Id="525589573" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav</ShortName>
+					<Path>Media/525589573.wem</Path>
+					<CachePath>SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_359A2D62.wem</CachePath>
+				</File>
 				<File Id="991022554" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav</ShortName>
 					<Path>Media/991022554.wem</Path>
@@ -18,19 +23,8 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3501648838" Name="weapon_impact" ObjectPath="\Events\Game\Weapon\weapon_impact" GUID="{7B2B9537-B71E-43D4-9310-46937A472AD5}" MaxAttenuation="10000" DurationType="OneShot" DurationMin="0" DurationMax="1.2626873">
+				<Event Id="3501648838" Name="weapon_impact" ObjectPath="\Events\Game\Weapon\weapon_impact" GUID="{7B2B9537-B71E-43D4-9310-46937A472AD5}" MaxAttenuation="100" DurationType="OneShot" DurationMin="0" DurationMax="1.2626873">
 					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="324443136" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"/>
-							<Children>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
-									<MediaRefs>
-										<MediaRef Id="991022554"/>
-									</MediaRefs>
-								</SwitchContainer>
-							</Children>
-						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}" Default="true"/>
 							<Children>
@@ -51,6 +45,12 @@
 										<MediaRef Id="991022554"/>
 									</MediaRefs>
 								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3661774060" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
+									<MediaRefs>
+										<MediaRef Id="525589573"/>
+									</MediaRefs>
+								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -60,6 +60,12 @@
 									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
 									<MediaRefs>
 										<MediaRef Id="991022554"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3661774060" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
+									<MediaRefs>
+										<MediaRef Id="525589573"/>
 									</MediaRefs>
 								</SwitchContainer>
 							</Children>
@@ -73,6 +79,12 @@
 										<MediaRef Id="991022554"/>
 									</MediaRefs>
 								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3661774060" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
+									<MediaRefs>
+										<MediaRef Id="525589573"/>
+									</MediaRefs>
+								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -82,7 +94,6 @@
 				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
 					<States>
 						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-						<State Id="324443136" Name="Pistol" ObjectPath="\States\Default Work Unit\WeaponState\Pistol" GUID="{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
 						<State Id="2958002925" Name="GrenadeLauncher" ObjectPath="\States\Default Work Unit\WeaponState\GrenadeLauncher" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
 						<State Id="3678545986" Name="MachineGun" ObjectPath="\States\Default Work Unit\WeaponState\MachineGun" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
@@ -99,5 +110,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1EC63546-EB9F-4421-E44A-7F80F51A0A81}</FileHash>
+	<FileHash>{BF892302-EBD9-2382-CCB0-86B5A153F778}</FileHash>
 </SoundBanksInfo>

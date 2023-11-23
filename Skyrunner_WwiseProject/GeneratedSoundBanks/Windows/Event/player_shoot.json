@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{EEABD1AC-C871-41C1-836E-6397FD3D79D7}",
     "Language": "SFX",
-    "Hash": "{E09E3034-FABD-53DA-6606-5217DB08D233}",
+    "Hash": "{3EE0D014-C296-7230-ECB5-FB5AB492D193}",
     "ObjectPath": "player_shoot",
     "ShortName": "player_shoot",
     "Path": "Event/player_shoot.bnk",
@@ -41,15 +41,6 @@
       "ShortName": "Grenade_Launcher_ODY-0020-055.wav",
       "Path": "Media/767258260.wem",
       "CachePath": "SFX/Grenade_Launcher_ODY-0020-055_A6160AD8.wem"
-     },
-     {
-      "Id": "870552716",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Placeholders\\game_weapon_shoot.wav",
-      "Path": "Media/870552716.wem",
-      "CachePath": "SFX/Placeholders/game_weapon_shoot_10C4C929.wem"
      }
     ],
     "Events": [
@@ -59,23 +50,9 @@
       "ObjectPath": "\\Events\\Game\\Weapon\\player_shoot",
       "GUID": "{EEABD1AC-C871-41C1-836E-6397FD3D79D7}",
       "DurationType": "OneShot",
-      "DurationMin": "0.122666664",
+      "DurationMin": "0.12891667",
       "DurationMax": "1.375",
       "SwitchContainers": [
-       {
-        "SwitchValue": {
-         "GroupType": "State",
-         "GroupId": "4232248784",
-         "Id": "324443136",
-         "GUID": "{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}",
-         "Default": "true"
-        },
-        "MediaRefs": [
-         {
-          "Id": "870552716"
-         }
-        ]
-       },
        {
         "SwitchValue": {
          "GroupType": "State",
@@ -124,7 +101,7 @@
         },
         "MediaRefs": [
          {
-          "Id": "870552716"
+          "Id": "767258260"
          }
         ]
        }
@@ -132,6 +109,32 @@
      }
     ],
     "StateGroups": [
+     {
+      "Id": "1910319788",
+      "Name": "OverheatState",
+      "ObjectPath": "\\States\\Default Work Unit\\OverheatState",
+      "GUID": "{0E6C50E8-1044-4E86-9061-13B8E93C62CB}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\OverheatState\\None",
+        "GUID": "{080B6965-2B34-4790-87D2-62FDF2157E00}"
+       },
+       {
+        "Id": "916477217",
+        "Name": "Overheat",
+        "ObjectPath": "\\States\\Default Work Unit\\OverheatState\\Overheat",
+        "GUID": "{5B81C2D1-8C94-4F96-85E7-C618DC2939D7}"
+       },
+       {
+        "Id": "1024397210",
+        "Name": "CanShoot",
+        "ObjectPath": "\\States\\Default Work Unit\\OverheatState\\CanShoot",
+        "GUID": "{1545C5FF-1E2A-4398-AADB-4A6F08D15159}"
+       }
+      ]
+     },
      {
       "Id": "4232248784",
       "Name": "WeaponState",
@@ -143,12 +146,6 @@
         "Name": "Shotgun",
         "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\Shotgun",
         "GUID": "{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"
-       },
-       {
-        "Id": "324443136",
-        "Name": "Pistol",
-        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\Pistol",
-        "GUID": "{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"
        },
        {
         "Id": "748895195",
@@ -173,6 +170,6 @@
     ]
    }
   ],
-  "FileHash": "{568E6A13-C47D-68C6-FD62-881B6AD392E3}"
+  "FileHash": "{AFB9FE2A-CEB1-DC96-71C3-6BF4AA1A17DF}"
  }
 }

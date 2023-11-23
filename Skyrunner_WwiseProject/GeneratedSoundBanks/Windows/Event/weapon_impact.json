@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{7B2B9537-B71E-43D4-9310-46937A472AD5}",
     "Language": "SFX",
-    "Hash": "{E774242A-E2DB-6425-91D6-A0EC67E1C00D}",
+    "Hash": "{5EB16C7C-FE44-9968-71E0-AE6222B63813}",
     "ObjectPath": "weapon_impact",
     "ShortName": "weapon_impact",
     "Path": "Event/weapon_impact.bnk",
@@ -23,6 +23,15 @@
       "ShortName": "Grenade_Explosion_ODY-1279-080.wav",
       "Path": "Media/285816151.wem",
       "CachePath": "SFX/Grenade_Explosion_ODY-1279-080_F1D720E4.wem"
+     },
+     {
+      "Id": "525589573",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav",
+      "Path": "Media/525589573.wem",
+      "CachePath": "SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_359A2D62.wem"
      },
      {
       "Id": "991022554",
@@ -40,35 +49,11 @@
       "Name": "weapon_impact",
       "ObjectPath": "\\Events\\Game\\Weapon\\weapon_impact",
       "GUID": "{7B2B9537-B71E-43D4-9310-46937A472AD5}",
-      "MaxAttenuation": "10000",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "1.2626873",
       "SwitchContainers": [
-       {
-        "SwitchValue": {
-         "GroupType": "State",
-         "GroupId": "4232248784",
-         "Id": "324443136",
-         "GUID": "{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"
-        },
-        "Children": [
-         {
-          "SwitchValue": {
-           "GroupType": "Switch",
-           "GroupId": "194784494",
-           "Id": "3353720555",
-           "GUID": "{4578F74A-2F6F-42EB-891F-614C2D62B7D8}",
-           "Default": "true"
-          },
-          "MediaRefs": [
-           {
-            "Id": "991022554"
-           }
-          ]
-         }
-        ]
-       },
        {
         "SwitchValue": {
          "GroupType": "State",
@@ -115,6 +100,19 @@
             "Id": "991022554"
            }
           ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "194784494",
+           "Id": "3661774060",
+           "GUID": "{DC912065-E687-4C3C-891B-504BA636A074}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "525589573"
+           }
+          ]
          }
         ]
        },
@@ -137,6 +135,19 @@
           "MediaRefs": [
            {
             "Id": "991022554"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "194784494",
+           "Id": "3661774060",
+           "GUID": "{DC912065-E687-4C3C-891B-504BA636A074}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "525589573"
            }
           ]
          }
@@ -163,6 +174,19 @@
             "Id": "991022554"
            }
           ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "194784494",
+           "Id": "3661774060",
+           "GUID": "{DC912065-E687-4C3C-891B-504BA636A074}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "525589573"
+           }
+          ]
          }
         ]
        }
@@ -181,12 +205,6 @@
         "Name": "Shotgun",
         "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\Shotgun",
         "GUID": "{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"
-       },
-       {
-        "Id": "324443136",
-        "Name": "Pistol",
-        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\Pistol",
-        "GUID": "{C8621A3D-7D7F-4D56-AE9A-E3A8DC015E19}"
        },
        {
         "Id": "748895195",
@@ -233,6 +251,6 @@
     ]
    }
   ],
-  "FileHash": "{8B63931C-3789-26DC-4148-166A0E7E3175}"
+  "FileHash": "{06C8CDEF-16FE-66D6-45B4-D030208B97AF}"
  }
 }
