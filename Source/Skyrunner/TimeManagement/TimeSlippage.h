@@ -31,12 +31,16 @@ protected:
 	virtual void BeginPlay() override;
 
 public:
+	UPROPERTY(BlueprintReadOnly)
+	float framerate = 0.f;
+
 	// actual app time
 	UPROPERTY(BlueprintReadOnly)
 	float applicationTime = 0.f;
 	// dilated app time
 	UPROPERTY(BlueprintReadOnly)
 	float globalTime = 0.f;
+
 	// actual delta time
 	UPROPERTY(BlueprintReadOnly)
 	float applicationDeltaTime = 0.f;
