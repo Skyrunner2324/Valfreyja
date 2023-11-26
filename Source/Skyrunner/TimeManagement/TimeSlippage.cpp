@@ -13,6 +13,7 @@
 ATimeSlippage::ATimeSlippage()
 {
 	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bTickEvenWhenPaused = true;
 }
 
 void ATimeSlippage::BeginPlay()
