@@ -10,30 +10,46 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{A8E304C3-B8A8-A8F2-7540-569ACAF3ADE3}",
+    "Hash": "{6862C81E-D01E-31CE-B628-9633E8404CDD}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
      "Custom": [
       {
-       "Id": "906256191",
+       "Id": "335663160",
+       "Name": "Underwater_Echoes (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerMovement\\Underwater_Echoes (Custom)",
+       "GUID": "{68094E56-564C-4D9E-9B9D-70C81AC10C52}",
+       "LibName": "Wwise Stereo Delay",
+       "LibId": "8847363"
+      },
+      {
+       "Id": "460341544",
+       "Name": "Underwater_Echoes (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerWeapons\\Underwater_Echoes (Custom)",
+       "GUID": "{8ECE3EC8-08AC-461A-B7C8-7E23F2592163}",
+       "LibName": "Wwise Stereo Delay",
+       "LibId": "8847363"
+      },
+      {
+       "Id": "686920966",
        "Name": "Pitch Shifter (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\testSlowMoBus\\Pitch Shifter (Custom)",
-       "GUID": "{01D092C8-978F-4133-903F-D86DD0362C0E}",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerWeapons\\Pitch Shifter (Custom)",
+       "GUID": "{EC252FBB-AF2E-4C73-B02D-EC8B78891EEB}",
+       "LibName": "Wwise Pitch Shifter",
+       "LibId": "8912899"
+      },
+      {
+       "Id": "715153284",
+       "Name": "Pitch Shifter (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerMovement\\Pitch Shifter (Custom)",
+       "GUID": "{491994D5-274E-4B7F-BF7F-689644E819AF}",
        "LibName": "Wwise Pitch Shifter",
        "LibId": "8912899"
       }
      ],
      "ShareSets": [
-      {
-       "Id": "1125262053",
-       "Name": "Blue_Distant_Echoes",
-       "ObjectPath": "\\Effects\\Factory Effects\\Stereo Delay\\Blue_Distant_Echoes",
-       "GUID": "{ABFA9875-521E-451F-AAB9-AB148847B9C0}",
-       "LibName": "Wwise Stereo Delay",
-       "LibId": "8847363"
-      },
       {
        "Id": "1842579981",
        "Name": "Reflect_Simplified",
@@ -80,24 +96,6 @@
     },
     "Busses": [
      {
-      "Id": "135513184",
-      "Name": "testSlowMoBus",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\testSlowMoBus",
-      "GUID": "{834AED33-9999-44B1-8C41-8C901A0DEC57}",
-      "PluginRefs": {
-       "Custom": [
-        {
-         "Id": "906256191"
-        }
-       ],
-       "ShareSets": [
-        {
-         "Id": "1125262053"
-        }
-       ]
-      }
-     },
-     {
       "Id": "309309195",
       "Name": "2DAmbience",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\AmbientMaster\\2DAmbience",
@@ -127,7 +125,17 @@
       "Id": "986618877",
       "Name": "PlayerWeapons",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerWeapons",
-      "GUID": "{F894E37D-7A93-4E9D-88BB-6560520EEBD6}"
+      "GUID": "{F894E37D-7A93-4E9D-88BB-6560520EEBD6}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "460341544"
+        },
+        {
+         "Id": "686920966"
+        }
+       ]
+      }
      },
      {
       "Id": "1182634443",
@@ -145,7 +153,17 @@
       "Id": "1350496757",
       "Name": "PlayerMovement",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerMovement",
-      "GUID": "{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}"
+      "GUID": "{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "335663160"
+        },
+        {
+         "Id": "715153284"
+        }
+       ]
+      }
      },
      {
       "Id": "1459460693",
@@ -1092,6 +1110,6 @@
     ]
    }
   ],
-  "FileHash": "{7F67CAB5-00BB-440C-9680-DDF344C22A47}"
+  "FileHash": "{BED1ABC0-69CB-C43D-B698-06A00AA15D53}"
  }
 }

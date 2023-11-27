@@ -154,7 +154,7 @@
 			<ShortName>MasterSoundbank</ShortName>
 			<Path>MasterSoundbank.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1092496599" Type="Event" GUID="{AA3F18C1-9D36-4D56-9C8A-BA65E19E9C0B}" Language="SFX" Hash="{C3487EDC-51E8-B275-15CF-090D5D5A76E2}">
+		<SoundBank Id="1092496599" Type="Event" GUID="{AA3F18C1-9D36-4D56-9C8A-BA65E19E9C0B}" Language="SFX" Hash="{782EF18A-E4F3-B0D2-3827-3B497D1DF34D}">
 			<ObjectPath>weapon_overheat_lp</ObjectPath>
 			<ShortName>weapon_overheat_lp</ShortName>
 			<Path>Event/weapon_overheat_lp.bnk</Path>
@@ -162,7 +162,7 @@
 				<File Id="976126733" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\game_ammo_pickup.wav</ShortName>
 					<Path>Media/976126733.wem</Path>
-					<CachePath>SFX/Placeholders/game_ammo_pickup_978CD8A0.wem</CachePath>
+					<CachePath>SFX/Placeholders/game_ammo_pickup_1A19FA60.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -206,7 +206,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1305133589" Type="Event" GUID="{F22270AD-A873-4083-8853-CDF26CCD012F}" Language="SFX" Hash="{408E4913-8393-D47F-0EB1-386337CC8E81}">
+		<SoundBank Id="1305133589" Type="Event" GUID="{F22270AD-A873-4083-8853-CDF26CCD012F}" Language="SFX" Hash="{1377FCE1-16EC-479C-7465-4D36B08E44B1}">
 			<ObjectPath>player_jump</ObjectPath>
 			<ShortName>player_jump</ShortName>
 			<Path>Event/player_jump.bnk</Path>
@@ -225,16 +225,18 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{86CD1E0D-9126-B2B1-1E68-67032E5E9030}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{47259E98-18D5-A840-77C4-F8B838BDB635}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<Custom>
-					<Plugin Id="906256191" Name="Pitch Shifter (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\testSlowMoBus\Pitch Shifter (Custom)" GUID="{01D092C8-978F-4133-903F-D86DD0362C0E}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="335663160" Name="Underwater_Echoes (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerMovement\Underwater_Echoes (Custom)" GUID="{68094E56-564C-4D9E-9B9D-70C81AC10C52}" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="460341544" Name="Underwater_Echoes (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerWeapons\Underwater_Echoes (Custom)" GUID="{8ECE3EC8-08AC-461A-B7C8-7E23F2592163}" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="686920966" Name="Pitch Shifter (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerWeapons\Pitch Shifter (Custom)" GUID="{EC252FBB-AF2E-4C73-B02D-EC8B78891EEB}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="715153284" Name="Pitch Shifter (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerMovement\Pitch Shifter (Custom)" GUID="{491994D5-274E-4B7F-BF7F-689644E819AF}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 				</Custom>
 				<ShareSets>
-					<Plugin Id="1125262053" Name="Blue_Distant_Echoes" ObjectPath="\Effects\Factory Effects\Stereo Delay\Blue_Distant_Echoes" GUID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" LibName="Wwise Stereo Delay" LibId="8847363"/>
 					<Plugin Id="1842579981" Name="Reflect_Simplified" ObjectPath="\Effects\Factory Reflect\Reflect_Simplified" GUID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" LibName="Wwise Reflect" LibId="11206659"/>
 				</ShareSets>
 				<AudioDevices>
@@ -245,16 +247,6 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="135513184" Name="testSlowMoBus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\testSlowMoBus" GUID="{834AED33-9999-44B1-8C41-8C901A0DEC57}">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="906256191"/>
-						</Custom>
-						<ShareSets>
-							<PluginRef Id="1125262053"/>
-						</ShareSets>
-					</PluginRefs>
-				</Bus>
 				<Bus Id="309309195" Name="2DAmbience" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\2DAmbience" GUID="{7444C4FB-63F6-4F2E-9A73-66D09EEEFAE1}"/>
 				<Bus Id="530205154" Name="3DMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\3DMaster" GUID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}">
 					<AuxBusRefs>
@@ -262,10 +254,24 @@
 					</AuxBusRefs>
 				</Bus>
 				<Bus Id="985987111" Name="Motion Factory Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Motion Factory Bus" GUID="{2AF9B9C6-6EF1-46E9-B5F2-E30C9E602C74}"/>
-				<Bus Id="986618877" Name="PlayerWeapons" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerWeapons" GUID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}"/>
+				<Bus Id="986618877" Name="PlayerWeapons" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerWeapons" GUID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="460341544"/>
+							<PluginRef Id="686920966"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="1182634443" Name="AmbientBeds" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\AmbientBeds" GUID="{3D306ABA-2B79-4C6F-B0C4-887FF5287F6F}"/>
 				<Bus Id="1301074112" Name="3DAmbience" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\3DAmbience" GUID="{7F98D6D4-F50F-4CD2-AA30-29F04ADD57C2}"/>
-				<Bus Id="1350496757" Name="PlayerMovement" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerMovement" GUID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}"/>
+				<Bus Id="1350496757" Name="PlayerMovement" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerMovement" GUID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="335663160"/>
+							<PluginRef Id="715153284"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="1459460693" Name="AmbientMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster" GUID="{1260EBDA-2D71-42A1-A3E2-A2832FF41985}"/>
 				<Bus Id="1992125169" Name="UIMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UIMaster" GUID="{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}"/>
 				<Bus Id="2033911932" Name="NPCMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\3DMaster\NPCMaster" GUID="{94354A62-2693-4A27-B098-F5FDE5B577C5}"/>
@@ -536,7 +542,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1365959272" Type="Event" GUID="{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}" Language="SFX" Hash="{8C3CC911-5F03-2826-B297-514462ED037B}">
+		<SoundBank Id="1365959272" Type="Event" GUID="{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}" Language="SFX" Hash="{BCCCA508-698D-8724-7AFC-8129C63B5135}">
 			<ObjectPath>grap_shot</ObjectPath>
 			<ShortName>grap_shot</ShortName>
 			<Path>Event/grap_shot.bnk</Path>
@@ -544,7 +550,7 @@
 				<File Id="642346148" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\player_grap_shot.wav</ShortName>
 					<Path>Media/642346148.wem</Path>
-					<CachePath>SFX/Placeholders/player_grap_shot_10C4C929.wem</CachePath>
+					<CachePath>SFX/Placeholders/player_grap_shot_81238AE1.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -553,7 +559,7 @@
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="1365959272" Name="grap_shot" ObjectPath="\Events\Game\Grap\grap_shot" GUID="{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}" DurationType="OneShot" DurationMin="0.7" DurationMax="0.7">
+				<Event Id="1365959272" Name="grap_shot" ObjectPath="\Events\Game\Grap\grap_shot" GUID="{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="642346148"/>
 					</MediaRefs>
@@ -633,7 +639,7 @@
 				<Event Id="2024222415" Name="ui_back" ObjectPath="\Events\UI\ui_back" GUID="{8914833C-41B7-4962-9AF6-5229DDCF1F68}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2394582229" Type="Event" GUID="{C5F304BB-9F06-42C3-BEE9-4C60F33F28DB}" Language="SFX" Hash="{5D22993C-DC6A-9235-2203-24389B279CD9}">
+		<SoundBank Id="2394582229" Type="Event" GUID="{C5F304BB-9F06-42C3-BEE9-4C60F33F28DB}" Language="SFX" Hash="{D73241B6-8E3A-C2B5-B42C-BDAD8C46816D}">
 			<ObjectPath>player_dash</ObjectPath>
 			<ShortName>player_dash</ShortName>
 			<Path>Event/player_dash.bnk</Path>
@@ -689,7 +695,7 @@
 				<Event Id="2569008858" Name="enemy_bomber_shot" ObjectPath="\Events\Enemy\enemy_bomber_shot" GUID="{2189C011-A358-4102-9707-D283558C2E34}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2609528332" Type="Event" GUID="{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}" Language="SFX" Hash="{E33D7A2B-6746-F54F-44FC-575B819DC206}">
+		<SoundBank Id="2609528332" Type="Event" GUID="{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}" Language="SFX" Hash="{4B6258A4-316E-8D2E-C50F-61E70A8DC04F}">
 			<ObjectPath>player_slide</ObjectPath>
 			<ShortName>player_slide</ShortName>
 			<Path>Event/player_slide.bnk</Path>
@@ -895,7 +901,7 @@
 				<AuxBus Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3629196698" Type="Event" GUID="{E70AC961-E4C1-4F27-8D35-AC47C3EC2805}" Language="SFX" Hash="{75174933-587F-2263-6CF4-EC25541B5C3B}">
+		<SoundBank Id="3629196698" Type="Event" GUID="{E70AC961-E4C1-4F27-8D35-AC47C3EC2805}" Language="SFX" Hash="{2ED92061-6C6B-6535-0775-57619FE605F9}">
 			<ObjectPath>player_land</ObjectPath>
 			<ShortName>player_land</ShortName>
 			<Path>Event/player_land.bnk</Path>
@@ -1058,5 +1064,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BA287FED-5219-8A8E-4E69-CDD0AC41BC61}</FileHash>
+	<FileHash>{60A87C22-F608-CD7F-9BEA-5BD8F3192581}</FileHash>
 </SoundBanksInfo>

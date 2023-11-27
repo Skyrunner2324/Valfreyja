@@ -349,7 +349,7 @@
     "Type": "Event",
     "GUID": "{AA3F18C1-9D36-4D56-9C8A-BA65E19E9C0B}",
     "Language": "SFX",
-    "Hash": "{C3487EDC-51E8-B275-15CF-090D5D5A76E2}",
+    "Hash": "{782EF18A-E4F3-B0D2-3827-3B497D1DF34D}",
     "ObjectPath": "weapon_overheat_lp",
     "ShortName": "weapon_overheat_lp",
     "Path": "Event/weapon_overheat_lp.bnk",
@@ -361,7 +361,7 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\game_ammo_pickup.wav",
       "Path": "Media/976126733.wem",
-      "CachePath": "SFX/Placeholders/game_ammo_pickup_978CD8A0.wem"
+      "CachePath": "SFX/Placeholders/game_ammo_pickup_1A19FA60.wem"
      }
     ],
     "Events": [
@@ -467,7 +467,7 @@
     "Type": "Event",
     "GUID": "{F22270AD-A873-4083-8853-CDF26CCD012F}",
     "Language": "SFX",
-    "Hash": "{408E4913-8393-D47F-0EB1-386337CC8E81}",
+    "Hash": "{1377FCE1-16EC-479C-7465-4D36B08E44B1}",
     "ObjectPath": "player_jump",
     "ShortName": "player_jump",
     "Path": "Event/player_jump.bnk",
@@ -507,30 +507,46 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{A8E304C3-B8A8-A8F2-7540-569ACAF3ADE3}",
+    "Hash": "{6862C81E-D01E-31CE-B628-9633E8404CDD}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
      "Custom": [
       {
-       "Id": "906256191",
+       "Id": "335663160",
+       "Name": "Underwater_Echoes (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerMovement\\Underwater_Echoes (Custom)",
+       "GUID": "{68094E56-564C-4D9E-9B9D-70C81AC10C52}",
+       "LibName": "Wwise Stereo Delay",
+       "LibId": "8847363"
+      },
+      {
+       "Id": "460341544",
+       "Name": "Underwater_Echoes (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerWeapons\\Underwater_Echoes (Custom)",
+       "GUID": "{8ECE3EC8-08AC-461A-B7C8-7E23F2592163}",
+       "LibName": "Wwise Stereo Delay",
+       "LibId": "8847363"
+      },
+      {
+       "Id": "686920966",
        "Name": "Pitch Shifter (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\testSlowMoBus\\Pitch Shifter (Custom)",
-       "GUID": "{01D092C8-978F-4133-903F-D86DD0362C0E}",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerWeapons\\Pitch Shifter (Custom)",
+       "GUID": "{EC252FBB-AF2E-4C73-B02D-EC8B78891EEB}",
+       "LibName": "Wwise Pitch Shifter",
+       "LibId": "8912899"
+      },
+      {
+       "Id": "715153284",
+       "Name": "Pitch Shifter (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerMovement\\Pitch Shifter (Custom)",
+       "GUID": "{491994D5-274E-4B7F-BF7F-689644E819AF}",
        "LibName": "Wwise Pitch Shifter",
        "LibId": "8912899"
       }
      ],
      "ShareSets": [
-      {
-       "Id": "1125262053",
-       "Name": "Blue_Distant_Echoes",
-       "ObjectPath": "\\Effects\\Factory Effects\\Stereo Delay\\Blue_Distant_Echoes",
-       "GUID": "{ABFA9875-521E-451F-AAB9-AB148847B9C0}",
-       "LibName": "Wwise Stereo Delay",
-       "LibId": "8847363"
-      },
       {
        "Id": "1842579981",
        "Name": "Reflect_Simplified",
@@ -577,24 +593,6 @@
     },
     "Busses": [
      {
-      "Id": "135513184",
-      "Name": "testSlowMoBus",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\testSlowMoBus",
-      "GUID": "{834AED33-9999-44B1-8C41-8C901A0DEC57}",
-      "PluginRefs": {
-       "Custom": [
-        {
-         "Id": "906256191"
-        }
-       ],
-       "ShareSets": [
-        {
-         "Id": "1125262053"
-        }
-       ]
-      }
-     },
-     {
       "Id": "309309195",
       "Name": "2DAmbience",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\AmbientMaster\\2DAmbience",
@@ -624,7 +622,17 @@
       "Id": "986618877",
       "Name": "PlayerWeapons",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerWeapons",
-      "GUID": "{F894E37D-7A93-4E9D-88BB-6560520EEBD6}"
+      "GUID": "{F894E37D-7A93-4E9D-88BB-6560520EEBD6}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "460341544"
+        },
+        {
+         "Id": "686920966"
+        }
+       ]
+      }
      },
      {
       "Id": "1182634443",
@@ -642,7 +650,17 @@
       "Id": "1350496757",
       "Name": "PlayerMovement",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\PlayerMaster\\PlayerMovement",
-      "GUID": "{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}"
+      "GUID": "{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "335663160"
+        },
+        {
+         "Id": "715153284"
+        }
+       ]
+      }
      },
      {
       "Id": "1459460693",
@@ -1593,7 +1611,7 @@
     "Type": "Event",
     "GUID": "{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}",
     "Language": "SFX",
-    "Hash": "{8C3CC911-5F03-2826-B297-514462ED037B}",
+    "Hash": "{BCCCA508-698D-8724-7AFC-8129C63B5135}",
     "ObjectPath": "grap_shot",
     "ShortName": "grap_shot",
     "Path": "Event/grap_shot.bnk",
@@ -1605,7 +1623,7 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\player_grap_shot.wav",
       "Path": "Media/642346148.wem",
-      "CachePath": "SFX/Placeholders/player_grap_shot_10C4C929.wem"
+      "CachePath": "SFX/Placeholders/player_grap_shot_81238AE1.wem"
      }
     ],
     "Plugins": {
@@ -1626,9 +1644,7 @@
       "Name": "grap_shot",
       "ObjectPath": "\\Events\\Game\\Grap\\grap_shot",
       "GUID": "{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}",
-      "DurationType": "OneShot",
-      "DurationMin": "0.7",
-      "DurationMax": "0.7",
+      "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "642346148"
@@ -1790,7 +1806,7 @@
     "Type": "Event",
     "GUID": "{C5F304BB-9F06-42C3-BEE9-4C60F33F28DB}",
     "Language": "SFX",
-    "Hash": "{5D22993C-DC6A-9235-2203-24389B279CD9}",
+    "Hash": "{D73241B6-8E3A-C2B5-B42C-BDAD8C46816D}",
     "ObjectPath": "player_dash",
     "ShortName": "player_dash",
     "Path": "Event/player_dash.bnk",
@@ -1937,7 +1953,7 @@
     "Type": "Event",
     "GUID": "{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}",
     "Language": "SFX",
-    "Hash": "{E33D7A2B-6746-F54F-44FC-575B819DC206}",
+    "Hash": "{4B6258A4-316E-8D2E-C50F-61E70A8DC04F}",
     "ObjectPath": "player_slide",
     "ShortName": "player_slide",
     "Path": "Event/player_slide.bnk",
@@ -2408,7 +2424,7 @@
     "Type": "Event",
     "GUID": "{E70AC961-E4C1-4F27-8D35-AC47C3EC2805}",
     "Language": "SFX",
-    "Hash": "{75174933-587F-2263-6CF4-EC25541B5C3B}",
+    "Hash": "{2ED92061-6C6B-6535-0775-57619FE605F9}",
     "ObjectPath": "player_land",
     "ShortName": "player_land",
     "Path": "Event/player_land.bnk",
@@ -2796,6 +2812,6 @@
     ]
    }
   ],
-  "FileHash": "{151BAB70-E4A7-D502-F8CC-F6A4C3B3B3AA}"
+  "FileHash": "{E394E693-CCAA-0AE9-60FF-33A596E53C16}"
  }
 }

@@ -129,16 +129,37 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Bus Name="PlayerMovement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}"/>
-								<Bus Name="PlayerWeapons" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}"/>
-								<Bus Name="testSlowMoBus" ID="{834AED33-9999-44B1-8C41-8C901A0DEC57}">
+								<Bus Name="PlayerMovement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-16</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Effect0" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
-											<ObjectRef Name="Blue_Distant_Echoes" ID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										<Reference Name="Effect0">
+											<Custom CreatedFrom="{3C6B127B-9DAE-4879-A4ED-75DF209310EC}">
+												<Effect Name="Underwater_Echoes (Custom)" ID="{68094E56-564C-4D9E-9B9D-70C81AC10C52}" ShortID="335663160" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+													<PropertyList>
+														<Property Name="DryLevel" Type="Real32" Value="-96"/>
+														<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
+														<Property Name="EnableFeedback" Type="bool" Value="True"/>
+														<Property Name="FilterFrequency" Type="Real32" Value="333"/>
+														<Property Name="FilterGain" Type="Real32" Value="7"/>
+														<Property Name="LeftCrossfeed" Type="Real32" Value="-3"/>
+														<Property Name="LeftDelayTime" Type="Real32" Value="0.11"/>
+														<Property Name="LeftFeedback" Type="Real32" Value="-19.1"/>
+														<Property Name="RightCrossfeed" Type="Real32" Value="-3"/>
+														<Property Name="RightDelayTime" Type="Real32" Value="0.14"/>
+														<Property Name="RightFeedback" Type="Real32" Value="-24.5"/>
+													</PropertyList>
+												</Effect>
+											</Custom>
 										</Reference>
 										<Reference Name="Effect1">
 											<Custom>
-												<Effect Name="Pitch Shifter (Custom)" ID="{01D092C8-978F-4133-903F-D86DD0362C0E}" ShortID="906256191" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3"/>
+												<Effect Name="Pitch Shifter (Custom)" ID="{491994D5-274E-4B7F-BF7F-689644E819AF}" ShortID="715153284" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3"/>
 											</Custom>
 										</Reference>
 									</ReferenceList>
@@ -146,7 +167,7 @@
 										<ObjectList Name="RTPC">
 											<Reference>
 												<Local>
-													<RTPC Name="" ID="{117100F7-6B3F-46EA-A56C-FC4EE5237E21}" ShortID="347413559">
+													<RTPC Name="" ID="{494B4757-2E00-4E75-B6FA-96032506C3E3}" ShortID="501808637">
 														<PropertyList>
 															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
 														</PropertyList>
@@ -156,7 +177,7 @@
 															</Reference>
 															<Reference Name="Curve">
 																<Custom>
-																	<Curve Name="" ID="{972AE0D1-0A57-4CF3-9557-5E6114DE1B5D}">
+																	<Curve Name="" ID="{7ED7B29C-7225-4EEC-BEA5-AF209FAFC0CB}">
 																		<PropertyList>
 																			<Property Name="Flags" Type="int32" Value="65537"/>
 																		</PropertyList>
@@ -191,7 +212,7 @@
 											</Reference>
 											<Reference>
 												<Local>
-													<RTPC Name="" ID="{520B4CFA-0ADA-4792-BA84-940C0C1FE1F0}" ShortID="400825439">
+													<RTPC Name="" ID="{68728EAB-705B-4D4C-AA97-B3CE033BD61F}" ShortID="242995451">
 														<PropertyList>
 															<Property Name="PropertyName" Type="string" Value="BypassEffect0"/>
 														</PropertyList>
@@ -201,7 +222,7 @@
 															</Reference>
 															<Reference Name="Curve">
 																<Custom>
-																	<Curve Name="" ID="{DD81B107-9233-4C26-9C91-C8A694050F6A}">
+																	<Curve Name="" ID="{736FDB34-1318-481F-B8DB-277976360E4D}">
 																		<PropertyList>
 																			<Property Name="Flags" Type="int32" Value="65537"/>
 																		</PropertyList>
@@ -212,7 +233,121 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>0.2</XPos>
+																				<XPos>0.699</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</Bus>
+								<Bus Name="PlayerWeapons" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}">
+									<ReferenceList>
+										<Reference Name="Effect0">
+											<Custom CreatedFrom="{3C6B127B-9DAE-4879-A4ED-75DF209310EC}">
+												<Effect Name="Underwater_Echoes (Custom)" ID="{8ECE3EC8-08AC-461A-B7C8-7E23F2592163}" ShortID="460341544" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+													<PropertyList>
+														<Property Name="DryLevel" Type="Real32" Value="-96"/>
+														<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
+														<Property Name="FilterFrequency" Type="Real32" Value="333"/>
+														<Property Name="FilterGain" Type="Real32" Value="7"/>
+														<Property Name="LeftCrossfeed" Type="Real32" Value="-3"/>
+														<Property Name="LeftDelayTime" Type="Real32" Value="0.11"/>
+														<Property Name="RightCrossfeed" Type="Real32" Value="-3"/>
+														<Property Name="RightDelayTime" Type="Real32" Value="0.14"/>
+													</PropertyList>
+												</Effect>
+											</Custom>
+										</Reference>
+										<Reference Name="Effect1">
+											<Custom>
+												<Effect Name="Pitch Shifter (Custom)" ID="{EC252FBB-AF2E-4C73-B02D-EC8B78891EEB}" ShortID="686920966" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3"/>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{D87B34F9-F089-409C-9C83-11E93CF78E88}" ShortID="1011345467">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{7E93F588-8FAF-45F9-824A-8FCDA66ED2D4}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-100</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0.19436</XPos>
+																				<YPos>-100</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0.20029</XPos>
+																				<YPos>15</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>73</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{6CDE835D-52E6-4FB2-BA51-3965BA6C0826}" ShortID="376435546">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="BypassEffect0"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{A7CB511E-A558-4850-9E6C-88C8E3DA199C}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>1</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0.999</XPos>
 																				<YPos>0</YPos>
 																				<Flags>0</Flags>
 																			</Point>
