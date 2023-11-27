@@ -13,6 +13,10 @@ class ASkyrunnerGameMode : public AGameModeBase
 
 public:
 	ASkyrunnerGameMode();
+
+	// TODO : upgrade
+	UFUNCTION(BlueprintCallable)
+	inline FString GetCurrentMapName() const { return GetWorld()->GetMapName(); }
 };
 
 
