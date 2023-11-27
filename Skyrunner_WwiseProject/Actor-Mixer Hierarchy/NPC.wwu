@@ -7,27 +7,37 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<Folder Name="NPC_Weapons" ID="{4BFAE53F-4831-45EE-8DBD-CB04D91CEE30}" ShortID="178138810">
+				<ActorMixer Name="NPC_Weapons_MainMixer" ID="{F4D0FC93-E4C0-463A-88FE-DA4F29B17CAD}" ShortID="717055462">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+						</Reference>
+					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="soundseed_bulletwhiz" ID="{C70D5667-E4C2-4FA8-87EA-281B676299E2}" ShortID="163173276">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
-							</ReferenceList>
+						<Folder Name="NPC_Weapons" ID="{4BFAE53F-4831-45EE-8DBD-CB04D91CEE30}" ShortID="178138810">
 							<ChildrenList>
-								<SourcePlugin Name="Soundseed Air Woosh" ID="{0BC857D2-CA60-4305-9AC5-D1D65F8D6A18}" ShortID="242151392" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
-									<PropertyList>
-										<Property Name="Duration" Type="Real64" Value="0.3"/>
-										<Property Name="NoiseColor" Type="int16" Value="3"/>
-										<Property Name="SpeedAutomate" Type="bool" Value="True"/>
-										<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="21.6"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<PluginData>
+								<Sound Name="soundseed_bulletwhiz" ID="{C70D5667-E4C2-4FA8-87EA-281B676299E2}" ShortID="163173276">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Soundseed Air Woosh" ID="{0BC857D2-CA60-4305-9AC5-D1D65F8D6A18}" ShortID="242151392" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
+											<PropertyList>
+												<Property Name="Duration" Type="Real64" Value="0.3"/>
+												<Property Name="NoiseColor" Type="int16" Value="3"/>
+												<Property Name="SpeedAutomate" Type="bool" Value="True"/>
+												<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="21.6"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<PluginData>
 	<WooshData>
 		<CurveList Version="1">
 			<CurveInfo Name="Speed">
@@ -72,24 +82,36 @@
 		</Path>
 	</WooshData>
 </PluginData>
-									<PluginInnerObjectList>
-										<List Name="Deflectors">
-											<PluginInnerObject Name="" ID="{EB2A20B4-EFC2-41E9-861D-1132AEE8A8FF}" PluginName="Deflector" CompanyID="0" PluginID="122">
-												<PropertyList>
-													<Property Name="Frequency" Type="Real32" Value="3003"/>
-													<Property Name="QFactor" Type="Real32" Value="38.97"/>
-												</PropertyList>
-											</PluginInnerObject>
-										</List>
-									</PluginInnerObjectList>
-								</SourcePlugin>
+											<PluginInnerObjectList>
+												<List Name="Deflectors">
+													<PluginInnerObject Name="" ID="{EB2A20B4-EFC2-41E9-861D-1132AEE8A8FF}" PluginName="Deflector" CompanyID="0" PluginID="122">
+														<PropertyList>
+															<Property Name="Frequency" Type="Real32" Value="3003"/>
+															<Property Name="QFactor" Type="Real32" Value="38.97"/>
+														</PropertyList>
+													</PluginInnerObject>
+												</List>
+											</PluginInnerObjectList>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Soundseed Air Woosh" ID="{0BC857D2-CA60-4305-9AC5-D1D65F8D6A18}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Soundseed Air Woosh" ID="{0BC857D2-CA60-4305-9AC5-D1D65F8D6A18}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						</Folder>
 					</ChildrenList>
-				</Folder>
+				</ActorMixer>
+				<ActorMixer Name="NPC_Feedback_MainMixer" ID="{221792EF-7C77-4FB7-B8EC-60D973ABD514}" ShortID="858129276">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

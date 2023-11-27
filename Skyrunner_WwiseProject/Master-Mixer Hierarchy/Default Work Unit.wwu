@@ -29,8 +29,10 @@
 										<Value>768</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Color" Type="int16" Value="10"/>
 								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="ReflectionsVolume" Type="Real64">
 									<ValueList>
 										<Value>-6</Value>
@@ -62,6 +64,8 @@
 										<Value>3840</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Color" Type="int16" Value="12"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 						</Bus>
 						<Bus Name="PLYR Master" ID="{880F05A2-569A-4D55-B7A0-1CD87FD195D0}">
@@ -315,6 +319,10 @@
 							</ChildrenList>
 						</Bus>
 						<Bus Name="Environment Master" ID="{93794CDD-D92F-4393-9B36-96AC442DDB90}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="20"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Bus Name="ENV AMB Exterior" ID="{AA242E37-0C3D-41A5-8071-0C92A0F0323A}"/>
 								<Bus Name="ENV AMB Interior" ID="{FAEBE40F-E726-4C02-8A40-76374BDF8140}"/>

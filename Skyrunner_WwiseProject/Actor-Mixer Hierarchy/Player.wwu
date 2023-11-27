@@ -7,576 +7,23 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<Folder Name="Weapons" ID="{721F29A2-8FAA-48B6-80AB-1F6FDC43F322}" ShortID="590136439">
-					<PropertyList>
-						<Property Name="Color" Type="int16" Value="1"/>
-						<Property Name="OverrideColor" Type="bool" Value="True"/>
-					</PropertyList>
+				<ActorMixer Name="PlayerMovement_MainMixer" ID="{45A46295-887A-48BC-B1B8-7A2A1B9D5383}" ShortID="459713985">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+						</Reference>
+					</ReferenceList>
 					<ChildrenList>
-						<SwitchContainer Name="game_weapon_overheat" ID="{CBEF046B-36DE-476C-B18D-B1D316D3650E}" ShortID="467273681">
+						<Folder Name="Movements" ID="{EEE852FC-5981-413D-9552-72F41884F036}" ShortID="465673798">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="1"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
-								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
-								</Reference>
-							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}" ShortID="801876267">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-2400</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-6</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="game_ammo_pickup" ID="{AB4B450C-D830-4C6C-9381-F88812401D5C}">
-											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.101466530710173"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0838201775431862"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Placeholders\game_ammo_pickup.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="976126733"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="game_ammo_pickup" ID="{AB4B450C-D830-4C6C-9381-F88812401D5C}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-							<GroupingInfo>
-								<GroupingBehaviorList>
-									<GroupingBehavior>
-										<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
-									</GroupingBehavior>
-								</GroupingBehaviorList>
-								<GroupingList>
-									<Grouping>
-										<SwitchRef Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
-										<ItemList>
-											<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="MachineGun" ID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
-										<ItemList>
-											<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Shotgun" ID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-										<ItemList>
-											<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="None" ID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
-										<ItemList>
-											<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
-										</ItemList>
-									</Grouping>
-								</GroupingList>
-							</GroupingInfo>
-						</SwitchContainer>
-						<SwitchContainer Name="game_weapon_switch" ID="{C7DEEAFC-C8C0-4273-ABCF-9E54CFDE588E}" ShortID="433373838">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
-								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="game_weapon_switch_default" ID="{29A88FA9-AE60-4A62-A279-AB7F038BFF45}" ShortID="90319145">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="game_weapon_reload" ID="{7101BE23-223E-4F86-9939-8BF5D7BC304E}">
-											<PropertyList>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.558645558487247"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Placeholders\game_weapon_reload.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="412718022"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="game_weapon_reload" ID="{7101BE23-223E-4F86-9939-8BF5D7BC304E}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-							<GroupingInfo>
-								<GroupingBehaviorList>
-									<GroupingBehavior>
-										<ItemRef Name="game_weapon_switch_default" ID="{29A88FA9-AE60-4A62-A279-AB7F038BFF45}"/>
-									</GroupingBehavior>
-								</GroupingBehaviorList>
-								<GroupingList>
-									<Grouping>
-										<SwitchRef Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
-										<ItemList>
-											<ItemRef Name="game_weapon_switch_default" ID="{29A88FA9-AE60-4A62-A279-AB7F038BFF45}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="MachineGun" ID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
-										<ItemList>
-											<ItemRef Name="game_weapon_switch_default" ID="{29A88FA9-AE60-4A62-A279-AB7F038BFF45}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Shotgun" ID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-										<ItemList>
-											<ItemRef Name="game_weapon_switch_default" ID="{29A88FA9-AE60-4A62-A279-AB7F038BFF45}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="None" ID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
-										<ItemList>
-											<ItemRef Name="game_weapon_switch_default" ID="{29A88FA9-AE60-4A62-A279-AB7F038BFF45}"/>
-										</ItemList>
-									</Grouping>
-								</GroupingList>
-							</GroupingInfo>
-						</SwitchContainer>
-						<SwitchContainer Name="game_weapon_impact" ID="{1FE7DF60-8A52-4F21-99CB-94B62E3ACA00}" ShortID="771585963">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="2"/>
-								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<Custom>
-										<Attenuation Name="Attenuation (Custom)" ID="{951EBD01-F3F5-476E-8F28-567D6E32E68D}" ShortID="560938610">
-											<CurveUsageInfoList>
-												<VolumeDryUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-														<Curve Name="VolumeDry" ID="{B2CF36E3-AC91-4F2A-9591-E364653385C9}">
-															<PropertyList>
-																<Property Name="Flags" Type="int32" Value="3"/>
-															</PropertyList>
-															<PointList>
-																<Point>
-																	<XPos>0</XPos>
-																	<YPos>0</YPos>
-																	<Flags>5</Flags>
-																</Point>
-																<Point>
-																	<XPos>100</XPos>
-																	<YPos>-200</YPos>
-																	<Flags>37</Flags>
-																</Point>
-															</PointList>
-														</Curve>
-													</CurveUsageInfo>
-												</VolumeDryUsage>
-												<VolumeWetGameUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-												</VolumeWetGameUsage>
-												<VolumeWetUserUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-												</VolumeWetUserUsage>
-												<LowPassFilterUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-												</LowPassFilterUsage>
-												<HighPassFilterUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-												</HighPassFilterUsage>
-												<SpreadUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-												</SpreadUsage>
-												<FocusUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-												</FocusUsage>
-												<ObstructionVolumeUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-												</ObstructionVolumeUsage>
-												<ObstructionLPFUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-												</ObstructionLPFUsage>
-												<ObstructionHPFUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-												</ObstructionHPFUsage>
-												<OcclusionVolumeUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-												</OcclusionVolumeUsage>
-												<OcclusionLPFUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-												</OcclusionLPFUsage>
-												<OcclusionHPFUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-												</OcclusionHPFUsage>
-												<DiffractionVolumeUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-												</DiffractionVolumeUsage>
-												<DiffractionLPFUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-												</DiffractionLPFUsage>
-												<DiffractionHPFUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-												</DiffractionHPFUsage>
-												<TransmissionVolumeUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-												</TransmissionVolumeUsage>
-												<TransmissionLPFUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-												</TransmissionLPFUsage>
-												<TransmissionHPFUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-												</TransmissionHPFUsage>
-											</CurveUsageInfoList>
-										</Attenuation>
-									</Custom>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-								</Reference>
-								<Reference Name="DefaultSwitchOrState">
-									<ObjectRef Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="3D OBJ Master" ID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
-								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<SwitchContainer Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}" ShortID="1030767237">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="DefaultSwitchOrState">
-											<ObjectRef Name="IceSurface" ID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-										<Reference Name="SwitchGroupOrStateGroup">
-											<ObjectRef Name="WeaponSurfaceCollision" ID="{DF6301E3-DB84-4607-9CDE-AFF2BF4E3A65}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<RandomSequenceContainer Name="bullet_impact_ice" ID="{04A7AAC6-41DD-400B-9974-8C23F2BBF023}" ShortID="980626936">
-											<PropertyList>
-												<Property Name="3DSpatialization" Type="int16" Value="2"/>
-												<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="3D OBJ Master" ID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="bullet_impact_concrete_brick_01" ID="{83BDDAF0-EBAC-4443-A8B6-B282CD616491}" ShortID="897904223">
-													<PropertyList>
-														<Property Name="Pitch" Type="int32">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{B6438683-0308-422A-B067-906EC900C3C4}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Max" Type="Real64" Value="1187"/>
-																			<Property Name="Min" Type="Real64" Value="-127"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>-10</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="PM_BBI_Bullet_Impact_Hit_Body_Flesh_25" ID="{E9AB18EE-ED18-47E1-8D67-8B615C43F2C7}">
-															<PropertyList>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.136502783469945"/>
-																<Property Name="TrimEnd" Type="Real64" Value="0.52694649931694"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="991022554"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="PM_BBI_Bullet_Impact_Hit_Body_Flesh_25" ID="{E9AB18EE-ED18-47E1-8D67-8B615C43F2C7}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-											<PositioningInfo>
-												<Position Name="" ID="{5BDD7B63-3B2D-41D1-874F-C9995F412C59}"/>
-											</PositioningInfo>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="bullet_impact_enemy" ID="{BA14F6A5-88E7-4743-A63D-5ED7D86878CF}" ShortID="967086831">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29" ID="{D0F4C9D6-3813-420E-AF31-235ACDC4A36B}" ShortID="1057191548">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29" ID="{264AE454-7CF8-40A9-92D7-A1B2B3544AD4}">
-															<PropertyList>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="2.62247619047619"/>
-																<Property Name="TrimEnd" Type="Real64" Value="3.581918699187"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>Placeholders\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="525589573"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29" ID="{264AE454-7CF8-40A9-92D7-A1B2B3544AD4}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-									</ChildrenList>
-									<GroupingInfo>
-										<GroupingBehaviorList>
-											<GroupingBehavior>
-												<ItemRef Name="bullet_impact_enemy" ID="{BA14F6A5-88E7-4743-A63D-5ED7D86878CF}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="bullet_impact_ice" ID="{04A7AAC6-41DD-400B-9974-8C23F2BBF023}"/>
-											</GroupingBehavior>
-										</GroupingBehaviorList>
-										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="IceSurface" ID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"/>
-												<ItemList>
-													<ItemRef Name="bullet_impact_ice" ID="{04A7AAC6-41DD-400B-9974-8C23F2BBF023}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="EnemySurface" ID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
-												<ItemList>
-													<ItemRef Name="bullet_impact_enemy" ID="{BA14F6A5-88E7-4743-A63D-5ED7D86878CF}"/>
-												</ItemList>
-											</Grouping>
-										</GroupingList>
-									</GroupingInfo>
-								</SwitchContainer>
-								<SwitchContainer Name="grenade_impact" ID="{CA0C569C-7A49-4D9A-9099-EB5A30046273}" ShortID="212433246">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="DefaultSwitchOrState">
-											<ObjectRef Name="IceSurface" ID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-										<Reference Name="SwitchGroupOrStateGroup">
-											<ObjectRef Name="WeaponSurfaceCollision" ID="{DF6301E3-DB84-4607-9CDE-AFF2BF4E3A65}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<RandomSequenceContainer Name="grenade_impact_ice" ID="{BE386251-869A-443A-9D8B-3500FA429118}" ShortID="880244806">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="Grenade_Explosion_ODY-1279-080" ID="{04529A92-2F51-40E0-8574-2AD9F571BCA0}" ShortID="99242114">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Grenade_Explosion_ODY-1279-080" ID="{6C22820A-6C84-4503-845B-614E182ECCF6}">
-															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.521365818390775"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimEnd" Type="Real64" Value="1.26268733897595"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>Grenade_Explosion_ODY-1279-080.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="285816151"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Grenade_Explosion_ODY-1279-080" ID="{6C22820A-6C84-4503-845B-614E182ECCF6}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="grenade_impact_enemy" ID="{B6DB230D-7D76-4FFA-B6F0-A6C784A3108C}" ShortID="316354926">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-												</Reference>
-											</ReferenceList>
-										</RandomSequenceContainer>
-									</ChildrenList>
-									<GroupingInfo>
-										<GroupingBehaviorList>
-											<GroupingBehavior>
-												<ItemRef Name="grenade_impact_enemy" ID="{B6DB230D-7D76-4FFA-B6F0-A6C784A3108C}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="grenade_impact_ice" ID="{BE386251-869A-443A-9D8B-3500FA429118}"/>
-											</GroupingBehavior>
-										</GroupingBehaviorList>
-										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="IceSurface" ID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"/>
-												<ItemList>
-													<ItemRef Name="grenade_impact_ice" ID="{BE386251-869A-443A-9D8B-3500FA429118}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="EnemySurface" ID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
-												<ItemList>
-													<ItemRef Name="grenade_impact_enemy" ID="{B6DB230D-7D76-4FFA-B6F0-A6C784A3108C}"/>
-												</ItemList>
-											</Grouping>
-										</GroupingList>
-									</GroupingInfo>
-								</SwitchContainer>
-							</ChildrenList>
-							<PositioningInfo>
-								<Position Name="" ID="{F946C4D0-9F26-4EAB-87D2-02D9B755B212}"/>
-							</PositioningInfo>
-							<GroupingInfo>
-								<GroupingBehaviorList>
-									<GroupingBehavior>
-										<ItemRef Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="grenade_impact" ID="{CA0C569C-7A49-4D9A-9099-EB5A30046273}"/>
-									</GroupingBehavior>
-								</GroupingBehaviorList>
-								<GroupingList>
-									<Grouping>
-										<SwitchRef Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
-										<ItemList>
-											<ItemRef Name="grenade_impact" ID="{CA0C569C-7A49-4D9A-9099-EB5A30046273}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="MachineGun" ID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
-										<ItemList>
-											<ItemRef Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Shotgun" ID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-										<ItemList>
-											<ItemRef Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="None" ID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
-										<ItemList>
-											<ItemRef Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}"/>
-										</ItemList>
-									</Grouping>
-								</GroupingList>
-							</GroupingInfo>
-						</SwitchContainer>
-						<SwitchContainer Name="game_weapon_checking_overheat" ID="{6E61E420-447D-4792-8FFE-26E73DF7310F}" ShortID="44228221">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-								</Reference>
-								<Reference Name="DefaultSwitchOrState">
-									<ObjectRef Name="CanShoot" ID="{1545C5FF-1E2A-4398-AADB-4A6F08D15159}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
-								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="OverheatState" ID="{0E6C50E8-1044-4E86-9061-13B8E93C62CB}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<SwitchContainer Name="game_weapon_shoot" ID="{7AB9AD82-2070-4C79-B217-7E83631F2128}" ShortID="59463717">
+								<Sound Name="game_jump" ID="{469655F8-E589-471B-89A4-A70EB822E721}" ShortID="535523027">
 									<PropertyList>
 										<Property Name="Color" Type="int16" Value="1"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
@@ -586,219 +33,19 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-										<Reference Name="SwitchGroupOrStateGroup">
-											<ObjectRef Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
+											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="game_weapon_shoot_grenadelauncher" ID="{58706C08-305A-4D51-AC01-A5290E2628F0}" ShortID="300794130">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Grenade_Launcher_ODY-0020-055" ID="{86A2CFC1-57AB-4048-831C-8A14A17AE61C}">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.145037037037037"/>
-														<Property Name="LoopBegin" Type="Real64" Value="0.404633879781421"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.392183606557377"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.868147176684884"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Grenade_Launcher_ODY-0020-055.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="767258260"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Grenade_Launcher_ODY-0020-055" ID="{86A2CFC1-57AB-4048-831C-8A14A17AE61C}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="game_weapon_shoot_machinegun" ID="{5020077C-24E2-46F5-88F9-1926B82B2FBD}" ShortID="782041294">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="game_weapon_shoot_machinegun" ID="{40C8A1D4-7915-46D3-84FE-718C0CC5B304}">
-													<Language>SFX</Language>
-													<AudioFile>Placeholders\game_weapon_shoot_machinegun.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="759953172"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="game_weapon_shoot_machinegun" ID="{40C8A1D4-7915-46D3-84FE-718C0CC5B304}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="game_weapon_shoot_shotgun" ID="{DCDEA920-D5F0-4CB2-ADE9-70136387DF80}" ShortID="1064202294">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="game_weapon_shoot_shotgun" ID="{71DF3D80-8677-471E-A191-CD60B3BAC8BD}">
-													<Language>SFX</Language>
-													<AudioFile>Placeholders\game_weapon_shoot_shotgun.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="353061919"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="game_weapon_shoot_shotgun" ID="{71DF3D80-8677-471E-A191-CD60B3BAC8BD}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<GroupingInfo>
-										<GroupingBehaviorList>
-											<GroupingBehavior>
-												<ItemRef Name="game_weapon_shoot_grenadelauncher" ID="{58706C08-305A-4D51-AC01-A5290E2628F0}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="game_weapon_shoot_shotgun" ID="{DCDEA920-D5F0-4CB2-ADE9-70136387DF80}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="game_weapon_shoot_machinegun" ID="{5020077C-24E2-46F5-88F9-1926B82B2FBD}"/>
-											</GroupingBehavior>
-										</GroupingBehaviorList>
-										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
-												<ItemList>
-													<ItemRef Name="game_weapon_shoot_grenadelauncher" ID="{58706C08-305A-4D51-AC01-A5290E2628F0}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="MachineGun" ID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
-												<ItemList>
-													<ItemRef Name="game_weapon_shoot_machinegun" ID="{5020077C-24E2-46F5-88F9-1926B82B2FBD}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="Shotgun" ID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-												<ItemList>
-													<ItemRef Name="game_weapon_shoot_shotgun" ID="{DCDEA920-D5F0-4CB2-ADE9-70136387DF80}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="None" ID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
-												<ItemList>
-													<ItemRef Name="game_weapon_shoot_grenadelauncher" ID="{58706C08-305A-4D51-AC01-A5290E2628F0}"/>
-												</ItemList>
-											</Grouping>
-										</GroupingList>
-									</GroupingInfo>
-								</SwitchContainer>
-								<SwitchContainer Name="game_weapon_overheat_shoot" ID="{46A5A1FA-1D30-4B2D-8A8F-91743C2AC61F}" ShortID="816943288">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="38_Pistol_from_Gun_Holster_ODC-0030-193" ID="{11AFED40-6A01-41E5-88F9-7D49F46178A4}" ShortID="638064894">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="38_Pistol_from_Gun_Holster_ODC-0030-193" ID="{57256051-8CAD-4C7A-A7D7-B0C8656D33AA}">
-													<Language>SFX</Language>
-													<AudioFile>Placeholders\38_Pistol_from_Gun_Holster_ODC-0030-193.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="103073361"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="38_Pistol_from_Gun_Holster_ODC-0030-193" ID="{57256051-8CAD-4C7A-A7D7-B0C8656D33AA}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<GroupingInfo>
-										<GroupingBehaviorList>
-											<GroupingBehavior>
-												<ItemRef Name="38_Pistol_from_Gun_Holster_ODC-0030-193" ID="{11AFED40-6A01-41E5-88F9-7D49F46178A4}"/>
-											</GroupingBehavior>
-										</GroupingBehaviorList>
-									</GroupingInfo>
-								</SwitchContainer>
-							</ChildrenList>
-							<GroupingInfo>
-								<GroupingBehaviorList>
-									<GroupingBehavior>
-										<ItemRef Name="game_weapon_shoot" ID="{7AB9AD82-2070-4C79-B217-7E83631F2128}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="game_weapon_overheat_shoot" ID="{46A5A1FA-1D30-4B2D-8A8F-91743C2AC61F}"/>
-									</GroupingBehavior>
-								</GroupingBehaviorList>
-								<GroupingList>
-									<Grouping>
-										<SwitchRef Name="CanShoot" ID="{1545C5FF-1E2A-4398-AADB-4A6F08D15159}"/>
-										<ItemList>
-											<ItemRef Name="game_weapon_shoot" ID="{7AB9AD82-2070-4C79-B217-7E83631F2128}"/>
-										</ItemList>
-									</Grouping>
-								</GroupingList>
-							</GroupingInfo>
-						</SwitchContainer>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="Movements" ID="{EEE852FC-5981-413D-9552-72F41884F036}" ShortID="465673798">
-					<PropertyList>
-						<Property Name="Color" Type="int16" Value="1"/>
-						<Property Name="OverrideColor" Type="bool" Value="True"/>
-					</PropertyList>
-					<ChildrenList>
-						<Sound Name="game_jump" ID="{469655F8-E589-471B-89A4-A70EB822E721}" ShortID="535523027">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="1"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<SourcePlugin Name="Soundseed Air Woosh" ID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" ShortID="1010974337" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
-									<PropertyList>
-										<Property Name="Duration" Type="Real64" Value="0.2"/>
-										<Property Name="SpeedAutomate" Type="bool" Value="True"/>
-										<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="1.3"/>
-										<Property Name="SpeedPointTimeRandom" Type="Real32" Value="0.01"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<PluginData>
+										<SourcePlugin Name="Soundseed Air Woosh" ID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" ShortID="1010974337" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
+											<PropertyList>
+												<Property Name="Duration" Type="Real64" Value="0.2"/>
+												<Property Name="SpeedAutomate" Type="bool" Value="True"/>
+												<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="1.3"/>
+												<Property Name="SpeedPointTimeRandom" Type="Real32" Value="0.01"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<PluginData>
 	<WooshData>
 		<CurveList Version="1">
 			<CurveInfo Name="Speed">
@@ -843,164 +90,164 @@
 		</Path>
 	</WooshData>
 </PluginData>
-									<PluginInnerObjectList>
-										<List Name="Deflectors">
-											<PluginInnerObject Name="" ID="{49A592F2-E406-452B-96D2-72911A45A308}" PluginName="Deflector" CompanyID="0" PluginID="122"/>
-										</List>
-									</PluginInnerObjectList>
-								</SourcePlugin>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Soundseed Air Woosh" ID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="game_land" ID="{2DF52269-D038-45E0-9DCB-CA9EDD6E1B33}" ShortID="217074052">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="1"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="player_land" ID="{4046AC67-13C4-4E52-B93D-8B5BF25E8886}">
+											<PluginInnerObjectList>
+												<List Name="Deflectors">
+													<PluginInnerObject Name="" ID="{49A592F2-E406-452B-96D2-72911A45A308}" PluginName="Deflector" CompanyID="0" PluginID="122"/>
+												</List>
+											</PluginInnerObjectList>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Soundseed Air Woosh" ID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="game_land" ID="{2DF52269-D038-45E0-9DCB-CA9EDD6E1B33}" ShortID="217074052">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.00692147988505747"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0102317528735632"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.0680110632183911"/>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Placeholders\player_land.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1026811673"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="player_land" ID="{4046AC67-13C4-4E52-B93D-8B5BF25E8886}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="game_slide" ID="{0F8FE257-4D33-4454-AADA-B67BCA030904}" ShortID="1019263201">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="1"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="player_slide" ID="{B7E7A1C1-8F45-4F85-8576-3B8D5EEFEC9D}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.116833773087071"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.220686015831135"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="2.11644164284079"/>
-										<Property Name="TrimEnd" Type="Real64" Value="2.70672492343194"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Placeholders\player_slide.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="129424093"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="player_slide" ID="{B7E7A1C1-8F45-4F85-8576-3B8D5EEFEC9D}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="game_dash" ID="{1F66B6C0-B738-4563-BEB5-416E7C8B14E1}" ShortID="673668468">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="1"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-2</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-								</Reference>
-								<Reference Name="Effect0">
-									<Custom>
-										<Effect Name="Delay (Custom)" ID="{C0FCC26E-70DE-482D-9F02-A6A6E9AD97D5}" ShortID="640802269" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="player_land" ID="{4046AC67-13C4-4E52-B93D-8B5BF25E8886}">
 											<PropertyList>
-												<Property Name="DelayTime" Type="Real32" Value="0.19"/>
-												<Property Name="Feedback" Type="Real32" Value="17"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00692147988505747"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0102317528735632"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0680110632183911"/>
 											</PropertyList>
-											<ObjectLists>
-												<ObjectList Name="RTPC">
-													<Reference>
-														<Local>
-															<RTPC Name="" ID="{41CFD8C8-E369-4887-87D4-1693D5C648EC}" ShortID="477413482">
-																<PropertyList>
-																	<Property Name="PropertyName" Type="string" Value="Feedback"/>
-																</PropertyList>
-																<ReferenceList>
-																	<Reference Name="ControlInput">
-																		<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																	</Reference>
-																	<Reference Name="Curve">
-																		<Custom>
-																			<Curve Name="" ID="{E1AEFC0E-C246-46CD-B140-5D59532C0EDA}">
-																				<PropertyList>
-																					<Property Name="Flags" Type="int32" Value="1"/>
-																				</PropertyList>
-																				<PointList>
-																					<Point>
-																						<XPos>0</XPos>
-																						<YPos>0</YPos>
-																						<Flags>5</Flags>
-																					</Point>
-																					<Point>
-																						<XPos>0.20089</XPos>
-																						<YPos>37.10627</YPos>
-																						<Flags>0</Flags>
-																					</Point>
-																					<Point>
-																						<XPos>1</XPos>
-																						<YPos>45.4343</YPos>
-																						<Flags>37</Flags>
-																					</Point>
-																				</PointList>
-																			</Curve>
-																		</Custom>
-																	</Reference>
-																</ReferenceList>
-															</RTPC>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-										</Effect>
-									</Custom>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<SourcePlugin Name="Soundseed Air Woosh" ID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" ShortID="631246921" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
+											<Language>SFX</Language>
+											<AudioFile>Placeholders\player_land.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1026811673"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="player_land" ID="{4046AC67-13C4-4E52-B93D-8B5BF25E8886}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="game_slide" ID="{0F8FE257-4D33-4454-AADA-B67BCA030904}" ShortID="1019263201">
 									<PropertyList>
-										<Property Name="Duration" Type="Real64" Value="0.15"/>
-										<Property Name="Speed" Type="Real32" Value="50"/>
-										<Property Name="SpeedAutomate" Type="bool" Value="True"/>
-										<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="5"/>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
-									<Language>SFX</Language>
-									<PluginData>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="player_slide" ID="{B7E7A1C1-8F45-4F85-8576-3B8D5EEFEC9D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.116833773087071"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.220686015831135"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.11644164284079"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.70672492343194"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Placeholders\player_slide.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="129424093"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="player_slide" ID="{B7E7A1C1-8F45-4F85-8576-3B8D5EEFEC9D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="game_dash" ID="{1F66B6C0-B738-4563-BEB5-416E7C8B14E1}" ShortID="673668468">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Delay (Custom)" ID="{C0FCC26E-70DE-482D-9F02-A6A6E9AD97D5}" ShortID="640802269" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+													<PropertyList>
+														<Property Name="DelayTime" Type="Real32" Value="0.19"/>
+														<Property Name="Feedback" Type="Real32" Value="17"/>
+													</PropertyList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{41CFD8C8-E369-4887-87D4-1693D5C648EC}" ShortID="477413482">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Feedback"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{E1AEFC0E-C246-46CD-B140-5D59532C0EDA}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>0.20089</XPos>
+																								<YPos>37.10627</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>1</XPos>
+																								<YPos>45.4343</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</Effect>
+											</Custom>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Soundseed Air Woosh" ID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" ShortID="631246921" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
+											<PropertyList>
+												<Property Name="Duration" Type="Real64" Value="0.15"/>
+												<Property Name="Speed" Type="Real32" Value="50"/>
+												<Property Name="SpeedAutomate" Type="bool" Value="True"/>
+												<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="5"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<PluginData>
 	<WooshData>
 		<CurveList Version="1">
 			<CurveInfo Name="Speed">
@@ -1045,93 +292,93 @@
 		</Path>
 	</WooshData>
 </PluginData>
-									<PluginInnerObjectList>
-										<List Name="Deflectors">
-											<PluginInnerObject Name="" ID="{EAC13854-2008-45EF-9E15-C0139361B597}" PluginName="Deflector" CompanyID="0" PluginID="122">
-												<PropertyList>
-													<Property Name="Frequency" Type="Real32" Value="92"/>
-													<Property Name="Gain" Type="Real32" Value="-10"/>
-													<Property Name="QFactor" Type="Real32" Value="38.11"/>
-												</PropertyList>
-											</PluginInnerObject>
-											<PluginInnerObject Name="" ID="{41777E59-ED02-41FC-BB97-AEFCE23D16AB}" PluginName="Deflector" CompanyID="0" PluginID="122">
-												<PropertyList>
-													<Property Name="Gain" Type="Real32" Value="-22"/>
-												</PropertyList>
-											</PluginInnerObject>
-										</List>
-									</PluginInnerObjectList>
-								</SourcePlugin>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Soundseed Air Woosh" ID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Folder Name="Grap" ID="{11E135C0-B075-46B0-9083-E8DF86D70761}" ShortID="902859210">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="1"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
-							<ChildrenList>
-								<Sound Name="game_grap_shot" ID="{87049EC6-A228-4E62-BB17-D25F07B8DDA2}" ShortID="558668865">
-									<PropertyList>
-										<Property Name="Color" Type="int16" Value="1"/>
-										<Property Name="OverrideColor" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="player_grap_shot" ID="{0F34A3B9-198D-48D3-A14F-415477CD733A}">
-											<PropertyList>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Placeholders\player_grap_shot.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="642346148"/>
-											</MediaIDList>
-										</AudioFileSource>
+											<PluginInnerObjectList>
+												<List Name="Deflectors">
+													<PluginInnerObject Name="" ID="{EAC13854-2008-45EF-9E15-C0139361B597}" PluginName="Deflector" CompanyID="0" PluginID="122">
+														<PropertyList>
+															<Property Name="Frequency" Type="Real32" Value="92"/>
+															<Property Name="Gain" Type="Real32" Value="-10"/>
+															<Property Name="QFactor" Type="Real32" Value="38.11"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{41777E59-ED02-41FC-BB97-AEFCE23D16AB}" PluginName="Deflector" CompanyID="0" PluginID="122">
+														<PropertyList>
+															<Property Name="Gain" Type="Real32" Value="-22"/>
+														</PropertyList>
+													</PluginInnerObject>
+												</List>
+											</PluginInnerObjectList>
+										</SourcePlugin>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="player_grap_shot" ID="{0F34A3B9-198D-48D3-A14F-415477CD733A}" Platform="Linked"/>
+										<ActiveSource Name="Soundseed Air Woosh" ID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="game_grap_woosh" ID="{3A64FC17-1CF8-4D36-8540-3802578E578D}" ShortID="796402596">
+								<Folder Name="Grap" ID="{11E135C0-B075-46B0-9083-E8DF86D70761}" ShortID="902859210">
 									<PropertyList>
 										<Property Name="Color" Type="int16" Value="1"/>
-										<Property Name="InitialDelay" Type="Real64">
-											<ValueList>
-												<Value>0.2</Value>
-											</ValueList>
-										</Property>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="Soundseed Air Woosh" ID="{A341E8D9-733C-420F-858A-0DA3151904E5}" ShortID="1018588396" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
+										<Sound Name="game_grap_shot" ID="{87049EC6-A228-4E62-BB17-D25F07B8DDA2}" ShortID="558668865">
 											<PropertyList>
-												<Property Name="Duration" Type="Real64" Value="0.4"/>
-												<Property Name="FrequencyScale" Type="Real32" Value="-4"/>
-												<Property Name="GainOffset" Type="Real32" Value="-18.3"/>
-												<Property Name="Speed" Type="Real32" Value="50"/>
-												<Property Name="SpeedAutomate" Type="bool" Value="True"/>
+												<Property Name="Color" Type="int16" Value="1"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
 											</PropertyList>
-											<Language>SFX</Language>
-											<PluginData>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_grap_shot" ID="{0F34A3B9-198D-48D3-A14F-415477CD733A}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Placeholders\player_grap_shot.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="642346148"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="player_grap_shot" ID="{0F34A3B9-198D-48D3-A14F-415477CD733A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="game_grap_woosh" ID="{3A64FC17-1CF8-4D36-8540-3802578E578D}" ShortID="796402596">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="1"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>0.2</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Soundseed Air Woosh" ID="{A341E8D9-733C-420F-858A-0DA3151904E5}" ShortID="1018588396" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
+													<PropertyList>
+														<Property Name="Duration" Type="Real64" Value="0.4"/>
+														<Property Name="FrequencyScale" Type="Real32" Value="-4"/>
+														<Property Name="GainOffset" Type="Real32" Value="-18.3"/>
+														<Property Name="Speed" Type="Real32" Value="50"/>
+														<Property Name="SpeedAutomate" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<PluginData>
 	<WooshData>
 		<CurveList Version="1">
 			<CurveInfo Name="Speed">
@@ -1176,26 +423,803 @@
 		</Path>
 	</WooshData>
 </PluginData>
-											<PluginInnerObjectList>
-												<List Name="Deflectors">
-													<PluginInnerObject Name="" ID="{6B8564E1-D698-4BE9-9840-01DAF995B9E4}" PluginName="Deflector" CompanyID="0" PluginID="122"/>
-													<PluginInnerObject Name="" ID="{74FAD4C9-D1E8-4158-A4B0-E405EC449A07}" PluginName="Deflector" CompanyID="0" PluginID="122">
-														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="200"/>
-														</PropertyList>
-													</PluginInnerObject>
-												</List>
-											</PluginInnerObjectList>
-										</SourcePlugin>
+													<PluginInnerObjectList>
+														<List Name="Deflectors">
+															<PluginInnerObject Name="" ID="{6B8564E1-D698-4BE9-9840-01DAF995B9E4}" PluginName="Deflector" CompanyID="0" PluginID="122"/>
+															<PluginInnerObject Name="" ID="{74FAD4C9-D1E8-4158-A4B0-E405EC449A07}" PluginName="Deflector" CompanyID="0" PluginID="122">
+																<PropertyList>
+																	<Property Name="Frequency" Type="Real32" Value="200"/>
+																</PropertyList>
+															</PluginInnerObject>
+														</List>
+													</PluginInnerObjectList>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Soundseed Air Woosh" ID="{A341E8D9-733C-420F-858A-0DA3151904E5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Soundseed Air Woosh" ID="{A341E8D9-733C-420F-858A-0DA3151904E5}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								</Folder>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
-				</Folder>
+				</ActorMixer>
+				<ActorMixer Name="PlayerWeapon_MainMixer" ID="{91E8FD0F-8E8C-41D0-8478-CD7A3046F024}" ShortID="941070365">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Folder Name="Weapons" ID="{721F29A2-8FAA-48B6-80AB-1F6FDC43F322}" ShortID="590136439">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<SwitchContainer Name="game_weapon_overheat" ID="{CBEF046B-36DE-476C-B18D-B1D316D3650E}" ShortID="467273681">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}" ShortID="801876267">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-2400</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="game_ammo_pickup" ID="{AB4B450C-D830-4C6C-9381-F88812401D5C}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.101466530710173"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0838201775431862"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Placeholders\game_ammo_pickup.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="976126733"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="game_ammo_pickup" ID="{AB4B450C-D830-4C6C-9381-F88812401D5C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+												<ItemList>
+													<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="MachineGun" ID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+												<ItemList>
+													<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Shotgun" ID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+												<ItemList>
+													<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="None" ID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+												<ItemList>
+													<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="game_weapon_switch" ID="{C7DEEAFC-C8C0-4273-ABCF-9E54CFDE588E}" ShortID="433373838">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="game_weapon_switch_default" ID="{29A88FA9-AE60-4A62-A279-AB7F038BFF45}" ShortID="90319145">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="game_weapon_reload" ID="{7101BE23-223E-4F86-9939-8BF5D7BC304E}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.558645558487247"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Placeholders\game_weapon_reload.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="412718022"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="game_weapon_reload" ID="{7101BE23-223E-4F86-9939-8BF5D7BC304E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="game_weapon_switch_default" ID="{29A88FA9-AE60-4A62-A279-AB7F038BFF45}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+												<ItemList>
+													<ItemRef Name="game_weapon_switch_default" ID="{29A88FA9-AE60-4A62-A279-AB7F038BFF45}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="MachineGun" ID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+												<ItemList>
+													<ItemRef Name="game_weapon_switch_default" ID="{29A88FA9-AE60-4A62-A279-AB7F038BFF45}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Shotgun" ID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+												<ItemList>
+													<ItemRef Name="game_weapon_switch_default" ID="{29A88FA9-AE60-4A62-A279-AB7F038BFF45}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="None" ID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+												<ItemList>
+													<ItemRef Name="game_weapon_switch_default" ID="{29A88FA9-AE60-4A62-A279-AB7F038BFF45}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="game_weapon_impact" ID="{1FE7DF60-8A52-4F21-99CB-94B62E3ACA00}" ShortID="771585963">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<Custom>
+												<Attenuation Name="Attenuation (Custom)" ID="{951EBD01-F3F5-476E-8F28-567D6E32E68D}" ShortID="560938610">
+													<CurveUsageInfoList>
+														<VolumeDryUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="VolumeDry" ID="{B2CF36E3-AC91-4F2A-9591-E364653385C9}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="3"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>-200</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</VolumeDryUsage>
+														<VolumeWetGameUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+														</VolumeWetGameUsage>
+														<VolumeWetUserUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+														</VolumeWetUserUsage>
+														<LowPassFilterUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</LowPassFilterUsage>
+														<HighPassFilterUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</HighPassFilterUsage>
+														<SpreadUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</SpreadUsage>
+														<FocusUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</FocusUsage>
+														<ObstructionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionVolumeUsage>
+														<ObstructionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionLPFUsage>
+														<ObstructionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionHPFUsage>
+														<OcclusionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionVolumeUsage>
+														<OcclusionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionLPFUsage>
+														<OcclusionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionHPFUsage>
+														<DiffractionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionVolumeUsage>
+														<DiffractionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionLPFUsage>
+														<DiffractionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionHPFUsage>
+														<TransmissionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionVolumeUsage>
+														<TransmissionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionLPFUsage>
+														<TransmissionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionHPFUsage>
+													</CurveUsageInfoList>
+												</Attenuation>
+											</Custom>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="3D OBJ Master" ID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SwitchContainer Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}" ShortID="1030767237">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="IceSurface" ID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="WeaponSurfaceCollision" ID="{DF6301E3-DB84-4607-9CDE-AFF2BF4E3A65}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="bullet_impact_ice" ID="{04A7AAC6-41DD-400B-9974-8C23F2BBF023}" ShortID="980626936">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="3D OBJ Master" ID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="bullet_impact_concrete_brick_01" ID="{83BDDAF0-EBAC-4443-A8B6-B282CD616491}" ShortID="897904223">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{B6438683-0308-422A-B067-906EC900C3C4}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="1187"/>
+																					<Property Name="Min" Type="Real64" Value="-127"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-10</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="PM_BBI_Bullet_Impact_Hit_Body_Flesh_25" ID="{E9AB18EE-ED18-47E1-8D67-8B615C43F2C7}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.136502783469945"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.52694649931694"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="991022554"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="PM_BBI_Bullet_Impact_Hit_Body_Flesh_25" ID="{E9AB18EE-ED18-47E1-8D67-8B615C43F2C7}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<PositioningInfo>
+														<Position Name="" ID="{5BDD7B63-3B2D-41D1-874F-C9995F412C59}"/>
+													</PositioningInfo>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="bullet_impact_enemy" ID="{BA14F6A5-88E7-4743-A63D-5ED7D86878CF}" ShortID="967086831">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29" ID="{D0F4C9D6-3813-420E-AF31-235ACDC4A36B}" ShortID="1057191548">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29" ID="{264AE454-7CF8-40A9-92D7-A1B2B3544AD4}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="2.62247619047619"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="3.581918699187"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Placeholders\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="525589573"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29" ID="{264AE454-7CF8-40A9-92D7-A1B2B3544AD4}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="bullet_impact_enemy" ID="{BA14F6A5-88E7-4743-A63D-5ED7D86878CF}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="bullet_impact_ice" ID="{04A7AAC6-41DD-400B-9974-8C23F2BBF023}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="IceSurface" ID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"/>
+														<ItemList>
+															<ItemRef Name="bullet_impact_ice" ID="{04A7AAC6-41DD-400B-9974-8C23F2BBF023}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="EnemySurface" ID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
+														<ItemList>
+															<ItemRef Name="bullet_impact_enemy" ID="{BA14F6A5-88E7-4743-A63D-5ED7D86878CF}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="grenade_impact" ID="{CA0C569C-7A49-4D9A-9099-EB5A30046273}" ShortID="212433246">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="IceSurface" ID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="WeaponSurfaceCollision" ID="{DF6301E3-DB84-4607-9CDE-AFF2BF4E3A65}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="grenade_impact_ice" ID="{BE386251-869A-443A-9D8B-3500FA429118}" ShortID="880244806">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Grenade_Explosion_ODY-1279-080" ID="{04529A92-2F51-40E0-8574-2AD9F571BCA0}" ShortID="99242114">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Grenade_Explosion_ODY-1279-080" ID="{6C22820A-6C84-4503-845B-614E182ECCF6}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.521365818390775"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="1.26268733897595"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Grenade_Explosion_ODY-1279-080.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="285816151"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Grenade_Explosion_ODY-1279-080" ID="{6C22820A-6C84-4503-845B-614E182ECCF6}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="grenade_impact_enemy" ID="{B6DB230D-7D76-4FFA-B6F0-A6C784A3108C}" ShortID="316354926">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="grenade_impact_enemy" ID="{B6DB230D-7D76-4FFA-B6F0-A6C784A3108C}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="grenade_impact_ice" ID="{BE386251-869A-443A-9D8B-3500FA429118}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="IceSurface" ID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"/>
+														<ItemList>
+															<ItemRef Name="grenade_impact_ice" ID="{BE386251-869A-443A-9D8B-3500FA429118}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="EnemySurface" ID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
+														<ItemList>
+															<ItemRef Name="grenade_impact_enemy" ID="{B6DB230D-7D76-4FFA-B6F0-A6C784A3108C}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{F946C4D0-9F26-4EAB-87D2-02D9B755B212}"/>
+									</PositioningInfo>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="grenade_impact" ID="{CA0C569C-7A49-4D9A-9099-EB5A30046273}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+												<ItemList>
+													<ItemRef Name="grenade_impact" ID="{CA0C569C-7A49-4D9A-9099-EB5A30046273}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="MachineGun" ID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+												<ItemList>
+													<ItemRef Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Shotgun" ID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+												<ItemList>
+													<ItemRef Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="None" ID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+												<ItemList>
+													<ItemRef Name="bullet_impact" ID="{6285C382-2621-436C-9AEF-775003D261C1}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="game_weapon_checking_overheat" ID="{6E61E420-447D-4792-8FFE-26E73DF7310F}" ShortID="44228221">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="CanShoot" ID="{1545C5FF-1E2A-4398-AADB-4A6F08D15159}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="OverheatState" ID="{0E6C50E8-1044-4E86-9061-13B8E93C62CB}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SwitchContainer Name="game_weapon_shoot" ID="{7AB9AD82-2070-4C79-B217-7E83631F2128}" ShortID="59463717">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="1"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="WeaponState" ID="{912BC3CC-7356-4483-9C97-B04B3D54A890}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="game_weapon_shoot_grenadelauncher" ID="{58706C08-305A-4D51-AC01-A5290E2628F0}" ShortID="300794130">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Grenade_Launcher_ODY-0020-055" ID="{86A2CFC1-57AB-4048-831C-8A14A17AE61C}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.145037037037037"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0.404633879781421"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.392183606557377"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.868147176684884"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Grenade_Launcher_ODY-0020-055.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="767258260"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Grenade_Launcher_ODY-0020-055" ID="{86A2CFC1-57AB-4048-831C-8A14A17AE61C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="game_weapon_shoot_machinegun" ID="{5020077C-24E2-46F5-88F9-1926B82B2FBD}" ShortID="782041294">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="game_weapon_shoot_machinegun" ID="{40C8A1D4-7915-46D3-84FE-718C0CC5B304}">
+															<Language>SFX</Language>
+															<AudioFile>Placeholders\game_weapon_shoot_machinegun.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="759953172"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="game_weapon_shoot_machinegun" ID="{40C8A1D4-7915-46D3-84FE-718C0CC5B304}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="game_weapon_shoot_shotgun" ID="{DCDEA920-D5F0-4CB2-ADE9-70136387DF80}" ShortID="1064202294">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="game_weapon_shoot_shotgun" ID="{71DF3D80-8677-471E-A191-CD60B3BAC8BD}">
+															<Language>SFX</Language>
+															<AudioFile>Placeholders\game_weapon_shoot_shotgun.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="353061919"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="game_weapon_shoot_shotgun" ID="{71DF3D80-8677-471E-A191-CD60B3BAC8BD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="game_weapon_shoot_grenadelauncher" ID="{58706C08-305A-4D51-AC01-A5290E2628F0}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="game_weapon_shoot_shotgun" ID="{DCDEA920-D5F0-4CB2-ADE9-70136387DF80}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="game_weapon_shoot_machinegun" ID="{5020077C-24E2-46F5-88F9-1926B82B2FBD}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="GrenadeLauncher" ID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+														<ItemList>
+															<ItemRef Name="game_weapon_shoot_grenadelauncher" ID="{58706C08-305A-4D51-AC01-A5290E2628F0}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="MachineGun" ID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+														<ItemList>
+															<ItemRef Name="game_weapon_shoot_machinegun" ID="{5020077C-24E2-46F5-88F9-1926B82B2FBD}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Shotgun" ID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+														<ItemList>
+															<ItemRef Name="game_weapon_shoot_shotgun" ID="{DCDEA920-D5F0-4CB2-ADE9-70136387DF80}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="None" ID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+														<ItemList>
+															<ItemRef Name="game_weapon_shoot_grenadelauncher" ID="{58706C08-305A-4D51-AC01-A5290E2628F0}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="game_weapon_overheat_shoot" ID="{46A5A1FA-1D30-4B2D-8A8F-91743C2AC61F}" ShortID="816943288">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="38_Pistol_from_Gun_Holster_ODC-0030-193" ID="{11AFED40-6A01-41E5-88F9-7D49F46178A4}" ShortID="638064894">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="38_Pistol_from_Gun_Holster_ODC-0030-193" ID="{57256051-8CAD-4C7A-A7D7-B0C8656D33AA}">
+															<Language>SFX</Language>
+															<AudioFile>Placeholders\38_Pistol_from_Gun_Holster_ODC-0030-193.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="103073361"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="38_Pistol_from_Gun_Holster_ODC-0030-193" ID="{57256051-8CAD-4C7A-A7D7-B0C8656D33AA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="38_Pistol_from_Gun_Holster_ODC-0030-193" ID="{11AFED40-6A01-41E5-88F9-7D49F46178A4}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+											</GroupingInfo>
+										</SwitchContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="game_weapon_shoot" ID="{7AB9AD82-2070-4C79-B217-7E83631F2128}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="game_weapon_overheat_shoot" ID="{46A5A1FA-1D30-4B2D-8A8F-91743C2AC61F}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="CanShoot" ID="{1545C5FF-1E2A-4398-AADB-4A6F08D15159}"/>
+												<ItemList>
+													<ItemRef Name="game_weapon_shoot" ID="{7AB9AD82-2070-4C79-B217-7E83631F2128}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
