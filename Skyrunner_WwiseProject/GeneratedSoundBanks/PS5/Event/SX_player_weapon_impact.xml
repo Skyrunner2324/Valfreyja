@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="946406252" Type="Event" GUID="{7B2B9537-B71E-43D4-9310-46937A472AD5}" Language="SFX" Hash="{DA99FF52-073C-2C59-8F69-182BEA683E4F}">
+		<SoundBank Id="946406252" Type="Event" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" Language="SFX" Hash="{C4509CA5-9156-398F-EECD-7B6C8AA9B093}">
 			<ObjectPath>SX_player_weapon_impact</ObjectPath>
 			<ShortName>SX_player_weapon_impact</ShortName>
 			<Path>Event/SX_player_weapon_impact.bnk</Path>
@@ -9,21 +9,21 @@
 				<File Id="285816151" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Grenade_Explosion_ODY-1279-080.wav</ShortName>
 					<Path>Media/285816151.wem</Path>
-					<CachePath>SFX/Grenade_Explosion_ODY-1279-080_F1D720E4.wem</CachePath>
+					<CachePath>SFX/Grenade_Explosion_ODY-1279-080_6A94F4BF.wem</CachePath>
 				</File>
 				<File Id="525589573" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav</ShortName>
 					<Path>Media/525589573.wem</Path>
-					<CachePath>SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_2E416DEA.wem</CachePath>
+					<CachePath>SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_D10598FD.wem</CachePath>
 				</File>
 				<File Id="991022554" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav</ShortName>
 					<Path>Media/991022554.wem</Path>
-					<CachePath>SFX/PM_BBI_Bullet_Impact_Hit_Body_Flesh_25_EAB07D6B.wem</CachePath>
+					<CachePath>SFX/PM_BBI_Bullet_Impact_Hit_Body_Flesh_25_C76A9090.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="946406252" Name="SX_player_weapon_impact" ObjectPath="\Events\Player\Weapon\SX_player_weapon_impact" GUID="{7B2B9537-B71E-43D4-9310-46937A472AD5}" MaxAttenuation="100" DurationType="OneShot" DurationMin="0" DurationMax="1.2626873">
+				<Event Id="946406252" Name="SX_player_weapon_impact" ObjectPath="\Events\Player\Weapon\SX_player_weapon_impact" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" DurationType="OneShot" DurationMin="0" DurationMax="1.2626873">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}" Default="true"/>
@@ -70,6 +70,23 @@
 								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
+									<MediaRefs>
+										<MediaRef Id="991022554"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3661774060" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
+									<MediaRefs>
+										<MediaRef Id="525589573"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 			</Events>
@@ -77,7 +94,7 @@
 				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
 					<States>
 						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{E67CFD76-C3DF-4F69-BDFA-D136B763E827}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
 						<State Id="2958002925" Name="GrenadeLauncher" ObjectPath="\States\Default Work Unit\WeaponState\GrenadeLauncher" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
 						<State Id="3678545986" Name="MachineGun" ObjectPath="\States\Default Work Unit\WeaponState\MachineGun" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
 					</States>
@@ -93,5 +110,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{446CC748-2180-9060-4B18-97EAF8CAA330}</FileHash>
+	<FileHash>{76AD7F27-B1CB-165A-3499-C2660BDD4C4F}</FileHash>
 </SoundBanksInfo>

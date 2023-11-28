@@ -8,9 +8,9 @@
    {
     "Id": "946406252",
     "Type": "Event",
-    "GUID": "{7B2B9537-B71E-43D4-9310-46937A472AD5}",
+    "GUID": "{C2635664-3DF8-496D-BA41-22C25299ACE8}",
     "Language": "SFX",
-    "Hash": "{DA99FF52-073C-2C59-8F69-182BEA683E4F}",
+    "Hash": "{C4509CA5-9156-398F-EECD-7B6C8AA9B093}",
     "ObjectPath": "SX_player_weapon_impact",
     "ShortName": "SX_player_weapon_impact",
     "Path": "Event/SX_player_weapon_impact.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Grenade_Explosion_ODY-1279-080.wav",
       "Path": "Media/285816151.wem",
-      "CachePath": "SFX/Grenade_Explosion_ODY-1279-080_F1D720E4.wem"
+      "CachePath": "SFX/Grenade_Explosion_ODY-1279-080_6A94F4BF.wem"
      },
      {
       "Id": "525589573",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav",
       "Path": "Media/525589573.wem",
-      "CachePath": "SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_2E416DEA.wem"
+      "CachePath": "SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_D10598FD.wem"
      },
      {
       "Id": "991022554",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav",
       "Path": "Media/991022554.wem",
-      "CachePath": "SFX/PM_BBI_Bullet_Impact_Hit_Body_Flesh_25_EAB07D6B.wem"
+      "CachePath": "SFX/PM_BBI_Bullet_Impact_Hit_Body_Flesh_25_C76A9090.wem"
      }
     ],
     "Events": [
@@ -48,8 +48,7 @@
       "Id": "946406252",
       "Name": "SX_player_weapon_impact",
       "ObjectPath": "\\Events\\Player\\Weapon\\SX_player_weapon_impact",
-      "GUID": "{7B2B9537-B71E-43D4-9310-46937A472AD5}",
-      "MaxAttenuation": "100",
+      "GUID": "{C2635664-3DF8-496D-BA41-22C25299ACE8}",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "1.2626873",
@@ -152,6 +151,43 @@
           ]
          }
         ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "4232248784",
+         "Id": "748895195",
+         "GUID": "{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "194784494",
+           "Id": "3353720555",
+           "GUID": "{4578F74A-2F6F-42EB-891F-614C2D62B7D8}",
+           "Default": "true"
+          },
+          "MediaRefs": [
+           {
+            "Id": "991022554"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "194784494",
+           "Id": "3661774060",
+           "GUID": "{DC912065-E687-4C3C-891B-504BA636A074}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "525589573"
+           }
+          ]
+         }
+        ]
        }
       ]
      }
@@ -173,7 +209,7 @@
         "Id": "748895195",
         "Name": "None",
         "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\None",
-        "GUID": "{E67CFD76-C3DF-4F69-BDFA-D136B763E827}"
+        "GUID": "{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"
        },
        {
         "Id": "2958002925",
@@ -214,6 +250,6 @@
     ]
    }
   ],
-  "FileHash": "{BB5831A9-218D-7781-17D8-8BDD703E88DC}"
+  "FileHash": "{A3529FAC-9EAD-C1F9-EF72-6322E2D58CD7}"
  }
 }

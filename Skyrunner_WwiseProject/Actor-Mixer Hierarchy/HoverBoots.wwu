@@ -13,11 +13,14 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+							<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<BlendContainer Name="HoverBlendEngine" ID="{65184FAA-2215-4CBC-A089-461A4B932FBC}" ShortID="761036772">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -55,7 +58,7 @@
 																					</Point>
 																					<Point>
 																						<XPos>2000</XPos>
-																						<YPos>926.27635</YPos>
+																						<YPos>120.12788</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -88,8 +91,7 @@
 									<ChildrenList>
 										<SourcePlugin Name="Soundseed Grain" ID="{44B7C0F1-EDB0-4E86-8AD6-948B7FEAF35E}" ShortID="28404726" PluginName="SoundSeed Grain" CompanyID="0" PluginID="183">
 											<PropertyList>
-												<Property Name="Amplitude" Type="Real32" Value="77"/>
-												<Property Name="Attack" Type="Real32" Value="16"/>
+												<Property Name="Attack" Type="Real32" Value="61"/>
 												<Property Name="Duration" Type="Real32" Value="74"/>
 												<Property Name="DurationMultiplier" Type="Real32" Value="3.7"/>
 												<Property Name="FilterFreq" Type="Real32" Value="45"/>
@@ -99,7 +101,7 @@
 												<Property Name="MarkerSelect" Type="Real32" Value="8.3"/>
 												<Property Name="ModWaveform1" Type="int32" Value="0"/>
 												<Property Name="Release" Type="Real32" Value="5"/>
-												<Property Name="Speed" Type="Real32" Value="0.4"/>
+												<Property Name="Speed" Type="Real32" Value="0.3"/>
 												<Property Name="Transpose" Type="Real32" Value="-203"/>
 												<Property Name="WindowMode" Type="int32" Value="0"/>
 											</PropertyList>
@@ -179,7 +181,7 @@
 																					</Point>
 																					<Point>
 																						<XPos>2000</XPos>
-																						<YPos>4899.16512</YPos>
+																						<YPos>3082.9489</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -579,7 +581,7 @@
 								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-24</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

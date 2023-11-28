@@ -9,71 +9,227 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="187046019" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{7C875E5B-FEB0-57A2-9A7A-E6335E587E70}">
+		<SoundBank Id="187046019" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{ABBA1F66-4DB4-5499-44C0-ED36A2C71E02}">
 			<ObjectPath>LargeRoom</ObjectPath>
 			<ShortName>LargeRoom</ShortName>
 			<Path>Bus/LargeRoom.bnk</Path>
 			<AuxBusses>
-				<AuxBus Id="187046019" Name="LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
+				<AuxBus Id="187046019" Name="LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<AuxBusRefs>
-						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
 		<SoundBank Id="216067002" Type="Event" GUID="{FC9252BB-4746-4A62-AB71-565BBB37F6D2}" Language="SFX" Hash="{4519E34B-4A1E-B087-CA64-5189CA3187C4}">
-			<ObjectPath>ui_confirm</ObjectPath>
-			<ShortName>ui_confirm</ShortName>
-			<Path>Event/ui_confirm.bnk</Path>
+			<ObjectPath>UI_confirm</ObjectPath>
+			<ShortName>UI_confirm</ShortName>
+			<Path>Event/UI_confirm.bnk</Path>
 			<Events>
-				<Event Id="216067002" Name="ui_confirm" ObjectPath="\Events\UI\ui_confirm" GUID="{FC9252BB-4746-4A62-AB71-565BBB37F6D2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="216067002" Name="UI_confirm" ObjectPath="\Events\UI\UI_confirm" GUID="{FC9252BB-4746-4A62-AB71-565BBB37F6D2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="233293630" Type="Event" GUID="{85FE7A46-F893-42AA-8787-F5597C4AF630}" Language="SFX" Hash="{91A55520-9C90-8CA3-B2C2-130AABFFBF29}">
-			<ObjectPath>enemy_gunner_shot</ObjectPath>
-			<ShortName>enemy_gunner_shot</ShortName>
-			<Path>Event/enemy_gunner_shot.bnk</Path>
-			<Events>
-				<Event Id="233293630" Name="enemy_gunner_shot" ObjectPath="\Events\Enemy\enemy_gunner_shot" GUID="{85FE7A46-F893-42AA-8787-F5597C4AF630}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="283915908" Type="Event" GUID="{320EAD8E-718C-462E-A1F1-4AD653892209}" Language="SFX" Hash="{63D9B961-F20D-1AE6-BF3D-1FFDE887182E}">
-			<ObjectPath>weapon_switch</ObjectPath>
-			<ShortName>weapon_switch</ShortName>
-			<Path>Event/weapon_switch.bnk</Path>
+		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{4B906D3A-ECD2-1813-DB8C-AC1801D5864D}">
+			<ObjectPath>SX_player_land</ObjectPath>
+			<ShortName>SX_player_land</ShortName>
+			<Path>Event/SX_player_land.bnk</Path>
 			<Media>
-				<File Id="412718022" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\game_weapon_reload.wav</ShortName>
-					<Path>Media/412718022.wem</Path>
-					<CachePath>SFX/Placeholders/game_weapon_reload_430B9F8D.wem</CachePath>
+				<File Id="1026811673" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\player_land.wav</ShortName>
+					<Path>Media/1026811673.wem</Path>
+					<CachePath>SFX/Placeholders/player_land_52C5143D.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="283915908" Name="weapon_switch" ObjectPath="\Events\Game\Weapon\weapon_switch" GUID="{320EAD8E-718C-462E-A1F1-4AD653892209}" DurationType="OneShot" DurationMin="0.55864555" DurationMax="0.55864555">
+				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.10653061" DurationMax="0.10653061">
+					<MediaRefs>
+						<MediaRef Id="1026811673"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="423476228" Type="Event" GUID="{85FE7A46-F893-42AA-8787-F5597C4AF630}" Language="SFX" Hash="{521DC779-F49D-CB15-797C-3FA3D7496B03}">
+			<ObjectPath>SX_enemy_gunner_shot</ObjectPath>
+			<ShortName>SX_enemy_gunner_shot</ShortName>
+			<Path>Event/SX_enemy_gunner_shot.bnk</Path>
+			<Events>
+				<Event Id="423476228" Name="SX_enemy_gunner_shot" ObjectPath="\Events\Enemy\SX_enemy_gunner_shot" GUID="{85FE7A46-F893-42AA-8787-F5597C4AF630}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="523232931" Type="Event" GUID="{29088148-6827-4D6A-8542-7D2208093511}" Language="SFX" Hash="{9CD36C15-2F01-5272-2E90-15D3771087F0}">
+			<ObjectPath>Play_TestBeep_Loop</ObjectPath>
+			<ShortName>Play_TestBeep_Loop</ShortName>
+			<Path>Event/Play_TestBeep_Loop.bnk</Path>
+			<Media>
+				<File Id="653948235" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Test\sfx_test_beep_300ms.wav</ShortName>
+					<Path>Media/653948235.wem</Path>
+					<CachePath>SFX/Test/sfx_test_beep_300ms_073B4D0C.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="523232931" Name="Play_TestBeep_Loop" ObjectPath="\Events\Test\TestEvents\Play_TestBeep_Loop" GUID="{29088148-6827-4D6A-8542-7D2208093511}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="653948235"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{DFCC1535-56C8-D96D-611A-A8AE77DC87C6}">
+			<ObjectPath>SX_play_hoverboots</ObjectPath>
+			<ShortName>SX_play_hoverboots</ShortName>
+			<Path>Event/SX_play_hoverboots.bnk</Path>
+			<Media>
+				<File Id="642511335" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboard.wav</ShortName>
+					<Path>Media/642511335.wem</Path>
+					<CachePath>Plugins/SoundSeed Grain/Hoverboard_073B4D0C.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="10075561" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\HoverSurface\HoverOnSnow\Soundseed Air Woosh" GUID="{7B4BAEFE-CD09-4435-8934-D3AE8F203DC6}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+					<Plugin Id="28404726" Name="Soundseed Grain" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\HoverBlendEngine\Engine_Placeholder\Soundseed Grain" GUID="{44B7C0F1-EDB0-4E86-8AD6-948B7FEAF35E}" LibName="SoundSeed Grain" LibId="11993090">
+						<MediaRefs>
+							<MediaRef Id="642511335"/>
+						</MediaRefs>
+					</Plugin>
+					<Plugin Id="102160005" Name="Tremolo (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\HoverBlendEngine\Tremolo (Custom)" GUID="{FF98E38E-38BE-4E79-944B-6FE184F06FC5}" LibName="Wwise Tremolo" LibId="8585219"/>
+					<Plugin Id="810116914" Name="Soundseed Air Wind" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\HoverWind\Soundseed Air Wind" GUID="{18F4FB7B-DE04-40E6-A69B-DEEF180CC535}" LibName="SoundSeed Air Wind" LibId="7798786"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="527139965" Name="SX_play_hoverboots" ObjectPath="\Events\Hoverboots\Hoverboots\SX_play_hoverboots" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" DurationType="Infinite">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="28404726"/>
+							<PluginRef Id="102160005"/>
+							<PluginRef Id="810116914"/>
+						</Custom>
+					</PluginRefs>
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
-							<MediaRefs>
-								<MediaRef Id="412718022"/>
-							</MediaRefs>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="1733120053" GUID="{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}" Default="true"/>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="10075561"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="1645844663" Name="RTPC_PlayerMovement" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerMovement" GUID="{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"/>
+				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
+				<GameParameter Id="3699472177" Name="RTPC_GroundMaterial" ObjectPath="\Game Parameters\Default Work Unit\RTPC_GroundMaterial" GUID="{05992564-76FB-4584-948F-C0F4109BF542}"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="1044534455" Name="GroundMaterialSwitch" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch" GUID="{9D29D1E1-5500-4801-B968-D812A1417C9E}">
+					<GameParameterRef Id="3699472177"/>
+					<Switches>
+						<Switch Id="97194767" Name="IceGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\IceGround" GUID="{FB0B8B6F-9F97-49C4-AFB6-3AA7208FAD66}"/>
+						<Switch Id="210120315" Name="RockGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\RockGround" GUID="{08A1937D-A457-41B0-A1DD-40DEEB125E58}"/>
+						<Switch Id="894619339" Name="WoodGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\WoodGround" GUID="{31D40FF0-50B0-41F0-8BED-7D8E39644E38}"/>
+						<Switch Id="1733120053" Name="SnowGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\SnowGround" GUID="{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}"/>
+						<Switch Id="3577913431" Name="MetalGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\MetalGround" GUID="{067272CA-59B0-48BD-81F5-F5600CE65A57}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="911678423" Type="Event" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" Language="SFX" Hash="{5B118C8A-A0C3-A651-D5A5-12C750D9EB41}">
+			<ObjectPath>SX_slowmotion_trigger</ObjectPath>
+			<ShortName>SX_slowmotion_trigger</ShortName>
+			<Path>Event/SX_slowmotion_trigger.bnk</Path>
+			<Events>
+				<Event Id="911678423" Name="SX_slowmotion_trigger" ObjectPath="\Events\Slowmotion\SX_slowmotion_trigger" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="946406252" Type="Event" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" Language="SFX" Hash="{C4509CA5-9156-398F-EECD-7B6C8AA9B093}">
+			<ObjectPath>SX_player_weapon_impact</ObjectPath>
+			<ShortName>SX_player_weapon_impact</ShortName>
+			<Path>Event/SX_player_weapon_impact.bnk</Path>
+			<Media>
+				<File Id="285816151" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Grenade_Explosion_ODY-1279-080.wav</ShortName>
+					<Path>Media/285816151.wem</Path>
+					<CachePath>SFX/Grenade_Explosion_ODY-1279-080_6A94F4BF.wem</CachePath>
+				</File>
+				<File Id="525589573" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav</ShortName>
+					<Path>Media/525589573.wem</Path>
+					<CachePath>SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_D10598FD.wem</CachePath>
+				</File>
+				<File Id="991022554" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav</ShortName>
+					<Path>Media/991022554.wem</Path>
+					<CachePath>SFX/PM_BBI_Bullet_Impact_Hit_Body_Flesh_25_C76A9090.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="946406252" Name="SX_player_weapon_impact" ObjectPath="\Events\Player\Weapon\SX_player_weapon_impact" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" DurationType="OneShot" DurationMin="0" DurationMax="1.2626873">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}" Default="true"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
+									<MediaRefs>
+										<MediaRef Id="285816151"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
-							<MediaRefs>
-								<MediaRef Id="412718022"/>
-							</MediaRefs>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
+									<MediaRefs>
+										<MediaRef Id="991022554"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3661774060" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
+									<MediaRefs>
+										<MediaRef Id="525589573"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-							<MediaRefs>
-								<MediaRef Id="412718022"/>
-							</MediaRefs>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
+									<MediaRefs>
+										<MediaRef Id="991022554"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3661774060" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
+									<MediaRefs>
+										<MediaRef Id="525589573"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
-							<MediaRefs>
-								<MediaRef Id="412718022"/>
-							</MediaRefs>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
+									<MediaRefs>
+										<MediaRef Id="991022554"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3661774060" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
+									<MediaRefs>
+										<MediaRef Id="525589573"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
@@ -88,47 +244,41 @@
 					</States>
 				</StateGroup>
 			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="194784494" Name="WeaponSurfaceCollision" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision" GUID="{DF6301E3-DB84-4607-9CDE-AFF2BF4E3A65}">
+					<Switches>
+						<Switch Id="3353720555" Name="IceSurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\IceSurface" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"/>
+						<Switch Id="3661774060" Name="EnemySurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\EnemySurface" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="468545274" Type="Event" GUID="{39206078-B8DE-40F6-9ABE-8A92C812BBBA}" Language="SFX" Hash="{82DF3E23-449F-207A-DBB9-0D49B0A87336}">
-			<ObjectPath>enemy_sniper_shot</ObjectPath>
-			<ShortName>enemy_sniper_shot</ShortName>
-			<Path>Event/enemy_sniper_shot.bnk</Path>
-			<Events>
-				<Event Id="468545274" Name="enemy_sniper_shot" ObjectPath="\Events\Enemy\enemy_sniper_shot" GUID="{39206078-B8DE-40F6-9ABE-8A92C812BBBA}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
+		<SoundBank Id="971909502" Type="User" GUID="{73E808A7-564E-44B8-BCF3-CDA908FACC1B}" Language="SFX" Hash="{EC3064F4-53B7-89D7-344A-17082FA16595}">
+			<ObjectPath>\SoundBanks\Default Work Unit\MasterSoundbank</ObjectPath>
+			<ShortName>MasterSoundbank</ShortName>
+			<Path>MasterSoundbank.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="523232931" Type="Event" GUID="{29088148-6827-4D6A-8542-7D2208093511}" Language="SFX" Hash="{631D8DBC-36FD-D67B-4B83-B61BE6549A4B}">
-			<ObjectPath>Play_TestBeep_Loop</ObjectPath>
-			<ShortName>Play_TestBeep_Loop</ShortName>
-			<Path>Event/Play_TestBeep_Loop.bnk</Path>
-			<Media>
-				<File Id="653948235" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Test\sfx_test_beep_300ms.wav</ShortName>
-					<Path>Media/653948235.wem</Path>
-					<CachePath>SFX/Test/sfx_test_beep_300ms_D79FB2B7.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="523232931" Name="Play_TestBeep_Loop" ObjectPath="\Events\TestEvents\Play_TestBeep_Loop" GUID="{29088148-6827-4D6A-8542-7D2208093511}" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="653948235"/>
-					</MediaRefs>
-				</Event>
-			</Events>
+		<SoundBank Id="980603520" Type="Bus" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}" Language="SFX" Hash="{4B57177C-3A96-A5D2-B262-46422E9B0839}">
+			<ObjectPath>REV</ObjectPath>
+			<ShortName>REV</ShortName>
+			<Path>Bus/REV.bnk</Path>
+			<AuxBusses>
+				<AuxBus Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="903081441" Type="Event" GUID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}" Language="SFX" Hash="{18EC1F3E-E238-9F3C-E75C-2CEC88AD2866}">
-			<ObjectPath>Play_AmbienceMain</ObjectPath>
-			<ShortName>Play_AmbienceMain</ShortName>
-			<Path>Event/Play_AmbienceMain.bnk</Path>
+		<SoundBank Id="987389728" Type="Event" GUID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}" Language="SFX" Hash="{F56F0AC3-4D92-1C20-B237-38E383385C97}">
+			<ObjectPath>ENV_AMB_Play_AmbienceMain</ObjectPath>
+			<ShortName>ENV_AMB_Play_AmbienceMain</ShortName>
+			<Path>Event/ENV_AMB_Play_AmbienceMain.bnk</Path>
 			<Media>
 				<File Id="734031120" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\amb_meteo_wind.wav</ShortName>
 					<Path>Media/734031120.wem</Path>
-					<CachePath>SFX/Placeholders/amb_meteo_wind_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Placeholders/amb_meteo_wind_073B4D0C.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="903081441" Name="Play_AmbienceMain" ObjectPath="\Events\Ambience\Play_AmbienceMain" GUID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}" DurationType="Infinite">
+				<Event Id="987389728" Name="ENV_AMB_Play_AmbienceMain" ObjectPath="\Events\Environment\ENV_AMB_Play_AmbienceMain" GUID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="524731881" Id="1519512320" GUID="{A4AFF0DE-5F41-4B08-AEFC-DACFEA9C64EE}" Default="true"/>
@@ -149,53 +299,65 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="971909502" Type="User" GUID="{73E808A7-564E-44B8-BCF3-CDA908FACC1B}" Language="SFX" Hash="{EC3064F4-53B7-89D7-344A-17082FA16595}">
-			<ObjectPath>\SoundBanks\Default Work Unit\MasterSoundbank</ObjectPath>
-			<ShortName>MasterSoundbank</ShortName>
-			<Path>MasterSoundbank.bnk</Path>
-		</SoundBank>
-		<SoundBank Id="1092496599" Type="Event" GUID="{AA3F18C1-9D36-4D56-9C8A-BA65E19E9C0B}" Language="SFX" Hash="{BC555D2A-AC98-3440-B25C-A1A62C535D27}">
-			<ObjectPath>weapon_overheat_lp</ObjectPath>
-			<ShortName>weapon_overheat_lp</ShortName>
-			<Path>Event/weapon_overheat_lp.bnk</Path>
+		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{DA5FF85C-037B-BC8A-078F-72FDF0D2C94D}">
+			<ObjectPath>SX_player_shoot</ObjectPath>
+			<ShortName>SX_player_shoot</ShortName>
+			<Path>Event/SX_player_shoot.bnk</Path>
 			<Media>
-				<File Id="976126733" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\game_ammo_pickup.wav</ShortName>
-					<Path>Media/976126733.wem</Path>
-					<CachePath>SFX/Placeholders/game_ammo_pickup_BCD4D25B.wem</CachePath>
+				<File Id="353061919" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\game_weapon_shoot_shotgun.wav</ShortName>
+					<Path>Media/353061919.wem</Path>
+					<CachePath>SFX/Placeholders/game_weapon_shoot_shotgun_755F56E2.wem</CachePath>
+				</File>
+				<File Id="759953172" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\game_weapon_shoot_machinegun.wav</ShortName>
+					<Path>Media/759953172.wem</Path>
+					<CachePath>SFX/Placeholders/game_weapon_shoot_machinegun_755F56E2.wem</CachePath>
+				</File>
+				<File Id="767258260" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Grenade_Launcher_ODY-0020-055.wav</ShortName>
+					<Path>Media/767258260.wem</Path>
+					<CachePath>SFX/Grenade_Launcher_ODY-0020-055_F421C217.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1092496599" Name="weapon_overheat_lp" ObjectPath="\Events\Game\Weapon\weapon_overheat_lp" GUID="{AA3F18C1-9D36-4D56-9C8A-BA65E19E9C0B}" DurationType="OneShot" DurationMin="3.0645833" DurationMax="3.0645833">
+				<Event Id="1030870044" Name="SX_player_shoot" ObjectPath="\Events\Player\Weapon\SX_player_shoot" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" DurationType="OneShot" DurationMin="0.12891667" DurationMax="1.375">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
 							<MediaRefs>
-								<MediaRef Id="976126733"/>
+								<MediaRef Id="767258260"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
 							<MediaRefs>
-								<MediaRef Id="976126733"/>
+								<MediaRef Id="759953172"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
 							<MediaRefs>
-								<MediaRef Id="976126733"/>
+								<MediaRef Id="353061919"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
 							<MediaRefs>
-								<MediaRef Id="976126733"/>
+								<MediaRef Id="767258260"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 			</Events>
 			<StateGroups>
+				<StateGroup Id="1910319788" Name="OverheatState" ObjectPath="\States\Default Work Unit\OverheatState" GUID="{0E6C50E8-1044-4E86-9061-13B8E93C62CB}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\OverheatState\None" GUID="{080B6965-2B34-4790-87D2-62FDF2157E00}"/>
+						<State Id="916477217" Name="Overheat" ObjectPath="\States\Default Work Unit\OverheatState\Overheat" GUID="{5B81C2D1-8C94-4F96-85E7-C618DC2939D7}"/>
+						<State Id="1024397210" Name="CanShoot" ObjectPath="\States\Default Work Unit\OverheatState\CanShoot" GUID="{1545C5FF-1E2A-4398-AADB-4A6F08D15159}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
 					<States>
 						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
@@ -206,35 +368,61 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1305133589" Type="Event" GUID="{F22270AD-A873-4083-8853-CDF26CCD012F}" Language="SFX" Hash="{1377FCE1-16EC-479C-7465-4D36B08E44B1}">
-			<ObjectPath>player_jump</ObjectPath>
-			<ShortName>player_jump</ShortName>
-			<Path>Event/player_jump.bnk</Path>
+		<SoundBank Id="1161249572" Type="Event" GUID="{39206078-B8DE-40F6-9ABE-8A92C812BBBA}" Language="SFX" Hash="{B3CC5C13-F92D-F8DC-4A12-D4F347B8FEFF}">
+			<ObjectPath>SX_enemy_sniper_shot</ObjectPath>
+			<ShortName>SX_enemy_sniper_shot</ShortName>
+			<Path>Event/SX_enemy_sniper_shot.bnk</Path>
+			<Events>
+				<Event Id="1161249572" Name="SX_enemy_sniper_shot" ObjectPath="\Events\Enemy\SX_enemy_sniper_shot" GUID="{39206078-B8DE-40F6-9ABE-8A92C812BBBA}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1272653400" Type="Event" GUID="{19B21076-A7DA-45EE-AA85-E86C9BF01313}" Language="SFX" Hash="{288B32A4-7B58-B372-A664-1946496631C0}">
+			<ObjectPath>SX_enemy_sniper_charge</ObjectPath>
+			<ShortName>SX_enemy_sniper_charge</ShortName>
+			<Path>Event/SX_enemy_sniper_charge.bnk</Path>
+			<Events>
+				<Event Id="1272653400" Name="SX_enemy_sniper_charge" ObjectPath="\Events\Enemy\SX_enemy_sniper_charge" GUID="{19B21076-A7DA-45EE-AA85-E86C9BF01313}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1311098982" Type="Event" GUID="{A670372F-931C-41E6-925A-FA1480FED58F}" Language="SFX" Hash="{7FFCCA67-3919-5F32-151E-1108986C622A}">
+			<ObjectPath>SX_player_grap_shot</ObjectPath>
+			<ShortName>SX_player_grap_shot</ShortName>
+			<Path>Event/SX_player_grap_shot.bnk</Path>
+			<Media>
+				<File Id="642346148" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\player_grap_shot.wav</ShortName>
+					<Path>Media/642346148.wem</Path>
+					<CachePath>SFX/Placeholders/player_grap_shot_755F56E2.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="1010974337" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\Movements\game_jump\Soundseed Air Woosh" GUID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+					<Plugin Id="1018588396" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\Grap\game_grap_woosh\Soundseed Air Woosh" GUID="{A341E8D9-733C-420F-858A-0DA3151904E5}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="1305133589" Name="player_jump" ObjectPath="\Events\Game\Player\player_jump" GUID="{F22270AD-A873-4083-8853-CDF26CCD012F}" DurationType="OneShot" DurationMin="0.2" DurationMax="0.2">
+				<Event Id="1311098982" Name="SX_player_grap_shot" ObjectPath="\Events\Player\Movement\SX_player_grap_shot" GUID="{A670372F-931C-41E6-925A-FA1480FED58F}" DurationType="OneShot" DurationMin="0.6" DurationMax="0.6">
+					<MediaRefs>
+						<MediaRef Id="642346148"/>
+					</MediaRefs>
 					<PluginRefs>
 						<Custom>
-							<PluginRef Id="1010974337"/>
+							<PluginRef Id="1018588396"/>
 						</Custom>
 					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{5DCB0D96-2003-7B0F-7805-A8F6DAC0A46D}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{1351EF0B-AC43-1D32-A702-692693F4B57F}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<Custom>
-					<Plugin Id="335663160" Name="Underwater_Echoes (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerMovement\Underwater_Echoes (Custom)" GUID="{68094E56-564C-4D9E-9B9D-70C81AC10C52}" LibName="Wwise Stereo Delay" LibId="8847363"/>
-					<Plugin Id="460341544" Name="Underwater_Echoes (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerWeapons\Underwater_Echoes (Custom)" GUID="{8ECE3EC8-08AC-461A-B7C8-7E23F2592163}" LibName="Wwise Stereo Delay" LibId="8847363"/>
-					<Plugin Id="686920966" Name="Pitch Shifter (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerWeapons\Pitch Shifter (Custom)" GUID="{EC252FBB-AF2E-4C73-B02D-EC8B78891EEB}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
-					<Plugin Id="715153284" Name="Pitch Shifter (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerMovement\Pitch Shifter (Custom)" GUID="{491994D5-274E-4B7F-BF7F-689644E819AF}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="335663160" Name="Underwater_Echoes (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PLYR Master\PLYR Movement\Underwater_Echoes (Custom)" GUID="{68094E56-564C-4D9E-9B9D-70C81AC10C52}" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="460341544" Name="Underwater_Echoes (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PLYR Master\PLYR Weapon\Underwater_Echoes (Custom)" GUID="{8ECE3EC8-08AC-461A-B7C8-7E23F2592163}" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="686920966" Name="Pitch Shifter (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PLYR Master\PLYR Weapon\Pitch Shifter (Custom)" GUID="{EC252FBB-AF2E-4C73-B02D-EC8B78891EEB}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="715153284" Name="Pitch Shifter (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PLYR Master\PLYR Movement\Pitch Shifter (Custom)" GUID="{491994D5-274E-4B7F-BF7F-689644E819AF}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 				</Custom>
 				<ShareSets>
 					<Plugin Id="1842579981" Name="Reflect_Simplified" ObjectPath="\Effects\Factory Reflect\Reflect_Simplified" GUID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" LibName="Wwise Reflect" LibId="11206659"/>
@@ -247,24 +435,22 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="309309195" Name="2DAmbience" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\2DAmbience" GUID="{7444C4FB-63F6-4F2E-9A73-66D09EEEFAE1}"/>
-				<Bus Id="530205154" Name="3DMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\3DMaster" GUID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}">
+				<Bus Id="67442032" Name="ENV AMB Exterior" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\ENV AMB Exterior" GUID="{AA242E37-0C3D-41A5-8071-0C92A0F0323A}"/>
+				<Bus Id="79554116" Name="MUSIC Master" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master" GUID="{D7372867-B444-4F36-A355-173A46D13138}"/>
+				<Bus Id="372645086" Name="PLYR Master" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PLYR Master" GUID="{880F05A2-569A-4D55-B7A0-1CD87FD195D0}">
 					<AuxBusRefs>
-						<AuxBusRef Id="1752382405" Name="Early_Reflections" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Early_Reflections" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}"/>
+						<AuxBusRef Id="1752382405" Name="Early_Reflections" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\Early_Reflections" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}"/>
 					</AuxBusRefs>
 				</Bus>
 				<Bus Id="985987111" Name="Motion Factory Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Motion Factory Bus" GUID="{2AF9B9C6-6EF1-46E9-B5F2-E30C9E602C74}"/>
-				<Bus Id="986618877" Name="PlayerWeapons" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerWeapons" GUID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="460341544"/>
-							<PluginRef Id="686920966"/>
-						</Custom>
-					</PluginRefs>
-				</Bus>
-				<Bus Id="1182634443" Name="AmbientBeds" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\AmbientBeds" GUID="{3D306ABA-2B79-4C6F-B0C4-887FF5287F6F}"/>
-				<Bus Id="1301074112" Name="3DAmbience" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\3DAmbience" GUID="{7F98D6D4-F50F-4CD2-AA30-29F04ADD57C2}"/>
-				<Bus Id="1350496757" Name="PlayerMovement" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster\PlayerMovement" GUID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}">
+				<Bus Id="1036470302" Name="NPC Weapon" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\3D OBJ Master\NPCMaster\NPC Weapon" GUID="{A8AA54FE-EDEF-4D9A-AD19-FB5DEA129011}"/>
+				<Bus Id="1698665495" Name="UI Master" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI Master" GUID="{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}"/>
+				<Bus Id="1974888476" Name="ENV Other" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\ENV Other" GUID="{28DD99C7-6452-4B40-9D87-6E721A203EF0}"/>
+				<Bus Id="2033911932" Name="NPCMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\3D OBJ Master\NPCMaster" GUID="{94354A62-2693-4A27-B098-F5FDE5B577C5}"/>
+				<Bus Id="2093940462" Name="ENV AMB Interior" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\ENV AMB Interior" GUID="{FAEBE40F-E726-4C02-8A40-76374BDF8140}"/>
+				<Bus Id="2126441370" Name="Environment Master" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master" GUID="{93794CDD-D92F-4393-9B36-96AC442DDB90}"/>
+				<Bus Id="2452310558" Name="WwiseMotion" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\WwiseMotion" GUID="{A725A1F7-24D8-429B-98AE-EDE935A1E857}"/>
+				<Bus Id="2701788107" Name="PLYR Movement" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PLYR Master\PLYR Movement" GUID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}">
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="335663160"/>
@@ -272,49 +458,49 @@
 						</Custom>
 					</PluginRefs>
 				</Bus>
-				<Bus Id="1459460693" Name="AmbientMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster" GUID="{1260EBDA-2D71-42A1-A3E2-A2832FF41985}"/>
-				<Bus Id="1992125169" Name="UIMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UIMaster" GUID="{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}"/>
-				<Bus Id="2033911932" Name="NPCMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\3DMaster\NPCMaster" GUID="{94354A62-2693-4A27-B098-F5FDE5B577C5}"/>
-				<Bus Id="2093916256" Name="EnviroMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\3DMaster\EnviroMaster" GUID="{9F9340CC-8477-40EE-8F8A-7910D485E0C3}">
+				<Bus Id="3115011207" Name="3D OBJ Master" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\3D OBJ Master" GUID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}">
 					<AuxBusRefs>
-						<AuxBusRef Id="1752382405" Name="Early_Reflections" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Early_Reflections" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}"/>
-					</AuxBusRefs>
-				</Bus>
-				<Bus Id="2452310558" Name="WwiseMotion" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\WwiseMotion" GUID="{A725A1F7-24D8-429B-98AE-EDE935A1E857}"/>
-				<Bus Id="3199789248" Name="MusicMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MusicMaster" GUID="{D7372867-B444-4F36-A355-173A46D13138}"/>
-				<Bus Id="3538689948" Name="PlayerMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PlayerMaster" GUID="{880F05A2-569A-4D55-B7A0-1CD87FD195D0}">
-					<AuxBusRefs>
-						<AuxBusRef Id="1752382405" Name="Early_Reflections" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Early_Reflections" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}"/>
+						<AuxBusRef Id="1752382405" Name="Early_Reflections" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\Early_Reflections" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}"/>
 					</AuxBusRefs>
 				</Bus>
 				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
-				<Bus Id="4152869693" Name="2DAmbientBeds" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AmbientMaster\AmbientBeds\2DAmbientBeds" GUID="{9F89B372-3238-4882-829C-1D743E3D17E7}"/>
+				<Bus Id="3853286816" Name="PLYR Weapon" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PLYR Master\PLYR Weapon" GUID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="460341544"/>
+							<PluginRef Id="686920966"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="3902787355" Name="NPC Feedback" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\3D OBJ Master\NPCMaster\NPC Feedback" GUID="{BFAFF62D-1AF0-4041-8835-DDC8801FFE11}"/>
+				<Bus Id="3976022968" Name="ENV AMB Emitter" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\ENV AMB Emitter" GUID="{245011AE-9CCB-4755-804E-D34FBAF3F0CC}"/>
+				<Bus Id="4287995521" Name="PLYR Feedback" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PLYR Master\PLYR Feedback" GUID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}"/>
 			</Busses>
 			<AuxBusses>
-				<AuxBus Id="187046019" Name="LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
+				<AuxBus Id="187046019" Name="LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<AuxBusRefs>
-						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
-				<AuxBus Id="1752382405" Name="Early_Reflections" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Early_Reflections" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}">
+				<AuxBus Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+				<AuxBus Id="1752382405" Name="Early_Reflections" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\Early_Reflections" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}">
 					<PluginRefs>
 						<ShareSets>
 							<PluginRef Id="1842579981"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
-						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
-				<AuxBus Id="2933838247" Name="SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
+				<AuxBus Id="2933838247" Name="SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
 					<AuxBusRefs>
-						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
-				<AuxBus Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
-				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
+				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
 					<AuxBusRefs>
-						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
 			</AuxBusses>
@@ -535,36 +721,26 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1365959272" Type="Event" GUID="{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}" Language="SFX" Hash="{BC84837D-AC97-3B30-BA5B-3DD59F74C380}">
-			<ObjectPath>grap_shot</ObjectPath>
-			<ShortName>grap_shot</ShortName>
-			<Path>Event/grap_shot.bnk</Path>
-			<Media>
-				<File Id="642346148" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\player_grap_shot.wav</ShortName>
-					<Path>Media/642346148.wem</Path>
-					<CachePath>SFX/Placeholders/player_grap_shot_10C4C929.wem</CachePath>
-				</File>
-			</Media>
+		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{C57D2B42-F3F8-3EC8-5AC9-DD1234BDD45B}">
+			<ObjectPath>SX_player_jump</ObjectPath>
+			<ShortName>SX_player_jump</ShortName>
+			<Path>Event/SX_player_jump.bnk</Path>
 			<Plugins>
 				<Custom>
-					<Plugin Id="1018588396" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\Movements\Grap\game_grap_woosh\Soundseed Air Woosh" GUID="{A341E8D9-733C-420F-858A-0DA3151904E5}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+					<Plugin Id="1010974337" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_jump\Soundseed Air Woosh" GUID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="1365959272" Name="grap_shot" ObjectPath="\Events\Game\Grap\grap_shot" GUID="{3CA263A4-07BF-4933-BE40-1AE5CCB58CBD}" DurationType="OneShot" DurationMin="0.6" DurationMax="0.6">
-					<MediaRefs>
-						<MediaRef Id="642346148"/>
-					</MediaRefs>
+				<Event Id="1532180459" Name="SX_player_jump" ObjectPath="\Events\Player\Movement\SX_player_jump" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" DurationType="OneShot" DurationMin="0.2" DurationMax="0.2">
 					<PluginRefs>
 						<Custom>
-							<PluginRef Id="1018588396"/>
+							<PluginRef Id="1010974337"/>
 						</Custom>
 					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1681067324" Type="Event" GUID="{73F63A69-87C9-4351-80D1-2E2A8E58CA86}" Language="SFX" Hash="{A14D33C6-03C7-04E2-DCCB-3B14C1B4AE01}">
+		<SoundBank Id="1681067324" Type="Event" GUID="{73F63A69-87C9-4351-80D1-2E2A8E58CA86}" Language="SFX" Hash="{6C9576D3-1358-526C-C5B8-22B1F2C6C1AE}">
 			<ObjectPath>Play_TestBeep_3D</ObjectPath>
 			<ShortName>Play_TestBeep_3D</ShortName>
 			<Path>Event/Play_TestBeep_3D.bnk</Path>
@@ -572,18 +748,18 @@
 				<File Id="469165162" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Test\sfx_test_beep_100ms.wav</ShortName>
 					<Path>Media/469165162.wem</Path>
-					<CachePath>SFX/Test/sfx_test_beep_100ms_10C4C929.wem</CachePath>
+					<CachePath>SFX/Test/sfx_test_beep_100ms_755F56E2.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1681067324" Name="Play_TestBeep_3D" ObjectPath="\Events\TestEvents\Play_TestBeep_3D" GUID="{73F63A69-87C9-4351-80D1-2E2A8E58CA86}" DurationType="OneShot" DurationMin="0.051583335" DurationMax="0.051583335">
+				<Event Id="1681067324" Name="Play_TestBeep_3D" ObjectPath="\Events\Test\TestEvents\Play_TestBeep_3D" GUID="{73F63A69-87C9-4351-80D1-2E2A8E58CA86}" DurationType="OneShot" DurationMin="0.051583335" DurationMax="0.051583335">
 					<MediaRefs>
 						<MediaRef Id="469165162"/>
 					</MediaRefs>
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1752382405" Type="Bus" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}" Language="SFX" Hash="{40464B3B-3CB3-C285-735F-EE4C4929C0C9}">
+		<SoundBank Id="1752382405" Type="Bus" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}" Language="SFX" Hash="{4331FF32-2D33-78A8-6F72-F857B8F45201}">
 			<ObjectPath>Early_Reflections</ObjectPath>
 			<ShortName>Early_Reflections</ShortName>
 			<Path>Bus/Early_Reflections.bnk</Path>
@@ -593,19 +769,98 @@
 				</ShareSets>
 			</Plugins>
 			<AuxBusses>
-				<AuxBus Id="1752382405" Name="Early_Reflections" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Early_Reflections" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}">
+				<AuxBus Id="1752382405" Name="Early_Reflections" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\Early_Reflections" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}">
 					<PluginRefs>
 						<ShareSets>
 							<PluginRef Id="1842579981"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
-						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="1955951874" Type="Event" GUID="{BA048CFB-5B21-4BC8-B6D1-60EC051A774E}" Language="SFX" Hash="{71638106-E6E1-1B6E-C4F4-4DBD553CBF16}">
+		<SoundBank Id="1882419246" Type="Event" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}" Language="SFX" Hash="{48637799-A123-D46A-5801-8148F7D6D24A}">
+			<ObjectPath>SX_player_slide</ObjectPath>
+			<ShortName>SX_player_slide</ShortName>
+			<Path>Event/SX_player_slide.bnk</Path>
+			<Media>
+				<File Id="129424093" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\player_slide.wav</ShortName>
+					<Path>Media/129424093.wem</Path>
+					<CachePath>SFX/Placeholders/player_slide_E1091464.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1882419246" Name="SX_player_slide" ObjectPath="\Events\Player\Movement\SX_player_slide" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}" DurationType="OneShot" DurationMin="0.5902833" DurationMax="0.5902833">
+					<MediaRefs>
+						<MediaRef Id="129424093"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1884723818" Type="Event" GUID="{9A95E25D-648E-45D3-9E45-C8EAC14D9259}" Language="SFX" Hash="{996E72B2-7CFB-5BF5-DCD7-FFBF41296F5E}">
+			<ObjectPath>SX_weapon_switch</ObjectPath>
+			<ShortName>SX_weapon_switch</ShortName>
+			<Path>Event/SX_weapon_switch.bnk</Path>
+			<Media>
+				<File Id="412718022" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\game_weapon_reload.wav</ShortName>
+					<Path>Media/412718022.wem</Path>
+					<CachePath>SFX/Placeholders/game_weapon_reload_100871FE.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1884723818" Name="SX_weapon_switch" ObjectPath="\Events\Player\Weapon\SX_weapon_switch" GUID="{9A95E25D-648E-45D3-9E45-C8EAC14D9259}" DurationType="OneShot" DurationMin="0.55864555" DurationMax="0.55864555">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+							<MediaRefs>
+								<MediaRef Id="412718022"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+							<MediaRefs>
+								<MediaRef Id="412718022"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+							<MediaRefs>
+								<MediaRef Id="412718022"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+							<MediaRefs>
+								<MediaRef Id="412718022"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
+					<States>
+						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+						<State Id="2958002925" Name="GrenadeLauncher" ObjectPath="\States\Default Work Unit\WeaponState\GrenadeLauncher" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+						<State Id="3678545986" Name="MachineGun" ObjectPath="\States\Default Work Unit\WeaponState\MachineGun" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="1933552779" Type="Event" GUID="{14A7CFB6-30A5-4E88-8BB1-7C0AD7552B8B}" Language="SFX" Hash="{7D6B619B-CF82-B32B-FC13-266ED52DC52C}">
+			<ObjectPath>SX_enemy_rocketman_shot</ObjectPath>
+			<ShortName>SX_enemy_rocketman_shot</ShortName>
+			<Path>Event/SX_enemy_rocketman_shot.bnk</Path>
+			<Events>
+				<Event Id="1933552779" Name="SX_enemy_rocketman_shot" ObjectPath="\Events\Enemy\SX_enemy_rocketman_shot" GUID="{14A7CFB6-30A5-4E88-8BB1-7C0AD7552B8B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1955951874" Type="Event" GUID="{BA048CFB-5B21-4BC8-B6D1-60EC051A774E}" Language="SFX" Hash="{B6DD1A77-9967-8BA7-EEA9-FCE14D230DE1}">
 			<ObjectPath>Play_TestBeep</ObjectPath>
 			<ShortName>Play_TestBeep</ShortName>
 			<Path>Event/Play_TestBeep.bnk</Path>
@@ -613,11 +868,11 @@
 				<File Id="469165162" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Test\sfx_test_beep_100ms.wav</ShortName>
 					<Path>Media/469165162.wem</Path>
-					<CachePath>SFX/Test/sfx_test_beep_100ms_10C4C929.wem</CachePath>
+					<CachePath>SFX/Test/sfx_test_beep_100ms_755F56E2.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1955951874" Name="Play_TestBeep" ObjectPath="\Events\TestEvents\Play_TestBeep" GUID="{BA048CFB-5B21-4BC8-B6D1-60EC051A774E}" DurationType="OneShot" DurationMin="0.051583335" DurationMax="0.051583335">
+				<Event Id="1955951874" Name="Play_TestBeep" ObjectPath="\Events\Test\TestEvents\Play_TestBeep" GUID="{BA048CFB-5B21-4BC8-B6D1-60EC051A774E}" DurationType="OneShot" DurationMin="0.051583335" DurationMax="0.051583335">
 					<MediaRefs>
 						<MediaRef Id="469165162"/>
 					</MediaRefs>
@@ -625,43 +880,30 @@
 			</Events>
 		</SoundBank>
 		<SoundBank Id="2024222415" Type="Event" GUID="{8914833C-41B7-4962-9AF6-5229DDCF1F68}" Language="SFX" Hash="{4C511C57-4130-BC54-6666-4B6112AD6D76}">
-			<ObjectPath>ui_back</ObjectPath>
-			<ShortName>ui_back</ShortName>
-			<Path>Event/ui_back.bnk</Path>
+			<ObjectPath>UI_back</ObjectPath>
+			<ShortName>UI_back</ShortName>
+			<Path>Event/UI_back.bnk</Path>
 			<Events>
-				<Event Id="2024222415" Name="ui_back" ObjectPath="\Events\UI\ui_back" GUID="{8914833C-41B7-4962-9AF6-5229DDCF1F68}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2024222415" Name="UI_back" ObjectPath="\Events\UI\UI_back" GUID="{8914833C-41B7-4962-9AF6-5229DDCF1F68}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2394582229" Type="Event" GUID="{C5F304BB-9F06-42C3-BEE9-4C60F33F28DB}" Language="SFX" Hash="{D73241B6-8E3A-C2B5-B42C-BDAD8C46816D}">
-			<ObjectPath>player_dash</ObjectPath>
-			<ShortName>player_dash</ShortName>
-			<Path>Event/player_dash.bnk</Path>
+		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{FDC0F5CA-DB90-96F7-D21C-235314955F94}">
+			<ObjectPath>SX_player_dash</ObjectPath>
+			<ShortName>SX_player_dash</ShortName>
+			<Path>Event/SX_player_dash.bnk</Path>
 			<Plugins>
 				<Custom>
-					<Plugin Id="631246921" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\Movements\game_dash\Soundseed Air Woosh" GUID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
-					<Plugin Id="640802269" Name="Delay (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Player\Movements\game_dash\Delay (Custom)" GUID="{C0FCC26E-70DE-482D-9F02-A6A6E9AD97D5}" LibName="Wwise Delay" LibId="6946819"/>
+					<Plugin Id="631246921" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_dash\Soundseed Air Woosh" GUID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="2394582229" Name="player_dash" ObjectPath="\Events\Game\Player\player_dash" GUID="{C5F304BB-9F06-42C3-BEE9-4C60F33F28DB}" DurationType="OneShot" DurationMin="0.15" DurationMax="0.15">
+				<Event Id="2162617371" Name="SX_player_dash" ObjectPath="\Events\Player\Movement\SX_player_dash" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" DurationType="OneShot" DurationMin="0.15" DurationMax="0.15">
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="631246921"/>
-							<PluginRef Id="640802269"/>
 						</Custom>
 					</PluginRefs>
 				</Event>
-			</Events>
-			<GameParameters>
-				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
-			</GameParameters>
-		</SoundBank>
-		<SoundBank Id="2395602551" Type="Event" GUID="{5C34145E-D33C-4A87-8375-E5D2BFE47B54}" Language="SFX" Hash="{6FB9705F-4294-51D8-395A-4C22B79DE583}">
-			<ObjectPath>weapon_overheat_stoplp</ObjectPath>
-			<ShortName>weapon_overheat_stoplp</ShortName>
-			<Path>Event/weapon_overheat_stoplp.bnk</Path>
-			<Events>
-				<Event Id="2395602551" Name="weapon_overheat_stoplp" ObjectPath="\Events\Game\Weapon\weapon_overheat_stoplp" GUID="{5C34145E-D33C-4A87-8375-E5D2BFE47B54}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="2439571424" Type="Event" GUID="{90FA6150-F2C6-4AEA-9823-D63B27B43CA6}" Language="SFX" Hash="{C3F5E53C-CB7D-3829-13C7-05030AE802C7}">
@@ -669,7 +911,7 @@
 			<ShortName>Play_Stop_TestBeep_Loop_3D</ShortName>
 			<Path>Event/Play_Stop_TestBeep_Loop_3D.bnk</Path>
 			<Events>
-				<Event Id="2439571424" Name="Play_Stop_TestBeep_Loop_3D" ObjectPath="\Events\TestEvents\Play_Stop_TestBeep_Loop_3D" GUID="{90FA6150-F2C6-4AEA-9823-D63B27B43CA6}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2439571424" Name="Play_Stop_TestBeep_Loop_3D" ObjectPath="\Events\Test\TestEvents\Play_Stop_TestBeep_Loop_3D" GUID="{90FA6150-F2C6-4AEA-9823-D63B27B43CA6}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="2484145022" Type="Event" GUID="{A5E90370-96BE-450D-B970-BCFBC429B56F}" Language="SFX" Hash="{D5B2B068-66AE-1D79-A530-A3732639AA77}">
@@ -677,89 +919,98 @@
 			<ShortName>Play_Stop_TestBeep_Loop</ShortName>
 			<Path>Event/Play_Stop_TestBeep_Loop.bnk</Path>
 			<Events>
-				<Event Id="2484145022" Name="Play_Stop_TestBeep_Loop" ObjectPath="\Events\TestEvents\Play_Stop_TestBeep_Loop" GUID="{A5E90370-96BE-450D-B970-BCFBC429B56F}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="2569008858" Type="Event" GUID="{2189C011-A358-4102-9707-D283558C2E34}" Language="SFX" Hash="{08F842AF-F8E2-2691-BA1A-5E089A3FF122}">
-			<ObjectPath>enemy_bomber_shot</ObjectPath>
-			<ShortName>enemy_bomber_shot</ShortName>
-			<Path>Event/enemy_bomber_shot.bnk</Path>
-			<Events>
-				<Event Id="2569008858" Name="enemy_bomber_shot" ObjectPath="\Events\Enemy\enemy_bomber_shot" GUID="{2189C011-A358-4102-9707-D283558C2E34}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="2609528332" Type="Event" GUID="{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}" Language="SFX" Hash="{4B6258A4-316E-8D2E-C50F-61E70A8DC04F}">
-			<ObjectPath>player_slide</ObjectPath>
-			<ShortName>player_slide</ShortName>
-			<Path>Event/player_slide.bnk</Path>
-			<Media>
-				<File Id="129424093" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\player_slide.wav</ShortName>
-					<Path>Media/129424093.wem</Path>
-					<CachePath>SFX/Placeholders/player_slide_591F0B6F.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="2609528332" Name="player_slide" ObjectPath="\Events\Game\Player\player_slide" GUID="{5A8CD8F6-69A3-476E-AA2A-1FABB3968073}" DurationType="OneShot" DurationMin="0.5902833" DurationMax="0.5902833">
-					<MediaRefs>
-						<MediaRef Id="129424093"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="2484145022" Name="Play_Stop_TestBeep_Loop" ObjectPath="\Events\Test\TestEvents\Play_Stop_TestBeep_Loop" GUID="{A5E90370-96BE-450D-B970-BCFBC429B56F}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="2644790697" Type="Event" GUID="{528674B7-E690-4AD6-8217-32726F835B11}" Language="SFX" Hash="{B8012CF4-949F-D3AD-CA67-258D75700D92}">
-			<ObjectPath>ui_move</ObjectPath>
-			<ShortName>ui_move</ShortName>
-			<Path>Event/ui_move.bnk</Path>
+			<ObjectPath>UI_move</ObjectPath>
+			<ShortName>UI_move</ShortName>
+			<Path>Event/UI_move.bnk</Path>
 			<Events>
-				<Event Id="2644790697" Name="ui_move" ObjectPath="\Events\UI\ui_move" GUID="{528674B7-E690-4AD6-8217-32726F835B11}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="2651845543" Type="Event" GUID="{123A06EC-853E-4AB7-9D19-D3DFA427B1A6}" Language="SFX" Hash="{F0255405-52CC-96C4-6B75-F77B6480A8F0}">
-			<ObjectPath>enemy_bomber_splash</ObjectPath>
-			<ShortName>enemy_bomber_splash</ShortName>
-			<Path>Event/enemy_bomber_splash.bnk</Path>
-			<Events>
-				<Event Id="2651845543" Name="enemy_bomber_splash" ObjectPath="\Events\Enemy\enemy_bomber_splash" GUID="{123A06EC-853E-4AB7-9D19-D3DFA427B1A6}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2644790697" Name="UI_move" ObjectPath="\Events\UI\UI_move" GUID="{528674B7-E690-4AD6-8217-32726F835B11}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="2792155208" Type="Event" GUID="{194991E3-9D95-4E83-BAAB-87D009E9C2CB}" Language="SFX" Hash="{AC956292-0335-661F-9189-F7960395C2D2}">
-			<ObjectPath>ui_pause</ObjectPath>
-			<ShortName>ui_pause</ShortName>
-			<Path>Event/ui_pause.bnk</Path>
+			<ObjectPath>UI_pause</ObjectPath>
+			<ShortName>UI_pause</ShortName>
+			<Path>Event/UI_pause.bnk</Path>
 			<Events>
-				<Event Id="2792155208" Name="ui_pause" ObjectPath="\Events\UI\ui_pause" GUID="{194991E3-9D95-4E83-BAAB-87D009E9C2CB}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2792155208" Name="UI_pause" ObjectPath="\Events\UI\UI_pause" GUID="{194991E3-9D95-4E83-BAAB-87D009E9C2CB}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2848413666" Type="Event" GUID="{19B21076-A7DA-45EE-AA85-E86C9BF01313}" Language="SFX" Hash="{9D87D54A-D484-848C-FB4C-7F4B067CC238}">
-			<ObjectPath>enemy_sniper_charge</ObjectPath>
-			<ShortName>enemy_sniper_charge</ShortName>
-			<Path>Event/enemy_sniper_charge.bnk</Path>
-			<Events>
-				<Event Id="2848413666" Name="enemy_sniper_charge" ObjectPath="\Events\Enemy\enemy_sniper_charge" GUID="{19B21076-A7DA-45EE-AA85-E86C9BF01313}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="2900069949" Type="Event" GUID="{14A7CFB6-30A5-4E88-8BB1-7C0AD7552B8B}" Language="SFX" Hash="{889393C8-0229-4E94-F1F8-45DB55DE6CA7}">
-			<ObjectPath>enemy_rocketman_shot</ObjectPath>
-			<ShortName>enemy_rocketman_shot</ShortName>
-			<Path>Event/enemy_rocketman_shot.bnk</Path>
-			<Events>
-				<Event Id="2900069949" Name="enemy_rocketman_shot" ObjectPath="\Events\Enemy\enemy_rocketman_shot" GUID="{14A7CFB6-30A5-4E88-8BB1-7C0AD7552B8B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="2933838247" Type="Bus" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" Language="SFX" Hash="{8D0ABC20-5D29-DFDF-7489-FDAA82DC7A20}">
+		<SoundBank Id="2933838247" Type="Bus" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" Language="SFX" Hash="{AD4C9165-45F0-4AF8-524C-C2C3EA1A400B}">
 			<ObjectPath>SmallRoom</ObjectPath>
 			<ShortName>SmallRoom</ShortName>
 			<Path>Bus/SmallRoom.bnk</Path>
 			<AuxBusses>
-				<AuxBus Id="2933838247" Name="SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
+				<AuxBus Id="2933838247" Name="SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
 					<AuxBusRefs>
-						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3475882615" Type="Event" GUID="{AD494000-0055-4CEE-9621-35691A0B6C38}" Language="SFX" Hash="{9F5E1969-E53F-BB75-FD6E-AC69D2F0C74B}">
+		<SoundBank Id="3370439426" Type="Event" GUID="{E6A5A823-C3D3-4C0F-BE6E-C99FB4B3FE3D}" Language="SFX" Hash="{0E288BA8-F2A4-E984-43FA-DBB6532ECECD}">
+			<ObjectPath>SX_player_weapon_overheat</ObjectPath>
+			<ShortName>SX_player_weapon_overheat</ShortName>
+			<Path>Event/SX_player_weapon_overheat.bnk</Path>
+			<Media>
+				<File Id="976126733" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\game_ammo_pickup.wav</ShortName>
+					<Path>Media/976126733.wem</Path>
+					<CachePath>SFX/Placeholders/game_ammo_pickup_2BEB5B44.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3370439426" Name="SX_player_weapon_overheat" ObjectPath="\Events\Player\Weapon\SX_player_weapon_overheat" GUID="{E6A5A823-C3D3-4C0F-BE6E-C99FB4B3FE3D}" DurationType="OneShot" DurationMin="3.0645833" DurationMax="3.0645833">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+							<MediaRefs>
+								<MediaRef Id="976126733"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+							<MediaRefs>
+								<MediaRef Id="976126733"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+							<MediaRefs>
+								<MediaRef Id="976126733"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+							<MediaRefs>
+								<MediaRef Id="976126733"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
+					<States>
+						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+						<State Id="2958002925" Name="GrenadeLauncher" ObjectPath="\States\Default Work Unit\WeaponState\GrenadeLauncher" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+						<State Id="3678545986" Name="MachineGun" ObjectPath="\States\Default Work Unit\WeaponState\MachineGun" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{5699ABC9-34EB-115E-F6B8-C2BB650F6027}">
+			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
+			<ShortName>MUS_Play_MainMusic</ShortName>
+			<Path>Event/MUS_Play_MainMusic.bnk</Path>
+			<Events>
+				<Event Id="3441789682" Name="MUS_Play_MainMusic" ObjectPath="\Events\Music\MUS_Play_MainMusic" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="3475882615" Type="Event" GUID="{AD494000-0055-4CEE-9621-35691A0B6C38}" Language="SFX" Hash="{EB1BFA90-B3EB-1385-E528-6C52F74C7A70}">
 			<ObjectPath>Play_TestBeep_Loop_3D</ObjectPath>
 			<ShortName>Play_TestBeep_Loop_3D</ShortName>
 			<Path>Event/Play_TestBeep_Loop_3D.bnk</Path>
@@ -767,295 +1018,37 @@
 				<File Id="653948235" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Test\sfx_test_beep_300ms.wav</ShortName>
 					<Path>Media/653948235.wem</Path>
-					<CachePath>SFX/Test/sfx_test_beep_300ms_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Test/sfx_test_beep_300ms_073B4D0C.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3475882615" Name="Play_TestBeep_Loop_3D" ObjectPath="\Events\TestEvents\Play_TestBeep_Loop_3D" GUID="{AD494000-0055-4CEE-9621-35691A0B6C38}" DurationType="Infinite">
+				<Event Id="3475882615" Name="Play_TestBeep_Loop_3D" ObjectPath="\Events\Test\TestEvents\Play_TestBeep_Loop_3D" GUID="{AD494000-0055-4CEE-9621-35691A0B6C38}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="653948235"/>
 					</MediaRefs>
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3501648838" Type="Event" GUID="{7B2B9537-B71E-43D4-9310-46937A472AD5}" Language="SFX" Hash="{5EB16C7C-FE44-9968-71E0-AE6222B63813}">
-			<ObjectPath>weapon_impact</ObjectPath>
-			<ShortName>weapon_impact</ShortName>
-			<Path>Event/weapon_impact.bnk</Path>
-			<Media>
-				<File Id="285816151" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Grenade_Explosion_ODY-1279-080.wav</ShortName>
-					<Path>Media/285816151.wem</Path>
-					<CachePath>SFX/Grenade_Explosion_ODY-1279-080_F1D720E4.wem</CachePath>
-				</File>
-				<File Id="525589573" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav</ShortName>
-					<Path>Media/525589573.wem</Path>
-					<CachePath>SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_2E416DEA.wem</CachePath>
-				</File>
-				<File Id="991022554" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav</ShortName>
-					<Path>Media/991022554.wem</Path>
-					<CachePath>SFX/PM_BBI_Bullet_Impact_Hit_Body_Flesh_25_EAB07D6B.wem</CachePath>
-				</File>
-			</Media>
+		<SoundBank Id="3690195592" Type="Event" GUID="{2189C011-A358-4102-9707-D283558C2E34}" Language="SFX" Hash="{4C7F906B-0063-F336-BBFD-F860D295A418}">
+			<ObjectPath>SX_enemy_bomber_shot</ObjectPath>
+			<ShortName>SX_enemy_bomber_shot</ShortName>
+			<Path>Event/SX_enemy_bomber_shot.bnk</Path>
 			<Events>
-				<Event Id="3501648838" Name="weapon_impact" ObjectPath="\Events\Game\Weapon\weapon_impact" GUID="{7B2B9537-B71E-43D4-9310-46937A472AD5}" MaxAttenuation="100" DurationType="OneShot" DurationMin="0" DurationMax="1.2626873">
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}" Default="true"/>
-							<Children>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
-									<MediaRefs>
-										<MediaRef Id="285816151"/>
-									</MediaRefs>
-								</SwitchContainer>
-							</Children>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
-							<Children>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
-									<MediaRefs>
-										<MediaRef Id="991022554"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3661774060" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
-									<MediaRefs>
-										<MediaRef Id="525589573"/>
-									</MediaRefs>
-								</SwitchContainer>
-							</Children>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-							<Children>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
-									<MediaRefs>
-										<MediaRef Id="991022554"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3661774060" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
-									<MediaRefs>
-										<MediaRef Id="525589573"/>
-									</MediaRefs>
-								</SwitchContainer>
-							</Children>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
-							<Children>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
-									<MediaRefs>
-										<MediaRef Id="991022554"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3661774060" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
-									<MediaRefs>
-										<MediaRef Id="525589573"/>
-									</MediaRefs>
-								</SwitchContainer>
-							</Children>
-						</SwitchContainer>
-					</SwitchContainers>
-				</Event>
-			</Events>
-			<StateGroups>
-				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
-					<States>
-						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
-						<State Id="2958002925" Name="GrenadeLauncher" ObjectPath="\States\Default Work Unit\WeaponState\GrenadeLauncher" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
-						<State Id="3678545986" Name="MachineGun" ObjectPath="\States\Default Work Unit\WeaponState\MachineGun" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
-					</States>
-				</StateGroup>
-			</StateGroups>
-			<SwitchGroups>
-				<SwitchGroup Id="194784494" Name="WeaponSurfaceCollision" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision" GUID="{DF6301E3-DB84-4607-9CDE-AFF2BF4E3A65}">
-					<Switches>
-						<Switch Id="3353720555" Name="IceSurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\IceSurface" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"/>
-						<Switch Id="3661774060" Name="EnemySurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\EnemySurface" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
-		</SoundBank>
-		<SoundBank Id="3545700988" Type="Bus" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}" Language="SFX" Hash="{997BFE1F-41FE-DF55-17D0-D1BA947FDD53}">
-			<ObjectPath>Reverbs</ObjectPath>
-			<ShortName>Reverbs</ShortName>
-			<Path>Bus/Reverbs.bnk</Path>
-			<AuxBusses>
-				<AuxBus Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
-			</AuxBusses>
-		</SoundBank>
-		<SoundBank Id="3629196698" Type="Event" GUID="{E70AC961-E4C1-4F27-8D35-AC47C3EC2805}" Language="SFX" Hash="{2ED92061-6C6B-6535-0775-57619FE605F9}">
-			<ObjectPath>player_land</ObjectPath>
-			<ShortName>player_land</ShortName>
-			<Path>Event/player_land.bnk</Path>
-			<Media>
-				<File Id="1026811673" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\player_land.wav</ShortName>
-					<Path>Media/1026811673.wem</Path>
-					<CachePath>SFX/Placeholders/player_land_22ED52C6.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="3629196698" Name="player_land" ObjectPath="\Events\Game\Player\player_land" GUID="{E70AC961-E4C1-4F27-8D35-AC47C3EC2805}" DurationType="OneShot" DurationMin="0.10653061" DurationMax="0.10653061">
-					<MediaRefs>
-						<MediaRef Id="1026811673"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="3690195592" Name="SX_enemy_bomber_shot" ObjectPath="\Events\Enemy\SX_enemy_bomber_shot" GUID="{2189C011-A358-4102-9707-D283558C2E34}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4004702906" Type="Event" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" Language="SFX" Hash="{3EE0D014-C296-7230-ECB5-FB5AB492D193}">
-			<ObjectPath>player_shoot</ObjectPath>
-			<ShortName>player_shoot</ShortName>
-			<Path>Event/player_shoot.bnk</Path>
-			<Media>
-				<File Id="353061919" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\game_weapon_shoot_shotgun.wav</ShortName>
-					<Path>Media/353061919.wem</Path>
-					<CachePath>SFX/Placeholders/game_weapon_shoot_shotgun_10C4C929.wem</CachePath>
-				</File>
-				<File Id="759953172" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\game_weapon_shoot_machinegun.wav</ShortName>
-					<Path>Media/759953172.wem</Path>
-					<CachePath>SFX/Placeholders/game_weapon_shoot_machinegun_10C4C929.wem</CachePath>
-				</File>
-				<File Id="767258260" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Grenade_Launcher_ODY-0020-055.wav</ShortName>
-					<Path>Media/767258260.wem</Path>
-					<CachePath>SFX/Grenade_Launcher_ODY-0020-055_A6160AD8.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="4004702906" Name="player_shoot" ObjectPath="\Events\Game\Weapon\player_shoot" GUID="{EEABD1AC-C871-41C1-836E-6397FD3D79D7}" DurationType="OneShot" DurationMin="0.12891667" DurationMax="1.375">
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
-							<MediaRefs>
-								<MediaRef Id="767258260"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
-							<MediaRefs>
-								<MediaRef Id="759953172"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-							<MediaRefs>
-								<MediaRef Id="353061919"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
-							<MediaRefs>
-								<MediaRef Id="767258260"/>
-							</MediaRefs>
-						</SwitchContainer>
-					</SwitchContainers>
-				</Event>
-			</Events>
-			<StateGroups>
-				<StateGroup Id="1910319788" Name="OverheatState" ObjectPath="\States\Default Work Unit\OverheatState" GUID="{0E6C50E8-1044-4E86-9061-13B8E93C62CB}">
-					<States>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\OverheatState\None" GUID="{080B6965-2B34-4790-87D2-62FDF2157E00}"/>
-						<State Id="916477217" Name="Overheat" ObjectPath="\States\Default Work Unit\OverheatState\Overheat" GUID="{5B81C2D1-8C94-4F96-85E7-C618DC2939D7}"/>
-						<State Id="1024397210" Name="CanShoot" ObjectPath="\States\Default Work Unit\OverheatState\CanShoot" GUID="{1545C5FF-1E2A-4398-AADB-4A6F08D15159}"/>
-					</States>
-				</StateGroup>
-				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
-					<States>
-						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
-						<State Id="2958002925" Name="GrenadeLauncher" ObjectPath="\States\Default Work Unit\WeaponState\GrenadeLauncher" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
-						<State Id="3678545986" Name="MachineGun" ObjectPath="\States\Default Work Unit\WeaponState\MachineGun" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
-					</States>
-				</StateGroup>
-			</StateGroups>
-		</SoundBank>
-		<SoundBank Id="4122393694" Type="Bus" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" Language="SFX" Hash="{A35DBB55-EE78-86A7-E358-FB7836AFB5DF}">
+		<SoundBank Id="4122393694" Type="Bus" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" Language="SFX" Hash="{7A612734-ED20-C9F6-0D4A-A32AD3BB5B98}">
 			<ObjectPath>Cave</ObjectPath>
 			<ShortName>Cave</ShortName>
 			<Path>Bus/Cave.bnk</Path>
 			<AuxBusses>
-				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
+				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
 					<AuxBusRefs>
-						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="4128491144" Type="Event" GUID="{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}" Language="SFX" Hash="{6FE2B6CD-6978-16B6-4F27-C8EF29E52441}">
-			<ObjectPath>Play_Hoverboard</ObjectPath>
-			<ShortName>Play_Hoverboard</ShortName>
-			<Path>Event/Play_Hoverboard.bnk</Path>
-			<Media>
-				<File Id="642511335" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Hoverboard.wav</ShortName>
-					<Path>Media/642511335.wem</Path>
-					<CachePath>Plugins/SoundSeed Grain/Hoverboard_D79FB2B7.wem</CachePath>
-				</File>
-			</Media>
-			<Plugins>
-				<Custom>
-					<Plugin Id="10075561" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverSurface\HoverOnSnow\Soundseed Air Woosh" GUID="{7B4BAEFE-CD09-4435-8934-D3AE8F203DC6}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
-					<Plugin Id="28404726" Name="Soundseed Grain" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBlendEngine\Engine_Placeholder\Soundseed Grain" GUID="{44B7C0F1-EDB0-4E86-8AD6-948B7FEAF35E}" LibName="SoundSeed Grain" LibId="11993090">
-						<MediaRefs>
-							<MediaRef Id="642511335"/>
-						</MediaRefs>
-					</Plugin>
-					<Plugin Id="102160005" Name="Tremolo (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBlendEngine\Tremolo (Custom)" GUID="{FF98E38E-38BE-4E79-944B-6FE184F06FC5}" LibName="Wwise Tremolo" LibId="8585219"/>
-					<Plugin Id="810116914" Name="Soundseed Air Wind" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverWind\Soundseed Air Wind" GUID="{18F4FB7B-DE04-40E6-A69B-DEEF180CC535}" LibName="SoundSeed Air Wind" LibId="7798786"/>
-				</Custom>
-			</Plugins>
-			<Events>
-				<Event Id="4128491144" Name="Play_Hoverboard" ObjectPath="\Events\Game\Hoverboard\Play_Hoverboard" GUID="{EEEF8A18-68F3-478F-AA51-DCFE3ADEFFD3}" DurationType="Infinite">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="28404726"/>
-							<PluginRef Id="102160005"/>
-							<PluginRef Id="810116914"/>
-						</Custom>
-					</PluginRefs>
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="1733120053" GUID="{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}" Default="true"/>
-							<PluginRefs>
-								<Custom>
-									<PluginRef Id="10075561"/>
-								</Custom>
-							</PluginRefs>
-						</SwitchContainer>
-					</SwitchContainers>
-				</Event>
-			</Events>
-			<GameParameters>
-				<GameParameter Id="1645844663" Name="RTPC_PlayerMovement" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerMovement" GUID="{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"/>
-				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
-				<GameParameter Id="3699472177" Name="RTPC_GroundMaterial" ObjectPath="\Game Parameters\Default Work Unit\RTPC_GroundMaterial" GUID="{05992564-76FB-4584-948F-C0F4109BF542}"/>
-			</GameParameters>
-			<SwitchGroups>
-				<SwitchGroup Id="1044534455" Name="GroundMaterialSwitch" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch" GUID="{9D29D1E1-5500-4801-B968-D812A1417C9E}">
-					<GameParameterRef Id="3699472177"/>
-					<Switches>
-						<Switch Id="97194767" Name="IceGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\IceGround" GUID="{FB0B8B6F-9F97-49C4-AFB6-3AA7208FAD66}"/>
-						<Switch Id="210120315" Name="RockGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\RockGround" GUID="{08A1937D-A457-41B0-A1DD-40DEEB125E58}"/>
-						<Switch Id="894619339" Name="WoodGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\WoodGround" GUID="{31D40FF0-50B0-41F0-8BED-7D8E39644E38}"/>
-						<Switch Id="1733120053" Name="SnowGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\SnowGround" GUID="{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}"/>
-						<Switch Id="3577913431" Name="MetalGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\MetalGround" GUID="{067272CA-59B0-48BD-81F5-F5600CE65A57}"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
-		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A898EAF9-0426-4319-3713-9AA343A4F199}</FileHash>
+	<FileHash>{27F2D361-EE09-5B5E-4081-9F9300B6EA7B}</FileHash>
 </SoundBanksInfo>
