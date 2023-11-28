@@ -29,7 +29,7 @@
 				<Event Id="216067002" Name="UI_confirm" ObjectPath="\Events\UI\UI_confirm" GUID="{FC9252BB-4746-4A62-AB71-565BBB37F6D2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{4B906D3A-ECD2-1813-DB8C-AC1801D5864D}">
+		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{5BBD81FF-311A-D725-46EC-98701B49F595}">
 			<ObjectPath>SX_player_land</ObjectPath>
 			<ShortName>SX_player_land</ShortName>
 			<Path>Event/SX_player_land.bnk</Path>
@@ -37,11 +37,11 @@
 				<File Id="1026811673" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\player_land.wav</ShortName>
 					<Path>Media/1026811673.wem</Path>
-					<CachePath>SFX/Placeholders/player_land_52C5143D.wem</CachePath>
+					<CachePath>SFX/Placeholders/player_land_65E9142B.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.10653061" DurationMax="0.10653061">
+				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.099906005" DurationMax="0.099906005">
 					<MediaRefs>
 						<MediaRef Id="1026811673"/>
 					</MediaRefs>
@@ -299,16 +299,11 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{B0A93F92-065E-3225-055A-7D79DC731545}">
+		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{DA5FF85C-037B-BC8A-078F-72FDF0D2C94D}">
 			<ObjectPath>SX_player_shoot</ObjectPath>
 			<ShortName>SX_player_shoot</ShortName>
 			<Path>Event/SX_player_shoot.bnk</Path>
 			<Media>
-				<File Id="103073361" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\38_Pistol_from_Gun_Holster_ODC-0030-193.wav</ShortName>
-					<Path>Media/103073361.wem</Path>
-					<CachePath>SFX/Placeholders/38_Pistol_from_Gun_Holster_ODC-0030-193_755F56E2.wem</CachePath>
-				</File>
 				<File Id="353061919" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\game_weapon_shoot_shotgun.wav</ShortName>
 					<Path>Media/353061919.wem</Path>
@@ -329,62 +324,28 @@
 				<Event Id="1030870044" Name="SX_player_shoot" ObjectPath="\Events\Player\Weapon\SX_player_shoot" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" DurationType="OneShot" DurationMin="0.12891667" DurationMax="1.375">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="1910319788" Id="916477217" GUID="{5B81C2D1-8C94-4F96-85E7-C618DC2939D7}"/>
-							<Children>
-								<SwitchContainer>
-									<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}" Default="true"/>
-									<MediaRefs>
-										<MediaRef Id="103073361"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
-									<MediaRefs>
-										<MediaRef Id="103073361"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-									<MediaRefs>
-										<MediaRef Id="103073361"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
-									<MediaRefs>
-										<MediaRef Id="103073361"/>
-									</MediaRefs>
-								</SwitchContainer>
-							</Children>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+							<MediaRefs>
+								<MediaRef Id="767258260"/>
+							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="1910319788" Id="1024397210" GUID="{1545C5FF-1E2A-4398-AADB-4A6F08D15159}" Default="true"/>
-							<Children>
-								<SwitchContainer>
-									<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
-									<MediaRefs>
-										<MediaRef Id="767258260"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
-									<MediaRefs>
-										<MediaRef Id="759953172"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-									<MediaRefs>
-										<MediaRef Id="353061919"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
-									<MediaRefs>
-										<MediaRef Id="767258260"/>
-									</MediaRefs>
-								</SwitchContainer>
-							</Children>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+							<MediaRefs>
+								<MediaRef Id="759953172"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+							<MediaRefs>
+								<MediaRef Id="353061919"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+							<MediaRefs>
+								<MediaRef Id="767258260"/>
+							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
@@ -841,7 +802,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1884723818" Type="Event" GUID="{9A95E25D-648E-45D3-9E45-C8EAC14D9259}" Language="SFX" Hash="{996E72B2-7CFB-5BF5-DCD7-FFBF41296F5E}">
+		<SoundBank Id="1884723818" Type="Event" GUID="{9A95E25D-648E-45D3-9E45-C8EAC14D9259}" Language="SFX" Hash="{A269D05F-E0C4-40A5-B5FA-A2540BB910F2}">
 			<ObjectPath>SX_weapon_switch</ObjectPath>
 			<ShortName>SX_weapon_switch</ShortName>
 			<Path>Event/SX_weapon_switch.bnk</Path>
@@ -849,11 +810,11 @@
 				<File Id="412718022" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\game_weapon_reload.wav</ShortName>
 					<Path>Media/412718022.wem</Path>
-					<CachePath>SFX/Placeholders/game_weapon_reload_100871FE.wem</CachePath>
+					<CachePath>SFX/Placeholders/game_weapon_reload_A6A71847.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1884723818" Name="SX_weapon_switch" ObjectPath="\Events\Player\Weapon\SX_weapon_switch" GUID="{9A95E25D-648E-45D3-9E45-C8EAC14D9259}" DurationType="OneShot" DurationMin="0.55864555" DurationMax="0.55864555">
+				<Event Id="1884723818" Name="SX_weapon_switch" ObjectPath="\Events\Player\Weapon\SX_weapon_switch" GUID="{9A95E25D-648E-45D3-9E45-C8EAC14D9259}" DurationType="OneShot" DurationMin="0.4650795" DurationMax="0.4650795">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
@@ -1091,5 +1052,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9588F3AF-3F0A-7ABA-B865-FEB266035DED}</FileHash>
+	<FileHash>{B2A5AC19-200C-0A45-9F30-5C8241E1D3EE}</FileHash>
 </SoundBanksInfo>
