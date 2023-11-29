@@ -301,7 +301,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{804E6158-AE4C-3D42-ADA9-D75A8D34BF43}">
+		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{87C73928-C5C8-3942-65D1-9877A758FD9A}">
 			<ObjectPath>SX_player_shoot</ObjectPath>
 			<ShortName>SX_player_shoot</ShortName>
 			<Path>Event/SX_player_shoot.bnk</Path>
@@ -316,19 +316,44 @@
 					<Path>Media/353061919.wem</Path>
 					<CachePath>SFX/Placeholders/game_weapon_shoot_shotgun_755F56E2.wem</CachePath>
 				</File>
-				<File Id="759953172" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\game_weapon_shoot_machinegun.wav</ShortName>
-					<Path>Media/759953172.wem</Path>
-					<CachePath>SFX/Placeholders/game_weapon_shoot_machinegun_755F56E2.wem</CachePath>
+				<File Id="461432451" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Weapon\player_weapon_shoot_smg_mech_02.wav</ShortName>
+					<Path>Media/461432451.wem</Path>
+					<CachePath>SFX/Player_Weapon/player_weapon_shoot_smg_mech_02_755F56E2.wem</CachePath>
+				</File>
+				<File Id="631171215" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Weapon\player_weapon_shoot_smg_mech_03.wav</ShortName>
+					<Path>Media/631171215.wem</Path>
+					<CachePath>SFX/Player_Weapon/player_weapon_shoot_smg_mech_03_755F56E2.wem</CachePath>
+				</File>
+				<File Id="758486105" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Weapon\player_weapon_shoot_smg_tail_far.wav</ShortName>
+					<Path>Media/758486105.wem</Path>
+					<CachePath>SFX/Player_Weapon/player_weapon_shoot_smg_tail_far_755F56E2.wem</CachePath>
 				</File>
 				<File Id="767258260" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Grenade_Launcher_ODY-0020-055.wav</ShortName>
 					<Path>Media/767258260.wem</Path>
 					<CachePath>SFX/Grenade_Launcher_ODY-0020-055_F421C217.wem</CachePath>
 				</File>
+				<File Id="867880719" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Weapon\player_weapon_shoot_smg_close_01.wav</ShortName>
+					<Path>Media/867880719.wem</Path>
+					<CachePath>SFX/Player_Weapon/player_weapon_shoot_smg_close_01_755F56E2.wem</CachePath>
+				</File>
+				<File Id="942643326" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Weapon\player_weapon_shoot_smg_mech_01.wav</ShortName>
+					<Path>Media/942643326.wem</Path>
+					<CachePath>SFX/Player_Weapon/player_weapon_shoot_smg_mech_01_755F56E2.wem</CachePath>
+				</File>
+				<File Id="967984016" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Weapon\player_weapon_shoot_smg_sub_01.wav</ShortName>
+					<Path>Media/967984016.wem</Path>
+					<CachePath>SFX/Player_Weapon/player_weapon_shoot_smg_sub_01_755F56E2.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
-				<Event Id="1030870044" Name="SX_player_shoot" ObjectPath="\Events\Player\Weapon\SX_player_shoot" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" DurationType="OneShot" DurationMin="0.12891667" DurationMax="1.375">
+				<Event Id="1030870044" Name="SX_player_shoot" ObjectPath="\Events\Player\Weapon\SX_player_shoot" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" DurationType="OneShot" DurationMin="0.33066666" DurationMax="2.4279366">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1910319788" Id="916477217" GUID="{5B81C2D1-8C94-4F96-85E7-C618DC2939D7}"/>
@@ -371,7 +396,12 @@
 								<SwitchContainer>
 									<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
 									<MediaRefs>
-										<MediaRef Id="759953172"/>
+										<MediaRef Id="461432451"/>
+										<MediaRef Id="631171215"/>
+										<MediaRef Id="758486105"/>
+										<MediaRef Id="867880719"/>
+										<MediaRef Id="942643326"/>
+										<MediaRef Id="967984016"/>
 									</MediaRefs>
 								</SwitchContainer>
 								<SwitchContainer>
@@ -391,6 +421,9 @@
 					</SwitchContainers>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="1910319788" Name="OverheatState" ObjectPath="\States\Default Work Unit\OverheatState" GUID="{0E6C50E8-1044-4E86-9061-13B8E93C62CB}">
 					<States>
@@ -454,7 +487,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{2E0A7121-CB09-7DF7-AD61-D26321D8CBC3}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{3B9B1EAB-CAC9-F840-63D9-95315ADD56A6}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -605,6 +638,14 @@
 						<Switch Id="898449699" Name="NearDeath" ObjectPath="\Switches\Default Work Unit\PlayerHealth\NearDeath" GUID="{6F790B04-FCD5-4F29-9A8B-7BB513A34A6B}"/>
 						<Switch Id="1017222595" Name="LowHealth" ObjectPath="\Switches\Default Work Unit\PlayerHealth\LowHealth" GUID="{33B1FD86-53B4-4D7C-9F4C-1D6268B3B4B7}"/>
 						<Switch Id="2429688720" Name="FullHealth" ObjectPath="\Switches\Default Work Unit\PlayerHealth\FullHealth" GUID="{5D504B7C-85C6-45FE-8CB6-29AA4525A874}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="153303254" Name="SlowmoSwitch" ObjectPath="\Switches\Default Work Unit\SlowmoSwitch" GUID="{97ECF42C-A290-4CF1-8DEA-DE48A794B7BF}">
+					<GameParameterRef Id="2565740352"/>
+					<Switches>
+						<Switch Id="1160234136" Name="Normal" ObjectPath="\Switches\Default Work Unit\SlowmoSwitch\Normal" GUID="{BDC94118-2D7A-438D-9267-F61370EC1DC8}"/>
+						<Switch Id="1935470627" Name="Light" ObjectPath="\Switches\Default Work Unit\SlowmoSwitch\Light" GUID="{457024B2-F2CE-4135-A045-11EC29546F1B}"/>
+						<Switch Id="2732489590" Name="Heavy" ObjectPath="\Switches\Default Work Unit\SlowmoSwitch\Heavy" GUID="{7170FDF3-E14F-43A9-A493-098AF4E85FEA}"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="194784494" Name="WeaponSurfaceCollision" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision" GUID="{DF6301E3-DB84-4607-9CDE-AFF2BF4E3A65}">
@@ -1105,5 +1146,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{739DBEE4-6A63-86A1-FD41-20D5F97684D9}</FileHash>
+	<FileHash>{08EB744B-F12A-05BA-B485-78678C911BF5}</FileHash>
 </SoundBanksInfo>

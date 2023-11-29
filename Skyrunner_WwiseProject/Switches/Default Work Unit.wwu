@@ -144,6 +144,41 @@
 						</Curve>
 					</SwitchOnRTPC>
 				</SwitchGroup>
+				<SwitchGroup Name="SlowmoSwitch" ID="{97ECF42C-A290-4CF1-8DEA-DE48A794B7BF}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Normal" ID="{BDC94118-2D7A-438D-9267-F61370EC1DC8}"/>
+						<Switch Name="Light" ID="{457024B2-F2CE-4135-A045-11EC29546F1B}"/>
+						<Switch Name="Heavy" ID="{7170FDF3-E14F-43A9-A493-098AF4E85FEA}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
+						<Curve Name="" ID="{3C2DDEB1-3238-4E80-8E7B-CD8606853A1B}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>-1</XPos>
+									<YPos>2</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>3</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>
