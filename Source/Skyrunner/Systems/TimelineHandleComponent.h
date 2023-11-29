@@ -11,7 +11,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnUpdateDelegate, float, scale);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnFinishedDelegate);
 
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS( Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class SKYRUNNER_API UTimelineHandleComponent : public UActorComponent
 {
 	GENERATED_BODY()
