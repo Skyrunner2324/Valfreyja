@@ -91,16 +91,17 @@
 									<ChildrenList>
 										<SourcePlugin Name="Soundseed Grain" ID="{44B7C0F1-EDB0-4E86-8AD6-948B7FEAF35E}" ShortID="28404726" PluginName="SoundSeed Grain" CompanyID="0" PluginID="183">
 											<PropertyList>
-												<Property Name="Attack" Type="Real32" Value="61"/>
+												<Property Name="Attack" Type="Real32" Value="455"/>
 												<Property Name="Duration" Type="Real32" Value="74"/>
 												<Property Name="DurationMultiplier" Type="Real32" Value="3.7"/>
+												<Property Name="EnvelopeType" Type="int32" Value="3"/>
 												<Property Name="FilterFreq" Type="Real32" Value="45"/>
-												<Property Name="FilterQ" Type="Real32" Value="0.41"/>
+												<Property Name="FilterQ" Type="Real32" Value="0.51"/>
 												<Property Name="FilterType" Type="int32" Value="4"/>
-												<Property Name="GrainTime" Type="Real32" Value="16.66"/>
+												<Property Name="GrainTime" Type="Real32" Value="1768.42"/>
 												<Property Name="MarkerSelect" Type="Real32" Value="8.3"/>
 												<Property Name="ModWaveform1" Type="int32" Value="0"/>
-												<Property Name="Release" Type="Real32" Value="5"/>
+												<Property Name="Release" Type="Real32" Value="266"/>
 												<Property Name="Speed" Type="Real32" Value="0.3"/>
 												<Property Name="Transpose" Type="Real32" Value="-203"/>
 												<Property Name="WindowMode" Type="int32" Value="0"/>
@@ -116,47 +117,6 @@
 											</ChildrenList>
 											<ObjectLists>
 												<ObjectList Name="RTPC">
-													<Reference>
-														<Local>
-															<RTPC Name="" ID="{332B6224-E281-4776-8858-975FDB11D097}" ShortID="192065188">
-																<PropertyList>
-																	<Property Name="PropertyName" Type="string" Value="OutputLevel"/>
-																</PropertyList>
-																<ReferenceList>
-																	<Reference Name="ControlInput">
-																		<Custom>
-																			<ModulatorEnvelope Name="Modulator Envelope (Custom)" ID="{7CB0D767-1B21-4B08-A437-9324190D9D4F}" ShortID="934108728">
-																				<PropertyList>
-																					<Property Name="EnvelopeAttackTime" Type="Real64" Value="0.01"/>
-																				</PropertyList>
-																			</ModulatorEnvelope>
-																		</Custom>
-																	</Reference>
-																	<Reference Name="Curve">
-																		<Custom>
-																			<Curve Name="" ID="{B260F9C5-2071-46CD-9BC7-FBF829290485}">
-																				<PropertyList>
-																					<Property Name="Flags" Type="int32" Value="3"/>
-																				</PropertyList>
-																				<PointList>
-																					<Point>
-																						<XPos>0</XPos>
-																						<YPos>-96</YPos>
-																						<Flags>21</Flags>
-																					</Point>
-																					<Point>
-																						<XPos>1</XPos>
-																						<YPos>0</YPos>
-																						<Flags>53</Flags>
-																					</Point>
-																				</PointList>
-																			</Curve>
-																		</Custom>
-																	</Reference>
-																</ReferenceList>
-															</RTPC>
-														</Local>
-													</Reference>
 													<Reference>
 														<Local>
 															<RTPC Name="" ID="{CC6B3D9A-59FB-46B1-9707-2F7DAADD0DB1}" ShortID="408716090">
@@ -265,41 +225,6 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<RTPC Name="" ID="{5341042F-7B8F-4F15-A686-EB936AFE53D6}" ShortID="520878841">
-																<PropertyList>
-																	<Property Name="PropertyName" Type="string" Value="GrainTime"/>
-																</PropertyList>
-																<ReferenceList>
-																	<Reference Name="ControlInput">
-																		<ObjectRef Name="HoverBootsLFO" ID="{C2B695E1-6BED-43CD-9CAD-1CA440E8267E}" WorkUnitID="{2580B0AA-A017-41D7-A24A-07362368F2BB}"/>
-																	</Reference>
-																	<Reference Name="Curve">
-																		<Custom>
-																			<Curve Name="" ID="{149AE89C-CE5E-470F-9D84-8CCAE132D540}">
-																				<PropertyList>
-																					<Property Name="Flags" Type="int32" Value="1"/>
-																				</PropertyList>
-																				<PointList>
-																					<Point>
-																						<XPos>0</XPos>
-																						<YPos>26726.08118</YPos>
-																						<Flags>21</Flags>
-																					</Point>
-																					<Point>
-																						<XPos>1</XPos>
-																						<YPos>30831.56558</YPos>
-																						<Flags>53</Flags>
-																					</Point>
-																				</PointList>
-																			</Curve>
-																		</Custom>
-																	</Reference>
-																</ReferenceList>
-															</RTPC>
-														</Local>
-													</Reference>
-													<Reference>
-														<Local>
 															<RTPC Name="" ID="{E4242A6D-5D51-48F3-B5A8-DFB14BB1046E}" ShortID="398303839">
 																<PropertyList>
 																	<Property Name="PropertyName" Type="string" Value="OutputLevel"/>
@@ -344,6 +269,83 @@
 										<ActiveSource Name="Soundseed Grain" ID="{44B7C0F1-EDB0-4E86-8AD6-948B7FEAF35E}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="Train,Freight,CN Rail,By,Long" ID="{63A3DA39-B31F-4B7A-9710-51C9B8638529}" ShortID="903348491">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Train,Freight,CN Rail,By,Long" ID="{F7529F12-72E5-457B-A0FB-1FDC9B9437D4}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="78.7463982102908"/>
+												<Property Name="LoopEnd" Type="Real64" Value="96.2634541387025"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="78.7155424787472"/>
+												<Property Name="TrimEnd" Type="Real64" Value="96.3767525279643"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Train,Freight,CN Rail,By,Long.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="874489551"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Train,Freight,CN Rail,By,Long" ID="{F7529F12-72E5-457B-A0FB-1FDC9B9437D4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Spaceship Propulsion" ID="{90A82630-5D24-401E-837C-54B7310D23BF}" ShortID="752797611">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-300</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-20</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Spaceship Propulsion" ID="{C3857964-0E9B-4D7D-865D-62DAEAFD9884}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.000782101098369903"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00133685862896726"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.92233482242729"/>
+												<Property Name="TrimEnd" Type="Real64" Value="8.17496521951901"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Spaceship Propulsion.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="619042217"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Spaceship Propulsion" ID="{C3857964-0E9B-4D7D-865D-62DAEAFD9884}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<BlendTrackList>
 								<BlendTrack Name="SurfaceHoverboots" ID="{0F2CAED1-9F89-4EF2-9DC8-0591FFFC9B2A}" ShortID="916852598">
@@ -361,7 +363,25 @@
 											<CrossfadingInfo>
 												<LeftEdgePos>0</LeftEdgePos>
 												<LeftFadingMode>Automatic</LeftFadingMode>
-												<RightEdgePos>3.5</RightEdgePos>
+												<RightEdgePos>2.4952380952381</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="Train,Freight,CN Rail,By,Long" ID="{63A3DA39-B31F-4B7A-9710-51C9B8638529}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>1.5</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>3.74786904761905</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="Spaceship Propulsion" ID="{90A82630-5D24-401E-837C-54B7310D23BF}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>3.53834523809524</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>5</RightEdgePos>
 												<RightFadingMode>Automatic</RightFadingMode>
 											</CrossfadingInfo>
 										</BlendTrackAssoc>

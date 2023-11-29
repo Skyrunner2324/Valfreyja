@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{DA5FF85C-037B-BC8A-078F-72FDF0D2C94D}">
+		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{804E6158-AE4C-3D42-ADA9-D75A8D34BF43}">
 			<ObjectPath>SX_player_shoot</ObjectPath>
 			<ShortName>SX_player_shoot</ShortName>
 			<Path>Event/SX_player_shoot.bnk</Path>
 			<Media>
+				<File Id="103073361" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\38_Pistol_from_Gun_Holster_ODC-0030-193.wav</ShortName>
+					<Path>Media/103073361.wem</Path>
+					<CachePath>SFX/Placeholders/38_Pistol_from_Gun_Holster_ODC-0030-193_755F56E2.wem</CachePath>
+				</File>
 				<File Id="353061919" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\game_weapon_shoot_shotgun.wav</ShortName>
 					<Path>Media/353061919.wem</Path>
@@ -26,28 +31,62 @@
 				<Event Id="1030870044" Name="SX_player_shoot" ObjectPath="\Events\Player\Weapon\SX_player_shoot" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" DurationType="OneShot" DurationMin="0.12891667" DurationMax="1.375">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
-							<MediaRefs>
-								<MediaRef Id="767258260"/>
-							</MediaRefs>
+							<SwitchValue GroupType="State" GroupId="1910319788" Id="916477217" GUID="{5B81C2D1-8C94-4F96-85E7-C618DC2939D7}"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}" Default="true"/>
+									<MediaRefs>
+										<MediaRef Id="103073361"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+									<MediaRefs>
+										<MediaRef Id="103073361"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+									<MediaRefs>
+										<MediaRef Id="103073361"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+									<MediaRefs>
+										<MediaRef Id="103073361"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
-							<MediaRefs>
-								<MediaRef Id="759953172"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-							<MediaRefs>
-								<MediaRef Id="353061919"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
-							<MediaRefs>
-								<MediaRef Id="767258260"/>
-							</MediaRefs>
+							<SwitchValue GroupType="State" GroupId="1910319788" Id="1024397210" GUID="{1545C5FF-1E2A-4398-AADB-4A6F08D15159}" Default="true"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+									<MediaRefs>
+										<MediaRef Id="767258260"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+									<MediaRefs>
+										<MediaRef Id="759953172"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+									<MediaRefs>
+										<MediaRef Id="353061919"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+									<MediaRefs>
+										<MediaRef Id="767258260"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
@@ -71,5 +110,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D96FF4D6-2524-F671-6D43-3565A9A82CE2}</FileHash>
+	<FileHash>{5646BA85-E0F9-14D8-07F5-388F840DACDD}</FileHash>
 </SoundBanksInfo>

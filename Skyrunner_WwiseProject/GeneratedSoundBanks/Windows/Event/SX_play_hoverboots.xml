@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{DFCC1535-56C8-D96D-611A-A8AE77DC87C6}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{5A23313D-7B50-C78C-105A-2A60E83F7B8E}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
 			<Media>
+				<File Id="619042217" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Spaceship Propulsion.wav</ShortName>
+					<Path>Media/619042217.wem</Path>
+					<CachePath>SFX/Spaceship Propulsion_C4213804.wem</CachePath>
+				</File>
 				<File Id="642511335" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Hoverboard.wav</ShortName>
 					<Path>Media/642511335.wem</Path>
 					<CachePath>Plugins/SoundSeed Grain/Hoverboard_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="874489551" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Train,Freight,CN Rail,By,Long.wav</ShortName>
+					<Path>Media/874489551.wem</Path>
+					<CachePath>SFX/Train,Freight,CN Rail,By,Long_0092BC2F.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -26,6 +36,10 @@
 			</Plugins>
 			<Events>
 				<Event Id="527139965" Name="SX_play_hoverboots" ObjectPath="\Events\Hoverboots\Hoverboots\SX_play_hoverboots" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="619042217"/>
+						<MediaRef Id="874489551"/>
+					</MediaRefs>
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="28404726"/>
@@ -64,5 +78,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A28B28CA-36E2-7099-026A-76BD2AF36E92}</FileHash>
+	<FileHash>{3A1A45E5-5F65-E253-2AC2-C55DC688CB6D}</FileHash>
 </SoundBanksInfo>

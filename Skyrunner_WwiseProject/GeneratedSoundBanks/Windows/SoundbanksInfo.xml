@@ -9,18 +9,6 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="187046019" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{ABBA1F66-4DB4-5499-44C0-ED36A2C71E02}">
-			<ObjectPath>LargeRoom</ObjectPath>
-			<ShortName>LargeRoom</ShortName>
-			<Path>Bus/LargeRoom.bnk</Path>
-			<AuxBusses>
-				<AuxBus Id="187046019" Name="LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
-					<AuxBusRefs>
-						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
-					</AuxBusRefs>
-				</AuxBus>
-			</AuxBusses>
-		</SoundBank>
 		<SoundBank Id="216067002" Type="Event" GUID="{FC9252BB-4746-4A62-AB71-565BBB37F6D2}" Language="SFX" Hash="{4519E34B-4A1E-B087-CA64-5189CA3187C4}">
 			<ObjectPath>UI_confirm</ObjectPath>
 			<ShortName>UI_confirm</ShortName>
@@ -75,15 +63,25 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{DFCC1535-56C8-D96D-611A-A8AE77DC87C6}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{5A23313D-7B50-C78C-105A-2A60E83F7B8E}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
 			<Media>
+				<File Id="619042217" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Spaceship Propulsion.wav</ShortName>
+					<Path>Media/619042217.wem</Path>
+					<CachePath>SFX/Spaceship Propulsion_C4213804.wem</CachePath>
+				</File>
 				<File Id="642511335" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Hoverboard.wav</ShortName>
 					<Path>Media/642511335.wem</Path>
 					<CachePath>Plugins/SoundSeed Grain/Hoverboard_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="874489551" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Train,Freight,CN Rail,By,Long.wav</ShortName>
+					<Path>Media/874489551.wem</Path>
+					<CachePath>SFX/Train,Freight,CN Rail,By,Long_0092BC2F.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -100,6 +98,10 @@
 			</Plugins>
 			<Events>
 				<Event Id="527139965" Name="SX_play_hoverboots" ObjectPath="\Events\Hoverboots\Hoverboots\SX_play_hoverboots" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="619042217"/>
+						<MediaRef Id="874489551"/>
+					</MediaRefs>
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="28404726"/>
@@ -145,7 +147,7 @@
 				<Event Id="911678423" Name="SX_slowmotion_trigger" ObjectPath="\Events\Slowmotion\SX_slowmotion_trigger" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="946406252" Type="Event" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" Language="SFX" Hash="{9FD056CF-65DC-3A5E-5A5E-E8A46A57D982}">
+		<SoundBank Id="946406252" Type="Event" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" Language="SFX" Hash="{0A52564A-F55E-5D02-9892-A5909BD82F8D}">
 			<ObjectPath>SX_player_weapon_impact</ObjectPath>
 			<ShortName>SX_player_weapon_impact</ShortName>
 			<Path>Event/SX_player_weapon_impact.bnk</Path>
@@ -299,11 +301,16 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{DA5FF85C-037B-BC8A-078F-72FDF0D2C94D}">
+		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{804E6158-AE4C-3D42-ADA9-D75A8D34BF43}">
 			<ObjectPath>SX_player_shoot</ObjectPath>
 			<ShortName>SX_player_shoot</ShortName>
 			<Path>Event/SX_player_shoot.bnk</Path>
 			<Media>
+				<File Id="103073361" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\38_Pistol_from_Gun_Holster_ODC-0030-193.wav</ShortName>
+					<Path>Media/103073361.wem</Path>
+					<CachePath>SFX/Placeholders/38_Pistol_from_Gun_Holster_ODC-0030-193_755F56E2.wem</CachePath>
+				</File>
 				<File Id="353061919" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\game_weapon_shoot_shotgun.wav</ShortName>
 					<Path>Media/353061919.wem</Path>
@@ -324,28 +331,62 @@
 				<Event Id="1030870044" Name="SX_player_shoot" ObjectPath="\Events\Player\Weapon\SX_player_shoot" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" DurationType="OneShot" DurationMin="0.12891667" DurationMax="1.375">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
-							<MediaRefs>
-								<MediaRef Id="767258260"/>
-							</MediaRefs>
+							<SwitchValue GroupType="State" GroupId="1910319788" Id="916477217" GUID="{5B81C2D1-8C94-4F96-85E7-C618DC2939D7}"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}" Default="true"/>
+									<MediaRefs>
+										<MediaRef Id="103073361"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+									<MediaRefs>
+										<MediaRef Id="103073361"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+									<MediaRefs>
+										<MediaRef Id="103073361"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+									<MediaRefs>
+										<MediaRef Id="103073361"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
-							<MediaRefs>
-								<MediaRef Id="759953172"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-							<MediaRefs>
-								<MediaRef Id="353061919"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
-							<MediaRefs>
-								<MediaRef Id="767258260"/>
-							</MediaRefs>
+							<SwitchValue GroupType="State" GroupId="1910319788" Id="1024397210" GUID="{1545C5FF-1E2A-4398-AADB-4A6F08D15159}" Default="true"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
+									<MediaRefs>
+										<MediaRef Id="767258260"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
+									<MediaRefs>
+										<MediaRef Id="759953172"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
+									<MediaRefs>
+										<MediaRef Id="353061919"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
+									<MediaRefs>
+										<MediaRef Id="767258260"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
@@ -413,7 +454,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{99A5B34B-041A-16E8-B105-4B4E6B4CFC9B}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{2E0A7121-CB09-7DF7-AD61-D26321D8CBC3}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -478,12 +519,12 @@
 				<Bus Id="4287995521" Name="PLYR Feedback" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PLYR Master\PLYR Feedback" GUID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}"/>
 			</Busses>
 			<AuxBusses>
-				<AuxBus Id="187046019" Name="LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
+				<AuxBus Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+				<AuxBus Id="1641293181" Name="REV_LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\REV_LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<AuxBusRefs>
 						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
-				<AuxBus Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 				<AuxBus Id="1752382405" Name="Early_Reflections" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\Early_Reflections" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}">
 					<PluginRefs>
 						<ShareSets>
@@ -494,12 +535,12 @@
 						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
-				<AuxBus Id="2933838247" Name="SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
+				<AuxBus Id="2172616000" Name="REV_Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\REV_Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
 					<AuxBusRefs>
 						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
-				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
+				<AuxBus Id="4125012149" Name="REV_SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\REV_SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
 					<AuxBusRefs>
 						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
@@ -742,6 +783,18 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="1641293181" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{DABC227E-769A-FA8A-7D00-6B25C66DE973}">
+			<ObjectPath>REV_LargeRoom</ObjectPath>
+			<ShortName>REV_LargeRoom</ShortName>
+			<Path>Bus/REV_LargeRoom.bnk</Path>
+			<AuxBusses>
+				<AuxBus Id="1641293181" Name="REV_LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\REV_LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
+					<AuxBusRefs>
+						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+					</AuxBusRefs>
+				</AuxBus>
+			</AuxBusses>
+		</SoundBank>
 		<SoundBank Id="1681067324" Type="Event" GUID="{73F63A69-87C9-4351-80D1-2E2A8E58CA86}" Language="SFX" Hash="{6C9576D3-1358-526C-C5B8-22B1F2C6C1AE}">
 			<ObjectPath>Play_TestBeep_3D</ObjectPath>
 			<ShortName>Play_TestBeep_3D</ShortName>
@@ -908,6 +961,18 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="2172616000" Type="Bus" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" Language="SFX" Hash="{DC78FAB4-4AE6-A214-43FB-473E74A59A9A}">
+			<ObjectPath>REV_Cave</ObjectPath>
+			<ShortName>REV_Cave</ShortName>
+			<Path>Bus/REV_Cave.bnk</Path>
+			<AuxBusses>
+				<AuxBus Id="2172616000" Name="REV_Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\REV_Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
+					<AuxBusRefs>
+						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+					</AuxBusRefs>
+				</AuxBus>
+			</AuxBusses>
+		</SoundBank>
 		<SoundBank Id="2439571424" Type="Event" GUID="{90FA6150-F2C6-4AEA-9823-D63B27B43CA6}" Language="SFX" Hash="{C3F5E53C-CB7D-3829-13C7-05030AE802C7}">
 			<ObjectPath>Play_Stop_TestBeep_Loop_3D</ObjectPath>
 			<ShortName>Play_Stop_TestBeep_Loop_3D</ShortName>
@@ -939,18 +1004,6 @@
 			<Events>
 				<Event Id="2792155208" Name="UI_pause" ObjectPath="\Events\UI\UI_pause" GUID="{194991E3-9D95-4E83-BAAB-87D009E9C2CB}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
-		</SoundBank>
-		<SoundBank Id="2933838247" Type="Bus" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" Language="SFX" Hash="{AD4C9165-45F0-4AF8-524C-C2C3EA1A400B}">
-			<ObjectPath>SmallRoom</ObjectPath>
-			<ShortName>SmallRoom</ShortName>
-			<Path>Bus/SmallRoom.bnk</Path>
-			<AuxBusses>
-				<AuxBus Id="2933838247" Name="SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
-					<AuxBusRefs>
-						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
-					</AuxBusRefs>
-				</AuxBus>
-			</AuxBusses>
 		</SoundBank>
 		<SoundBank Id="3370439426" Type="Event" GUID="{E6A5A823-C3D3-4C0F-BE6E-C99FB4B3FE3D}" Language="SFX" Hash="{0E288BA8-F2A4-E984-43FA-DBB6532ECECD}">
 			<ObjectPath>SX_player_weapon_overheat</ObjectPath>
@@ -1039,12 +1092,12 @@
 				<Event Id="3690195592" Name="SX_enemy_bomber_shot" ObjectPath="\Events\Enemy\SX_enemy_bomber_shot" GUID="{2189C011-A358-4102-9707-D283558C2E34}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4122393694" Type="Bus" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" Language="SFX" Hash="{7A612734-ED20-C9F6-0D4A-A32AD3BB5B98}">
-			<ObjectPath>Cave</ObjectPath>
-			<ShortName>Cave</ShortName>
-			<Path>Bus/Cave.bnk</Path>
+		<SoundBank Id="4125012149" Type="Bus" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" Language="SFX" Hash="{966CD4AC-C06E-1E77-1DA3-E243AC9D255C}">
+			<ObjectPath>REV_SmallRoom</ObjectPath>
+			<ShortName>REV_SmallRoom</ShortName>
+			<Path>Bus/REV_SmallRoom.bnk</Path>
 			<AuxBusses>
-				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
+				<AuxBus Id="4125012149" Name="REV_SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV\REV_SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
 					<AuxBusRefs>
 						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
@@ -1052,5 +1105,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5B15B003-864D-FF81-2056-70E740FF5ADF}</FileHash>
+	<FileHash>{739DBEE4-6A63-86A1-FD41-20D5F97684D9}</FileHash>
 </SoundBanksInfo>
