@@ -20,9 +20,10 @@ UTimeSlippageModifier::UTimeSlippageModifier()
 // Called when the game starts
 void UTimeSlippageModifier::BeginPlay()
 {
-	Super::BeginPlay();
-	SetLocalTimeScale(localTimeScale);
 	timeSlippage = ATimeSlippage::Get(GetWorld());
+	Super::BeginPlay();
+
+	SetLocalTimeScale(localTimeScale);
 	if (bGenerateOnTimeScaleChangedEvent)
 	{
 		on_time_scale_changed_event.BindUFunction(this, "callOnTimeScaleChangedEvent");
