@@ -139,7 +139,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="911678423" Type="Event" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" Language="SFX" Hash="{147795C9-E8D9-3CBA-40F7-E140B41BBF31}">
+		<SoundBank Id="911678423" Type="Event" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" Language="SFX" Hash="{9AC27DED-67DF-DB56-3136-2B966B6FF887}">
 			<ObjectPath>SX_slowmotion_trigger</ObjectPath>
 			<ShortName>SX_slowmotion_trigger</ShortName>
 			<Path>Event/SX_slowmotion_trigger.bnk</Path>
@@ -147,16 +147,19 @@
 				<File Id="688983192" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Feedback\player_feedback_slowmotion_sub.wav</ShortName>
 					<Path>Media/688983192.wem</Path>
-					<CachePath>SFX/Player_Feedback/player_feedback_slowmotion_sub_0C6ED01C.wem</CachePath>
+					<CachePath>SFX/Player_Feedback/player_feedback_slowmotion_sub_5F30EA9E.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="911678423" Name="SX_slowmotion_trigger" ObjectPath="\Events\Slowmotion\SX_slowmotion_trigger" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" DurationType="OneShot" DurationMin="1.4916253" DurationMax="1.6742928">
+				<Event Id="911678423" Name="SX_slowmotion_trigger" ObjectPath="\Events\Slowmotion\SX_slowmotion_trigger" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="688983192"/>
 					</MediaRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="946406252" Type="Event" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" Language="SFX" Hash="{2C38C18A-9E1D-4036-70D7-B0169C1BB690}">
 			<ObjectPath>SX_player_weapon_impact</ObjectPath>
@@ -312,7 +315,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{EFD5D1FD-2B6D-B3E6-62A7-635652217468}">
+		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{F702CAD5-9471-C07B-C315-E7F5D1F61EB8}">
 			<ObjectPath>SX_player_shoot</ObjectPath>
 			<ShortName>SX_player_shoot</ShortName>
 			<Path>Event/SX_player_shoot.bnk</Path>
@@ -325,7 +328,7 @@
 				<File Id="353061919" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\game_weapon_shoot_shotgun.wav</ShortName>
 					<Path>Media/353061919.wem</Path>
-					<CachePath>SFX/Placeholders/game_weapon_shoot_shotgun_073B4D0C.wem</CachePath>
+					<CachePath>SFX/Placeholders/game_weapon_shoot_shotgun_755F56E2.wem</CachePath>
 				</File>
 				<File Id="461432451" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\player_weapon_shoot_smg_mech_02.wav</ShortName>
@@ -364,7 +367,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1030870044" Name="SX_player_shoot" ObjectPath="\Events\Player\Weapon\SX_player_shoot" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" DurationType="Mixed" DurationMin="0.33066666" DurationMax="Infinite">
+				<Event Id="1030870044" Name="SX_player_shoot" ObjectPath="\Events\Player\Weapon\SX_player_shoot" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" DurationType="OneShot" DurationMin="0.33066666" DurationMax="2.4279366">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1910319788" Id="916477217" GUID="{5B81C2D1-8C94-4F96-85E7-C618DC2939D7}"/>
@@ -1210,5 +1213,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2C5B250E-5315-737E-2E57-6CE87280515A}</FileHash>
+	<FileHash>{3E3FE917-268A-7BBE-5A09-B4FFA60FB21C}</FileHash>
 </SoundBanksInfo>

@@ -1176,9 +1176,6 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="game_weapon_shoot_shotgun" ID="{DCDEA920-D5F0-4CB2-ADE9-70136387DF80}" ShortID="1064202294">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -1778,6 +1775,14 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="player_feedback_slowmotion_sub" ID="{39844845-3D3C-48F8-B044-5CDAD866D0EE}" ShortID="464595833">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -1805,6 +1810,45 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{4C0F3351-C7F1-4028-A9B4-B93129EB227F}" ShortID="248522713">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="MaxSoundPerInstance"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{84A793DA-C38A-4942-8F14-0B9923F49214}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-1</XPos>
+																		<YPos>1</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>1</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
