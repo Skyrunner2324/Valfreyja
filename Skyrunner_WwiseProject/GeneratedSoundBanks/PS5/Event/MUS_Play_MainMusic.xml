@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{5699ABC9-34EB-115E-F6B8-C2BB650F6027}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{8F1A4DFA-3B8E-3360-FB34-B81FF426C8AB}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
+			<Media>
+				<File Id="194964321" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>SkyRunV3.wav</ShortName>
+					<Path>Media/194964321.wem</Path>
+					<CachePath>SFX/SkyRunV3_073B4D0C.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="3441789682" Name="MUS_Play_MainMusic" ObjectPath="\Events\Music\MUS_Play_MainMusic" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3441789682" Name="MUS_Play_MainMusic" ObjectPath="\Events\Music\MUS_Play_MainMusic" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="194964321"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B4962E5E-B640-D1DB-6716-2867EB2B0364}</FileHash>
+	<FileHash>{E46062DF-E8AE-94E5-32BF-157D8022AF02}</FileHash>
 </SoundBanksInfo>

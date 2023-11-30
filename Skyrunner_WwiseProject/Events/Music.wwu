@@ -3,15 +3,24 @@
 	<Events>
 		<WorkUnit Name="Music" ID="{673C6570-B853-4074-AD2F-50432DCD8AD1}" PersistMode="Standalone">
 			<PropertyList>
-				<Property Name="Color" Type="int16" Value="9"/>
+				<Property Name="Color" Type="int16" Value="17"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
 				<Event Name="MUS_Play_MainMusic" ID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}">
 					<PropertyList>
-						<Property Name="Color" Type="int16" Value="9"/>
+						<Property Name="Color" Type="int16" Value="17"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{0571C407-DB97-4A10-8B25-17071E525944}" ShortID="1064978833">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_3C" ID="{4AD4F440-8955-42A6-B66F-13510491E3A0}" WorkUnitID="{97B9C5CD-8975-4396-B94B-6580A54082A0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
 				</Event>
 			</ChildrenList>
 		</WorkUnit>
