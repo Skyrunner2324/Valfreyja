@@ -159,6 +159,32 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Feedback" ID="{D4E61D12-03A5-4A2E-AD03-CB29CF459A21}" ShortID="837766785">
+					<ChildrenList>
+						<Event Name="SX_player_feedback_hitmarker" ID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}">
+							<ChildrenList>
+								<Action Name="" ID="{82246C63-C1D7-4E69-9BD2-B78A578BE6DE}" ShortID="961632158">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="player_feedback_hitmarker" ID="{AC973256-1236-420E-938F-E068AA486647}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="SX_player_death_notifier" ID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}">
+							<ChildrenList>
+								<Action Name="" ID="{47B3ADB6-7971-43C7-9506-674C35805E29}" ShortID="931549500">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="player_feedback_deathnotifier" ID="{9EEE92FB-6C4B-4E83-BB4E-1E74DAEBD9B0}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

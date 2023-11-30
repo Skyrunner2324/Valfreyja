@@ -194,7 +194,7 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{41925C9D-16E4-47BE-6073-003D349125BC}",
+    "Hash": "{D464731A-D726-480F-0DAD-0FF379B0285C}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
@@ -314,7 +314,7 @@
       "Location": "Loose",
       "ShortName": "Hoverboots\\hoverboots_on_rail_loop.wav",
       "Path": "Media/572699196.wem",
-      "CachePath": "SFX/Hoverboots/hoverboots_on_rail_loop_0D4AE32F.wem"
+      "CachePath": "SFX/Hoverboots/hoverboots_on_rail_loop_9453A5EB.wem"
      },
      {
       "Id": "578796256",
@@ -360,6 +360,15 @@
       "ShortName": "Hoverboots\\full_speed_loop_Rollerblade_06.wav",
       "Path": "Media/888166843.wem",
       "CachePath": "SFX/Hoverboots/full_speed_loop_Rollerblade_06_755F56E2.wem"
+     },
+     {
+      "Id": "921882142",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Hoverboots\\full_speed_loop_Mech.wav",
+      "Path": "Media/921882142.wem",
+      "CachePath": "SFX/Hoverboots/full_speed_loop_Mech_CEA645C7.wem"
      },
      {
       "Id": "997448627",
@@ -410,6 +419,9 @@
       "MediaRefs": [
        {
         "Id": "572699196"
+       },
+       {
+        "Id": "921882142"
        }
       ],
       "PluginRefs": {
@@ -563,23 +575,61 @@
     ]
    },
    {
+    "Id": "618588564",
+    "Type": "Event",
+    "GUID": "{095480AE-B62A-4DB8-80EC-3AF54A959CDA}",
+    "Language": "SFX",
+    "Hash": "{CC1443AD-AFFF-9428-BFB7-2AA65B229E43}",
+    "ObjectPath": "SX_player_death_notifier",
+    "ShortName": "SX_player_death_notifier",
+    "Path": "Event/SX_player_death_notifier.bnk",
+    "Media": [
+     {
+      "Id": "525589573",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav",
+      "Path": "Media/525589573.wem",
+      "CachePath": "SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_D10598FD.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "618588564",
+      "Name": "SX_player_death_notifier",
+      "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_death_notifier",
+      "GUID": "{095480AE-B62A-4DB8-80EC-3AF54A959CDA}",
+      "MaxAttenuation": "10000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.86619776",
+      "DurationMax": "1.062725",
+      "MediaRefs": [
+       {
+        "Id": "525589573"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "911678423",
     "Type": "Event",
     "GUID": "{2CA54BC4-90CA-4B42-9465-B41131C52A7C}",
     "Language": "SFX",
-    "Hash": "{E6D2F914-F4DE-9C56-8BEB-783C52DA7861}",
+    "Hash": "{437E21FE-1E8A-8AC1-7605-3A37E8CB18FD}",
     "ObjectPath": "SX_slowmotion_trigger",
     "ShortName": "SX_slowmotion_trigger",
     "Path": "Event/SX_slowmotion_trigger.bnk",
     "Media": [
      {
-      "Id": "688983192",
+      "Id": "897939972",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Player_Feedback\\player_feedback_slowmotion_sub.wav",
-      "Path": "Media/688983192.wem",
-      "CachePath": "SFX/Player_Feedback/player_feedback_slowmotion_sub_0C6ED01C.wem"
+      "ShortName": "Player_Feedback\\player_feedback_slowmotion.wav",
+      "Path": "Media/897939972.wem",
+      "CachePath": "SFX/Player_Feedback/player_feedback_slowmotion_755F56E2.wem"
      }
     ],
     "Events": [
@@ -589,21 +639,13 @@
       "ObjectPath": "\\Events\\Slowmotion\\SX_slowmotion_trigger",
       "GUID": "{2CA54BC4-90CA-4B42-9465-B41131C52A7C}",
       "DurationType": "OneShot",
-      "DurationMin": "1.4916253",
-      "DurationMax": "1.6742928",
+      "DurationMin": "13.808929",
+      "DurationMax": "15.5",
       "MediaRefs": [
        {
-        "Id": "688983192"
+        "Id": "897939972"
        }
       ]
-     }
-    ],
-    "GameParameters": [
-     {
-      "Id": "2565740352",
-      "Name": "RTPC_SlowMo",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
-      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
      }
     ]
    },
@@ -612,7 +654,7 @@
     "Type": "Event",
     "GUID": "{C2635664-3DF8-496D-BA41-22C25299ACE8}",
     "Language": "SFX",
-    "Hash": "{4F745276-0FEA-DDE5-8323-A5BE0FD3517B}",
+    "Hash": "{BECC0F1B-BEB0-54AC-AD5C-0ACDB36B79DD}",
     "ObjectPath": "SX_player_weapon_impact",
     "ShortName": "SX_player_weapon_impact",
     "Path": "Event/SX_player_weapon_impact.bnk",
@@ -625,15 +667,6 @@
       "ShortName": "Grenade_Explosion_ODY-1279-080.wav",
       "Path": "Media/285816151.wem",
       "CachePath": "SFX/Grenade_Explosion_ODY-1279-080_6A94F4BF.wem"
-     },
-     {
-      "Id": "525589573",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Placeholders\\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav",
-      "Path": "Media/525589573.wem",
-      "CachePath": "SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_D10598FD.wem"
      },
      {
       "Id": "991022554",
@@ -653,7 +686,7 @@
       "GUID": "{C2635664-3DF8-496D-BA41-22C25299ACE8}",
       "DurationType": "OneShot",
       "DurationMin": "0",
-      "DurationMax": "1.2626873",
+      "DurationMax": "0.8140358",
       "SwitchContainers": [
        {
         "SwitchValue": {
@@ -701,19 +734,6 @@
             "Id": "991022554"
            }
           ]
-         },
-         {
-          "SwitchValue": {
-           "GroupType": "Switch",
-           "GroupId": "194784494",
-           "Id": "3661774060",
-           "GUID": "{DC912065-E687-4C3C-891B-504BA636A074}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "525589573"
-           }
-          ]
          }
         ]
        },
@@ -736,19 +756,6 @@
           "MediaRefs": [
            {
             "Id": "991022554"
-           }
-          ]
-         },
-         {
-          "SwitchValue": {
-           "GroupType": "Switch",
-           "GroupId": "194784494",
-           "Id": "3661774060",
-           "GUID": "{DC912065-E687-4C3C-891B-504BA636A074}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "525589573"
            }
           ]
          }
@@ -775,23 +782,18 @@
             "Id": "991022554"
            }
           ]
-         },
-         {
-          "SwitchValue": {
-           "GroupType": "Switch",
-           "GroupId": "194784494",
-           "Id": "3661774060",
-           "GUID": "{DC912065-E687-4C3C-891B-504BA636A074}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "525589573"
-           }
-          ]
          }
         ]
        }
       ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2064543165",
+      "Name": "RTPC_Hitmarker_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_Hitmarker_Volume",
+      "GUID": "{881B885B-5371-4C1C-8523-6D6EDC0BE6F9}"
      }
     ],
     "StateGroups": [
@@ -1373,7 +1375,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{D5CE9D76-F0D9-3537-FC2E-E423064302FC}",
+    "Hash": "{2924C6E8-5CB7-C6C8-024A-B536A2824FB1}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -1732,6 +1734,12 @@
       "Name": "RTPC_PlayerMovement",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerMovement",
       "GUID": "{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"
+     },
+     {
+      "Id": "2064543165",
+      "Name": "RTPC_Hitmarker_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_Hitmarker_Volume",
+      "GUID": "{881B885B-5371-4C1C-8523-6D6EDC0BE6F9}"
      },
      {
       "Id": "2565740352",
@@ -2536,7 +2544,7 @@
     "Type": "Event",
     "GUID": "{9FCEB4E1-A361-4506-8664-86DBE46C78A1}",
     "Language": "SFX",
-    "Hash": "{6AA985F6-8613-4099-2ABB-4B8EF614D54C}",
+    "Hash": "{F82417AA-1656-6482-83F9-64D3655DCFBD}",
     "ObjectPath": "SX_enemy_weapon_impact",
     "ShortName": "SX_enemy_weapon_impact",
     "Path": "Event/SX_enemy_weapon_impact.bnk",
@@ -2559,8 +2567,8 @@
       "ObjectPath": "\\Events\\Enemy\\SX_enemy_weapon_impact",
       "GUID": "{9FCEB4E1-A361-4506-8664-86DBE46C78A1}",
       "DurationType": "OneShot",
-      "DurationMin": "0.3",
-      "DurationMax": "0.3",
+      "DurationMin": "0.1",
+      "DurationMax": "0.1",
       "PluginRefs": {
        "Custom": [
         {
@@ -3075,6 +3083,62 @@
     ]
    },
    {
+    "Id": "2403475570",
+    "Type": "Event",
+    "GUID": "{6BE02D09-9271-46A7-BAA0-E99F5C869C80}",
+    "Language": "SFX",
+    "Hash": "{825AE80C-5013-12AE-3933-95B40DE886A0}",
+    "ObjectPath": "SX_player_feedback_hitmarker",
+    "ShortName": "SX_player_feedback_hitmarker",
+    "Path": "Event/SX_player_feedback_hitmarker.bnk",
+    "Media": [
+     {
+      "Id": "777880860",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Feedback\\player_feedback_hitmarker.wav",
+      "Path": "Media/777880860.wem",
+      "CachePath": "SFX/Player_Feedback/player_feedback_hitmarker_755F56E2.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1625700308",
+       "Name": "Hitmarker_Meter",
+       "ObjectPath": "\\Effects\\Default Work Unit\\Hitmarker_Meter",
+       "GUID": "{E424AAA8-5A51-4482-B54E-F994A6A6B58B}",
+       "LibName": "Wwise Meter",
+       "LibId": "8454147"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "2403475570",
+      "Name": "SX_player_feedback_hitmarker",
+      "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_feedback_hitmarker",
+      "GUID": "{6BE02D09-9271-46A7-BAA0-E99F5C869C80}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.083333336",
+      "DurationMax": "0.083333336",
+      "MediaRefs": [
+       {
+        "Id": "777880860"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1625700308"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
     "Id": "2439571424",
     "Type": "Event",
     "GUID": "{90FA6150-F2C6-4AEA-9823-D63B27B43CA6}",
@@ -3287,7 +3351,7 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{8F1A4DFA-3B8E-3360-FB34-B81FF426C8AB}",
+    "Hash": "{F9A9C9DA-7B31-FA34-F651-463D6AFF1B05}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
@@ -3401,6 +3465,6 @@
     ]
    }
   ],
-  "FileHash": "{DC1236DF-FEB6-336C-CACC-53B90E50274F}"
+  "FileHash": "{2610620C-F446-E767-CA35-2B90FF5E6C35}"
  }
 }

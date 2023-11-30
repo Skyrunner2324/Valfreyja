@@ -93,7 +93,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{41925C9D-16E4-47BE-6073-003D349125BC}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{D464731A-D726-480F-0DAD-0FF379B0285C}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
@@ -161,7 +161,7 @@
 				<File Id="572699196" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Hoverboots\hoverboots_on_rail_loop.wav</ShortName>
 					<Path>Media/572699196.wem</Path>
-					<CachePath>SFX/Hoverboots/hoverboots_on_rail_loop_0D4AE32F.wem</CachePath>
+					<CachePath>SFX/Hoverboots/hoverboots_on_rail_loop_9453A5EB.wem</CachePath>
 				</File>
 				<File Id="578796256" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Hoverboots\full_speed_loop_Rollerblade_05.wav</ShortName>
@@ -188,6 +188,11 @@
 					<Path>Media/888166843.wem</Path>
 					<CachePath>SFX/Hoverboots/full_speed_loop_Rollerblade_06_755F56E2.wem</CachePath>
 				</File>
+				<File Id="921882142" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\full_speed_loop_Mech.wav</ShortName>
+					<Path>Media/921882142.wem</Path>
+					<CachePath>SFX/Hoverboots/full_speed_loop_Mech_CEA645C7.wem</CachePath>
+				</File>
 				<File Id="997448627" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Hoverboots\full_speed_loop_Rollerblade_02.wav</ShortName>
 					<Path>Media/997448627.wem</Path>
@@ -209,6 +214,7 @@
 				<Event Id="527139965" Name="SX_play_hoverboots" ObjectPath="\Events\Hoverboots\Hoverboots\SX_play_hoverboots" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="572699196"/>
+						<MediaRef Id="921882142"/>
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
@@ -271,29 +277,45 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="911678423" Type="Event" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" Language="SFX" Hash="{E6D2F914-F4DE-9C56-8BEB-783C52DA7861}">
+		<SoundBank Id="618588564" Type="Event" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" Language="SFX" Hash="{CC1443AD-AFFF-9428-BFB7-2AA65B229E43}">
+			<ObjectPath>SX_player_death_notifier</ObjectPath>
+			<ShortName>SX_player_death_notifier</ShortName>
+			<Path>Event/SX_player_death_notifier.bnk</Path>
+			<Media>
+				<File Id="525589573" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav</ShortName>
+					<Path>Media/525589573.wem</Path>
+					<CachePath>SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_D10598FD.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="618588564" Name="SX_player_death_notifier" ObjectPath="\Events\Player\Feedback\SX_player_death_notifier" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" MaxAttenuation="10000" DurationType="OneShot" DurationMin="0.86619776" DurationMax="1.062725">
+					<MediaRefs>
+						<MediaRef Id="525589573"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="911678423" Type="Event" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" Language="SFX" Hash="{437E21FE-1E8A-8AC1-7605-3A37E8CB18FD}">
 			<ObjectPath>SX_slowmotion_trigger</ObjectPath>
 			<ShortName>SX_slowmotion_trigger</ShortName>
 			<Path>Event/SX_slowmotion_trigger.bnk</Path>
 			<Media>
-				<File Id="688983192" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Player_Feedback\player_feedback_slowmotion_sub.wav</ShortName>
-					<Path>Media/688983192.wem</Path>
-					<CachePath>SFX/Player_Feedback/player_feedback_slowmotion_sub_0C6ED01C.wem</CachePath>
+				<File Id="897939972" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_slowmotion.wav</ShortName>
+					<Path>Media/897939972.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_slowmotion_755F56E2.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="911678423" Name="SX_slowmotion_trigger" ObjectPath="\Events\Slowmotion\SX_slowmotion_trigger" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" DurationType="OneShot" DurationMin="1.4916253" DurationMax="1.6742928">
+				<Event Id="911678423" Name="SX_slowmotion_trigger" ObjectPath="\Events\Slowmotion\SX_slowmotion_trigger" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" DurationType="OneShot" DurationMin="13.808929" DurationMax="15.5">
 					<MediaRefs>
-						<MediaRef Id="688983192"/>
+						<MediaRef Id="897939972"/>
 					</MediaRefs>
 				</Event>
 			</Events>
-			<GameParameters>
-				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
-			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="946406252" Type="Event" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" Language="SFX" Hash="{4F745276-0FEA-DDE5-8323-A5BE0FD3517B}">
+		<SoundBank Id="946406252" Type="Event" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" Language="SFX" Hash="{BECC0F1B-BEB0-54AC-AD5C-0ACDB36B79DD}">
 			<ObjectPath>SX_player_weapon_impact</ObjectPath>
 			<ShortName>SX_player_weapon_impact</ShortName>
 			<Path>Event/SX_player_weapon_impact.bnk</Path>
@@ -303,11 +325,6 @@
 					<Path>Media/285816151.wem</Path>
 					<CachePath>SFX/Grenade_Explosion_ODY-1279-080_6A94F4BF.wem</CachePath>
 				</File>
-				<File Id="525589573" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav</ShortName>
-					<Path>Media/525589573.wem</Path>
-					<CachePath>SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_D10598FD.wem</CachePath>
-				</File>
 				<File Id="991022554" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav</ShortName>
 					<Path>Media/991022554.wem</Path>
@@ -315,7 +332,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="946406252" Name="SX_player_weapon_impact" ObjectPath="\Events\Player\Weapon\SX_player_weapon_impact" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" DurationType="OneShot" DurationMin="0" DurationMax="1.2626873">
+				<Event Id="946406252" Name="SX_player_weapon_impact" ObjectPath="\Events\Player\Weapon\SX_player_weapon_impact" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" DurationType="OneShot" DurationMin="0" DurationMax="0.8140358">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}" Default="true"/>
@@ -337,12 +354,6 @@
 										<MediaRef Id="991022554"/>
 									</MediaRefs>
 								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3661774060" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
-									<MediaRefs>
-										<MediaRef Id="525589573"/>
-									</MediaRefs>
-								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -352,12 +363,6 @@
 									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
 									<MediaRefs>
 										<MediaRef Id="991022554"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3661774060" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
-									<MediaRefs>
-										<MediaRef Id="525589573"/>
 									</MediaRefs>
 								</SwitchContainer>
 							</Children>
@@ -371,17 +376,14 @@
 										<MediaRef Id="991022554"/>
 									</MediaRefs>
 								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3661774060" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
-									<MediaRefs>
-										<MediaRef Id="525589573"/>
-									</MediaRefs>
-								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2064543165" Name="RTPC_Hitmarker_Volume" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Hitmarker_Volume" GUID="{881B885B-5371-4C1C-8523-6D6EDC0BE6F9}"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
 					<States>
@@ -633,7 +635,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{D5CE9D76-F0D9-3537-FC2E-E423064302FC}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{2924C6E8-5CB7-C6C8-024A-B536A2824FB1}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -749,6 +751,7 @@
 			<GameParameters>
 				<GameParameter Id="262290038" Name="RTPC_Distance" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Distance" GUID="{EF3CABA9-5812-4B07-97BE-69A25DA3E423}"/>
 				<GameParameter Id="1645844663" Name="RTPC_PlayerMovement" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerMovement" GUID="{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"/>
+				<GameParameter Id="2064543165" Name="RTPC_Hitmarker_Volume" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Hitmarker_Volume" GUID="{881B885B-5371-4C1C-8523-6D6EDC0BE6F9}"/>
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 				<GameParameter Id="2783093092" Name="RTPC_HeightAboveGround" ObjectPath="\Game Parameters\Default Work Unit\RTPC_HeightAboveGround" GUID="{57E6A7E5-8E74-4917-8931-9C5812CAE234}"/>
@@ -972,7 +975,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1371075441" Type="Event" GUID="{9FCEB4E1-A361-4506-8664-86DBE46C78A1}" Language="SFX" Hash="{6AA985F6-8613-4099-2ABB-4B8EF614D54C}">
+		<SoundBank Id="1371075441" Type="Event" GUID="{9FCEB4E1-A361-4506-8664-86DBE46C78A1}" Language="SFX" Hash="{F82417AA-1656-6482-83F9-64D3655DCFBD}">
 			<ObjectPath>SX_enemy_weapon_impact</ObjectPath>
 			<ShortName>SX_enemy_weapon_impact</ShortName>
 			<Path>Event/SX_enemy_weapon_impact.bnk</Path>
@@ -982,7 +985,7 @@
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="1371075441" Name="SX_enemy_weapon_impact" ObjectPath="\Events\Enemy\SX_enemy_weapon_impact" GUID="{9FCEB4E1-A361-4506-8664-86DBE46C78A1}" DurationType="OneShot" DurationMin="0.3" DurationMax="0.3">
+				<Event Id="1371075441" Name="SX_enemy_weapon_impact" ObjectPath="\Events\Enemy\SX_enemy_weapon_impact" GUID="{9FCEB4E1-A361-4506-8664-86DBE46C78A1}" DurationType="OneShot" DurationMin="0.1" DurationMax="0.1">
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="242151392"/>
@@ -1231,6 +1234,35 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
+		<SoundBank Id="2403475570" Type="Event" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" Language="SFX" Hash="{825AE80C-5013-12AE-3933-95B40DE886A0}">
+			<ObjectPath>SX_player_feedback_hitmarker</ObjectPath>
+			<ShortName>SX_player_feedback_hitmarker</ShortName>
+			<Path>Event/SX_player_feedback_hitmarker.bnk</Path>
+			<Media>
+				<File Id="777880860" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_hitmarker.wav</ShortName>
+					<Path>Media/777880860.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_hitmarker_755F56E2.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1625700308" Name="Hitmarker_Meter" ObjectPath="\Effects\Default Work Unit\Hitmarker_Meter" GUID="{E424AAA8-5A51-4482-B54E-F994A6A6B58B}" LibName="Wwise Meter" LibId="8454147"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="2403475570" Name="SX_player_feedback_hitmarker" ObjectPath="\Events\Player\Feedback\SX_player_feedback_hitmarker" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" DurationType="OneShot" DurationMin="0.083333336" DurationMax="0.083333336">
+					<MediaRefs>
+						<MediaRef Id="777880860"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1625700308"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="2439571424" Type="Event" GUID="{90FA6150-F2C6-4AEA-9823-D63B27B43CA6}" Language="SFX" Hash="{C3F5E53C-CB7D-3829-13C7-05030AE802C7}">
 			<ObjectPath>Play_Stop_TestBeep_Loop_3D</ObjectPath>
 			<ShortName>Play_Stop_TestBeep_Loop_3D</ShortName>
@@ -1315,7 +1347,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{8F1A4DFA-3B8E-3360-FB34-B81FF426C8AB}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{F9A9C9DA-7B31-FA34-F651-463D6AFF1B05}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -1374,5 +1406,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6D2F6352-83F6-F223-B502-DF19A96A0A55}</FileHash>
+	<FileHash>{949B8E2F-8E93-A137-661E-75A720408091}</FileHash>
 </SoundBanksInfo>

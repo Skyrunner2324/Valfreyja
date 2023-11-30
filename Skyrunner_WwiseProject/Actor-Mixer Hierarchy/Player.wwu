@@ -637,6 +637,16 @@
 										<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>760</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -895,51 +905,9 @@
 														<Position Name="" ID="{5BDD7B63-3B2D-41D1-874F-C9995F412C59}"/>
 													</PositioningInfo>
 												</RandomSequenceContainer>
-												<RandomSequenceContainer Name="bullet_impact_hitmarker" ID="{BA14F6A5-88E7-4743-A63D-5ED7D86878CF}" ShortID="967086831">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<Sound Name="Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29" ID="{D0F4C9D6-3813-420E-AF31-235ACDC4A36B}" ShortID="1057191548">
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29" ID="{264AE454-7CF8-40A9-92D7-A1B2B3544AD4}">
-																	<PropertyList>
-																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="2.62247619047619"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="3.581918699187"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>Placeholders\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="525589573"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29" ID="{264AE454-7CF8-40A9-92D7-A1B2B3544AD4}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-													</ChildrenList>
-												</RandomSequenceContainer>
 											</ChildrenList>
 											<GroupingInfo>
 												<GroupingBehaviorList>
-													<GroupingBehavior>
-														<ItemRef Name="bullet_impact_hitmarker" ID="{BA14F6A5-88E7-4743-A63D-5ED7D86878CF}"/>
-													</GroupingBehavior>
 													<GroupingBehavior>
 														<ItemRef Name="bullet_impact_ice" ID="{04A7AAC6-41DD-400B-9974-8C23F2BBF023}"/>
 													</GroupingBehavior>
@@ -949,12 +917,6 @@
 														<SwitchRef Name="IceSurface" ID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"/>
 														<ItemList>
 															<ItemRef Name="bullet_impact_ice" ID="{04A7AAC6-41DD-400B-9974-8C23F2BBF023}"/>
-														</ItemList>
-													</Grouping>
-													<Grouping>
-														<SwitchRef Name="EnemySurface" ID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
-														<ItemList>
-															<ItemRef Name="bullet_impact_hitmarker" ID="{BA14F6A5-88E7-4743-A63D-5ED7D86878CF}"/>
 														</ItemList>
 													</Grouping>
 												</GroupingList>
@@ -1055,6 +1017,51 @@
 									<PositioningInfo>
 										<Position Name="" ID="{F946C4D0-9F26-4EAB-87D2-02D9B755B212}"/>
 									</PositioningInfo>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{25156894-9865-441D-AE1C-1FFC51F865E5}" ShortID="811330234">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_Hitmarker_Volume" ID="{881B885B-5371-4C1C-8523-6D6EDC0BE6F9}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{F7167297-9930-4781-8487-810E60A4621B}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																				<SegmentShape>SCurve</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>29.92203</XPos>
+																				<YPos>-11.94166</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 									<GroupingInfo>
 										<GroupingBehaviorList>
 											<GroupingBehavior>
@@ -1716,16 +1723,6 @@
 										</GroupingList>
 									</GroupingInfo>
 								</SwitchContainer>
-								<RandomSequenceContainer Name="game_weapon_deathnotifier" ID="{9EEE92FB-6C4B-4E83-BB4E-1E74DAEBD9B0}" ShortID="950349422">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
-								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -1760,9 +1757,15 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1775,14 +1778,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="player_feedback_slowmotion_sub" ID="{39844845-3D3C-48F8-B044-5CDAD866D0EE}" ShortID="464595833">
-									<PropertyList>
-										<Property Name="MaxSoundPerInstance" Type="int16">
-											<ValueList>
-												<Value>1</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+								<Sound Name="player_feedback_slowmotion" ID="{B4B220D0-EBAE-4615-BE5B-9A812D917890}" ShortID="8899786">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -1792,63 +1788,269 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="player_feedback_slowmotion_sub" ID="{CC117F1A-2F60-4176-8492-30C7FECBB278}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="1.67429284525789"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.67429284525789"/>
-											</PropertyList>
+										<AudioFileSource Name="player_feedback_slowmotion" ID="{793C613C-5823-4F78-9226-A2D64008ED82}">
 											<Language>SFX</Language>
-											<AudioFile>Player_Feedback\player_feedback_slowmotion_sub.wav</AudioFile>
+											<AudioFile>Player_Feedback\player_feedback_slowmotion.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="688983192"/>
+												<MediaID ID="897939972"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="player_feedback_slowmotion_sub" ID="{CC117F1A-2F60-4176-8492-30C7FECBB278}" Platform="Linked"/>
+										<ActiveSource Name="player_feedback_slowmotion" ID="{793C613C-5823-4F78-9226-A2D64008ED82}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
-							<ObjectLists>
-								<ObjectList Name="RTPC">
-									<Reference>
-										<Local>
-											<RTPC Name="" ID="{4C0F3351-C7F1-4028-A9B4-B93129EB227F}" ShortID="248522713">
+						</RandomSequenceContainer>
+						<Sound Name="player_feedback_hitmarker" ID="{AC973256-1236-420E-938F-E068AA486647}" ShortID="987741053">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+									<ObjectRef Name="Hitmarker_Meter" ID="{E424AAA8-5A51-4482-B54E-F994A6A6B58B}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="player_feedback_hitmarker" ID="{09313C4D-D5D9-429C-A04D-68828372E287}">
+									<Language>SFX</Language>
+									<AudioFile>Player_Feedback\player_feedback_hitmarker.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="777880860"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="player_feedback_hitmarker" ID="{09313C4D-D5D9-429C-A04D-68828372E287}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="player_feedback_deathnotifier" ID="{9EEE92FB-6C4B-4E83-BB4E-1E74DAEBD9B0}" ShortID="950349422">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E2AAA4D7-2975-472A-9E1D-2BFF1596CF4F}">
 												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="MaxSoundPerInstance"/>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="177"/>
+													<Property Name="Min" Type="Real64" Value="-177"/>
 												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{84A793DA-C38A-4942-8F14-0B9923F49214}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="65537"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>-1</XPos>
-																		<YPos>1</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>1</XPos>
-																		<YPos>1</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</Local>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="ENV Other" ID="{28DD99C7-6452-4B40-9D87-6E721A203EF0}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29" ID="{D0F4C9D6-3813-420E-AF31-235ACDC4A36B}" ShortID="1057191548">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<Custom>
+												<Attenuation Name="Attenuation (Custom)" ID="{245495F0-12D4-4700-8373-9386B9834A42}" ShortID="559940279">
+													<PropertyList>
+														<Property Name="RadiusMax" Type="Real64" Value="30000"/>
+													</PropertyList>
+													<CurveUsageInfoList>
+														<VolumeDryUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="VolumeDry" ID="{A66F403B-C075-4941-AA36-D24AFA1547EE}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="3"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>12446.48318</XPos>
+																			<YPos>-10.02665</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>30000</XPos>
+																			<YPos>-200</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</VolumeDryUsage>
+														<VolumeWetGameUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+														</VolumeWetGameUsage>
+														<VolumeWetUserUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+														</VolumeWetUserUsage>
+														<LowPassFilterUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="LowPassFilter" ID="{F24412AA-9750-41A0-8DB6-EFAC14B02FFF}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="65537"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>30000</XPos>
+																			<YPos>57</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</LowPassFilterUsage>
+														<HighPassFilterUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="HighPassFilter" ID="{BF7FCC4E-BBEA-43AA-9B62-CCA7B5515F92}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="65537"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>30000</XPos>
+																			<YPos>35</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</HighPassFilterUsage>
+														<SpreadUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="Spread" ID="{75A3FDB9-E286-4AE5-AB5B-9199C50C6D71}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="1"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>100</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>5045.87156</XPos>
+																			<YPos>20.26625</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>30000</XPos>
+																			<YPos>0</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</SpreadUsage>
+														<FocusUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</FocusUsage>
+														<ObstructionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionVolumeUsage>
+														<ObstructionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionLPFUsage>
+														<ObstructionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionHPFUsage>
+														<OcclusionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionVolumeUsage>
+														<OcclusionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionLPFUsage>
+														<OcclusionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionHPFUsage>
+														<DiffractionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionVolumeUsage>
+														<DiffractionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionLPFUsage>
+														<DiffractionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionHPFUsage>
+														<TransmissionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionVolumeUsage>
+														<TransmissionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionLPFUsage>
+														<TransmissionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionHPFUsage>
+													</CurveUsageInfoList>
+												</Attenuation>
+											</Custom>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="ENV Other" ID="{28DD99C7-6452-4B40-9D87-6E721A203EF0}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29" ID="{264AE454-7CF8-40A9-92D7-A1B2B3544AD4}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.62247619047619"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.581918699187"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Placeholders\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="525589573"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{F222B0C3-DB17-4AE0-9832-EC1B05E6C960}"/>
+									</PositioningInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29" ID="{264AE454-7CF8-40A9-92D7-A1B2B3544AD4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
