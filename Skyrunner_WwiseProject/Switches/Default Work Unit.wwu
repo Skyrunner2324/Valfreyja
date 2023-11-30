@@ -61,13 +61,43 @@
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="16"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
 						<Switch Name="Stopped" ID="{2C307309-F91B-4D77-AF29-DEBCBFD72347}"/>
 						<Switch Name="Accelerate" ID="{12994FF5-E12F-4682-A9D9-C114B53C047E}"/>
-						<Switch Name="Deccelerate" ID="{B13D4583-8F5A-41CD-8B7A-BC3CAE69F206}"/>
 						<Switch Name="FullSpeed" ID="{DBB88A42-5CC6-4FB2-B398-E90BD1F134AA}"/>
 					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
+						<Curve Name="" ID="{93845810-C23E-4651-AFD9-73864F3D2C5D}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>1</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>15.01646</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>399.90706</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>2000</XPos>
+									<YPos>0</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
 				</SwitchGroup>
 				<SwitchGroup Name="PlayerHealth" ID="{6ED19CFE-6D91-4B73-A8B1-241649EF7F14}">
 					<PropertyList>

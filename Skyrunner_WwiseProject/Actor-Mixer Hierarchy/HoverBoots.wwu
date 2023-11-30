@@ -19,6 +19,8 @@
 					<ChildrenList>
 						<BlendContainer Name="HoverBlendEngine" ID="{65184FAA-2215-4CBC-A089-461A4B932FBC}" ShortID="761036772">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="9"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -394,11 +396,148 @@
 								</BlendTrack>
 							</BlendTrackList>
 						</BlendContainer>
-						<SwitchContainer Name="HoverSurface" ID="{D57E96B1-E0DA-4813-A371-F50D39261518}" ShortID="618930420">
+						<RandomSequenceContainer Name="hoverboots_land" ID="{0484298A-7E94-4A46-902C-106B5E351C65}" ShortID="620660777">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="hoverboots_landing_ice_skate_land_01" ID="{F6367F2D-0D68-4A08-90C4-81AD29ED5BE1}" ShortID="696228635">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hoverboots_landing_ice_skate_land_01" ID="{27ED188B-BFA9-469D-9A05-77C3E62DBAFF}">
+											<Language>SFX</Language>
+											<AudioFile>Hoverboots\hoverboots_landing_ice_skate_land_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="650483493"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hoverboots_landing_ice_skate_land_01" ID="{27ED188B-BFA9-469D-9A05-77C3E62DBAFF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="hoverboots_landing_ice_skate_land_02" ID="{4274F482-361E-405C-800B-55EDEB865BF9}" ShortID="660921222">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hoverboots_landing_ice_skate_land_02" ID="{9327250C-F405-4512-91BA-12A4A843E375}">
+											<Language>SFX</Language>
+											<AudioFile>Hoverboots\hoverboots_landing_ice_skate_land_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="682921523"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hoverboots_landing_ice_skate_land_02" ID="{9327250C-F405-4512-91BA-12A4A843E375}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="hoverboots_landing_ice_skate_land_03" ID="{ED9633FD-752F-45A9-9EEF-A7E98643B60C}" ShortID="791553889">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hoverboots_landing_ice_skate_land_03" ID="{22960540-4561-45EA-9D88-70A3859C99B3}">
+											<Language>SFX</Language>
+											<AudioFile>Hoverboots\hoverboots_landing_ice_skate_land_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1038974756"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hoverboots_landing_ice_skate_land_03" ID="{22960540-4561-45EA-9D88-70A3859C99B3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="hoverboots_landing_ice_skate_land_04" ID="{2C51B3D0-FDD2-44FA-A205-F61C38C2F931}" ShortID="204647699">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hoverboots_landing_ice_skate_land_04" ID="{00211348-28A9-43DE-B170-CC955DD39B19}">
+											<Language>SFX</Language>
+											<AudioFile>Hoverboots\hoverboots_landing_ice_skate_land_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="233157868"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hoverboots_landing_ice_skate_land_04" ID="{00211348-28A9-43DE-B170-CC955DD39B19}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="hoverboots_landing_ice_skate_land_05" ID="{7783601F-915F-4180-83DB-F825410CB4AD}" ShortID="654501011">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hoverboots_landing_ice_skate_land_05" ID="{7C9481BD-D9EE-4F87-8FFA-DF14B247FA5B}">
+											<Language>SFX</Language>
+											<AudioFile>Hoverboots\hoverboots_landing_ice_skate_land_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="236070002"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hoverboots_landing_ice_skate_land_05" ID="{7C9481BD-D9EE-4F87-8FFA-DF14B247FA5B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="propulsion_jump" ID="{22155C1C-73DB-4FE5-B9AC-1FF48A3A33B3}" ShortID="199248092">
 							<PropertyList>
+								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-36</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -406,45 +545,987 @@
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 								</Reference>
-								<Reference Name="DefaultSwitchOrState">
-									<ObjectRef Name="SnowGround" ID="{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
-								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
-								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="GroundMaterialSwitch" ID="{9D29D1E1-5500-4801-B968-D812A1417C9E}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="HoverOnSnow" ID="{EBE77B26-B0BA-45A5-907E-8B6B179F3946}" ShortID="894328262">
+								<Sound Name="hoverboots_jump_propulsion_jump_hoverboots_01" ID="{0E1900A2-2F61-4CD3-A4B0-EE15E00455AE}" ShortID="922830048">
 									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="Soundseed Air Woosh" ID="{7B4BAEFE-CD09-4435-8934-D3AE8F203DC6}" ShortID="10075561" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
+										<AudioFileSource Name="hoverboots_jump_propulsion_jump_hoverboots_01" ID="{E7BAD1F1-A57B-4326-AAAB-6E905203342F}">
+											<Language>SFX</Language>
+											<AudioFile>Hoverboots\hoverboots_jump_propulsion_jump_hoverboots_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="153362647"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hoverboots_jump_propulsion_jump_hoverboots_01" ID="{E7BAD1F1-A57B-4326-AAAB-6E905203342F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="hoverboots_jump_propulsion_jump_hoverboots_02" ID="{642A3A10-C7EF-42F0-8825-F9D8C7876E4A}" ShortID="344674430">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="hoverboots_jump_propulsion_jump_hoverboots_02" ID="{977BDDCF-DB43-4094-93D9-11C94A47B872}">
+											<Language>SFX</Language>
+											<AudioFile>Hoverboots\hoverboots_jump_propulsion_jump_hoverboots_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="346392923"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="hoverboots_jump_propulsion_jump_hoverboots_02" ID="{977BDDCF-DB43-4094-93D9-11C94A47B872}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<BlendContainer Name="Hoverboots_Main" ID="{06BB291D-7805-4E53-8B50-41DD6046A8E8}" ShortID="167768623">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Hoverloop_sub" ID="{514EB0C6-1E9F-464C-822C-0C62EC709610}" ShortID="66597796">
+									<PropertyList>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="full_speed_loop_Mech" ID="{C688567E-1389-4EB4-AADC-9D6179709526}" ShortID="789241898">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="full_speed_loop_Mech" ID="{494D32FC-212B-421E-8381-C1CFB0B92986}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.288380872483221"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Hoverboots\full_speed_loop_Mech.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="921882142"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="full_speed_loop_Mech" ID="{494D32FC-212B-421E-8381-C1CFB0B92986}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{049E6DA5-06A8-4316-86F9-7FA4867DC2D7}" ShortID="448740265">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Pitch"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{3FB0F00F-98D0-4027-8991-307D5446FF3B}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-1050</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>2000</XPos>
+																				<YPos>1650</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+									<Playlist>
+										<ItemRef Name="full_speed_loop_Mech" ID="{C688567E-1389-4EB4-AADC-9D6179709526}"/>
+									</Playlist>
+								</RandomSequenceContainer>
+								<BlendContainer Name="Hoverboots_Surface_Blend" ID="{A5A8445C-9CC1-4685-AA94-BEB41B58A0B7}" ShortID="672380025">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SwitchContainer Name="Speed_Hoverloop_Switcher" ID="{469B8BDB-D4C6-4C7F-BF9B-472ADDC471A2}" ShortID="925030152">
 											<PropertyList>
-												<Property Name="Duration" Type="Real64" Value="2.6"/>
-												<Property Name="NoiseColor" Type="int16" Value="2"/>
-												<Property Name="PlaybackRate" Type="Real32" Value="4.1"/>
-												<Property Name="SpeedAutomate" Type="bool" Value="True"/>
-												<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="1.1"/>
+												<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="Stopped" ID="{2C307309-F91B-4D77-AF29-DEBCBFD72347}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="PlayerSpeedSwitch" ID="{3CDF8300-7330-4784-9075-47D68391D5E2}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<BlendContainer Name="Hoverloop_Blend" ID="{33D18669-AE45-4B1B-9CA3-449B4E06B92F}" ShortID="751480224">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<RandomSequenceContainer Name="loop_rollerblade" ID="{E203E04C-FADB-4516-ACC9-42A8F3919DF7}" ShortID="10759823">
+															<PropertyList>
+																<Property Name="Highpass" Type="int16">
+																	<ValueList>
+																		<Value>28</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+																<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+																<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-6</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="full_speed_loop_Rollerblade_01" ID="{6C174B55-8F04-4C40-8AF3-C55C0DB45868}" ShortID="495518763">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_Rollerblade_01" ID="{8522B2FE-5700-4AB5-B94D-D9222FDC27FA}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_Rollerblade_01.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="465585429"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_Rollerblade_01" ID="{8522B2FE-5700-4AB5-B94D-D9222FDC27FA}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="full_speed_loop_Rollerblade_02" ID="{FC829A04-7F3D-4D94-A507-84F01744DAD9}" ShortID="526274756">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_Rollerblade_02" ID="{D700679F-B23F-47C8-B382-E8A3AB8C79D5}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_Rollerblade_02.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="997448627"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_Rollerblade_02" ID="{D700679F-B23F-47C8-B382-E8A3AB8C79D5}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="full_speed_loop_Rollerblade_03" ID="{2EC6FEDB-C7A2-4CE6-B4AA-1F2EA5EED8C4}" ShortID="618474217">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_Rollerblade_03" ID="{D0CF96F4-50A6-4617-9EEE-0D47EDD480B2}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_Rollerblade_03.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="333675945"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_Rollerblade_03" ID="{D0CF96F4-50A6-4617-9EEE-0D47EDD480B2}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="full_speed_loop_Rollerblade_04" ID="{AB1227E2-7CEF-4CA4-B480-FBE8B5F4742B}" ShortID="990293018">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_Rollerblade_04" ID="{E201E988-F9B3-47FD-86BD-EB82F7F69519}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_Rollerblade_04.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="61973599"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_Rollerblade_04" ID="{E201E988-F9B3-47FD-86BD-EB82F7F69519}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="full_speed_loop_Rollerblade_05" ID="{0DF80BD7-5C6E-4E44-A087-D6C19559FFDE}" ShortID="715005144">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_Rollerblade_05" ID="{A5C0DCD5-4C65-4814-8D42-AA2A05EEAF0C}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_Rollerblade_05.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="578796256"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_Rollerblade_05" ID="{A5C0DCD5-4C65-4814-8D42-AA2A05EEAF0C}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="full_speed_loop_Rollerblade_06" ID="{54D19D20-508F-4E0D-9345-3CC76634862C}" ShortID="736266843">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_Rollerblade_06" ID="{27D6F5EE-DF15-41E3-9803-783233EA665D}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_Rollerblade_06.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="888166843"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_Rollerblade_06" ID="{27D6F5EE-DF15-41E3-9803-783233EA665D}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="full_speed_loop_Rollerblade_08" ID="{3110EB67-18B5-43FC-AC65-D874CDF4B027}" ShortID="625083527">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_Rollerblade_08" ID="{1D9C94B2-CA4F-4822-A903-52B9653D9773}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_Rollerblade_08.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="1040028418"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_Rollerblade_08" ID="{1D9C94B2-CA4F-4822-A903-52B9653D9773}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</RandomSequenceContainer>
+														<RandomSequenceContainer Name="Hoverloop_base" ID="{2E1EF4A7-04AE-44E6-9145-CDF508FB083E}" ShortID="500892391">
+															<PropertyList>
+																<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+																<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+																<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-4</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="loop_base_iceskating" ID="{D55C1A18-5B1E-472D-B8C6-221DFB63ACCE}" ShortID="962856425">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="loop_base_iceskating" ID="{1A6C6478-BD0A-47F2-8E50-D47F37B00DD6}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\loop_base_iceskating.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="236831835"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="loop_base_iceskating" ID="{1A6C6478-BD0A-47F2-8E50-D47F37B00DD6}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+															<Playlist>
+																<ItemRef Name="loop_base_iceskating" ID="{D55C1A18-5B1E-472D-B8C6-221DFB63ACCE}"/>
+															</Playlist>
+														</RandomSequenceContainer>
+														<RandomSequenceContainer Name="Hoverboots_sequence" ID="{5A3C31FD-C237-4584-AD02-413AACB51ABC}" ShortID="344439076">
+															<PropertyList>
+																<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+																<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+																<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0"/>
+																<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-6</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="full_speed_loop_iceskating_sequence_01" ID="{AA3F0471-45CA-44C6-A2CC-6987222EF2E3}" ShortID="370206802">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_iceskating_sequence_01" ID="{E63DC2A3-BBEE-4940-AE21-23833A0E588C}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_iceskating_sequence_01.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="491725246"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_iceskating_sequence_01" ID="{E63DC2A3-BBEE-4940-AE21-23833A0E588C}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="full_speed_loop_iceskating_sequence_02" ID="{190817D2-5A33-40B7-9E06-9C43060E4DA7}" ShortID="253612211">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_iceskating_sequence_02" ID="{F9F3EFAE-73D5-435A-9C4F-B5836AD442F0}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_iceskating_sequence_02.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="12974516"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_iceskating_sequence_02" ID="{F9F3EFAE-73D5-435A-9C4F-B5836AD442F0}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="full_speed_loop_iceskating_sequence_03" ID="{378A60ED-61F7-44D7-B33F-3B942840FE44}" ShortID="338543599">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_iceskating_sequence_03" ID="{AF648F8A-22B9-466C-9DCF-3141D1C372AE}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_iceskating_sequence_03.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="295341070"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_iceskating_sequence_03" ID="{AF648F8A-22B9-466C-9DCF-3141D1C372AE}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="full_speed_loop_iceskating_sequence_04" ID="{1A1B9647-8383-4517-9B21-DD2889DCD628}" ShortID="478182141">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_iceskating_sequence_04" ID="{82F031BB-D72B-4E8C-853E-2672B3ABAADA}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_iceskating_sequence_04.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="531828345"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_iceskating_sequence_04" ID="{82F031BB-D72B-4E8C-853E-2672B3ABAADA}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="full_speed_loop_iceskating_sequence_05" ID="{509051E4-8272-4E28-98B5-BAF2E565539F}" ShortID="582026411">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_iceskating_sequence_05" ID="{31DAEB3F-B9D4-452F-B869-E6BBFEA76488}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_iceskating_sequence_05.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="855313235"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_iceskating_sequence_05" ID="{31DAEB3F-B9D4-452F-B869-E6BBFEA76488}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="full_speed_loop_iceskating_sequence_06" ID="{E2E57AC1-AE40-45E3-B4CF-18297232BD9C}" ShortID="890260543">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_iceskating_sequence_06" ID="{3CAD90AE-26D6-4DCF-98F8-603893B3D08F}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_iceskating_sequence_06.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="119828126"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_iceskating_sequence_06" ID="{3CAD90AE-26D6-4DCF-98F8-603893B3D08F}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="full_speed_loop_iceskating_sequence_07" ID="{2D0CC760-EF95-487B-83AB-531A8CA1CD4B}" ShortID="861352942">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_iceskating_sequence_07" ID="{03861930-343D-4A9D-8620-E447472D64DA}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_iceskating_sequence_07.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="787754884"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_iceskating_sequence_07" ID="{03861930-343D-4A9D-8620-E447472D64DA}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="full_speed_loop_iceskating_sequence_08" ID="{3E51C83F-A431-48DB-81D8-C29D632DC0D2}" ShortID="761490344">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_iceskating_sequence_08" ID="{15897B42-5AD2-4C09-BC0F-A52E9838476F}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_iceskating_sequence_08.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="753452172"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_iceskating_sequence_08" ID="{15897B42-5AD2-4C09-BC0F-A52E9838476F}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+																<Sound Name="full_speed_loop_iceskating_sequence_09" ID="{43E78575-6667-4BCD-981E-349CF1DA85AB}" ShortID="526920990">
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="full_speed_loop_iceskating_sequence_09" ID="{F82F7EA3-0045-4185-BD8C-F9DD78A27CB5}">
+																			<Language>SFX</Language>
+																			<AudioFile>Hoverboots\full_speed_loop_iceskating_sequence_09.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="237567144"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="full_speed_loop_iceskating_sequence_09" ID="{F82F7EA3-0045-4185-BD8C-F9DD78A27CB5}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+															<ObjectLists>
+																<ObjectList Name="RTPC">
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{57095427-809A-409F-8F02-38A18C3FC5D6}" ShortID="430937577">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="PlayMechanismSpecialTransitionsValue"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{42440C07-5495-4C9B-9CAA-D408CCDAFEB6}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>-2193.75</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>999.15326</XPos>
+																										<YPos>182.84822</YPos>
+																										<Flags>0</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>2000</XPos>
+																										<YPos>1743.75</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																</ObjectList>
+															</ObjectLists>
+															<Playlist>
+																<ItemRef Name="full_speed_loop_iceskating_sequence_01" ID="{AA3F0471-45CA-44C6-A2CC-6987222EF2E3}"/>
+																<ItemRef Name="full_speed_loop_iceskating_sequence_02" ID="{190817D2-5A33-40B7-9E06-9C43060E4DA7}"/>
+																<ItemRef Name="full_speed_loop_iceskating_sequence_03" ID="{378A60ED-61F7-44D7-B33F-3B942840FE44}"/>
+																<ItemRef Name="full_speed_loop_iceskating_sequence_04" ID="{1A1B9647-8383-4517-9B21-DD2889DCD628}"/>
+																<ItemRef Name="full_speed_loop_iceskating_sequence_05" ID="{509051E4-8272-4E28-98B5-BAF2E565539F}"/>
+																<ItemRef Name="full_speed_loop_iceskating_sequence_06" ID="{E2E57AC1-AE40-45E3-B4CF-18297232BD9C}"/>
+																<ItemRef Name="full_speed_loop_iceskating_sequence_07" ID="{2D0CC760-EF95-487B-83AB-531A8CA1CD4B}"/>
+																<ItemRef Name="full_speed_loop_iceskating_sequence_08" ID="{3E51C83F-A431-48DB-81D8-C29D632DC0D2}"/>
+																<ItemRef Name="full_speed_loop_iceskating_sequence_09" ID="{43E78575-6667-4BCD-981E-349CF1DA85AB}"/>
+															</Playlist>
+														</RandomSequenceContainer>
+													</ChildrenList>
+												</BlendContainer>
+												<Sound Name="Hoverboots_stopped" ID="{5A8A99F7-DC2B-4600-915A-BC8851CD7496}" ShortID="196004268">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<SourcePlugin Name="Soundseed Air Wind" ID="{B668B01B-DE4F-4A34-B46B-1E0CF0DB9AD1}" ShortID="1042562379" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
+															<Language>SFX</Language>
+															<PluginData/>
+															<PluginInnerObjectList>
+																<List Name="Deflectors">
+																	<PluginInnerObject Name="" ID="{4F0A2120-86A3-4B8F-A494-C685C2EEDAAA}" PluginName="Deflector" CompanyID="0" PluginID="121"/>
+																</List>
+															</PluginInnerObjectList>
+														</SourcePlugin>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Soundseed Air Wind" ID="{B668B01B-DE4F-4A34-B46B-1E0CF0DB9AD1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<RandomSequenceContainer Name="Hoverloop_acceleration" ID="{E3479E3C-6D05-4A6E-8BCD-DF657E49FA9B}" ShortID="1004917937">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="accelerate_accelerate_layer_02" ID="{EF003764-4440-4716-B6F5-8065A4992A42}" ShortID="127631642">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="accelerate_accelerate_layer_02" ID="{45E5B9E4-BEA3-4278-B0C8-85C6054137D6}">
+																	<Language>SFX</Language>
+																	<AudioFile>Hoverboots\accelerate_accelerate_layer_02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="171010235"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="accelerate_accelerate_layer_02" ID="{45E5B9E4-BEA3-4278-B0C8-85C6054137D6}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="accelerate_accelerate_layer_01" ID="{975EF988-B12A-47CC-B80F-3F818446D035}" ShortID="769144146">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="accelerate_accelerate_layer_01" ID="{847B5253-545B-47A3-8C63-B5C00522A0BE}">
+																	<Language>SFX</Language>
+																	<AudioFile>Hoverboots\accelerate_accelerate_layer_01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="176812485"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="accelerate_accelerate_layer_01" ID="{847B5253-545B-47A3-8C63-B5C00522A0BE}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Hoverloop_acceleration" ID="{E3479E3C-6D05-4A6E-8BCD-DF657E49FA9B}"/>
+														<PropertyList>
+															<Property Name="ContinuePlay" Type="bool" Value="True"/>
+															<Property Name="FadeInTime" Type="Real64">
+																<ValueList>
+																	<Value>2</Value>
+																</ValueList>
+															</Property>
+															<Property Name="FadeOutTime" Type="Real64">
+																<ValueList>
+																	<Value>5</Value>
+																</ValueList>
+															</Property>
+														</PropertyList>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Hoverloop_Blend" ID="{33D18669-AE45-4B1B-9CA3-449B4E06B92F}"/>
+														<PropertyList>
+															<Property Name="ContinuePlay" Type="bool" Value="True"/>
+															<Property Name="FadeInTime" Type="Real64">
+																<ValueList>
+																	<Value>1</Value>
+																</ValueList>
+															</Property>
+															<Property Name="FadeOutTime" Type="Real64">
+																<ValueList>
+																	<Value>0.3</Value>
+																</ValueList>
+															</Property>
+														</PropertyList>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Hoverboots_stopped" ID="{5A8A99F7-DC2B-4600-915A-BC8851CD7496}"/>
+														<PropertyList>
+															<Property Name="ContinuePlay" Type="bool" Value="True"/>
+															<Property Name="FadeOutTime" Type="Real64">
+																<ValueList>
+																	<Value>1</Value>
+																</ValueList>
+															</Property>
+														</PropertyList>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Stopped" ID="{2C307309-F91B-4D77-AF29-DEBCBFD72347}"/>
+														<ItemList>
+															<ItemRef Name="Hoverboots_stopped" ID="{5A8A99F7-DC2B-4600-915A-BC8851CD7496}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="FullSpeed" ID="{DBB88A42-5CC6-4FB2-B398-E90BD1F134AA}"/>
+														<ItemList>
+															<ItemRef Name="Hoverloop_Blend" ID="{33D18669-AE45-4B1B-9CA3-449B4E06B92F}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Accelerate" ID="{12994FF5-E12F-4682-A9D9-C114B53C047E}"/>
+														<ItemList>
+															<ItemRef Name="Hoverloop_acceleration" ID="{E3479E3C-6D05-4A6E-8BCD-DF657E49FA9B}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<RandomSequenceContainer Name="hoverboots_on_rail" ID="{563BC56E-79E8-4833-9388-C53EE86FEC0C}" ShortID="1023675955">
+											<PropertyList>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2.5"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="hoverboots_on_rail_loop" ID="{8C41FE22-FEF6-40A2-A2E4-97FEFE196A03}" ShortID="514629085">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>1540</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="hoverboots_on_rail_loop" ID="{CE89400C-3028-441C-9947-3A3B21A02B95}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="1.02804560759106"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.90086470768289"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Hoverboots\hoverboots_on_rail_loop.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="572699196"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="hoverboots_on_rail_loop" ID="{CE89400C-3028-441C-9947-3A3B21A02B95}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<Playlist>
+												<ItemRef Name="hoverboots_on_rail_loop" ID="{8C41FE22-FEF6-40A2-A2E4-97FEFE196A03}"/>
+											</Playlist>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<BlendTrackList>
+										<BlendTrack Name="Hoverboots_Surface" ID="{EBB2E75C-89A3-4CFA-9FA7-4E0EC03A2345}" ShortID="1067304207">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="RTPC_PlayerMovement" ID="{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+												</Reference>
+											</ReferenceList>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="Speed_Hoverloop_Switcher" ID="{469B8BDB-D4C6-4C7F-BF9B-472ADDC471A2}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>0</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>2.15628299894403</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="hoverboots_on_rail" ID="{563BC56E-79E8-4833-9388-C53EE86FEC0C}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>1.57391763463569</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>3.57839149947202</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+									</BlendTrackList>
+								</BlendContainer>
+								<Sound Name="HoverWind" ID="{9B4AD9A0-3C3E-4B67-B9F8-25CE5FC4D51D}" ShortID="236940080">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Soundseed Air Wind" ID="{18F4FB7B-DE04-40E6-A69B-DEEF180CC535}" ShortID="810116914" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
+											<PropertyList>
+												<Property Name="AverageVelocity" Type="Real32" Value="50"/>
+												<Property Name="AverageVelocityAutomate" Type="bool" Value="True"/>
+												<Property Name="Gustiness" Type="Real32" Value="0"/>
+												<Property Name="Variability" Type="Real32" Value="0.12"/>
 											</PropertyList>
 											<ObjectLists>
 												<ObjectList Name="RTPC">
 													<Reference>
 														<Local>
-															<RTPC Name="" ID="{26E72F30-B900-42C2-95E4-9826E36139C9}" ShortID="1000556057">
+															<RTPC Name="" ID="{39AD424A-3B62-4948-8B28-DEEE08AC3BA2}" ShortID="724407900">
 																<PropertyList>
-																	<Property Name="PropertyName" Type="string" Value="GainOffset"/>
+																	<Property Name="PropertyName" Type="string" Value="AverageVelocity"/>
 																</PropertyList>
 																<ReferenceList>
 																	<Reference Name="ControlInput">
@@ -452,20 +1533,20 @@
 																	</Reference>
 																	<Reference Name="Curve">
 																		<Custom>
-																			<Curve Name="" ID="{366B88B2-D7F0-49A0-82C3-A0546D3B5908}">
+																			<Curve Name="" ID="{DC1A6FC3-0686-421D-9E19-7260648877D6}">
 																				<PropertyList>
-																					<Property Name="Flags" Type="int32" Value="3"/>
+																					<Property Name="Flags" Type="int32" Value="1"/>
 																				</PropertyList>
 																				<PointList>
 																					<Point>
 																						<XPos>0</XPos>
-																						<YPos>-96.3</YPos>
+																						<YPos>0</YPos>
 																						<Flags>5</Flags>
-																						<SegmentShape>Log3</SegmentShape>
+																						<SegmentShape>Log1</SegmentShape>
 																					</Point>
 																					<Point>
 																						<XPos>2000</XPos>
-																						<YPos>1.92866</YPos>
+																						<YPos>1318.98636</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -478,9 +1559,9 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<RTPC Name="" ID="{2054C92F-3483-47B7-8F48-908375714443}" ShortID="291605771">
+															<RTPC Name="" ID="{CE18ACAA-5981-4724-A2F8-65F2B561DAB1}" ShortID="310864185">
 																<PropertyList>
-																	<Property Name="PropertyName" Type="string" Value="FrequencyScale"/>
+																	<Property Name="PropertyName" Type="string" Value="Variability"/>
 																</PropertyList>
 																<ReferenceList>
 																	<Reference Name="ControlInput">
@@ -488,25 +1569,95 @@
 																	</Reference>
 																	<Reference Name="Curve">
 																		<Custom>
-																			<Curve Name="" ID="{08669BE7-5ABE-4444-95F8-1F7D8217D3E3}">
+																			<Curve Name="" ID="{AF99ABD8-0E80-4101-A862-DFB1EE0AA972}">
 																				<PropertyList>
 																					<Property Name="Flags" Type="int32" Value="1"/>
 																				</PropertyList>
 																				<PointList>
 																					<Point>
 																						<XPos>0</XPos>
-																						<YPos>0</YPos>
+																						<YPos>0.13421</YPos>
 																						<Flags>5</Flags>
-																						<SegmentShape>Log1</SegmentShape>
 																					</Point>
 																					<Point>
-																						<XPos>667.682926666667</XPos>
-																						<YPos>1.12572</YPos>
+																						<XPos>2000</XPos>
+																						<YPos>0.34189</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{06624B75-07BA-405C-AAFB-D96D3335A6EE}" ShortID="1069844311">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="GainOffset"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{415E9A51-9474-416C-9AE9-5EEE815F33C5}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-18.54377</YPos>
+																						<Flags>5</Flags>
+																						<SegmentShape>Log3</SegmentShape>
+																					</Point>
+																					<Point>
+																						<XPos>2000</XPos>
+																						<YPos>0</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{97128394-E5CC-4389-9641-820B045C2F50}" ShortID="670632065">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Gustiness"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{9533F7BB-DBAA-406F-B408-0A6951F7FB13}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0.2579</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>664.624806666667</XPos>
+																						<YPos>0.69914</YPos>
 																						<Flags>0</Flags>
 																					</Point>
 																					<Point>
 																						<XPos>2000</XPos>
-																						<YPos>1.49155</YPos>
+																						<YPos>0.83419</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -521,264 +1672,6 @@
 											</ObjectLists>
 											<Language>SFX</Language>
 											<PluginData>
-	<WooshData>
-		<CurveList Version="1">
-			<CurveInfo Name="Speed">
-				<Curve Name="" ID="{A1903759-6859-44A5-ACB4-1C4C8F16650E}">
-					<PropertyList>
-						<Property Name="Flags" Type="int32" Value="1"/>
-					</PropertyList>
-					<PointList>
-						<Point>
-							<XPos>0</XPos>
-							<YPos>54.13333</YPos>
-							<Flags>5</Flags>
-						</Point>
-						<Point>
-							<XPos>1.5</XPos>
-							<YPos>55</YPos>
-							<Flags>0</Flags>
-						</Point>
-						<Point>
-							<XPos>2.6</XPos>
-							<YPos>55</YPos>
-							<Flags>37</Flags>
-						</Point>
-					</PointList>
-				</Curve>
-			</CurveInfo>
-		</CurveList>
-		<Path Version="1">
-			<Path2D Name="" ID="{9A6E1AA5-2305-4E9F-8E19-C1E1162914E5}">
-				<PropertyList>
-					<Property Name="LinearTime" Type="bool" Value="False"/>
-				</PropertyList>
-				<PointList>
-					<Point>
-						<XPos>0</XPos>
-						<YPos>0</YPos>
-						<ZPos>-100</ZPos>
-						<Flags>12</Flags>
-						<Time>0</Time>
-					</Point>
-				</PointList>
-			</Path2D>
-		</Path>
-	</WooshData>
-</PluginData>
-											<PluginInnerObjectList>
-												<List Name="Deflectors">
-													<PluginInnerObject Name="" ID="{135DFD11-1AAA-4E18-84F8-0781786E181D}" PluginName="Deflector" CompanyID="0" PluginID="122">
-														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="51"/>
-															<Property Name="QFactor" Type="Real32" Value="8.24"/>
-														</PropertyList>
-													</PluginInnerObject>
-												</List>
-											</PluginInnerObjectList>
-										</SourcePlugin>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Soundseed Air Woosh" ID="{7B4BAEFE-CD09-4435-8934-D3AE8F203DC6}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-							<GroupingInfo>
-								<GroupingBehaviorList>
-									<GroupingBehavior>
-										<ItemRef Name="HoverOnSnow" ID="{EBE77B26-B0BA-45A5-907E-8B6B179F3946}"/>
-									</GroupingBehavior>
-								</GroupingBehaviorList>
-								<GroupingList>
-									<Grouping>
-										<SwitchRef Name="SnowGround" ID="{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}"/>
-										<ItemList>
-											<ItemRef Name="HoverOnSnow" ID="{EBE77B26-B0BA-45A5-907E-8B6B179F3946}"/>
-										</ItemList>
-									</Grouping>
-								</GroupingList>
-							</GroupingInfo>
-						</SwitchContainer>
-						<Sound Name="HoverWind" ID="{9B4AD9A0-3C3E-4B67-B9F8-25CE5FC4D51D}" ShortID="236940080">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="2"/>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-10</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<SourcePlugin Name="Soundseed Air Wind" ID="{18F4FB7B-DE04-40E6-A69B-DEEF180CC535}" ShortID="810116914" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
-									<PropertyList>
-										<Property Name="AverageVelocity" Type="Real32" Value="50"/>
-										<Property Name="AverageVelocityAutomate" Type="bool" Value="True"/>
-										<Property Name="Gustiness" Type="Real32" Value="0"/>
-										<Property Name="Variability" Type="Real32" Value="0.12"/>
-									</PropertyList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<Reference>
-												<Local>
-													<RTPC Name="" ID="{39AD424A-3B62-4948-8B28-DEEE08AC3BA2}" ShortID="724407900">
-														<PropertyList>
-															<Property Name="PropertyName" Type="string" Value="AverageVelocity"/>
-														</PropertyList>
-														<ReferenceList>
-															<Reference Name="ControlInput">
-																<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-															</Reference>
-															<Reference Name="Curve">
-																<Custom>
-																	<Curve Name="" ID="{DC1A6FC3-0686-421D-9E19-7260648877D6}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																				<SegmentShape>Log1</SegmentShape>
-																			</Point>
-																			<Point>
-																				<XPos>2000</XPos>
-																				<YPos>1318.98636</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</Custom>
-															</Reference>
-														</ReferenceList>
-													</RTPC>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<RTPC Name="" ID="{CE18ACAA-5981-4724-A2F8-65F2B561DAB1}" ShortID="310864185">
-														<PropertyList>
-															<Property Name="PropertyName" Type="string" Value="Variability"/>
-														</PropertyList>
-														<ReferenceList>
-															<Reference Name="ControlInput">
-																<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-															</Reference>
-															<Reference Name="Curve">
-																<Custom>
-																	<Curve Name="" ID="{AF99ABD8-0E80-4101-A862-DFB1EE0AA972}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>0.13421</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>2000</XPos>
-																				<YPos>0.34189</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</Custom>
-															</Reference>
-														</ReferenceList>
-													</RTPC>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<RTPC Name="" ID="{06624B75-07BA-405C-AAFB-D96D3335A6EE}" ShortID="1069844311">
-														<PropertyList>
-															<Property Name="PropertyName" Type="string" Value="GainOffset"/>
-														</PropertyList>
-														<ReferenceList>
-															<Reference Name="ControlInput">
-																<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-															</Reference>
-															<Reference Name="Curve">
-																<Custom>
-																	<Curve Name="" ID="{415E9A51-9474-416C-9AE9-5EEE815F33C5}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="3"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>-18.54377</YPos>
-																				<Flags>5</Flags>
-																				<SegmentShape>Log3</SegmentShape>
-																			</Point>
-																			<Point>
-																				<XPos>2000</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</Custom>
-															</Reference>
-														</ReferenceList>
-													</RTPC>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<RTPC Name="" ID="{97128394-E5CC-4389-9641-820B045C2F50}" ShortID="670632065">
-														<PropertyList>
-															<Property Name="PropertyName" Type="string" Value="Gustiness"/>
-														</PropertyList>
-														<ReferenceList>
-															<Reference Name="ControlInput">
-																<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-															</Reference>
-															<Reference Name="Curve">
-																<Custom>
-																	<Curve Name="" ID="{9533F7BB-DBAA-406F-B408-0A6951F7FB13}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>0.2579</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>664.624806666667</XPos>
-																				<YPos>0.69914</YPos>
-																				<Flags>0</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>2000</XPos>
-																				<YPos>0.83419</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</Custom>
-															</Reference>
-														</ReferenceList>
-													</RTPC>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-									<Language>SFX</Language>
-									<PluginData>
 	<CurveList Version="1">
 		<CurveInfo Name="AverageVelocity">
 			<Curve Name="" ID="{3D3D47F4-D0E0-46E8-A156-C735FF562F3B}">
@@ -801,41 +1694,40 @@
 		</CurveInfo>
 	</CurveList>
 </PluginData>
-									<PluginInnerObjectList>
-										<List Name="Deflectors">
-											<PluginInnerObject Name="" ID="{352D520C-49C9-4D5B-A6D8-C7404904847C}" PluginName="Deflector" CompanyID="0" PluginID="121">
-												<PropertyList>
-													<Property Name="Frequency" Type="Real32" Value="641"/>
-													<Property Name="Gain" Type="Real32" Value="-6"/>
-													<Property Name="PanY" Type="Real64" Value="10"/>
-												</PropertyList>
-											</PluginInnerObject>
-											<PluginInnerObject Name="" ID="{66F56DD7-6371-4165-9F00-D18E6B43B509}" PluginName="Deflector" CompanyID="0" PluginID="121">
-												<PropertyList>
-													<Property Name="Gain" Type="Real32" Value="-6"/>
-													<Property Name="PanX" Type="Real64" Value="-46.7532467532467"/>
-													<Property Name="PanY" Type="Real64" Value="45.3865336658354"/>
-												</PropertyList>
-											</PluginInnerObject>
-											<PluginInnerObject Name="" ID="{2268C3CC-872B-4F24-9DB0-409D80F7517E}" PluginName="Deflector" CompanyID="0" PluginID="121">
-												<PropertyList>
-													<Property Name="Frequency" Type="Real32" Value="598"/>
-													<Property Name="Gain" Type="Real32" Value="-6"/>
-													<Property Name="PanX" Type="Real64" Value="51.948051948052"/>
-													<Property Name="PanY" Type="Real64" Value="58.8528678304239"/>
-												</PropertyList>
-											</PluginInnerObject>
-										</List>
-									</PluginInnerObjectList>
-								</SourcePlugin>
+											<PluginInnerObjectList>
+												<List Name="Deflectors">
+													<PluginInnerObject Name="" ID="{352D520C-49C9-4D5B-A6D8-C7404904847C}" PluginName="Deflector" CompanyID="0" PluginID="121">
+														<PropertyList>
+															<Property Name="Frequency" Type="Real32" Value="641"/>
+															<Property Name="Gain" Type="Real32" Value="-6"/>
+															<Property Name="PanY" Type="Real64" Value="10"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{66F56DD7-6371-4165-9F00-D18E6B43B509}" PluginName="Deflector" CompanyID="0" PluginID="121">
+														<PropertyList>
+															<Property Name="Gain" Type="Real32" Value="-6"/>
+															<Property Name="PanX" Type="Real64" Value="-46.7532467532467"/>
+															<Property Name="PanY" Type="Real64" Value="45.3865336658354"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{2268C3CC-872B-4F24-9DB0-409D80F7517E}" PluginName="Deflector" CompanyID="0" PluginID="121">
+														<PropertyList>
+															<Property Name="Frequency" Type="Real32" Value="598"/>
+															<Property Name="Gain" Type="Real32" Value="-6"/>
+															<Property Name="PanX" Type="Real64" Value="51.948051948052"/>
+															<Property Name="PanY" Type="Real64" Value="58.8528678304239"/>
+														</PropertyList>
+													</PluginInnerObject>
+												</List>
+											</PluginInnerObjectList>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Soundseed Air Wind" ID="{18F4FB7B-DE04-40E6-A69B-DEEF180CC535}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-							<PositioningInfo>
-								<Panner Name="" ID="{223E3C2B-6DB3-4482-8770-6EDDBAB924DE}"/>
-							</PositioningInfo>
-							<ActiveSourceList>
-								<ActiveSource Name="Soundseed Air Wind" ID="{18F4FB7B-DE04-40E6-A69B-DEEF180CC535}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						</BlendContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
