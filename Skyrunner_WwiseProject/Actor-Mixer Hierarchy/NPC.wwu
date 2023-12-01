@@ -98,6 +98,48 @@
 										<ActiveSource Name="Soundseed Air Woosh" ID="{0BC857D2-CA60-4305-9AC5-D1D65F8D6A18}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="npc_weapon_shoot_machinegun" ID="{5020077C-24E2-46F5-88F9-1926B82B2FBD}" ShortID="782041294">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{840A83C1-1B0E-4B96-B76D-3A0A8BA16E06}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="303"/>
+															<Property Name="Min" Type="Real64" Value="-253"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NPC Weapon" ID="{A8AA54FE-EDEF-4D9A-AD19-FB5DEA129011}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="game_weapon_shoot_machinegun" ID="{40C8A1D4-7915-46D3-84FE-718C0CC5B304}">
+											<Language>SFX</Language>
+											<AudioFile>Placeholders\game_weapon_shoot_machinegun.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="759953172"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="game_weapon_shoot_machinegun" ID="{40C8A1D4-7915-46D3-84FE-718C0CC5B304}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

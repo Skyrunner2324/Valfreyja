@@ -10,7 +10,17 @@
 				<Event Name="SX_enemy_sniper_charge" ID="{19B21076-A7DA-45EE-AA85-E86C9BF01313}"/>
 				<Event Name="SX_enemy_sniper_shot" ID="{39206078-B8DE-40F6-9ABE-8A92C812BBBA}"/>
 				<Event Name="SX_enemy_rocketman_shot" ID="{14A7CFB6-30A5-4E88-8BB1-7C0AD7552B8B}"/>
-				<Event Name="SX_enemy_gunner_shot" ID="{85FE7A46-F893-42AA-8787-F5597C4AF630}"/>
+				<Event Name="SX_enemy_gunner_shot" ID="{85FE7A46-F893-42AA-8787-F5597C4AF630}">
+					<ChildrenList>
+						<Action Name="" ID="{69602835-7ADD-443C-A021-42C3D7AFFEF5}" ShortID="877297499">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="npc_weapon_shoot_machinegun" ID="{5020077C-24E2-46F5-88F9-1926B82B2FBD}" WorkUnitID="{2648BE89-DB61-40DD-9520-81427D5C7D0E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SX_enemy_bomber_shot" ID="{2189C011-A358-4102-9707-D283558C2E34}"/>
 				<Event Name="SX_enemy_weapon_impact" ID="{9FCEB4E1-A361-4506-8664-86DBE46C78A1}">
 					<ChildrenList>

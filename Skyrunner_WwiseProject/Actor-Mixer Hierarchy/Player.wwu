@@ -1161,28 +1161,6 @@
 														<ActiveSource Name="Grenade_Launcher_ODY-0020-055" ID="{86A2CFC1-57AB-4048-831C-8A14A17AE61C}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="game_weapon_shoot_machinegun" ID="{5020077C-24E2-46F5-88F9-1926B82B2FBD}" ShortID="782041294">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="game_weapon_shoot_machinegun" ID="{40C8A1D4-7915-46D3-84FE-718C0CC5B304}">
-															<Language>SFX</Language>
-															<AudioFile>Placeholders\game_weapon_shoot_machinegun.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="759953172"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="game_weapon_shoot_machinegun" ID="{40C8A1D4-7915-46D3-84FE-718C0CC5B304}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
 												<Sound Name="game_weapon_shoot_shotgun" ID="{DCDEA920-D5F0-4CB2-ADE9-70136387DF80}" ShortID="1064202294">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64">
@@ -1574,9 +1552,6 @@
 													<GroupingBehavior>
 														<ItemRef Name="game_weapon_shoot_shotgun" ID="{DCDEA920-D5F0-4CB2-ADE9-70136387DF80}"/>
 													</GroupingBehavior>
-													<GroupingBehavior>
-														<ItemRef Name="game_weapon_shoot_machinegun" ID="{5020077C-24E2-46F5-88F9-1926B82B2FBD}"/>
-													</GroupingBehavior>
 												</GroupingBehaviorList>
 												<GroupingList>
 													<Grouping>
@@ -1821,7 +1796,7 @@
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
