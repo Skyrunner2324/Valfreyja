@@ -647,7 +647,7 @@
 																<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 																<Property Name="Volume" Type="Real64">
 																	<ValueList>
-																		<Value>-4</Value>
+																		<Value>-7</Value>
 																	</ValueList>
 																</Property>
 															</PropertyList>
@@ -1123,6 +1123,7 @@
 										</SwitchContainer>
 										<RandomSequenceContainer Name="hoverboots_on_rail" ID="{563BC56E-79E8-4833-9388-C53EE86FEC0C}" ShortID="1023675955">
 											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2.5"/>
@@ -1130,13 +1131,16 @@
 												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-4</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
+													<ObjectRef Name="Few_Even_Notches" ID="{25DCAC4B-7165-436C-9B22-75628C2533D1}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
