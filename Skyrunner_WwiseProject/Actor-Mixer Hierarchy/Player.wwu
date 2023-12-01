@@ -153,6 +153,7 @@
 								<Sound Name="game_slide" ID="{0F8FE257-4D33-4454-AADA-B67BCA030904}" ShortID="1019263201">
 									<PropertyList>
 										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
@@ -166,11 +167,10 @@
 									<ChildrenList>
 										<AudioFileSource Name="player_slide" ID="{B7E7A1C1-8F45-4F85-8576-3B8D5EEFEC9D}">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.116833773087071"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.220686015831135"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00535008182700003"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="2.11644164284079"/>
-												<Property Name="TrimEnd" Type="Real64" Value="2.70672492343194"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0708126449729864"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.86287974413646"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Placeholders\player_slide.wav</AudioFile>
@@ -189,7 +189,7 @@
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-10</Value>
+												<Value>-12</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2270,7 +2270,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>-0</XPos>
+																		<XPos>0</XPos>
 																		<YPos>1</YPos>
 																		<Flags>0</Flags>
 																	</Point>
@@ -2319,6 +2319,16 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
+						<RandomSequenceContainer Name="player_hit_cible" ID="{F1165459-6391-4C50-80E5-4F425857B1D2}" ShortID="546572384">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
