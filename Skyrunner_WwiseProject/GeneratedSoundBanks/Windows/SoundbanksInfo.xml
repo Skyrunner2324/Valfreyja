@@ -9,12 +9,76 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="216067002" Type="Event" GUID="{FC9252BB-4746-4A62-AB71-565BBB37F6D2}" Language="SFX" Hash="{4519E34B-4A1E-B087-CA64-5189CA3187C4}">
+		<SoundBank Id="171000875" Type="Event" GUID="{76F454AE-DCE9-4E95-839E-6EDCB135191B}" Language="SFX" Hash="{B8BB647D-0813-D5B7-B813-535723F578D7}">
+			<ObjectPath>SX_enemy_invicibility_hit</ObjectPath>
+			<ShortName>SX_enemy_invicibility_hit</ShortName>
+			<Path>Event/SX_enemy_invicibility_hit.bnk</Path>
+			<Media>
+				<File Id="177956997" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>SX_enemy_invicibility_hit.wav</ShortName>
+					<Path>Media/177956997.wem</Path>
+					<CachePath>SFX/SX_enemy_invicibility_hit_755F56E2.wem</CachePath>
+				</File>
+				<File Id="777880860" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_hitmarker.wav</ShortName>
+					<Path>Media/777880860.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_hitmarker_755F56E2.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1625700308" Name="Hitmarker_Meter" ObjectPath="\Effects\Default Work Unit\Hitmarker_Meter" GUID="{E424AAA8-5A51-4482-B54E-F994A6A6B58B}" LibName="Wwise Meter" LibId="8454147"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="171000875" Name="SX_enemy_invicibility_hit" ObjectPath="\Events\Enemy\SX_enemy_invicibility_hit" GUID="{76F454AE-DCE9-4E95-839E-6EDCB135191B}" DurationType="OneShot" DurationMin="0.083333336" DurationMax="0.28266665">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3854779876" Id="2496202482" GUID="{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"/>
+							<MediaRefs>
+								<MediaRef Id="177956997"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3854779876" Id="1160234136" GUID="{8270281F-156F-4B41-B2D1-76D60C9593B8}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="777880860"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1625700308"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="3854779876" Name="NPCStatusSwitch" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch" GUID="{7605A169-6571-40E7-8DA5-27847979CEDF}">
+					<Switches>
+						<Switch Id="1160234136" Name="Normal" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch\Normal" GUID="{8270281F-156F-4B41-B2D1-76D60C9593B8}"/>
+						<Switch Id="2496202482" Name="Invicible" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch\Invicible" GUID="{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="216067002" Type="Event" GUID="{FC9252BB-4746-4A62-AB71-565BBB37F6D2}" Language="SFX" Hash="{2E36B633-459B-D61A-6EF3-0BB95C98F596}">
 			<ObjectPath>UI_confirm</ObjectPath>
 			<ShortName>UI_confirm</ShortName>
 			<Path>Event/UI_confirm.bnk</Path>
+			<Media>
+				<File Id="250224533" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\ui_confirm.wav</ShortName>
+					<Path>Media/250224533.wem</Path>
+					<CachePath>SFX/Placeholders/ui_confirm_755F56E2.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="216067002" Name="UI_confirm" ObjectPath="\Events\UI\UI_confirm" GUID="{FC9252BB-4746-4A62-AB71-565BBB37F6D2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="216067002" Name="UI_confirm" ObjectPath="\Events\UI\UI_confirm" GUID="{FC9252BB-4746-4A62-AB71-565BBB37F6D2}" DurationType="OneShot" DurationMin="0.11733333" DurationMax="0.11733333">
+					<MediaRefs>
+						<MediaRef Id="250224533"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{35A68BFD-8AB7-5A31-3F48-C5C2A70FE856}">
@@ -66,7 +130,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="423476228" Type="Event" GUID="{85FE7A46-F893-42AA-8787-F5597C4AF630}" Language="SFX" Hash="{2BEF30CA-7191-44F4-7F9D-F79784369F1E}">
+		<SoundBank Id="423476228" Type="Event" GUID="{85FE7A46-F893-42AA-8787-F5597C4AF630}" Language="SFX" Hash="{908D5A69-DA20-C7F3-0B43-0A576511AFBF}">
 			<ObjectPath>SX_enemy_gunner_shot</ObjectPath>
 			<ShortName>SX_enemy_gunner_shot</ShortName>
 			<Path>Event/SX_enemy_gunner_shot.bnk</Path>
@@ -104,7 +168,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{E81A9A6F-46EA-4EA3-549E-DBE5450A4864}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{867C4B9D-451A-50FB-C651-4E5AB6872370}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
@@ -221,6 +285,9 @@
 					<Plugin Id="810116914" Name="Soundseed Air Wind" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Main\HoverWind\Soundseed Air Wind" GUID="{18F4FB7B-DE04-40E6-A69B-DEEF180CC535}" LibName="SoundSeed Air Wind" LibId="7798786"/>
 					<Plugin Id="1042562379" Name="Soundseed Air Wind" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Main\Hoverboots_Surface_Blend\Speed_Hoverloop_Switcher\Hoverboots_stopped\Soundseed Air Wind" GUID="{B668B01B-DE4F-4A34-B46B-1E0CF0DB9AD1}" LibName="SoundSeed Air Wind" LibId="7798786"/>
 				</Custom>
+				<ShareSets>
+					<Plugin Id="2202047219" Name="Few_Even_Notches" ObjectPath="\Effects\Factory Effects\Flanger\Static Comb Filtering\Few_Even_Notches" GUID="{25DCAC4B-7165-436C-9B22-75628C2533D1}" LibName="Wwise Flanger" LibId="8192003"/>
+				</ShareSets>
 			</Plugins>
 			<Events>
 				<Event Id="527139965" Name="SX_play_hoverboots" ObjectPath="\Events\Hoverboots\Hoverboots\SX_play_hoverboots" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" DurationType="Infinite">
@@ -233,6 +300,9 @@
 							<PluginRef Id="364518086"/>
 							<PluginRef Id="810116914"/>
 						</Custom>
+						<ShareSets>
+							<PluginRef Id="2202047219"/>
+						</ShareSets>
 					</PluginRefs>
 					<SwitchContainers>
 						<SwitchContainer>
@@ -603,20 +673,80 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1161249572" Type="Event" GUID="{39206078-B8DE-40F6-9ABE-8A92C812BBBA}" Language="SFX" Hash="{B3CC5C13-F92D-F8DC-4A12-D4F347B8FEFF}">
+		<SoundBank Id="1161249572" Type="Event" GUID="{39206078-B8DE-40F6-9ABE-8A92C812BBBA}" Language="SFX" Hash="{3AC2E093-CD2B-EF5B-D52A-1F32EDB5DE1C}">
 			<ObjectPath>SX_enemy_sniper_shot</ObjectPath>
 			<ShortName>SX_enemy_sniper_shot</ShortName>
 			<Path>Event/SX_enemy_sniper_shot.bnk</Path>
+			<Media>
+				<File Id="667582012" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>SX_enemy_sniper_shot.wav</ShortName>
+					<Path>Media/667582012.wem</Path>
+					<CachePath>SFX/SX_enemy_sniper_shot_755F56E2.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="1161249572" Name="SX_enemy_sniper_shot" ObjectPath="\Events\Enemy\SX_enemy_sniper_shot" GUID="{39206078-B8DE-40F6-9ABE-8A92C812BBBA}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1161249572" Name="SX_enemy_sniper_shot" ObjectPath="\Events\Enemy\SX_enemy_sniper_shot" GUID="{39206078-B8DE-40F6-9ABE-8A92C812BBBA}" DurationType="OneShot" DurationMin="0.434625" DurationMax="0.434625">
+					<MediaRefs>
+						<MediaRef Id="667582012"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1272653400" Type="Event" GUID="{19B21076-A7DA-45EE-AA85-E86C9BF01313}" Language="SFX" Hash="{288B32A4-7B58-B372-A664-1946496631C0}">
+		<SoundBank Id="1200988362" Type="Event" GUID="{2278516D-BA2F-4D5D-93F6-5353DF4E1405}" Language="SFX" Hash="{575B4A0A-1EB0-622F-8C50-65519CFACB3B}">
+			<ObjectPath>SX_player_hit</ObjectPath>
+			<ShortName>SX_player_hit</ShortName>
+			<Path>Event/SX_player_hit.bnk</Path>
+			<Media>
+				<File Id="525622801" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>SX_player_hit.wav</ShortName>
+					<Path>Media/525622801.wem</Path>
+					<CachePath>SFX/SX_player_hit_755F56E2.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1200988362" Name="SX_player_hit" ObjectPath="\Events\Player\Feedback\SX_player_hit" GUID="{2278516D-BA2F-4D5D-93F6-5353DF4E1405}" DurationType="OneShot" DurationMin="0.20707983" DurationMax="0.2732435">
+					<MediaRefs>
+						<MediaRef Id="525622801"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1219048826" Type="Event" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" Language="SFX" Hash="{45CEB21B-BFEF-8793-FEF1-CF9CD5AE0181}">
+			<ObjectPath>UI_start</ObjectPath>
+			<ShortName>UI_start</ShortName>
+			<Path>Event/UI_start.bnk</Path>
+			<Media>
+				<File Id="273426957" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FX_wolf_start.wav</ShortName>
+					<Path>Media/273426957.wem</Path>
+					<CachePath>SFX/FX_wolf_start_755F56E2.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1219048826" Name="UI_start" ObjectPath="\Events\UI\UI_start" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" DurationType="OneShot" DurationMin="8.749" DurationMax="8.749">
+					<MediaRefs>
+						<MediaRef Id="273426957"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1272653400" Type="Event" GUID="{19B21076-A7DA-45EE-AA85-E86C9BF01313}" Language="SFX" Hash="{54D8613D-626A-6926-E0E9-8FFC613C2190}">
 			<ObjectPath>SX_enemy_sniper_charge</ObjectPath>
 			<ShortName>SX_enemy_sniper_charge</ShortName>
 			<Path>Event/SX_enemy_sniper_charge.bnk</Path>
+			<Media>
+				<File Id="54750595" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>SX_enemy_sniper_charge.wav</ShortName>
+					<Path>Media/54750595.wem</Path>
+					<CachePath>SFX/SX_enemy_sniper_charge_755F56E2.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="1272653400" Name="SX_enemy_sniper_charge" ObjectPath="\Events\Enemy\SX_enemy_sniper_charge" GUID="{19B21076-A7DA-45EE-AA85-E86C9BF01313}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1272653400" Name="SX_enemy_sniper_charge" ObjectPath="\Events\Enemy\SX_enemy_sniper_charge" GUID="{19B21076-A7DA-45EE-AA85-E86C9BF01313}" DurationType="OneShot" DurationMin="0.61333334" DurationMax="0.61333334">
+					<MediaRefs>
+						<MediaRef Id="54750595"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="1311098982" Type="Event" GUID="{A670372F-931C-41E6-925A-FA1480FED58F}" Language="SFX" Hash="{7FFCCA67-3919-5F32-151E-1108986C622A}">
@@ -648,7 +778,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{06FB0CFD-81F6-6B26-020C-29786B271E76}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{93362E0B-D7C0-F4CD-CCA5-2DA9027C51CC}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -870,6 +1000,12 @@
 						<Switch Id="2383244719" Name="FullSpeed" ObjectPath="\Switches\Default Work Unit\PlayerSpeedSwitch\FullSpeed" GUID="{DBB88A42-5CC6-4FB2-B398-E90BD1F134AA}"/>
 						<Switch Id="2904797076" Name="Stopped" ObjectPath="\Switches\Default Work Unit\PlayerSpeedSwitch\Stopped" GUID="{2C307309-F91B-4D77-AF29-DEBCBFD72347}"/>
 						<Switch Id="3089599978" Name="Accelerate" ObjectPath="\Switches\Default Work Unit\PlayerSpeedSwitch\Accelerate" GUID="{12994FF5-E12F-4682-A9D9-C114B53C047E}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3854779876" Name="NPCStatusSwitch" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch" GUID="{7605A169-6571-40E7-8DA5-27847979CEDF}">
+					<Switches>
+						<Switch Id="1160234136" Name="Normal" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch\Normal" GUID="{8270281F-156F-4B41-B2D1-76D60C9593B8}"/>
+						<Switch Id="2496202482" Name="Invicible" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch\Invicible" GUID="{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
@@ -1181,12 +1317,23 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1933552779" Type="Event" GUID="{14A7CFB6-30A5-4E88-8BB1-7C0AD7552B8B}" Language="SFX" Hash="{7D6B619B-CF82-B32B-FC13-266ED52DC52C}">
+		<SoundBank Id="1933552779" Type="Event" GUID="{14A7CFB6-30A5-4E88-8BB1-7C0AD7552B8B}" Language="SFX" Hash="{51438F10-E37B-697F-A94F-076EC5F37478}">
 			<ObjectPath>SX_enemy_rocketman_shot</ObjectPath>
 			<ShortName>SX_enemy_rocketman_shot</ShortName>
 			<Path>Event/SX_enemy_rocketman_shot.bnk</Path>
+			<Media>
+				<File Id="749570869" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>SX_enemy_rocketman_shot.wav</ShortName>
+					<Path>Media/749570869.wem</Path>
+					<CachePath>SFX/SX_enemy_rocketman_shot_755F56E2.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="1933552779" Name="SX_enemy_rocketman_shot" ObjectPath="\Events\Enemy\SX_enemy_rocketman_shot" GUID="{14A7CFB6-30A5-4E88-8BB1-7C0AD7552B8B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1933552779" Name="SX_enemy_rocketman_shot" ObjectPath="\Events\Enemy\SX_enemy_rocketman_shot" GUID="{14A7CFB6-30A5-4E88-8BB1-7C0AD7552B8B}" DurationType="OneShot" DurationMin="0.7248125" DurationMax="0.7248125">
+					<MediaRefs>
+						<MediaRef Id="749570869"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="1955951874" Type="Event" GUID="{BA048CFB-5B21-4BC8-B6D1-60EC051A774E}" Language="SFX" Hash="{B6DD1A77-9967-8BA7-EEA9-FCE14D230DE1}">
@@ -1208,12 +1355,42 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2024222415" Type="Event" GUID="{8914833C-41B7-4962-9AF6-5229DDCF1F68}" Language="SFX" Hash="{4C511C57-4130-BC54-6666-4B6112AD6D76}">
+		<SoundBank Id="2024222415" Type="Event" GUID="{8914833C-41B7-4962-9AF6-5229DDCF1F68}" Language="SFX" Hash="{D2AE88DD-C5B3-8606-560B-AD1FBC067BD9}">
 			<ObjectPath>UI_back</ObjectPath>
 			<ShortName>UI_back</ShortName>
 			<Path>Event/UI_back.bnk</Path>
+			<Media>
+				<File Id="37979520" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\ui_back.wav</ShortName>
+					<Path>Media/37979520.wem</Path>
+					<CachePath>SFX/Placeholders/ui_back_755F56E2.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="2024222415" Name="UI_back" ObjectPath="\Events\UI\UI_back" GUID="{8914833C-41B7-4962-9AF6-5229DDCF1F68}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2024222415" Name="UI_back" ObjectPath="\Events\UI\UI_back" GUID="{8914833C-41B7-4962-9AF6-5229DDCF1F68}" DurationType="OneShot" DurationMin="0.058041666" DurationMax="0.058041666">
+					<MediaRefs>
+						<MediaRef Id="37979520"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="2029637615" Type="Event" GUID="{A3AB33FD-834B-442A-BA55-9A77DFAC47BB}" Language="SFX" Hash="{733FEA84-E7A6-C26D-0684-0765A7E8D44E}">
+			<ObjectPath>SX_player_autolock</ObjectPath>
+			<ShortName>SX_player_autolock</ShortName>
+			<Path>Event/SX_player_autolock.bnk</Path>
+			<Media>
+				<File Id="994636613" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>SX_player_autolock.wav</ShortName>
+					<Path>Media/994636613.wem</Path>
+					<CachePath>SFX/SX_player_autolock_755F56E2.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2029637615" Name="SX_player_autolock" ObjectPath="\Events\Player\Feedback\SX_player_autolock" GUID="{A3AB33FD-834B-442A-BA55-9A77DFAC47BB}" DurationType="OneShot" DurationMin="0.21952084" DurationMax="0.21952084">
+					<MediaRefs>
+						<MediaRef Id="994636613"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{FDC0F5CA-DB90-96F7-D21C-235314955F94}">
@@ -1247,7 +1424,7 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="2403475570" Type="Event" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" Language="SFX" Hash="{B186F66A-45BB-8C18-4523-C6D9737FFC1C}">
+		<SoundBank Id="2403475570" Type="Event" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" Language="SFX" Hash="{F5F2B9B8-2A6E-09B6-1FCE-5B47A4384622}">
 			<ObjectPath>SX_player_feedback_hitmarker</ObjectPath>
 			<ShortName>SX_player_feedback_hitmarker</ShortName>
 			<Path>Event/SX_player_feedback_hitmarker.bnk</Path>
@@ -1275,6 +1452,14 @@
 					</PluginRefs>
 				</Event>
 			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="3854779876" Name="NPCStatusSwitch" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch" GUID="{7605A169-6571-40E7-8DA5-27847979CEDF}">
+					<Switches>
+						<Switch Id="1160234136" Name="Normal" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch\Normal" GUID="{8270281F-156F-4B41-B2D1-76D60C9593B8}"/>
+						<Switch Id="2496202482" Name="Invicible" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch\Invicible" GUID="{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="2439571424" Type="Event" GUID="{90FA6150-F2C6-4AEA-9823-D63B27B43CA6}" Language="SFX" Hash="{C3F5E53C-CB7D-3829-13C7-05030AE802C7}">
 			<ObjectPath>Play_Stop_TestBeep_Loop_3D</ObjectPath>
@@ -1292,20 +1477,42 @@
 				<Event Id="2484145022" Name="Play_Stop_TestBeep_Loop" ObjectPath="\Events\Test\TestEvents\Play_Stop_TestBeep_Loop" GUID="{A5E90370-96BE-450D-B970-BCFBC429B56F}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2644790697" Type="Event" GUID="{528674B7-E690-4AD6-8217-32726F835B11}" Language="SFX" Hash="{B8012CF4-949F-D3AD-CA67-258D75700D92}">
+		<SoundBank Id="2644790697" Type="Event" GUID="{528674B7-E690-4AD6-8217-32726F835B11}" Language="SFX" Hash="{C42C137D-48DC-A42D-2D3F-83D34A7EC958}">
 			<ObjectPath>UI_move</ObjectPath>
 			<ShortName>UI_move</ShortName>
 			<Path>Event/UI_move.bnk</Path>
+			<Media>
+				<File Id="935278826" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\ui_move.wav</ShortName>
+					<Path>Media/935278826.wem</Path>
+					<CachePath>SFX/Placeholders/ui_move_755F56E2.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="2644790697" Name="UI_move" ObjectPath="\Events\UI\UI_move" GUID="{528674B7-E690-4AD6-8217-32726F835B11}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2644790697" Name="UI_move" ObjectPath="\Events\UI\UI_move" GUID="{528674B7-E690-4AD6-8217-32726F835B11}" DurationType="OneShot" DurationMin="0.11733333" DurationMax="0.11733333">
+					<MediaRefs>
+						<MediaRef Id="935278826"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2792155208" Type="Event" GUID="{194991E3-9D95-4E83-BAAB-87D009E9C2CB}" Language="SFX" Hash="{AC956292-0335-661F-9189-F7960395C2D2}">
+		<SoundBank Id="2792155208" Type="Event" GUID="{194991E3-9D95-4E83-BAAB-87D009E9C2CB}" Language="SFX" Hash="{A607A693-664D-67CE-BE98-434A4E19A60E}">
 			<ObjectPath>UI_pause</ObjectPath>
 			<ShortName>UI_pause</ShortName>
 			<Path>Event/UI_pause.bnk</Path>
+			<Media>
+				<File Id="1034020112" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\ui_pause.wav</ShortName>
+					<Path>Media/1034020112.wem</Path>
+					<CachePath>SFX/Placeholders/ui_pause_755F56E2.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="2792155208" Name="UI_pause" ObjectPath="\Events\UI\UI_pause" GUID="{194991E3-9D95-4E83-BAAB-87D009E9C2CB}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2792155208" Name="UI_pause" ObjectPath="\Events\UI\UI_pause" GUID="{194991E3-9D95-4E83-BAAB-87D009E9C2CB}" DurationType="OneShot" DurationMin="0.1705" DurationMax="0.1705">
+					<MediaRefs>
+						<MediaRef Id="1034020112"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="3370439426" Type="Event" GUID="{E6A5A823-C3D3-4C0F-BE6E-C99FB4B3FE3D}" Language="SFX" Hash="{0E288BA8-F2A4-E984-43FA-DBB6532ECECD}">
@@ -1398,12 +1605,23 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3690195592" Type="Event" GUID="{2189C011-A358-4102-9707-D283558C2E34}" Language="SFX" Hash="{4C7F906B-0063-F336-BBFD-F860D295A418}">
+		<SoundBank Id="3690195592" Type="Event" GUID="{2189C011-A358-4102-9707-D283558C2E34}" Language="SFX" Hash="{03CC41CF-A11A-CAA0-2594-4B8B76110759}">
 			<ObjectPath>SX_enemy_bomber_shot</ObjectPath>
 			<ShortName>SX_enemy_bomber_shot</ShortName>
 			<Path>Event/SX_enemy_bomber_shot.bnk</Path>
+			<Media>
+				<File Id="48392877" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>SX_enemy_bomber_shot.wav</ShortName>
+					<Path>Media/48392877.wem</Path>
+					<CachePath>SFX/SX_enemy_bomber_shot_755F56E2.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="3690195592" Name="SX_enemy_bomber_shot" ObjectPath="\Events\Enemy\SX_enemy_bomber_shot" GUID="{2189C011-A358-4102-9707-D283558C2E34}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3690195592" Name="SX_enemy_bomber_shot" ObjectPath="\Events\Enemy\SX_enemy_bomber_shot" GUID="{2189C011-A358-4102-9707-D283558C2E34}" DurationType="OneShot" DurationMin="0.431875" DurationMax="0.431875">
+					<MediaRefs>
+						<MediaRef Id="48392877"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="4125012149" Type="Bus" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" Language="SFX" Hash="{966CD4AC-C06E-1E77-1DA3-E243AC9D255C}">
@@ -1419,5 +1637,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{690AB966-1E16-833A-F100-D52981994295}</FileHash>
+	<FileHash>{D5306254-F15C-3093-BB97-36839B1AC040}</FileHash>
 </SoundBanksInfo>

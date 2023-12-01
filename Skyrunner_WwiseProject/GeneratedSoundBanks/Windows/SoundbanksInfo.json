@@ -14,24 +14,150 @@
   "DialogueEvents": [],
   "SoundBanks": [
    {
+    "Id": "171000875",
+    "Type": "Event",
+    "GUID": "{76F454AE-DCE9-4E95-839E-6EDCB135191B}",
+    "Language": "SFX",
+    "Hash": "{B8BB647D-0813-D5B7-B813-535723F578D7}",
+    "ObjectPath": "SX_enemy_invicibility_hit",
+    "ShortName": "SX_enemy_invicibility_hit",
+    "Path": "Event/SX_enemy_invicibility_hit.bnk",
+    "Media": [
+     {
+      "Id": "177956997",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SX_enemy_invicibility_hit.wav",
+      "Path": "Media/177956997.wem",
+      "CachePath": "SFX/SX_enemy_invicibility_hit_755F56E2.wem"
+     },
+     {
+      "Id": "777880860",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Feedback\\player_feedback_hitmarker.wav",
+      "Path": "Media/777880860.wem",
+      "CachePath": "SFX/Player_Feedback/player_feedback_hitmarker_755F56E2.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1625700308",
+       "Name": "Hitmarker_Meter",
+       "ObjectPath": "\\Effects\\Default Work Unit\\Hitmarker_Meter",
+       "GUID": "{E424AAA8-5A51-4482-B54E-F994A6A6B58B}",
+       "LibName": "Wwise Meter",
+       "LibId": "8454147"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "171000875",
+      "Name": "SX_enemy_invicibility_hit",
+      "ObjectPath": "\\Events\\Enemy\\SX_enemy_invicibility_hit",
+      "GUID": "{76F454AE-DCE9-4E95-839E-6EDCB135191B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.083333336",
+      "DurationMax": "0.28266665",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3854779876",
+         "Id": "2496202482",
+         "GUID": "{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "177956997"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3854779876",
+         "Id": "1160234136",
+         "GUID": "{8270281F-156F-4B41-B2D1-76D60C9593B8}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "777880860"
+         }
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "1625700308"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3854779876",
+      "Name": "NPCStatusSwitch",
+      "ObjectPath": "\\Switches\\Default Work Unit\\NPCStatusSwitch",
+      "GUID": "{7605A169-6571-40E7-8DA5-27847979CEDF}",
+      "Switches": [
+       {
+        "Id": "1160234136",
+        "Name": "Normal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\NPCStatusSwitch\\Normal",
+        "GUID": "{8270281F-156F-4B41-B2D1-76D60C9593B8}"
+       },
+       {
+        "Id": "2496202482",
+        "Name": "Invicible",
+        "ObjectPath": "\\Switches\\Default Work Unit\\NPCStatusSwitch\\Invicible",
+        "GUID": "{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "216067002",
     "Type": "Event",
     "GUID": "{FC9252BB-4746-4A62-AB71-565BBB37F6D2}",
     "Language": "SFX",
-    "Hash": "{4519E34B-4A1E-B087-CA64-5189CA3187C4}",
+    "Hash": "{2E36B633-459B-D61A-6EF3-0BB95C98F596}",
     "ObjectPath": "UI_confirm",
     "ShortName": "UI_confirm",
     "Path": "Event/UI_confirm.bnk",
+    "Media": [
+     {
+      "Id": "250224533",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\ui_confirm.wav",
+      "Path": "Media/250224533.wem",
+      "CachePath": "SFX/Placeholders/ui_confirm_755F56E2.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "216067002",
       "Name": "UI_confirm",
       "ObjectPath": "\\Events\\UI\\UI_confirm",
       "GUID": "{FC9252BB-4746-4A62-AB71-565BBB37F6D2}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.11733333",
+      "DurationMax": "0.11733333",
+      "MediaRefs": [
+       {
+        "Id": "250224533"
+       }
+      ]
      }
     ]
    },
@@ -137,7 +263,7 @@
     "Type": "Event",
     "GUID": "{85FE7A46-F893-42AA-8787-F5597C4AF630}",
     "Language": "SFX",
-    "Hash": "{2BEF30CA-7191-44F4-7F9D-F79784369F1E}",
+    "Hash": "{908D5A69-DA20-C7F3-0B43-0A576511AFBF}",
     "ObjectPath": "SX_enemy_gunner_shot",
     "ShortName": "SX_enemy_gunner_shot",
     "Path": "Event/SX_enemy_gunner_shot.bnk",
@@ -209,7 +335,7 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{E81A9A6F-46EA-4EA3-549E-DBE5450A4864}",
+    "Hash": "{867C4B9D-451A-50FB-C651-4E5AB6872370}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
@@ -430,6 +556,16 @@
        "LibName": "SoundSeed Air Wind",
        "LibId": "7798786"
       }
+     ],
+     "ShareSets": [
+      {
+       "Id": "2202047219",
+       "Name": "Few_Even_Notches",
+       "ObjectPath": "\\Effects\\Factory Effects\\Flanger\\Static Comb Filtering\\Few_Even_Notches",
+       "GUID": "{25DCAC4B-7165-436C-9B22-75628C2533D1}",
+       "LibName": "Wwise Flanger",
+       "LibId": "8192003"
+      }
      ]
     },
     "Events": [
@@ -454,6 +590,11 @@
         },
         {
          "Id": "810116914"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "2202047219"
         }
        ]
       },
@@ -1301,20 +1442,109 @@
     "Type": "Event",
     "GUID": "{39206078-B8DE-40F6-9ABE-8A92C812BBBA}",
     "Language": "SFX",
-    "Hash": "{B3CC5C13-F92D-F8DC-4A12-D4F347B8FEFF}",
+    "Hash": "{3AC2E093-CD2B-EF5B-D52A-1F32EDB5DE1C}",
     "ObjectPath": "SX_enemy_sniper_shot",
     "ShortName": "SX_enemy_sniper_shot",
     "Path": "Event/SX_enemy_sniper_shot.bnk",
+    "Media": [
+     {
+      "Id": "667582012",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SX_enemy_sniper_shot.wav",
+      "Path": "Media/667582012.wem",
+      "CachePath": "SFX/SX_enemy_sniper_shot_755F56E2.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "1161249572",
       "Name": "SX_enemy_sniper_shot",
       "ObjectPath": "\\Events\\Enemy\\SX_enemy_sniper_shot",
       "GUID": "{39206078-B8DE-40F6-9ABE-8A92C812BBBA}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.434625",
+      "DurationMax": "0.434625",
+      "MediaRefs": [
+       {
+        "Id": "667582012"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "1200988362",
+    "Type": "Event",
+    "GUID": "{2278516D-BA2F-4D5D-93F6-5353DF4E1405}",
+    "Language": "SFX",
+    "Hash": "{575B4A0A-1EB0-622F-8C50-65519CFACB3B}",
+    "ObjectPath": "SX_player_hit",
+    "ShortName": "SX_player_hit",
+    "Path": "Event/SX_player_hit.bnk",
+    "Media": [
+     {
+      "Id": "525622801",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SX_player_hit.wav",
+      "Path": "Media/525622801.wem",
+      "CachePath": "SFX/SX_player_hit_755F56E2.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1200988362",
+      "Name": "SX_player_hit",
+      "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_hit",
+      "GUID": "{2278516D-BA2F-4D5D-93F6-5353DF4E1405}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.20707983",
+      "DurationMax": "0.2732435",
+      "MediaRefs": [
+       {
+        "Id": "525622801"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "1219048826",
+    "Type": "Event",
+    "GUID": "{59E0340B-B7CC-40AB-A104-B35788A5DFFB}",
+    "Language": "SFX",
+    "Hash": "{45CEB21B-BFEF-8793-FEF1-CF9CD5AE0181}",
+    "ObjectPath": "UI_start",
+    "ShortName": "UI_start",
+    "Path": "Event/UI_start.bnk",
+    "Media": [
+     {
+      "Id": "273426957",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "FX_wolf_start.wav",
+      "Path": "Media/273426957.wem",
+      "CachePath": "SFX/FX_wolf_start_755F56E2.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1219048826",
+      "Name": "UI_start",
+      "ObjectPath": "\\Events\\UI\\UI_start",
+      "GUID": "{59E0340B-B7CC-40AB-A104-B35788A5DFFB}",
+      "DurationType": "OneShot",
+      "DurationMin": "8.749",
+      "DurationMax": "8.749",
+      "MediaRefs": [
+       {
+        "Id": "273426957"
+       }
+      ]
      }
     ]
    },
@@ -1323,20 +1553,35 @@
     "Type": "Event",
     "GUID": "{19B21076-A7DA-45EE-AA85-E86C9BF01313}",
     "Language": "SFX",
-    "Hash": "{288B32A4-7B58-B372-A664-1946496631C0}",
+    "Hash": "{54D8613D-626A-6926-E0E9-8FFC613C2190}",
     "ObjectPath": "SX_enemy_sniper_charge",
     "ShortName": "SX_enemy_sniper_charge",
     "Path": "Event/SX_enemy_sniper_charge.bnk",
+    "Media": [
+     {
+      "Id": "54750595",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SX_enemy_sniper_charge.wav",
+      "Path": "Media/54750595.wem",
+      "CachePath": "SFX/SX_enemy_sniper_charge_755F56E2.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "1272653400",
       "Name": "SX_enemy_sniper_charge",
       "ObjectPath": "\\Events\\Enemy\\SX_enemy_sniper_charge",
       "GUID": "{19B21076-A7DA-45EE-AA85-E86C9BF01313}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.61333334",
+      "DurationMax": "0.61333334",
+      "MediaRefs": [
+       {
+        "Id": "54750595"
+       }
+      ]
      }
     ]
    },
@@ -1401,7 +1646,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{06FB0CFD-81F6-6B26-020C-29786B271E76}",
+    "Hash": "{93362E0B-D7C0-F4CD-CCA5-2DA9027C51CC}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -2169,6 +2414,26 @@
         "Name": "Accelerate",
         "ObjectPath": "\\Switches\\Default Work Unit\\PlayerSpeedSwitch\\Accelerate",
         "GUID": "{12994FF5-E12F-4682-A9D9-C114B53C047E}"
+       }
+      ]
+     },
+     {
+      "Id": "3854779876",
+      "Name": "NPCStatusSwitch",
+      "ObjectPath": "\\Switches\\Default Work Unit\\NPCStatusSwitch",
+      "GUID": "{7605A169-6571-40E7-8DA5-27847979CEDF}",
+      "Switches": [
+       {
+        "Id": "1160234136",
+        "Name": "Normal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\NPCStatusSwitch\\Normal",
+        "GUID": "{8270281F-156F-4B41-B2D1-76D60C9593B8}"
+       },
+       {
+        "Id": "2496202482",
+        "Name": "Invicible",
+        "ObjectPath": "\\Switches\\Default Work Unit\\NPCStatusSwitch\\Invicible",
+        "GUID": "{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"
        }
       ]
      }
@@ -2969,20 +3234,35 @@
     "Type": "Event",
     "GUID": "{14A7CFB6-30A5-4E88-8BB1-7C0AD7552B8B}",
     "Language": "SFX",
-    "Hash": "{7D6B619B-CF82-B32B-FC13-266ED52DC52C}",
+    "Hash": "{51438F10-E37B-697F-A94F-076EC5F37478}",
     "ObjectPath": "SX_enemy_rocketman_shot",
     "ShortName": "SX_enemy_rocketman_shot",
     "Path": "Event/SX_enemy_rocketman_shot.bnk",
+    "Media": [
+     {
+      "Id": "749570869",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SX_enemy_rocketman_shot.wav",
+      "Path": "Media/749570869.wem",
+      "CachePath": "SFX/SX_enemy_rocketman_shot_755F56E2.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "1933552779",
       "Name": "SX_enemy_rocketman_shot",
       "ObjectPath": "\\Events\\Enemy\\SX_enemy_rocketman_shot",
       "GUID": "{14A7CFB6-30A5-4E88-8BB1-7C0AD7552B8B}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.7248125",
+      "DurationMax": "0.7248125",
+      "MediaRefs": [
+       {
+        "Id": "749570869"
+       }
+      ]
      }
     ]
    },
@@ -3028,20 +3308,72 @@
     "Type": "Event",
     "GUID": "{8914833C-41B7-4962-9AF6-5229DDCF1F68}",
     "Language": "SFX",
-    "Hash": "{4C511C57-4130-BC54-6666-4B6112AD6D76}",
+    "Hash": "{D2AE88DD-C5B3-8606-560B-AD1FBC067BD9}",
     "ObjectPath": "UI_back",
     "ShortName": "UI_back",
     "Path": "Event/UI_back.bnk",
+    "Media": [
+     {
+      "Id": "37979520",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\ui_back.wav",
+      "Path": "Media/37979520.wem",
+      "CachePath": "SFX/Placeholders/ui_back_755F56E2.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "2024222415",
       "Name": "UI_back",
       "ObjectPath": "\\Events\\UI\\UI_back",
       "GUID": "{8914833C-41B7-4962-9AF6-5229DDCF1F68}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.058041666",
+      "DurationMax": "0.058041666",
+      "MediaRefs": [
+       {
+        "Id": "37979520"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Id": "2029637615",
+    "Type": "Event",
+    "GUID": "{A3AB33FD-834B-442A-BA55-9A77DFAC47BB}",
+    "Language": "SFX",
+    "Hash": "{733FEA84-E7A6-C26D-0684-0765A7E8D44E}",
+    "ObjectPath": "SX_player_autolock",
+    "ShortName": "SX_player_autolock",
+    "Path": "Event/SX_player_autolock.bnk",
+    "Media": [
+     {
+      "Id": "994636613",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SX_player_autolock.wav",
+      "Path": "Media/994636613.wem",
+      "CachePath": "SFX/SX_player_autolock_755F56E2.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2029637615",
+      "Name": "SX_player_autolock",
+      "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_autolock",
+      "GUID": "{A3AB33FD-834B-442A-BA55-9A77DFAC47BB}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.21952084",
+      "DurationMax": "0.21952084",
+      "MediaRefs": [
+       {
+        "Id": "994636613"
+       }
+      ]
      }
     ]
    },
@@ -3116,7 +3448,7 @@
     "Type": "Event",
     "GUID": "{6BE02D09-9271-46A7-BAA0-E99F5C869C80}",
     "Language": "SFX",
-    "Hash": "{B186F66A-45BB-8C18-4523-C6D9737FFC1C}",
+    "Hash": "{F5F2B9B8-2A6E-09B6-1FCE-5B47A4384622}",
     "ObjectPath": "SX_player_feedback_hitmarker",
     "ShortName": "SX_player_feedback_hitmarker",
     "Path": "Event/SX_player_feedback_hitmarker.bnk",
@@ -3164,6 +3496,28 @@
         }
        ]
       }
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3854779876",
+      "Name": "NPCStatusSwitch",
+      "ObjectPath": "\\Switches\\Default Work Unit\\NPCStatusSwitch",
+      "GUID": "{7605A169-6571-40E7-8DA5-27847979CEDF}",
+      "Switches": [
+       {
+        "Id": "1160234136",
+        "Name": "Normal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\NPCStatusSwitch\\Normal",
+        "GUID": "{8270281F-156F-4B41-B2D1-76D60C9593B8}"
+       },
+       {
+        "Id": "2496202482",
+        "Name": "Invicible",
+        "ObjectPath": "\\Switches\\Default Work Unit\\NPCStatusSwitch\\Invicible",
+        "GUID": "{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"
+       }
+      ]
      }
     ]
    },
@@ -3216,20 +3570,35 @@
     "Type": "Event",
     "GUID": "{528674B7-E690-4AD6-8217-32726F835B11}",
     "Language": "SFX",
-    "Hash": "{B8012CF4-949F-D3AD-CA67-258D75700D92}",
+    "Hash": "{C42C137D-48DC-A42D-2D3F-83D34A7EC958}",
     "ObjectPath": "UI_move",
     "ShortName": "UI_move",
     "Path": "Event/UI_move.bnk",
+    "Media": [
+     {
+      "Id": "935278826",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\ui_move.wav",
+      "Path": "Media/935278826.wem",
+      "CachePath": "SFX/Placeholders/ui_move_755F56E2.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "2644790697",
       "Name": "UI_move",
       "ObjectPath": "\\Events\\UI\\UI_move",
       "GUID": "{528674B7-E690-4AD6-8217-32726F835B11}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.11733333",
+      "DurationMax": "0.11733333",
+      "MediaRefs": [
+       {
+        "Id": "935278826"
+       }
+      ]
      }
     ]
    },
@@ -3238,20 +3607,35 @@
     "Type": "Event",
     "GUID": "{194991E3-9D95-4E83-BAAB-87D009E9C2CB}",
     "Language": "SFX",
-    "Hash": "{AC956292-0335-661F-9189-F7960395C2D2}",
+    "Hash": "{A607A693-664D-67CE-BE98-434A4E19A60E}",
     "ObjectPath": "UI_pause",
     "ShortName": "UI_pause",
     "Path": "Event/UI_pause.bnk",
+    "Media": [
+     {
+      "Id": "1034020112",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\ui_pause.wav",
+      "Path": "Media/1034020112.wem",
+      "CachePath": "SFX/Placeholders/ui_pause_755F56E2.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "2792155208",
       "Name": "UI_pause",
       "ObjectPath": "\\Events\\UI\\UI_pause",
       "GUID": "{194991E3-9D95-4E83-BAAB-87D009E9C2CB}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.1705",
+      "DurationMax": "0.1705",
+      "MediaRefs": [
+       {
+        "Id": "1034020112"
+       }
+      ]
      }
     ]
    },
@@ -3450,20 +3834,35 @@
     "Type": "Event",
     "GUID": "{2189C011-A358-4102-9707-D283558C2E34}",
     "Language": "SFX",
-    "Hash": "{4C7F906B-0063-F336-BBFD-F860D295A418}",
+    "Hash": "{03CC41CF-A11A-CAA0-2594-4B8B76110759}",
     "ObjectPath": "SX_enemy_bomber_shot",
     "ShortName": "SX_enemy_bomber_shot",
     "Path": "Event/SX_enemy_bomber_shot.bnk",
+    "Media": [
+     {
+      "Id": "48392877",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SX_enemy_bomber_shot.wav",
+      "Path": "Media/48392877.wem",
+      "CachePath": "SFX/SX_enemy_bomber_shot_755F56E2.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "3690195592",
       "Name": "SX_enemy_bomber_shot",
       "ObjectPath": "\\Events\\Enemy\\SX_enemy_bomber_shot",
       "GUID": "{2189C011-A358-4102-9707-D283558C2E34}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.431875",
+      "DurationMax": "0.431875",
+      "MediaRefs": [
+       {
+        "Id": "48392877"
+       }
+      ]
      }
     ]
    },
@@ -3494,6 +3893,6 @@
     ]
    }
   ],
-  "FileHash": "{F9BBC96E-140E-9479-A9C4-67DA8B9F0CB3}"
+  "FileHash": "{4902EA47-D77B-2921-CC15-FA88D14B1251}"
  }
 }

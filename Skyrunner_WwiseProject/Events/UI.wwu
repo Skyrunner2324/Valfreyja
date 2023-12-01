@@ -3,14 +3,73 @@
 	<Events>
 		<WorkUnit Name="UI" ID="{7A5F0064-87E3-4C03-B1B7-BF331B5ABCD3}" PersistMode="Standalone">
 			<PropertyList>
-				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="Color" Type="int16" Value="17"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<Event Name="UI_confirm" ID="{FC9252BB-4746-4A62-AB71-565BBB37F6D2}"/>
-				<Event Name="UI_back" ID="{8914833C-41B7-4962-9AF6-5229DDCF1F68}"/>
-				<Event Name="UI_pause" ID="{194991E3-9D95-4E83-BAAB-87D009E9C2CB}"/>
-				<Event Name="UI_move" ID="{528674B7-E690-4AD6-8217-32726F835B11}"/>
+				<Event Name="UI_confirm" ID="{FC9252BB-4746-4A62-AB71-565BBB37F6D2}">
+					<ChildrenList>
+						<Action Name="" ID="{734CE619-E760-42BE-9AFB-981EE80EB72E}" ShortID="20781617">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_confirm" ID="{83223288-2583-499B-A9E0-16661378993D}" WorkUnitID="{DF6377B4-B022-435B-BC71-FD63AD12712C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_back" ID="{8914833C-41B7-4962-9AF6-5229DDCF1F68}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{DDF4B318-B0F7-49DD-A833-4E6D49445891}" ShortID="804548018">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_back" ID="{9C057583-EC7E-4766-9BD6-8D16C790C219}" WorkUnitID="{DF6377B4-B022-435B-BC71-FD63AD12712C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_pause" ID="{194991E3-9D95-4E83-BAAB-87D009E9C2CB}">
+					<ChildrenList>
+						<Action Name="" ID="{49D7E467-BAD1-4893-BEE7-6F5305DE6452}" ShortID="742777319">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_pause" ID="{E0951876-2175-45DB-85A3-BEEF4CA43C1F}" WorkUnitID="{DF6377B4-B022-435B-BC71-FD63AD12712C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_move" ID="{528674B7-E690-4AD6-8217-32726F835B11}">
+					<ChildrenList>
+						<Action Name="" ID="{39987D2D-2DC5-4D27-8CD7-ED703B366704}" ShortID="609018753">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_move" ID="{9403D835-BCA1-403F-8E69-2352E410EA55}" WorkUnitID="{DF6377B4-B022-435B-BC71-FD63AD12712C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_start" ID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="17"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{0D64CD68-95A7-4E3E-A160-6302765B3D9D}" ShortID="862574567">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FX_wolf_start" ID="{5529D706-3D6D-4DAE-A86F-3F79AFC57DF5}" WorkUnitID="{DF6377B4-B022-435B-BC71-FD63AD12712C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
