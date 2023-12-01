@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{76F454AE-DCE9-4E95-839E-6EDCB135191B}",
     "Language": "SFX",
-    "Hash": "{B8BB647D-0813-D5B7-B813-535723F578D7}",
+    "Hash": "{D5F64F11-032E-028D-5C71-12E3658C6007}",
     "ObjectPath": "SX_enemy_invicibility_hit",
     "ShortName": "SX_enemy_invicibility_hit",
     "Path": "Event/SX_enemy_invicibility_hit.bnk",
@@ -43,6 +43,14 @@
        "GUID": "{E424AAA8-5A51-4482-B54E-F994A6A6B58B}",
        "LibName": "Wwise Meter",
        "LibId": "8454147"
+      },
+      {
+       "Id": "3487820010",
+       "Name": "One_Tap_Half_Second",
+       "ObjectPath": "\\Effects\\Factory Effects\\Delay\\One_Tap_Half_Second",
+       "GUID": "{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}",
+       "LibName": "Wwise Delay",
+       "LibId": "6946819"
       }
      ]
     },
@@ -67,7 +75,17 @@
          {
           "Id": "177956997"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "1625700308"
+          },
+          {
+           "Id": "3487820010"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -86,6 +104,9 @@
          "ShareSets": [
           {
            "Id": "1625700308"
+          },
+          {
+           "Id": "3487820010"
           }
          ]
         }
@@ -94,6 +115,12 @@
      }
     ],
     "GameParameters": [
+     {
+      "Id": "2565740352",
+      "Name": "RTPC_SlowMo",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
+      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
+     },
      {
       "Id": "3898772349",
       "Name": "RTPC_NPC_Status",
@@ -128,6 +155,6 @@
     ]
    }
   ],
-  "FileHash": "{7889E6CE-61EC-A5C6-7BFE-9105ACD91C22}"
+  "FileHash": "{36D87CE0-4B8C-B0EA-886B-45A4FA9D8009}"
  }
 }

@@ -129,7 +129,13 @@
 							</PropertyList>
 						</Effect>
 						<Effect Name="Echoes_Linear" ID="{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3"/>
-						<Effect Name="One_Tap_Half_Second" ID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3"/>
+						<Effect Name="One_Tap_Half_Second" ID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+							<PropertyList>
+								<Property Name="DelayTime" Type="Real32" Value="0.14"/>
+								<Property Name="Feedback" Type="Real32" Value="55.5"/>
+								<Property Name="WetDryMix" Type="Real32" Value="33"/>
+							</PropertyList>
+						</Effect>
 						<Effect Name="One_Tap_Quarter_Second" ID="{6BD2D67D-601A-45A6-AD4C-2C089078EBED}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
 							<PropertyList>
 								<Property Name="DelayTime" Type="Real32" Value="0.25"/>
@@ -1755,7 +1761,7 @@
 								<Property Name="FilterFrequency" Type="Real32" Value="261"/>
 								<Property Name="FilterGain" Type="Real32" Value="10.5"/>
 								<Property Name="LeftCrossfeed" Type="Real32" Value="-20"/>
-								<Property Name="LeftDelayTime" Type="Real32" Value="0.29"/>
+								<Property Name="LeftDelayTime" Type="Real32" Value="0.76"/>
 								<Property Name="RightCrossfeed" Type="Real32" Value="-20"/>
 								<Property Name="RightDelayTime" Type="Real32" Value="0.43"/>
 								<Property Name="WetLevel" Type="Real32" Value="-6"/>

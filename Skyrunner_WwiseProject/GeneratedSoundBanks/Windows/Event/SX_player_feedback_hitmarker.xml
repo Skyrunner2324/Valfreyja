@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="2403475570" Type="Event" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" Language="SFX" Hash="{F5F2B9B8-2A6E-09B6-1FCE-5B47A4384622}">
+		<SoundBank Id="2403475570" Type="Event" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" Language="SFX" Hash="{97D45394-EA28-B6B6-45AC-A621A0A7EA0F}">
 			<ObjectPath>SX_player_feedback_hitmarker</ObjectPath>
 			<ShortName>SX_player_feedback_hitmarker</ShortName>
 			<Path>Event/SX_player_feedback_hitmarker.bnk</Path>
 			<Media>
+				<File Id="177956997" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>SX_enemy_invicibility_hit.wav</ShortName>
+					<Path>Media/177956997.wem</Path>
+					<CachePath>SFX/SX_enemy_invicibility_hit_755F56E2.wem</CachePath>
+				</File>
 				<File Id="777880860" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Feedback\player_feedback_hitmarker.wav</ShortName>
 					<Path>Media/777880860.wem</Path>
@@ -15,21 +20,41 @@
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="1625700308" Name="Hitmarker_Meter" ObjectPath="\Effects\Default Work Unit\Hitmarker_Meter" GUID="{E424AAA8-5A51-4482-B54E-F994A6A6B58B}" LibName="Wwise Meter" LibId="8454147"/>
+					<Plugin Id="3487820010" Name="One_Tap_Half_Second" ObjectPath="\Effects\Factory Effects\Delay\One_Tap_Half_Second" GUID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" LibName="Wwise Delay" LibId="6946819"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="2403475570" Name="SX_player_feedback_hitmarker" ObjectPath="\Events\Player\Feedback\SX_player_feedback_hitmarker" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" DurationType="OneShot" DurationMin="0.083333336" DurationMax="0.083333336">
-					<MediaRefs>
-						<MediaRef Id="777880860"/>
-					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="1625700308"/>
-						</ShareSets>
-					</PluginRefs>
+				<Event Id="2403475570" Name="SX_player_feedback_hitmarker" ObjectPath="\Events\Player\Feedback\SX_player_feedback_hitmarker" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" DurationType="OneShot" DurationMin="0.083333336" DurationMax="0.28266665">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3854779876" Id="2496202482" GUID="{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"/>
+							<MediaRefs>
+								<MediaRef Id="177956997"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1625700308"/>
+									<PluginRef Id="3487820010"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3854779876" Id="1160234136" GUID="{8270281F-156F-4B41-B2D1-76D60C9593B8}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="777880860"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1625700308"/>
+									<PluginRef Id="3487820010"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 				<GameParameter Id="3898772349" Name="RTPC_NPC_Status" ObjectPath="\Game Parameters\Default Work Unit\RTPC_NPC_Status" GUID="{A58F00C3-C0BA-4664-B028-B7225E8B4DB8}"/>
 			</GameParameters>
 			<SwitchGroups>
@@ -43,5 +68,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{21C3AE47-2C69-7E1B-4777-7D86E5E23D59}</FileHash>
+	<FileHash>{3E775837-64C5-1BEE-A386-C9A7E8104262}</FileHash>
 </SoundBanksInfo>

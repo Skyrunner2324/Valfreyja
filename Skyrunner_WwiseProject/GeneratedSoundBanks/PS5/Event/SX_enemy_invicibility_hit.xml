@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="171000875" Type="Event" GUID="{76F454AE-DCE9-4E95-839E-6EDCB135191B}" Language="SFX" Hash="{B8BB647D-0813-D5B7-B813-535723F578D7}">
+		<SoundBank Id="171000875" Type="Event" GUID="{76F454AE-DCE9-4E95-839E-6EDCB135191B}" Language="SFX" Hash="{D5F64F11-032E-028D-5C71-12E3658C6007}">
 			<ObjectPath>SX_enemy_invicibility_hit</ObjectPath>
 			<ShortName>SX_enemy_invicibility_hit</ShortName>
 			<Path>Event/SX_enemy_invicibility_hit.bnk</Path>
@@ -20,6 +20,7 @@
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="1625700308" Name="Hitmarker_Meter" ObjectPath="\Effects\Default Work Unit\Hitmarker_Meter" GUID="{E424AAA8-5A51-4482-B54E-F994A6A6B58B}" LibName="Wwise Meter" LibId="8454147"/>
+					<Plugin Id="3487820010" Name="One_Tap_Half_Second" ObjectPath="\Effects\Factory Effects\Delay\One_Tap_Half_Second" GUID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" LibName="Wwise Delay" LibId="6946819"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
@@ -30,6 +31,12 @@
 							<MediaRefs>
 								<MediaRef Id="177956997"/>
 							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1625700308"/>
+									<PluginRef Id="3487820010"/>
+								</ShareSets>
+							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="3854779876" Id="1160234136" GUID="{8270281F-156F-4B41-B2D1-76D60C9593B8}" Default="true"/>
@@ -39,6 +46,7 @@
 							<PluginRefs>
 								<ShareSets>
 									<PluginRef Id="1625700308"/>
+									<PluginRef Id="3487820010"/>
 								</ShareSets>
 							</PluginRefs>
 						</SwitchContainer>
@@ -46,6 +54,7 @@
 				</Event>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 				<GameParameter Id="3898772349" Name="RTPC_NPC_Status" ObjectPath="\Game Parameters\Default Work Unit\RTPC_NPC_Status" GUID="{A58F00C3-C0BA-4664-B028-B7225E8B4DB8}"/>
 			</GameParameters>
 			<SwitchGroups>
@@ -59,5 +68,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1E56FCD0-8F98-1F44-5A8A-C951666419AE}</FileHash>
+	<FileHash>{59BCB5B9-D589-8B91-2B29-D21B15F96DAD}</FileHash>
 </SoundBanksInfo>
