@@ -10,11 +10,20 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{AE3FAE8D-EC54-2D2A-DBDD-DD5829159760}",
+    "Hash": "{4407F6E9-09C1-429F-6D44-88A3FD986177}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Media": [
+     {
+      "Id": "569254387",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "AudioEase\\Altiverb - Outdoor and More\\Outdoor\\Tunnel\\AE_Tunnel.wav",
+      "Path": "Media/569254387.wem",
+      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Tunnel/AE_Tunnel_EE1509C2.wem"
+     },
      {
       "Id": "941961704",
       "Language": "SFX",
@@ -81,6 +90,19 @@
        "GUID": "{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}",
        "LibName": "Wwise Reflect",
        "LibId": "11206659"
+      },
+      {
+       "Id": "3059984139",
+       "Name": "Tunnel",
+       "ObjectPath": "\\Effects\\Factory Altiverb - Outdoor and More\\Altiverb - Outdoor and More\\Outdoor Tunnel\\Tunnel",
+       "GUID": "{88B2F5E7-703C-4D7B-B897-946069693C4B}",
+       "LibName": "Wwise Convolution Reverb",
+       "LibId": "8323075",
+       "MediaRefs": [
+        {
+         "Id": "569254387"
+        }
+       ]
       }
      ],
      "AudioDevices": [
@@ -336,6 +358,13 @@
       "Name": "REV_Cave",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_Cave",
       "GUID": "{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3059984139"
+        }
+       ]
+      },
       "AuxBusRefs": [
        {
         "Id": "980603520",
@@ -1207,6 +1236,6 @@
     ]
    }
   ],
-  "FileHash": "{E49B9A7D-DDF6-DA5E-79F1-7686C721F8B8}"
+  "FileHash": "{4AB1622F-80E9-2670-CEB9-CFA0C702DF4F}"
  }
 }

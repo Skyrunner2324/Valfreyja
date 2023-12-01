@@ -8,6 +8,9 @@
 			</PropertyList>
 			<ChildrenList>
 				<ActorMixer Name="PlayerMovement_MainMixer" ID="{45A46295-887A-48BC-B1B8-7A2A1B9D5383}" ShortID="459713985">
+					<PropertyList>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -476,6 +479,9 @@
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="PlayerWeapon_MainMixer" ID="{91E8FD0F-8E8C-41D0-8478-CD7A3046F024}" ShortID="941070365">
+					<PropertyList>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -2319,7 +2325,7 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
-						<RandomSequenceContainer Name="player_hit_cible" ID="{F1165459-6391-4C50-80E5-4F425857B1D2}" ShortID="546572384">
+						<BlendContainer Name="player_hit_cible" ID="{513E459D-1229-40A3-A14A-4DFA39E6032E}" ShortID="644463215">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -2328,7 +2334,244 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 								</Reference>
 							</ReferenceList>
-						</RandomSequenceContainer>
+							<ChildrenList>
+								<RandomSequenceContainer Name="player_hit_cible_random" ID="{1D02C168-AA2F-430A-A6EF-6E4EC498DAE4}" ShortID="364299592">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="coins plastic container moving around fast mono" ID="{1DCA3E44-E30A-4DC5-B195-D879CFBD002B}" ShortID="886109774">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="coins plastic container moving around fast mono" ID="{97F51870-A56B-481B-9662-C828654DA98D}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.121535181236674"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.84535358769984"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.32821995112117"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>coins plastic container moving around fast mono.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="151521522"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="coins plastic container moving around fast mono" ID="{97F51870-A56B-481B-9662-C828654DA98D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="coins plastic container moving around fast mono_01" ID="{088A1422-1D4C-419B-AF55-C2F6458536FB}" ShortID="589353560">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="coins plastic container moving around fast mono" ID="{0F647999-61A7-4FE3-8964-24F89C9B72F6}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.14179104477612"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="6.4029228840751"/>
+														<Property Name="TrimEnd" Type="Real64" Value="7.21315742565293"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>coins plastic container moving around fast mono.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="775746669"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="coins plastic container moving around fast mono" ID="{0F647999-61A7-4FE3-8964-24F89C9B72F6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="coins plastic container moving around fast mono_02" ID="{64CDA131-3EA3-4A88-BCF2-059996B1A244}" ShortID="705033576">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="coins plastic container moving around fast mono" ID="{C04984F2-D20E-4B75-9861-4A5DC4CA197F}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.50639658848614"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="9.42104655145251"/>
+														<Property Name="TrimEnd" Type="Real64" Value="10.4540955919642"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>coins plastic container moving around fast mono.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="477288984"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="coins plastic container moving around fast mono" ID="{C04984F2-D20E-4B75-9861-4A5DC4CA197F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="coins plastic container moving around fast mono_03" ID="{CF6984A6-98C0-49DC-B5B3-5BAFB538CD12}" ShortID="42460076">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="coins plastic container moving around fast mono" ID="{54792DC7-F7BB-4694-A6D9-B47B6D2F8B4A}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.303837953091685"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="14.4850124363139"/>
+														<Property Name="TrimEnd" Type="Real64" Value="15.2749911143523"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>coins plastic container moving around fast mono.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="956894290"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="coins plastic container moving around fast mono" ID="{54792DC7-F7BB-4694-A6D9-B47B6D2F8B4A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="coins plastic container moving around fast mono_04" ID="{283A6612-B493-4702-AFF5-B04A98D2F7A5}" ShortID="315756498">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="coins plastic container moving around fast mono" ID="{680F8A54-2AEC-4CDA-897C-6D5A34BFDC52}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.361331182184656"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.305907958701972"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.930565366899421"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>coins plastic container moving around fast mono.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="681372202"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="coins plastic container moving around fast mono" ID="{680F8A54-2AEC-4CDA-897C-6D5A34BFDC52}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="coins plastic container moving around fast mono_05" ID="{CC3CFD5D-2866-46F7-BB38-98A9B137E9F7}" ShortID="389260979">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="coins plastic container moving around fast mono" ID="{C29D7186-2D71-4045-AF65-CDDA59C8460C}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.101279317697227"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="17.7462064661647"/>
+														<Property Name="TrimEnd" Type="Real64" Value="18.2931147817297"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>coins plastic container moving around fast mono.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="765250757"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="coins plastic container moving around fast mono" ID="{C29D7186-2D71-4045-AF65-CDDA59C8460C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<Sound Name="Stadium_Turnstiles_ODY-0293-032" ID="{60F90594-D94C-43A8-877C-A3B29869348D}" ShortID="623130426">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{ECCBA340-D908-4692-A7CE-3EB0CB6D5DD5}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="505"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Stadium_Turnstiles_ODY-0293-032" ID="{482BBE69-655B-4206-BF73-0374C3ED9F93}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0751010608593674"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.403347267022871"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="5.1537486597614"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.67502192351987"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Stadium_Turnstiles_ODY-0293-032.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="944372849"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Stadium_Turnstiles_ODY-0293-032" ID="{482BBE69-655B-4206-BF73-0374C3ED9F93}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
