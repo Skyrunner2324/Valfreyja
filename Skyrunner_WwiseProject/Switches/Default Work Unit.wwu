@@ -215,11 +215,32 @@
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="16"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
 						<Switch Name="Normal" ID="{8270281F-156F-4B41-B2D1-76D60C9593B8}"/>
 						<Switch Name="Invicible" ID="{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"/>
 					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_NPC_Status" ID="{A58F00C3-C0BA-4664-B028-B7225E8B4DB8}"/>
+						<Curve Name="" ID="{9B8A154D-EFF6-4DC9-ACB6-745A6697CD2C}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>1</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>2</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
 				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
