@@ -5,6 +5,11 @@
 			<ChildrenList>
 				<MusicPlaylistContainer Name="Music_3C" ID="{4AD4F440-8955-42A6-B66F-13510491E3A0}" ShortID="343136864">
 					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Tempo" Type="Real64" Value="140"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
@@ -23,7 +28,7 @@
 					<ChildrenList>
 						<MusicSegment Name="SkyRunV3" ID="{DE2CA132-08C5-4C96-A42B-48CD35ECF7A3}" ShortID="179927399">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="192005.095074542"/>
+								<Property Name="EndPosition" Type="Real64" Value="192000.009232848"/>
 								<Property Name="Tempo" Type="Real64" Value="140"/>
 							</PropertyList>
 							<ReferenceList>
@@ -36,9 +41,24 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicTrack Name="SkyRunV3" ID="{18DEE5CE-D9BD-473D-850F-C1080E1E4D3E}" ShortID="871633824">
+									<PropertyList>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+											<ObjectRef Name="MUSIC Master" ID="{D7372867-B444-4F36-A355-173A46D13138}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -166,6 +186,28 @@
 							</ObjectLists>
 						</MusicSegment>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="AreaState" ID="{8264E7EF-9D1C-45D6-B03F-CCD0B6C66735}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Ambiance_02example" ID="{E93D8212-B1A6-489F-950C-14423D11C5E5}"/>
+								<CustomState Name="" ID="{5175EDFF-F04E-4D70-975A-06CE6836B706}" ShortID="89382820"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Ambiance_01example" ID="{0C96FB59-0D86-4D67-B5C0-EC9F48690B9E}"/>
+								<CustomState Name="" ID="{05425DB9-9360-4E82-ADEF-179ECED89653}" ShortID="168735611">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="62"/>
+										<Property Name="Volume" Type="Real64" Value="-4"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{6D0A9F0F-D558-4D61-8345-571BDF737211}">
 							<PropertyList>
