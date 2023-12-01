@@ -189,7 +189,7 @@
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-2</Value>
+												<Value>-8</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -258,10 +258,12 @@
 									<ChildrenList>
 										<SourcePlugin Name="Soundseed Air Woosh" ID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" ShortID="631246921" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
-												<Property Name="Duration" Type="Real64" Value="0.15"/>
+												<Property Name="ChannelMask" Type="int32" Value="0"/>
+												<Property Name="Duration" Type="Real64" Value="0.2"/>
+												<Property Name="DurationRandom" Type="Real32" Value="0.1"/>
 												<Property Name="Speed" Type="Real32" Value="50"/>
 												<Property Name="SpeedAutomate" Type="bool" Value="True"/>
-												<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="5"/>
+												<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="11.8"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<PluginData>
@@ -279,12 +281,12 @@
 							<Flags>5</Flags>
 						</Point>
 						<Point>
-							<XPos>0.075</XPos>
+							<XPos>0.1</XPos>
 							<YPos>100</YPos>
 							<Flags>0</Flags>
 						</Point>
 						<Point>
-							<XPos>0.15</XPos>
+							<XPos>0.2</XPos>
 							<YPos>0</YPos>
 							<Flags>37</Flags>
 						</Point>
@@ -299,8 +301,8 @@
 				</PropertyList>
 				<PointList>
 					<Point>
-						<XPos>0</XPos>
-						<YPos>0</YPos>
+						<XPos>1E-05</XPos>
+						<YPos>5.92592</YPos>
 						<Flags>12</Flags>
 						<Time>0</Time>
 					</Point>
@@ -320,7 +322,8 @@
 													</PluginInnerObject>
 													<PluginInnerObject Name="" ID="{41777E59-ED02-41FC-BB97-AEFCE23D16AB}" PluginName="Deflector" CompanyID="0" PluginID="122">
 														<PropertyList>
-															<Property Name="Gain" Type="Real32" Value="-22"/>
+															<Property Name="Frequency" Type="Real32" Value="497"/>
+															<Property Name="Gain" Type="Real32" Value="-14"/>
 														</PropertyList>
 													</PluginInnerObject>
 												</List>
