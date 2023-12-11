@@ -34,7 +34,7 @@ set UEE="%UEPATH%\Engine\Binaries\Win64\UE4Editor-Cmd.exe"
 :: Unreal .uproject file
 set PROJECT=Skyrunner.uproject
 
-set PLATFORMS=Win64
+set /p PLATFORMS="Enter target platforms (Win64+PS5)>"
 
 
 
