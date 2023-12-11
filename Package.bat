@@ -43,6 +43,6 @@ set PROJECT=Skyrunner.uproject
 call %UAT% BuildGame -project=%~dp0%PROJECT% -platform=Win64+PS5 -clean -build
 
 :: package
-call %UAT% BuildCookRun -project=%~dp0%PROJECT% -platform=Win64+PS5 -CookAll -stage -pak -build -package -configuration=Development+Shipping
+call %UAT% BuildCookRun -project=%~dp0%PROJECT% -platform=Win64+PS5 -CookAll -cook -stage -pak -build -package -configuration=Development+Shipping
 
 pause
