@@ -18,6 +18,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	class UTimelineHandleComponent* timelineHandle;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class UPoolObject* poolObject;
+
 public:
 	USkeletalMeshCompWithTimeline();
 	

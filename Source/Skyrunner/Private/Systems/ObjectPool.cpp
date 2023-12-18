@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Systems/PoolObject.h"
+#include "Systems/ObjectPool.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "../../Systems/CustomProjectileMovement.h"
 
@@ -79,7 +79,8 @@ void UPoolObject::SpawnActor(int numberActorToSpawn)
 void UPoolObject::BeginPlay()
 {
 	Super::BeginPlay();
-	SpawnActor(numberActorToCreateAtStart);
+	if(actorClass != nullptr)
+		SpawnActor(numberActorToCreateAtStart);
 }
 
 

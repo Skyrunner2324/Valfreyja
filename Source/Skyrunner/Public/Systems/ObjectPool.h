@@ -4,10 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "PoolObject.generated.h"
+#include "ObjectPool.generated.h"
 
 
-UCLASS( Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS(Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class SKYRUNNER_API UPoolObject : public UActorComponent
 {
 	GENERATED_BODY()
