@@ -16,7 +16,7 @@
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="2"/>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
-						<Property Name="Max" Type="Real64" Value="2000"/>
+						<Property Name="Max" Type="Real64" Value="3000"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="SlewRateDown" Type="Real64" Value="0"/>
 						<Property Name="SlewRateUp" Type="Real64" Value="0"/>
@@ -76,6 +76,29 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 				</GameParameter>
+				<Folder Name="RTPC_Volumes" ID="{63F545E1-C09D-497E-B400-550D7B7FA2BA}" ShortID="604750095">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<GameParameter Name="Master_Volume" ID="{0E966A6C-B73C-4051-BE1F-352B25CDFC73}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="SFX_Volume" ID="{2C10916C-C952-4AB6-B234-07816DF05541}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="Music_Volume" ID="{E99B18A0-3F76-4D04-8C37-D87E540781AA}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

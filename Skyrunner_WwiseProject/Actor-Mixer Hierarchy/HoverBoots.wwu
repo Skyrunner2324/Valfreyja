@@ -270,7 +270,7 @@
 																								<Flags>5</Flags>
 																							</Point>
 																							<Point>
-																								<XPos>2000</XPos>
+																								<XPos>3000</XPos>
 																								<YPos>19.47483</YPos>
 																								<Flags>37</Flags>
 																							</Point>
@@ -305,7 +305,7 @@
 																								<Flags>5</Flags>
 																							</Point>
 																							<Point>
-																								<XPos>2000</XPos>
+																								<XPos>3000</XPos>
 																								<YPos>100</YPos>
 																								<Flags>37</Flags>
 																							</Point>
@@ -389,7 +389,7 @@
 																				<SegmentShape>Exp1</SegmentShape>
 																			</Point>
 																			<Point>
-																				<XPos>2000</XPos>
+																				<XPos>3000</XPos>
 																				<YPos>298</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -919,12 +919,12 @@
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>999.15326</XPos>
+																										<XPos>1498.72989</XPos>
 																										<YPos>182.84822</YPos>
 																										<Flags>0</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>2000</XPos>
+																										<XPos>3000</XPos>
 																										<YPos>1743.75</YPos>
 																										<Flags>37</Flags>
 																									</Point>
@@ -1266,7 +1266,7 @@
 																						<SegmentShape>Log1</SegmentShape>
 																					</Point>
 																					<Point>
-																						<XPos>2000</XPos>
+																						<XPos>3000</XPos>
 																						<YPos>1318.98636</YPos>
 																						<Flags>37</Flags>
 																					</Point>
@@ -1301,7 +1301,7 @@
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>2000</XPos>
+																						<XPos>3000</XPos>
 																						<YPos>0.34189</YPos>
 																						<Flags>37</Flags>
 																					</Point>
@@ -1337,7 +1337,7 @@
 																						<SegmentShape>Log3</SegmentShape>
 																					</Point>
 																					<Point>
-																						<XPos>2000</XPos>
+																						<XPos>3000</XPos>
 																						<YPos>0</YPos>
 																						<Flags>37</Flags>
 																					</Point>
@@ -1372,12 +1372,12 @@
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>664.624806666667</XPos>
+																						<XPos>996.937210000001</XPos>
 																						<YPos>0.69914</YPos>
 																						<Flags>0</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>2000</XPos>
+																						<XPos>3000</XPos>
 																						<YPos>0.83419</YPos>
 																						<Flags>37</Flags>
 																					</Point>
@@ -1474,6 +1474,136 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Soundseed Wind" ID="{86DA7E70-CC39-486C-86F5-8B50129EDD2F}" ShortID="720422953">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Soundseed Air Wind" ID="{83767CC5-69B5-4564-8311-4A333A1B8AF9}" ShortID="666289254" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
+													<PropertyList>
+														<Property Name="AverageVelocity" Type="Real32" Value="-2400"/>
+														<Property Name="FrequencyScale" Type="Real32" Value="0.04"/>
+														<Property Name="Gustiness" Type="Real32" Value="0"/>
+														<Property Name="QFactorScale" Type="Real32" Value="1.26"/>
+														<Property Name="Variability" Type="Real32" Value="0.53"/>
+													</PropertyList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{03841525-A159-47C7-9CB3-CDE931B64A2C}" ShortID="796645691">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="AverageVelocity"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{4DC41504-6DD8-4638-AB94-9C6667D7FA8B}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-2400</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Log2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>1250</XPos>
+																								<YPos>384.79808</YPos>
+																								<Flags>0</Flags>
+																								<SegmentShape>Log2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>3000</XPos>
+																								<YPos>1223.76237</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{FDEC40B5-4C04-4C37-A0A4-9F08A9C003B1}" ShortID="751556045">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Gustiness"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{2C65CF39-D43A-459C-B81A-F8953F8D8F77}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0.68317</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Log1</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>1236.15635</XPos>
+																								<YPos>0.14082</YPos>
+																								<Flags>0</Flags>
+																								<SegmentShape>Exp1</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>3000</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<Language>SFX</Language>
+													<PluginData/>
+													<PluginInnerObjectList>
+														<List Name="Deflectors">
+															<PluginInnerObject Name="" ID="{B8C2C964-D534-4C0E-A5E0-0760077F9F29}" PluginName="Deflector" CompanyID="0" PluginID="121"/>
+															<PluginInnerObject Name="" ID="{276894E2-BD4F-4AF8-BFC8-8EBD6724E8D6}" PluginName="Deflector" CompanyID="0" PluginID="121">
+																<PropertyList>
+																	<Property Name="Frequency" Type="Real32" Value="770"/>
+																	<Property Name="Gain" Type="Real32" Value="-12"/>
+																</PropertyList>
+															</PluginInnerObject>
+														</List>
+													</PluginInnerObjectList>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Soundseed Air Wind" ID="{83767CC5-69B5-4564-8311-4A333A1B8AF9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 									<BlendTrackList>
 										<BlendTrack Name="New Blend Track" ID="{3A316AF7-6762-40AC-9872-2F44010DCBFB}" ShortID="316628656">
 											<PropertyList>
