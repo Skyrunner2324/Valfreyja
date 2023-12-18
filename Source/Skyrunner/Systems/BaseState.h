@@ -10,11 +10,16 @@
  * 
  */
 UCLASS( Blueprintable, ClassGroup = (Custom))
-class SKYRUNNER_API UBaseState : public UObject
+class SKYRUNNER_API UBaseState : public UActorComponent
 {
 	GENERATED_BODY()
 	
 public:
+	UBaseState();
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	bool isDefaultState = false;
+
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FString stateName = "BaseState";
 

@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "StateMachineComponent.h"
+#include "BaseState.h"
 
 // Sets default values for this component's properties
 UStateMachineComponent::UStateMachineComponent()
@@ -12,19 +13,21 @@ UStateMachineComponent::UStateMachineComponent()
 void UStateMachineComponent::BeginPlay()
 {
 	Super::BeginPlay();
+		
+	GetOwner()->GetComponents<UBaseState>(states);
 
 	if (states.Num() == 0)
 	{
 		activeState = -1;
 		GEngine->AddOnScreenDebugMessage(949, 1.f, FColor::Red, "No states in state machine");
 	}
-	else
-		activeStatePtr = Cast<UBaseState>(states[activeState]);
 
 	for (int i = 0; i < states.Num(); i++)
 	{
-		UBaseState* state = Cast<UBaseState>(states[i]);
-		state->stateMachine = this;
+		if (states[i]->isDefaultState)
+			activeState = i;
+
+		states[i]->stateMachine = this;
 	}
 }
 
@@ -32,16 +35,14 @@ void UStateMachineComponent::SwitchState(const FString& stateName)
 {
 	for (int i = 0; i < states.Num(); i++)
 	{
-		UBaseState* state = Cast<UBaseState>(states[i]);
-		if (stateName ==state->stateName)
+		if (stateName ==states[i]->stateName)
 		{
 			if (ActiveStateValid())
 			{
-				activeStatePtr = Cast<UBaseState>(states[activeState]);
-				activeStatePtr->EndState();
+				states[activeState]->EndState();
 			}
 
-			state->StartState();
+			states[i]->StartState();
 			activeState = i;
 			return;
 		}
@@ -56,5 +57,5 @@ void UStateMachineComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 	if (ActiveStateValid())
 		return;
 
-	activeStatePtr->StateUpdate(DeltaTime);
+	states[activeState]->StateUpdate(DeltaTime);
 }

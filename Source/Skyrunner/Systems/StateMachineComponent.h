@@ -4,8 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "BaseState.h"
 #include "StateMachineComponent.generated.h"
+
+class UBaseState;
 
 UCLASS( Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class SKYRUNNER_API UStateMachineComponent : public UActorComponent
@@ -22,7 +23,6 @@ protected:
 	bool ActiveStateValid() { return activeState < 0 || activeState >= states.Num(); }
 
 	int activeState = 0;
-	UBaseState* activeStatePtr;
 public:	
 	void SwitchState(const FString& stateName);
 
@@ -30,5 +30,6 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	TArray<TSubclassOf<UBaseState>> states;
+	TArray<UBaseState*> states;
+	//TArray<TSubclassOf<UBaseState>> states;
 };

@@ -3,6 +3,12 @@
 #include "BaseState.h"
 #include "StateMachineComponent.h"
 
+UBaseState::UBaseState()
+{
+	// We don't want states to update by themselves, only with StateMachine calling StateUpdate
+	PrimaryComponentTick.bCanEverTick = false;
+}
+
 void UBaseState::StartState()
 {
 	GEngine->AddOnScreenDebugMessage(90349, 1.f, FColor::Emerald, stateName + " StartState");
