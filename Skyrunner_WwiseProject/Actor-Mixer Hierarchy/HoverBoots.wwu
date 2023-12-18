@@ -191,35 +191,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="hoverboots_jump_propulsion_jump_hoverboots_01" ID="{0E1900A2-2F61-4CD3-A4B0-EE15E00455AE}" ShortID="922830048">
-									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="hoverboots_jump_propulsion_jump_hoverboots_01" ID="{E7BAD1F1-A57B-4326-AAAB-6E905203342F}">
-											<Language>SFX</Language>
-											<AudioFile>Hoverboots\hoverboots_jump_propulsion_jump_hoverboots_01.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="153362647"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="hoverboots_jump_propulsion_jump_hoverboots_01" ID="{E7BAD1F1-A57B-4326-AAAB-6E905203342F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="hoverboots_jump_propulsion_jump_hoverboots_02" ID="{642A3A10-C7EF-42F0-8825-F9D8C7876E4A}" ShortID="344674430">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -245,6 +216,9 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<BlendContainer Name="Hoverboots_Main" ID="{06BB291D-7805-4E53-8B50-41DD6046A8E8}" ShortID="167768623">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -1475,6 +1449,92 @@
 								</Sound>
 							</ChildrenList>
 						</BlendContainer>
+						<SwitchContainer Name="Hoverboots_Switch" ID="{5720FEFB-401C-402A-993D-922BB68B71CA}" ShortID="153773488">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="OnGround" ID="{13F79D10-0A22-455A-9005-CF68D7C5FC75}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="HoverbootsSwitch" ID="{CFF359FB-3643-4A54-8CD8-133153706006}" WorkUnitID="{C36F0D05-B855-4511-9237-C96EA2F8E413}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<BlendContainer Name="Hoverboots_OnGround" ID="{F2816C14-4E23-4B76-A053-E7735024BC42}" ShortID="273589629">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<BlendTrackList>
+										<BlendTrack Name="New Blend Track" ID="{3A316AF7-6762-40AC-9872-2F44010DCBFB}" ShortID="316628656">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+												</Reference>
+											</ReferenceList>
+										</BlendTrack>
+									</BlendTrackList>
+								</BlendContainer>
+								<BlendContainer Name="Hoverboots_Other" ID="{62929258-7F17-40B8-BBBF-3D24F9A59BEC}" ShortID="794171027">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<BlendTrackList>
+										<BlendTrack Name="New Blend Track" ID="{FA628B5E-0204-4ABF-B908-E8B10C158A68}" ShortID="748571352">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+												</Reference>
+											</ReferenceList>
+										</BlendTrack>
+									</BlendTrackList>
+								</BlendContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Hoverboots_OnGround" ID="{F2816C14-4E23-4B76-A053-E7735024BC42}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Hoverboots_Other" ID="{62929258-7F17-40B8-BBBF-3D24F9A59BEC}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="OnGround" ID="{13F79D10-0A22-455A-9005-CF68D7C5FC75}"/>
+										<ItemList>
+											<ItemRef Name="Hoverboots_OnGround" ID="{F2816C14-4E23-4B76-A053-E7735024BC42}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Other" ID="{9D8B0E69-BBB9-4C23-8826-9882E51CE450}"/>
+										<ItemList>
+											<ItemRef Name="Hoverboots_Other" ID="{62929258-7F17-40B8-BBBF-3D24F9A59BEC}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
