@@ -31,7 +31,6 @@ State Group	ID	Name			Wwise Object Path	Notes
 	1910319788	OverheatState			\Default Work Unit\OverheatState	
 	2064552269	AreaState			\Default Work Unit\AreaState	
 	3285234865	PlayerState			\Default Work Unit\PlayerState	
-	4232248784	WeaponState			\Default Work Unit\WeaponState	
 
 State	ID	Name	State Group			Notes
 	748895195	None	SlowMoState			
@@ -50,21 +49,19 @@ State	ID	Name	State Group			Notes
 	655265632	Alive	PlayerState			
 	748895195	None	PlayerState			
 	2044049779	Dead	PlayerState			
-	51683977	Shotgun	WeaponState			
-	748895195	None	WeaponState			
-	2958002925	GrenadeLauncher	WeaponState			
-	3678545986	MachineGun	WeaponState			
 
 Custom State	ID	Name	State Group	Owner		Notes
-	356262886	InMenu	GameStatus	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PLYR Master		
+	356262886	InMenu	GameStatus	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master		
 	613737786	InMenu	GameStatus	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master		
-	665442657	InMenu	GameStatus	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environment Master		
-	1048185312	InMenu	GameStatus	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\3D OBJ Master		
+	665442657	InMenu	GameStatus	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\Environment Master		
+	1048185312	InMenu	GameStatus	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
 	513139656	Mountain			\Factory Acoustic Textures\Textures\Mountain	
 	841620460	Concrete			\Factory Acoustic Textures\Textures\Concrete	
+	1006694123	Music_Volume			\Default Work Unit\RTPC_Volumes\Music_Volume	
+	1564184899	SFX_Volume			\Default Work Unit\RTPC_Volumes\SFX_Volume	
 	1755085759	Wood_Deep			\Factory Acoustic Textures\Textures\Wood_Deep	
 	1873957695	Anechoic			\Factory Acoustic Textures\Textures\Anechoic	
 	1970351858	Fabric			\Factory Acoustic Textures\Textures\Fabric	
@@ -76,35 +73,37 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	3195498748	Cork_Tiles			\Factory Acoustic Textures\Textures\Cork_Tiles	
 	3670307564	Drywall			\Factory Acoustic Textures\Textures\Drywall	
 	4168643977	Acoustic_Banner			\Factory Acoustic Textures\Textures\Acoustic_Banner	
+	4179668880	Master_Volume			\Default Work Unit\RTPC_Volumes\Master_Volume	
 	4262522749	Wood_Bright			\Factory Acoustic Textures\Textures\Wood_Bright	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	67442032	ENV AMB Exterior			\Default Work Unit\Master Audio Bus\Environment Master\ENV AMB Exterior	
+	67442032	ENV AMB Exterior			\Default Work Unit\Master Audio Bus\SFX Master\Environment Master\ENV AMB Exterior	
 	79554116	MUSIC Master			\Default Work Unit\Master Audio Bus\MUSIC Master	
-	372645086	PLYR Master			\Default Work Unit\Master Audio Bus\PLYR Master	
+	372645086	PLYR Master			\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master	
 	985987111	Motion Factory Bus			\Default Work Unit\Motion Factory Bus	
-	1036470302	NPC Weapon			\Default Work Unit\Master Audio Bus\3D OBJ Master\NPCMaster\NPC Weapon	
-	1698665495	UI Master			\Default Work Unit\Master Audio Bus\UI Master	
-	1974888476	ENV Other			\Default Work Unit\Master Audio Bus\Environment Master\ENV Other	
-	2033911932	NPCMaster			\Default Work Unit\Master Audio Bus\3D OBJ Master\NPCMaster	
-	2093940462	ENV AMB Interior			\Default Work Unit\Master Audio Bus\Environment Master\ENV AMB Interior	
-	2126441370	Environment Master			\Default Work Unit\Master Audio Bus\Environment Master	
+	1036470302	NPC Weapon			\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master\NPCMaster\NPC Weapon	
+	1698665495	UI Master			\Default Work Unit\Master Audio Bus\SFX Master\UI Master	
+	1974888476	ENV Other			\Default Work Unit\Master Audio Bus\SFX Master\Environment Master\ENV Other	
+	2033911932	NPCMaster			\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master\NPCMaster	
+	2093940462	ENV AMB Interior			\Default Work Unit\Master Audio Bus\SFX Master\Environment Master\ENV AMB Interior	
+	2126441370	Environment Master			\Default Work Unit\Master Audio Bus\SFX Master\Environment Master	
 	2452310558	WwiseMotion			\Default Work Unit\WwiseMotion	
-	2663637017	OBJ 3D			\Default Work Unit\Master Audio Bus\3D OBJ Master\OBJ 3D	
-	2701788107	PLYR Movement			\Default Work Unit\Master Audio Bus\PLYR Master\PLYR Movement	
-	3115011207	3D OBJ Master			\Default Work Unit\Master Audio Bus\3D OBJ Master	
+	2663637017	OBJ 3D			\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master\OBJ 3D	
+	2701788107	PLYR Movement			\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Movement	
+	3115011207	3D OBJ Master			\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master	
+	3222323340	SFX Master			\Default Work Unit\Master Audio Bus\SFX Master	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
-	3853286816	PLYR Weapon			\Default Work Unit\Master Audio Bus\PLYR Master\PLYR Weapon	
-	3902787355	NPC Feedback			\Default Work Unit\Master Audio Bus\3D OBJ Master\NPCMaster\NPC Feedback	
-	3976022968	ENV AMB Emitter			\Default Work Unit\Master Audio Bus\Environment Master\ENV AMB Emitter	
-	4287995521	PLYR Feedback			\Default Work Unit\Master Audio Bus\PLYR Master\PLYR Feedback	
+	3853286816	PLYR Weapon			\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Weapon	
+	3902787355	NPC Feedback			\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master\NPCMaster\NPC Feedback	
+	3976022968	ENV AMB Emitter			\Default Work Unit\Master Audio Bus\SFX Master\Environment Master\ENV AMB Emitter	
+	4287995521	PLYR Feedback			\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Feedback	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	980603520	REV			\Default Work Unit\Master Audio Bus\REV	
-	1641293181	REV_LargeRoom			\Default Work Unit\Master Audio Bus\REV\REV_LargeRoom	
-	1752382405	Early_Reflections			\Default Work Unit\Master Audio Bus\REV\Early_Reflections	
-	2172616000	REV_Cave			\Default Work Unit\Master Audio Bus\REV\REV_Cave	
-	4125012149	REV_SmallRoom			\Default Work Unit\Master Audio Bus\REV\REV_SmallRoom	
+	980603520	REV			\Default Work Unit\Master Audio Bus\SFX Master\REV	
+	1641293181	REV_LargeRoom			\Default Work Unit\Master Audio Bus\SFX Master\REV\REV_LargeRoom	
+	1752382405	Early_Reflections			\Default Work Unit\Master Audio Bus\SFX Master\REV\Early_Reflections	
+	2172616000	REV_Cave			\Default Work Unit\Master Audio Bus\SFX Master\REV\REV_Cave	
+	4125012149	REV_SmallRoom			\Default Work Unit\Master Audio Bus\SFX Master\REV\REV_SmallRoom	
 
 Effect plug-ins	ID	Name	Type				Notes
 	335663160	Underwater_Echoes (Custom)	Wwise Stereo Delay			

@@ -10,29 +10,11 @@
     "Type": "Event",
     "GUID": "{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}",
     "Language": "SFX",
-    "Hash": "{6C561D7E-D50A-9459-E493-E293A159BA31}",
+    "Hash": "{5DFA942C-E1F1-E528-A992-C2A64A6D97B7}",
     "ObjectPath": "SX_player_shoot",
     "ShortName": "SX_player_shoot",
     "Path": "Event/SX_player_shoot.bnk",
     "Media": [
-     {
-      "Id": "103073361",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Placeholders\\38_Pistol_from_Gun_Holster_ODC-0030-193.wav",
-      "Path": "Media/103073361.wem",
-      "CachePath": "SFX/Placeholders/38_Pistol_from_Gun_Holster_ODC-0030-193_755F56E2.wem"
-     },
-     {
-      "Id": "353061919",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Placeholders\\game_weapon_shoot_shotgun.wav",
-      "Path": "Media/353061919.wem",
-      "CachePath": "SFX/Placeholders/game_weapon_shoot_shotgun_755F56E2.wem"
-     },
      {
       "Id": "461432451",
       "Language": "SFX",
@@ -59,15 +41,6 @@
       "ShortName": "Player_Weapon\\player_weapon_shoot_smg_tail_far.wav",
       "Path": "Media/758486105.wem",
       "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_tail_far_755F56E2.wem"
-     },
-     {
-      "Id": "767258260",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Grenade_Launcher_ODY-0020-055.wav",
-      "Path": "Media/767258260.wem",
-      "CachePath": "SFX/Grenade_Launcher_ODY-0020-055_F421C217.wem"
      },
      {
       "Id": "867880719",
@@ -97,6 +70,18 @@
       "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_sub_01_755F56E2.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "3043085106",
+       "Name": "High_Impact",
+       "ObjectPath": "\\Effects\\Factory Effects\\Compressor\\High_Impact",
+       "GUID": "{2AFD6FB0-C906-4683-A377-FEEEF72967B0}",
+       "LibName": "Wwise Compressor",
+       "LibId": "7077891"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1030870044",
@@ -104,72 +89,9 @@
       "ObjectPath": "\\Events\\Player\\Weapon\\SX_player_shoot",
       "GUID": "{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}",
       "DurationType": "OneShot",
-      "DurationMin": "0.33066666",
+      "DurationMin": "0",
       "DurationMax": "2.4279366",
       "SwitchContainers": [
-       {
-        "SwitchValue": {
-         "GroupType": "State",
-         "GroupId": "1910319788",
-         "Id": "916477217",
-         "GUID": "{5B81C2D1-8C94-4F96-85E7-C618DC2939D7}"
-        },
-        "Children": [
-         {
-          "SwitchValue": {
-           "GroupType": "State",
-           "GroupId": "4232248784",
-           "Id": "2958002925",
-           "GUID": "{ACC1E46C-A618-469B-9673-D48B071A1004}",
-           "Default": "true"
-          },
-          "MediaRefs": [
-           {
-            "Id": "103073361"
-           }
-          ]
-         },
-         {
-          "SwitchValue": {
-           "GroupType": "State",
-           "GroupId": "4232248784",
-           "Id": "3678545986",
-           "GUID": "{8105387B-710D-4FB0-8111-2A5293F2E07E}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "103073361"
-           }
-          ]
-         },
-         {
-          "SwitchValue": {
-           "GroupType": "State",
-           "GroupId": "4232248784",
-           "Id": "51683977",
-           "GUID": "{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "103073361"
-           }
-          ]
-         },
-         {
-          "SwitchValue": {
-           "GroupType": "State",
-           "GroupId": "4232248784",
-           "Id": "748895195",
-           "GUID": "{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "103073361"
-           }
-          ]
-         }
-        ]
-       },
        {
         "SwitchValue": {
          "GroupType": "State",
@@ -178,75 +100,33 @@
          "GUID": "{1545C5FF-1E2A-4398-AADB-4A6F08D15159}",
          "Default": "true"
         },
-        "Children": [
+        "MediaRefs": [
          {
-          "SwitchValue": {
-           "GroupType": "State",
-           "GroupId": "4232248784",
-           "Id": "2958002925",
-           "GUID": "{ACC1E46C-A618-469B-9673-D48B071A1004}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "767258260"
-           }
-          ]
+          "Id": "461432451"
          },
          {
-          "SwitchValue": {
-           "GroupType": "State",
-           "GroupId": "4232248784",
-           "Id": "3678545986",
-           "GUID": "{8105387B-710D-4FB0-8111-2A5293F2E07E}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "461432451"
-           },
-           {
-            "Id": "631171215"
-           },
-           {
-            "Id": "758486105"
-           },
-           {
-            "Id": "867880719"
-           },
-           {
-            "Id": "942643326"
-           },
-           {
-            "Id": "967984016"
-           }
-          ]
+          "Id": "631171215"
          },
          {
-          "SwitchValue": {
-           "GroupType": "State",
-           "GroupId": "4232248784",
-           "Id": "51683977",
-           "GUID": "{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "353061919"
-           }
-          ]
+          "Id": "758486105"
          },
          {
-          "SwitchValue": {
-           "GroupType": "State",
-           "GroupId": "4232248784",
-           "Id": "748895195",
-           "GUID": "{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "767258260"
-           }
-          ]
+          "Id": "867880719"
+         },
+         {
+          "Id": "942643326"
+         },
+         {
+          "Id": "967984016"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3043085106"
+          }
+         ]
+        }
        }
       ]
      }
@@ -285,42 +165,10 @@
         "GUID": "{1545C5FF-1E2A-4398-AADB-4A6F08D15159}"
        }
       ]
-     },
-     {
-      "Id": "4232248784",
-      "Name": "WeaponState",
-      "ObjectPath": "\\States\\Default Work Unit\\WeaponState",
-      "GUID": "{912BC3CC-7356-4483-9C97-B04B3D54A890}",
-      "States": [
-       {
-        "Id": "51683977",
-        "Name": "Shotgun",
-        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\Shotgun",
-        "GUID": "{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"
-       },
-       {
-        "Id": "748895195",
-        "Name": "None",
-        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\None",
-        "GUID": "{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"
-       },
-       {
-        "Id": "2958002925",
-        "Name": "GrenadeLauncher",
-        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\GrenadeLauncher",
-        "GUID": "{ACC1E46C-A618-469B-9673-D48B071A1004}"
-       },
-       {
-        "Id": "3678545986",
-        "Name": "MachineGun",
-        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\MachineGun",
-        "GUID": "{8105387B-710D-4FB0-8111-2A5293F2E07E}"
-       }
-      ]
      }
     ]
    }
   ],
-  "FileHash": "{8041B7E0-E366-4181-9CE4-BD2752D3D3DC}"
+  "FileHash": "{C626C883-7316-6AB5-3C57-82790B8A2929}"
  }
 }

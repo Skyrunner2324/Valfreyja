@@ -1,94 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="946406252" Type="Event" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" Language="SFX" Hash="{CE507E54-E386-215D-33A6-014F58BB123F}">
+		<SoundBank Id="946406252" Type="Event" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" Language="SFX" Hash="{2203FD30-F1A6-7A58-FAA9-2AC4EF19CC74}">
 			<ObjectPath>SX_player_weapon_impact</ObjectPath>
 			<ShortName>SX_player_weapon_impact</ShortName>
 			<Path>Event/SX_player_weapon_impact.bnk</Path>
-			<Media>
-				<File Id="285816151" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Grenade_Explosion_ODY-1279-080.wav</ShortName>
-					<Path>Media/285816151.wem</Path>
-					<CachePath>SFX/Grenade_Explosion_ODY-1279-080_6A94F4BF.wem</CachePath>
-				</File>
-				<File Id="991022554" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav</ShortName>
-					<Path>Media/991022554.wem</Path>
-					<CachePath>SFX/PM_BBI_Bullet_Impact_Hit_Body_Flesh_25_C76A9090.wem</CachePath>
-				</File>
-			</Media>
 			<Events>
-				<Event Id="946406252" Name="SX_player_weapon_impact" ObjectPath="\Events\Player\Weapon\SX_player_weapon_impact" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" DurationType="OneShot" DurationMin="0" DurationMax="0.8140358">
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="2958002925" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}" Default="true"/>
-							<Children>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
-									<MediaRefs>
-										<MediaRef Id="285816151"/>
-									</MediaRefs>
-								</SwitchContainer>
-							</Children>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="3678545986" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
-							<Children>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
-									<MediaRefs>
-										<MediaRef Id="991022554"/>
-									</MediaRefs>
-								</SwitchContainer>
-							</Children>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="51683977" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-							<Children>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
-									<MediaRefs>
-										<MediaRef Id="991022554"/>
-									</MediaRefs>
-								</SwitchContainer>
-							</Children>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4232248784" Id="748895195" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
-							<Children>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="194784494" Id="3353720555" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}" Default="true"/>
-									<MediaRefs>
-										<MediaRef Id="991022554"/>
-									</MediaRefs>
-								</SwitchContainer>
-							</Children>
-						</SwitchContainer>
-					</SwitchContainers>
-				</Event>
+				<Event Id="946406252" Name="SX_player_weapon_impact" ObjectPath="\Events\Player\Weapon\SX_player_weapon_impact" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="2064543165" Name="RTPC_Hitmarker_Volume" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Hitmarker_Volume" GUID="{881B885B-5371-4C1C-8523-6D6EDC0BE6F9}"/>
 			</GameParameters>
-			<StateGroups>
-				<StateGroup Id="4232248784" Name="WeaponState" ObjectPath="\States\Default Work Unit\WeaponState" GUID="{912BC3CC-7356-4483-9C97-B04B3D54A890}">
-					<States>
-						<State Id="51683977" Name="Shotgun" ObjectPath="\States\Default Work Unit\WeaponState\Shotgun" GUID="{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"/>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\WeaponState\None" GUID="{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"/>
-						<State Id="2958002925" Name="GrenadeLauncher" ObjectPath="\States\Default Work Unit\WeaponState\GrenadeLauncher" GUID="{ACC1E46C-A618-469B-9673-D48B071A1004}"/>
-						<State Id="3678545986" Name="MachineGun" ObjectPath="\States\Default Work Unit\WeaponState\MachineGun" GUID="{8105387B-710D-4FB0-8111-2A5293F2E07E}"/>
-					</States>
-				</StateGroup>
-			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="194784494" Name="WeaponSurfaceCollision" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision" GUID="{DF6301E3-DB84-4607-9CDE-AFF2BF4E3A65}">
 					<Switches>
+						<Switch Id="1505986031" Name="RockSurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\RockSurface" GUID="{7B1ADED6-B632-448E-B7DF-05BD5E26FBC8}"/>
+						<Switch Id="1882779037" Name="SnowSurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\SnowSurface" GUID="{91E60FA4-4DE1-465C-A254-4030A4DF7A15}"/>
 						<Switch Id="3353720555" Name="IceSurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\IceSurface" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"/>
 						<Switch Id="3661774060" Name="EnemySurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\EnemySurface" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
+						<Switch Id="4047769411" Name="MetalSurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\MetalSurface" GUID="{B9C67F9D-E774-42A4-8D09-E0D98C3E0C55}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{69FE16A3-DD04-4990-EE01-9965C09D1D7D}</FileHash>
+	<FileHash>{53482A55-4959-A88A-B3C4-A55ABBDAFC2B}</FileHash>
 </SoundBanksInfo>

@@ -10,30 +10,10 @@
     "Type": "Event",
     "GUID": "{C2635664-3DF8-496D-BA41-22C25299ACE8}",
     "Language": "SFX",
-    "Hash": "{CE507E54-E386-215D-33A6-014F58BB123F}",
+    "Hash": "{2203FD30-F1A6-7A58-FAA9-2AC4EF19CC74}",
     "ObjectPath": "SX_player_weapon_impact",
     "ShortName": "SX_player_weapon_impact",
     "Path": "Event/SX_player_weapon_impact.bnk",
-    "Media": [
-     {
-      "Id": "285816151",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Grenade_Explosion_ODY-1279-080.wav",
-      "Path": "Media/285816151.wem",
-      "CachePath": "SFX/Grenade_Explosion_ODY-1279-080_6A94F4BF.wem"
-     },
-     {
-      "Id": "991022554",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav",
-      "Path": "Media/991022554.wem",
-      "CachePath": "SFX/PM_BBI_Bullet_Impact_Hit_Body_Flesh_25_C76A9090.wem"
-     }
-    ],
     "Events": [
      {
       "Id": "946406252",
@@ -42,106 +22,7 @@
       "GUID": "{C2635664-3DF8-496D-BA41-22C25299ACE8}",
       "DurationType": "OneShot",
       "DurationMin": "0",
-      "DurationMax": "0.8140358",
-      "SwitchContainers": [
-       {
-        "SwitchValue": {
-         "GroupType": "State",
-         "GroupId": "4232248784",
-         "Id": "2958002925",
-         "GUID": "{ACC1E46C-A618-469B-9673-D48B071A1004}",
-         "Default": "true"
-        },
-        "Children": [
-         {
-          "SwitchValue": {
-           "GroupType": "Switch",
-           "GroupId": "194784494",
-           "Id": "3353720555",
-           "GUID": "{4578F74A-2F6F-42EB-891F-614C2D62B7D8}",
-           "Default": "true"
-          },
-          "MediaRefs": [
-           {
-            "Id": "285816151"
-           }
-          ]
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "State",
-         "GroupId": "4232248784",
-         "Id": "3678545986",
-         "GUID": "{8105387B-710D-4FB0-8111-2A5293F2E07E}"
-        },
-        "Children": [
-         {
-          "SwitchValue": {
-           "GroupType": "Switch",
-           "GroupId": "194784494",
-           "Id": "3353720555",
-           "GUID": "{4578F74A-2F6F-42EB-891F-614C2D62B7D8}",
-           "Default": "true"
-          },
-          "MediaRefs": [
-           {
-            "Id": "991022554"
-           }
-          ]
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "State",
-         "GroupId": "4232248784",
-         "Id": "51683977",
-         "GUID": "{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"
-        },
-        "Children": [
-         {
-          "SwitchValue": {
-           "GroupType": "Switch",
-           "GroupId": "194784494",
-           "Id": "3353720555",
-           "GUID": "{4578F74A-2F6F-42EB-891F-614C2D62B7D8}",
-           "Default": "true"
-          },
-          "MediaRefs": [
-           {
-            "Id": "991022554"
-           }
-          ]
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "State",
-         "GroupId": "4232248784",
-         "Id": "748895195",
-         "GUID": "{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"
-        },
-        "Children": [
-         {
-          "SwitchValue": {
-           "GroupType": "Switch",
-           "GroupId": "194784494",
-           "Id": "3353720555",
-           "GUID": "{4578F74A-2F6F-42EB-891F-614C2D62B7D8}",
-           "Default": "true"
-          },
-          "MediaRefs": [
-           {
-            "Id": "991022554"
-           }
-          ]
-         }
-        ]
-       }
-      ]
+      "DurationMax": "0"
      }
     ],
     "GameParameters": [
@@ -152,40 +33,6 @@
       "GUID": "{881B885B-5371-4C1C-8523-6D6EDC0BE6F9}"
      }
     ],
-    "StateGroups": [
-     {
-      "Id": "4232248784",
-      "Name": "WeaponState",
-      "ObjectPath": "\\States\\Default Work Unit\\WeaponState",
-      "GUID": "{912BC3CC-7356-4483-9C97-B04B3D54A890}",
-      "States": [
-       {
-        "Id": "51683977",
-        "Name": "Shotgun",
-        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\Shotgun",
-        "GUID": "{8D1C3E97-305F-4897-AAD2-6ED1C0FA0811}"
-       },
-       {
-        "Id": "748895195",
-        "Name": "None",
-        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\None",
-        "GUID": "{D69A3CCD-FA28-4AA0-8DC7-754EB087B583}"
-       },
-       {
-        "Id": "2958002925",
-        "Name": "GrenadeLauncher",
-        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\GrenadeLauncher",
-        "GUID": "{ACC1E46C-A618-469B-9673-D48B071A1004}"
-       },
-       {
-        "Id": "3678545986",
-        "Name": "MachineGun",
-        "ObjectPath": "\\States\\Default Work Unit\\WeaponState\\MachineGun",
-        "GUID": "{8105387B-710D-4FB0-8111-2A5293F2E07E}"
-       }
-      ]
-     }
-    ],
     "SwitchGroups": [
      {
       "Id": "194784494",
@@ -193,6 +40,18 @@
       "ObjectPath": "\\Switches\\Default Work Unit\\WeaponSurfaceCollision",
       "GUID": "{DF6301E3-DB84-4607-9CDE-AFF2BF4E3A65}",
       "Switches": [
+       {
+        "Id": "1505986031",
+        "Name": "RockSurface",
+        "ObjectPath": "\\Switches\\Default Work Unit\\WeaponSurfaceCollision\\RockSurface",
+        "GUID": "{7B1ADED6-B632-448E-B7DF-05BD5E26FBC8}"
+       },
+       {
+        "Id": "1882779037",
+        "Name": "SnowSurface",
+        "ObjectPath": "\\Switches\\Default Work Unit\\WeaponSurfaceCollision\\SnowSurface",
+        "GUID": "{91E60FA4-4DE1-465C-A254-4030A4DF7A15}"
+       },
        {
         "Id": "3353720555",
         "Name": "IceSurface",
@@ -204,12 +63,18 @@
         "Name": "EnemySurface",
         "ObjectPath": "\\Switches\\Default Work Unit\\WeaponSurfaceCollision\\EnemySurface",
         "GUID": "{DC912065-E687-4C3C-891B-504BA636A074}"
+       },
+       {
+        "Id": "4047769411",
+        "Name": "MetalSurface",
+        "ObjectPath": "\\Switches\\Default Work Unit\\WeaponSurfaceCollision\\MetalSurface",
+        "GUID": "{B9C67F9D-E774-42A4-8D09-E0D98C3E0C55}"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{023061F9-F96F-B857-4669-448F8B5FB97A}"
+  "FileHash": "{DCBB04C9-B2FA-73FB-6C07-F2A5788A3635}"
  }
 }
