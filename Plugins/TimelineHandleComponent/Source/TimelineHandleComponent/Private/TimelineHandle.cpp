@@ -3,10 +3,3 @@
 
 #include "TimelineHandle.h"
 
-FTimelineHandle::FTimelineHandle()
-{
-}
-
-FTimelineHandle::~FTimelineHandle()
-{
-}

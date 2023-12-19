@@ -19,7 +19,7 @@ private:
 public:
 
 	UPROPERTY(EditAnywhere)
-	TMap<FString, class UCurveFloat*> timelines;
+	TMap<FString, class UTimelineHandle*> timelines;
 
 
 	// Sets default values for this component's properties
