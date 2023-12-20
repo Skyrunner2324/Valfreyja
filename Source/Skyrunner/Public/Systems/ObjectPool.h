@@ -6,41 +6,52 @@
 #include "Components/ActorComponent.h"
 #include "ObjectPool.generated.h"
 
-
-UCLASS(Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class SKYRUNNER_API UPoolObject : public UActorComponent
-{
-	GENERATED_BODY()
-
-public:	
-	// Sets default values for this component's properties
-	UPoolObject();
-
-	UFUNCTION(BlueprintCallable)
-	AActor* GetObjectPooled(FVector position, FRotator rotation);
-
-	UFUNCTION(BlueprintCallable)
-	void RemoveObjectPooled(AActor* objectToDeactivate);
-
-	void ActivateActor(bool hiddenIngame, bool enableColision, bool tickEnabled, AActor* actorToActivate);
-	void SpawnActor(int numberActorToSpawn = 1);
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int numberActorToCreateAtStart = 5;
+USTRUCT(BlueprintType)
+struct FStructActorClass{
+	GENERATED_USTRUCT_BODY()
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<AActor> actorClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int numberToCreateAtstart;
 
+	FStructActorClass() { }
+} ;
+
+
+UCLASS(Blueprintable, ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
+class SKYRUNNER_API UObjectPool : public UActorComponent
+{
+	GENERATED_BODY()
+
+public:
+	// Sets default values for this component's properties
+	UObjectPool();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FStructActorClass> arrayClass;
+
+private:
 	TArray <AActor*> poolObject;
 	TArray <AActor*> copyPoolObject;
+
+public:
+	// Called every frame
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	UFUNCTION(BlueprintCallable)
+	AActor* GetObjectPooled(FVector position, FRotator rotation, TSubclassOf<AActor> actorClass);
+	virtual void DestroyComponent(bool bPromoteChildren) override;
 
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+private:
+	void RemoveObjectPooled(AActor* objectToDeactivate);
 
-		
+	UFUNCTION()
+	void ActorDeath(AActor* actor);
+
+	void ActivateActor(bool hiddenIngame, bool enableColision, bool tickEnabled, AActor* actorToActivate);
+	void SpawnActor(TSubclassOf<AActor> actorClass, int numberActorToSpawn = 1);
 };

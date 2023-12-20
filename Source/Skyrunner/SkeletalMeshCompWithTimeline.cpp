@@ -10,5 +10,4 @@
 USkeletalMeshCompWithTimeline::USkeletalMeshCompWithTimeline()
 {
 	timelineHandle = CreateDefaultSubobject<UTimelineHandleComponent>(FName("Timeline"));
-	poolObject = CreateDefaultSubobject<UPoolObject>(FName("Poolobject"));
 }
