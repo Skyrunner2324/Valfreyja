@@ -2,8 +2,8 @@
 
 
 #include "TP_WeaponComponent.h"
-#include "SkyrunnerCharacter.h"
-#include "SkyrunnerProjectile.h"
+#include "../SkyrunnerCharacter.h"
+#include "../SkyrunnerProjectile.h"
 #include "GameFramework/PlayerController.h"
 #include "Camera/PlayerCameraManager.h"
 #include "Kismet/GameplayStatics.h"

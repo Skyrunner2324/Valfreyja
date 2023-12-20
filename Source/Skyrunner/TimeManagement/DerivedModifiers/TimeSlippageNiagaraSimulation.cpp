@@ -6,7 +6,7 @@
 #include "../TimeSlippage.h"
 #include "NiagaraComponent.h"
 
-#include "../Utils/DebugLog.h"
+#include "../../Utils/DebugLog.h"
 
 
 UTimeSlippageNiagaraSimulation::UTimeSlippageNiagaraSimulation()

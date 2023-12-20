@@ -3,8 +3,7 @@
 
 #include "SkeletalMeshCompWithTimeline.h"
 
-#include "Systems/TimelineHandleComponent.h"
-#include "Systems/ObjectPool.h"
+#include "TimelineHandleComponent.h"
 
 
 USkeletalMeshCompWithTimeline::USkeletalMeshCompWithTimeline()

@@ -1,11 +1,13 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Systems/ObjectPool.h"
-#include "../../Systems/PoolObject.h"
+#include "ObjectPool.h"
+
+#include "PoolObject.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "../../Systems/CustomProjectileMovement.h"
 #include "../../Utils/DebugLog.h"
+
 
 // Sets default values for this component's properties
 UObjectPool::UObjectPool()
