@@ -23,10 +23,13 @@ UObjectPool::UObjectPool()
 AActor* UObjectPool::GetObjectPooled(FVector position, FRotator rotation, TSubclassOf<AActor> actorClass)
 {
 	AActor* actorPooled = nullptr;
-	actorPooled = *copyPoolObject.FindByPredicate([&](const AActor* a) { return a->IsA(actorClass.Get()); });
+	if (copyPoolObject.ContainsByPredicate([&](const AActor* a) { return a->IsA(actorClass.Get()); }))
+		actorPooled = *copyPoolObject.FindByPredicate([&](const AActor* a) { return a->IsA(actorClass.Get()); });
 
-	if (actorPooled == nullptr)
+	if (actorPooled == nullptr) {
 		SpawnActor(actorClass);
+		return GetObjectPooled(position, rotation, actorClass);
+	}
 
 	copyPoolObject.Remove(actorPooled);
 	actorPooled->Reset();
