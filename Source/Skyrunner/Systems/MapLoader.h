@@ -23,5 +23,8 @@ public:
 	static void LoadMapAsyncFromName(const FName levelName, FLoadCompleted completed);
 
 	UFUNCTION(BlueprintCallable)
-	static void LoadMapAsync(const TSoftObjectPtr<UWorld> level, FLoadCompleted completed);
+	static void LoadMapAsync(const TSoftObjectPtr<UWorld> level,
+		FLoadCompleted completed,
+		const bool bResetUponCompletion = true,
+		const FString playerStartTag = "None");
 };
