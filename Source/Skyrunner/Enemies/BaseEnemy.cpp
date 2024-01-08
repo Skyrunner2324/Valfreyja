@@ -24,6 +24,11 @@ ABaseEnemy::ABaseEnemy()
 
 	arrowComponent = CreateDefaultSubobject<UArrowComponent>(FName("Arrow Component"));
 	arrowComponent->SetupAttachment(RootComponent);
+	
+	collisionProjectile = CreateDefaultSubobject<UBoxComponent>(FName("CollisionProjectile"));
+	collisionProjectile->SetupAttachment(RootComponent);
+	FVector boxExtent = FVector(52, 52, 97);
+	collisionProjectile->SetBoxExtent(boxExtent);
 
 	detectionSphere = CreateDefaultSubobject<USphereComponent>(FName("Detection Sphere"));
 	detectionSphere->SetSphereRadius(2000.f);

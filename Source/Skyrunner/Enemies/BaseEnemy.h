@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+#include "Components/BoxComponent.h"
 #include "BaseEnemy.generated.h"
 
 UCLASS()
@@ -24,6 +25,9 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
 	class UCapsuleComponent* collisionCapsule;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
+	class UBoxComponent* collisionProjectile;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
 	class USphereComponent* detectionSphere;
