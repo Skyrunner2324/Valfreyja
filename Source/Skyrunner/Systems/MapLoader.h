@@ -8,7 +8,16 @@
 
 
 // TODO : take loaded map in arguments (find a way to restart game mode)
-DECLARE_DYNAMIC_DELEGATE_OneParam(FLoadCompleted, bool, bSuccess);
+// using lambda binding
+
+// event in arguments
+//DECLARE_DYNAMIC_DELEGATE_OneParam(FLoadCompleted, bool, bSuccess);
+DECLARE_DYNAMIC_DELEGATE(FLoadCompleted);
+DECLARE_DYNAMIC_DELEGATE(FLevelShown);
+
+// on load success
+DECLARE_DELEGATE(FOnSuccess);
+
 
 /**
  * 
@@ -24,7 +33,8 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	static void LoadMapAsync(const TSoftObjectPtr<UWorld> level,
-		FLoadCompleted completed,
+		FLoadCompleted OnLoadCompleted,
+		FLevelShown OnLevelShown,
 		const bool bResetUponCompletion = true,
 		const FString playerStartTag = "None");
 };

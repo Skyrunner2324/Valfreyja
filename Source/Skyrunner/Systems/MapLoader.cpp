@@ -12,13 +12,16 @@
 #include "../Utils/DebugLog.h"
 
 
+
 void UMapLoader::LoadMapAsyncFromName(const FName levelName, FLoadCompleted completed)
 {
 	DebugLogRed(TEXT("Load from name"));
+	throw;
 }
 
 void UMapLoader::LoadMapAsync(const TSoftObjectPtr<UWorld> level,
-	FLoadCompleted completed,
+	FLoadCompleted OnLoadCompleted,
+	FLevelShown OnLevelShown,
 	const bool bResetUponCompletion,
 	const FString playerStartTag)
 {
@@ -29,26 +32,42 @@ void UMapLoader::LoadMapAsync(const TSoftObjectPtr<UWorld> level,
 
 	// TODO : add a delay to test
 	bool bSuccess = false;
-	ULevelStreamingDynamic::LoadLevelInstanceBySoftObjectPtr(world,
+	auto map = ULevelStreamingDynamic::LoadLevelInstanceBySoftObjectPtr(world,
 		level,
 		FTransform(),
 		bSuccess);
 
 
-	completed.ExecuteIfBound(bSuccess);
-	if (bSuccess)
-		DebugLogGreen(TEXT("Successfully loaded"));
-	else
-		DebugLogRed(TEXT("Load failed"));
+	if (OnLoadCompleted.IsBound())
+		map->OnLevelLoaded.Add(OnLoadCompleted);
+	if (OnLevelShown.IsBound())
+		map->OnLevelShown.Add(OnLevelShown);
 
 
-	// TODO : reset (or maybe reset on completed event (user implementation))
+	FOnSuccess onSuccess;
+	onSuccess.BindLambda([&]() {
+		if (bSuccess)
+			DebugLogGreen(TEXT("Successfully loaded"));
+		else
+			DebugLogRed(TEXT("Load failed"));
+		});
+	// TODO : find a way to bind a lambda to the OnLevelLoaded event
+	//map->OnLevelLoaded.Add(onSuccess);
+
+
+	// whether to reset directly after load or let the user reset
+	// with the OnLoadCompleted event
 	if (bResetUponCompletion)
 	{
-		ASkyrunnerGameMode* gm = Cast<ASkyrunnerGameMode>(UGameplayStatics::GetGameMode(world));
-		if (gm)
-		{
-			gm->ResetPlayer(playerStartTag);
-		}
+		FOnSuccess resetOnSuccess;
+		resetOnSuccess.BindLambda([&]() {
+			ASkyrunnerGameMode* gm = Cast<ASkyrunnerGameMode>(UGameplayStatics::GetGameMode(world));
+			if (gm)
+			{
+				gm->ResetPlayer(playerStartTag);
+			}
+			});
+		// TODO : find a way to bind a lambda to the OnLevelShown event
+		//map->OnLevelShown.Add(resetOnSuccess);
 	}
 }
