@@ -16,7 +16,7 @@
 void UMapLoader::LoadMapAsyncFromName(const FName levelName, FLoadCompleted completed)
 {
 	DebugLogRed(TEXT("Load from name"));
-	throw;
+	//throw;
 }
 
 void UMapLoader::LoadMapAsync(const TSoftObjectPtr<UWorld> level,

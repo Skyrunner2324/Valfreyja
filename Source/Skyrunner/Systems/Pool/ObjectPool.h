@@ -15,7 +15,7 @@ struct FStructActorClass{
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int numberToCreateAtstart;
 
-	FStructActorClass() { }
+	//FStructActorClass() { }
 } ;
 
 
