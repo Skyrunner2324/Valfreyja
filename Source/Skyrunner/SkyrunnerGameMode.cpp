@@ -21,7 +21,11 @@ void ASkyrunnerGameMode::ResetPlayer(const FString PlayerStartTag)
 {
 	// get player 1 (the only player in a singleplayer game)
 	auto player = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
-	player->Destroy();
+//#if 1
+//	GetWorld()->DestroyActor(player);
+//#else
+//	player->Destroy();
+//#endif
 
 	// find player start and restart player
 	auto controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
