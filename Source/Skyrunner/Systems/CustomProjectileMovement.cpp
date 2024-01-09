@@ -42,3 +42,13 @@ void UCustomProjectileMovement::Init()
 		}
 	}
 }
+
+void UCustomProjectileMovement::StopSimulating(const FHitResult& HitResult)
+{
+	Velocity = FVector::ZeroVector;
+	ClearPendingForce(false);
+	PendingForceThisUpdate = FVector::ZeroVector;
+	UpdateComponentVelocity();
+	//SetUpdatedComponent(NULL);
+	OnProjectileStop.Broadcast(HitResult);
+}

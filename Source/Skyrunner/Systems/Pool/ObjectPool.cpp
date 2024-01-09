@@ -71,8 +71,8 @@ void UObjectPool::ActivateActor(bool hiddenIngame, bool enableColision, bool tic
 
 		if (projectileComponent != nullptr) {
 			projectileComponent->Velocity = FVector(1.f, 0.f, 0.f);
-			projectileComponent->UpdateComponentVelocity();
 			projectileComponent->Init();
+			projectileComponent->UpdateComponentVelocity();
 		}
 	};
 }

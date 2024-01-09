@@ -16,4 +16,7 @@ class SKYRUNNER_API UCustomProjectileMovement : public UProjectileMovementCompon
 public:
 	void Init();
 
+protected:
+	virtual void StopSimulating(const FHitResult& HitResult) override;
+
 };
