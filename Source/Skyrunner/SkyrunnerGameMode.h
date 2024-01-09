@@ -32,5 +32,6 @@ public:
 
 
 	UFUNCTION(BlueprintCallable)
-	void ResetPlayer(const FString PlayerStartTag = "None");
+	void ResetPlayer(const bool bDestroyPlayerBeforeReset,
+		const FString PlayerStartTag = "None");
 };

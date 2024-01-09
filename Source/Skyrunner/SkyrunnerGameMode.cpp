@@ -17,26 +17,31 @@ ASkyrunnerGameMode::ASkyrunnerGameMode()
 
 }
 
-void ASkyrunnerGameMode::ResetPlayer(const FString PlayerStartTag)
+void ASkyrunnerGameMode::ResetPlayer(const bool bDestroyPlayerBeforeReset,
+	const FString PlayerStartTag)
 {
-	// get player 1 (the only player in a singleplayer game)
-	auto player = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
-//#if 1
-//	GetWorld()->DestroyActor(player);
-//#else
-//	player->Destroy();
-//#endif
+	if (bDestroyPlayerBeforeReset)
+	{
+		// get player 1 (the only player in a singleplayer game)
+		auto player = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
+#if 1
+		GetWorld()->DestroyActor(player);
+#else
+		player->Destroy();
+#endif
+	}
 
-	// find player start and restart player
 	auto controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
-	AActor* playerStart = nullptr;
-	if (PlayerStartTag != "None")
-		playerStart = FindPlayerStart(controller, PlayerStartTag);
+	if (PlayerStartTag == "None")
+	{
+		RestartPlayer(controller);
+	}
 	else
-		playerStart = FindPlayerStart(controller);
-
-	RestartPlayerAtPlayerStart(controller, playerStart);
-
+	{
+		// find player start and restart player
+		AActor* playerStart = FindPlayerStart(controller, PlayerStartTag);
+		RestartPlayerAtPlayerStart(controller, playerStart);
+	}
 
 	// broadcast delegate that should reset player controller and player HUD
 	OnPlayerResetEvent.Broadcast();

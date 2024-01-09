@@ -64,7 +64,7 @@ void UMapLoader::LoadMapAsync(const TSoftObjectPtr<UWorld> level,
 			ASkyrunnerGameMode* gm = Cast<ASkyrunnerGameMode>(UGameplayStatics::GetGameMode(world));
 			if (gm)
 			{
-				gm->ResetPlayer(playerStartTag);
+				gm->ResetPlayer(false, playerStartTag);
 			}
 			});
 		// TODO : find a way to bind a lambda to the OnLevelShown event
