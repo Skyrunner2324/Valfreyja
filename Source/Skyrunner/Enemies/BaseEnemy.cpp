@@ -29,6 +29,7 @@ ABaseEnemy::ABaseEnemy()
 	collisionProjectile->SetupAttachment(RootComponent);
 	FVector boxExtent = FVector(52, 52, 97);
 	collisionProjectile->SetBoxExtent(boxExtent);
+	collisionProjectile->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Overlap);
 
 	detectionSphere = CreateDefaultSubobject<USphereComponent>(FName("Detection Sphere"));
 	detectionSphere->SetSphereRadius(2000.f);
