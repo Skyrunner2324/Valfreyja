@@ -13,11 +13,21 @@ class SKYRUNNER_API UMultipleTimelineHandlesComponent : public UActorComponent
 	GENERATED_BODY()
 
 
-private:
-	TArray<class UTimelineComponent*> handles;
+protected:
+	TMap<FString, class UInstancedTimelineHandle*> instancedHandles;
+
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	inline class UInstancedTimelineHandle* GetTimeline(const FString& timelineName)
+	{
+		if (instancedHandles.IsEmpty())
+			return nullptr;
+
+		return *instancedHandles.Find(timelineName);
+	}
+
 
 public:
-
 	UPROPERTY(EditAnywhere)
 	TMap<FString, class UTimelineHandle*> timelines;
 
@@ -29,12 +39,10 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	UFUNCTION(BlueprintCallable)
-	inline class UTimelineComponent* GetTimeline(const int i) const { return handles[i]; }
 
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
+
 };
