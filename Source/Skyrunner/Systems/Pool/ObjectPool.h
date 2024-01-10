@@ -13,7 +13,7 @@ struct FStructActorClass{
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<AActor> actorClass;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int numberToCreateAtstart;
+	int numberToCreateAtstart = 0;
 
 	//FStructActorClass() { }
 } ;
