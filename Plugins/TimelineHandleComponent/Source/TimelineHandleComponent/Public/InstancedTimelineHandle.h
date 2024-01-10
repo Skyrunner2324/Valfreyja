@@ -7,8 +7,8 @@
 #include "InstancedTimelineHandle.generated.h"
 
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnUpdateDelegate, float, scale);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnFinishedDelegate);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnUpdateDelegateInstanced, float, scale);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnFinishedDelegateInstanced);
 
 
 /**
@@ -35,10 +35,10 @@ public:
 	// events for timeline component execution
 
 	UPROPERTY(BlueprintAssignable)
-	FOnUpdateDelegate OnTimelineUpdate;
+	FOnUpdateDelegateInstanced OnTimelineUpdate;
 
 	UPROPERTY(BlueprintAssignable)
-	FOnFinishedDelegate OnTimelineFinished;
+	FOnFinishedDelegateInstanced OnTimelineFinished;
 
 
 
