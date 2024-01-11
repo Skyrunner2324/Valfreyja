@@ -2993,19 +2993,28 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{4DA11447-0592-C803-875F-113BB123DE34}",
+    "Hash": "{D0B0F436-3252-1BE7-394A-E6F9F044DBEC}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
     "Media": [
      {
-      "Id": "194964321",
+      "Id": "258897875",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "SkyRunV3.wav",
-      "Path": "Media/194964321.wem",
-      "CachePath": "SFX/SkyRunV3_073B4D0C.wem"
+      "ShortName": "174_Explo_Music.wav",
+      "Path": "Media/258897875.wem",
+      "CachePath": "SFX/174_Explo_Music_073B4D0C.wem"
+     },
+     {
+      "Id": "603376775",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "174_Music_Menu.wav",
+      "Path": "Media/603376775.wem",
+      "CachePath": "SFX/174_Music_Menu_073B4D0C.wem"
      }
     ],
     "Events": [
@@ -3015,9 +3024,60 @@
       "ObjectPath": "\\Events\\Music\\MUS_Play_MainMusic",
       "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
       "DurationType": "Infinite",
-      "MediaRefs": [
+      "SwitchContainers": [
        {
-        "Id": "194964321"
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1045871717",
+         "Id": "3374585465",
+         "GUID": "{B2F321F7-4EE8-4AFD-AE95-8524E71A2A7B}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "603376775"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1045871717",
+         "Id": "984691642",
+         "GUID": "{EC4A1A3A-9F40-4265-A536-AB6230BB833D}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "258897875"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "1045871717",
+      "Name": "GameStatus",
+      "ObjectPath": "\\States\\Default Work Unit\\GameStatus",
+      "GUID": "{B166225D-6EEC-4395-A414-2DC03ECCF043}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\GameStatus\\None",
+        "GUID": "{EEB277E0-9352-480D-A6FB-C308E6B7BD09}"
+       },
+       {
+        "Id": "984691642",
+        "Name": "InGame",
+        "ObjectPath": "\\States\\Default Work Unit\\GameStatus\\InGame",
+        "GUID": "{EC4A1A3A-9F40-4265-A536-AB6230BB833D}"
+       },
+       {
+        "Id": "3374585465",
+        "Name": "InMenu",
+        "ObjectPath": "\\States\\Default Work Unit\\GameStatus\\InMenu",
+        "GUID": "{B2F321F7-4EE8-4AFD-AE95-8524E71A2A7B}"
        }
       ]
      }
@@ -3085,6 +3145,6 @@
     ]
    }
   ],
-  "FileHash": "{82BF368B-8D0C-119D-C5FF-B0DD574A7E71}"
+  "FileHash": "{7E81D954-72B5-A056-7841-16E348E8E391}"
  }
 }

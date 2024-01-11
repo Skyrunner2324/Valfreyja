@@ -1,25 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{4DA11447-0592-C803-875F-113BB123DE34}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{D0B0F436-3252-1BE7-394A-E6F9F044DBEC}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
 			<Media>
-				<File Id="194964321" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>SkyRunV3.wav</ShortName>
-					<Path>Media/194964321.wem</Path>
-					<CachePath>SFX/SkyRunV3_073B4D0C.wem</CachePath>
+				<File Id="258897875" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>174_Explo_Music.wav</ShortName>
+					<Path>Media/258897875.wem</Path>
+					<CachePath>SFX/174_Explo_Music_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="603376775" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>174_Music_Menu.wav</ShortName>
+					<Path>Media/603376775.wem</Path>
+					<CachePath>SFX/174_Music_Menu_073B4D0C.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
 				<Event Id="3441789682" Name="MUS_Play_MainMusic" ObjectPath="\Events\Music\MUS_Play_MainMusic" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="194964321"/>
-					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1045871717" Id="3374585465" GUID="{B2F321F7-4EE8-4AFD-AE95-8524E71A2A7B}"/>
+							<MediaRefs>
+								<MediaRef Id="603376775"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1045871717" Id="984691642" GUID="{EC4A1A3A-9F40-4265-A536-AB6230BB833D}"/>
+							<MediaRefs>
+								<MediaRef Id="258897875"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="1045871717" Name="GameStatus" ObjectPath="\States\Default Work Unit\GameStatus" GUID="{B166225D-6EEC-4395-A414-2DC03ECCF043}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\GameStatus\None" GUID="{EEB277E0-9352-480D-A6FB-C308E6B7BD09}"/>
+						<State Id="984691642" Name="InGame" ObjectPath="\States\Default Work Unit\GameStatus\InGame" GUID="{EC4A1A3A-9F40-4265-A536-AB6230BB833D}"/>
+						<State Id="3374585465" Name="InMenu" ObjectPath="\States\Default Work Unit\GameStatus\InMenu" GUID="{B2F321F7-4EE8-4AFD-AE95-8524E71A2A7B}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{40051963-0BB3-4285-76C4-5FD3800C8196}</FileHash>
+	<FileHash>{7DC5FEC6-174A-4BE0-24F0-C579F63C3C58}</FileHash>
 </SoundBanksInfo>
