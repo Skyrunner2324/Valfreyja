@@ -204,7 +204,7 @@
     "Type": "Event",
     "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
     "Language": "SFX",
-    "Hash": "{4D79C6F3-A49A-1074-1F88-58FC731FE3CE}",
+    "Hash": "{40B51ABA-82CB-A7DD-E35D-238DE1266D16}",
     "ObjectPath": "SX_player_land",
     "ShortName": "SX_player_land",
     "Path": "Event/SX_player_land.bnk",
@@ -216,7 +216,7 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\player_land.wav",
       "Path": "Media/1026811673.wem",
-      "CachePath": "SFX/Placeholders/player_land_808533B2.wem"
+      "CachePath": "SFX/Placeholders/player_land_51E39951.wem"
      }
     ],
     "Events": [
@@ -226,8 +226,8 @@
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_land",
       "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
       "DurationType": "OneShot",
-      "DurationMin": "0.12370714",
-      "DurationMax": "0.12370714",
+      "DurationMin": "0.17454167",
+      "DurationMax": "0.17454167",
       "MediaRefs": [
        {
         "Id": "1026811673"
@@ -241,7 +241,7 @@
     "Type": "Event",
     "GUID": "{85FE7A46-F893-42AA-8787-F5597C4AF630}",
     "Language": "SFX",
-    "Hash": "{D49B396E-3C55-6246-E3A8-13E56F2522C0}",
+    "Hash": "{55A3694E-BD21-0BC6-528A-C3B9DB8FDEA1}",
     "ObjectPath": "SX_enemy_gunner_shot",
     "ShortName": "SX_enemy_gunner_shot",
     "Path": "Event/SX_enemy_gunner_shot.bnk",
@@ -313,7 +313,7 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{89BED792-B992-94FC-F252-58B552728119}",
+    "Hash": "{C31F23E3-0B21-8AF1-E701-38C6F7C1CE6A}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
@@ -1009,7 +1009,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{19F2B157-B823-FAD8-BB96-A302508468DE}",
+    "Hash": "{BA71631F-D7CB-B877-838C-3FDE4559530B}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -1030,7 +1030,7 @@
       "Location": "Loose",
       "ShortName": "AudioEase\\Altiverb - Outdoor and More\\Outdoor\\Field\\AE_DistantBuilding_MicsFar.wav",
       "Path": "Media/941961704.wem",
-      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Field/AE_DistantBuilding_MicsFar_3798E276.wem"
+      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Field/AE_DistantBuilding_MicsFar_218EFC0B.wem"
      }
     ],
     "Plugins": {
@@ -1253,6 +1253,12 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\3D OBJ Master",
       "GUID": "{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}",
       "AuxBusRefs": [
+       {
+        "Id": "1641293181",
+        "Name": "REV_LargeRoom",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV\\REV_LargeRoom",
+        "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"
+       },
        {
         "Id": "1752382405",
         "Name": "Early_Reflections",
@@ -1518,6 +1524,44 @@
         "Name": "InMenu",
         "ObjectPath": "\\States\\Default Work Unit\\GameStatus\\InMenu",
         "GUID": "{B2F321F7-4EE8-4AFD-AE95-8524E71A2A7B}"
+       }
+      ]
+     },
+     {
+      "Id": "1419563690",
+      "Name": "Music_Selector",
+      "ObjectPath": "\\States\\Default Work Unit\\Music_Selector",
+      "GUID": "{9E363DC4-1CA9-4AAF-BFCB-E45F336CC2CE}",
+      "States": [
+       {
+        "Id": "680256650",
+        "Name": "Arena",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selector\\Arena",
+        "GUID": "{DB91568E-4183-4FE0-A178-9B6516F9B6BD}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selector\\None",
+        "GUID": "{570EE5A7-8CDA-4FE2-BE60-BD0C6F00B022}"
+       },
+       {
+        "Id": "1125500713",
+        "Name": "Intro",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selector\\Intro",
+        "GUID": "{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"
+       },
+       {
+        "Id": "2277819699",
+        "Name": "IntroLoop",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selector\\IntroLoop",
+        "GUID": "{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"
+       },
+       {
+        "Id": "3814499265",
+        "Name": "Explo",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selector\\Explo",
+        "GUID": "{1FE92F27-401B-44A3-BFC0-65F192492AAB}"
        }
       ]
      },
@@ -2275,7 +2319,7 @@
     "Type": "Event",
     "GUID": "{A070E3C3-67C1-4FFE-846E-631BD136D358}",
     "Language": "SFX",
-    "Hash": "{FE596CB4-DDB5-6AA6-D27D-F077EAD8B251}",
+    "Hash": "{3BB6D358-1A8E-999D-4EF2-75F1E4DC91B8}",
     "ObjectPath": "SX_player_jump",
     "ShortName": "SX_player_jump",
     "Path": "Event/SX_player_jump.bnk",
@@ -2315,7 +2359,7 @@
     "Type": "Bus",
     "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
     "Language": "SFX",
-    "Hash": "{CB4C6648-638A-B8B9-5121-9ADC1D42EAA2}",
+    "Hash": "{86473F52-6418-380F-8ECD-8ADE324B1E44}",
     "ObjectPath": "REV_LargeRoom",
     "ShortName": "REV_LargeRoom",
     "Path": "Bus/REV_LargeRoom.bnk",
@@ -2327,7 +2371,7 @@
       "Location": "Loose",
       "ShortName": "AudioEase\\Altiverb - Outdoor and More\\Outdoor\\Field\\AE_DistantBuilding_MicsFar.wav",
       "Path": "Media/941961704.wem",
-      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Field/AE_DistantBuilding_MicsFar_3798E276.wem"
+      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Field/AE_DistantBuilding_MicsFar_218EFC0B.wem"
      }
     ],
     "Plugins": {
@@ -2604,7 +2648,7 @@
     "Type": "Event",
     "GUID": "{F4227598-B79C-47C2-A22C-C305F4B1E5C2}",
     "Language": "SFX",
-    "Hash": "{51820DDB-0F80-B961-F55C-34872F3B548A}",
+    "Hash": "{07FE7E88-077A-A9F5-8CB0-E06C1AD5A9A3}",
     "ObjectPath": "SX_player_dash",
     "ShortName": "SX_player_dash",
     "Path": "Event/SX_player_dash.bnk",
@@ -2627,8 +2671,8 @@
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_dash",
       "GUID": "{F4227598-B79C-47C2-A22C-C305F4B1E5C2}",
       "DurationType": "OneShot",
-      "DurationMin": "0.1",
-      "DurationMax": "0.3",
+      "DurationMin": "0.2",
+      "DurationMax": "0.4",
       "PluginRefs": {
        "Custom": [
         {
@@ -2993,7 +3037,7 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{D0B0F436-3252-1BE7-394A-E6F9F044DBEC}",
+    "Hash": "{B03AF355-2593-1147-BE4E-AD91FF7372A8}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
@@ -3015,6 +3059,15 @@
       "ShortName": "174_Music_Menu.wav",
       "Path": "Media/603376775.wem",
       "CachePath": "SFX/174_Music_Menu_073B4D0C.wem"
+     },
+     {
+      "Id": "821109644",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "145_Techno Arena_V2.wav",
+      "Path": "Media/821109644.wem",
+      "CachePath": "SFX/145_Techno Arena_V2_073B4D0C.wem"
      }
     ],
     "Events": [
@@ -3028,9 +3081,22 @@
        {
         "SwitchValue": {
          "GroupType": "State",
-         "GroupId": "1045871717",
-         "Id": "3374585465",
-         "GUID": "{B2F321F7-4EE8-4AFD-AE95-8524E71A2A7B}"
+         "GroupId": "1419563690",
+         "Id": "3814499265",
+         "GUID": "{1FE92F27-401B-44A3-BFC0-65F192492AAB}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "258897875"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1419563690",
+         "Id": "1125500713",
+         "GUID": "{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"
         },
         "MediaRefs": [
          {
@@ -3041,13 +3107,39 @@
        {
         "SwitchValue": {
          "GroupType": "State",
-         "GroupId": "1045871717",
-         "Id": "984691642",
-         "GUID": "{EC4A1A3A-9F40-4265-A536-AB6230BB833D}"
+         "GroupId": "1419563690",
+         "Id": "680256650",
+         "GUID": "{DB91568E-4183-4FE0-A178-9B6516F9B6BD}"
         },
         "MediaRefs": [
          {
-          "Id": "258897875"
+          "Id": "821109644"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1419563690",
+         "Id": "748895195",
+         "GUID": "{570EE5A7-8CDA-4FE2-BE60-BD0C6F00B022}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "603376775"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1419563690",
+         "Id": "2277819699",
+         "GUID": "{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "603376775"
          }
         ]
        }
@@ -3056,28 +3148,40 @@
     ],
     "StateGroups": [
      {
-      "Id": "1045871717",
-      "Name": "GameStatus",
-      "ObjectPath": "\\States\\Default Work Unit\\GameStatus",
-      "GUID": "{B166225D-6EEC-4395-A414-2DC03ECCF043}",
+      "Id": "1419563690",
+      "Name": "Music_Selector",
+      "ObjectPath": "\\States\\Default Work Unit\\Music_Selector",
+      "GUID": "{9E363DC4-1CA9-4AAF-BFCB-E45F336CC2CE}",
       "States": [
+       {
+        "Id": "680256650",
+        "Name": "Arena",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selector\\Arena",
+        "GUID": "{DB91568E-4183-4FE0-A178-9B6516F9B6BD}"
+       },
        {
         "Id": "748895195",
         "Name": "None",
-        "ObjectPath": "\\States\\Default Work Unit\\GameStatus\\None",
-        "GUID": "{EEB277E0-9352-480D-A6FB-C308E6B7BD09}"
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selector\\None",
+        "GUID": "{570EE5A7-8CDA-4FE2-BE60-BD0C6F00B022}"
        },
        {
-        "Id": "984691642",
-        "Name": "InGame",
-        "ObjectPath": "\\States\\Default Work Unit\\GameStatus\\InGame",
-        "GUID": "{EC4A1A3A-9F40-4265-A536-AB6230BB833D}"
+        "Id": "1125500713",
+        "Name": "Intro",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selector\\Intro",
+        "GUID": "{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"
        },
        {
-        "Id": "3374585465",
-        "Name": "InMenu",
-        "ObjectPath": "\\States\\Default Work Unit\\GameStatus\\InMenu",
-        "GUID": "{B2F321F7-4EE8-4AFD-AE95-8524E71A2A7B}"
+        "Id": "2277819699",
+        "Name": "IntroLoop",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selector\\IntroLoop",
+        "GUID": "{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"
+       },
+       {
+        "Id": "3814499265",
+        "Name": "Explo",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selector\\Explo",
+        "GUID": "{1FE92F27-401B-44A3-BFC0-65F192492AAB}"
        }
       ]
      }
@@ -3145,6 +3249,6 @@
     ]
    }
   ],
-  "FileHash": "{20A99483-6E3F-93D1-7263-BF134A2A2DCB}"
+  "FileHash": "{7F4D864F-28D9-8C82-C9D4-EF67EC3DDAB4}"
  }
 }

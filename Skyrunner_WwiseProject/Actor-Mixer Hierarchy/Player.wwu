@@ -43,9 +43,11 @@
 										<SourcePlugin Name="Soundseed Air Woosh" ID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" ShortID="1010974337" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="Duration" Type="Real64" Value="0.2"/>
+												<Property Name="Speed" Type="Real32" Value="-14"/>
 												<Property Name="SpeedAutomate" Type="bool" Value="True"/>
 												<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="1.3"/>
 												<Property Name="SpeedPointTimeRandom" Type="Real32" Value="0.01"/>
+												<Property Name="SpeedRandom" Type="Real32" Value="4"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<PluginData>
@@ -114,6 +116,17 @@
 											</ValueList>
 										</Property>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{452D3266-78A9-47D3-A701-8954834879C2}">
+														<PropertyList>
+															<Property Name="Min" Type="Real64" Value="-202"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="UseMaxSoundPerInstance" Type="bool">
 											<ValueList>
 												<Value>True</Value>
@@ -121,7 +134,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-4</Value>
+												<Value>-96</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -137,10 +150,9 @@
 										<AudioFileSource Name="player_land" ID="{4046AC67-13C4-4E52-B93D-8B5BF25E8886}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.00692147988505747"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0102317528735632"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.173925456016475"/>
 												<Property Name="LoopBegin" Type="Real64" Value="0.0508345258136925"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0508345258136925"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Placeholders\player_land.wav</AudioFile>
@@ -262,11 +274,12 @@
 										<SourcePlugin Name="Soundseed Air Woosh" ID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" ShortID="631246921" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="ChannelMask" Type="int32" Value="0"/>
-												<Property Name="Duration" Type="Real64" Value="0.2"/>
+												<Property Name="Duration" Type="Real64" Value="0.3"/>
 												<Property Name="DurationRandom" Type="Real32" Value="0.1"/>
-												<Property Name="Speed" Type="Real32" Value="50"/>
+												<Property Name="Speed" Type="Real32" Value="13"/>
 												<Property Name="SpeedAutomate" Type="bool" Value="True"/>
 												<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="11.8"/>
+												<Property Name="SpeedRandom" Type="Real32" Value="2"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<PluginData>
@@ -284,12 +297,12 @@
 							<Flags>5</Flags>
 						</Point>
 						<Point>
-							<XPos>0.1</XPos>
+							<XPos>0.15</XPos>
 							<YPos>100</YPos>
 							<Flags>0</Flags>
 						</Point>
 						<Point>
-							<XPos>0.2</XPos>
+							<XPos>0.3</XPos>
 							<YPos>0</YPos>
 							<Flags>37</Flags>
 						</Point>
@@ -319,7 +332,7 @@
 													<PluginInnerObject Name="" ID="{EAC13854-2008-45EF-9E15-C0139361B597}" PluginName="Deflector" CompanyID="0" PluginID="122">
 														<PropertyList>
 															<Property Name="Frequency" Type="Real32" Value="92"/>
-															<Property Name="Gain" Type="Real32" Value="-10"/>
+															<Property Name="Gain" Type="Real32" Value="-15"/>
 															<Property Name="QFactor" Type="Real32" Value="38.11"/>
 														</PropertyList>
 													</PluginInnerObject>
@@ -1118,7 +1131,7 @@
 																								<Flags>5</Flags>
 																							</Point>
 																							<Point>
-																								<XPos>-0</XPos>
+																								<XPos>0</XPos>
 																								<YPos>0</YPos>
 																								<Flags>0</Flags>
 																							</Point>
