@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="4125012149" Type="Bus" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" Language="SFX" Hash="{966CD4AC-C06E-1E77-1DA3-E243AC9D255C}">
+		<SoundBank Id="4125012149" Type="Bus" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" Language="SFX" Hash="{0EF0A0A1-7931-538A-8307-FCA57BB099F9}">
 			<ObjectPath>REV_SmallRoom</ObjectPath>
 			<ShortName>REV_SmallRoom</ShortName>
 			<Path>Bus/REV_SmallRoom.bnk</Path>
+			<Plugins>
+				<Custom>
+					<Plugin Id="544066397" Name="Matrix Reverb (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_SmallRoom\Matrix Reverb (Custom)" GUID="{46B2EC8C-FD61-4366-9674-9524E30CFFA7}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+				</Custom>
+			</Plugins>
 			<AuxBusses>
-				<AuxBus Id="4125012149" Name="REV_SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV\REV_SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
+				<AuxBus Id="4125012149" Name="REV_SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="544066397"/>
+						</Custom>
+					</PluginRefs>
 					<AuxBusRefs>
-						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{36D918F3-AF28-426B-A560-653C5CF99D60}</FileHash>
+	<FileHash>{86261DCA-D834-769B-FB2A-ACCC5D4DB623}</FileHash>
 </SoundBanksInfo>

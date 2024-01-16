@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A670372F-931C-41E6-925A-FA1480FED58F}",
     "Language": "SFX",
-    "Hash": "{0FFA405E-FFED-229B-10CE-FCCC382135FE}",
+    "Hash": "{075C86B0-5F81-B518-8FD6-734B6E3111A6}",
     "ObjectPath": "SX_player_grap_shot",
     "ShortName": "SX_player_grap_shot",
     "Path": "Event/SX_player_grap_shot.bnk",
@@ -22,11 +22,19 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\player_grap_shot.wav",
       "Path": "Media/642346148.wem",
-      "CachePath": "SFX/Placeholders/player_grap_shot_755F56E2.wem"
+      "CachePath": "SFX/Placeholders/player_grap_shot_D3EDCB5B.wem"
      }
     ],
     "Plugins": {
      "Custom": [
+      {
+       "Id": "518190610",
+       "Name": "Flanger (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\Grap\\game_grap_shot\\Flanger (Custom)",
+       "GUID": "{2A02FF7C-82A9-4670-8071-EE1321113B91}",
+       "LibName": "Wwise Flanger",
+       "LibId": "8192003"
+      },
       {
        "Id": "1018588396",
        "Name": "Soundseed Air Woosh",
@@ -54,14 +62,31 @@
       "PluginRefs": {
        "Custom": [
         {
+         "Id": "518190610"
+        },
+        {
          "Id": "1018588396"
         }
        ]
       }
      }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2565740352",
+      "Name": "RTPC_SlowMo",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
+      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
+     },
+     {
+      "Id": "2653406601",
+      "Name": "RTPC_PlayerSpeed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerSpeed",
+      "GUID": "{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"
+     }
     ]
    }
   ],
-  "FileHash": "{16EEC716-9677-A535-A4A4-0B6BF6FAC506}"
+  "FileHash": "{8047F840-1180-C211-9F9E-3E9C3C0740DA}"
  }
 }

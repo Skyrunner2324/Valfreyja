@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1311098982" Type="Event" GUID="{A670372F-931C-41E6-925A-FA1480FED58F}" Language="SFX" Hash="{0FFA405E-FFED-229B-10CE-FCCC382135FE}">
+		<SoundBank Id="1311098982" Type="Event" GUID="{A670372F-931C-41E6-925A-FA1480FED58F}" Language="SFX" Hash="{075C86B0-5F81-B518-8FD6-734B6E3111A6}">
 			<ObjectPath>SX_player_grap_shot</ObjectPath>
 			<ShortName>SX_player_grap_shot</ShortName>
 			<Path>Event/SX_player_grap_shot.bnk</Path>
@@ -9,11 +9,12 @@
 				<File Id="642346148" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\player_grap_shot.wav</ShortName>
 					<Path>Media/642346148.wem</Path>
-					<CachePath>SFX/Placeholders/player_grap_shot_755F56E2.wem</CachePath>
+					<CachePath>SFX/Placeholders/player_grap_shot_D3EDCB5B.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
 				<Custom>
+					<Plugin Id="518190610" Name="Flanger (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\Grap\game_grap_shot\Flanger (Custom)" GUID="{2A02FF7C-82A9-4670-8071-EE1321113B91}" LibName="Wwise Flanger" LibId="8192003"/>
 					<Plugin Id="1018588396" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\Grap\game_grap_woosh\Soundseed Air Woosh" GUID="{A341E8D9-733C-420F-858A-0DA3151904E5}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
 				</Custom>
 			</Plugins>
@@ -24,12 +25,17 @@
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
+							<PluginRef Id="518190610"/>
 							<PluginRef Id="1018588396"/>
 						</Custom>
 					</PluginRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
+				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{436AB45B-49BB-4FCD-B1A7-DFDA02C96AA5}</FileHash>
+	<FileHash>{74B4DC31-CB67-098E-D532-F7CC832729A3}</FileHash>
 </SoundBanksInfo>

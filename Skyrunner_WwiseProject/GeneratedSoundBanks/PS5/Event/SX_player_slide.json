@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{18C2192F-4C95-4001-A9A0-979E3F100C3A}",
     "Language": "SFX",
-    "Hash": "{04C28988-9E0F-16B9-1A07-5FA8F39331D0}",
+    "Hash": "{F59F6536-DDAA-3CFA-591D-EB2569301E72}",
     "ObjectPath": "SX_player_slide",
     "ShortName": "SX_player_slide",
     "Path": "Event/SX_player_slide.bnk",
@@ -22,9 +22,31 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\player_slide.wav",
       "Path": "Media/129424093.wem",
-      "CachePath": "SFX/Placeholders/player_slide_E7474B68.wem"
+      "CachePath": "SFX/Placeholders/player_slide_97A43206.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "514239598",
+       "Name": "Time Stretch (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_slide\\Time Stretch (Custom)",
+       "GUID": "{ECB105AF-E4C5-4846-8A85-238BD6B1DEB1}",
+       "LibName": "Wwise Time Stretch",
+       "LibId": "8519683"
+      }
+     ],
+     "ShareSets": [
+      {
+       "Id": "2656259783",
+       "Name": "PA_Announcement1",
+       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\PA_Announcement1",
+       "GUID": "{65E0ACE4-B404-4485-87A4-5907277D9858}",
+       "LibName": "Wwise Matrix Reverb",
+       "LibId": "7536643"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1882419246",
@@ -36,11 +58,31 @@
        {
         "Id": "129424093"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "514239598"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "2656259783"
+        }
+       ]
+      }
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2653406601",
+      "Name": "RTPC_PlayerSpeed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerSpeed",
+      "GUID": "{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"
      }
     ]
    }
   ],
-  "FileHash": "{81D4AD59-7002-9891-2C94-4943747D492D}"
+  "FileHash": "{017C2D11-1CE1-27E4-0451-E83CB71087A3}"
  }
 }

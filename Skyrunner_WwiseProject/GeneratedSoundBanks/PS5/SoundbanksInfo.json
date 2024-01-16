@@ -313,12 +313,31 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{C31F23E3-0B21-8AF1-E701-38C6F7C1CE6A}",
+    "Hash": "{FCC1DFCB-EBC0-FA63-98C9-4BF78789AEFF}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
+    "Media": [
+     {
+      "Id": "1056072145",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Hoverboots\\hoverboots_on_rail_loop.wav",
+      "Path": "Media/1056072145.wem",
+      "CachePath": "SFX/Hoverboots/hoverboots_on_rail_loop_073B4D0C.wem"
+     }
+    ],
     "Plugins": {
      "Custom": [
+      {
+       "Id": "188753095",
+       "Name": "Time Stretch (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots_Switch\\Hoverboots_Other\\hoverboots_on_rail_loop\\Time Stretch (Custom)",
+       "GUID": "{031325E2-23EA-4178-837A-3375041EA21F}",
+       "LibName": "Wwise Time Stretch",
+       "LibId": "8519683"
+      },
       {
        "Id": "666289254",
        "Name": "Soundseed Air Wind",
@@ -335,10 +354,88 @@
       "Name": "SX_play_hoverboots",
       "ObjectPath": "\\Events\\Hoverboots\\Hoverboots\\SX_play_hoverboots",
       "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
-      "DurationType": "Mixed",
-      "DurationMin": "0",
-      "DurationMax": "Infinite",
+      "DurationType": "Infinite",
       "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1462722741",
+         "Id": "2043403997",
+         "GUID": "{37DD7533-473B-4644-905E-CEB116EB2545}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1056072145"
+         }
+        ],
+        "PluginRefs": {
+         "Custom": [
+          {
+           "Id": "188753095"
+          }
+         ]
+        }
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1462722741",
+         "Id": "1050421051",
+         "GUID": "{11398057-44CF-49D9-86B9-602DE588AB2F}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1056072145"
+         }
+        ],
+        "PluginRefs": {
+         "Custom": [
+          {
+           "Id": "188753095"
+          }
+         ]
+        }
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1462722741",
+         "Id": "906520813",
+         "GUID": "{8C01446A-44D4-4022-808A-0A29DB59D0F4}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1056072145"
+         }
+        ],
+        "PluginRefs": {
+         "Custom": [
+          {
+           "Id": "188753095"
+          }
+         ]
+        }
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1462722741",
+         "Id": "2108779961",
+         "GUID": "{7232886A-CF99-4D7B-8D3F-9EE6543A6E43}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1056072145"
+         }
+        ],
+        "PluginRefs": {
+         "Custom": [
+          {
+           "Id": "188753095"
+          }
+         ]
+        }
+       },
        {
         "SwitchValue": {
          "GroupType": "Switch",
@@ -364,6 +461,12 @@
       "Name": "RTPC_PlayerMovement",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerMovement",
       "GUID": "{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"
+     },
+     {
+      "Id": "2565740352",
+      "Name": "RTPC_SlowMo",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
+      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
      },
      {
       "Id": "2653406601",
@@ -597,7 +700,7 @@
     "Type": "Bus",
     "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}",
     "Language": "SFX",
-    "Hash": "{ED4B3836-0B66-BDD6-CB72-6559803DC132}",
+    "Hash": "{DCA606BF-07D3-25EA-C812-C66D053E74E5}",
     "ObjectPath": "REV",
     "ShortName": "REV",
     "Path": "Bus/REV.bnk",
@@ -605,7 +708,7 @@
      {
       "Id": "980603520",
       "Name": "REV",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
       "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
      }
     ]
@@ -953,7 +1056,7 @@
     "Type": "Event",
     "GUID": "{A670372F-931C-41E6-925A-FA1480FED58F}",
     "Language": "SFX",
-    "Hash": "{0FFA405E-FFED-229B-10CE-FCCC382135FE}",
+    "Hash": "{075C86B0-5F81-B518-8FD6-734B6E3111A6}",
     "ObjectPath": "SX_player_grap_shot",
     "ShortName": "SX_player_grap_shot",
     "Path": "Event/SX_player_grap_shot.bnk",
@@ -965,11 +1068,19 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\player_grap_shot.wav",
       "Path": "Media/642346148.wem",
-      "CachePath": "SFX/Placeholders/player_grap_shot_755F56E2.wem"
+      "CachePath": "SFX/Placeholders/player_grap_shot_D3EDCB5B.wem"
      }
     ],
     "Plugins": {
      "Custom": [
+      {
+       "Id": "518190610",
+       "Name": "Flanger (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\Grap\\game_grap_shot\\Flanger (Custom)",
+       "GUID": "{2A02FF7C-82A9-4670-8071-EE1321113B91}",
+       "LibName": "Wwise Flanger",
+       "LibId": "8192003"
+      },
       {
        "Id": "1018588396",
        "Name": "Soundseed Air Woosh",
@@ -997,10 +1108,27 @@
       "PluginRefs": {
        "Custom": [
         {
+         "Id": "518190610"
+        },
+        {
          "Id": "1018588396"
         }
        ]
       }
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2565740352",
+      "Name": "RTPC_SlowMo",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
+      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
+     },
+     {
+      "Id": "2653406601",
+      "Name": "RTPC_PlayerSpeed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerSpeed",
+      "GUID": "{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"
      }
     ]
    },
@@ -1009,7 +1137,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{7FCDFF94-A0A8-1347-18C4-7913C745447B}",
+    "Hash": "{644CBFA0-1155-9ACF-CE73-998697F77F10}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -1050,6 +1178,14 @@
        "GUID": "{33D57BB0-F3A5-4610-B197-20FDAEA0D225}",
        "LibName": "Wwise Pitch Shifter",
        "LibId": "8912899"
+      },
+      {
+       "Id": "544066397",
+       "Name": "Matrix Reverb (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom\\Matrix Reverb (Custom)",
+       "GUID": "{46B2EC8C-FD61-4366-9674-9524E30CFFA7}",
+       "LibName": "Wwise Matrix Reverb",
+       "LibId": "7536643"
       },
       {
        "Id": "715153284",
@@ -1161,7 +1297,7 @@
        {
         "Id": "1752382405",
         "Name": "Early_Reflections",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV\\Early_Reflections",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\Early_Reflections",
         "GUID": "{DEFD7C69-35F1-4735-B101-17C49C0196D3}"
        }
       ]
@@ -1194,7 +1330,7 @@
        {
         "Id": "1641293181",
         "Name": "REV_LargeRoom",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV\\REV_LargeRoom",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom",
         "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"
        }
       ],
@@ -1256,13 +1392,13 @@
        {
         "Id": "1641293181",
         "Name": "REV_LargeRoom",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV\\REV_LargeRoom",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom",
         "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"
        },
        {
         "Id": "1752382405",
         "Name": "Early_Reflections",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV\\Early_Reflections",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\Early_Reflections",
         "GUID": "{DEFD7C69-35F1-4735-B101-17C49C0196D3}"
        }
       ],
@@ -1272,7 +1408,15 @@
       "Id": "3222323340",
       "Name": "SFX Master",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master",
-      "GUID": "{B22B8F69-015E-4A85-B8EF-A2F0A4E8D1FC}"
+      "GUID": "{B22B8F69-015E-4A85-B8EF-A2F0A4E8D1FC}",
+      "AuxBusRefs": [
+       {
+        "Id": "4125012149",
+        "Name": "REV_SmallRoom",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom",
+        "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}"
+       }
+      ]
      },
      {
       "Id": "3803692087",
@@ -1319,13 +1463,13 @@
      {
       "Id": "980603520",
       "Name": "REV",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
       "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
      },
      {
       "Id": "1641293181",
       "Name": "REV_LargeRoom",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV\\REV_LargeRoom",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
       "PluginRefs": {
        "ShareSets": [
@@ -1338,7 +1482,7 @@
        {
         "Id": "980603520",
         "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
        }
       ]
@@ -1346,7 +1490,7 @@
      {
       "Id": "1752382405",
       "Name": "Early_Reflections",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV\\Early_Reflections",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\Early_Reflections",
       "GUID": "{DEFD7C69-35F1-4735-B101-17C49C0196D3}",
       "PluginRefs": {
        "ShareSets": [
@@ -1359,7 +1503,7 @@
        {
         "Id": "980603520",
         "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
        }
       ]
@@ -1367,7 +1511,7 @@
      {
       "Id": "2172616000",
       "Name": "REV_Cave",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV\\REV_Cave",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_Cave",
       "GUID": "{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}",
       "PluginRefs": {
        "ShareSets": [
@@ -1380,7 +1524,7 @@
        {
         "Id": "980603520",
         "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
        }
       ]
@@ -1388,13 +1532,20 @@
      {
       "Id": "4125012149",
       "Name": "REV_SmallRoom",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV\\REV_SmallRoom",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom",
       "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "544066397"
+        }
+       ]
+      },
       "AuxBusRefs": [
        {
         "Id": "980603520",
         "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
        }
       ]
@@ -2395,7 +2546,7 @@
      {
       "Id": "1641293181",
       "Name": "REV_LargeRoom",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV\\REV_LargeRoom",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
       "PluginRefs": {
        "ShareSets": [
@@ -2408,7 +2559,7 @@
        {
         "Id": "980603520",
         "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
        }
       ]
@@ -2477,7 +2628,7 @@
      {
       "Id": "1752382405",
       "Name": "Early_Reflections",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV\\Early_Reflections",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\Early_Reflections",
       "GUID": "{DEFD7C69-35F1-4735-B101-17C49C0196D3}",
       "PluginRefs": {
        "ShareSets": [
@@ -2490,7 +2641,7 @@
        {
         "Id": "980603520",
         "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
        }
       ]
@@ -2502,7 +2653,7 @@
     "Type": "Event",
     "GUID": "{18C2192F-4C95-4001-A9A0-979E3F100C3A}",
     "Language": "SFX",
-    "Hash": "{04C28988-9E0F-16B9-1A07-5FA8F39331D0}",
+    "Hash": "{F59F6536-DDAA-3CFA-591D-EB2569301E72}",
     "ObjectPath": "SX_player_slide",
     "ShortName": "SX_player_slide",
     "Path": "Event/SX_player_slide.bnk",
@@ -2514,9 +2665,31 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\player_slide.wav",
       "Path": "Media/129424093.wem",
-      "CachePath": "SFX/Placeholders/player_slide_E7474B68.wem"
+      "CachePath": "SFX/Placeholders/player_slide_97A43206.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "514239598",
+       "Name": "Time Stretch (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_slide\\Time Stretch (Custom)",
+       "GUID": "{ECB105AF-E4C5-4846-8A85-238BD6B1DEB1}",
+       "LibName": "Wwise Time Stretch",
+       "LibId": "8519683"
+      }
+     ],
+     "ShareSets": [
+      {
+       "Id": "2656259783",
+       "Name": "PA_Announcement1",
+       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\PA_Announcement1",
+       "GUID": "{65E0ACE4-B404-4485-87A4-5907277D9858}",
+       "LibName": "Wwise Matrix Reverb",
+       "LibId": "7536643"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1882419246",
@@ -2528,7 +2701,27 @@
        {
         "Id": "129424093"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "514239598"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "2656259783"
+        }
+       ]
+      }
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2653406601",
+      "Name": "RTPC_PlayerSpeed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerSpeed",
+      "GUID": "{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"
      }
     ]
    },
@@ -2648,7 +2841,7 @@
     "Type": "Event",
     "GUID": "{F4227598-B79C-47C2-A22C-C305F4B1E5C2}",
     "Language": "SFX",
-    "Hash": "{07FE7E88-077A-A9F5-8CB0-E06C1AD5A9A3}",
+    "Hash": "{55A55A63-9FB8-CE15-F325-9FD800F63469}",
     "ObjectPath": "SX_player_dash",
     "ShortName": "SX_player_dash",
     "Path": "Event/SX_player_dash.bnk",
@@ -2661,6 +2854,14 @@
        "GUID": "{2AD328FC-8E47-409D-8B2C-ED5636C356C3}",
        "LibName": "SoundSeed Air Woosh",
        "LibId": "7864322"
+      },
+      {
+       "Id": "640802269",
+       "Name": "Delay (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_dash\\Delay (Custom)",
+       "GUID": "{C0FCC26E-70DE-482D-9F02-A6A6E9AD97D5}",
+       "LibName": "Wwise Delay",
+       "LibId": "6946819"
       }
      ]
     },
@@ -2677,9 +2878,20 @@
        "Custom": [
         {
          "Id": "631246921"
+        },
+        {
+         "Id": "640802269"
         }
        ]
       }
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2565740352",
+      "Name": "RTPC_SlowMo",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
+      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
      }
     ]
    },
@@ -2724,7 +2936,7 @@
      {
       "Id": "2172616000",
       "Name": "REV_Cave",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV\\REV_Cave",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_Cave",
       "GUID": "{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}",
       "PluginRefs": {
        "ShareSets": [
@@ -2737,7 +2949,7 @@
        {
         "Id": "980603520",
         "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
        }
       ]
@@ -3037,7 +3249,7 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{B03AF355-2593-1147-BE4E-AD91FF7372A8}",
+    "Hash": "{E1E6712F-7212-0EEA-FD61-7A458DAFC595}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
@@ -3227,21 +3439,40 @@
     "Type": "Bus",
     "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}",
     "Language": "SFX",
-    "Hash": "{966CD4AC-C06E-1E77-1DA3-E243AC9D255C}",
+    "Hash": "{0EF0A0A1-7931-538A-8307-FCA57BB099F9}",
     "ObjectPath": "REV_SmallRoom",
     "ShortName": "REV_SmallRoom",
     "Path": "Bus/REV_SmallRoom.bnk",
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "544066397",
+       "Name": "Matrix Reverb (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom\\Matrix Reverb (Custom)",
+       "GUID": "{46B2EC8C-FD61-4366-9674-9524E30CFFA7}",
+       "LibName": "Wwise Matrix Reverb",
+       "LibId": "7536643"
+      }
+     ]
+    },
     "AuxBusses": [
      {
       "Id": "4125012149",
       "Name": "REV_SmallRoom",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV\\REV_SmallRoom",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom",
       "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "544066397"
+        }
+       ]
+      },
       "AuxBusRefs": [
        {
         "Id": "980603520",
         "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
        }
       ]
@@ -3249,6 +3480,6 @@
     ]
    }
   ],
-  "FileHash": "{73FD7898-61F4-7394-1970-423B95783480}"
+  "FileHash": "{F104D70D-0E63-DEAE-C9DB-6F3A40E64111}"
  }
 }

@@ -10,12 +10,31 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{C31F23E3-0B21-8AF1-E701-38C6F7C1CE6A}",
+    "Hash": "{FCC1DFCB-EBC0-FA63-98C9-4BF78789AEFF}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
+    "Media": [
+     {
+      "Id": "1056072145",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Hoverboots\\hoverboots_on_rail_loop.wav",
+      "Path": "Media/1056072145.wem",
+      "CachePath": "SFX/Hoverboots/hoverboots_on_rail_loop_073B4D0C.wem"
+     }
+    ],
     "Plugins": {
      "Custom": [
+      {
+       "Id": "188753095",
+       "Name": "Time Stretch (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots_Switch\\Hoverboots_Other\\hoverboots_on_rail_loop\\Time Stretch (Custom)",
+       "GUID": "{031325E2-23EA-4178-837A-3375041EA21F}",
+       "LibName": "Wwise Time Stretch",
+       "LibId": "8519683"
+      },
       {
        "Id": "666289254",
        "Name": "Soundseed Air Wind",
@@ -32,10 +51,88 @@
       "Name": "SX_play_hoverboots",
       "ObjectPath": "\\Events\\Hoverboots\\Hoverboots\\SX_play_hoverboots",
       "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
-      "DurationType": "Mixed",
-      "DurationMin": "0",
-      "DurationMax": "Infinite",
+      "DurationType": "Infinite",
       "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1462722741",
+         "Id": "2043403997",
+         "GUID": "{37DD7533-473B-4644-905E-CEB116EB2545}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1056072145"
+         }
+        ],
+        "PluginRefs": {
+         "Custom": [
+          {
+           "Id": "188753095"
+          }
+         ]
+        }
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1462722741",
+         "Id": "1050421051",
+         "GUID": "{11398057-44CF-49D9-86B9-602DE588AB2F}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1056072145"
+         }
+        ],
+        "PluginRefs": {
+         "Custom": [
+          {
+           "Id": "188753095"
+          }
+         ]
+        }
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1462722741",
+         "Id": "906520813",
+         "GUID": "{8C01446A-44D4-4022-808A-0A29DB59D0F4}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1056072145"
+         }
+        ],
+        "PluginRefs": {
+         "Custom": [
+          {
+           "Id": "188753095"
+          }
+         ]
+        }
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1462722741",
+         "Id": "2108779961",
+         "GUID": "{7232886A-CF99-4D7B-8D3F-9EE6543A6E43}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1056072145"
+         }
+        ],
+        "PluginRefs": {
+         "Custom": [
+          {
+           "Id": "188753095"
+          }
+         ]
+        }
+       },
        {
         "SwitchValue": {
          "GroupType": "Switch",
@@ -61,6 +158,12 @@
       "Name": "RTPC_PlayerMovement",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerMovement",
       "GUID": "{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"
+     },
+     {
+      "Id": "2565740352",
+      "Name": "RTPC_SlowMo",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
+      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
      },
      {
       "Id": "2653406601",
@@ -114,6 +217,6 @@
     ]
    }
   ],
-  "FileHash": "{8F8BA9DA-D5D4-FC25-02B4-838D94665BE5}"
+  "FileHash": "{39FA05A1-844A-122C-4C93-99315BD99134}"
  }
 }

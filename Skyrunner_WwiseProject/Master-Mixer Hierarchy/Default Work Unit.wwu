@@ -211,7 +211,17 @@
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="26"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
 							<ChildrenList>
 								<Bus Name="UI Master" ID="{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}">
 									<PropertyList>
@@ -405,49 +415,6 @@
 										</ObjectList>
 									</ObjectLists>
 								</Bus>
-								<AuxBus Name="REV" ID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}">
-									<PropertyList>
-										<Property Name="BusChannelConfig" Type="int32">
-											<ValueList>
-												<Value>3584</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ChildrenList>
-										<AuxBus Name="REV_LargeRoom" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
-											<ReferenceList>
-												<Reference Name="Effect0" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
-													<ObjectRef Name="DistantBuilding_MicsFar" ID="{22EE2792-F5F3-4B26-A6E1-843A0A964677}" WorkUnitID="{C0E78DAA-768A-438F-8F7B-3701395185C3}"/>
-												</Reference>
-											</ReferenceList>
-										</AuxBus>
-										<AuxBus Name="REV_SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}"/>
-										<AuxBus Name="REV_Cave" ID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
-											<ReferenceList>
-												<Reference Name="Effect0" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
-													<ObjectRef Name="Tunnel" ID="{88B2F5E7-703C-4D7B-B897-946069693C4B}" WorkUnitID="{C0E78DAA-768A-438F-8F7B-3701395185C3}"/>
-												</Reference>
-											</ReferenceList>
-										</AuxBus>
-										<AuxBus Name="Early_Reflections" ID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}">
-											<PropertyList>
-												<Property Name="BusChannelConfig" Type="int32">
-													<ValueList>
-														<Value>768</Value>
-													</ValueList>
-												</Property>
-												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
-												<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
-												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Effect0" PluginName="Wwise Reflect" CompanyID="0" PluginID="171" PluginType="3">
-													<ObjectRef Name="Reflect_Simplified" ID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" WorkUnitID="{923039AD-F8B4-46D4-BDA7-CB5A6EE595E0}"/>
-												</Reference>
-											</ReferenceList>
-										</AuxBus>
-									</ChildrenList>
-								</AuxBus>
 								<Bus Name="Environment Master" ID="{93794CDD-D92F-4393-9B36-96AC442DDB90}">
 									<PropertyList>
 										<Property Name="Color" Type="int16" Value="20"/>
@@ -801,7 +768,7 @@
 																				<PointList>
 																					<Point>
 																						<XPos>-1</XPos>
-																						<YPos>69</YPos>
+																						<YPos>-51</YPos>
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
@@ -811,7 +778,7 @@
 																					</Point>
 																					<Point>
 																						<XPos>1</XPos>
-																						<YPos>73</YPos>
+																						<YPos>-51</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -1132,7 +1099,7 @@
 																					</Point>
 																					<Point>
 																						<XPos>1</XPos>
-																						<YPos>0</YPos>
+																						<YPos>-49</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -1251,6 +1218,59 @@
 								</ObjectList>
 							</ObjectLists>
 						</Bus>
+						<AuxBus Name="REV" ID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}">
+							<PropertyList>
+								<Property Name="BusChannelConfig" Type="int32">
+									<ValueList>
+										<Value>3584</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<AuxBus Name="REV_LargeRoom" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
+											<ObjectRef Name="DistantBuilding_MicsFar" ID="{22EE2792-F5F3-4B26-A6E1-843A0A964677}" WorkUnitID="{C0E78DAA-768A-438F-8F7B-3701395185C3}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
+								<AuxBus Name="REV_SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
+									<ReferenceList>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Matrix Reverb (Custom)" ID="{46B2EC8C-FD61-4366-9674-9524E30CFFA7}" ShortID="544066397" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3"/>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
+								<AuxBus Name="REV_Cave" ID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
+											<ObjectRef Name="Tunnel" ID="{88B2F5E7-703C-4D7B-B897-946069693C4B}" WorkUnitID="{C0E78DAA-768A-438F-8F7B-3701395185C3}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
+								<AuxBus Name="Early_Reflections" ID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}">
+									<PropertyList>
+										<Property Name="BusChannelConfig" Type="int32">
+											<ValueList>
+												<Value>768</Value>
+											</ValueList>
+										</Property>
+										<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Reflect" CompanyID="0" PluginID="171" PluginType="3">
+											<ObjectRef Name="Reflect_Simplified" ID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" WorkUnitID="{923039AD-F8B4-46D4-BDA7-CB5A6EE595E0}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
+							</ChildrenList>
+						</AuxBus>
 					</ChildrenList>
 					<ObjectLists>
 						<ObjectList Name="RTPC">
