@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{F2F385F0-303A-BBD2-7322-91F2B0098FC1}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{C0733606-C1AF-F8FC-6036-F93549F265E0}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -82,6 +82,11 @@
 					<CachePath>SFX/Music/Z04- glitch_073B4D0C.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="648727629" Name="Time Stretch (Custom)" ObjectPath="\Interactive Music Hierarchy\Default Work Unit\PLAY_MUSIC\LVL-01\LVL01\Time Stretch (Custom)" GUID="{C9D6D259-FA08-498D-B869-BFE6889F180E}" LibName="Wwise Time Stretch" LibId="8519683"/>
+				</Custom>
+			</Plugins>
 			<Events>
 				<Event Id="3441789682" Name="MUS_Play_MainMusic" ObjectPath="\Events\Music\MUS_Play_MainMusic" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" DurationType="Infinite">
 					<SwitchContainers>
@@ -107,11 +112,15 @@
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="3152323980" GUID="{39C32C1D-49CE-4283-8A04-C9C272E282DE}"/>
 							<Children>
 								<SwitchContainer>
-									<SwitchValue GroupType="State" GroupId="3398936579" Id="1939634824" GUID="{B098C41A-4E22-415A-9287-4883AFCCB1D7}"/>
+									<SwitchValue GroupType="State" GroupId="3398936579" Id="2057078157" GUID="{39A1818D-F4A1-4099-92E8-424831DBEA6B}"/>
 									<MediaRefs>
-										<MediaRef Id="364725997"/>
-										<MediaRef Id="880868869"/>
+										<MediaRef Id="563454861"/>
 									</MediaRefs>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="648727629"/>
+										</Custom>
+									</PluginRefs>
 								</SwitchContainer>
 								<SwitchContainer>
 									<SwitchValue GroupType="State" GroupId="3398936579" Id="1956412539" GUID="{E2053C14-1454-4230-BB2E-AD1DF6C11847}"/>
@@ -119,6 +128,38 @@
 										<MediaRef Id="42528386"/>
 										<MediaRef Id="122706070"/>
 									</MediaRefs>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="648727629"/>
+										</Custom>
+									</PluginRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="3398936579" Id="1939634824" GUID="{B098C41A-4E22-415A-9287-4883AFCCB1D7}"/>
+									<MediaRefs>
+										<MediaRef Id="364725997"/>
+										<MediaRef Id="880868869"/>
+									</MediaRefs>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="648727629"/>
+										</Custom>
+									</PluginRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="3398936579" Id="1989967681" GUID="{66C511B7-3127-4E5C-9C73-ECC531B47C4A}"/>
+									<MediaRefs>
+										<MediaRef Id="231158345"/>
+										<MediaRef Id="315147870"/>
+										<MediaRef Id="364725997"/>
+										<MediaRef Id="543395502"/>
+										<MediaRef Id="880868869"/>
+									</MediaRefs>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="648727629"/>
+										</Custom>
+									</PluginRefs>
 								</SwitchContainer>
 								<SwitchContainer>
 									<SwitchValue GroupType="State" GroupId="3398936579" Id="2040300570" GUID="{55C83ACA-53CD-4263-87F5-DBE4A95D2DA6}"/>
@@ -128,20 +169,11 @@
 										<MediaRef Id="19478689"/>
 										<MediaRef Id="909928475"/>
 									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="State" GroupId="3398936579" Id="2057078157" GUID="{39A1818D-F4A1-4099-92E8-424831DBEA6B}"/>
-									<MediaRefs>
-										<MediaRef Id="563454861"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="State" GroupId="3398936579" Id="1989967681" GUID="{66C511B7-3127-4E5C-9C73-ECC531B47C4A}"/>
-									<MediaRefs>
-										<MediaRef Id="231158345"/>
-										<MediaRef Id="315147870"/>
-										<MediaRef Id="543395502"/>
-									</MediaRefs>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="648727629"/>
+										</Custom>
+									</PluginRefs>
 								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
@@ -154,6 +186,9 @@
 					</SwitchContainers>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="1419563690" Name="Music_Selector" ObjectPath="\States\Default Work Unit\Music_Selector" GUID="{9E363DC4-1CA9-4AAF-BFCB-E45F336CC2CE}">
 					<States>
@@ -178,5 +213,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{03F392FA-251D-8700-F682-77E5AA97A586}</FileHash>
+	<FileHash>{AA19A543-ED4F-1370-CDBD-2932AFB80CBC}</FileHash>
 </SoundBanksInfo>

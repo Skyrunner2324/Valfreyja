@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{F2F385F0-303A-BBD2-7322-91F2B0098FC1}",
+    "Hash": "{C0733606-C1AF-F8FC-6036-F93549F265E0}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
@@ -151,6 +151,18 @@
       "CachePath": "SFX/Music/Z04- glitch_073B4D0C.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "648727629",
+       "Name": "Time Stretch (Custom)",
+       "ObjectPath": "\\Interactive Music Hierarchy\\Default Work Unit\\PLAY_MUSIC\\LVL-01\\LVL01\\Time Stretch (Custom)",
+       "GUID": "{C9D6D259-FA08-498D-B869-BFE6889F180E}",
+       "LibName": "Wwise Time Stretch",
+       "LibId": "8519683"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3441789682",
@@ -210,17 +222,21 @@
           "SwitchValue": {
            "GroupType": "State",
            "GroupId": "3398936579",
-           "Id": "1939634824",
-           "GUID": "{B098C41A-4E22-415A-9287-4883AFCCB1D7}"
+           "Id": "2057078157",
+           "GUID": "{39A1818D-F4A1-4099-92E8-424831DBEA6B}"
           },
           "MediaRefs": [
            {
-            "Id": "364725997"
-           },
-           {
-            "Id": "880868869"
+            "Id": "563454861"
            }
-          ]
+          ],
+          "PluginRefs": {
+           "Custom": [
+            {
+             "Id": "648727629"
+            }
+           ]
+          }
          },
          {
           "SwitchValue": {
@@ -236,7 +252,69 @@
            {
             "Id": "122706070"
            }
-          ]
+          ],
+          "PluginRefs": {
+           "Custom": [
+            {
+             "Id": "648727629"
+            }
+           ]
+          }
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "3398936579",
+           "Id": "1939634824",
+           "GUID": "{B098C41A-4E22-415A-9287-4883AFCCB1D7}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "364725997"
+           },
+           {
+            "Id": "880868869"
+           }
+          ],
+          "PluginRefs": {
+           "Custom": [
+            {
+             "Id": "648727629"
+            }
+           ]
+          }
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "3398936579",
+           "Id": "1989967681",
+           "GUID": "{66C511B7-3127-4E5C-9C73-ECC531B47C4A}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "231158345"
+           },
+           {
+            "Id": "315147870"
+           },
+           {
+            "Id": "364725997"
+           },
+           {
+            "Id": "543395502"
+           },
+           {
+            "Id": "880868869"
+           }
+          ],
+          "PluginRefs": {
+           "Custom": [
+            {
+             "Id": "648727629"
+            }
+           ]
+          }
          },
          {
           "SwitchValue": {
@@ -258,39 +336,14 @@
            {
             "Id": "909928475"
            }
-          ]
-         },
-         {
-          "SwitchValue": {
-           "GroupType": "State",
-           "GroupId": "3398936579",
-           "Id": "2057078157",
-           "GUID": "{39A1818D-F4A1-4099-92E8-424831DBEA6B}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "563454861"
-           }
-          ]
-         },
-         {
-          "SwitchValue": {
-           "GroupType": "State",
-           "GroupId": "3398936579",
-           "Id": "1989967681",
-           "GUID": "{66C511B7-3127-4E5C-9C73-ECC531B47C4A}"
-          },
-          "MediaRefs": [
-           {
-            "Id": "231158345"
-           },
-           {
-            "Id": "315147870"
-           },
-           {
-            "Id": "543395502"
-           }
-          ]
+          ],
+          "PluginRefs": {
+           "Custom": [
+            {
+             "Id": "648727629"
+            }
+           ]
+          }
          }
         ]
        },
@@ -308,6 +361,14 @@
         ]
        }
       ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2565740352",
+      "Name": "RTPC_SlowMo",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
+      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
      }
     ],
     "StateGroups": [
@@ -402,6 +463,6 @@
     ]
    }
   ],
-  "FileHash": "{316A586C-3DEB-6A0D-B99C-8DD9CA40517B}"
+  "FileHash": "{9B43D7E4-1DF0-CAE1-A2CF-5E5747B165DC}"
  }
 }
