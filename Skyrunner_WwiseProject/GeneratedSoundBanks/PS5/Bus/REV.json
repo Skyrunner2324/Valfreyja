@@ -10,20 +10,39 @@
     "Type": "Bus",
     "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}",
     "Language": "SFX",
-    "Hash": "{DCA606BF-07D3-25EA-C812-C66D053E74E5}",
+    "Hash": "{342F5DE8-040F-B34C-4496-03ACC975B219}",
     "ObjectPath": "REV",
     "ShortName": "REV",
     "Path": "Bus/REV.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "485024389",
+       "Name": "MeterGain",
+       "ObjectPath": "\\Effects\\Default Work Unit\\MeterGain",
+       "GUID": "{3FD630AC-8722-4E18-AE3F-FA326DA3C781}",
+       "LibName": "Wwise Gain",
+       "LibId": "9109507"
+      }
+     ]
+    },
     "AuxBusses": [
      {
       "Id": "980603520",
       "Name": "REV",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
-      "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
+      "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "485024389"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{AECCAB06-8A17-8434-A635-7E8B3477180C}"
+  "FileHash": "{84B9A7E1-27CA-15E9-7E31-DF862BB4C572}"
  }
 }

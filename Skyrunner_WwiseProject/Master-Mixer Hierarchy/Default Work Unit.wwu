@@ -12,11 +12,6 @@
 					<ChildrenList>
 						<Bus Name="MUSIC Master" ID="{D7372867-B444-4F36-A355-173A46D13138}">
 							<PropertyList>
-								<Property Name="BusChannelConfig" Type="int32">
-									<ValueList>
-										<Value>3840</Value>
-									</ValueList>
-								</Property>
 								<Property Name="Color" Type="int16" Value="12"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
@@ -25,6 +20,11 @@
 									</ValueList>
 								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect3" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+									<ObjectRef Name="MeterGain" ID="{3FD630AC-8722-4E18-AE3F-FA326DA3C781}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
+								</Reference>
+							</ReferenceList>
 							<StateInfo>
 								<StateGroupList>
 									<StateGroupInfo>
@@ -213,11 +213,14 @@
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
 									<ValueList>
-										<Value>-7</Value>
+										<Value>-22</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Effect3" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+									<ObjectRef Name="MeterGain" ID="{3FD630AC-8722-4E18-AE3F-FA326DA3C781}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
+								</Reference>
 								<Reference Name="UserAuxSend0">
 									<ObjectRef Name="REV_SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 								</Reference>
@@ -238,6 +241,11 @@
 										<Property Name="Color" Type="int16" Value="18"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Effect3" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+											<ObjectRef Name="MeterGain" ID="{3FD630AC-8722-4E18-AE3F-FA326DA3C781}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
+										</Reference>
+									</ReferenceList>
 								</Bus>
 								<Bus Name="3D OBJ Master" ID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}">
 									<PropertyList>
@@ -261,6 +269,9 @@
 									<ReferenceList>
 										<Reference Name="Attenuation">
 											<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
+										</Reference>
+										<Reference Name="Effect3" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+											<ObjectRef Name="MeterGain" ID="{3FD630AC-8722-4E18-AE3F-FA326DA3C781}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
 										</Reference>
 										<Reference Name="ReflectionsAuxSend">
 											<ObjectRef Name="Early_Reflections" ID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
@@ -420,6 +431,11 @@
 										<Property Name="Color" Type="int16" Value="20"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Effect3" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+											<ObjectRef Name="MeterGain" ID="{3FD630AC-8722-4E18-AE3F-FA326DA3C781}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
+										</Reference>
+									</ReferenceList>
 									<ChildrenList>
 										<Bus Name="ENV AMB Exterior" ID="{AA242E37-0C3D-41A5-8071-0C92A0F0323A}"/>
 										<Bus Name="ENV AMB Interior" ID="{FAEBE40F-E726-4C02-8A40-76374BDF8140}"/>
@@ -566,6 +582,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Effect3" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+											<ObjectRef Name="MeterGain" ID="{3FD630AC-8722-4E18-AE3F-FA326DA3C781}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
+										</Reference>
 										<Reference Name="ReflectionsAuxSend">
 											<ObjectRef Name="Early_Reflections" ID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 										</Reference>
@@ -745,6 +764,9 @@
 															</ObjectLists>
 														</Effect>
 													</Custom>
+												</Reference>
+												<Reference Name="Effect3" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+													<ObjectRef Name="MeterGain" ID="{3FD630AC-8722-4E18-AE3F-FA326DA3C781}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
 												</Reference>
 											</ReferenceList>
 											<ObjectLists>
@@ -1017,6 +1039,9 @@
 														</Effect>
 													</Custom>
 												</Reference>
+												<Reference Name="Effect3" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+													<ObjectRef Name="MeterGain" ID="{3FD630AC-8722-4E18-AE3F-FA326DA3C781}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
+												</Reference>
 											</ReferenceList>
 											<ObjectLists>
 												<ObjectList Name="RTPC">
@@ -1153,7 +1178,13 @@
 												</ObjectList>
 											</ObjectLists>
 										</Bus>
-										<Bus Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}"/>
+										<Bus Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}">
+											<ReferenceList>
+												<Reference Name="Effect3" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+													<ObjectRef Name="MeterGain" ID="{3FD630AC-8722-4E18-AE3F-FA326DA3C781}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
+												</Reference>
+											</ReferenceList>
+										</Bus>
 									</ChildrenList>
 									<StateInfo>
 										<StateGroupList>
@@ -1228,11 +1259,19 @@
 								<Property Name="Color" Type="int16" Value="15"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect3" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+									<ObjectRef Name="MeterGain" ID="{3FD630AC-8722-4E18-AE3F-FA326DA3C781}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
+								</Reference>
+							</ReferenceList>
 							<ChildrenList>
 								<AuxBus Name="REV_LargeRoom" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 									<ReferenceList>
 										<Reference Name="Effect0" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
 											<ObjectRef Name="DistantBuilding_MicsFar" ID="{22EE2792-F5F3-4B26-A6E1-843A0A964677}" WorkUnitID="{C0E78DAA-768A-438F-8F7B-3701395185C3}"/>
+										</Reference>
+										<Reference Name="Effect3" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+											<ObjectRef Name="MeterGain" ID="{3FD630AC-8722-4E18-AE3F-FA326DA3C781}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
 										</Reference>
 									</ReferenceList>
 								</AuxBus>
@@ -1243,12 +1282,18 @@
 												<Effect Name="Matrix Reverb (Custom)" ID="{46B2EC8C-FD61-4366-9674-9524E30CFFA7}" ShortID="544066397" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3"/>
 											</Custom>
 										</Reference>
+										<Reference Name="Effect3" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+											<ObjectRef Name="MeterGain" ID="{3FD630AC-8722-4E18-AE3F-FA326DA3C781}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
+										</Reference>
 									</ReferenceList>
 								</AuxBus>
 								<AuxBus Name="REV_Cave" ID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
 									<ReferenceList>
 										<Reference Name="Effect0" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
 											<ObjectRef Name="Tunnel" ID="{88B2F5E7-703C-4D7B-B897-946069693C4B}" WorkUnitID="{C0E78DAA-768A-438F-8F7B-3701395185C3}"/>
+										</Reference>
+										<Reference Name="Effect3" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+											<ObjectRef Name="MeterGain" ID="{3FD630AC-8722-4E18-AE3F-FA326DA3C781}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
 										</Reference>
 									</ReferenceList>
 								</AuxBus>
@@ -1266,6 +1311,9 @@
 									<ReferenceList>
 										<Reference Name="Effect0" PluginName="Wwise Reflect" CompanyID="0" PluginID="171" PluginType="3">
 											<ObjectRef Name="Reflect_Simplified" ID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" WorkUnitID="{923039AD-F8B4-46D4-BDA7-CB5A6EE595E0}"/>
+										</Reference>
+										<Reference Name="Effect3" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+											<ObjectRef Name="MeterGain" ID="{3FD630AC-8722-4E18-AE3F-FA326DA3C781}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
 										</Reference>
 									</ReferenceList>
 								</AuxBus>

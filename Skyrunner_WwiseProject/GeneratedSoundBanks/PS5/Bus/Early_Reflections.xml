@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1752382405" Type="Bus" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}" Language="SFX" Hash="{4331FF32-2D33-78A8-6F72-F857B8F45201}">
+		<SoundBank Id="1752382405" Type="Bus" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}" Language="SFX" Hash="{95B88661-6043-52C1-48F6-D333B39D9DC4}">
 			<ObjectPath>Early_Reflections</ObjectPath>
 			<ShortName>Early_Reflections</ShortName>
 			<Path>Bus/Early_Reflections.bnk</Path>
 			<Plugins>
 				<ShareSets>
+					<Plugin Id="485024389" Name="MeterGain" ObjectPath="\Effects\Default Work Unit\MeterGain" GUID="{3FD630AC-8722-4E18-AE3F-FA326DA3C781}" LibName="Wwise Gain" LibId="9109507"/>
 					<Plugin Id="1842579981" Name="Reflect_Simplified" ObjectPath="\Effects\Factory Reflect\Reflect_Simplified" GUID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" LibName="Wwise Reflect" LibId="11206659"/>
 				</ShareSets>
 			</Plugins>
@@ -14,6 +15,7 @@
 				<AuxBus Id="1752382405" Name="Early_Reflections" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\Early_Reflections" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}">
 					<PluginRefs>
 						<ShareSets>
+							<PluginRef Id="485024389"/>
 							<PluginRef Id="1842579981"/>
 						</ShareSets>
 					</PluginRefs>
@@ -24,5 +26,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6244461C-2B9C-C167-F662-B73917B04117}</FileHash>
+	<FileHash>{A6ADE887-05DC-7787-A547-0CEEB776A435}</FileHash>
 </SoundBanksInfo>

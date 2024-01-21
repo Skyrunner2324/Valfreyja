@@ -713,68 +713,6 @@
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
-								<SwitchContainer Name="game_weapon_overheat" ID="{CBEF046B-36DE-476C-B18D-B1D316D3650E}" ShortID="467273681">
-									<PropertyList>
-										<Property Name="Color" Type="int16" Value="1"/>
-										<Property Name="OverrideColor" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}" ShortID="801876267">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>-2400</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-6</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="game_ammo_pickup" ID="{AB4B450C-D830-4C6C-9381-F88812401D5C}">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.101466530710173"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.0838201775431862"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Placeholders\game_ammo_pickup.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="976126733"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="game_ammo_pickup" ID="{AB4B450C-D830-4C6C-9381-F88812401D5C}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<GroupingInfo>
-										<GroupingBehaviorList>
-											<GroupingBehavior>
-												<ItemRef Name="game_overheat_lp" ID="{80F30CCB-019E-4010-ABA0-78C613434F45}"/>
-											</GroupingBehavior>
-										</GroupingBehaviorList>
-									</GroupingInfo>
-								</SwitchContainer>
 								<SwitchContainer Name="game_weapon_impact" ID="{1FE7DF60-8A52-4F21-99CB-94B62E3ACA00}" ShortID="771585963">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
@@ -1118,34 +1056,188 @@
 										</GroupingBehaviorList>
 									</GroupingInfo>
 								</SwitchContainer>
-								<SwitchContainer Name="game_weapon_checking_overheat" ID="{6E61E420-447D-4792-8FFE-26E73DF7310F}" ShortID="44228221">
+								<BlendContainer Name="game_weapon_shoot" ID="{1A22B80C-F31B-4AEE-AEEB-22DD244876DA}" ShortID="1065100571">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 										</Reference>
-										<Reference Name="DefaultSwitchOrState">
-											<ObjectRef Name="CanShoot" ID="{1545C5FF-1E2A-4398-AADB-4A6F08D15159}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
-										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 										</Reference>
-										<Reference Name="SwitchGroupOrStateGroup">
-											<ObjectRef Name="OverheatState" ID="{0E6C50E8-1044-4E86-9061-13B8E93C62CB}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
-										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SwitchContainer Name="game_weapon_overheat_shoot" ID="{46A5A1FA-1D30-4B2D-8A8F-91743C2AC61F}" ShortID="816943288">
+										<RandomSequenceContainer Name="smg_close" ID="{3D09ABD7-674B-4B59-9F87-54F7BD2BA721}" ShortID="137205799">
 											<PropertyList>
-												<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
-												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
-												<Property Name="MaxSoundPerInstance" Type="int16">
-													<ValueList>
-														<Value>1</Value>
-													</ValueList>
-												</Property>
-												<Property Name="UseMaxSoundPerInstance" Type="bool">
+												<Property Name="BypassEffect0" Type="bool">
 													<ValueList>
 														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{D7AA9E72-2418-4720-8DA3-27E5D7ACBF9D}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+													<ObjectRef Name="High_Impact" ID="{2AFD6FB0-C906-4683-A377-FEEEF72967B0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="player_weapon_shoot_smg_close_01" ID="{257A50CE-BC54-4B77-B3EE-614AD994769F}" ShortID="576604258">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="player_weapon_shoot_smg_close_01" ID="{4AA30966-403D-4A9B-A132-BC3F1696D80B}">
+															<Language>SFX</Language>
+															<AudioFile>Player_Weapon\player_weapon_shoot_smg_close_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="867880719"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="player_weapon_shoot_smg_close_01" ID="{4AA30966-403D-4A9B-A132-BC3F1696D80B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{E0A8103A-3734-4E94-9C5B-C9C50FE8FF05}" ShortID="837281861">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="InitialDelay"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{9B833D16-A938-4344-9480-DBD90B1B645A}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-1</XPos>
+																						<YPos>0.2</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>0.2</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{9E83CF29-1DFF-4E65-8CCA-C7AC18561CF5}" ShortID="138358171">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="BypassEffect0"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{F3EEA824-8DEF-4805-9563-55D2E8998C26}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-1</XPos>
+																						<YPos>1</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>1</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="smg_mech" ID="{57268E80-4F44-4BE9-995A-8E305D39DC26}" ShortID="785310138">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{81ECE80D-5D5A-4DAA-9611-9F9C442BC138}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1158,61 +1250,123 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<RandomSequenceContainer Name="game_weapon_overheat_shoot_sequence" ID="{ABC3380D-6DA9-4777-AE10-077D4A02623E}" ShortID="865387314">
-													<PropertyList>
-														<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-													</PropertyList>
+												<Sound Name="player_weapon_shoot_smg_mech_01" ID="{B1EABE3E-0551-485C-87C2-E7B3C8D1CCFF}" ShortID="1010128429">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+															<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<Sound Name="38_Pistol_from_Gun_Holster_ODC-0030-193" ID="{11AFED40-6A01-41E5-88F9-7D49F46178A4}" ShortID="638064894">
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="38_Pistol_from_Gun_Holster_ODC-0030-193" ID="{57256051-8CAD-4C7A-A7D7-B0C8656D33AA}">
-																	<Language>SFX</Language>
-																	<AudioFile>Placeholders\38_Pistol_from_Gun_Holster_ODC-0030-193.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="103073361"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="38_Pistol_from_Gun_Holster_ODC-0030-193" ID="{57256051-8CAD-4C7A-A7D7-B0C8656D33AA}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
+														<AudioFileSource Name="player_weapon_shoot_smg_mech_01" ID="{EA60F448-5018-48A6-9566-A89C77DDF693}">
+															<Language>SFX</Language>
+															<AudioFile>Player_Weapon\player_weapon_shoot_smg_mech_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="942643326"/>
+															</MediaIDList>
+														</AudioFileSource>
 													</ChildrenList>
-													<Playlist>
-														<ItemRef Name="38_Pistol_from_Gun_Holster_ODC-0030-193" ID="{11AFED40-6A01-41E5-88F9-7D49F46178A4}"/>
-													</Playlist>
-												</RandomSequenceContainer>
+													<ActiveSourceList>
+														<ActiveSource Name="player_weapon_shoot_smg_mech_01" ID="{EA60F448-5018-48A6-9566-A89C77DDF693}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="player_weapon_shoot_smg_mech_03" ID="{5BCBD20A-F0C5-4391-BA0C-3599AC7E9674}" ShortID="854886980">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="player_weapon_shoot_smg_mech_03" ID="{6E27E374-374A-476E-9558-D10B27A82C91}">
+															<Language>SFX</Language>
+															<AudioFile>Player_Weapon\player_weapon_shoot_smg_mech_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="631171215"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="player_weapon_shoot_smg_mech_03" ID="{6E27E374-374A-476E-9558-D10B27A82C91}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="player_weapon_shoot_smg_mech_02" ID="{A3D0750F-044C-4F30-825F-F14C54882D86}" ShortID="1002979036">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="player_weapon_shoot_smg_mech_02" ID="{70ADF31D-72A8-4AD9-B96E-45EBCE493567}">
+															<Language>SFX</Language>
+															<AudioFile>Player_Weapon\player_weapon_shoot_smg_mech_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="461432451"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="player_weapon_shoot_smg_mech_02" ID="{70ADF31D-72A8-4AD9-B96E-45EBCE493567}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<GroupingInfo>
-												<GroupingBehaviorList>
-													<GroupingBehavior>
-														<ItemRef Name="game_weapon_overheat_shoot_sequence" ID="{ABC3380D-6DA9-4777-AE10-077D4A02623E}"/>
-													</GroupingBehavior>
-												</GroupingBehaviorList>
-											</GroupingInfo>
-										</SwitchContainer>
-										<BlendContainer Name="game_weapon_shoot" ID="{1A22B80C-F31B-4AEE-AEEB-22DD244876DA}" ShortID="1065100571">
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{66049AE0-9731-4BCF-A5D3-4C7A4FC3B888}" ShortID="1033476541">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="InitialDelay"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{DDFCB85D-5742-4D0D-9B2E-D761C7C32A04}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-1</XPos>
+																						<YPos>0.2</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>0.4</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="smg_sub" ID="{4F09C6E0-DBC0-4C55-A162-D1F81593770B}" ShortID="911926143">
 											<PropertyList>
-												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-12</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1221,156 +1375,49 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<RandomSequenceContainer Name="smg_close" ID="{3D09ABD7-674B-4B59-9F87-54F7BD2BA721}" ShortID="137205799">
-													<PropertyList>
-														<Property Name="BypassEffect0" Type="bool">
-															<ValueList>
-																<Value>True</Value>
-															</ValueList>
-														</Property>
-														<Property Name="OverrideEffect" Type="bool" Value="True"/>
-													</PropertyList>
+												<Sound Name="player_weapon_shoot_smg_sub_01" ID="{3DA36FA5-5B25-4D0A-A874-A25D46AA750E}" ShortID="137774311">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 														</Reference>
-														<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
-															<ObjectRef Name="High_Impact" ID="{2AFD6FB0-C906-4683-A377-FEEEF72967B0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+															<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<Sound Name="player_weapon_shoot_smg_close_01" ID="{257A50CE-BC54-4B77-B3EE-614AD994769F}" ShortID="576604258">
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="player_weapon_shoot_smg_close_01" ID="{4AA30966-403D-4A9B-A132-BC3F1696D80B}">
-																	<Language>SFX</Language>
-																	<AudioFile>Player_Weapon\player_weapon_shoot_smg_close_01.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="867880719"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="player_weapon_shoot_smg_close_01" ID="{4AA30966-403D-4A9B-A132-BC3F1696D80B}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
+														<AudioFileSource Name="player_weapon_shoot_smg_sub_01" ID="{C29008B6-8F61-4AD0-8A5C-C51F6D3C90D5}">
+															<Language>SFX</Language>
+															<AudioFile>Player_Weapon\player_weapon_shoot_smg_sub_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="967984016"/>
+															</MediaIDList>
+														</AudioFileSource>
 													</ChildrenList>
-													<ObjectLists>
-														<ObjectList Name="RTPC">
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{E0A8103A-3734-4E94-9C5B-C9C50FE8FF05}" ShortID="837281861">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="InitialDelay"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{9B833D16-A938-4344-9480-DBD90B1B645A}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="1"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>-1</XPos>
-																								<YPos>0.2</YPos>
-																								<Flags>5</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>0</YPos>
-																								<Flags>0</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>1</XPos>
-																								<YPos>0.2</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{9E83CF29-1DFF-4E65-8CCA-C7AC18561CF5}" ShortID="138358171">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="BypassEffect0"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{F3EEA824-8DEF-4805-9563-55D2E8998C26}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="65537"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>-1</XPos>
-																								<YPos>1</YPos>
-																								<Flags>5</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>0</YPos>
-																								<Flags>0</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>1</XPos>
-																								<YPos>1</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-														</ObjectList>
-													</ObjectLists>
-												</RandomSequenceContainer>
-												<RandomSequenceContainer Name="smg_mech" ID="{57268E80-4F44-4BE9-995A-8E305D39DC26}" ShortID="785310138">
+													<ActiveSourceList>
+														<ActiveSource Name="player_weapon_shoot_smg_sub_01" ID="{C29008B6-8F61-4AD0-8A5C-C51F6D3C90D5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="smg_tail" ID="{3E155501-0EB5-46EE-89FB-01F89CB57414}" ShortID="694831696">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="player_weapon_shoot_smg_tail_far" ID="{0E7148C6-EBF2-414D-A432-C8A795D62222}" ShortID="352724301">
 													<PropertyList>
-														<Property Name="Pitch" Type="int32">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{81ECE80D-5D5A-4DAA-9611-9F9C442BC138}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Min" Type="Real64" Value="-100"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>-6</Value>
+																<Value>6</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -1379,262 +1426,70 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+															<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<Sound Name="player_weapon_shoot_smg_mech_01" ID="{B1EABE3E-0551-485C-87C2-E7B3C8D1CCFF}" ShortID="1010128429">
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="player_weapon_shoot_smg_mech_01" ID="{EA60F448-5018-48A6-9566-A89C77DDF693}">
-																	<Language>SFX</Language>
-																	<AudioFile>Player_Weapon\player_weapon_shoot_smg_mech_01.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="942643326"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="player_weapon_shoot_smg_mech_01" ID="{EA60F448-5018-48A6-9566-A89C77DDF693}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="player_weapon_shoot_smg_mech_03" ID="{5BCBD20A-F0C5-4391-BA0C-3599AC7E9674}" ShortID="854886980">
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="player_weapon_shoot_smg_mech_03" ID="{6E27E374-374A-476E-9558-D10B27A82C91}">
-																	<Language>SFX</Language>
-																	<AudioFile>Player_Weapon\player_weapon_shoot_smg_mech_03.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="631171215"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="player_weapon_shoot_smg_mech_03" ID="{6E27E374-374A-476E-9558-D10B27A82C91}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="player_weapon_shoot_smg_mech_02" ID="{A3D0750F-044C-4F30-825F-F14C54882D86}" ShortID="1002979036">
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="player_weapon_shoot_smg_mech_02" ID="{70ADF31D-72A8-4AD9-B96E-45EBCE493567}">
-																	<Language>SFX</Language>
-																	<AudioFile>Player_Weapon\player_weapon_shoot_smg_mech_02.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="461432451"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="player_weapon_shoot_smg_mech_02" ID="{70ADF31D-72A8-4AD9-B96E-45EBCE493567}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
+														<AudioFileSource Name="player_weapon_shoot_smg_tail_far" ID="{454BD427-6905-4CB2-B8B1-6F9A029A3656}">
+															<Language>SFX</Language>
+															<AudioFile>Player_Weapon\player_weapon_shoot_smg_tail_far.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="758486105"/>
+															</MediaIDList>
+														</AudioFileSource>
 													</ChildrenList>
-													<ObjectLists>
-														<ObjectList Name="RTPC">
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{66049AE0-9731-4BCF-A5D3-4C7A4FC3B888}" ShortID="1033476541">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="InitialDelay"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{DDFCB85D-5742-4D0D-9B2E-D761C7C32A04}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="1"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>-1</XPos>
-																								<YPos>0.2</YPos>
-																								<Flags>5</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>0</YPos>
-																								<Flags>0</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>1</XPos>
-																								<YPos>0.4</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-														</ObjectList>
-													</ObjectLists>
-												</RandomSequenceContainer>
-												<RandomSequenceContainer Name="smg_sub" ID="{4F09C6E0-DBC0-4C55-A162-D1F81593770B}" ShortID="911926143">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<Sound Name="player_weapon_shoot_smg_sub_01" ID="{3DA36FA5-5B25-4D0A-A874-A25D46AA750E}" ShortID="137774311">
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="player_weapon_shoot_smg_sub_01" ID="{C29008B6-8F61-4AD0-8A5C-C51F6D3C90D5}">
-																	<Language>SFX</Language>
-																	<AudioFile>Player_Weapon\player_weapon_shoot_smg_sub_01.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="967984016"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="player_weapon_shoot_smg_sub_01" ID="{C29008B6-8F61-4AD0-8A5C-C51F6D3C90D5}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-													</ChildrenList>
-												</RandomSequenceContainer>
-												<RandomSequenceContainer Name="smg_tail" ID="{3E155501-0EB5-46EE-89FB-01F89CB57414}" ShortID="694831696">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<Sound Name="player_weapon_shoot_smg_tail_far" ID="{0E7148C6-EBF2-414D-A432-C8A795D62222}" ShortID="352724301">
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="player_weapon_shoot_smg_tail_far" ID="{454BD427-6905-4CB2-B8B1-6F9A029A3656}">
-																	<Language>SFX</Language>
-																	<AudioFile>Player_Weapon\player_weapon_shoot_smg_tail_far.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="758486105"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="player_weapon_shoot_smg_tail_far" ID="{454BD427-6905-4CB2-B8B1-6F9A029A3656}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-													</ChildrenList>
-													<ObjectLists>
-														<ObjectList Name="RTPC">
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{C8B58C30-20B1-474E-BB94-5EF7A05F2420}" ShortID="128673122">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="InitialDelay"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{A6AD358E-DF24-4339-AD24-48FBAC22A917}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="1"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>-1</XPos>
-																								<YPos>0.3</YPos>
-																								<Flags>5</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>0</YPos>
-																								<Flags>0</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>1</XPos>
-																								<YPos>0.5</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-														</ObjectList>
-													</ObjectLists>
-												</RandomSequenceContainer>
+													<ActiveSourceList>
+														<ActiveSource Name="player_weapon_shoot_smg_tail_far" ID="{454BD427-6905-4CB2-B8B1-6F9A029A3656}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-										</BlendContainer>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{C8B58C30-20B1-474E-BB94-5EF7A05F2420}" ShortID="128673122">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="InitialDelay"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{A6AD358E-DF24-4339-AD24-48FBAC22A917}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-1</XPos>
+																						<YPos>0.3</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>0.5</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
 									</ChildrenList>
-									<GroupingInfo>
-										<GroupingBehaviorList>
-											<GroupingBehavior>
-												<ItemRef Name="game_weapon_shoot" ID="{1A22B80C-F31B-4AEE-AEEB-22DD244876DA}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="game_weapon_overheat_shoot" ID="{46A5A1FA-1D30-4B2D-8A8F-91743C2AC61F}"/>
-											</GroupingBehavior>
-										</GroupingBehaviorList>
-										<GroupingList>
-											<Grouping>
-												<SwitchRef Name="Overheat" ID="{5B81C2D1-8C94-4F96-85E7-C618DC2939D7}"/>
-												<ItemList>
-													<ItemRef Name="game_weapon_overheat_shoot" ID="{46A5A1FA-1D30-4B2D-8A8F-91743C2AC61F}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="CanShoot" ID="{1545C5FF-1E2A-4398-AADB-4A6F08D15159}"/>
-												<ItemList>
-													<ItemRef Name="game_weapon_shoot" ID="{1A22B80C-F31B-4AEE-AEEB-22DD244876DA}"/>
-												</ItemList>
-											</Grouping>
-										</GroupingList>
-									</GroupingInfo>
-								</SwitchContainer>
+								</BlendContainer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
