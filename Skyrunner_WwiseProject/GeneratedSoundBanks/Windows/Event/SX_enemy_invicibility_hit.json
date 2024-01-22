@@ -10,30 +10,10 @@
     "Type": "Event",
     "GUID": "{76F454AE-DCE9-4E95-839E-6EDCB135191B}",
     "Language": "SFX",
-    "Hash": "{F7DBFA7B-FF71-A583-DBE1-AA0AA22D0B87}",
+    "Hash": "{13537F46-EE79-9751-817B-CE5CD9275032}",
     "ObjectPath": "SX_enemy_invicibility_hit",
     "ShortName": "SX_enemy_invicibility_hit",
     "Path": "Event/SX_enemy_invicibility_hit.bnk",
-    "Media": [
-     {
-      "Id": "177956997",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "SX_enemy_invicibility_hit.wav",
-      "Path": "Media/177956997.wem",
-      "CachePath": "SFX/SX_enemy_invicibility_hit_755F56E2.wem"
-     },
-     {
-      "Id": "777880860",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Player_Feedback\\player_feedback_hitmarker.wav",
-      "Path": "Media/777880860.wem",
-      "CachePath": "SFX/Player_Feedback/player_feedback_hitmarker_755F56E2.wem"
-     }
-    ],
     "Plugins": {
      "ShareSets": [
       {
@@ -61,57 +41,18 @@
       "ObjectPath": "\\Events\\Enemy\\SX_enemy_invicibility_hit",
       "GUID": "{76F454AE-DCE9-4E95-839E-6EDCB135191B}",
       "DurationType": "OneShot",
-      "DurationMin": "0.083333336",
-      "DurationMax": "0.28266665",
-      "SwitchContainers": [
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "3854779876",
-         "Id": "2496202482",
-         "GUID": "{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1625700308"
         },
-        "MediaRefs": [
-         {
-          "Id": "177956997"
-         }
-        ],
-        "PluginRefs": {
-         "ShareSets": [
-          {
-           "Id": "1625700308"
-          },
-          {
-           "Id": "3487820010"
-          }
-         ]
+        {
+         "Id": "3487820010"
         }
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "3854779876",
-         "Id": "1160234136",
-         "GUID": "{8270281F-156F-4B41-B2D1-76D60C9593B8}",
-         "Default": "true"
-        },
-        "MediaRefs": [
-         {
-          "Id": "777880860"
-         }
-        ],
-        "PluginRefs": {
-         "ShareSets": [
-          {
-           "Id": "1625700308"
-          },
-          {
-           "Id": "3487820010"
-          }
-         ]
-        }
-       }
-      ]
+       ]
+      }
      }
     ],
     "GameParameters": [
@@ -120,41 +61,10 @@
       "Name": "RTPC_SlowMo",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
       "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
-     },
-     {
-      "Id": "3898772349",
-      "Name": "RTPC_NPC_Status",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_NPC_Status",
-      "GUID": "{A58F00C3-C0BA-4664-B028-B7225E8B4DB8}"
-     }
-    ],
-    "SwitchGroups": [
-     {
-      "Id": "3854779876",
-      "Name": "NPCStatusSwitch",
-      "ObjectPath": "\\Switches\\Default Work Unit\\NPCStatusSwitch",
-      "GUID": "{7605A169-6571-40E7-8DA5-27847979CEDF}",
-      "GameParameterRef": {
-       "Id": "3898772349"
-      },
-      "Switches": [
-       {
-        "Id": "1160234136",
-        "Name": "Normal",
-        "ObjectPath": "\\Switches\\Default Work Unit\\NPCStatusSwitch\\Normal",
-        "GUID": "{8270281F-156F-4B41-B2D1-76D60C9593B8}"
-       },
-       {
-        "Id": "2496202482",
-        "Name": "Invicible",
-        "ObjectPath": "\\Switches\\Default Work Unit\\NPCStatusSwitch\\Invicible",
-        "GUID": "{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"
-       }
-      ]
      }
     ]
    }
   ],
-  "FileHash": "{C1DDF383-89B1-7A54-8115-9913B9F3ED68}"
+  "FileHash": "{7E04E86D-4C1A-40CD-1DE1-4738680C9C92}"
  }
 }

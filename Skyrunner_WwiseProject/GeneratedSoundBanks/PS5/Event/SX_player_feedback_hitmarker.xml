@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="2403475570" Type="Event" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" Language="SFX" Hash="{DB123673-1D67-D5FF-D1B3-E6CB060B90A7}">
+		<SoundBank Id="2403475570" Type="Event" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" Language="SFX" Hash="{A8AB2275-03C0-BE4B-F0D2-69794F4A3E28}">
 			<ObjectPath>SX_player_feedback_hitmarker</ObjectPath>
 			<ShortName>SX_player_feedback_hitmarker</ShortName>
 			<Path>Event/SX_player_feedback_hitmarker.bnk</Path>
-			<Media>
-				<File Id="177956997" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>SX_enemy_invicibility_hit.wav</ShortName>
-					<Path>Media/177956997.wem</Path>
-					<CachePath>SFX/SX_enemy_invicibility_hit_755F56E2.wem</CachePath>
-				</File>
-				<File Id="777880860" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Player_Feedback\player_feedback_hitmarker.wav</ShortName>
-					<Path>Media/777880860.wem</Path>
-					<CachePath>SFX/Player_Feedback/player_feedback_hitmarker_755F56E2.wem</CachePath>
-				</File>
-			</Media>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="1625700308" Name="Hitmarker_Meter" ObjectPath="\Effects\Default Work Unit\Hitmarker_Meter" GUID="{E424AAA8-5A51-4482-B54E-F994A6A6B58B}" LibName="Wwise Meter" LibId="8454147"/>
@@ -24,49 +12,19 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="2403475570" Name="SX_player_feedback_hitmarker" ObjectPath="\Events\Player\Feedback\SX_player_feedback_hitmarker" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" DurationType="OneShot" DurationMin="0.083333336" DurationMax="0.28266665">
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3854779876" Id="2496202482" GUID="{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"/>
-							<MediaRefs>
-								<MediaRef Id="177956997"/>
-							</MediaRefs>
-							<PluginRefs>
-								<ShareSets>
-									<PluginRef Id="1625700308"/>
-									<PluginRef Id="3487820010"/>
-								</ShareSets>
-							</PluginRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3854779876" Id="1160234136" GUID="{8270281F-156F-4B41-B2D1-76D60C9593B8}" Default="true"/>
-							<MediaRefs>
-								<MediaRef Id="777880860"/>
-							</MediaRefs>
-							<PluginRefs>
-								<ShareSets>
-									<PluginRef Id="1625700308"/>
-									<PluginRef Id="3487820010"/>
-								</ShareSets>
-							</PluginRefs>
-						</SwitchContainer>
-					</SwitchContainers>
+				<Event Id="2403475570" Name="SX_player_feedback_hitmarker" ObjectPath="\Events\Player\Feedback\SX_player_feedback_hitmarker" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1625700308"/>
+							<PluginRef Id="3487820010"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
-				<GameParameter Id="3898772349" Name="RTPC_NPC_Status" ObjectPath="\Game Parameters\Default Work Unit\RTPC_NPC_Status" GUID="{A58F00C3-C0BA-4664-B028-B7225E8B4DB8}"/>
 			</GameParameters>
-			<SwitchGroups>
-				<SwitchGroup Id="3854779876" Name="NPCStatusSwitch" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch" GUID="{7605A169-6571-40E7-8DA5-27847979CEDF}">
-					<GameParameterRef Id="3898772349"/>
-					<Switches>
-						<Switch Id="1160234136" Name="Normal" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch\Normal" GUID="{8270281F-156F-4B41-B2D1-76D60C9593B8}"/>
-						<Switch Id="2496202482" Name="Invicible" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch\Invicible" GUID="{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D2ADA6C7-1EBF-1850-DBB8-37FDFC48F9FD}</FileHash>
+	<FileHash>{4060701B-2364-0BDE-6091-DBD88D91AEAA}</FileHash>
 </SoundBanksInfo>

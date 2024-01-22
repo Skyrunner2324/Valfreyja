@@ -9,22 +9,10 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="171000875" Type="Event" GUID="{76F454AE-DCE9-4E95-839E-6EDCB135191B}" Language="SFX" Hash="{F7DBFA7B-FF71-A583-DBE1-AA0AA22D0B87}">
+		<SoundBank Id="171000875" Type="Event" GUID="{76F454AE-DCE9-4E95-839E-6EDCB135191B}" Language="SFX" Hash="{13537F46-EE79-9751-817B-CE5CD9275032}">
 			<ObjectPath>SX_enemy_invicibility_hit</ObjectPath>
 			<ShortName>SX_enemy_invicibility_hit</ShortName>
 			<Path>Event/SX_enemy_invicibility_hit.bnk</Path>
-			<Media>
-				<File Id="177956997" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>SX_enemy_invicibility_hit.wav</ShortName>
-					<Path>Media/177956997.wem</Path>
-					<CachePath>SFX/SX_enemy_invicibility_hit_755F56E2.wem</CachePath>
-				</File>
-				<File Id="777880860" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Player_Feedback\player_feedback_hitmarker.wav</ShortName>
-					<Path>Media/777880860.wem</Path>
-					<CachePath>SFX/Player_Feedback/player_feedback_hitmarker_755F56E2.wem</CachePath>
-				</File>
-			</Media>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="1625700308" Name="Hitmarker_Meter" ObjectPath="\Effects\Default Work Unit\Hitmarker_Meter" GUID="{E424AAA8-5A51-4482-B54E-F994A6A6B58B}" LibName="Wwise Meter" LibId="8454147"/>
@@ -32,48 +20,18 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="171000875" Name="SX_enemy_invicibility_hit" ObjectPath="\Events\Enemy\SX_enemy_invicibility_hit" GUID="{76F454AE-DCE9-4E95-839E-6EDCB135191B}" DurationType="OneShot" DurationMin="0.083333336" DurationMax="0.28266665">
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3854779876" Id="2496202482" GUID="{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"/>
-							<MediaRefs>
-								<MediaRef Id="177956997"/>
-							</MediaRefs>
-							<PluginRefs>
-								<ShareSets>
-									<PluginRef Id="1625700308"/>
-									<PluginRef Id="3487820010"/>
-								</ShareSets>
-							</PluginRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3854779876" Id="1160234136" GUID="{8270281F-156F-4B41-B2D1-76D60C9593B8}" Default="true"/>
-							<MediaRefs>
-								<MediaRef Id="777880860"/>
-							</MediaRefs>
-							<PluginRefs>
-								<ShareSets>
-									<PluginRef Id="1625700308"/>
-									<PluginRef Id="3487820010"/>
-								</ShareSets>
-							</PluginRefs>
-						</SwitchContainer>
-					</SwitchContainers>
+				<Event Id="171000875" Name="SX_enemy_invicibility_hit" ObjectPath="\Events\Enemy\SX_enemy_invicibility_hit" GUID="{76F454AE-DCE9-4E95-839E-6EDCB135191B}" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1625700308"/>
+							<PluginRef Id="3487820010"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
-				<GameParameter Id="3898772349" Name="RTPC_NPC_Status" ObjectPath="\Game Parameters\Default Work Unit\RTPC_NPC_Status" GUID="{A58F00C3-C0BA-4664-B028-B7225E8B4DB8}"/>
 			</GameParameters>
-			<SwitchGroups>
-				<SwitchGroup Id="3854779876" Name="NPCStatusSwitch" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch" GUID="{7605A169-6571-40E7-8DA5-27847979CEDF}">
-					<GameParameterRef Id="3898772349"/>
-					<Switches>
-						<Switch Id="1160234136" Name="Normal" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch\Normal" GUID="{8270281F-156F-4B41-B2D1-76D60C9593B8}"/>
-						<Switch Id="2496202482" Name="Invicible" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch\Invicible" GUID="{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="216067002" Type="Event" GUID="{FC9252BB-4746-4A62-AB71-565BBB37F6D2}" Language="SFX" Hash="{2E36B633-459B-D61A-6EF3-0BB95C98F596}">
 			<ObjectPath>UI_confirm</ObjectPath>
@@ -325,38 +283,13 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="987389728" Type="Event" GUID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}" Language="SFX" Hash="{6B58BF90-EBE8-0CF1-8ED8-64B9F7BEE8A4}">
+		<SoundBank Id="987389728" Type="Event" GUID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}" Language="SFX" Hash="{56D54021-2FBB-9109-B38F-255011A7B5D8}">
 			<ObjectPath>ENV_AMB_Play_AmbienceMain</ObjectPath>
 			<ShortName>ENV_AMB_Play_AmbienceMain</ShortName>
 			<Path>Event/ENV_AMB_Play_AmbienceMain.bnk</Path>
-			<Media>
-				<File Id="734031120" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\amb_meteo_wind.wav</ShortName>
-					<Path>Media/734031120.wem</Path>
-					<CachePath>SFX/Placeholders/amb_meteo_wind_073B4D0C.wem</CachePath>
-				</File>
-			</Media>
 			<Events>
-				<Event Id="987389728" Name="ENV_AMB_Play_AmbienceMain" ObjectPath="\Events\Environment\ENV_AMB_Play_AmbienceMain" GUID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}" DurationType="Infinite">
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="524731881" Id="1519512320" GUID="{A4AFF0DE-5F41-4B08-AEFC-DACFEA9C64EE}" Default="true"/>
-							<MediaRefs>
-								<MediaRef Id="734031120"/>
-							</MediaRefs>
-						</SwitchContainer>
-					</SwitchContainers>
-				</Event>
+				<Event Id="987389728" Name="ENV_AMB_Play_AmbienceMain" ObjectPath="\Events\Environment\ENV_AMB_Play_AmbienceMain" GUID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}" DurationType="Infinite"/>
 			</Events>
-			<SwitchGroups>
-				<SwitchGroup Id="524731881" Name="AmbBiomeType" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType" GUID="{5B10E42B-0908-4108-AA6C-167CED4078D5}">
-					<Switches>
-						<Switch Id="315106662" Name="CaveAmb" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType\CaveAmb" GUID="{ED2B295B-B79E-4052-82D7-4EE5DB0E0BBC}"/>
-						<Switch Id="887347181" Name="VillageAmb" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType\VillageAmb" GUID="{0850F707-F78B-4F5E-9519-A7CAAEFFA71A}"/>
-						<Switch Id="1519512320" Name="MountainAmb" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType\MountainAmb" GUID="{A4AFF0DE-5F41-4B08-AEFC-DACFEA9C64EE}"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{AEE6DF9B-BB62-0A4E-9A2A-D2E1C157B4B7}">
 			<ObjectPath>SX_player_shoot</ObjectPath>
@@ -506,7 +439,7 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{4439DAC4-295C-0BCD-4846-AEC5184E1B93}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{13979B7D-2FF4-B337-98D4-A70CB04F8954}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -712,19 +645,9 @@
 				<GameParameter Id="2064543165" Name="RTPC_Hitmarker_Volume" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Hitmarker_Volume" GUID="{881B885B-5371-4C1C-8523-6D6EDC0BE6F9}"/>
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
-				<GameParameter Id="3699472177" Name="RTPC_GroundMaterial" ObjectPath="\Game Parameters\Default Work Unit\RTPC_GroundMaterial" GUID="{05992564-76FB-4584-948F-C0F4109BF542}"/>
-				<GameParameter Id="3898772349" Name="RTPC_NPC_Status" ObjectPath="\Game Parameters\Default Work Unit\RTPC_NPC_Status" GUID="{A58F00C3-C0BA-4664-B028-B7225E8B4DB8}"/>
 				<GameParameter Id="4179668880" Name="Master_Volume" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Volumes\Master_Volume" GUID="{0E966A6C-B73C-4051-BE1F-352B25CDFC73}"/>
 			</GameParameters>
 			<StateGroups>
-				<StateGroup Id="210497749" Name="SlowMoState" ObjectPath="\States\Default Work Unit\SlowMoState" GUID="{C19D1B16-633A-4DFE-AD60-F8C6C952E8FA}">
-					<States>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\SlowMoState\None" GUID="{89E459A9-DE01-4F01-B027-4F4E114C6509}"/>
-						<State Id="1160234136" Name="Normal" ObjectPath="\States\Default Work Unit\SlowMoState\Normal" GUID="{072BF153-B258-43FA-94CF-16316D610E02}"/>
-						<State Id="1284310773" Name="HeavySlowMo" ObjectPath="\States\Default Work Unit\SlowMoState\HeavySlowMo" GUID="{AFDA4DC4-406A-4780-8079-7FD697CED6BF}"/>
-						<State Id="2841448996" Name="LightSlowMo" ObjectPath="\States\Default Work Unit\SlowMoState\LightSlowMo" GUID="{36CE64E5-3D75-4CD5-887B-A0F5641757F8}"/>
-					</States>
-				</StateGroup>
 				<StateGroup Id="1045871717" Name="GameStatus" ObjectPath="\States\Default Work Unit\GameStatus" GUID="{B166225D-6EEC-4395-A414-2DC03ECCF043}">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\GameStatus\None" GUID="{EEB277E0-9352-480D-A6FB-C308E6B7BD09}"/>
@@ -742,20 +665,6 @@
 						<State Id="3814499265" Name="Explo" ObjectPath="\States\Default Work Unit\Music_Selector\Explo" GUID="{1FE92F27-401B-44A3-BFC0-65F192492AAB}"/>
 					</States>
 				</StateGroup>
-				<StateGroup Id="2064552269" Name="AreaState" ObjectPath="\States\Default Work Unit\AreaState" GUID="{8264E7EF-9D1C-45D6-B03F-CCD0B6C66735}">
-					<States>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\AreaState\None" GUID="{504FBF30-E002-4A18-B350-C7CE6E0AA564}"/>
-						<State Id="1880927217" Name="Ambiance_01example" ObjectPath="\States\Default Work Unit\AreaState\Ambiance_01example" GUID="{0C96FB59-0D86-4D67-B5C0-EC9F48690B9E}"/>
-						<State Id="3827808776" Name="Ambiance_02example" ObjectPath="\States\Default Work Unit\AreaState\Ambiance_02example" GUID="{E93D8212-B1A6-489F-950C-14423D11C5E5}"/>
-					</States>
-				</StateGroup>
-				<StateGroup Id="3285234865" Name="PlayerState" ObjectPath="\States\Default Work Unit\PlayerState" GUID="{1F5D3752-7753-44D3-B02C-6D8D6A18F0B8}">
-					<States>
-						<State Id="655265632" Name="Alive" ObjectPath="\States\Default Work Unit\PlayerState\Alive" GUID="{D8FCB979-65E8-4710-9966-57163709C91A}"/>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\PlayerState\None" GUID="{080CA12A-25D3-44EF-BAA8-88A78B97D364}"/>
-						<State Id="2044049779" Name="Dead" ObjectPath="\States\Default Work Unit\PlayerState\Dead" GUID="{286888B3-6EE4-46E1-BEFB-B22637C040E5}"/>
-					</States>
-				</StateGroup>
 				<StateGroup Id="3398936579" Name="level01state" ObjectPath="\States\Default Work Unit\level01state" GUID="{6BB53D12-F76F-40A2-920B-D7BD68F8B01C}">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\level01state\None" GUID="{EC8DFFB3-4971-4AD6-8C58-FA98B2B21287}"/>
@@ -768,47 +677,6 @@
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
-				<SwitchGroup Id="151362964" Name="PlayerHealth" ObjectPath="\Switches\Default Work Unit\PlayerHealth" GUID="{6ED19CFE-6D91-4B73-A8B1-241649EF7F14}">
-					<Switches>
-						<Switch Id="898449699" Name="NearDeath" ObjectPath="\Switches\Default Work Unit\PlayerHealth\NearDeath" GUID="{6F790B04-FCD5-4F29-9A8B-7BB513A34A6B}"/>
-						<Switch Id="1017222595" Name="LowHealth" ObjectPath="\Switches\Default Work Unit\PlayerHealth\LowHealth" GUID="{33B1FD86-53B4-4D7C-9F4C-1D6268B3B4B7}"/>
-						<Switch Id="2429688720" Name="FullHealth" ObjectPath="\Switches\Default Work Unit\PlayerHealth\FullHealth" GUID="{5D504B7C-85C6-45FE-8CB6-29AA4525A874}"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="153303254" Name="SlowmoSwitch" ObjectPath="\Switches\Default Work Unit\SlowmoSwitch" GUID="{97ECF42C-A290-4CF1-8DEA-DE48A794B7BF}">
-					<GameParameterRef Id="2565740352"/>
-					<Switches>
-						<Switch Id="1160234136" Name="Normal" ObjectPath="\Switches\Default Work Unit\SlowmoSwitch\Normal" GUID="{BDC94118-2D7A-438D-9267-F61370EC1DC8}"/>
-						<Switch Id="1935470627" Name="Light" ObjectPath="\Switches\Default Work Unit\SlowmoSwitch\Light" GUID="{457024B2-F2CE-4135-A045-11EC29546F1B}"/>
-						<Switch Id="2732489590" Name="Heavy" ObjectPath="\Switches\Default Work Unit\SlowmoSwitch\Heavy" GUID="{7170FDF3-E14F-43A9-A493-098AF4E85FEA}"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="194784494" Name="WeaponSurfaceCollision" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision" GUID="{DF6301E3-DB84-4607-9CDE-AFF2BF4E3A65}">
-					<Switches>
-						<Switch Id="1505986031" Name="RockSurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\RockSurface" GUID="{7B1ADED6-B632-448E-B7DF-05BD5E26FBC8}"/>
-						<Switch Id="1882779037" Name="SnowSurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\SnowSurface" GUID="{91E60FA4-4DE1-465C-A254-4030A4DF7A15}"/>
-						<Switch Id="3353720555" Name="IceSurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\IceSurface" GUID="{4578F74A-2F6F-42EB-891F-614C2D62B7D8}"/>
-						<Switch Id="3661774060" Name="EnemySurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\EnemySurface" GUID="{DC912065-E687-4C3C-891B-504BA636A074}"/>
-						<Switch Id="4047769411" Name="MetalSurface" ObjectPath="\Switches\Default Work Unit\WeaponSurfaceCollision\MetalSurface" GUID="{B9C67F9D-E774-42A4-8D09-E0D98C3E0C55}"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="524731881" Name="AmbBiomeType" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType" GUID="{5B10E42B-0908-4108-AA6C-167CED4078D5}">
-					<Switches>
-						<Switch Id="315106662" Name="CaveAmb" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType\CaveAmb" GUID="{ED2B295B-B79E-4052-82D7-4EE5DB0E0BBC}"/>
-						<Switch Id="887347181" Name="VillageAmb" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType\VillageAmb" GUID="{0850F707-F78B-4F5E-9519-A7CAAEFFA71A}"/>
-						<Switch Id="1519512320" Name="MountainAmb" ObjectPath="\Switches\AmbienceSwitches\AmbBiomeType\MountainAmb" GUID="{A4AFF0DE-5F41-4B08-AEFC-DACFEA9C64EE}"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="1044534455" Name="GroundMaterialSwitch" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch" GUID="{9D29D1E1-5500-4801-B968-D812A1417C9E}">
-					<GameParameterRef Id="3699472177"/>
-					<Switches>
-						<Switch Id="97194767" Name="IceGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\IceGround" GUID="{FB0B8B6F-9F97-49C4-AFB6-3AA7208FAD66}"/>
-						<Switch Id="210120315" Name="RockGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\RockGround" GUID="{08A1937D-A457-41B0-A1DD-40DEEB125E58}"/>
-						<Switch Id="894619339" Name="WoodGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\WoodGround" GUID="{31D40FF0-50B0-41F0-8BED-7D8E39644E38}"/>
-						<Switch Id="1733120053" Name="SnowGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\SnowGround" GUID="{C9E76BBC-F68A-4374-8B87-BBFE25C0D40F}"/>
-						<Switch Id="3577913431" Name="MetalGround" ObjectPath="\Switches\Default Work Unit\GroundMaterialSwitch\MetalGround" GUID="{067272CA-59B0-48BD-81F5-F5600CE65A57}"/>
-					</Switches>
-				</SwitchGroup>
 				<SwitchGroup Id="1462722741" Name="PlayerMovementSwitch" ObjectPath="\Switches\Default Work Unit\PlayerMovementSwitch" GUID="{827CE490-6004-4AAA-96C7-262E376A6054}">
 					<GameParameterRef Id="1645844663"/>
 					<Switches>
@@ -819,25 +687,10 @@
 						<Switch Id="2528658256" Name="Ground" ObjectPath="\Switches\Default Work Unit\PlayerMovementSwitch\Ground" GUID="{FE8392A7-A0C0-4D8D-925E-68CC1666748E}"/>
 					</Switches>
 				</SwitchGroup>
-				<SwitchGroup Id="2051106367" Name="PlayerSpeedSwitch" ObjectPath="\Switches\Default Work Unit\PlayerSpeedSwitch" GUID="{3CDF8300-7330-4784-9075-47D68391D5E2}">
-					<GameParameterRef Id="2653406601"/>
-					<Switches>
-						<Switch Id="2383244719" Name="FullSpeed" ObjectPath="\Switches\Default Work Unit\PlayerSpeedSwitch\FullSpeed" GUID="{DBB88A42-5CC6-4FB2-B398-E90BD1F134AA}"/>
-						<Switch Id="2904797076" Name="Stopped" ObjectPath="\Switches\Default Work Unit\PlayerSpeedSwitch\Stopped" GUID="{2C307309-F91B-4D77-AF29-DEBCBFD72347}"/>
-						<Switch Id="3089599978" Name="Accelerate" ObjectPath="\Switches\Default Work Unit\PlayerSpeedSwitch\Accelerate" GUID="{12994FF5-E12F-4682-A9D9-C114B53C047E}"/>
-					</Switches>
-				</SwitchGroup>
 				<SwitchGroup Id="3560556452" Name="HoverbootsSwitch" ObjectPath="\Switches\Default Work Unit\HoverbootsSwitch" GUID="{CFF359FB-3643-4A54-8CD8-133153706006}">
 					<Switches>
 						<Switch Id="1200033591" Name="OnGround" ObjectPath="\Switches\Default Work Unit\HoverbootsSwitch\OnGround" GUID="{13F79D10-0A22-455A-9005-CF68D7C5FC75}"/>
 						<Switch Id="2376466361" Name="Other" ObjectPath="\Switches\Default Work Unit\HoverbootsSwitch\Other" GUID="{9D8B0E69-BBB9-4C23-8826-9882E51CE450}"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="3854779876" Name="NPCStatusSwitch" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch" GUID="{7605A169-6571-40E7-8DA5-27847979CEDF}">
-					<GameParameterRef Id="3898772349"/>
-					<Switches>
-						<Switch Id="1160234136" Name="Normal" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch\Normal" GUID="{8270281F-156F-4B41-B2D1-76D60C9593B8}"/>
-						<Switch Id="2496202482" Name="Invicible" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch\Invicible" GUID="{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
@@ -1207,22 +1060,10 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="2403475570" Type="Event" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" Language="SFX" Hash="{DB123673-1D67-D5FF-D1B3-E6CB060B90A7}">
+		<SoundBank Id="2403475570" Type="Event" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" Language="SFX" Hash="{A8AB2275-03C0-BE4B-F0D2-69794F4A3E28}">
 			<ObjectPath>SX_player_feedback_hitmarker</ObjectPath>
 			<ShortName>SX_player_feedback_hitmarker</ShortName>
 			<Path>Event/SX_player_feedback_hitmarker.bnk</Path>
-			<Media>
-				<File Id="177956997" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>SX_enemy_invicibility_hit.wav</ShortName>
-					<Path>Media/177956997.wem</Path>
-					<CachePath>SFX/SX_enemy_invicibility_hit_755F56E2.wem</CachePath>
-				</File>
-				<File Id="777880860" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Player_Feedback\player_feedback_hitmarker.wav</ShortName>
-					<Path>Media/777880860.wem</Path>
-					<CachePath>SFX/Player_Feedback/player_feedback_hitmarker_755F56E2.wem</CachePath>
-				</File>
-			</Media>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="1625700308" Name="Hitmarker_Meter" ObjectPath="\Effects\Default Work Unit\Hitmarker_Meter" GUID="{E424AAA8-5A51-4482-B54E-F994A6A6B58B}" LibName="Wwise Meter" LibId="8454147"/>
@@ -1230,48 +1071,18 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="2403475570" Name="SX_player_feedback_hitmarker" ObjectPath="\Events\Player\Feedback\SX_player_feedback_hitmarker" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" DurationType="OneShot" DurationMin="0.083333336" DurationMax="0.28266665">
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3854779876" Id="2496202482" GUID="{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"/>
-							<MediaRefs>
-								<MediaRef Id="177956997"/>
-							</MediaRefs>
-							<PluginRefs>
-								<ShareSets>
-									<PluginRef Id="1625700308"/>
-									<PluginRef Id="3487820010"/>
-								</ShareSets>
-							</PluginRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3854779876" Id="1160234136" GUID="{8270281F-156F-4B41-B2D1-76D60C9593B8}" Default="true"/>
-							<MediaRefs>
-								<MediaRef Id="777880860"/>
-							</MediaRefs>
-							<PluginRefs>
-								<ShareSets>
-									<PluginRef Id="1625700308"/>
-									<PluginRef Id="3487820010"/>
-								</ShareSets>
-							</PluginRefs>
-						</SwitchContainer>
-					</SwitchContainers>
+				<Event Id="2403475570" Name="SX_player_feedback_hitmarker" ObjectPath="\Events\Player\Feedback\SX_player_feedback_hitmarker" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1625700308"/>
+							<PluginRef Id="3487820010"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
-				<GameParameter Id="3898772349" Name="RTPC_NPC_Status" ObjectPath="\Game Parameters\Default Work Unit\RTPC_NPC_Status" GUID="{A58F00C3-C0BA-4664-B028-B7225E8B4DB8}"/>
 			</GameParameters>
-			<SwitchGroups>
-				<SwitchGroup Id="3854779876" Name="NPCStatusSwitch" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch" GUID="{7605A169-6571-40E7-8DA5-27847979CEDF}">
-					<GameParameterRef Id="3898772349"/>
-					<Switches>
-						<Switch Id="1160234136" Name="Normal" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch\Normal" GUID="{8270281F-156F-4B41-B2D1-76D60C9593B8}"/>
-						<Switch Id="2496202482" Name="Invicible" ObjectPath="\Switches\Default Work Unit\NPCStatusSwitch\Invicible" GUID="{2F087E09-B8E2-4040-BC37-7890AC39CAC2}"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="2439571424" Type="Event" GUID="{90FA6150-F2C6-4AEA-9823-D63B27B43CA6}" Language="SFX" Hash="{C3F5E53C-CB7D-3829-13C7-05030AE802C7}">
 			<ObjectPath>Play_Stop_TestBeep_Loop_3D</ObjectPath>
@@ -1327,7 +1138,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{C0733606-C1AF-F8FC-6036-F93549F265E0}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{D494EC23-1F30-0A89-CA80-848BCE487B5B}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -1586,5 +1397,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7D5C51E1-90AE-F446-870E-D8AF3664199E}</FileHash>
+	<FileHash>{1C8E20A9-B23E-9298-1B27-9920926F9B32}</FileHash>
 </SoundBanksInfo>
