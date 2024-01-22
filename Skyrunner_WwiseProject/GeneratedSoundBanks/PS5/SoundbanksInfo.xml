@@ -9,30 +9,6 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="171000875" Type="Event" GUID="{76F454AE-DCE9-4E95-839E-6EDCB135191B}" Language="SFX" Hash="{13537F46-EE79-9751-817B-CE5CD9275032}">
-			<ObjectPath>SX_enemy_invicibility_hit</ObjectPath>
-			<ShortName>SX_enemy_invicibility_hit</ShortName>
-			<Path>Event/SX_enemy_invicibility_hit.bnk</Path>
-			<Plugins>
-				<ShareSets>
-					<Plugin Id="1625700308" Name="Hitmarker_Meter" ObjectPath="\Effects\Default Work Unit\Hitmarker_Meter" GUID="{E424AAA8-5A51-4482-B54E-F994A6A6B58B}" LibName="Wwise Meter" LibId="8454147"/>
-					<Plugin Id="3487820010" Name="One_Tap_Half_Second" ObjectPath="\Effects\Factory Effects\Delay\One_Tap_Half_Second" GUID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" LibName="Wwise Delay" LibId="6946819"/>
-				</ShareSets>
-			</Plugins>
-			<Events>
-				<Event Id="171000875" Name="SX_enemy_invicibility_hit" ObjectPath="\Events\Enemy\SX_enemy_invicibility_hit" GUID="{76F454AE-DCE9-4E95-839E-6EDCB135191B}" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="1625700308"/>
-							<PluginRef Id="3487820010"/>
-						</ShareSets>
-					</PluginRefs>
-				</Event>
-			</Events>
-			<GameParameters>
-				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
-			</GameParameters>
-		</SoundBank>
 		<SoundBank Id="216067002" Type="Event" GUID="{FC9252BB-4746-4A62-AB71-565BBB37F6D2}" Language="SFX" Hash="{2E36B633-459B-D61A-6EF3-0BB95C98F596}">
 			<ObjectPath>UI_confirm</ObjectPath>
 			<ShortName>UI_confirm</ShortName>
@@ -248,16 +224,24 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="946406252" Type="Event" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" Language="SFX" Hash="{6976CA7E-41CF-4A4C-7EC1-A5847911B823}">
+		<SoundBank Id="946406252" Type="Event" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" Language="SFX" Hash="{51931461-C589-21FC-CEB6-0F8251DB614F}">
 			<ObjectPath>SX_player_weapon_impact</ObjectPath>
 			<ShortName>SX_player_weapon_impact</ShortName>
 			<Path>Event/SX_player_weapon_impact.bnk</Path>
+			<Media>
+				<File Id="991022554" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav</ShortName>
+					<Path>Media/991022554.wem</Path>
+					<CachePath>SFX/PM_BBI_Bullet_Impact_Hit_Body_Flesh_25_C76A9090.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="946406252" Name="SX_player_weapon_impact" ObjectPath="\Events\Player\Weapon\SX_player_weapon_impact" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="946406252" Name="SX_player_weapon_impact" ObjectPath="\Events\Player\Weapon\SX_player_weapon_impact" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" DurationType="OneShot" DurationMin="0.19669332" DurationMax="0.42016268">
+					<MediaRefs>
+						<MediaRef Id="991022554"/>
+					</MediaRefs>
+				</Event>
 			</Events>
-			<GameParameters>
-				<GameParameter Id="2064543165" Name="RTPC_Hitmarker_Volume" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Hitmarker_Volume" GUID="{881B885B-5371-4C1C-8523-6D6EDC0BE6F9}"/>
-			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="971909502" Type="User" GUID="{73E808A7-564E-44B8-BCF3-CDA908FACC1B}" Language="SFX" Hash="{EC3064F4-53B7-89D7-344A-17082FA16595}">
 			<ObjectPath>\SoundBanks\Default Work Unit\MasterSoundbank</ObjectPath>
@@ -439,7 +423,7 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{1A3C3ACA-1AE4-B150-1A3C-CA2C22332B54}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{F51075DD-9CEF-4A19-C40E-2F0ADF2B424D}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -1067,29 +1051,24 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="2403475570" Type="Event" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" Language="SFX" Hash="{A8AB2275-03C0-BE4B-F0D2-69794F4A3E28}">
+		<SoundBank Id="2403475570" Type="Event" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" Language="SFX" Hash="{39B3943E-D74A-A62E-71CF-AF3F3608B933}">
 			<ObjectPath>SX_player_feedback_hitmarker</ObjectPath>
 			<ShortName>SX_player_feedback_hitmarker</ShortName>
 			<Path>Event/SX_player_feedback_hitmarker.bnk</Path>
-			<Plugins>
-				<ShareSets>
-					<Plugin Id="1625700308" Name="Hitmarker_Meter" ObjectPath="\Effects\Default Work Unit\Hitmarker_Meter" GUID="{E424AAA8-5A51-4482-B54E-F994A6A6B58B}" LibName="Wwise Meter" LibId="8454147"/>
-					<Plugin Id="3487820010" Name="One_Tap_Half_Second" ObjectPath="\Effects\Factory Effects\Delay\One_Tap_Half_Second" GUID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" LibName="Wwise Delay" LibId="6946819"/>
-				</ShareSets>
-			</Plugins>
+			<Media>
+				<File Id="777880860" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_hitmarker.wav</ShortName>
+					<Path>Media/777880860.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_hitmarker_755F56E2.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="2403475570" Name="SX_player_feedback_hitmarker" ObjectPath="\Events\Player\Feedback\SX_player_feedback_hitmarker" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="1625700308"/>
-							<PluginRef Id="3487820010"/>
-						</ShareSets>
-					</PluginRefs>
+				<Event Id="2403475570" Name="SX_player_feedback_hitmarker" ObjectPath="\Events\Player\Feedback\SX_player_feedback_hitmarker" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" DurationType="OneShot" DurationMin="0.083333336" DurationMax="0.083333336">
+					<MediaRefs>
+						<MediaRef Id="777880860"/>
+					</MediaRefs>
 				</Event>
 			</Events>
-			<GameParameters>
-				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
-			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="2439571424" Type="Event" GUID="{90FA6150-F2C6-4AEA-9823-D63B27B43CA6}" Language="SFX" Hash="{C3F5E53C-CB7D-3829-13C7-05030AE802C7}">
 			<ObjectPath>Play_Stop_TestBeep_Loop_3D</ObjectPath>
@@ -1404,5 +1383,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{96597C94-B440-E10F-A9FB-40572A523E0A}</FileHash>
+	<FileHash>{6DE1659B-7340-AF85-1AE1-95991F74A063}</FileHash>
 </SoundBanksInfo>

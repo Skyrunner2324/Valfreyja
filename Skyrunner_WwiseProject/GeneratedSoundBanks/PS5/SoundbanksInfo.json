@@ -14,65 +14,6 @@
   "DialogueEvents": [],
   "SoundBanks": [
    {
-    "Id": "171000875",
-    "Type": "Event",
-    "GUID": "{76F454AE-DCE9-4E95-839E-6EDCB135191B}",
-    "Language": "SFX",
-    "Hash": "{13537F46-EE79-9751-817B-CE5CD9275032}",
-    "ObjectPath": "SX_enemy_invicibility_hit",
-    "ShortName": "SX_enemy_invicibility_hit",
-    "Path": "Event/SX_enemy_invicibility_hit.bnk",
-    "Plugins": {
-     "ShareSets": [
-      {
-       "Id": "1625700308",
-       "Name": "Hitmarker_Meter",
-       "ObjectPath": "\\Effects\\Default Work Unit\\Hitmarker_Meter",
-       "GUID": "{E424AAA8-5A51-4482-B54E-F994A6A6B58B}",
-       "LibName": "Wwise Meter",
-       "LibId": "8454147"
-      },
-      {
-       "Id": "3487820010",
-       "Name": "One_Tap_Half_Second",
-       "ObjectPath": "\\Effects\\Factory Effects\\Delay\\One_Tap_Half_Second",
-       "GUID": "{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}",
-       "LibName": "Wwise Delay",
-       "LibId": "6946819"
-      }
-     ]
-    },
-    "Events": [
-     {
-      "Id": "171000875",
-      "Name": "SX_enemy_invicibility_hit",
-      "ObjectPath": "\\Events\\Enemy\\SX_enemy_invicibility_hit",
-      "GUID": "{76F454AE-DCE9-4E95-839E-6EDCB135191B}",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "1625700308"
-        },
-        {
-         "Id": "3487820010"
-        }
-       ]
-      }
-     }
-    ],
-    "GameParameters": [
-     {
-      "Id": "2565740352",
-      "Name": "RTPC_SlowMo",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
-      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
-     }
-    ]
-   },
-   {
     "Id": "216067002",
     "Type": "Event",
     "GUID": "{FC9252BB-4746-4A62-AB71-565BBB37F6D2}",
@@ -531,10 +472,21 @@
     "Type": "Event",
     "GUID": "{C2635664-3DF8-496D-BA41-22C25299ACE8}",
     "Language": "SFX",
-    "Hash": "{6976CA7E-41CF-4A4C-7EC1-A5847911B823}",
+    "Hash": "{51931461-C589-21FC-CEB6-0F8251DB614F}",
     "ObjectPath": "SX_player_weapon_impact",
     "ShortName": "SX_player_weapon_impact",
     "Path": "Event/SX_player_weapon_impact.bnk",
+    "Media": [
+     {
+      "Id": "991022554",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav",
+      "Path": "Media/991022554.wem",
+      "CachePath": "SFX/PM_BBI_Bullet_Impact_Hit_Body_Flesh_25_C76A9090.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "946406252",
@@ -542,16 +494,13 @@
       "ObjectPath": "\\Events\\Player\\Weapon\\SX_player_weapon_impact",
       "GUID": "{C2635664-3DF8-496D-BA41-22C25299ACE8}",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
-     }
-    ],
-    "GameParameters": [
-     {
-      "Id": "2064543165",
-      "Name": "RTPC_Hitmarker_Volume",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_Hitmarker_Volume",
-      "GUID": "{881B885B-5371-4C1C-8523-6D6EDC0BE6F9}"
+      "DurationMin": "0.19669332",
+      "DurationMax": "0.42016268",
+      "MediaRefs": [
+       {
+        "Id": "991022554"
+       }
+      ]
      }
     ]
    },
@@ -932,7 +881,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{1A3C3ACA-1AE4-B150-1A3C-CA2C22332B54}",
+    "Hash": "{F51075DD-9CEF-4A19-C40E-2F0ADF2B424D}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -2613,30 +2562,21 @@
     "Type": "Event",
     "GUID": "{6BE02D09-9271-46A7-BAA0-E99F5C869C80}",
     "Language": "SFX",
-    "Hash": "{A8AB2275-03C0-BE4B-F0D2-69794F4A3E28}",
+    "Hash": "{39B3943E-D74A-A62E-71CF-AF3F3608B933}",
     "ObjectPath": "SX_player_feedback_hitmarker",
     "ShortName": "SX_player_feedback_hitmarker",
     "Path": "Event/SX_player_feedback_hitmarker.bnk",
-    "Plugins": {
-     "ShareSets": [
-      {
-       "Id": "1625700308",
-       "Name": "Hitmarker_Meter",
-       "ObjectPath": "\\Effects\\Default Work Unit\\Hitmarker_Meter",
-       "GUID": "{E424AAA8-5A51-4482-B54E-F994A6A6B58B}",
-       "LibName": "Wwise Meter",
-       "LibId": "8454147"
-      },
-      {
-       "Id": "3487820010",
-       "Name": "One_Tap_Half_Second",
-       "ObjectPath": "\\Effects\\Factory Effects\\Delay\\One_Tap_Half_Second",
-       "GUID": "{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}",
-       "LibName": "Wwise Delay",
-       "LibId": "6946819"
-      }
-     ]
-    },
+    "Media": [
+     {
+      "Id": "777880860",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Feedback\\player_feedback_hitmarker.wav",
+      "Path": "Media/777880860.wem",
+      "CachePath": "SFX/Player_Feedback/player_feedback_hitmarker_755F56E2.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "2403475570",
@@ -2644,26 +2584,13 @@
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_feedback_hitmarker",
       "GUID": "{6BE02D09-9271-46A7-BAA0-E99F5C869C80}",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "1625700308"
-        },
-        {
-         "Id": "3487820010"
-        }
-       ]
-      }
-     }
-    ],
-    "GameParameters": [
-     {
-      "Id": "2565740352",
-      "Name": "RTPC_SlowMo",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
-      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
+      "DurationMin": "0.083333336",
+      "DurationMax": "0.083333336",
+      "MediaRefs": [
+       {
+        "Id": "777880860"
+       }
+      ]
      }
     ]
    },
@@ -3338,6 +3265,6 @@
     ]
    }
   ],
-  "FileHash": "{DE603C51-CE2F-BEC7-160F-241794AC5763}"
+  "FileHash": "{3D98648C-DC02-B1D1-7E85-3316F2F124CD}"
  }
 }
