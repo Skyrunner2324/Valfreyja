@@ -519,35 +519,16 @@
     "Type": "Bus",
     "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}",
     "Language": "SFX",
-    "Hash": "{342F5DE8-040F-B34C-4496-03ACC975B219}",
+    "Hash": "{DCA606BF-07D3-25EA-C812-C66D053E74E5}",
     "ObjectPath": "REV",
     "ShortName": "REV",
     "Path": "Bus/REV.bnk",
-    "Plugins": {
-     "ShareSets": [
-      {
-       "Id": "485024389",
-       "Name": "MeterGain",
-       "ObjectPath": "\\Effects\\Default Work Unit\\MeterGain",
-       "GUID": "{3FD630AC-8722-4E18-AE3F-FA326DA3C781}",
-       "LibName": "Wwise Gain",
-       "LibId": "9109507"
-      }
-     ]
-    },
     "AuxBusses": [
      {
       "Id": "980603520",
       "Name": "REV",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
-      "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "485024389"
-        }
-       ]
-      }
+      "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
      }
     ]
    },
@@ -556,17 +537,33 @@
     "Type": "Event",
     "GUID": "{551300EA-C047-48F9-A1CA-75F08BC14E0B}",
     "Language": "SFX",
-    "Hash": "{56D54021-2FBB-9109-B38F-255011A7B5D8}",
+    "Hash": "{6F69FD28-1746-6FC0-4684-519AA1121D4F}",
     "ObjectPath": "ENV_AMB_Play_AmbienceMain",
     "ShortName": "ENV_AMB_Play_AmbienceMain",
     "Path": "Event/ENV_AMB_Play_AmbienceMain.bnk",
+    "Media": [
+     {
+      "Id": "734031120",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\amb_meteo_wind.wav",
+      "Path": "Media/734031120.wem",
+      "CachePath": "SFX/Placeholders/amb_meteo_wind_073B4D0C.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "987389728",
       "Name": "ENV_AMB_Play_AmbienceMain",
       "ObjectPath": "\\Events\\Environment\\ENV_AMB_Play_AmbienceMain",
       "GUID": "{551300EA-C047-48F9-A1CA-75F08BC14E0B}",
-      "DurationType": "Infinite"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "734031120"
+       }
+      ]
      }
     ]
    },
@@ -881,7 +878,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{1D8B0345-D3EE-5ADF-0F87-D153E08E852D}",
+    "Hash": "{99DACD21-D6CC-DC9C-90EE-76E87E6D97DB}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -949,14 +946,6 @@
       }
      ],
      "ShareSets": [
-      {
-       "Id": "485024389",
-       "Name": "MeterGain",
-       "ObjectPath": "\\Effects\\Default Work Unit\\MeterGain",
-       "GUID": "{3FD630AC-8722-4E18-AE3F-FA326DA3C781}",
-       "LibName": "Wwise Gain",
-       "LibId": "9109507"
-      },
       {
        "Id": "1782142158",
        "Name": "DistantBuilding_MicsFar",
@@ -1038,27 +1027,13 @@
       "Id": "79554116",
       "Name": "MUSIC Master",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master",
-      "GUID": "{D7372867-B444-4F36-A355-173A46D13138}",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "485024389"
-        }
-       ]
-      }
+      "GUID": "{D7372867-B444-4F36-A355-173A46D13138}"
      },
      {
       "Id": "372645086",
       "Name": "PLYR Master",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\PLYR Master",
       "GUID": "{880F05A2-569A-4D55-B7A0-1CD87FD195D0}",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "485024389"
-        }
-       ]
-      },
       "AuxBusRefs": [
        {
         "Id": "1752382405",
@@ -1085,14 +1060,7 @@
       "Id": "1698665495",
       "Name": "UI Master",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\UI Master",
-      "GUID": "{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "485024389"
-        }
-       ]
-      }
+      "GUID": "{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}"
      },
      {
       "Id": "1974888476",
@@ -1126,14 +1094,7 @@
       "Id": "2126441370",
       "Name": "Environment Master",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\Environment Master",
-      "GUID": "{93794CDD-D92F-4393-9B36-96AC442DDB90}",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "485024389"
-        }
-       ]
-      }
+      "GUID": "{93794CDD-D92F-4393-9B36-96AC442DDB90}"
      },
      {
       "Id": "2452310558",
@@ -1160,11 +1121,6 @@
         {
          "Id": "715153284"
         }
-       ],
-       "ShareSets": [
-        {
-         "Id": "485024389"
-        }
        ]
       }
      },
@@ -1173,13 +1129,6 @@
       "Name": "3D OBJ Master",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\3D OBJ Master",
       "GUID": "{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "485024389"
-        }
-       ]
-      },
       "AuxBusRefs": [
        {
         "Id": "1641293181",
@@ -1201,13 +1150,6 @@
       "Name": "SFX Master",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master",
       "GUID": "{B22B8F69-015E-4A85-B8EF-A2F0A4E8D1FC}",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "485024389"
-        }
-       ]
-      },
       "AuxBusRefs": [
        {
         "Id": "4125012149",
@@ -1236,11 +1178,6 @@
         {
          "Id": "945211497"
         }
-       ],
-       "ShareSets": [
-        {
-         "Id": "485024389"
-        }
        ]
       }
      },
@@ -1260,14 +1197,7 @@
       "Id": "4287995521",
       "Name": "PLYR Feedback",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\PLYR Master\\PLYR Feedback",
-      "GUID": "{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "485024389"
-        }
-       ]
-      }
+      "GUID": "{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}"
      }
     ],
     "AuxBusses": [
@@ -1275,14 +1205,7 @@
       "Id": "980603520",
       "Name": "REV",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
-      "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}",
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "485024389"
-        }
-       ]
-      }
+      "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
      },
      {
       "Id": "1641293181",
@@ -1291,9 +1214,6 @@
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
       "PluginRefs": {
        "ShareSets": [
-        {
-         "Id": "485024389"
-        },
         {
          "Id": "1782142158"
         }
@@ -1316,9 +1236,6 @@
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "485024389"
-        },
-        {
          "Id": "1842579981"
         }
        ]
@@ -1339,9 +1256,6 @@
       "GUID": "{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}",
       "PluginRefs": {
        "ShareSets": [
-        {
-         "Id": "485024389"
-        },
         {
          "Id": "3059984139"
         }
@@ -1365,11 +1279,6 @@
        "Custom": [
         {
          "Id": "544066397"
-        }
-       ],
-       "ShareSets": [
-        {
-         "Id": "485024389"
         }
        ]
       },
@@ -1550,32 +1459,6 @@
      }
     ],
     "SwitchGroups": [
-     {
-      "Id": "524731881",
-      "Name": "AmbBiomeType",
-      "ObjectPath": "\\Switches\\AmbienceSwitches\\AmbBiomeType",
-      "GUID": "{5B10E42B-0908-4108-AA6C-167CED4078D5}",
-      "Switches": [
-       {
-        "Id": "315106662",
-        "Name": "CaveAmb",
-        "ObjectPath": "\\Switches\\AmbienceSwitches\\AmbBiomeType\\CaveAmb",
-        "GUID": "{ED2B295B-B79E-4052-82D7-4EE5DB0E0BBC}"
-       },
-       {
-        "Id": "887347181",
-        "Name": "VillageAmb",
-        "ObjectPath": "\\Switches\\AmbienceSwitches\\AmbBiomeType\\VillageAmb",
-        "GUID": "{0850F707-F78B-4F5E-9519-A7CAAEFFA71A}"
-       },
-       {
-        "Id": "1519512320",
-        "Name": "MountainAmb",
-        "ObjectPath": "\\Switches\\AmbienceSwitches\\AmbBiomeType\\MountainAmb",
-        "GUID": "{A4AFF0DE-5F41-4B08-AEFC-DACFEA9C64EE}"
-       }
-      ]
-     },
      {
       "Id": "1462722741",
       "Name": "PlayerMovementSwitch",
@@ -2078,7 +1961,7 @@
     "Type": "Bus",
     "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
     "Language": "SFX",
-    "Hash": "{124A4F43-C1A9-7759-A3B5-B625ED6B87DC}",
+    "Hash": "{86473F52-6418-380F-8ECD-8ADE324B1E44}",
     "ObjectPath": "REV_LargeRoom",
     "ShortName": "REV_LargeRoom",
     "Path": "Bus/REV_LargeRoom.bnk",
@@ -2095,14 +1978,6 @@
     ],
     "Plugins": {
      "ShareSets": [
-      {
-       "Id": "485024389",
-       "Name": "MeterGain",
-       "ObjectPath": "\\Effects\\Default Work Unit\\MeterGain",
-       "GUID": "{3FD630AC-8722-4E18-AE3F-FA326DA3C781}",
-       "LibName": "Wwise Gain",
-       "LibId": "9109507"
-      },
       {
        "Id": "1782142158",
        "Name": "DistantBuilding_MicsFar",
@@ -2126,9 +2001,6 @@
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
       "PluginRefs": {
        "ShareSets": [
-        {
-         "Id": "485024389"
-        },
         {
          "Id": "1782142158"
         }
@@ -2187,20 +2059,12 @@
     "Type": "Bus",
     "GUID": "{DEFD7C69-35F1-4735-B101-17C49C0196D3}",
     "Language": "SFX",
-    "Hash": "{C5B8C623-FE5D-D0EB-C009-189FBCAE343A}",
+    "Hash": "{A12D2F76-93E8-CCB4-66E4-4690545D6660}",
     "ObjectPath": "Early_Reflections",
     "ShortName": "Early_Reflections",
     "Path": "Bus/Early_Reflections.bnk",
     "Plugins": {
      "ShareSets": [
-      {
-       "Id": "485024389",
-       "Name": "MeterGain",
-       "ObjectPath": "\\Effects\\Default Work Unit\\MeterGain",
-       "GUID": "{3FD630AC-8722-4E18-AE3F-FA326DA3C781}",
-       "LibName": "Wwise Gain",
-       "LibId": "9109507"
-      },
       {
        "Id": "1842579981",
        "Name": "Reflect_Simplified",
@@ -2219,9 +2083,6 @@
       "GUID": "{DEFD7C69-35F1-4735-B101-17C49C0196D3}",
       "PluginRefs": {
        "ShareSets": [
-        {
-         "Id": "485024389"
-        },
         {
          "Id": "1842579981"
         }
@@ -2243,7 +2104,7 @@
     "Type": "Event",
     "GUID": "{18C2192F-4C95-4001-A9A0-979E3F100C3A}",
     "Language": "SFX",
-    "Hash": "{F59F6536-DDAA-3CFA-591D-EB2569301E72}",
+    "Hash": "{413B2A38-0C6B-7F67-6036-5C76840528FF}",
     "ObjectPath": "SX_player_slide",
     "ShortName": "SX_player_slide",
     "Path": "Event/SX_player_slide.bnk",
@@ -2258,28 +2119,6 @@
       "CachePath": "SFX/Placeholders/player_slide_97A43206.wem"
      }
     ],
-    "Plugins": {
-     "Custom": [
-      {
-       "Id": "514239598",
-       "Name": "Time Stretch (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_slide\\Time Stretch (Custom)",
-       "GUID": "{ECB105AF-E4C5-4846-8A85-238BD6B1DEB1}",
-       "LibName": "Wwise Time Stretch",
-       "LibId": "8519683"
-      }
-     ],
-     "ShareSets": [
-      {
-       "Id": "2656259783",
-       "Name": "PA_Announcement1",
-       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\PA_Announcement1",
-       "GUID": "{65E0ACE4-B404-4485-87A4-5907277D9858}",
-       "LibName": "Wwise Matrix Reverb",
-       "LibId": "7536643"
-      }
-     ]
-    },
     "Events": [
      {
       "Id": "1882419246",
@@ -2291,27 +2130,7 @@
        {
         "Id": "129424093"
        }
-      ],
-      "PluginRefs": {
-       "Custom": [
-        {
-         "Id": "514239598"
-        }
-       ],
-       "ShareSets": [
-        {
-         "Id": "2656259783"
-        }
-       ]
-      }
-     }
-    ],
-    "GameParameters": [
-     {
-      "Id": "2653406601",
-      "Name": "RTPC_PlayerSpeed",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerSpeed",
-      "GUID": "{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"
+      ]
      }
     ]
    },
@@ -2490,7 +2309,7 @@
     "Type": "Bus",
     "GUID": "{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}",
     "Language": "SFX",
-    "Hash": "{B5B4F536-8991-5CE8-0D81-904F803CF00A}",
+    "Hash": "{6851C3DA-F654-BEFB-340D-7641263079BF}",
     "ObjectPath": "REV_Cave",
     "ShortName": "REV_Cave",
     "Path": "Bus/REV_Cave.bnk",
@@ -2507,14 +2326,6 @@
     ],
     "Plugins": {
      "ShareSets": [
-      {
-       "Id": "485024389",
-       "Name": "MeterGain",
-       "ObjectPath": "\\Effects\\Default Work Unit\\MeterGain",
-       "GUID": "{3FD630AC-8722-4E18-AE3F-FA326DA3C781}",
-       "LibName": "Wwise Gain",
-       "LibId": "9109507"
-      },
       {
        "Id": "3059984139",
        "Name": "Tunnel",
@@ -2538,9 +2349,6 @@
       "GUID": "{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}",
       "PluginRefs": {
        "ShareSets": [
-        {
-         "Id": "485024389"
-        },
         {
          "Id": "3059984139"
         }
@@ -3209,7 +3017,7 @@
     "Type": "Bus",
     "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}",
     "Language": "SFX",
-    "Hash": "{166BE146-3B72-DBF2-E368-96682A0F475B}",
+    "Hash": "{0EF0A0A1-7931-538A-8307-FCA57BB099F9}",
     "ObjectPath": "REV_SmallRoom",
     "ShortName": "REV_SmallRoom",
     "Path": "Bus/REV_SmallRoom.bnk",
@@ -3223,16 +3031,6 @@
        "LibName": "Wwise Matrix Reverb",
        "LibId": "7536643"
       }
-     ],
-     "ShareSets": [
-      {
-       "Id": "485024389",
-       "Name": "MeterGain",
-       "ObjectPath": "\\Effects\\Default Work Unit\\MeterGain",
-       "GUID": "{3FD630AC-8722-4E18-AE3F-FA326DA3C781}",
-       "LibName": "Wwise Gain",
-       "LibId": "9109507"
-      }
      ]
     },
     "AuxBusses": [
@@ -3245,11 +3043,6 @@
        "Custom": [
         {
          "Id": "544066397"
-        }
-       ],
-       "ShareSets": [
-        {
-         "Id": "485024389"
         }
        ]
       },
@@ -3265,6 +3058,6 @@
     ]
    }
   ],
-  "FileHash": "{FA3BE72C-019A-1561-AF63-02646856F51E}"
+  "FileHash": "{AA4C491B-5818-DFCD-22FD-9DE838D99357}"
  }
 }
