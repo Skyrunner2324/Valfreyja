@@ -154,6 +154,10 @@
 									</Playlist>
 								</MusicPlaylistContainer>
 								<MusicPlaylistContainer Name="Sky_Reveal_Playlist Container" ID="{10E91B5A-47FB-4143-9B56-B84D03D561C4}" ShortID="49307825">
+									<PropertyList>
+										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="Tempo" Type="Real64" Value="174"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -162,6 +166,92 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<MusicSegment Name="Sky_Reveal_Alpha" ID="{AD05AB71-F1ED-4485-A334-4F01ACC860B1}" ShortID="248633425">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="52068.9569160998"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="Sky_Reveal_Alpha" ID="{96BF8ABE-8FF8-4C1A-883A-2313861D4098}" ShortID="499372795">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Sky_Reveal_Alpha" ID="{E30FD910-015F-4F01-8AB3-5EEBA507029A}">
+															<Language>SFX</Language>
+															<AudioFile>Music\Sky_Reveal_Alpha.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="370767073"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{75C334CD-8657-4F79-8059-3BB5423BEF83}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{35C25C93-3A9F-4749-A4BA-36DA66B9D140}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="Sky_Reveal_Alpha" ID="{ED701192-903F-4DF8-BF32-FA5394049E7A}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="52068.9569160998"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="Sky_Reveal_Alpha" ID="{E30FD910-015F-4F01-8AB3-5EEBA507029A}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{74B8BD07-7862-467D-8B6C-0D29B8943EA1}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{AF2DCDBA-8BA4-4505-A721-BE4BA9EF638F}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="52068.9569160998"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+									</ChildrenList>
 									<TransitionList>
 										<MusicTransition Name="Root" ID="{60663B76-693F-411C-8280-2223E1919A51}">
 											<PropertyList>
@@ -176,7 +266,383 @@
 										</MusicTransition>
 									</TransitionList>
 									<Playlist>
-										<MusicPlaylistItem Name="" ID="{A7CD7AC5-B6FC-4DA7-974A-8CFC2CEBE0F0}" ShortID="355958398"/>
+										<MusicPlaylistItem Name="" ID="{A7CD7AC5-B6FC-4DA7-974A-8CFC2CEBE0F0}" ShortID="355958398">
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{C59ABD9F-6AB0-4309-B002-3ED580577E83}" ShortID="166467211">
+													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Sky_Reveal_Alpha" ID="{AD05AB71-F1ED-4485-A334-4F01ACC860B1}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Playlist>
+								</MusicPlaylistContainer>
+								<MusicPlaylistContainer Name="Sky_Tuto_Playlist Container" ID="{3BB1C777-7C91-4CDB-AF16-E3C59DF44874}" ShortID="146348654">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicSegment Name="Sky_Tuto_Alpha" ID="{2265904B-B6C7-4CD1-ADB9-2EBD985EB220}" ShortID="934294168">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="44137.9375"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="Sky_Tuto_Alpha" ID="{41DC3A9A-C27A-40C0-AD90-4FDBD81EFF5A}" ShortID="100647911">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Sky_Tuto_Alpha" ID="{2D3FFE88-244F-4D1D-BEBE-841930894D46}">
+															<Language>SFX</Language>
+															<AudioFile>Music\Sky_Tuto_Alpha.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="844212876"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{C6219A70-919A-404A-87FF-C2F3BDA95A0A}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{3BE7CE9C-0BD6-406E-8258-10AA07F9985E}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="Sky_Tuto_Alpha" ID="{9C38F90D-21DF-4121-9802-1B0229F7C36C}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="44137.9375"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="Sky_Tuto_Alpha" ID="{2D3FFE88-244F-4D1D-BEBE-841930894D46}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{9E220347-B4BF-4A3E-A914-14B166C7E5E4}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{74B9D34D-CDBD-41C0-ACEC-1738EB7C0E5A}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="44137.9375"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{7AA9CE60-BD1B-483C-875F-5C850EC8F531}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{21997622-49EB-47DF-8521-CA04ADAF194A}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<Playlist>
+										<MusicPlaylistItem Name="" ID="{98953014-CAD4-42CB-8D25-49691615628B}" ShortID="443629783">
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{7BAA5A36-53E4-462C-B17D-50B972150283}" ShortID="398458196">
+													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Sky_Tuto_Alpha" ID="{2265904B-B6C7-4CD1-ADB9-2EBD985EB220}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Playlist>
+								</MusicPlaylistContainer>
+								<MusicPlaylistContainer Name="Sky_Explo_Playlist Container" ID="{8E3E205B-DCB1-42EC-941F-C5A19010942B}" ShortID="493117652">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicSegment Name="Sky Freyja v4" ID="{24FEE01A-3FD3-4F2F-8AF8-059D3C74D528}" ShortID="934923965">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="121379.3125"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="Sky Freyja v4" ID="{283CDC7C-3544-4E78-9BFB-24475AF623C6}" ShortID="847066071">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Sky Freyja v4" ID="{658E7F5A-2286-468D-88DD-C0DE359F54A8}">
+															<Language>SFX</Language>
+															<AudioFile>Music\Sky Freyja v4.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="776551369"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{6528B65F-AFE2-492F-BDA9-CDDA86DCF63A}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{D88DB34F-4F15-490B-AE79-0E93FAE7CC68}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="Sky Freyja v4" ID="{FD7643B6-FA1E-4136-8092-575C3C975E11}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="121379.3125"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="Sky Freyja v4" ID="{658E7F5A-2286-468D-88DD-C0DE359F54A8}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{EA7AA97E-40DB-4D6A-AAF5-0AC725ED3A60}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{8A357C6B-71A5-4B76-B287-1186F435FDFB}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="121379.3125"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{63C8A37F-1F20-4B20-B47A-AF7D51983F60}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{2FB8A9AF-876D-49F3-9AA2-401C45EE91EB}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<Playlist>
+										<MusicPlaylistItem Name="" ID="{7C7E053B-1D3E-447C-96C5-BA695AE850DC}" ShortID="1048598989">
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{D76E0CFB-C66C-4094-9377-A773657C08E9}" ShortID="173753340">
+													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Sky Freyja v4" ID="{24FEE01A-3FD3-4F2F-8AF8-059D3C74D528}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Playlist>
+								</MusicPlaylistContainer>
+								<MusicPlaylistContainer Name="Sky_Buildup_Playlist Container" ID="{4C802EC2-C505-4615-952C-CE00D093EB51}" ShortID="250883403">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicSegment Name="145_Techno Arena_V2" ID="{7F8A69D8-917D-4B2F-B82C-4DFD443D5D00}" ShortID="643951183">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="232995.6875"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="145_Techno Arena_V2" ID="{C8C7A219-5B84-4F83-8D4A-50CE14E02696}" ShortID="219277638">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="145_Techno Arena_V2" ID="{8122A3BF-528F-4A2D-BEFB-35264EB7E0ED}">
+															<Language>SFX</Language>
+															<AudioFile>Music\145_Techno Arena_V2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="267356786"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{B837F4F5-749E-4CB8-AB07-F313248C853C}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{A07AEE1B-FA1C-4E70-B3BB-CA3470E5094C}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="145_Techno Arena_V2" ID="{0569754C-BF34-4647-B3FD-E5AFA09970B4}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="232995.6875"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="145_Techno Arena_V2" ID="{8122A3BF-528F-4A2D-BEFB-35264EB7E0ED}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{B96D7403-8F18-43B1-BF39-89580E2FCE36}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{6F44C776-A42F-4574-87AA-B5A6FAC474C6}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="232995.6875"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{435BB162-B6AC-4923-8B96-18960C87157D}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{077C8C7B-A825-4992-B82A-CF389D65E11D}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<Playlist>
+										<MusicPlaylistItem Name="" ID="{749D1DB6-BC28-4FD5-A9D0-4DE82E275BFE}" ShortID="573964144">
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{E434010A-08CF-46B8-9D72-0233B5BFCA03}" ShortID="519176480">
+													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="145_Techno Arena_V2" ID="{7F8A69D8-917D-4B2F-B82C-4DFD443D5D00}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
 									</Playlist>
 								</MusicPlaylistContainer>
 							</ChildrenList>
@@ -202,7 +668,7 @@
 										<PathElementRef Name="Reveal" ID="{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"/>
 									</Path>
 									<AudioNodeInfo>
-										<NoObject Platform="Linked"/>
+										<AudioNodeRef Name="Sky_Reveal_Playlist Container" ID="{10E91B5A-47FB-4143-9B56-B84D03D561C4}" WorkUnitID="{97B9C5CD-8975-4396-B94B-6580A54082A0}" Platform="Linked"/>
 									</AudioNodeInfo>
 								</Entry>
 								<Entry>
@@ -210,7 +676,7 @@
 										<PathElementRef Name="Buildup" ID="{39C32C1D-49CE-4283-8A04-C9C272E282DE}"/>
 									</Path>
 									<AudioNodeInfo>
-										<NoObject Platform="Linked"/>
+										<AudioNodeRef Name="Sky_Buildup_Playlist Container" ID="{4C802EC2-C505-4615-952C-CE00D093EB51}" WorkUnitID="{97B9C5CD-8975-4396-B94B-6580A54082A0}" Platform="Linked"/>
 									</AudioNodeInfo>
 								</Entry>
 								<Entry>
@@ -226,7 +692,7 @@
 										<PathElementRef Name="Explo" ID="{1FE92F27-401B-44A3-BFC0-65F192492AAB}"/>
 									</Path>
 									<AudioNodeInfo>
-										<NoObject Platform="Linked"/>
+										<AudioNodeRef Name="Sky_Explo_Playlist Container" ID="{8E3E205B-DCB1-42EC-941F-C5A19010942B}" WorkUnitID="{97B9C5CD-8975-4396-B94B-6580A54082A0}" Platform="Linked"/>
 									</AudioNodeInfo>
 								</Entry>
 								<Entry>
@@ -242,7 +708,7 @@
 										<PathElementRef Name="Tuto" ID="{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"/>
 									</Path>
 									<AudioNodeInfo>
-										<NoObject Platform="Linked"/>
+										<AudioNodeRef Name="Sky_Tuto_Playlist Container" ID="{3BB1C777-7C91-4CDB-AF16-E3C59DF44874}" WorkUnitID="{97B9C5CD-8975-4396-B94B-6580A54082A0}" Platform="Linked"/>
 									</AudioNodeInfo>
 								</Entry>
 							</EntryList>
