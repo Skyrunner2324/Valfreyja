@@ -38,12 +38,12 @@ void ASkyrunnerCharacter2::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 
 void ASkyrunnerCharacter2::FellOutOfWorld(const UDamageType& dmgType)
 {
-	DebugLogRed(TEXT("Fell out of world : calling implementation"));
+	//DebugLogRed(TEXT("Fell out of world : calling implementation"));
 	FellOutOfWorldImpl(&dmgType);
 }
 
 void ASkyrunnerCharacter2::FellOutOfWorldImpl_Implementation(const UDamageType* dmgType)
 {
-	DebugLogRed(TEXT("Fell out of world : default implementation"));
+	//DebugLogRed(TEXT("Fell out of world : default implementation"));
 }
 

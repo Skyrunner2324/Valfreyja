@@ -6,6 +6,7 @@
 
 #include "Kismet/GameplayStatics.h"
 #include "Engine/LevelStreamingDynamic.h"
+#include "Engine/LevelStreaming.h"
 
 #include "../SkyrunnerGameMode.h"
 
@@ -13,29 +14,66 @@
 
 
 
+class PendingLoadTask : public FNonAbandonableTask
+{
+	friend class FAsyncTask<PendingLoadTask>;
+
+private:
+	ULevelStreamingDynamic* pendingLoadMap = nullptr;
+
+public:
+	PendingLoadTask(ULevelStreamingDynamic* pendingLoadMap)
+		: pendingLoadMap(pendingLoadMap) {}
+
+	void DoWork()
+	{
+		DebugLog(15.f, FColor::Cyan, TEXT("Pending"));
+		while (!pendingLoadMap->IsLevelVisible() &&
+			pendingLoadMap->GetCurrentState() != ULevelStreaming::ECurrentState::LoadedVisible)
+		{
+		}
+		DebugLog(15.f, FColor::Orange, TEXT("Finished loading"));
+
+		// TODO : manually call OnLoadCompleted and OnLevelShown events
+	}
+
+	FORCEINLINE TStatId GetStatId() const
+	{
+		RETURN_QUICK_DECLARE_CYCLE_STAT(PendingLoadTask, STATGROUP_ThreadPoolAsyncTasks);
+	}
+};
+
+
+
 void UMapLoader::LoadMapAsyncFromName(const FName levelName, FLoadCompleted completed)
 {
-	DebugLogRed(TEXT("Load from name"));
-	//throw;
+	//DebugLogRed(TEXT("Load from name"));
+
+	// TODO
 }
 
-void UMapLoader::LoadMapAsync(const TSoftObjectPtr<UWorld> level,
+ULevelStreamingDynamic* UMapLoader::LoadMapAsync(const TSoftObjectPtr<UWorld> level,
+	const FTransform levelTransform,
 	FLoadCompleted OnLoadCompleted,
 	FLevelShown OnLevelShown,
 	const bool bResetUponCompletion,
 	const FString playerStartTag)
 {
-	DebugLogRed(TEXT("Load from soft object reference"));
+	//DebugLogRed(TEXT("Load from soft object reference"));
 
 	auto world = GEngine->GameViewport->GetWorld();
 
-
+	
 	// TODO : add a delay to test
 	bool bSuccess = false;
 	auto map = ULevelStreamingDynamic::LoadLevelInstanceBySoftObjectPtr(world,
 		level,
-		FTransform(),
+		levelTransform,
 		bSuccess);
+
+
+	auto task = new FAutoDeleteAsyncTask<PendingLoadTask>(map);
+	task->StartBackgroundTask();
 
 
 	if (OnLoadCompleted.IsBound())
@@ -44,15 +82,11 @@ void UMapLoader::LoadMapAsync(const TSoftObjectPtr<UWorld> level,
 		map->OnLevelShown.Add(OnLevelShown);
 
 
-	FOnSuccess onSuccess;
-	onSuccess.BindLambda([&]() {
-		if (bSuccess)
-			DebugLogGreen(TEXT("Successfully loaded"));
-		else
-			DebugLogRed(TEXT("Load failed"));
-		});
-	// TODO : find a way to bind a lambda to the OnLevelLoaded event
-	//map->OnLevelLoaded.Add(onSuccess);
+	// print function call result
+	if (bSuccess)
+		DebugLogGreen(TEXT("Call to LoadLevelInstance success"));
+	else
+		DebugLogRed(TEXT("Call to LoadLevelInstance failed"));
 
 
 	// whether to reset directly after load or let the user reset
@@ -70,4 +104,11 @@ void UMapLoader::LoadMapAsync(const TSoftObjectPtr<UWorld> level,
 		// TODO : find a way to bind a lambda to the OnLevelShown event
 		//map->OnLevelShown.Add(resetOnSuccess);
 	}
+
+	return map;
+}
+
+void ULevelStreamingDynamicWithPostLoad::PostLoad()
+{
+	DebugLogRed(TEXT("PostLoad"));
 }

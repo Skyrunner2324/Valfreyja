@@ -8,11 +8,11 @@
 
 void ASkyrunnerController::FellOutOfWorld(const UDamageType& dmgType)
 {
-	DebugLogRed(TEXT("Fell out of world : calling implementation"));
+	//DebugLogRed(TEXT("Fell out of world : calling implementation"));
 	FellOutOfWorldImpl(&dmgType);
 }
 
 void ASkyrunnerController::FellOutOfWorldImpl_Implementation(const UDamageType* dmgType)
 {
-	DebugLogRed(TEXT("Fell out of world : default implementation"));
+	//DebugLogRed(TEXT("Fell out of world : default implementation"));
 }

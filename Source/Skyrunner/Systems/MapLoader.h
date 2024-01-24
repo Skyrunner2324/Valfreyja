@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "Engine/LevelStreamingDynamic.h"
 #include "MapLoader.generated.h"
 
 
@@ -19,6 +20,18 @@ DECLARE_DYNAMIC_DELEGATE(FLevelShown);
 DECLARE_DELEGATE(FOnSuccess);
 
 
+UCLASS()
+class SKYRUNNER_API ULevelStreamingDynamicWithPostLoad : public ULevelStreamingDynamic
+{
+	GENERATED_BODY()
+
+private:
+	virtual void PostLoad() override;
+
+public:
+};
+
+
 /**
  * 
  */
@@ -32,7 +45,8 @@ public:
 	static void LoadMapAsyncFromName(const FName levelName, FLoadCompleted completed);
 
 	UFUNCTION(BlueprintCallable)
-	static void LoadMapAsync(const TSoftObjectPtr<UWorld> level,
+	static ULevelStreamingDynamic* LoadMapAsync(const TSoftObjectPtr<UWorld> level,
+		const FTransform levelTransform,
 		FLoadCompleted OnLoadCompleted,
 		FLevelShown OnLevelShown,
 		const bool bResetUponCompletion = true,
