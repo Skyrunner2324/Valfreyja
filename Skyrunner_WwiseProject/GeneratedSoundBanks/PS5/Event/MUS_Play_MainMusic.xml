@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{311F033C-EE21-2BB1-C7F1-0B53816F566A}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{D18999EF-941C-B15D-B970-961B94A6D187}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -32,6 +32,11 @@
 					<CachePath>SFX/Music/Sky_Tuto_Alpha_073B4D0C.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1008402193" Name="Low_Pass_20KHz" ObjectPath="\Effects\Factory Effects\Parametric EQ\Low Pass Filters\Low_Pass_20KHz" GUID="{830124FB-B9D5-4AE8-846E-E94A74652666}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="3441789682" Name="MUS_Play_MainMusic" ObjectPath="\Events\Music\MUS_Play_MainMusic" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" DurationType="Infinite">
 					<AuxBusRefs>
@@ -43,6 +48,11 @@
 							<MediaRefs>
 								<MediaRef Id="370767073"/>
 							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1008402193"/>
+								</ShareSets>
+							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="2149848048" GUID="{39C32C1D-49CE-4283-8A04-C9C272E282DE}"/>
@@ -68,6 +78,17 @@
 								<MediaRef Id="844212876"/>
 							</MediaRefs>
 						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1419563690" Id="348963605" GUID="{1A0075FD-1C91-4DCD-B4AC-2029A2632B3A}"/>
+							<MediaRefs>
+								<MediaRef Id="370767073"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1008402193"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 			</Events>
@@ -86,5 +107,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{95CB1265-3644-C073-EB6C-47274E1E2E48}</FileHash>
+	<FileHash>{F46EED42-6FF5-F388-694A-3E21C8793007}</FileHash>
 </SoundBanksInfo>

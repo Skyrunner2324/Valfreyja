@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{311F033C-EE21-2BB1-C7F1-0B53816F566A}",
+    "Hash": "{D18999EF-941C-B15D-B970-961B94A6D187}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
@@ -61,6 +61,18 @@
       "CachePath": "SFX/Music/Sky_Tuto_Alpha_073B4D0C.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3441789682",
@@ -88,7 +100,14 @@
          {
           "Id": "370767073"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "1008402193"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -141,6 +160,26 @@
           "Id": "844212876"
          }
         ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1419563690",
+         "Id": "348963605",
+         "GUID": "{1A0075FD-1C91-4DCD-B4AC-2029A2632B3A}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "370767073"
+         }
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "1008402193"
+          }
+         ]
+        }
        }
       ]
      }
@@ -199,6 +238,6 @@
     ]
    }
   ],
-  "FileHash": "{ADA16C7B-5B37-6B28-BBEC-A814FB4530EB}"
+  "FileHash": "{52A770D1-72C4-A1BD-E81A-FAE71AE67F25}"
  }
 }
