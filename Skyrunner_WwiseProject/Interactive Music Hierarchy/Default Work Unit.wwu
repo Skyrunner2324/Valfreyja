@@ -1056,6 +1056,7 @@
 											<ChildrenList>
 												<MusicPlaylistItem Name="" ID="{547C3DC0-569F-41F6-A4E4-86C07C5A7342}" ShortID="799276203">
 													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
 														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 													</PropertyList>
 													<SegmentRef Name="Arena Buildup" ID="{0C7D73B1-B0F0-4A46-B41D-B7A9CF374672}"/>
@@ -1080,7 +1081,7 @@
 									<ChildrenList>
 										<MusicSegment Name="Arena Phase 1" ID="{1380DF98-5F51-438A-A9B3-C41E112224AC}" ShortID="751653500">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="94353.872721965"/>
+												<Property Name="EndPosition" Type="Real64" Value="95172.4137931034"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1138,6 +1139,7 @@
 																								<Property Name="EndTrimOffset" Type="Real64" Value="94344.8275862069"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																								<Property Name="PlayAt" Type="Real64" Value="413.793103448276"/>
 																							</PropertyList>
 																							<AudioSourceRef Name="145-Arena_Phase 1- synths" ID="{D443D5AD-C183-494F-A236-65B21490A8E6}"/>
 																							<PropertyCurveList>
@@ -1254,11 +1256,269 @@
 																					<Local>
 																						<MusicClip Name="145-Arena_Phase 1- kick" ID="{F471935E-E3B3-47E3-8D08-495C4F752588}">
 																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="12724.1379310345"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																								<Property Name="PlayAt" Type="Real64" Value="413.793103448276"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="145-Arena_Phase 1- kick" ID="{B7C469B5-9980-470D-B512-1ADCE06F8073}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Highpass">
+																									<Curve Name="" ID="{DBE79016-E4B1-4C6F-B3D8-A59F3D8140C3}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>12.72414</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Lowpass">
+																									<Curve Name="" ID="{11F8D513-347F-4353-BA22-B02EB6511CA2}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>12.72414</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{FC686244-244A-4260-97A6-53531FF1C4EA}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>12.72414</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="145-Arena_Phase 1- kick" ID="{BCAE6762-2B54-49BC-8DBF-0AEEE096B45E}">
+																							<PropertyList>
+																								<Property Name="BeginTrimOffset" Type="Real64" Value="12724.1379310345"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="13241.3793103448"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																								<Property Name="PlayAt" Type="Real64" Value="413.793103448276"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="145-Arena_Phase 1- kick" ID="{B7C469B5-9980-470D-B512-1ADCE06F8073}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Highpass">
+																									<Curve Name="" ID="{66B25E6B-0F24-4F65-8CD3-1039FF34691D}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>12.7241379310345</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>13.24138</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Lowpass">
+																									<Curve Name="" ID="{9CCC7AB3-21BC-478C-8E7C-96A86AD807F6}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>12.7241379310345</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>13.24138</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{5FD526E4-200B-44F1-955F-C0D770EA83EA}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>12.7241379310345</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>13.24138</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="145-Arena_Phase 1- kick" ID="{D9F2E9D6-F0D2-4279-ABF3-59F2B61A24C9}">
+																							<PropertyList>
+																								<Property Name="BeginTrimOffset" Type="Real64" Value="13241.3793103448"/>
 																								<Property Name="EndTrimOffset" Type="Real64" Value="92840.5208333333"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																								<Property Name="PlayAt" Type="Real64" Value="413.793103448276"/>
 																							</PropertyList>
 																							<AudioSourceRef Name="145-Arena_Phase 1- kick" ID="{B7C469B5-9980-470D-B512-1ADCE06F8073}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="Pre Entry" ID="{3FC7670B-9393-44BC-8744-C58990932E27}" ShortID="264695200">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="145-Arena_Phase 1- kick" ID="{7741058F-61BA-42CF-A536-29B0B50EDF93}">
+															<Language>SFX</Language>
+															<AudioFile>Music\145-Arena_Phase 1- kick.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="236516060"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{E135E4EA-2585-4311-A739-CE105000462D}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{6E90A03B-A20F-4DAE-8346-039347FDFCD2}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="145-Arena_Phase 1- kick" ID="{97F0AEB7-8248-4637-B2F6-37C6C3427D99}">
+																							<PropertyList>
+																								<Property Name="BeginTrimOffset" Type="Real64" Value="12827.5862068965"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="13241.3793103448"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																								<Property Name="PlayAt" Type="Real64" Value="-12827.5862068965"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="145-Arena_Phase 1- kick" ID="{7741058F-61BA-42CF-A536-29B0B50EDF93}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Highpass">
+																									<Curve Name="" ID="{EA0B5589-2B8F-4F9F-8456-7C06A28D05B1}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>12.82759</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>13.24138</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Lowpass">
+																									<Curve Name="" ID="{790E3C90-4051-4CC6-9777-BB5165DC3715}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>12.82759</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>13.24138</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{0B3C1AF4-352B-4D0B-BB8F-EE159DC2FDFC}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>12.82759</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>13.24138</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -1275,7 +1535,11 @@
 												<ObjectList Name="Cues">
 													<Reference>
 														<Local>
-															<MusicCue Name="Entry Cue" ID="{B1B2E96D-61F0-491E-8C1E-5FC7AA0C1115}"/>
+															<MusicCue Name="Entry Cue" ID="{B1B2E96D-61F0-491E-8C1E-5FC7AA0C1115}">
+																<PropertyList>
+																	<Property Name="TimeMs" Type="Real64" Value="413.793103448276"/>
+																</PropertyList>
+															</MusicCue>
 														</Local>
 													</Reference>
 													<Reference>
@@ -1283,7 +1547,7 @@
 															<MusicCue Name="Exit Cue" ID="{953276A2-614B-4746-B936-B46555899974}">
 																<PropertyList>
 																	<Property Name="CueType" Type="int16" Value="1"/>
-																	<Property Name="TimeMs" Type="Real64" Value="92689.6551724138"/>
+																	<Property Name="TimeMs" Type="Real64" Value="93103.448275862"/>
 																</PropertyList>
 															</MusicCue>
 														</Local>
