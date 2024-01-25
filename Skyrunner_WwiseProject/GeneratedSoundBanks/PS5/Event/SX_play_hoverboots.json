@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{762CAC2A-F01E-08BC-944B-3ECA04EF5E12}",
+    "Hash": "{61194D86-E2A2-4454-77D3-6D312BCF5EFF}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
@@ -23,14 +23,39 @@
       "ShortName": "Hoverboots\\hoverboots_on_rail_loop.wav",
       "Path": "Media/1056072145.wem",
       "CachePath": "SFX/Hoverboots/hoverboots_on_rail_loop_073B4D0C.wem"
+     },
+     {
+      "Id": "1066438421",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Hoverboots\\wallrunloop.wav",
+      "Path": "Media/1066438421.wem",
+      "CachePath": "SFX/Hoverboots/wallrunloop_3E3CC917.wem"
      }
     ],
     "Plugins": {
      "Custom": [
       {
+       "Id": "247448906",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots_Other\\Soundseed Wind\\Parametric EQ (Custom)",
+       "GUID": "{2078FFD5-FDF7-4C01-900C-742249BE40F6}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "268374027",
+       "Name": "Delay (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots_Other\\Soundseed Wind\\Delay (Custom)",
+       "GUID": "{700FD0B8-9B20-48B5-BE3E-EF4CE88526AC}",
+       "LibName": "Wwise Delay",
+       "LibId": "6946819"
+      },
+      {
        "Id": "666289254",
        "Name": "Soundseed Air Wind",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots_Switch\\Hoverboots_OnGround\\Soundseed Wind\\Soundseed Air Wind",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots_Other\\Soundseed Wind\\Soundseed Air Wind",
        "GUID": "{83767CC5-69B5-4564-8311-4A333A1B8AF9}",
        "LibName": "SoundSeed Air Wind",
        "LibId": "7798786"
@@ -44,76 +69,27 @@
       "ObjectPath": "\\Events\\Hoverboots\\Hoverboots\\SX_play_hoverboots",
       "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
       "DurationType": "Infinite",
-      "SwitchContainers": [
+      "MediaRefs": [
        {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1462722741",
-         "Id": "2043403997",
-         "GUID": "{37DD7533-473B-4644-905E-CEB116EB2545}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "1056072145"
-         }
-        ]
+        "Id": "1056072145"
        },
        {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1462722741",
-         "Id": "1050421051",
-         "GUID": "{11398057-44CF-49D9-86B9-602DE588AB2F}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "1056072145"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1462722741",
-         "Id": "906520813",
-         "GUID": "{8C01446A-44D4-4022-808A-0A29DB59D0F4}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "1056072145"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1462722741",
-         "Id": "2108779961",
-         "GUID": "{7232886A-CF99-4D7B-8D3F-9EE6543A6E43}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "1056072145"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1462722741",
-         "Id": "2528658256",
-         "GUID": "{FE8392A7-A0C0-4D8D-925E-68CC1666748E}",
-         "Default": "true"
-        },
-        "PluginRefs": {
-         "Custom": [
-          {
-           "Id": "666289254"
-          }
-         ]
-        }
+        "Id": "1066438421"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "247448906"
+        },
+        {
+         "Id": "268374027"
+        },
+        {
+         "Id": "666289254"
+        }
+       ]
+      }
      }
     ],
     "GameParameters": [
@@ -129,52 +105,9 @@
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerSpeed",
       "GUID": "{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"
      }
-    ],
-    "SwitchGroups": [
-     {
-      "Id": "1462722741",
-      "Name": "PlayerMovementSwitch",
-      "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch",
-      "GUID": "{827CE490-6004-4AAA-96C7-262E376A6054}",
-      "GameParameterRef": {
-       "Id": "1645844663"
-      },
-      "Switches": [
-       {
-        "Id": "906520813",
-        "Name": "Grap",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch\\Grap",
-        "GUID": "{8C01446A-44D4-4022-808A-0A29DB59D0F4}"
-       },
-       {
-        "Id": "1050421051",
-        "Name": "Air",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch\\Air",
-        "GUID": "{11398057-44CF-49D9-86B9-602DE588AB2F}"
-       },
-       {
-        "Id": "2043403997",
-        "Name": "Rail",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch\\Rail",
-        "GUID": "{37DD7533-473B-4644-905E-CEB116EB2545}"
-       },
-       {
-        "Id": "2108779961",
-        "Name": "Wall",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch\\Wall",
-        "GUID": "{7232886A-CF99-4D7B-8D3F-9EE6543A6E43}"
-       },
-       {
-        "Id": "2528658256",
-        "Name": "Ground",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch\\Ground",
-        "GUID": "{FE8392A7-A0C0-4D8D-925E-68CC1666748E}"
-       }
-      ]
-     }
     ]
    }
   ],
-  "FileHash": "{53C01AF6-A875-0B72-A442-452C04D08A12}"
+  "FileHash": "{299AF75F-1716-AF1E-6BB9-8FA2AA4E0E7D}"
  }
 }

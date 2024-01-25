@@ -10,30 +10,22 @@
     "Type": "Event",
     "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
     "Language": "SFX",
-    "Hash": "{F3DC3AFF-D606-C11C-0F1F-F8AAFECFF912}",
+    "Hash": "{EEE7F4AC-A863-C363-06C8-C4DAE85BE4FD}",
     "ObjectPath": "SX_player_land",
     "ShortName": "SX_player_land",
     "Path": "Event/SX_player_land.bnk",
-    "Media": [
-     {
-      "Id": "736240098",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Music\\B01- lead.wav",
-      "Path": "Media/736240098.wem",
-      "CachePath": "SFX/Music/B01- lead_073B4D0C.wem"
-     },
-     {
-      "Id": "1026811673",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Placeholders\\player_land.wav",
-      "Path": "Media/1026811673.wem",
-      "CachePath": "SFX/Placeholders/player_land_51E39951.wem"
-     }
-    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "416403271",
+       "Name": "Soundseed Air Woosh",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_landing\\Soundseed Air Woosh",
+       "GUID": "{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}",
+       "LibName": "SoundSeed Air Woosh",
+       "LibId": "7864322"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "357563848",
@@ -41,20 +33,19 @@
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_land",
       "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
       "DurationType": "OneShot",
-      "DurationMin": "2.445782",
-      "DurationMax": "2.445782",
-      "MediaRefs": [
-       {
-        "Id": "736240098"
-       },
-       {
-        "Id": "1026811673"
-       }
-      ]
+      "DurationMin": "0.1875",
+      "DurationMax": "0.3125",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "416403271"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{B6017D61-C222-60A7-BAC4-11598050D4BE}"
+  "FileHash": "{03BA8D31-CB76-63A2-7D2D-52915A8D2889}"
  }
 }

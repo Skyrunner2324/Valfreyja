@@ -212,7 +212,7 @@
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
 									<ValueList>
-										<Value>-22</Value>
+										<Value>-96</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -850,19 +850,26 @@
 											</ObjectLists>
 										</Bus>
 										<Bus Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}">
+											<PropertyList>
+												<Property Name="BypassEffect1" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Effect0">
 													<Custom CreatedFrom="{3C6B127B-9DAE-4879-A4ED-75DF209310EC}">
 														<Effect Name="Underwater_Echoes (Custom)" ID="{E99B9354-6E3C-40D3-B57E-B74097729115}" ShortID="945211497" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
 															<PropertyList>
-																<Property Name="DryLevel" Type="Real32" Value="-96"/>
+																<Property Name="DryLevel" Type="Real32" Value="-54"/>
 																<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
 																<Property Name="EnableFeedback" Type="bool" Value="True"/>
 																<Property Name="FilterFrequency" Type="Real32" Value="333"/>
 																<Property Name="FilterGain" Type="Real32" Value="7"/>
 																<Property Name="LeftCrossfeed" Type="Real32" Value="-3"/>
 																<Property Name="LeftDelayTime" Type="Real32" Value="0.11"/>
-																<Property Name="LeftFeedback" Type="Real32" Value="-19.1"/>
+																<Property Name="LeftFeedback" Type="Real32" Value="-16.8"/>
 																<Property Name="RightCrossfeed" Type="Real32" Value="-3"/>
 																<Property Name="RightDelayTime" Type="Real32" Value="0.12"/>
 																<Property Name="RightFeedback" Type="Real32" Value="-24.5"/>
@@ -977,6 +984,10 @@
 												<Reference Name="Effect1">
 													<Custom>
 														<Effect Name="Pitch Shifter (Custom)" ID="{33D57BB0-F3A5-4610-B197-20FDAEA0D225}" ShortID="365634587" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+															<PropertyList>
+																<Property Name="FilterFrequency" Type="Real32" Value="8805"/>
+																<Property Name="FilterGain" Type="Real32" Value="1.5"/>
+															</PropertyList>
 															<ObjectLists>
 																<ObjectList Name="RTPC">
 																	<Reference>
@@ -1002,13 +1013,13 @@
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>0.00627</XPos>
-																										<YPos>-53.07978</YPos>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
 																										<Flags>0</Flags>
 																									</Point>
 																									<Point>
 																										<XPos>1</XPos>
-																										<YPos>-2426.49007</YPos>
+																										<YPos>-830.40205</YPos>
 																										<Flags>37</Flags>
 																									</Point>
 																								</PointList>
@@ -1096,17 +1107,17 @@
 																				<PointList>
 																					<Point>
 																						<XPos>-1</XPos>
-																						<YPos>-47</YPos>
+																						<YPos>32</YPos>
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>0.00207</XPos>
+																						<XPos>-0</XPos>
 																						<YPos>-100</YPos>
 																						<Flags>0</Flags>
 																					</Point>
 																					<Point>
 																						<XPos>1</XPos>
-																						<YPos>-49</YPos>
+																						<YPos>50</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -1136,7 +1147,7 @@
 																				<PointList>
 																					<Point>
 																						<XPos>-1</XPos>
-																						<YPos>-6</YPos>
+																						<YPos>-3.05553</YPos>
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
@@ -1146,7 +1157,7 @@
 																					</Point>
 																					<Point>
 																						<XPos>1</XPos>
-																						<YPos>-6</YPos>
+																						<YPos>-2.01101</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>

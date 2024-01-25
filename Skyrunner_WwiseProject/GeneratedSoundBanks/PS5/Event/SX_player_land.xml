@@ -1,31 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{F3DC3AFF-D606-C11C-0F1F-F8AAFECFF912}">
+		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{EEE7F4AC-A863-C363-06C8-C4DAE85BE4FD}">
 			<ObjectPath>SX_player_land</ObjectPath>
 			<ShortName>SX_player_land</ShortName>
 			<Path>Event/SX_player_land.bnk</Path>
-			<Media>
-				<File Id="736240098" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Music\B01- lead.wav</ShortName>
-					<Path>Media/736240098.wem</Path>
-					<CachePath>SFX/Music/B01- lead_073B4D0C.wem</CachePath>
-				</File>
-				<File Id="1026811673" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\player_land.wav</ShortName>
-					<Path>Media/1026811673.wem</Path>
-					<CachePath>SFX/Placeholders/player_land_51E39951.wem</CachePath>
-				</File>
-			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="416403271" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_landing\Soundseed Air Woosh" GUID="{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+				</Custom>
+			</Plugins>
 			<Events>
-				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="2.445782" DurationMax="2.445782">
-					<MediaRefs>
-						<MediaRef Id="736240098"/>
-						<MediaRef Id="1026811673"/>
-					</MediaRefs>
+				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.1875" DurationMax="0.3125">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="416403271"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{316406D3-D37C-6B2B-9F8C-7EE38E33B77A}</FileHash>
+	<FileHash>{38DFBE95-BA2A-69F4-9835-77D4CB1C7701}</FileHash>
 </SoundBanksInfo>

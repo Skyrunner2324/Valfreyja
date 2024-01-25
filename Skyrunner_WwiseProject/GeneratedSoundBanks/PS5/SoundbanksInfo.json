@@ -55,30 +55,22 @@
     "Type": "Event",
     "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
     "Language": "SFX",
-    "Hash": "{F3DC3AFF-D606-C11C-0F1F-F8AAFECFF912}",
+    "Hash": "{EEE7F4AC-A863-C363-06C8-C4DAE85BE4FD}",
     "ObjectPath": "SX_player_land",
     "ShortName": "SX_player_land",
     "Path": "Event/SX_player_land.bnk",
-    "Media": [
-     {
-      "Id": "736240098",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Music\\B01- lead.wav",
-      "Path": "Media/736240098.wem",
-      "CachePath": "SFX/Music/B01- lead_073B4D0C.wem"
-     },
-     {
-      "Id": "1026811673",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Placeholders\\player_land.wav",
-      "Path": "Media/1026811673.wem",
-      "CachePath": "SFX/Placeholders/player_land_51E39951.wem"
-     }
-    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "416403271",
+       "Name": "Soundseed Air Woosh",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_landing\\Soundseed Air Woosh",
+       "GUID": "{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}",
+       "LibName": "SoundSeed Air Woosh",
+       "LibId": "7864322"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "357563848",
@@ -86,16 +78,15 @@
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_land",
       "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
       "DurationType": "OneShot",
-      "DurationMin": "2.445782",
-      "DurationMax": "2.445782",
-      "MediaRefs": [
-       {
-        "Id": "736240098"
-       },
-       {
-        "Id": "1026811673"
-       }
-      ]
+      "DurationMin": "0.1875",
+      "DurationMax": "0.3125",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "416403271"
+        }
+       ]
+      }
      }
     ]
    },
@@ -176,7 +167,7 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{762CAC2A-F01E-08BC-944B-3ECA04EF5E12}",
+    "Hash": "{61194D86-E2A2-4454-77D3-6D312BCF5EFF}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
@@ -189,14 +180,39 @@
       "ShortName": "Hoverboots\\hoverboots_on_rail_loop.wav",
       "Path": "Media/1056072145.wem",
       "CachePath": "SFX/Hoverboots/hoverboots_on_rail_loop_073B4D0C.wem"
+     },
+     {
+      "Id": "1066438421",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Hoverboots\\wallrunloop.wav",
+      "Path": "Media/1066438421.wem",
+      "CachePath": "SFX/Hoverboots/wallrunloop_3E3CC917.wem"
      }
     ],
     "Plugins": {
      "Custom": [
       {
+       "Id": "247448906",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots_Other\\Soundseed Wind\\Parametric EQ (Custom)",
+       "GUID": "{2078FFD5-FDF7-4C01-900C-742249BE40F6}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "268374027",
+       "Name": "Delay (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots_Other\\Soundseed Wind\\Delay (Custom)",
+       "GUID": "{700FD0B8-9B20-48B5-BE3E-EF4CE88526AC}",
+       "LibName": "Wwise Delay",
+       "LibId": "6946819"
+      },
+      {
        "Id": "666289254",
        "Name": "Soundseed Air Wind",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots_Switch\\Hoverboots_OnGround\\Soundseed Wind\\Soundseed Air Wind",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots_Other\\Soundseed Wind\\Soundseed Air Wind",
        "GUID": "{83767CC5-69B5-4564-8311-4A333A1B8AF9}",
        "LibName": "SoundSeed Air Wind",
        "LibId": "7798786"
@@ -210,76 +226,27 @@
       "ObjectPath": "\\Events\\Hoverboots\\Hoverboots\\SX_play_hoverboots",
       "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
       "DurationType": "Infinite",
-      "SwitchContainers": [
+      "MediaRefs": [
        {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1462722741",
-         "Id": "2043403997",
-         "GUID": "{37DD7533-473B-4644-905E-CEB116EB2545}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "1056072145"
-         }
-        ]
+        "Id": "1056072145"
        },
        {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1462722741",
-         "Id": "1050421051",
-         "GUID": "{11398057-44CF-49D9-86B9-602DE588AB2F}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "1056072145"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1462722741",
-         "Id": "906520813",
-         "GUID": "{8C01446A-44D4-4022-808A-0A29DB59D0F4}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "1056072145"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1462722741",
-         "Id": "2108779961",
-         "GUID": "{7232886A-CF99-4D7B-8D3F-9EE6543A6E43}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "1056072145"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1462722741",
-         "Id": "2528658256",
-         "GUID": "{FE8392A7-A0C0-4D8D-925E-68CC1666748E}",
-         "Default": "true"
-        },
-        "PluginRefs": {
-         "Custom": [
-          {
-           "Id": "666289254"
-          }
-         ]
-        }
+        "Id": "1066438421"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "247448906"
+        },
+        {
+         "Id": "268374027"
+        },
+        {
+         "Id": "666289254"
+        }
+       ]
+      }
      }
     ],
     "GameParameters": [
@@ -294,49 +261,6 @@
       "Name": "RTPC_PlayerSpeed",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerSpeed",
       "GUID": "{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"
-     }
-    ],
-    "SwitchGroups": [
-     {
-      "Id": "1462722741",
-      "Name": "PlayerMovementSwitch",
-      "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch",
-      "GUID": "{827CE490-6004-4AAA-96C7-262E376A6054}",
-      "GameParameterRef": {
-       "Id": "1645844663"
-      },
-      "Switches": [
-       {
-        "Id": "906520813",
-        "Name": "Grap",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch\\Grap",
-        "GUID": "{8C01446A-44D4-4022-808A-0A29DB59D0F4}"
-       },
-       {
-        "Id": "1050421051",
-        "Name": "Air",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch\\Air",
-        "GUID": "{11398057-44CF-49D9-86B9-602DE588AB2F}"
-       },
-       {
-        "Id": "2043403997",
-        "Name": "Rail",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch\\Rail",
-        "GUID": "{37DD7533-473B-4644-905E-CEB116EB2545}"
-       },
-       {
-        "Id": "2108779961",
-        "Name": "Wall",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch\\Wall",
-        "GUID": "{7232886A-CF99-4D7B-8D3F-9EE6543A6E43}"
-       },
-       {
-        "Id": "2528658256",
-        "Name": "Ground",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerMovementSwitch\\Ground",
-        "GUID": "{FE8392A7-A0C0-4D8D-925E-68CC1666748E}"
-       }
-      ]
      }
     ]
    },
@@ -442,7 +366,7 @@
     "Type": "Event",
     "GUID": "{C2635664-3DF8-496D-BA41-22C25299ACE8}",
     "Language": "SFX",
-    "Hash": "{51931461-C589-21FC-CEB6-0F8251DB614F}",
+    "Hash": "{303360DA-5C8A-9758-8F7D-1F72D78EBE0C}",
     "ObjectPath": "SX_player_weapon_impact",
     "ShortName": "SX_player_weapon_impact",
     "Path": "Event/SX_player_weapon_impact.bnk",
@@ -542,7 +466,7 @@
     "Type": "Event",
     "GUID": "{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}",
     "Language": "SFX",
-    "Hash": "{AEE6DF9B-BB62-0A4E-9A2A-D2E1C157B4B7}",
+    "Hash": "{3A05B742-0D84-7B16-2DD0-239557E57F20}",
     "ObjectPath": "SX_player_shoot",
     "ShortName": "SX_player_shoot",
     "Path": "Event/SX_player_shoot.bnk",
@@ -602,18 +526,6 @@
       "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_sub_01_755F56E2.wem"
      }
     ],
-    "Plugins": {
-     "ShareSets": [
-      {
-       "Id": "3043085106",
-       "Name": "High_Impact",
-       "ObjectPath": "\\Effects\\Factory Effects\\Compressor\\High_Impact",
-       "GUID": "{2AFD6FB0-C906-4683-A377-FEEEF72967B0}",
-       "LibName": "Wwise Compressor",
-       "LibId": "7077891"
-      }
-     ]
-    },
     "Events": [
      {
       "Id": "1030870044",
@@ -642,14 +554,7 @@
        {
         "Id": "967984016"
        }
-      ],
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "3043085106"
-        }
-       ]
-      }
+      ]
      }
     ],
     "GameParameters": [
@@ -848,7 +753,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{F383B7C6-F9C8-32D0-1525-829D153E814B}",
+    "Hash": "{4CA7FBB8-E455-EBD9-B6D4-77F67C5E7963}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -1871,7 +1776,7 @@
     "Type": "Event",
     "GUID": "{A070E3C3-67C1-4FFE-846E-631BD136D358}",
     "Language": "SFX",
-    "Hash": "{658CC5B8-9178-C0A3-95E8-3F7CBB214469}",
+    "Hash": "{D474D694-FD40-9E63-E50A-A751C3A106C1}",
     "ObjectPath": "SX_player_jump",
     "ShortName": "SX_player_jump",
     "Path": "Event/SX_player_jump.bnk",
@@ -2200,7 +2105,7 @@
     "Type": "Event",
     "GUID": "{F4227598-B79C-47C2-A22C-C305F4B1E5C2}",
     "Language": "SFX",
-    "Hash": "{F4CF1BE5-D480-6BB2-058E-A9383C3E5CAD}",
+    "Hash": "{25EFB01D-F574-DCC6-08AC-B33E5328883F}",
     "ObjectPath": "SX_player_dash",
     "ShortName": "SX_player_dash",
     "Path": "Event/SX_player_dash.bnk",
@@ -2231,8 +2136,8 @@
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_dash",
       "GUID": "{F4227598-B79C-47C2-A22C-C305F4B1E5C2}",
       "DurationType": "OneShot",
-      "DurationMin": "0.2",
-      "DurationMax": "0.4",
+      "DurationMin": "0.24999999",
+      "DurationMax": "0.41666666",
       "PluginRefs": {
        "Custom": [
         {
@@ -2251,6 +2156,12 @@
       "Name": "RTPC_SlowMo",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
       "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
+     },
+     {
+      "Id": "2653406601",
+      "Name": "RTPC_PlayerSpeed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerSpeed",
+      "GUID": "{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"
      }
     ]
    },
@@ -2320,19 +2231,37 @@
     "Type": "Event",
     "GUID": "{6BE02D09-9271-46A7-BAA0-E99F5C869C80}",
     "Language": "SFX",
-    "Hash": "{39B3943E-D74A-A62E-71CF-AF3F3608B933}",
+    "Hash": "{AAAA51D7-1039-96E0-738E-F9F24B35F713}",
     "ObjectPath": "SX_player_feedback_hitmarker",
     "ShortName": "SX_player_feedback_hitmarker",
     "Path": "Event/SX_player_feedback_hitmarker.bnk",
     "Media": [
      {
-      "Id": "777880860",
+      "Id": "1278217",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Player_Feedback\\player_feedback_hitmarker.wav",
-      "Path": "Media/777880860.wem",
-      "CachePath": "SFX/Player_Feedback/player_feedback_hitmarker_755F56E2.wem"
+      "ShortName": "Player_Feedback\\03_hitmarker.wav",
+      "Path": "Media/1278217.wem",
+      "CachePath": "SFX/Player_Feedback/03_hitmarker_755F56E2.wem"
+     },
+     {
+      "Id": "102366568",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Feedback\\01_hitmarker.wav",
+      "Path": "Media/102366568.wem",
+      "CachePath": "SFX/Player_Feedback/01_hitmarker_755F56E2.wem"
+     },
+     {
+      "Id": "1019709574",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Feedback\\02_hitmarker.wav",
+      "Path": "Media/1019709574.wem",
+      "CachePath": "SFX/Player_Feedback/02_hitmarker_755F56E2.wem"
      }
     ],
     "Events": [
@@ -2342,11 +2271,17 @@
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_feedback_hitmarker",
       "GUID": "{6BE02D09-9271-46A7-BAA0-E99F5C869C80}",
       "DurationType": "OneShot",
-      "DurationMin": "0.083333336",
-      "DurationMax": "0.083333336",
+      "DurationMin": "0.40947846",
+      "DurationMax": "0.4130839",
       "MediaRefs": [
        {
-        "Id": "777880860"
+        "Id": "1278217"
+       },
+       {
+        "Id": "102366568"
+       },
+       {
+        "Id": "1019709574"
        }
       ]
      }
@@ -2475,7 +2410,7 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{D7815F18-9AC1-39AC-0177-5B66D4132B08}",
+    "Hash": "{15E3B598-7073-B170-51E2-6A169E920D8E}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
@@ -2515,15 +2450,6 @@
       "ShortName": "Music\\Sky_Reveal_Alpha.wav",
       "Path": "Media/370767073.wem",
       "CachePath": "SFX/Music/Sky_Reveal_Alpha_073B4D0C.wem"
-     },
-     {
-      "Id": "455972647",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Music\\A01- foreshadow lead.wav",
-      "Path": "Media/455972647.wem",
-      "CachePath": "SFX/Music/A01- foreshadow lead_073B4D0C.wem"
      },
      {
       "Id": "573314099",
@@ -2616,14 +2542,6 @@
        "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
-      },
-      {
-       "Id": "3812922252",
-       "Name": "Slomo_TimeSTretch",
-       "ObjectPath": "\\Effects\\Default Work Unit\\Slomo_TimeSTretch",
-       "GUID": "{06BA88D1-B3D5-4A8D-ADA1-005EBA553A75}",
-       "LibName": "Wwise Time Stretch",
-       "LibId": "8519683"
       }
      ]
     },
@@ -2680,14 +2598,7 @@
          {
           "Id": "589742436"
          }
-        ],
-        "PluginRefs": {
-         "ShareSets": [
-          {
-           "Id": "3812922252"
-          }
-         ]
-        }
+        ]
        },
        {
         "SwitchValue": {
@@ -2700,14 +2611,7 @@
          {
           "Id": "699308010"
          }
-        ],
-        "PluginRefs": {
-         "ShareSets": [
-          {
-           "Id": "3812922252"
-          }
-         ]
-        }
+        ]
        },
        {
         "SwitchValue": {
@@ -2720,14 +2624,7 @@
          {
           "Id": "776551369"
          }
-        ],
-        "PluginRefs": {
-         "ShareSets": [
-          {
-           "Id": "3812922252"
-          }
-         ]
-        }
+        ]
        },
        {
         "SwitchValue": {
@@ -2738,9 +2635,6 @@
         },
         "MediaRefs": [
          {
-          "Id": "455972647"
-         },
-         {
           "Id": "746674216"
          },
          {
@@ -2749,14 +2643,7 @@
          {
           "Id": "1060688450"
          }
-        ],
-        "PluginRefs": {
-         "ShareSets": [
-          {
-           "Id": "3812922252"
-          }
-         ]
-        }
+        ]
        },
        {
         "SwitchValue": {
@@ -2775,14 +2662,7 @@
          {
           "Id": "989398633"
          }
-        ],
-        "PluginRefs": {
-         "ShareSets": [
-          {
-           "Id": "3812922252"
-          }
-         ]
-        }
+        ]
        },
        {
         "SwitchValue": {
@@ -2798,14 +2678,7 @@
          {
           "Id": "236516060"
          }
-        ],
-        "PluginRefs": {
-         "ShareSets": [
-          {
-           "Id": "3812922252"
-          }
-         ]
-        }
+        ]
        },
        {
         "SwitchValue": {
@@ -2821,14 +2694,7 @@
          {
           "Id": "721774678"
          }
-        ],
-        "PluginRefs": {
-         "ShareSets": [
-          {
-           "Id": "3812922252"
-          }
-         ]
-        }
+        ]
        }
       ]
      }
@@ -2839,12 +2705,6 @@
       "Name": "RTPC_PlayerMovement",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerMovement",
       "GUID": "{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"
-     },
-     {
-      "Id": "2565740352",
-      "Name": "RTPC_SlowMo",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
-      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
      },
      {
       "Id": "2653406601",
@@ -3021,6 +2881,6 @@
     ]
    }
   ],
-  "FileHash": "{E0E88B20-D7CB-0E2D-497E-5F5757BC7B48}"
+  "FileHash": "{222DD857-643D-C26F-ECEE-8DF1458FC51D}"
  }
 }
