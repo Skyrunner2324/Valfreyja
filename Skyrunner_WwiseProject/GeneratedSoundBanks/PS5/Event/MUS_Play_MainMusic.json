@@ -10,19 +10,37 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{D18999EF-941C-B15D-B970-961B94A6D187}",
+    "Hash": "{BA069DC0-F143-1CB8-7E56-C4FF6B9306D8}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
     "Media": [
      {
-      "Id": "267356786",
+      "Id": "159789116",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Music\\145_Techno Arena_V2.wav",
-      "Path": "Media/267356786.wem",
-      "CachePath": "SFX/Music/145_Techno Arena_V2_073B4D0C.wem"
+      "ShortName": "Music\\145-Arena_Phase 1- synths.wav",
+      "Path": "Media/159789116.wem",
+      "CachePath": "SFX/Music/145-Arena_Phase 1- synths_073B4D0C.wem"
+     },
+     {
+      "Id": "213384098",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\145-Arena_Phase 2- kick.wav",
+      "Path": "Media/213384098.wem",
+      "CachePath": "SFX/Music/145-Arena_Phase 2- kick_073B4D0C.wem"
+     },
+     {
+      "Id": "236516060",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\145-Arena_Phase 1- kick.wav",
+      "Path": "Media/236516060.wem",
+      "CachePath": "SFX/Music/145-Arena_Phase 1- kick_073B4D0C.wem"
      },
      {
       "Id": "370767073",
@@ -34,6 +52,24 @@
       "CachePath": "SFX/Music/Sky_Reveal_Alpha_073B4D0C.wem"
      },
      {
+      "Id": "573314099",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\145-Arena - Buildup - kick.wav",
+      "Path": "Media/573314099.wem",
+      "CachePath": "SFX/Music/145-Arena - Buildup - kick_073B4D0C.wem"
+     },
+     {
+      "Id": "589742436",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\145- Arena - Buildup - synths.wav",
+      "Path": "Media/589742436.wem",
+      "CachePath": "SFX/Music/145- Arena - Buildup - synths_073B4D0C.wem"
+     },
+     {
       "Id": "699308010",
       "Language": "SFX",
       "Streaming": "false",
@@ -41,6 +77,15 @@
       "ShortName": "Music\\Sky_Menu_Alpha.wav",
       "Path": "Media/699308010.wem",
       "CachePath": "SFX/Music/Sky_Menu_Alpha_073B4D0C.wem"
+     },
+     {
+      "Id": "721774678",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\145-Arena_Phase 2- synths.wav",
+      "Path": "Media/721774678.wem",
+      "CachePath": "SFX/Music/145-Arena_Phase 2- synths_073B4D0C.wem"
      },
      {
       "Id": "776551369",
@@ -70,6 +115,14 @@
        "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
+      },
+      {
+       "Id": "3812922252",
+       "Name": "Slomo_TimeSTretch",
+       "ObjectPath": "\\Effects\\Default Work Unit\\Slomo_TimeSTretch",
+       "GUID": "{06BA88D1-B3D5-4A8D-ADA1-005EBA553A75}",
+       "LibName": "Wwise Time Stretch",
+       "LibId": "8519683"
       }
      ]
     },
@@ -118,9 +171,19 @@
         },
         "MediaRefs": [
          {
-          "Id": "267356786"
+          "Id": "573314099"
+         },
+         {
+          "Id": "589742436"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3812922252"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -133,7 +196,14 @@
          {
           "Id": "699308010"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3812922252"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -146,7 +216,14 @@
          {
           "Id": "776551369"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3812922252"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -159,7 +236,14 @@
          {
           "Id": "844212876"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3812922252"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -180,8 +264,62 @@
           }
          ]
         }
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1419563690",
+         "Id": "3352420404",
+         "GUID": "{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "159789116"
+         },
+         {
+          "Id": "236516060"
+         }
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3812922252"
+          }
+         ]
+        }
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1419563690",
+         "Id": "3352420407",
+         "GUID": "{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "213384098"
+         },
+         {
+          "Id": "721774678"
+         }
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3812922252"
+          }
+         ]
+        }
        }
       ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2565740352",
+      "Name": "RTPC_SlowMo",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
+      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
      }
     ],
     "StateGroups": [
@@ -228,6 +366,18 @@
         "GUID": "{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"
        },
        {
+        "Id": "3352420404",
+        "Name": "ArenaPhase1",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selector\\ArenaPhase1",
+        "GUID": "{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"
+       },
+       {
+        "Id": "3352420407",
+        "Name": "ArenaPhase2",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selector\\ArenaPhase2",
+        "GUID": "{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"
+       },
+       {
         "Id": "3814499265",
         "Name": "Explo",
         "ObjectPath": "\\States\\Default Work Unit\\Music_Selector\\Explo",
@@ -238,6 +388,6 @@
     ]
    }
   ],
-  "FileHash": "{131E2216-DBC4-58C9-D914-9AC8CC5FB4E1}"
+  "FileHash": "{CADC3EED-2B9A-CBCD-571E-39AF7E6842D9}"
  }
 }

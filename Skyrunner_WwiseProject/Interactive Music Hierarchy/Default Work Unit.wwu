@@ -22,8 +22,11 @@
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+									<ObjectRef Name="Slomo_TimeSTretch" ID="{06BA88D1-B3D5-4A8D-ADA1-005EBA553A75}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
+								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+									<ObjectRef Name="MUSIC Master" ID="{D7372867-B444-4F36-A355-173A46D13138}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -337,6 +340,10 @@
 														</CustomState>
 													</CustomState>
 													<CustomState>
+														<StateRef Name="ArenaPhase2" ID="{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"/>
+														<CustomState Name="" ID="{AAEA0FD2-5B02-4FDA-8A3B-2A6063FEC976}" ShortID="411395126"/>
+													</CustomState>
+													<CustomState>
 														<StateRef Name="Reveal" ID="{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"/>
 														<CustomState Name="" ID="{CDA18D54-325C-486B-AA94-FEA7C4225F28}" ShortID="327667690">
 															<PropertyList>
@@ -344,6 +351,10 @@
 																<Property Name="UserAuxSendVolume0" Type="Real64" Value="-108"/>
 															</PropertyList>
 														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="ArenaPhase1" ID="{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"/>
+														<CustomState Name="" ID="{642B53E0-5E2C-4353-98A7-BFB282C2D3F8}" ShortID="439180723"/>
 													</CustomState>
 													<CustomState>
 														<StateRef Name="Tuto" ID="{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"/>
@@ -413,8 +424,16 @@
 												<CustomState Name="" ID="{6FF2E7DF-AB12-4FC5-B067-B15A487E7C12}" ShortID="342644371"/>
 											</CustomState>
 											<CustomState>
+												<StateRef Name="ArenaPhase2" ID="{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"/>
+												<CustomState Name="" ID="{ECC986B7-ACD2-4F37-B286-171A3CB44F4F}" ShortID="662431786"/>
+											</CustomState>
+											<CustomState>
 												<StateRef Name="Reveal" ID="{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"/>
 												<CustomState Name="" ID="{67E76D63-85B7-4F58-B2A9-5AB0C3C76FB8}" ShortID="317281961"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="ArenaPhase1" ID="{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"/>
+												<CustomState Name="" ID="{512130D1-91CE-47D1-927A-292C818D4DFA}" ShortID="916554432"/>
 											</CustomState>
 											<CustomState>
 												<StateRef Name="Tuto" ID="{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"/>
@@ -594,12 +613,20 @@
 												</CustomState>
 											</CustomState>
 											<CustomState>
+												<StateRef Name="ArenaPhase2" ID="{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"/>
+												<CustomState Name="" ID="{FDC79EE8-9820-4F17-926D-543266CDFE94}" ShortID="232973893"/>
+											</CustomState>
+											<CustomState>
 												<StateRef Name="Reveal" ID="{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"/>
 												<CustomState Name="" ID="{A7F3631C-9F39-4565-919F-381B18E48173}" ShortID="258773359">
 													<PropertyList>
 														<Property Name="GameAuxSendVolume" Type="Real64" Value="-108"/>
 													</PropertyList>
 												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="ArenaPhase1" ID="{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"/>
+												<CustomState Name="" ID="{4CB48730-B80B-4A03-85F5-D39E51173C79}" ShortID="9053228"/>
 											</CustomState>
 											<CustomState>
 												<StateRef Name="Tuto" ID="{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"/>
@@ -784,6 +811,10 @@
 									</Playlist>
 								</MusicPlaylistContainer>
 								<MusicPlaylistContainer Name="Sky_Buildup_Playlist Container" ID="{4C802EC2-C505-4615-952C-CE00D093EB51}" ShortID="250883403">
+									<PropertyList>
+										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="Tempo" Type="Real64" Value="145"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -793,9 +824,9 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicSegment Name="145_Techno Arena_V2" ID="{7F8A69D8-917D-4B2F-B82C-4DFD443D5D00}" ShortID="643951183">
+										<MusicSegment Name="Arena Buildup" ID="{0C7D73B1-B0F0-4A46-B41D-B7A9CF374672}" ShortID="475475790">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="232995.6875"/>
+												<Property Name="EndPosition" Type="Real64" Value="28137.9310344827"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -806,23 +837,33 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<MusicTrack Name="145_Techno Arena_V2" ID="{C8C7A219-5B84-4F83-8D4A-50CE14E02696}" ShortID="219277638">
+												<MusicTrack Name="145- Arena - Buildup - synths" ID="{7BF0D60C-542E-48FC-9282-C168863428C2}" ShortID="453551580">
+													<PropertyList>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-96</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="145_Techno Arena_V2" ID="{8122A3BF-528F-4A2D-BEFB-35264EB7E0ED}">
+														<AudioFileSource Name="145- Arena - Buildup - synths" ID="{2C4A933F-EEC9-41C1-A965-CAB377C595E5}">
 															<Language>SFX</Language>
-															<AudioFile>Music\145_Techno Arena_V2.wav</AudioFile>
+															<AudioFile>Music\145- Arena - Buildup - synths.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="267356786"/>
+																<MediaID ID="589742436"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<TransitionList>
-														<MusicTransition Name="Root" ID="{B837F4F5-749E-4CB8-AB07-F313248C853C}">
+														<MusicTransition Name="Root" ID="{58DEFA7C-D7B2-4778-8BBC-A50AC85C4D92}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -833,18 +874,137 @@
 														<ObjectList Name="Sequences">
 															<Reference>
 																<Local>
-																	<MusicTrackSequence Name="" ID="{A07AEE1B-FA1C-4E70-B3BB-CA3470E5094C}">
+																	<MusicTrackSequence Name="" ID="{556FB2C6-26D2-4133-8668-544994997549}">
 																		<ObjectLists>
 																			<ObjectList Name="Clips">
 																				<Reference>
 																					<Local>
-																						<MusicClip Name="145_Techno Arena_V2" ID="{0569754C-BF34-4647-B3FD-E5AFA09970B4}">
+																						<MusicClip Name="145- Arena - Buildup - synths" ID="{A3AFB0CF-B32E-46C9-9D76-D9F89412F06E}">
 																							<PropertyList>
-																								<Property Name="EndTrimOffset" Type="Real64" Value="232995.6875"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="28137.9310344827"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																							</PropertyList>
-																							<AudioSourceRef Name="145_Techno Arena_V2" ID="{8122A3BF-528F-4A2D-BEFB-35264EB7E0ED}"/>
+																							<AudioSourceRef Name="145- Arena - Buildup - synths" ID="{2C4A933F-EEC9-41C1-A965-CAB377C595E5}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Highpass">
+																									<Curve Name="" ID="{84719A23-328D-4A07-9688-48BC62C0C4B3}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>28.13793</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Lowpass">
+																									<Curve Name="" ID="{720C0A45-3783-40E6-BA68-3F0FE012A119}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>28.13793</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{B27F09A9-6B70-497F-BA6B-B7C1FA2DC878}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>28.13793</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="145-Arena - Buildup - kick" ID="{87288D91-EFA0-4154-883D-160C178D2C4E}" ShortID="30472639">
+													<PropertyList>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-96</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="145-Arena - Buildup - kick" ID="{86057FEE-CF3D-47E8-A561-35FF981388F7}">
+															<Language>SFX</Language>
+															<AudioFile>Music\145-Arena - Buildup - kick.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="573314099"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{03FB1B49-92CE-4360-ABE2-A78DEFC55B5D}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{69D7CA7D-6A48-4967-A267-08360C905A09}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="145-Arena - Buildup - kick" ID="{39F74B8A-ECD9-4864-BB05-CB4D5A3F06D4}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="26487.0625"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="145-Arena - Buildup - kick" ID="{86057FEE-CF3D-47E8-A561-35FF981388F7}"/>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -861,15 +1021,15 @@
 												<ObjectList Name="Cues">
 													<Reference>
 														<Local>
-															<MusicCue Name="Entry Cue" ID="{B96D7403-8F18-43B1-BF39-89580E2FCE36}"/>
+															<MusicCue Name="Entry Cue" ID="{7C1213B4-5AC6-4B2E-8CDA-332AF13760CD}"/>
 														</Local>
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicCue Name="Exit Cue" ID="{6F44C776-A42F-4574-87AA-B5A6FAC474C6}">
+															<MusicCue Name="Exit Cue" ID="{D2754748-9889-47DA-9198-BB7D78F428A6}">
 																<PropertyList>
 																	<Property Name="CueType" Type="int16" Value="1"/>
-																	<Property Name="TimeMs" Type="Real64" Value="232995.6875"/>
+																	<Property Name="TimeMs" Type="Real64" Value="26487.0625"/>
 																</PropertyList>
 															</MusicCue>
 														</Local>
@@ -894,12 +1054,521 @@
 									<Playlist>
 										<MusicPlaylistItem Name="" ID="{749D1DB6-BC28-4FD5-A9D0-4DE82E275BFE}" ShortID="573964144">
 											<ChildrenList>
-												<MusicPlaylistItem Name="" ID="{E434010A-08CF-46B8-9D72-0233B5BFCA03}" ShortID="519176480">
+												<MusicPlaylistItem Name="" ID="{547C3DC0-569F-41F6-A4E4-86C07C5A7342}" ShortID="799276203">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Arena Buildup" ID="{0C7D73B1-B0F0-4A46-B41D-B7A9CF374672}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Playlist>
+								</MusicPlaylistContainer>
+								<MusicPlaylistContainer Name="Sky_Arena_Phase1_Playlist Container" ID="{DEC34E5D-6D22-4825-A900-4B08253E2B0B}" ShortID="42497473">
+									<PropertyList>
+										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="Tempo" Type="Real64" Value="145"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicSegment Name="Arena Phase 1" ID="{1380DF98-5F51-438A-A9B3-C41E112224AC}" ShortID="751653500">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="94353.872721965"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="145-Arena_Phase 1- synths" ID="{07D7AF49-A40B-4730-89F9-C9E863928658}" ShortID="442161915">
+													<PropertyList>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-96</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="145-Arena_Phase 1- synths" ID="{D443D5AD-C183-494F-A236-65B21490A8E6}">
+															<Language>SFX</Language>
+															<AudioFile>Music\145-Arena_Phase 1- synths.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="159789116"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{F42F3659-A804-418E-ACC8-EFD51D22882E}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{9A7E00F6-530F-4871-85BF-A5E15FB3CC3C}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="145-Arena_Phase 1- synths" ID="{4969EA9E-4D90-418E-BAE3-85B77BEF0018}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="94344.8275862069"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="145-Arena_Phase 1- synths" ID="{D443D5AD-C183-494F-A236-65B21490A8E6}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Highpass">
+																									<Curve Name="" ID="{3D14A4BD-C7FF-44E1-92FB-195FDE35A17B}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>94.34483</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Lowpass">
+																									<Curve Name="" ID="{147C51F7-02D9-4C3E-A4EB-3EDE6EA92467}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>94.34483</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{45498B50-71FE-4A18-8BEA-01FA58F72AD3}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>94.34483</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="145-Arena_Phase 1- kick" ID="{D01A42E7-7572-48B7-98A9-B50AFE1E59FA}" ShortID="834537770">
+													<PropertyList>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-96</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="145-Arena_Phase 1- kick" ID="{B7C469B5-9980-470D-B512-1ADCE06F8073}">
+															<Language>SFX</Language>
+															<AudioFile>Music\145-Arena_Phase 1- kick.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="236516060"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{825A95DE-D5B4-4650-9895-482AE056F9D5}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{4BF42314-8D37-459A-865E-FE652EBCC583}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="145-Arena_Phase 1- kick" ID="{F471935E-E3B3-47E3-8D08-495C4F752588}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="92840.5208333333"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="145-Arena_Phase 1- kick" ID="{B7C469B5-9980-470D-B512-1ADCE06F8073}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{B1B2E96D-61F0-491E-8C1E-5FC7AA0C1115}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{953276A2-614B-4746-B936-B46555899974}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="92689.6551724138"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{2EA3E9F6-F007-4FF6-932C-9CF6E97ABD28}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{73F65439-09CF-4812-B5EA-7AAF64D55588}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<Playlist>
+										<MusicPlaylistItem Name="" ID="{5A2D0087-4873-4165-B3C2-D759BF4559C2}" ShortID="383622167">
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{85B4DC89-919B-4504-9471-9258F52564E5}" ShortID="541495779">
 													<PropertyList>
 														<Property Name="LoopCount" Type="int16" Value="0"/>
 														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 													</PropertyList>
-													<SegmentRef Name="145_Techno Arena_V2" ID="{7F8A69D8-917D-4B2F-B82C-4DFD443D5D00}"/>
+													<SegmentRef Name="Arena Phase 1" ID="{1380DF98-5F51-438A-A9B3-C41E112224AC}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Playlist>
+								</MusicPlaylistContainer>
+								<MusicPlaylistContainer Name="Sky_Arena_Phase2_Playlist Container" ID="{4DF443A1-9E88-44D2-BE0F-FB62E19A7966}" ShortID="1012003369">
+									<PropertyList>
+										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="Tempo" Type="Real64" Value="145"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicSegment Name="Arena Phase 2" ID="{372AAFA8-FFAB-4725-ABE1-91743C9A2793}" ShortID="676583092">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="94344.8275862069"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="145-Arena_Phase 2- kick" ID="{C9ED3842-8175-4554-BE40-415F2C91E4BA}" ShortID="35551846">
+													<PropertyList>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-96</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="145-Arena_Phase 2- kick" ID="{2C073F09-7010-4C42-A26D-209D4CA12950}">
+															<Language>SFX</Language>
+															<AudioFile>Music\145-Arena_Phase 2- kick.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="213384098"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{EF3243AB-0BBA-48E7-B561-D0DF4A971D09}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{E1CDE78D-816E-4F49-B6C1-75A2753BD6D9}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="145-Arena_Phase 2- kick" ID="{972050E2-7A89-43C4-9CA0-EF646FC0A78C}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="92724.1458333333"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="145-Arena_Phase 2- kick" ID="{2C073F09-7010-4C42-A26D-209D4CA12950}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="145-Arena_Phase 2- synths" ID="{FA9BA3EF-FFB7-4AA7-973D-A8CD6B58A3C4}" ShortID="43679238">
+													<PropertyList>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-96</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="145-Arena_Phase 2- synths" ID="{41DE5C1A-5185-46AD-94CB-F4FFD26AFD53}">
+															<Language>SFX</Language>
+															<AudioFile>Music\145-Arena_Phase 2- synths.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="721774678"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{88ED8677-D4B2-401A-8F4E-2FFE9075C445}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{143197D9-4CA8-4619-ACDB-9074971B1EDD}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="145-Arena_Phase 2- synths" ID="{A7BEC1D7-E1E1-4F8D-8F36-E8A93DFE2E82}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="94344.8275862069"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="145-Arena_Phase 2- synths" ID="{41DE5C1A-5185-46AD-94CB-F4FFD26AFD53}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Highpass">
+																									<Curve Name="" ID="{A7275B38-81B4-40A8-BD3C-5CDCF01F7AC2}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>94.34483</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Lowpass">
+																									<Curve Name="" ID="{E47DE1C7-8F73-40DD-B2D3-E2899412AD7B}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="1"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>94.34483</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{32A43DE8-5769-4877-9223-9B2B3B4E87F6}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>94.34483</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{57B646EF-2E62-4BB7-8063-84333B5181FA}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{9493D615-E5CB-45B9-935F-A9982D16034C}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="92724.1458333333"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{38B65941-3876-456D-9341-66E3370A00B3}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{A4533BB8-68BE-4851-8FF1-1D9FD760B8C3}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<Playlist>
+										<MusicPlaylistItem Name="" ID="{E1149B5B-2B4B-487C-843E-F300E1CD6599}" ShortID="86308883">
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{2147C39F-EBAA-420E-8B65-E0217E5D99EF}" ShortID="111960813">
+													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Arena Phase 2" ID="{372AAFA8-FFAB-4725-ABE1-91743C9A2793}"/>
 												</MusicPlaylistItem>
 											</ChildrenList>
 										</MusicPlaylistItem>
@@ -1013,6 +1682,37 @@
 												</DestinationFadeIn>
 											</TransitionInfo>
 										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{4881CEFE-1E29-4833-B1CD-CB6CD9AF5E3B}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="Sky_Arena_Phase2_Playlist Container" ID="{4DF443A1-9E88-44D2-BE0F-FB62E19A7966}" WorkUnitID="{97B9C5CD-8975-4396-B94B-6580A54082A0}"/>
+												</Reference>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="Sky_Arena_Phase1_Playlist Container" ID="{DEC34E5D-6D22-4825-A900-4B08253E2B0B}" WorkUnitID="{97B9C5CD-8975-4396-B94B-6580A54082A0}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo/>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{2BB53838-00B0-4CA7-B420-95D8D747AD50}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="Sky_Arena_Phase1_Playlist Container" ID="{DEC34E5D-6D22-4825-A900-4B08253E2B0B}" WorkUnitID="{97B9C5CD-8975-4396-B94B-6580A54082A0}"/>
+												</Reference>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="Sky_Buildup_Playlist Container" ID="{4C802EC2-C505-4615-952C-CE00D093EB51}" WorkUnitID="{97B9C5CD-8975-4396-B94B-6580A54082A0}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo/>
+										</MusicTransition>
 									</ChildrenList>
 									<TransitionInfo/>
 								</MusicTransition>
@@ -1067,6 +1767,22 @@
 									</Path>
 									<AudioNodeInfo>
 										<AudioNodeRef Name="Sky_Reveal_Playlist Container" ID="{10E91B5A-47FB-4143-9B56-B84D03D561C4}" WorkUnitID="{97B9C5CD-8975-4396-B94B-6580A54082A0}" Platform="Linked"/>
+									</AudioNodeInfo>
+								</Entry>
+								<Entry>
+									<Path>
+										<PathElementRef Name="ArenaPhase1" ID="{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"/>
+									</Path>
+									<AudioNodeInfo>
+										<AudioNodeRef Name="Sky_Arena_Phase1_Playlist Container" ID="{DEC34E5D-6D22-4825-A900-4B08253E2B0B}" WorkUnitID="{97B9C5CD-8975-4396-B94B-6580A54082A0}" Platform="Linked"/>
+									</AudioNodeInfo>
+								</Entry>
+								<Entry>
+									<Path>
+										<PathElementRef Name="ArenaPhase2" ID="{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"/>
+									</Path>
+									<AudioNodeInfo>
+										<AudioNodeRef Name="Sky_Arena_Phase2_Playlist Container" ID="{4DF443A1-9E88-44D2-BE0F-FB62E19A7966}" WorkUnitID="{97B9C5CD-8975-4396-B94B-6580A54082A0}" Platform="Linked"/>
 									</AudioNodeInfo>
 								</Entry>
 							</EntryList>
