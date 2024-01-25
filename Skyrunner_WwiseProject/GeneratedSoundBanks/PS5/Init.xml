@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{4CA7FBB8-E455-EBD9-B6D4-77F67C5E7963}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{8ED6683A-758A-7A4D-BF28-EF9DFB76B9A7}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Media>
-				<File Id="569254387" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Tunnel\AE_Tunnel.wav</ShortName>
-					<Path>Media/569254387.wem</Path>
-					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Tunnel/AE_Tunnel_EE1509C2.wem</CachePath>
-				</File>
 				<File Id="941961704" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsFar.wav</ShortName>
 					<Path>Media/941961704.wem</Path>
@@ -26,17 +21,13 @@
 					<Plugin Id="945211497" Name="Underwater_Echoes (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Weapon\Underwater_Echoes (Custom)" GUID="{E99B9354-6E3C-40D3-B57E-B74097729115}" LibName="Wwise Stereo Delay" LibId="8847363"/>
 				</Custom>
 				<ShareSets>
+					<Plugin Id="702543456" Name="Tunnel1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Tunnel1" GUID="{CC44B890-9865-4157-965F-86FED27BC4C6}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="1782142158" Name="DistantBuilding_MicsFar" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Field\DistantBuilding_MicsFar" GUID="{22EE2792-F5F3-4B26-A6E1-843A0A964677}" LibName="Wwise Convolution Reverb" LibId="8323075">
 						<MediaRefs>
 							<MediaRef Id="941961704"/>
 						</MediaRefs>
 					</Plugin>
 					<Plugin Id="1842579981" Name="Reflect_Simplified" ObjectPath="\Effects\Factory Reflect\Reflect_Simplified" GUID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" LibName="Wwise Reflect" LibId="11206659"/>
-					<Plugin Id="3059984139" Name="Tunnel" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Tunnel\Tunnel" GUID="{88B2F5E7-703C-4D7B-B897-946069693C4B}" LibName="Wwise Convolution Reverb" LibId="8323075">
-						<MediaRefs>
-							<MediaRef Id="569254387"/>
-						</MediaRefs>
-					</Plugin>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="1334442663" Name="Controller_Speaker" ObjectPath="\Audio Devices\Default Work Unit\Controller_Speaker" GUID="{DBAC18E4-4565-4995-8D85-16A16A6DEC90}" LibName="Controller Speaker" LibId="11730951"/>
@@ -123,7 +114,7 @@
 				<AuxBus Id="2172616000" Name="REV_Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="3059984139"/>
+							<PluginRef Id="702543456"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
@@ -308,5 +299,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B3B9A68C-E103-AF0D-CEE2-0193F4CE2F22}</FileHash>
+	<FileHash>{460CEEE5-EB92-279E-5124-611C3977A0E4}</FileHash>
 </SoundBanksInfo>

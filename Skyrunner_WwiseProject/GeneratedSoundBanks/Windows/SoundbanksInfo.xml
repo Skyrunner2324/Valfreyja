@@ -28,7 +28,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{EEE7F4AC-A863-C363-06C8-C4DAE85BE4FD}">
+		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{39AF2D16-A5FC-1BB6-17F3-7B9EEC421ECB}">
 			<ObjectPath>SX_player_land</ObjectPath>
 			<ShortName>SX_player_land</ShortName>
 			<Path>Event/SX_player_land.bnk</Path>
@@ -85,7 +85,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{61194D86-E2A2-4454-77D3-6D312BCF5EFF}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{71F9A4F0-7387-D516-93C6-0DC890E7DE1C}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
@@ -363,16 +363,11 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{9252506F-43D0-F485-A299-685FC38ECC8F}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{CE4870C0-3A6D-1F2C-93C7-15380E35DDB4}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Media>
-				<File Id="569254387" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Tunnel\AE_Tunnel.wav</ShortName>
-					<Path>Media/569254387.wem</Path>
-					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Tunnel/AE_Tunnel_EE1509C2.wem</CachePath>
-				</File>
 				<File Id="941961704" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsFar.wav</ShortName>
 					<Path>Media/941961704.wem</Path>
@@ -388,17 +383,13 @@
 					<Plugin Id="945211497" Name="Underwater_Echoes (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Weapon\Underwater_Echoes (Custom)" GUID="{E99B9354-6E3C-40D3-B57E-B74097729115}" LibName="Wwise Stereo Delay" LibId="8847363"/>
 				</Custom>
 				<ShareSets>
+					<Plugin Id="702543456" Name="Tunnel1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Tunnel1" GUID="{CC44B890-9865-4157-965F-86FED27BC4C6}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="1782142158" Name="DistantBuilding_MicsFar" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Field\DistantBuilding_MicsFar" GUID="{22EE2792-F5F3-4B26-A6E1-843A0A964677}" LibName="Wwise Convolution Reverb" LibId="8323075">
 						<MediaRefs>
 							<MediaRef Id="941961704"/>
 						</MediaRefs>
 					</Plugin>
 					<Plugin Id="1842579981" Name="Reflect_Simplified" ObjectPath="\Effects\Factory Reflect\Reflect_Simplified" GUID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" LibName="Wwise Reflect" LibId="11206659"/>
-					<Plugin Id="3059984139" Name="Tunnel" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Tunnel\Tunnel" GUID="{88B2F5E7-703C-4D7B-B897-946069693C4B}" LibName="Wwise Convolution Reverb" LibId="8323075">
-						<MediaRefs>
-							<MediaRef Id="569254387"/>
-						</MediaRefs>
-					</Plugin>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="1334442663" Name="Controller_Speaker" ObjectPath="\Audio Devices\Default Work Unit\Controller_Speaker" GUID="{DBAC18E4-4565-4995-8D85-16A16A6DEC90}" LibName="Controller Speaker" LibId="11730951"/>
@@ -485,7 +476,7 @@
 				<AuxBus Id="2172616000" Name="REV_Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="3059984139"/>
+							<PluginRef Id="702543456"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
@@ -669,7 +660,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{D474D694-FD40-9E63-E50A-A751C3A106C1}">
+		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{ABFF89CE-D538-3CA9-9FE1-231A21167A4C}">
 			<ObjectPath>SX_player_jump</ObjectPath>
 			<ShortName>SX_player_jump</ShortName>
 			<Path>Event/SX_player_jump.bnk</Path>
@@ -838,56 +829,42 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{25EFB01D-F574-DCC6-08AC-B33E5328883F}">
+		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{AC7BC1CD-0E2F-3812-CEBA-E5D8459A1DC1}">
 			<ObjectPath>SX_player_dash</ObjectPath>
 			<ShortName>SX_player_dash</ShortName>
 			<Path>Event/SX_player_dash.bnk</Path>
 			<Plugins>
 				<Custom>
 					<Plugin Id="631246921" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_dash\Soundseed Air Woosh" GUID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
-					<Plugin Id="640802269" Name="Delay (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_dash\Delay (Custom)" GUID="{C0FCC26E-70DE-482D-9F02-A6A6E9AD97D5}" LibName="Wwise Delay" LibId="6946819"/>
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="2162617371" Name="SX_player_dash" ObjectPath="\Events\Player\Movement\SX_player_dash" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" DurationType="OneShot" DurationMin="0.24999999" DurationMax="0.41666666">
+				<Event Id="2162617371" Name="SX_player_dash" ObjectPath="\Events\Player\Movement\SX_player_dash" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" DurationType="OneShot" DurationMin="0.25" DurationMax="0.35">
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="631246921"/>
-							<PluginRef Id="640802269"/>
 						</Custom>
 					</PluginRefs>
 				</Event>
 			</Events>
 			<GameParameters>
-				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2172616000" Type="Bus" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" Language="SFX" Hash="{6851C3DA-F654-BEFB-340D-7641263079BF}">
+		<SoundBank Id="2172616000" Type="Bus" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" Language="SFX" Hash="{7AC81F31-18AE-DD5F-E116-1CC50CEC6089}">
 			<ObjectPath>REV_Cave</ObjectPath>
 			<ShortName>REV_Cave</ShortName>
 			<Path>Bus/REV_Cave.bnk</Path>
-			<Media>
-				<File Id="569254387" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Tunnel\AE_Tunnel.wav</ShortName>
-					<Path>Media/569254387.wem</Path>
-					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Tunnel/AE_Tunnel_EE1509C2.wem</CachePath>
-				</File>
-			</Media>
 			<Plugins>
 				<ShareSets>
-					<Plugin Id="3059984139" Name="Tunnel" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Tunnel\Tunnel" GUID="{88B2F5E7-703C-4D7B-B897-946069693C4B}" LibName="Wwise Convolution Reverb" LibId="8323075">
-						<MediaRefs>
-							<MediaRef Id="569254387"/>
-						</MediaRefs>
-					</Plugin>
+					<Plugin Id="702543456" Name="Tunnel1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Tunnel1" GUID="{CC44B890-9865-4157-965F-86FED27BC4C6}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 				</ShareSets>
 			</Plugins>
 			<AuxBusses>
 				<AuxBus Id="2172616000" Name="REV_Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="3059984139"/>
+							<PluginRef Id="702543456"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
@@ -896,33 +873,21 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="2403475570" Type="Event" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" Language="SFX" Hash="{AAAA51D7-1039-96E0-738E-F9F24B35F713}">
+		<SoundBank Id="2403475570" Type="Event" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" Language="SFX" Hash="{094B8D98-6A49-F536-AC7D-B20595813701}">
 			<ObjectPath>SX_player_feedback_hitmarker</ObjectPath>
 			<ShortName>SX_player_feedback_hitmarker</ShortName>
 			<Path>Event/SX_player_feedback_hitmarker.bnk</Path>
 			<Media>
-				<File Id="1278217" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Player_Feedback\03_hitmarker.wav</ShortName>
-					<Path>Media/1278217.wem</Path>
-					<CachePath>SFX/Player_Feedback/03_hitmarker_755F56E2.wem</CachePath>
-				</File>
-				<File Id="102366568" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Player_Feedback\01_hitmarker.wav</ShortName>
-					<Path>Media/102366568.wem</Path>
-					<CachePath>SFX/Player_Feedback/01_hitmarker_755F56E2.wem</CachePath>
-				</File>
-				<File Id="1019709574" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Player_Feedback\02_hitmarker.wav</ShortName>
-					<Path>Media/1019709574.wem</Path>
-					<CachePath>SFX/Player_Feedback/02_hitmarker_755F56E2.wem</CachePath>
+				<File Id="802440363" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\Phil Michalski - UI - Glitchy Counter.wav</ShortName>
+					<Path>Media/802440363.wem</Path>
+					<CachePath>SFX/Player_Feedback/Phil Michalski - UI - Glitchy Counter_755F56E2.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2403475570" Name="SX_player_feedback_hitmarker" ObjectPath="\Events\Player\Feedback\SX_player_feedback_hitmarker" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" DurationType="OneShot" DurationMin="0.40947846" DurationMax="0.4130839">
+				<Event Id="2403475570" Name="SX_player_feedback_hitmarker" ObjectPath="\Events\Player\Feedback\SX_player_feedback_hitmarker" GUID="{6BE02D09-9271-46A7-BAA0-E99F5C869C80}" DurationType="OneShot" DurationMin="0.6126758" DurationMax="1.2112772">
 					<MediaRefs>
-						<MediaRef Id="1278217"/>
-						<MediaRef Id="102366568"/>
-						<MediaRef Id="1019709574"/>
+						<MediaRef Id="802440363"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -981,7 +946,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{15E3B598-7073-B170-51E2-6A169E920D8E}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{9315242B-3DD7-90E7-AD0F-071FBED627C2}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -990,6 +955,11 @@
 					<ShortName>Music\145-Arena_Phase 1- synths.wav</ShortName>
 					<Path>Media/159789116.wem</Path>
 					<CachePath>SFX/Music/145-Arena_Phase 1- synths_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="169742422" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\X- guitar solo.wav</ShortName>
+					<Path>Media/169742422.wem</Path>
+					<CachePath>SFX/Music/X- guitar solo_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="213384098" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\145-Arena_Phase 2- kick.wav</ShortName>
@@ -1006,6 +976,11 @@
 					<Path>Media/370767073.wem</Path>
 					<CachePath>SFX/Music/Sky_Reveal_Alpha_073B4D0C.wem</CachePath>
 				</File>
+				<File Id="407511388" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\Z04- bass.wav</ShortName>
+					<Path>Media/407511388.wem</Path>
+					<CachePath>SFX/Music/Z04- bass_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="573314099" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\145-Arena - Buildup - kick.wav</ShortName>
 					<Path>Media/573314099.wem</Path>
@@ -1015,6 +990,11 @@
 					<ShortName>Music\145- Arena - Buildup - synths.wav</ShortName>
 					<Path>Media/589742436.wem</Path>
 					<CachePath>SFX/Music/145- Arena - Buildup - synths_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="646294798" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\Z01- bass.wav</ShortName>
+					<Path>Media/646294798.wem</Path>
+					<CachePath>SFX/Music/Z01- bass_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="699308010" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\Sky_Menu_Alpha.wav</ShortName>
@@ -1031,6 +1011,11 @@
 					<Path>Media/746674216.wem</Path>
 					<CachePath>SFX/Music/A01- pulse_073B4D0C.wem</CachePath>
 				</File>
+				<File Id="747724223" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\Z03- bass.wav</ShortName>
+					<Path>Media/747724223.wem</Path>
+					<CachePath>SFX/Music/Z03- bass_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="776551369" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\Sky Freyja v4.wav</ShortName>
 					<Path>Media/776551369.wem</Path>
@@ -1041,10 +1026,15 @@
 					<Path>Media/844212876.wem</Path>
 					<CachePath>SFX/Music/Sky_Tuto_Alpha_073B4D0C.wem</CachePath>
 				</File>
-				<File Id="989398633" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Music\X- psyche rock.wav</ShortName>
-					<Path>Media/989398633.wem</Path>
-					<CachePath>SFX/Music/X- psyche rock_073B4D0C.wem</CachePath>
+				<File Id="1016493422" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\Z03- synths.wav</ShortName>
+					<Path>Media/1016493422.wem</Path>
+					<CachePath>SFX/Music/Z03- synths_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="1060309485" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\Z01- synths.wav</ShortName>
+					<Path>Media/1060309485.wem</Path>
+					<CachePath>SFX/Music/Z01- synths_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="1060688450" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\B01- guitar.wav</ShortName>
@@ -1053,25 +1043,33 @@
 				</File>
 			</Media>
 			<Plugins>
+				<Custom>
+					<Plugin Id="225066277" Name="Parametric EQ (Custom)" ObjectPath="\Interactive Music Hierarchy\Default Work Unit\Music_Alpha\Main_Music_Switch\Sky_Tuto_Playlist Container\Intro_Tuto\X- guitar solo\Parametric EQ (Custom)" GUID="{FA9EDD94-59A2-4D67-9F19-6EC8C5C1D312}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</Custom>
 				<ShareSets>
+					<Plugin Id="702543456" Name="Tunnel1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Tunnel1" GUID="{CC44B890-9865-4157-965F-86FED27BC4C6}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="1008402193" Name="Low_Pass_20KHz" ObjectPath="\Effects\Factory Effects\Parametric EQ\Low Pass Filters\Low_Pass_20KHz" GUID="{830124FB-B9D5-4AE8-846E-E94A74652666}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3395979371" Name="Straight_Delay" ObjectPath="\Effects\Factory Effects\Stereo Delay\Straight_Delay" GUID="{00ADE3F8-B4F2-465A-9DC3-9EA55A7B3235}" LibName="Wwise Stereo Delay" LibId="8847363"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
 				<Event Id="3441789682" Name="MUS_Play_MainMusic" ObjectPath="\Events\Music\MUS_Play_MainMusic" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" DurationType="Infinite">
 					<AuxBusRefs>
 						<AuxBusRef Id="1641293181" Name="REV_LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"/>
+						<AuxBusRef Id="2172616000" Name="REV_Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}"/>
 					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="634183254" GUID="{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"/>
 							<MediaRefs>
+								<MediaRef Id="169742422"/>
 								<MediaRef Id="370767073"/>
 								<MediaRef Id="1060688450"/>
 							</MediaRefs>
 							<PluginRefs>
 								<ShareSets>
 									<PluginRef Id="1008402193"/>
+									<PluginRef Id="3395979371"/>
 								</ShareSets>
 							</PluginRefs>
 						</SwitchContainer>
@@ -1091,23 +1089,44 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="3814499265" GUID="{1FE92F27-401B-44A3-BFC0-65F192492AAB}"/>
 							<MediaRefs>
+								<MediaRef Id="169742422"/>
 								<MediaRef Id="776551369"/>
+								<MediaRef Id="1060688450"/>
 							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="3395979371"/>
+								</ShareSets>
+							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="3037000007" GUID="{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"/>
 							<MediaRefs>
+								<MediaRef Id="169742422"/>
+								<MediaRef Id="646294798"/>
 								<MediaRef Id="746674216"/>
+								<MediaRef Id="747724223"/>
 								<MediaRef Id="844212876"/>
+								<MediaRef Id="1016493422"/>
+								<MediaRef Id="1060309485"/>
 								<MediaRef Id="1060688450"/>
 							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="225066277"/>
+								</Custom>
+								<ShareSets>
+									<PluginRef Id="702543456"/>
+									<PluginRef Id="3395979371"/>
+								</ShareSets>
+							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="348963605" GUID="{1A0075FD-1C91-4DCD-B4AC-2029A2632B3A}"/>
 							<MediaRefs>
+								<MediaRef Id="407511388"/>
 								<MediaRef Id="746674216"/>
 								<MediaRef Id="844212876"/>
-								<MediaRef Id="989398633"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -1129,6 +1148,7 @@
 			</Events>
 			<GameParameters>
 				<GameParameter Id="1645844663" Name="RTPC_PlayerMovement" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerMovement" GUID="{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"/>
+				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 			<StateGroups>
@@ -1197,5 +1217,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E699ACC0-58B1-834F-E803-C6FDE4722DDD}</FileHash>
+	<FileHash>{F62A4DEE-7453-6AAA-C19A-6687F7CD9651}</FileHash>
 </SoundBanksInfo>

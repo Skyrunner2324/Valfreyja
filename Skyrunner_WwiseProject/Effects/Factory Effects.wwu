@@ -1854,12 +1854,58 @@
 						</Effect>
 						<Effect Name="Straight_Delay" ID="{00ADE3F8-B4F2-465A-9DC3-9EA55A7B3235}" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
 							<PropertyList>
+								<Property Name="DryLevel" Type="Real32" Value="-2"/>
 								<Property Name="FilterFrequency" Type="Real32" Value="261"/>
 								<Property Name="FilterGain" Type="Real32" Value="10.5"/>
-								<Property Name="LeftDelayTime" Type="Real32" Value="0.25"/>
-								<Property Name="RightDelayTime" Type="Real32" Value="0.25"/>
-								<Property Name="WetLevel" Type="Real32" Value="-6"/>
+								<Property Name="FrontRearBalance" Type="Real32" Value="100"/>
+								<Property Name="LeftDelayTime" Type="Real32" Value="0.46"/>
+								<Property Name="RightDelayTime" Type="Real32" Value="0.92"/>
+								<Property Name="WetLevel" Type="Real32" Value="-23"/>
 							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{C2C1E24D-0300-4809-B15A-C5762A29C9E7}" ShortID="346668325">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="WetLevel"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{13C738E1-E867-44E9-B498-DEC3D2066701}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-1</XPos>
+																		<YPos>4.51953</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0.00324</XPos>
+																		<YPos>0.13062</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>7.73633</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</Effect>
 					</ChildrenList>
 				</Folder>

@@ -55,7 +55,7 @@
     "Type": "Event",
     "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
     "Language": "SFX",
-    "Hash": "{EEE7F4AC-A863-C363-06C8-C4DAE85BE4FD}",
+    "Hash": "{39AF2D16-A5FC-1BB6-17F3-7B9EEC421ECB}",
     "ObjectPath": "SX_player_land",
     "ShortName": "SX_player_land",
     "Path": "Event/SX_player_land.bnk",
@@ -167,7 +167,7 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{61194D86-E2A2-4454-77D3-6D312BCF5EFF}",
+    "Hash": "{71F9A4F0-7387-D516-93C6-0DC890E7DE1C}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
@@ -753,20 +753,11 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{9252506F-43D0-F485-A299-685FC38ECC8F}",
+    "Hash": "{CE4870C0-3A6D-1F2C-93C7-15380E35DDB4}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Media": [
-     {
-      "Id": "569254387",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "AudioEase\\Altiverb - Outdoor and More\\Outdoor\\Tunnel\\AE_Tunnel.wav",
-      "Path": "Media/569254387.wem",
-      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Tunnel/AE_Tunnel_EE1509C2.wem"
-     },
      {
       "Id": "941961704",
       "Language": "SFX",
@@ -822,6 +813,14 @@
      ],
      "ShareSets": [
       {
+       "Id": "702543456",
+       "Name": "Tunnel1",
+       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Tunnel1",
+       "GUID": "{CC44B890-9865-4157-965F-86FED27BC4C6}",
+       "LibName": "Wwise Matrix Reverb",
+       "LibId": "7536643"
+      },
+      {
        "Id": "1782142158",
        "Name": "DistantBuilding_MicsFar",
        "ObjectPath": "\\Effects\\Factory Altiverb - Outdoor and More\\Altiverb - Outdoor and More\\Outdoor Field\\DistantBuilding_MicsFar",
@@ -841,19 +840,6 @@
        "GUID": "{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}",
        "LibName": "Wwise Reflect",
        "LibId": "11206659"
-      },
-      {
-       "Id": "3059984139",
-       "Name": "Tunnel",
-       "ObjectPath": "\\Effects\\Factory Altiverb - Outdoor and More\\Altiverb - Outdoor and More\\Outdoor Tunnel\\Tunnel",
-       "GUID": "{88B2F5E7-703C-4D7B-B897-946069693C4B}",
-       "LibName": "Wwise Convolution Reverb",
-       "LibId": "8323075",
-       "MediaRefs": [
-        {
-         "Id": "569254387"
-        }
-       ]
       }
      ],
      "AudioDevices": [
@@ -1132,7 +1118,7 @@
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "3059984139"
+         "Id": "702543456"
         }
        ]
       },
@@ -1776,7 +1762,7 @@
     "Type": "Event",
     "GUID": "{A070E3C3-67C1-4FFE-846E-631BD136D358}",
     "Language": "SFX",
-    "Hash": "{D474D694-FD40-9E63-E50A-A751C3A106C1}",
+    "Hash": "{ABFF89CE-D538-3CA9-9FE1-231A21167A4C}",
     "ObjectPath": "SX_player_jump",
     "ShortName": "SX_player_jump",
     "Path": "Event/SX_player_jump.bnk",
@@ -2105,7 +2091,7 @@
     "Type": "Event",
     "GUID": "{F4227598-B79C-47C2-A22C-C305F4B1E5C2}",
     "Language": "SFX",
-    "Hash": "{25EFB01D-F574-DCC6-08AC-B33E5328883F}",
+    "Hash": "{AC7BC1CD-0E2F-3812-CEBA-E5D8459A1DC1}",
     "ObjectPath": "SX_player_dash",
     "ShortName": "SX_player_dash",
     "Path": "Event/SX_player_dash.bnk",
@@ -2118,14 +2104,6 @@
        "GUID": "{2AD328FC-8E47-409D-8B2C-ED5636C356C3}",
        "LibName": "SoundSeed Air Woosh",
        "LibId": "7864322"
-      },
-      {
-       "Id": "640802269",
-       "Name": "Delay (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_dash\\Delay (Custom)",
-       "GUID": "{C0FCC26E-70DE-482D-9F02-A6A6E9AD97D5}",
-       "LibName": "Wwise Delay",
-       "LibId": "6946819"
       }
      ]
     },
@@ -2136,27 +2114,18 @@
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_dash",
       "GUID": "{F4227598-B79C-47C2-A22C-C305F4B1E5C2}",
       "DurationType": "OneShot",
-      "DurationMin": "0.24999999",
-      "DurationMax": "0.41666666",
+      "DurationMin": "0.25",
+      "DurationMax": "0.35",
       "PluginRefs": {
        "Custom": [
         {
          "Id": "631246921"
-        },
-        {
-         "Id": "640802269"
         }
        ]
       }
      }
     ],
     "GameParameters": [
-     {
-      "Id": "2565740352",
-      "Name": "RTPC_SlowMo",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
-      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
-     },
      {
       "Id": "2653406601",
       "Name": "RTPC_PlayerSpeed",
@@ -2170,35 +2139,19 @@
     "Type": "Bus",
     "GUID": "{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}",
     "Language": "SFX",
-    "Hash": "{6851C3DA-F654-BEFB-340D-7641263079BF}",
+    "Hash": "{7AC81F31-18AE-DD5F-E116-1CC50CEC6089}",
     "ObjectPath": "REV_Cave",
     "ShortName": "REV_Cave",
     "Path": "Bus/REV_Cave.bnk",
-    "Media": [
-     {
-      "Id": "569254387",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "AudioEase\\Altiverb - Outdoor and More\\Outdoor\\Tunnel\\AE_Tunnel.wav",
-      "Path": "Media/569254387.wem",
-      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Tunnel/AE_Tunnel_EE1509C2.wem"
-     }
-    ],
     "Plugins": {
      "ShareSets": [
       {
-       "Id": "3059984139",
-       "Name": "Tunnel",
-       "ObjectPath": "\\Effects\\Factory Altiverb - Outdoor and More\\Altiverb - Outdoor and More\\Outdoor Tunnel\\Tunnel",
-       "GUID": "{88B2F5E7-703C-4D7B-B897-946069693C4B}",
-       "LibName": "Wwise Convolution Reverb",
-       "LibId": "8323075",
-       "MediaRefs": [
-        {
-         "Id": "569254387"
-        }
-       ]
+       "Id": "702543456",
+       "Name": "Tunnel1",
+       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Tunnel1",
+       "GUID": "{CC44B890-9865-4157-965F-86FED27BC4C6}",
+       "LibName": "Wwise Matrix Reverb",
+       "LibId": "7536643"
       }
      ]
     },
@@ -2211,7 +2164,7 @@
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "3059984139"
+         "Id": "702543456"
         }
        ]
       },
@@ -2231,37 +2184,19 @@
     "Type": "Event",
     "GUID": "{6BE02D09-9271-46A7-BAA0-E99F5C869C80}",
     "Language": "SFX",
-    "Hash": "{AAAA51D7-1039-96E0-738E-F9F24B35F713}",
+    "Hash": "{094B8D98-6A49-F536-AC7D-B20595813701}",
     "ObjectPath": "SX_player_feedback_hitmarker",
     "ShortName": "SX_player_feedback_hitmarker",
     "Path": "Event/SX_player_feedback_hitmarker.bnk",
     "Media": [
      {
-      "Id": "1278217",
+      "Id": "802440363",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Player_Feedback\\03_hitmarker.wav",
-      "Path": "Media/1278217.wem",
-      "CachePath": "SFX/Player_Feedback/03_hitmarker_755F56E2.wem"
-     },
-     {
-      "Id": "102366568",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Player_Feedback\\01_hitmarker.wav",
-      "Path": "Media/102366568.wem",
-      "CachePath": "SFX/Player_Feedback/01_hitmarker_755F56E2.wem"
-     },
-     {
-      "Id": "1019709574",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Player_Feedback\\02_hitmarker.wav",
-      "Path": "Media/1019709574.wem",
-      "CachePath": "SFX/Player_Feedback/02_hitmarker_755F56E2.wem"
+      "ShortName": "Player_Feedback\\Phil Michalski - UI - Glitchy Counter.wav",
+      "Path": "Media/802440363.wem",
+      "CachePath": "SFX/Player_Feedback/Phil Michalski - UI - Glitchy Counter_755F56E2.wem"
      }
     ],
     "Events": [
@@ -2271,17 +2206,11 @@
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_feedback_hitmarker",
       "GUID": "{6BE02D09-9271-46A7-BAA0-E99F5C869C80}",
       "DurationType": "OneShot",
-      "DurationMin": "0.40947846",
-      "DurationMax": "0.4130839",
+      "DurationMin": "0.6126758",
+      "DurationMax": "1.2112772",
       "MediaRefs": [
        {
-        "Id": "1278217"
-       },
-       {
-        "Id": "102366568"
-       },
-       {
-        "Id": "1019709574"
+        "Id": "802440363"
        }
       ]
      }
@@ -2410,7 +2339,7 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{15E3B598-7073-B170-51E2-6A169E920D8E}",
+    "Hash": "{9315242B-3DD7-90E7-AD0F-071FBED627C2}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
@@ -2423,6 +2352,15 @@
       "ShortName": "Music\\145-Arena_Phase 1- synths.wav",
       "Path": "Media/159789116.wem",
       "CachePath": "SFX/Music/145-Arena_Phase 1- synths_073B4D0C.wem"
+     },
+     {
+      "Id": "169742422",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\X- guitar solo.wav",
+      "Path": "Media/169742422.wem",
+      "CachePath": "SFX/Music/X- guitar solo_073B4D0C.wem"
      },
      {
       "Id": "213384098",
@@ -2452,6 +2390,15 @@
       "CachePath": "SFX/Music/Sky_Reveal_Alpha_073B4D0C.wem"
      },
      {
+      "Id": "407511388",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\Z04- bass.wav",
+      "Path": "Media/407511388.wem",
+      "CachePath": "SFX/Music/Z04- bass_073B4D0C.wem"
+     },
+     {
       "Id": "573314099",
       "Language": "SFX",
       "Streaming": "false",
@@ -2468,6 +2415,15 @@
       "ShortName": "Music\\145- Arena - Buildup - synths.wav",
       "Path": "Media/589742436.wem",
       "CachePath": "SFX/Music/145- Arena - Buildup - synths_073B4D0C.wem"
+     },
+     {
+      "Id": "646294798",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\Z01- bass.wav",
+      "Path": "Media/646294798.wem",
+      "CachePath": "SFX/Music/Z01- bass_073B4D0C.wem"
      },
      {
       "Id": "699308010",
@@ -2497,6 +2453,15 @@
       "CachePath": "SFX/Music/A01- pulse_073B4D0C.wem"
      },
      {
+      "Id": "747724223",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\Z03- bass.wav",
+      "Path": "Media/747724223.wem",
+      "CachePath": "SFX/Music/Z03- bass_073B4D0C.wem"
+     },
+     {
       "Id": "776551369",
       "Language": "SFX",
       "Streaming": "false",
@@ -2515,13 +2480,22 @@
       "CachePath": "SFX/Music/Sky_Tuto_Alpha_073B4D0C.wem"
      },
      {
-      "Id": "989398633",
+      "Id": "1016493422",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Music\\X- psyche rock.wav",
-      "Path": "Media/989398633.wem",
-      "CachePath": "SFX/Music/X- psyche rock_073B4D0C.wem"
+      "ShortName": "Music\\Z03- synths.wav",
+      "Path": "Media/1016493422.wem",
+      "CachePath": "SFX/Music/Z03- synths_073B4D0C.wem"
+     },
+     {
+      "Id": "1060309485",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\Z01- synths.wav",
+      "Path": "Media/1060309485.wem",
+      "CachePath": "SFX/Music/Z01- synths_073B4D0C.wem"
      },
      {
       "Id": "1060688450",
@@ -2534,7 +2508,25 @@
      }
     ],
     "Plugins": {
+     "Custom": [
+      {
+       "Id": "225066277",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Interactive Music Hierarchy\\Default Work Unit\\Music_Alpha\\Main_Music_Switch\\Sky_Tuto_Playlist Container\\Intro_Tuto\\X- guitar solo\\Parametric EQ (Custom)",
+       "GUID": "{FA9EDD94-59A2-4D67-9F19-6EC8C5C1D312}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ],
      "ShareSets": [
+      {
+       "Id": "702543456",
+       "Name": "Tunnel1",
+       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Tunnel1",
+       "GUID": "{CC44B890-9865-4157-965F-86FED27BC4C6}",
+       "LibName": "Wwise Matrix Reverb",
+       "LibId": "7536643"
+      },
       {
        "Id": "1008402193",
        "Name": "Low_Pass_20KHz",
@@ -2542,6 +2534,14 @@
        "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
+      },
+      {
+       "Id": "3395979371",
+       "Name": "Straight_Delay",
+       "ObjectPath": "\\Effects\\Factory Effects\\Stereo Delay\\Straight_Delay",
+       "GUID": "{00ADE3F8-B4F2-465A-9DC3-9EA55A7B3235}",
+       "LibName": "Wwise Stereo Delay",
+       "LibId": "8847363"
       }
      ]
     },
@@ -2558,6 +2558,12 @@
         "Name": "REV_LargeRoom",
         "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom",
         "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"
+       },
+       {
+        "Id": "2172616000",
+        "Name": "REV_Cave",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_Cave",
+        "GUID": "{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}"
        }
       ],
       "SwitchContainers": [
@@ -2570,6 +2576,9 @@
         },
         "MediaRefs": [
          {
+          "Id": "169742422"
+         },
+         {
           "Id": "370767073"
          },
          {
@@ -2580,6 +2589,9 @@
          "ShareSets": [
           {
            "Id": "1008402193"
+          },
+          {
+           "Id": "3395979371"
           }
          ]
         }
@@ -2622,9 +2634,22 @@
         },
         "MediaRefs": [
          {
+          "Id": "169742422"
+         },
+         {
           "Id": "776551369"
+         },
+         {
+          "Id": "1060688450"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3395979371"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -2635,15 +2660,45 @@
         },
         "MediaRefs": [
          {
+          "Id": "169742422"
+         },
+         {
+          "Id": "646294798"
+         },
+         {
           "Id": "746674216"
+         },
+         {
+          "Id": "747724223"
          },
          {
           "Id": "844212876"
          },
          {
+          "Id": "1016493422"
+         },
+         {
+          "Id": "1060309485"
+         },
+         {
           "Id": "1060688450"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "Custom": [
+          {
+           "Id": "225066277"
+          }
+         ],
+         "ShareSets": [
+          {
+           "Id": "702543456"
+          },
+          {
+           "Id": "3395979371"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -2654,13 +2709,13 @@
         },
         "MediaRefs": [
          {
+          "Id": "407511388"
+         },
+         {
           "Id": "746674216"
          },
          {
           "Id": "844212876"
-         },
-         {
-          "Id": "989398633"
          }
         ]
        },
@@ -2705,6 +2760,12 @@
       "Name": "RTPC_PlayerMovement",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerMovement",
       "GUID": "{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"
+     },
+     {
+      "Id": "2565740352",
+      "Name": "RTPC_SlowMo",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
+      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
      },
      {
       "Id": "2653406601",
@@ -2881,6 +2942,6 @@
     ]
    }
   ],
-  "FileHash": "{D7423B4B-8584-C187-B166-AA492503C8D4}"
+  "FileHash": "{D131317E-4497-65BB-89D6-B2CDF70A323F}"
  }
 }

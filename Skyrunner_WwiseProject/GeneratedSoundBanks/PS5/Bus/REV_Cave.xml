@@ -1,31 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="2172616000" Type="Bus" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" Language="SFX" Hash="{6851C3DA-F654-BEFB-340D-7641263079BF}">
+		<SoundBank Id="2172616000" Type="Bus" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" Language="SFX" Hash="{7AC81F31-18AE-DD5F-E116-1CC50CEC6089}">
 			<ObjectPath>REV_Cave</ObjectPath>
 			<ShortName>REV_Cave</ShortName>
 			<Path>Bus/REV_Cave.bnk</Path>
-			<Media>
-				<File Id="569254387" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Tunnel\AE_Tunnel.wav</ShortName>
-					<Path>Media/569254387.wem</Path>
-					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Tunnel/AE_Tunnel_EE1509C2.wem</CachePath>
-				</File>
-			</Media>
 			<Plugins>
 				<ShareSets>
-					<Plugin Id="3059984139" Name="Tunnel" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Tunnel\Tunnel" GUID="{88B2F5E7-703C-4D7B-B897-946069693C4B}" LibName="Wwise Convolution Reverb" LibId="8323075">
-						<MediaRefs>
-							<MediaRef Id="569254387"/>
-						</MediaRefs>
-					</Plugin>
+					<Plugin Id="702543456" Name="Tunnel1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Tunnel1" GUID="{CC44B890-9865-4157-965F-86FED27BC4C6}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 				</ShareSets>
 			</Plugins>
 			<AuxBusses>
 				<AuxBus Id="2172616000" Name="REV_Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="3059984139"/>
+							<PluginRef Id="702543456"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
@@ -35,5 +24,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6D7B22D0-8618-9631-FE5C-F13D36D1495D}</FileHash>
+	<FileHash>{B13A7F17-8D10-6664-EF92-BA7375D90F42}</FileHash>
 </SoundBanksInfo>

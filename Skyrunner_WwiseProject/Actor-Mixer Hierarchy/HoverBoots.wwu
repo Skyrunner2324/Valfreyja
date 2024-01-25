@@ -51,7 +51,7 @@
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -76,12 +76,17 @@
 										<ActiveSource Name="hoverboots_on_rail_loop" ID="{1D95FE8F-FAF9-44B7-9AB6-4AB7659EF519}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="wallrunloop" ID="{539DBF27-0D3A-416C-BF44-1BF059401578}" ShortID="978242303">
+								<Sound Name="player_in_air" ID="{539DBF27-0D3A-416C-BF44-1BF059401578}" ShortID="978242303">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-2400</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-14</Value>
+												<Value>-96</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -113,11 +118,6 @@
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-18</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -127,9 +127,9 @@
 											<Custom>
 												<Effect Name="Delay (Custom)" ID="{700FD0B8-9B20-48B5-BE3E-EF4CE88526AC}" ShortID="268374027" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
 													<PropertyList>
-														<Property Name="DelayTime" Type="Real32" Value="0.34"/>
+														<Property Name="DelayTime" Type="Real32" Value="0.32"/>
 														<Property Name="Feedback" Type="Real32" Value="6.5"/>
-														<Property Name="WetDryMix" Type="Real32" Value="16.5"/>
+														<Property Name="WetDryMix" Type="Real32" Value="71"/>
 													</PropertyList>
 												</Effect>
 											</Custom>
@@ -368,22 +368,16 @@
 												<List Name="Deflectors">
 													<PluginInnerObject Name="" ID="{5CA0244B-546C-45E4-BD83-067D0899F76D}" PluginName="Deflector" CompanyID="0" PluginID="121">
 														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="38"/>
-															<Property Name="Gain" Type="Real32" Value="-4"/>
-															<Property Name="PanX" Type="Real64" Value="1.03896103896103"/>
-															<Property Name="PanY" Type="Real64" Value="73.3167082294264"/>
-														</PropertyList>
-													</PluginInnerObject>
-													<PluginInnerObject Name="" ID="{7EDEC7D0-BE16-4CEE-A717-084E5697355B}" PluginName="Deflector" CompanyID="0" PluginID="121">
-														<PropertyList>
-															<Property Name="PanX" Type="Real64" Value="58.9610389610389"/>
-															<Property Name="PanY" Type="Real64" Value="33.6658354114713"/>
+															<Property Name="Frequency" Type="Real32" Value="152"/>
+															<Property Name="Gain" Type="Real32" Value="1"/>
+															<Property Name="PanX" Type="Real64" Value="59.2207792207792"/>
+															<Property Name="PanY" Type="Real64" Value="16.9576059850374"/>
 														</PropertyList>
 													</PluginInnerObject>
 													<PluginInnerObject Name="" ID="{3B909F4B-A6E3-4033-B257-70B0B902B3A4}" PluginName="Deflector" CompanyID="0" PluginID="121">
 														<PropertyList>
-															<Property Name="PanX" Type="Real64" Value="-50.6493506493507"/>
-															<Property Name="PanY" Type="Real64" Value="32.1695760598504"/>
+															<Property Name="PanX" Type="Real64" Value="-33.5064935064936"/>
+															<Property Name="PanY" Type="Real64" Value="81.5461346633417"/>
 														</PropertyList>
 													</PluginInnerObject>
 												</List>
@@ -425,7 +419,7 @@
 											</CrossfadingInfo>
 										</BlendTrackAssoc>
 										<BlendTrackAssoc>
-											<ItemRef Name="wallrunloop" ID="{539DBF27-0D3A-416C-BF44-1BF059401578}"/>
+											<ItemRef Name="player_in_air" ID="{539DBF27-0D3A-416C-BF44-1BF059401578}"/>
 											<CrossfadingInfo>
 												<LeftEdgePos>3.77502634351949</LeftEdgePos>
 												<LeftFadingMode>Automatic</LeftFadingMode>

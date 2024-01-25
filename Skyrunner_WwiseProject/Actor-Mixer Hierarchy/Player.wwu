@@ -53,7 +53,7 @@
 										<SourcePlugin Name="Soundseed Air Woosh" ID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" ShortID="1010974337" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="Duration" Type="Real64" Value="0.2"/>
-												<Property Name="FrequencyScale" Type="Real32" Value="0.76"/>
+												<Property Name="FrequencyScale" Type="Real32" Value="1.27"/>
 												<Property Name="NoiseColor" Type="int16" Value="2"/>
 												<Property Name="QFactorScale" Type="Real32" Value="-2.69"/>
 												<Property Name="Speed" Type="Real32" Value="-1"/>
@@ -78,8 +78,8 @@
 							<Flags>5</Flags>
 						</Point>
 						<Point>
-							<XPos>0.04779</XPos>
-							<YPos>30.32999</YPos>
+							<XPos>0.03836</XPos>
+							<YPos>41.23907</YPos>
 							<Flags>0</Flags>
 						</Point>
 						<Point>
@@ -124,7 +124,8 @@
 												<List Name="Deflectors">
 													<PluginInnerObject Name="" ID="{49A592F2-E406-452B-96D2-72911A45A308}" PluginName="Deflector" CompanyID="0" PluginID="122">
 														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="411"/>
+															<Property Name="Frequency" Type="Real32" Value="184"/>
+															<Property Name="QFactor" Type="Real32" Value="36"/>
 															<Property Name="SectionRatio" Type="int32" Value="2"/>
 														</PropertyList>
 													</PluginInnerObject>
@@ -179,73 +180,13 @@
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-21</Value>
+												<Value>-10</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="Effect0">
-											<Custom>
-												<Effect Name="Delay (Custom)" ID="{C0FCC26E-70DE-482D-9F02-A6A6E9AD97D5}" ShortID="640802269" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
-													<PropertyList>
-														<Property Name="DelayTime" Type="Real32" Value="0.36"/>
-														<Property Name="Feedback" Type="Real32" Value="14.5"/>
-														<Property Name="WetDryMix" Type="Real32" Value="21"/>
-													</PropertyList>
-													<ObjectLists>
-														<ObjectList Name="RTPC">
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{41CFD8C8-E369-4887-87D4-1693D5C648EC}" ShortID="477413482">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="Feedback"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{E1AEFC0E-C246-46CD-B140-5D59532C0EDA}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="1"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>-1</XPos>
-																								<YPos>0</YPos>
-																								<Flags>5</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>-0.59822</XPos>
-																								<YPos>37.10627</YPos>
-																								<Flags>0</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>0.00169</XPos>
-																								<YPos>12.60093</YPos>
-																								<Flags>0</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>1</XPos>
-																								<YPos>40.79393</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-														</ObjectList>
-													</ObjectLists>
-												</Effect>
-											</Custom>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
@@ -255,15 +196,14 @@
 										<SourcePlugin Name="Soundseed Air Woosh" ID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" ShortID="631246921" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="ChannelMask" Type="int32" Value="0"/>
-												<Property Name="Duration" Type="Real64" Value="0.2"/>
+												<Property Name="Duration" Type="Real64" Value="0.3"/>
 												<Property Name="DurationRandom" Type="Real32" Value="0.05"/>
 												<Property Name="FrequencyScale" Type="Real32" Value="-0.21"/>
-												<Property Name="NoiseColor" Type="int16" Value="2"/>
-												<Property Name="PlaybackRate" Type="Real32" Value="0.6"/>
 												<Property Name="QFactorScale" Type="Real32" Value="-2"/>
 												<Property Name="Speed" Type="Real32" Value="13"/>
 												<Property Name="SpeedAutomate" Type="bool" Value="True"/>
-												<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="11.8"/>
+												<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="22.6"/>
+												<Property Name="SpeedPointTimeRandom" Type="Real32" Value="0.66"/>
 											</PropertyList>
 											<ObjectLists>
 												<ObjectList Name="RTPC">
@@ -320,22 +260,17 @@
 							<Flags>5</Flags>
 						</Point>
 						<Point>
-							<XPos>0.06818</XPos>
-							<YPos>61.49056</YPos>
+							<XPos>0.07944</XPos>
+							<YPos>84.05693</YPos>
 							<Flags>0</Flags>
 						</Point>
 						<Point>
-							<XPos>0.06976</XPos>
-							<YPos>49.06099</YPos>
+							<XPos>0.24312</XPos>
+							<YPos>42.11783</YPos>
 							<Flags>0</Flags>
 						</Point>
 						<Point>
-							<XPos>0.11784</XPos>
-							<YPos>14.65551</YPos>
-							<Flags>0</Flags>
-						</Point>
-						<Point>
-							<XPos>0.2</XPos>
+							<XPos>0.3</XPos>
 							<YPos>0</YPos>
 							<Flags>37</Flags>
 						</Point>
@@ -355,6 +290,12 @@
 						<Flags>12</Flags>
 						<Time>0</Time>
 					</Point>
+					<Point>
+						<XPos>-0.259740259740255</XPos>
+						<YPos>17.5308641975309</YPos>
+						<Flags>0</Flags>
+						<Time>1000</Time>
+					</Point>
 				</PointList>
 			</Path2D>
 		</Path>
@@ -362,23 +303,9 @@
 </PluginData>
 											<PluginInnerObjectList>
 												<List Name="Deflectors">
-													<PluginInnerObject Name="" ID="{EAC13854-2008-45EF-9E15-C0139361B597}" PluginName="Deflector" CompanyID="0" PluginID="122">
+													<PluginInnerObject Name="" ID="{0F22380B-A0A9-4421-AD6A-BBE24B44E449}" PluginName="Deflector" CompanyID="0" PluginID="122">
 														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="988"/>
-															<Property Name="Gain" Type="Real32" Value="1"/>
-															<Property Name="QFactor" Type="Real32" Value="14.73"/>
-														</PropertyList>
-													</PluginInnerObject>
-													<PluginInnerObject Name="" ID="{41777E59-ED02-41FC-BB97-AEFCE23D16AB}" PluginName="Deflector" CompanyID="0" PluginID="122">
-														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="985"/>
-															<Property Name="Gain" Type="Real32" Value="-14"/>
-														</PropertyList>
-													</PluginInnerObject>
-													<PluginInnerObject Name="" ID="{4C67F5B4-6CAD-48E6-B7C4-D8464030B4DA}" PluginName="Deflector" CompanyID="0" PluginID="122">
-														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="971"/>
-															<Property Name="QFactor" Type="Real32" Value="23.66"/>
+															<Property Name="Frequency" Type="Real32" Value="297"/>
 														</PropertyList>
 													</PluginInnerObject>
 												</List>
@@ -693,7 +620,7 @@
 											<PropertyList>
 												<Property Name="Duration" Type="Real64" Value="0.2"/>
 												<Property Name="DurationRandom" Type="Real32" Value="0.05"/>
-												<Property Name="FrequencyScale" Type="Real32" Value="-1.05"/>
+												<Property Name="FrequencyScale" Type="Real32" Value="-0.84"/>
 												<Property Name="FrequencyScaleRandom" Type="Real32" Value="0.19"/>
 												<Property Name="NoiseColor" Type="int16" Value="1"/>
 												<Property Name="PlaybackRate" Type="Real32" Value="0.8"/>
@@ -715,8 +642,8 @@
 							<Flags>5</Flags>
 						</Point>
 						<Point>
-							<XPos>0.01242</XPos>
-							<YPos>72.00001</YPos>
+							<XPos>0.01569</XPos>
+							<YPos>63.63637</YPos>
 							<Flags>0</Flags>
 						</Point>
 						<Point>
@@ -725,8 +652,8 @@
 							<Flags>0</Flags>
 						</Point>
 						<Point>
-							<XPos>0.12321</XPos>
-							<YPos>34.59129</YPos>
+							<XPos>0.10357</XPos>
+							<YPos>29.13674</YPos>
 							<Flags>0</Flags>
 						</Point>
 						<Point>
@@ -1630,10 +1557,9 @@
 						<RandomSequenceContainer Name="feedback_hitmarker" ID="{FD497959-0AAB-45A3-A901-F9C101D62884}" ShortID="712930108">
 							<PropertyList>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-								<Property Name="RestartBeginningOrBackward" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-12</Value>
+										<Value>-20</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1646,77 +1572,98 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="01_hitmarker" ID="{F73D51F0-45D6-4C49-9B2F-1A8B295E57A2}" ShortID="62430448">
+								<Sound Name="Phil Michalski - UI - Glitchy Counter" ID="{ADC6E196-8382-4BE8-9684-0C56057B58F5}" ShortID="915218495">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-410</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="01_hitmarker" ID="{F0912A96-891D-4269-93EC-02B4C029075B}">
+										<AudioFileSource Name="Phil Michalski - UI - Glitchy Counter" ID="{F67D1182-04D7-49DE-8F17-25B2CD54B2A5}">
 											<Language>SFX</Language>
-											<AudioFile>Player_Feedback\01_hitmarker.wav</AudioFile>
+											<AudioFile>Player_Feedback\Phil Michalski - UI - Glitchy Counter.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="102366568"/>
+												<MediaID ID="802440363"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="01_hitmarker" ID="{F0912A96-891D-4269-93EC-02B4C029075B}" Platform="Linked"/>
+										<ActiveSource Name="Phil Michalski - UI - Glitchy Counter" ID="{F67D1182-04D7-49DE-8F17-25B2CD54B2A5}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="02_hitmarker" ID="{7659CE2C-756B-4C7C-BD68-1FF9F6B25647}" ShortID="831916689">
+								<Sound Name="Phil Michalski - UI - Glitchy Counter_01" ID="{1842D5BA-7D52-4818-AC51-F879B34708B8}" ShortID="139462250">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>300</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="02_hitmarker" ID="{B60336B7-DFF0-4DFA-A4FC-6C68F5E190A9}">
+										<AudioFileSource Name="Phil Michalski - UI - Glitchy Counter" ID="{7B39D0D5-0EC9-4A3B-B3AF-698C49F1466F}">
 											<Language>SFX</Language>
-											<AudioFile>Player_Feedback\02_hitmarker.wav</AudioFile>
+											<AudioFile>Player_Feedback\Phil Michalski - UI - Glitchy Counter.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="1019709574"/>
+												<MediaID ID="802440363"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="02_hitmarker" ID="{B60336B7-DFF0-4DFA-A4FC-6C68F5E190A9}" Platform="Linked"/>
+										<ActiveSource Name="Phil Michalski - UI - Glitchy Counter" ID="{7B39D0D5-0EC9-4A3B-B3AF-698C49F1466F}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="03_hitmarker" ID="{1431BC8B-ABD9-4BC1-8D4E-D54A4D32C9C8}" ShortID="1035867775">
+								<Sound Name="Phil Michalski - UI - Glitchy Counter_02" ID="{4712CE20-3CD6-4664-928C-36F639D93561}" ShortID="114121292">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>770</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="03_hitmarker" ID="{DD938F03-E9D3-43BF-9B9C-91AC33107CEE}">
+										<AudioFileSource Name="Phil Michalski - UI - Glitchy Counter" ID="{B568B4B1-12CA-4577-B6A2-D39BB618F750}">
 											<Language>SFX</Language>
-											<AudioFile>Player_Feedback\03_hitmarker.wav</AudioFile>
+											<AudioFile>Player_Feedback\Phil Michalski - UI - Glitchy Counter.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="1278217"/>
+												<MediaID ID="802440363"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="03_hitmarker" ID="{DD938F03-E9D3-43BF-9B9C-91AC33107CEE}" Platform="Linked"/>
+										<ActiveSource Name="Phil Michalski - UI - Glitchy Counter" ID="{B568B4B1-12CA-4577-B6A2-D39BB618F750}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 							<Playlist>
-								<ItemRef Name="01_hitmarker" ID="{F73D51F0-45D6-4C49-9B2F-1A8B295E57A2}"/>
-								<ItemRef Name="03_hitmarker" ID="{1431BC8B-ABD9-4BC1-8D4E-D54A4D32C9C8}"/>
-								<ItemRef Name="02_hitmarker" ID="{7659CE2C-756B-4C7C-BD68-1FF9F6B25647}"/>
+								<ItemRef Name="Phil Michalski - UI - Glitchy Counter" ID="{ADC6E196-8382-4BE8-9684-0C56057B58F5}"/>
+								<ItemRef Name="Phil Michalski - UI - Glitchy Counter_01" ID="{1842D5BA-7D52-4818-AC51-F879B34708B8}"/>
+								<ItemRef Name="Phil Michalski - UI - Glitchy Counter_02" ID="{4712CE20-3CD6-4664-928C-36F639D93561}"/>
 							</Playlist>
 						</RandomSequenceContainer>
 					</ChildrenList>

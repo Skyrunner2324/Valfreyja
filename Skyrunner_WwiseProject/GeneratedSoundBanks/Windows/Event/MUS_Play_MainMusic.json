@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{15E3B598-7073-B170-51E2-6A169E920D8E}",
+    "Hash": "{9315242B-3DD7-90E7-AD0F-071FBED627C2}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
@@ -23,6 +23,15 @@
       "ShortName": "Music\\145-Arena_Phase 1- synths.wav",
       "Path": "Media/159789116.wem",
       "CachePath": "SFX/Music/145-Arena_Phase 1- synths_073B4D0C.wem"
+     },
+     {
+      "Id": "169742422",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\X- guitar solo.wav",
+      "Path": "Media/169742422.wem",
+      "CachePath": "SFX/Music/X- guitar solo_073B4D0C.wem"
      },
      {
       "Id": "213384098",
@@ -52,6 +61,15 @@
       "CachePath": "SFX/Music/Sky_Reveal_Alpha_073B4D0C.wem"
      },
      {
+      "Id": "407511388",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\Z04- bass.wav",
+      "Path": "Media/407511388.wem",
+      "CachePath": "SFX/Music/Z04- bass_073B4D0C.wem"
+     },
+     {
       "Id": "573314099",
       "Language": "SFX",
       "Streaming": "false",
@@ -68,6 +86,15 @@
       "ShortName": "Music\\145- Arena - Buildup - synths.wav",
       "Path": "Media/589742436.wem",
       "CachePath": "SFX/Music/145- Arena - Buildup - synths_073B4D0C.wem"
+     },
+     {
+      "Id": "646294798",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\Z01- bass.wav",
+      "Path": "Media/646294798.wem",
+      "CachePath": "SFX/Music/Z01- bass_073B4D0C.wem"
      },
      {
       "Id": "699308010",
@@ -97,6 +124,15 @@
       "CachePath": "SFX/Music/A01- pulse_073B4D0C.wem"
      },
      {
+      "Id": "747724223",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\Z03- bass.wav",
+      "Path": "Media/747724223.wem",
+      "CachePath": "SFX/Music/Z03- bass_073B4D0C.wem"
+     },
+     {
       "Id": "776551369",
       "Language": "SFX",
       "Streaming": "false",
@@ -115,13 +151,22 @@
       "CachePath": "SFX/Music/Sky_Tuto_Alpha_073B4D0C.wem"
      },
      {
-      "Id": "989398633",
+      "Id": "1016493422",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Music\\X- psyche rock.wav",
-      "Path": "Media/989398633.wem",
-      "CachePath": "SFX/Music/X- psyche rock_073B4D0C.wem"
+      "ShortName": "Music\\Z03- synths.wav",
+      "Path": "Media/1016493422.wem",
+      "CachePath": "SFX/Music/Z03- synths_073B4D0C.wem"
+     },
+     {
+      "Id": "1060309485",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\Z01- synths.wav",
+      "Path": "Media/1060309485.wem",
+      "CachePath": "SFX/Music/Z01- synths_073B4D0C.wem"
      },
      {
       "Id": "1060688450",
@@ -134,7 +179,25 @@
      }
     ],
     "Plugins": {
+     "Custom": [
+      {
+       "Id": "225066277",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Interactive Music Hierarchy\\Default Work Unit\\Music_Alpha\\Main_Music_Switch\\Sky_Tuto_Playlist Container\\Intro_Tuto\\X- guitar solo\\Parametric EQ (Custom)",
+       "GUID": "{FA9EDD94-59A2-4D67-9F19-6EC8C5C1D312}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ],
      "ShareSets": [
+      {
+       "Id": "702543456",
+       "Name": "Tunnel1",
+       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Tunnel1",
+       "GUID": "{CC44B890-9865-4157-965F-86FED27BC4C6}",
+       "LibName": "Wwise Matrix Reverb",
+       "LibId": "7536643"
+      },
       {
        "Id": "1008402193",
        "Name": "Low_Pass_20KHz",
@@ -142,6 +205,14 @@
        "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
+      },
+      {
+       "Id": "3395979371",
+       "Name": "Straight_Delay",
+       "ObjectPath": "\\Effects\\Factory Effects\\Stereo Delay\\Straight_Delay",
+       "GUID": "{00ADE3F8-B4F2-465A-9DC3-9EA55A7B3235}",
+       "LibName": "Wwise Stereo Delay",
+       "LibId": "8847363"
       }
      ]
     },
@@ -158,6 +229,12 @@
         "Name": "REV_LargeRoom",
         "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom",
         "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"
+       },
+       {
+        "Id": "2172616000",
+        "Name": "REV_Cave",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_Cave",
+        "GUID": "{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}"
        }
       ],
       "SwitchContainers": [
@@ -170,6 +247,9 @@
         },
         "MediaRefs": [
          {
+          "Id": "169742422"
+         },
+         {
           "Id": "370767073"
          },
          {
@@ -180,6 +260,9 @@
          "ShareSets": [
           {
            "Id": "1008402193"
+          },
+          {
+           "Id": "3395979371"
           }
          ]
         }
@@ -222,9 +305,22 @@
         },
         "MediaRefs": [
          {
+          "Id": "169742422"
+         },
+         {
           "Id": "776551369"
+         },
+         {
+          "Id": "1060688450"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3395979371"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -235,15 +331,45 @@
         },
         "MediaRefs": [
          {
+          "Id": "169742422"
+         },
+         {
+          "Id": "646294798"
+         },
+         {
           "Id": "746674216"
+         },
+         {
+          "Id": "747724223"
          },
          {
           "Id": "844212876"
          },
          {
+          "Id": "1016493422"
+         },
+         {
+          "Id": "1060309485"
+         },
+         {
           "Id": "1060688450"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "Custom": [
+          {
+           "Id": "225066277"
+          }
+         ],
+         "ShareSets": [
+          {
+           "Id": "702543456"
+          },
+          {
+           "Id": "3395979371"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -254,13 +380,13 @@
         },
         "MediaRefs": [
          {
+          "Id": "407511388"
+         },
+         {
           "Id": "746674216"
          },
          {
           "Id": "844212876"
-         },
-         {
-          "Id": "989398633"
          }
         ]
        },
@@ -305,6 +431,12 @@
       "Name": "RTPC_PlayerMovement",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerMovement",
       "GUID": "{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"
+     },
+     {
+      "Id": "2565740352",
+      "Name": "RTPC_SlowMo",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
+      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
      },
      {
       "Id": "2653406601",
@@ -379,6 +511,6 @@
     ]
    }
   ],
-  "FileHash": "{3C0B901C-D005-529B-10DC-1BF5355B7921}"
+  "FileHash": "{E01816D3-379A-FC98-A131-5DE22B88449C}"
  }
 }
