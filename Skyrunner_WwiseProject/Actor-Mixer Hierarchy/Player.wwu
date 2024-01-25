@@ -43,7 +43,8 @@
 										<SourcePlugin Name="Soundseed Air Woosh" ID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" ShortID="1010974337" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="Duration" Type="Real64" Value="0.2"/>
-												<Property Name="Speed" Type="Real32" Value="-14"/>
+												<Property Name="FrequencyScale" Type="Real32" Value="0.76"/>
+												<Property Name="Speed" Type="Real32" Value="-1"/>
 												<Property Name="SpeedAutomate" Type="bool" Value="True"/>
 												<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="1.3"/>
 												<Property Name="SpeedPointTimeRandom" Type="Real32" Value="0.01"/>
@@ -97,7 +98,11 @@
 </PluginData>
 											<PluginInnerObjectList>
 												<List Name="Deflectors">
-													<PluginInnerObject Name="" ID="{49A592F2-E406-452B-96D2-72911A45A308}" PluginName="Deflector" CompanyID="0" PluginID="122"/>
+													<PluginInnerObject Name="" ID="{49A592F2-E406-452B-96D2-72911A45A308}" PluginName="Deflector" CompanyID="0" PluginID="122">
+														<PropertyList>
+															<Property Name="Frequency" Type="Real32" Value="411"/>
+														</PropertyList>
+													</PluginInnerObject>
 												</List>
 											</PluginInnerObjectList>
 										</SourcePlugin>
@@ -117,6 +122,9 @@
 										</Property>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-1010</Value>
+											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{452D3266-78A9-47D3-A701-8954834879C2}">
@@ -134,7 +142,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-96</Value>
+												<Value>-16</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -219,8 +227,9 @@
 											<Custom>
 												<Effect Name="Delay (Custom)" ID="{C0FCC26E-70DE-482D-9F02-A6A6E9AD97D5}" ShortID="640802269" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
 													<PropertyList>
-														<Property Name="DelayTime" Type="Real32" Value="0.19"/>
-														<Property Name="Feedback" Type="Real32" Value="17"/>
+														<Property Name="DelayTime" Type="Real32" Value="0.69"/>
+														<Property Name="Feedback" Type="Real32" Value="41.5"/>
+														<Property Name="WetDryMix" Type="Real32" Value="14"/>
 													</PropertyList>
 													<ObjectLists>
 														<ObjectList Name="RTPC">

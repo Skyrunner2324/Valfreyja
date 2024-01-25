@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{56A20F98-97DC-67C1-7393-9F87AD4320BD}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{D7815F18-9AC1-39AC-0177-5B66D4132B08}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -26,6 +26,11 @@
 					<Path>Media/370767073.wem</Path>
 					<CachePath>SFX/Music/Sky_Reveal_Alpha_073B4D0C.wem</CachePath>
 				</File>
+				<File Id="455972647" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\A01- foreshadow lead.wav</ShortName>
+					<Path>Media/455972647.wem</Path>
+					<CachePath>SFX/Music/A01- foreshadow lead_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="573314099" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\145-Arena - Buildup - kick.wav</ShortName>
 					<Path>Media/573314099.wem</Path>
@@ -46,6 +51,11 @@
 					<Path>Media/721774678.wem</Path>
 					<CachePath>SFX/Music/145-Arena_Phase 2- synths_073B4D0C.wem</CachePath>
 				</File>
+				<File Id="746674216" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\A01- pulse.wav</ShortName>
+					<Path>Media/746674216.wem</Path>
+					<CachePath>SFX/Music/A01- pulse_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="776551369" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\Sky Freyja v4.wav</ShortName>
 					<Path>Media/776551369.wem</Path>
@@ -55,6 +65,16 @@
 					<ShortName>Music\Sky_Tuto_Alpha.wav</ShortName>
 					<Path>Media/844212876.wem</Path>
 					<CachePath>SFX/Music/Sky_Tuto_Alpha_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="989398633" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\X- psyche rock.wav</ShortName>
+					<Path>Media/989398633.wem</Path>
+					<CachePath>SFX/Music/X- psyche rock_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="1060688450" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\B01- guitar.wav</ShortName>
+					<Path>Media/1060688450.wem</Path>
+					<CachePath>SFX/Music/B01- guitar_073B4D0C.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -73,6 +93,7 @@
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="634183254" GUID="{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"/>
 							<MediaRefs>
 								<MediaRef Id="370767073"/>
+								<MediaRef Id="1060688450"/>
 							</MediaRefs>
 							<PluginRefs>
 								<ShareSets>
@@ -117,7 +138,10 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="3037000007" GUID="{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"/>
 							<MediaRefs>
+								<MediaRef Id="455972647"/>
+								<MediaRef Id="746674216"/>
 								<MediaRef Id="844212876"/>
+								<MediaRef Id="1060688450"/>
 							</MediaRefs>
 							<PluginRefs>
 								<ShareSets>
@@ -128,11 +152,13 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="348963605" GUID="{1A0075FD-1C91-4DCD-B4AC-2029A2632B3A}"/>
 							<MediaRefs>
-								<MediaRef Id="370767073"/>
+								<MediaRef Id="746674216"/>
+								<MediaRef Id="844212876"/>
+								<MediaRef Id="989398633"/>
 							</MediaRefs>
 							<PluginRefs>
 								<ShareSets>
-									<PluginRef Id="1008402193"/>
+									<PluginRef Id="3812922252"/>
 								</ShareSets>
 							</PluginRefs>
 						</SwitchContainer>
@@ -164,7 +190,9 @@
 				</Event>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="1645844663" Name="RTPC_PlayerMovement" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerMovement" GUID="{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"/>
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
+				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="1419563690" Name="Music_Selector" ObjectPath="\States\Default Work Unit\Music_Selector" GUID="{9E363DC4-1CA9-4AAF-BFCB-E45F336CC2CE}">
@@ -183,5 +211,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6BA36B78-BC94-5207-5BA4-4929E5C16989}</FileHash>
+	<FileHash>{7C5812B7-84F1-1CC1-EF07-B2C866BB8833}</FileHash>
 </SoundBanksInfo>

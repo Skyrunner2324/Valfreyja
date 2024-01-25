@@ -28,11 +28,16 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{40B51ABA-82CB-A7DD-E35D-238DE1266D16}">
+		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{F3DC3AFF-D606-C11C-0F1F-F8AAFECFF912}">
 			<ObjectPath>SX_player_land</ObjectPath>
 			<ShortName>SX_player_land</ShortName>
 			<Path>Event/SX_player_land.bnk</Path>
 			<Media>
+				<File Id="736240098" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\B01- lead.wav</ShortName>
+					<Path>Media/736240098.wem</Path>
+					<CachePath>SFX/Music/B01- lead_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="1026811673" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\player_land.wav</ShortName>
 					<Path>Media/1026811673.wem</Path>
@@ -40,8 +45,9 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.17454167" DurationMax="0.17454167">
+				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="2.445782" DurationMax="2.445782">
 					<MediaRefs>
+						<MediaRef Id="736240098"/>
 						<MediaRef Id="1026811673"/>
 					</MediaRefs>
 				</Event>
@@ -557,7 +563,7 @@
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\GameStatus\None" GUID="{EEB277E0-9352-480D-A6FB-C308E6B7BD09}"/>
 						<State Id="984691642" Name="InGame" ObjectPath="\States\Default Work Unit\GameStatus\InGame" GUID="{EC4A1A3A-9F40-4265-A536-AB6230BB833D}"/>
 						<State Id="3374585465" Name="InMenu" ObjectPath="\States\Default Work Unit\GameStatus\InMenu" GUID="{B2F321F7-4EE8-4AFD-AE95-8524E71A2A7B}"/>
-						<State Id="3656031952" Name="InFTUI" ObjectPath="\States\Default Work Unit\GameStatus\InFTUI" GUID="{B7AE7D30-166A-4B19-9781-BB5E7EC54760}"/>
+						<State Id="3656031964" Name="InFTUE" ObjectPath="\States\Default Work Unit\GameStatus\InFTUE" GUID="{B7AE7D30-166A-4B19-9781-BB5E7EC54760}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="1419563690" Name="Music_Selector" ObjectPath="\States\Default Work Unit\Music_Selector" GUID="{9E363DC4-1CA9-4AAF-BFCB-E45F336CC2CE}">
@@ -707,7 +713,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{3BB6D358-1A8E-999D-4EF2-75F1E4DC91B8}">
+		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{658CC5B8-9178-C0A3-95E8-3F7CBB214469}">
 			<ObjectPath>SX_player_jump</ObjectPath>
 			<ShortName>SX_player_jump</ShortName>
 			<Path>Event/SX_player_jump.bnk</Path>
@@ -876,7 +882,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{55A55A63-9FB8-CE15-F325-9FD800F63469}">
+		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{F4CF1BE5-D480-6BB2-058E-A9383C3E5CAD}">
 			<ObjectPath>SX_player_dash</ObjectPath>
 			<ShortName>SX_player_dash</ShortName>
 			<Path>Event/SX_player_dash.bnk</Path>
@@ -1006,7 +1012,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{56A20F98-97DC-67C1-7393-9F87AD4320BD}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{D7815F18-9AC1-39AC-0177-5B66D4132B08}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -1031,6 +1037,11 @@
 					<Path>Media/370767073.wem</Path>
 					<CachePath>SFX/Music/Sky_Reveal_Alpha_073B4D0C.wem</CachePath>
 				</File>
+				<File Id="455972647" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\A01- foreshadow lead.wav</ShortName>
+					<Path>Media/455972647.wem</Path>
+					<CachePath>SFX/Music/A01- foreshadow lead_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="573314099" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\145-Arena - Buildup - kick.wav</ShortName>
 					<Path>Media/573314099.wem</Path>
@@ -1051,6 +1062,11 @@
 					<Path>Media/721774678.wem</Path>
 					<CachePath>SFX/Music/145-Arena_Phase 2- synths_073B4D0C.wem</CachePath>
 				</File>
+				<File Id="746674216" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\A01- pulse.wav</ShortName>
+					<Path>Media/746674216.wem</Path>
+					<CachePath>SFX/Music/A01- pulse_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="776551369" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\Sky Freyja v4.wav</ShortName>
 					<Path>Media/776551369.wem</Path>
@@ -1060,6 +1076,16 @@
 					<ShortName>Music\Sky_Tuto_Alpha.wav</ShortName>
 					<Path>Media/844212876.wem</Path>
 					<CachePath>SFX/Music/Sky_Tuto_Alpha_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="989398633" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\X- psyche rock.wav</ShortName>
+					<Path>Media/989398633.wem</Path>
+					<CachePath>SFX/Music/X- psyche rock_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="1060688450" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\B01- guitar.wav</ShortName>
+					<Path>Media/1060688450.wem</Path>
+					<CachePath>SFX/Music/B01- guitar_073B4D0C.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -1078,6 +1104,7 @@
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="634183254" GUID="{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"/>
 							<MediaRefs>
 								<MediaRef Id="370767073"/>
+								<MediaRef Id="1060688450"/>
 							</MediaRefs>
 							<PluginRefs>
 								<ShareSets>
@@ -1122,7 +1149,10 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="3037000007" GUID="{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"/>
 							<MediaRefs>
+								<MediaRef Id="455972647"/>
+								<MediaRef Id="746674216"/>
 								<MediaRef Id="844212876"/>
+								<MediaRef Id="1060688450"/>
 							</MediaRefs>
 							<PluginRefs>
 								<ShareSets>
@@ -1133,11 +1163,13 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="348963605" GUID="{1A0075FD-1C91-4DCD-B4AC-2029A2632B3A}"/>
 							<MediaRefs>
-								<MediaRef Id="370767073"/>
+								<MediaRef Id="746674216"/>
+								<MediaRef Id="844212876"/>
+								<MediaRef Id="989398633"/>
 							</MediaRefs>
 							<PluginRefs>
 								<ShareSets>
-									<PluginRef Id="1008402193"/>
+									<PluginRef Id="3812922252"/>
 								</ShareSets>
 							</PluginRefs>
 						</SwitchContainer>
@@ -1169,7 +1201,9 @@
 				</Event>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="1645844663" Name="RTPC_PlayerMovement" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerMovement" GUID="{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"/>
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
+				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="1419563690" Name="Music_Selector" ObjectPath="\States\Default Work Unit\Music_Selector" GUID="{9E363DC4-1CA9-4AAF-BFCB-E45F336CC2CE}">
@@ -1237,5 +1271,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5EC95D9E-FEF2-877D-946B-63AC7FD746B4}</FileHash>
+	<FileHash>{0851D1C5-AA8E-C4EF-10A8-719F31A03566}</FileHash>
 </SoundBanksInfo>
