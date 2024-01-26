@@ -568,6 +568,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Bus Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Effect0">
 													<Custom CreatedFrom="{3C6B127B-9DAE-4879-A4ED-75DF209310EC}">
@@ -1248,6 +1255,75 @@
 											<ObjectRef Name="Large_Church1" ID="{9B6E8B78-EF8C-494C-AADA-D01CF51B5FAC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 									</ReferenceList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="Music_Selector" ID="{9E363DC4-1CA9-4AAF-BFCB-E45F336CC2CE}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Buildup" ID="{39C32C1D-49CE-4283-8A04-C9C272E282DE}"/>
+												<CustomState Name="" ID="{F33AA82F-4529-45B7-A45C-0F87C6CD0556}" ShortID="3148699">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Explo" ID="{1FE92F27-401B-44A3-BFC0-65F192492AAB}"/>
+												<CustomState Name="" ID="{F1122628-8295-4C00-AE32-8F92812156EC}" ShortID="500240427">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="ArenaPhase2" ID="{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"/>
+												<CustomState Name="" ID="{78EA1313-CF20-452B-B368-4E50F9937AB7}" ShortID="1059640641">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Reveal" ID="{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"/>
+												<CustomState Name="" ID="{5180C457-62E7-4F14-AAA8-2B85F117D8F9}" ShortID="1044106812">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="ArenaPhase1" ID="{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"/>
+												<CustomState Name="" ID="{36008921-A34A-4856-B39E-DBCA4D46C98F}" ShortID="516019468">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Tuto" ID="{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"/>
+												<CustomState Name="" ID="{A311E189-4A24-4179-AB7B-F1CCF03F14CD}" ShortID="401041643">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Reverb" ID="{1A0075FD-1C91-4DCD-B4AC-2029A2632B3A}"/>
+												<CustomState Name="" ID="{991D7324-69D0-4187-9498-8282064DC07F}" ShortID="228396751"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Menu" ID="{DB91568E-4183-4FE0-A178-9B6516F9B6BD}"/>
+												<CustomState Name="" ID="{F48CF232-F06E-4CC2-AE05-496831AB2E38}" ShortID="622111368">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 								</AuxBus>
 								<AuxBus Name="REV_SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
 									<ReferenceList>
