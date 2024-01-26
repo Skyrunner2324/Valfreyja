@@ -1,6 +1,7 @@
 #pragma once
 
 #define DebugLog(seconds, color, ...) GEngine->AddOnScreenDebugMessage(-1, seconds, color, FString::Printf(__VA_ARGS__))
+#define DebugLogString(seconds, color, string) GEngine->AddOnScreenDebugMessage(-1, seconds, color, string)
 
 #define DebugLogRed(...) DebugLog(15.f, FColor::Red, __VA_ARGS__)
 #define DebugLogGreen(...) DebugLog(15.f, FColor::Green, __VA_ARGS__)
