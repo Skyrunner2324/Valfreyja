@@ -61,9 +61,13 @@ ULevelStreamingDynamic* UMapLoader::LoadMapAsync(const TSoftObjectPtr<UWorld> le
 {
 	//DebugLogRed(TEXT("Load from soft object reference"));
 
-	auto world = GEngine->GameViewport->GetWorld();
+	UWorld* world = GEngine->GetWorld();
+	if (!world)
+		world = GEngine->GameViewport->GetWorld();
+	check(world);
 
-	
+
+
 	// TODO : add a delay to test
 	bool bSuccess = false;
 	auto map = ULevelStreamingDynamic::LoadLevelInstanceBySoftObjectPtr(world,

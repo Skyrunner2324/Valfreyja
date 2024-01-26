@@ -34,4 +34,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void ResetPlayer(const bool bDestroyPlayerBeforeReset,
 		const FString PlayerStartTag = "None");
+
+
+	UFUNCTION(BlueprintCallable)
+	void UnloadOldestMap();
 };

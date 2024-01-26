@@ -6,6 +6,10 @@
 
 
 #include "Kismet/GameplayStatics.h"
+#include "Engine/LevelStreaming.h"
+
+
+#include "Utils/DebugLog.h"
 
 
 ASkyrunnerGameMode::ASkyrunnerGameMode()
@@ -45,4 +49,28 @@ void ASkyrunnerGameMode::ResetPlayer(const bool bDestroyPlayerBeforeReset,
 
 	// broadcast delegate that should reset player controller and player HUD
 	OnPlayerResetEvent.Broadcast();
+}
+
+void ASkyrunnerGameMode::UnloadOldestMap()
+{
+	UWorld* world = GEngine->GetWorld();
+	if (!world)
+		world = GEngine->GameViewport->GetWorld();
+	check(world);
+
+
+	auto allLevels = world->GetStreamingLevels();
+	for (auto l : allLevels)
+	{
+		DebugLogString(15.f, FColor::Purple, l->GetName());
+	}
+	auto oldestMap = allLevels[0];
+	if (oldestMap)
+		DebugLogString(15.f, FColor::Red, oldestMap->GetName());
+	else
+		DebugLogRed(TEXT("Could not find map"));
+
+
+	// TODO : does not work when level is loaded using OpenLevel
+	oldestMap->SetIsRequestingUnloadAndRemoval(true);
 }
