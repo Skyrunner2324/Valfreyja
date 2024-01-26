@@ -216,7 +216,6 @@
 									</ValueList>
 								</Property>
 							</PropertyList>
-							<ReferenceList/>
 							<ChildrenList>
 								<Bus Name="UI Master" ID="{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}">
 									<PropertyList>
@@ -585,6 +584,7 @@
 																<Property Name="RightCrossfeed" Type="Real32" Value="-3"/>
 																<Property Name="RightDelayTime" Type="Real32" Value="0.14"/>
 																<Property Name="RightFeedback" Type="Real32" Value="-24.5"/>
+																<Property Name="WetLevel" Type="Real32" Value="-5"/>
 															</PropertyList>
 															<ObjectLists>
 																<ObjectList Name="RTPC">
@@ -852,17 +852,18 @@
 													<Custom CreatedFrom="{3C6B127B-9DAE-4879-A4ED-75DF209310EC}">
 														<Effect Name="Underwater_Echoes (Custom)" ID="{E99B9354-6E3C-40D3-B57E-B74097729115}" ShortID="945211497" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
 															<PropertyList>
-																<Property Name="DryLevel" Type="Real32" Value="-54"/>
+																<Property Name="DryLevel" Type="Real32" Value="-12"/>
 																<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
-																<Property Name="EnableFeedback" Type="bool" Value="True"/>
 																<Property Name="FilterFrequency" Type="Real32" Value="333"/>
 																<Property Name="FilterGain" Type="Real32" Value="7"/>
+																<Property Name="FrontRearBalance" Type="Real32" Value="100"/>
 																<Property Name="LeftCrossfeed" Type="Real32" Value="-3"/>
-																<Property Name="LeftDelayTime" Type="Real32" Value="0.11"/>
+																<Property Name="LeftDelayTime" Type="Real32" Value="0.13"/>
 																<Property Name="LeftFeedback" Type="Real32" Value="-16.8"/>
 																<Property Name="RightCrossfeed" Type="Real32" Value="-3"/>
-																<Property Name="RightDelayTime" Type="Real32" Value="0.12"/>
+																<Property Name="RightDelayTime" Type="Real32" Value="0.21"/>
 																<Property Name="RightFeedback" Type="Real32" Value="-24.5"/>
+																<Property Name="WetLevel" Type="Real32" Value="-12"/>
 															</PropertyList>
 															<ObjectLists>
 																<ObjectList Name="RTPC">
@@ -1107,7 +1108,7 @@
 																					</Point>
 																					<Point>
 																						<XPos>1</XPos>
-																						<YPos>50</YPos>
+																						<YPos>13</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>

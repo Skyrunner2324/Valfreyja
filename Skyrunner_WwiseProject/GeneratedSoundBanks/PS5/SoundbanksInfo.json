@@ -784,7 +784,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{23B12AB5-F8B7-AC1E-9AA7-19F2F28D4D92}",
+    "Hash": "{68FEDF53-0F3B-01C1-17C5-8C5DE3C49D52}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -2187,7 +2187,7 @@
     "Type": "Event",
     "GUID": "{6BE02D09-9271-46A7-BAA0-E99F5C869C80}",
     "Language": "SFX",
-    "Hash": "{094B8D98-6A49-F536-AC7D-B20595813701}",
+    "Hash": "{F625B468-297E-0B8C-FA4A-F288309820CF}",
     "ObjectPath": "SX_player_feedback_hitmarker",
     "ShortName": "SX_player_feedback_hitmarker",
     "Path": "Event/SX_player_feedback_hitmarker.bnk",
@@ -2209,7 +2209,7 @@
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_feedback_hitmarker",
       "GUID": "{6BE02D09-9271-46A7-BAA0-E99F5C869C80}",
       "DurationType": "OneShot",
-      "DurationMin": "0.6126758",
+      "DurationMin": "0.5302933",
       "DurationMax": "1.2112772",
       "MediaRefs": [
        {
@@ -2342,11 +2342,20 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{B96A8183-47AE-E08D-93D8-EF46B70AA2FF}",
+    "Hash": "{D5FC3867-E7AE-B055-0D16-B7C048DB38FF}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
     "Media": [
+     {
+      "Id": "40410685",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\Reveal-Loop.wav",
+      "Path": "Media/40410685.wem",
+      "CachePath": "SFX/Music/Reveal-Loop_073B4D0C.wem"
+     },
      {
       "Id": "159789116",
       "Language": "SFX",
@@ -2384,15 +2393,6 @@
       "CachePath": "SFX/Music/145-Arena_Phase 1- kick_073B4D0C.wem"
      },
      {
-      "Id": "370767073",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Music\\Sky_Reveal_Alpha.wav",
-      "Path": "Media/370767073.wem",
-      "CachePath": "SFX/Music/Sky_Reveal_Alpha_073B4D0C.wem"
-     },
-     {
       "Id": "407511388",
       "Language": "SFX",
       "Streaming": "false",
@@ -2400,6 +2400,15 @@
       "ShortName": "Music\\Z04- bass.wav",
       "Path": "Media/407511388.wem",
       "CachePath": "SFX/Music/Z04- bass_073B4D0C.wem"
+     },
+     {
+      "Id": "462393738",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\Sky_Explo_Rise.wav",
+      "Path": "Media/462393738.wem",
+      "CachePath": "SFX/Music/Sky_Explo_Rise_073B4D0C.wem"
      },
      {
       "Id": "573314099",
@@ -2427,6 +2436,15 @@
       "ShortName": "Music\\Z01- bass.wav",
       "Path": "Media/646294798.wem",
       "CachePath": "SFX/Music/Z01- bass_073B4D0C.wem"
+     },
+     {
+      "Id": "682973246",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\Sky_Explo_Sub_Rise.wav",
+      "Path": "Media/682973246.wem",
+      "CachePath": "SFX/Music/Sky_Explo_Sub_Rise_073B4D0C.wem"
      },
      {
       "Id": "699308010",
@@ -2474,6 +2492,15 @@
       "CachePath": "SFX/Music/Sky Freyja v4_073B4D0C.wem"
      },
      {
+      "Id": "835908582",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\Reveal-Intro.wav",
+      "Path": "Media/835908582.wem",
+      "CachePath": "SFX/Music/Reveal-Intro_073B4D0C.wem"
+     },
+     {
       "Id": "844212876",
       "Language": "SFX",
       "Streaming": "false",
@@ -2511,7 +2538,25 @@
      }
     ],
     "Plugins": {
+     "Custom": [
+      {
+       "Id": "225066277",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Interactive Music Hierarchy\\Default Work Unit\\Music_Alpha\\Main_Music_Switch\\Sky_Tuto_Playlist Container\\Intro_Tuto\\X- guitar solo\\Parametric EQ (Custom)",
+       "GUID": "{FA9EDD94-59A2-4D67-9F19-6EC8C5C1D312}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ],
      "ShareSets": [
+      {
+       "Id": "702543456",
+       "Name": "Tunnel1",
+       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Tunnel1",
+       "GUID": "{CC44B890-9865-4157-965F-86FED27BC4C6}",
+       "LibName": "Wwise Matrix Reverb",
+       "LibId": "7536643"
+      },
       {
        "Id": "1008402193",
        "Name": "Low_Pass_20KHz",
@@ -2537,6 +2582,14 @@
       "ObjectPath": "\\Events\\Music\\MUS_Play_MainMusic",
       "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
       "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "462393738"
+       },
+       {
+        "Id": "682973246"
+       }
+      ],
       "AuxBusRefs": [
        {
         "Id": "1641293181",
@@ -2555,7 +2608,10 @@
         },
         "MediaRefs": [
          {
-          "Id": "370767073"
+          "Id": "40410685"
+         },
+         {
+          "Id": "835908582"
          }
         ],
         "PluginRefs": {
@@ -2630,6 +2686,9 @@
         },
         "MediaRefs": [
          {
+          "Id": "169742422"
+         },
+         {
           "Id": "407511388"
          },
          {
@@ -2650,7 +2709,22 @@
          {
           "Id": "1060309485"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "Custom": [
+          {
+           "Id": "225066277"
+          }
+         ],
+         "ShareSets": [
+          {
+           "Id": "702543456"
+          },
+          {
+           "Id": "3395979371"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -2888,6 +2962,6 @@
     ]
    }
   ],
-  "FileHash": "{479B9CAA-7AC8-9A93-CF4C-7014084CDD90}"
+  "FileHash": "{0B200908-2AC9-21E2-0364-83FB3AE5168F}"
  }
 }
