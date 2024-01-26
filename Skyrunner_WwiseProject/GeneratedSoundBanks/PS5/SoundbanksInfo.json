@@ -55,10 +55,21 @@
     "Type": "Event",
     "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
     "Language": "SFX",
-    "Hash": "{39AF2D16-A5FC-1BB6-17F3-7B9EEC421ECB}",
+    "Hash": "{30503168-4411-0536-D123-F086B566CA05}",
     "ObjectPath": "SX_player_land",
     "ShortName": "SX_player_land",
     "Path": "Event/SX_player_land.bnk",
+    "Media": [
+     {
+      "Id": "129424093",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\player_slide.wav",
+      "Path": "Media/129424093.wem",
+      "CachePath": "SFX/Placeholders/player_slide_97A43206.wem"
+     }
+    ],
     "Plugins": {
      "Custom": [
       {
@@ -86,7 +97,27 @@
          "Id": "416403271"
         }
        ]
-      }
+      },
+      "ActionPostEvent": [
+       {
+        "Id": "1882419246",
+        "Name": "SX_player_slide",
+        "ObjectPath": "\\Events\\Player\\Movement\\SX_player_slide",
+        "GUID": "{18C2192F-4C95-4001-A9A0-979E3F100C3A}"
+       }
+      ]
+     },
+     {
+      "Id": "1882419246",
+      "Name": "SX_player_slide",
+      "ObjectPath": "\\Events\\Player\\Movement\\SX_player_slide",
+      "GUID": "{18C2192F-4C95-4001-A9A0-979E3F100C3A}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "129424093"
+       }
+      ]
      }
     ]
    },
@@ -431,7 +462,7 @@
     "Type": "Event",
     "GUID": "{551300EA-C047-48F9-A1CA-75F08BC14E0B}",
     "Language": "SFX",
-    "Hash": "{6F69FD28-1746-6FC0-4684-519AA1121D4F}",
+    "Hash": "{DA171FE5-F375-4985-E5F4-A87CAEED6935}",
     "ObjectPath": "ENV_AMB_Play_AmbienceMain",
     "ShortName": "ENV_AMB_Play_AmbienceMain",
     "Path": "Event/ENV_AMB_Play_AmbienceMain.bnk",
@@ -753,21 +784,10 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{8ED6683A-758A-7A4D-BF28-EF9DFB76B9A7}",
+    "Hash": "{23B12AB5-F8B7-AC1E-9AA7-19F2F28D4D92}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
-    "Media": [
-     {
-      "Id": "941961704",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "AudioEase\\Altiverb - Outdoor and More\\Outdoor\\Field\\AE_DistantBuilding_MicsFar.wav",
-      "Path": "Media/941961704.wem",
-      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Field/AE_DistantBuilding_MicsFar_218EFC0B.wem"
-     }
-    ],
     "Plugins": {
      "Custom": [
       {
@@ -821,25 +841,20 @@
        "LibId": "7536643"
       },
       {
-       "Id": "1782142158",
-       "Name": "DistantBuilding_MicsFar",
-       "ObjectPath": "\\Effects\\Factory Altiverb - Outdoor and More\\Altiverb - Outdoor and More\\Outdoor Field\\DistantBuilding_MicsFar",
-       "GUID": "{22EE2792-F5F3-4B26-A6E1-843A0A964677}",
-       "LibName": "Wwise Convolution Reverb",
-       "LibId": "8323075",
-       "MediaRefs": [
-        {
-         "Id": "941961704"
-        }
-       ]
-      },
-      {
        "Id": "1842579981",
        "Name": "Reflect_Simplified",
        "ObjectPath": "\\Effects\\Factory Reflect\\Reflect_Simplified",
        "GUID": "{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}",
        "LibName": "Wwise Reflect",
        "LibId": "11206659"
+      },
+      {
+       "Id": "2662085913",
+       "Name": "Large_Church1",
+       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Large_Church1",
+       "GUID": "{9B6E8B78-EF8C-494C-AADA-D01CF51B5FAC}",
+       "LibName": "Wwise Matrix Reverb",
+       "LibId": "7536643"
       }
      ],
      "AudioDevices": [
@@ -928,14 +943,6 @@
       "Name": "ENV Other",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\Environment Master\\ENV Other",
       "GUID": "{28DD99C7-6452-4B40-9D87-6E721A203EF0}",
-      "AuxBusRefs": [
-       {
-        "Id": "1641293181",
-        "Name": "REV_LargeRoom",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom",
-        "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"
-       }
-      ],
       "MaxAttenuation": "10000"
      },
      {
@@ -992,12 +999,6 @@
       "GUID": "{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}",
       "AuxBusRefs": [
        {
-        "Id": "1641293181",
-        "Name": "REV_LargeRoom",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom",
-        "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"
-       },
-       {
         "Id": "1752382405",
         "Name": "Early_Reflections",
         "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\Early_Reflections",
@@ -1010,15 +1011,7 @@
       "Id": "3222323340",
       "Name": "SFX Master",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master",
-      "GUID": "{B22B8F69-015E-4A85-B8EF-A2F0A4E8D1FC}",
-      "AuxBusRefs": [
-       {
-        "Id": "4125012149",
-        "Name": "REV_SmallRoom",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom",
-        "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}"
-       }
-      ]
+      "GUID": "{B22B8F69-015E-4A85-B8EF-A2F0A4E8D1FC}"
      },
      {
       "Id": "3803692087",
@@ -1076,7 +1069,7 @@
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "1782142158"
+         "Id": "2662085913"
         }
        ]
       },
@@ -1295,6 +1288,32 @@
         "Name": "Explo",
         "ObjectPath": "\\States\\Default Work Unit\\Music_Selector\\Explo",
         "GUID": "{1FE92F27-401B-44A3-BFC0-65F192492AAB}"
+       }
+      ]
+     },
+     {
+      "Id": "3350070198",
+      "Name": "Ambiance_States",
+      "ObjectPath": "\\States\\Default Work Unit\\Ambiance_States",
+      "GUID": "{FA5C0A06-CC03-439E-A634-38F9B1DCA444}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambiance_States\\None",
+        "GUID": "{0F92B5B9-7AD4-4529-BF3A-A1000EF93B39}"
+       },
+       {
+        "Id": "898834102",
+        "Name": "Ext",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambiance_States\\Ext",
+        "GUID": "{784F3057-5FEA-46E9-AC78-8E8DBAA9953E}"
+       },
+       {
+        "Id": "4122393694",
+        "Name": "Cave",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambiance_States\\Cave",
+        "GUID": "{A2A982D1-6137-48DC-A3D4-E75FF950ABC2}"
        }
       ]
      }
@@ -1802,35 +1821,19 @@
     "Type": "Bus",
     "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
     "Language": "SFX",
-    "Hash": "{86473F52-6418-380F-8ECD-8ADE324B1E44}",
+    "Hash": "{B32F2C81-F705-FD82-E1A1-039402A4B10C}",
     "ObjectPath": "REV_LargeRoom",
     "ShortName": "REV_LargeRoom",
     "Path": "Bus/REV_LargeRoom.bnk",
-    "Media": [
-     {
-      "Id": "941961704",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "AudioEase\\Altiverb - Outdoor and More\\Outdoor\\Field\\AE_DistantBuilding_MicsFar.wav",
-      "Path": "Media/941961704.wem",
-      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Field/AE_DistantBuilding_MicsFar_218EFC0B.wem"
-     }
-    ],
     "Plugins": {
      "ShareSets": [
       {
-       "Id": "1782142158",
-       "Name": "DistantBuilding_MicsFar",
-       "ObjectPath": "\\Effects\\Factory Altiverb - Outdoor and More\\Altiverb - Outdoor and More\\Outdoor Field\\DistantBuilding_MicsFar",
-       "GUID": "{22EE2792-F5F3-4B26-A6E1-843A0A964677}",
-       "LibName": "Wwise Convolution Reverb",
-       "LibId": "8323075",
-       "MediaRefs": [
-        {
-         "Id": "941961704"
-        }
-       ]
+       "Id": "2662085913",
+       "Name": "Large_Church1",
+       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Large_Church1",
+       "GUID": "{9B6E8B78-EF8C-494C-AADA-D01CF51B5FAC}",
+       "LibName": "Wwise Matrix Reverb",
+       "LibId": "7536643"
       }
      ]
     },
@@ -1843,7 +1846,7 @@
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "1782142158"
+         "Id": "2662085913"
         }
        ]
       },
@@ -2091,7 +2094,7 @@
     "Type": "Event",
     "GUID": "{F4227598-B79C-47C2-A22C-C305F4B1E5C2}",
     "Language": "SFX",
-    "Hash": "{AC7BC1CD-0E2F-3812-CEBA-E5D8459A1DC1}",
+    "Hash": "{ABE63D07-8043-26AE-D98E-97A10115A076}",
     "ObjectPath": "SX_player_dash",
     "ShortName": "SX_player_dash",
     "Path": "Event/SX_player_dash.bnk",
@@ -2339,7 +2342,7 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{9315242B-3DD7-90E7-AD0F-071FBED627C2}",
+    "Hash": "{B96A8183-47AE-E08D-93D8-EF46B70AA2FF}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
@@ -2508,25 +2511,7 @@
      }
     ],
     "Plugins": {
-     "Custom": [
-      {
-       "Id": "225066277",
-       "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Interactive Music Hierarchy\\Default Work Unit\\Music_Alpha\\Main_Music_Switch\\Sky_Tuto_Playlist Container\\Intro_Tuto\\X- guitar solo\\Parametric EQ (Custom)",
-       "GUID": "{FA9EDD94-59A2-4D67-9F19-6EC8C5C1D312}",
-       "LibName": "Wwise Parametric EQ",
-       "LibId": "6881283"
-      }
-     ],
      "ShareSets": [
-      {
-       "Id": "702543456",
-       "Name": "Tunnel1",
-       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Tunnel1",
-       "GUID": "{CC44B890-9865-4157-965F-86FED27BC4C6}",
-       "LibName": "Wwise Matrix Reverb",
-       "LibId": "7536643"
-      },
       {
        "Id": "1008402193",
        "Name": "Low_Pass_20KHz",
@@ -2558,12 +2543,6 @@
         "Name": "REV_LargeRoom",
         "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom",
         "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"
-       },
-       {
-        "Id": "2172616000",
-        "Name": "REV_Cave",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_Cave",
-        "GUID": "{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}"
        }
       ],
       "SwitchContainers": [
@@ -2576,22 +2555,13 @@
         },
         "MediaRefs": [
          {
-          "Id": "169742422"
-         },
-         {
           "Id": "370767073"
-         },
-         {
-          "Id": "1060688450"
          }
         ],
         "PluginRefs": {
          "ShareSets": [
           {
            "Id": "1008402193"
-          },
-          {
-           "Id": "3395979371"
           }
          ]
         }
@@ -2660,7 +2630,7 @@
         },
         "MediaRefs": [
          {
-          "Id": "169742422"
+          "Id": "407511388"
          },
          {
           "Id": "646294798"
@@ -2679,26 +2649,8 @@
          },
          {
           "Id": "1060309485"
-         },
-         {
-          "Id": "1060688450"
          }
-        ],
-        "PluginRefs": {
-         "Custom": [
-          {
-           "Id": "225066277"
-          }
-         ],
-         "ShareSets": [
-          {
-           "Id": "702543456"
-          },
-          {
-           "Id": "3395979371"
-          }
-         ]
-        }
+        ]
        },
        {
         "SwitchValue": {
@@ -2709,13 +2661,7 @@
         },
         "MediaRefs": [
          {
-          "Id": "407511388"
-         },
-         {
-          "Id": "746674216"
-         },
-         {
-          "Id": "844212876"
+          "Id": "747724223"
          }
         ]
        },
@@ -2942,6 +2888,6 @@
     ]
    }
   ],
-  "FileHash": "{00114BCD-BBEA-5F3A-438F-04ECBC3A0EF1}"
+  "FileHash": "{479B9CAA-7AC8-9A93-CF4C-7014084CDD90}"
  }
 }

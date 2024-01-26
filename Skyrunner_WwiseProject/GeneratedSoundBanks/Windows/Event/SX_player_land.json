@@ -10,10 +10,21 @@
     "Type": "Event",
     "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
     "Language": "SFX",
-    "Hash": "{39AF2D16-A5FC-1BB6-17F3-7B9EEC421ECB}",
+    "Hash": "{30503168-4411-0536-D123-F086B566CA05}",
     "ObjectPath": "SX_player_land",
     "ShortName": "SX_player_land",
     "Path": "Event/SX_player_land.bnk",
+    "Media": [
+     {
+      "Id": "129424093",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\player_slide.wav",
+      "Path": "Media/129424093.wem",
+      "CachePath": "SFX/Placeholders/player_slide_97A43206.wem"
+     }
+    ],
     "Plugins": {
      "Custom": [
       {
@@ -41,11 +52,31 @@
          "Id": "416403271"
         }
        ]
-      }
+      },
+      "ActionPostEvent": [
+       {
+        "Id": "1882419246",
+        "Name": "SX_player_slide",
+        "ObjectPath": "\\Events\\Player\\Movement\\SX_player_slide",
+        "GUID": "{18C2192F-4C95-4001-A9A0-979E3F100C3A}"
+       }
+      ]
+     },
+     {
+      "Id": "1882419246",
+      "Name": "SX_player_slide",
+      "ObjectPath": "\\Events\\Player\\Movement\\SX_player_slide",
+      "GUID": "{18C2192F-4C95-4001-A9A0-979E3F100C3A}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "129424093"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{9C885138-CD38-DD7E-1609-CA1F3E45B0EF}"
+  "FileHash": "{F73491D2-9928-1401-7931-14763B0EE02B}"
  }
 }

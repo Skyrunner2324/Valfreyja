@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{39AF2D16-A5FC-1BB6-17F3-7B9EEC421ECB}">
+		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{30503168-4411-0536-D123-F086B566CA05}">
 			<ObjectPath>SX_player_land</ObjectPath>
 			<ShortName>SX_player_land</ShortName>
 			<Path>Event/SX_player_land.bnk</Path>
+			<Media>
+				<File Id="129424093" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Placeholders\player_slide.wav</ShortName>
+					<Path>Media/129424093.wem</Path>
+					<CachePath>SFX/Placeholders/player_slide_97A43206.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
 				<Custom>
 					<Plugin Id="416403271" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_landing\Soundseed Air Woosh" GUID="{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
@@ -17,9 +24,17 @@
 							<PluginRef Id="416403271"/>
 						</Custom>
 					</PluginRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1882419246" Name="SX_player_slide" ObjectPath="\Events\Player\Movement\SX_player_slide" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}"/>
+					</ActionPostEvent>
+				</Event>
+				<Event Id="1882419246" Name="SX_player_slide" ObjectPath="\Events\Player\Movement\SX_player_slide" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="129424093"/>
+					</MediaRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B8AEF84B-11A4-0672-BFC2-B56E238CFD73}</FileHash>
+	<FileHash>{A8CFB017-9EF5-27E0-2EF9-7156329CD8B0}</FileHash>
 </SoundBanksInfo>

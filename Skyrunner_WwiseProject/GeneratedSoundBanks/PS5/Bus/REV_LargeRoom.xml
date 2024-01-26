@@ -1,31 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1641293181" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{86473F52-6418-380F-8ECD-8ADE324B1E44}">
+		<SoundBank Id="1641293181" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{B32F2C81-F705-FD82-E1A1-039402A4B10C}">
 			<ObjectPath>REV_LargeRoom</ObjectPath>
 			<ShortName>REV_LargeRoom</ShortName>
 			<Path>Bus/REV_LargeRoom.bnk</Path>
-			<Media>
-				<File Id="941961704" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsFar.wav</ShortName>
-					<Path>Media/941961704.wem</Path>
-					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Field/AE_DistantBuilding_MicsFar_218EFC0B.wem</CachePath>
-				</File>
-			</Media>
 			<Plugins>
 				<ShareSets>
-					<Plugin Id="1782142158" Name="DistantBuilding_MicsFar" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Field\DistantBuilding_MicsFar" GUID="{22EE2792-F5F3-4B26-A6E1-843A0A964677}" LibName="Wwise Convolution Reverb" LibId="8323075">
-						<MediaRefs>
-							<MediaRef Id="941961704"/>
-						</MediaRefs>
-					</Plugin>
+					<Plugin Id="2662085913" Name="Large_Church1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Large_Church1" GUID="{9B6E8B78-EF8C-494C-AADA-D01CF51B5FAC}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 				</ShareSets>
 			</Plugins>
 			<AuxBusses>
 				<AuxBus Id="1641293181" Name="REV_LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="1782142158"/>
+							<PluginRef Id="2662085913"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
@@ -35,5 +24,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7A2CE349-CD76-C26D-7FDF-B5E16637DCEA}</FileHash>
+	<FileHash>{650ED3A3-98F2-CCD4-BF7D-B6C3FBE3FA81}</FileHash>
 </SoundBanksInfo>

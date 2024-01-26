@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{9315242B-3DD7-90E7-AD0F-071FBED627C2}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{B96A8183-47AE-E08D-93D8-EF46B70AA2FF}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -98,11 +98,7 @@
 				</File>
 			</Media>
 			<Plugins>
-				<Custom>
-					<Plugin Id="225066277" Name="Parametric EQ (Custom)" ObjectPath="\Interactive Music Hierarchy\Default Work Unit\Music_Alpha\Main_Music_Switch\Sky_Tuto_Playlist Container\Intro_Tuto\X- guitar solo\Parametric EQ (Custom)" GUID="{FA9EDD94-59A2-4D67-9F19-6EC8C5C1D312}" LibName="Wwise Parametric EQ" LibId="6881283"/>
-				</Custom>
 				<ShareSets>
-					<Plugin Id="702543456" Name="Tunnel1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Tunnel1" GUID="{CC44B890-9865-4157-965F-86FED27BC4C6}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="1008402193" Name="Low_Pass_20KHz" ObjectPath="\Effects\Factory Effects\Parametric EQ\Low Pass Filters\Low_Pass_20KHz" GUID="{830124FB-B9D5-4AE8-846E-E94A74652666}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="3395979371" Name="Straight_Delay" ObjectPath="\Effects\Factory Effects\Stereo Delay\Straight_Delay" GUID="{00ADE3F8-B4F2-465A-9DC3-9EA55A7B3235}" LibName="Wwise Stereo Delay" LibId="8847363"/>
 				</ShareSets>
@@ -111,20 +107,16 @@
 				<Event Id="3441789682" Name="MUS_Play_MainMusic" ObjectPath="\Events\Music\MUS_Play_MainMusic" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" DurationType="Infinite">
 					<AuxBusRefs>
 						<AuxBusRef Id="1641293181" Name="REV_LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"/>
-						<AuxBusRef Id="2172616000" Name="REV_Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}"/>
 					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="634183254" GUID="{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"/>
 							<MediaRefs>
-								<MediaRef Id="169742422"/>
 								<MediaRef Id="370767073"/>
-								<MediaRef Id="1060688450"/>
 							</MediaRefs>
 							<PluginRefs>
 								<ShareSets>
 									<PluginRef Id="1008402193"/>
-									<PluginRef Id="3395979371"/>
 								</ShareSets>
 							</PluginRefs>
 						</SwitchContainer>
@@ -157,31 +149,19 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="3037000007" GUID="{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"/>
 							<MediaRefs>
-								<MediaRef Id="169742422"/>
+								<MediaRef Id="407511388"/>
 								<MediaRef Id="646294798"/>
 								<MediaRef Id="746674216"/>
 								<MediaRef Id="747724223"/>
 								<MediaRef Id="844212876"/>
 								<MediaRef Id="1016493422"/>
 								<MediaRef Id="1060309485"/>
-								<MediaRef Id="1060688450"/>
 							</MediaRefs>
-							<PluginRefs>
-								<Custom>
-									<PluginRef Id="225066277"/>
-								</Custom>
-								<ShareSets>
-									<PluginRef Id="702543456"/>
-									<PluginRef Id="3395979371"/>
-								</ShareSets>
-							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="348963605" GUID="{1A0075FD-1C91-4DCD-B4AC-2029A2632B3A}"/>
 							<MediaRefs>
-								<MediaRef Id="407511388"/>
-								<MediaRef Id="746674216"/>
-								<MediaRef Id="844212876"/>
+								<MediaRef Id="747724223"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -223,5 +203,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{55B4E66E-6FAA-3094-A067-F00FFF79329C}</FileHash>
+	<FileHash>{9FFA77A2-3F7F-0D64-9812-3E9F173AF0F7}</FileHash>
 </SoundBanksInfo>
