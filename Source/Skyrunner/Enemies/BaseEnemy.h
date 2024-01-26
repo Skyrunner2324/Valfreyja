@@ -23,6 +23,9 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
 	float fireCooldown = 0.f;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
+	AActor* dotMarker = nullptr;
+
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
 	class UCapsuleComponent* collisionCapsule;
 
