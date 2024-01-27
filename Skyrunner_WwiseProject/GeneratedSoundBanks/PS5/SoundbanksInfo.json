@@ -456,7 +456,7 @@
     "Type": "User",
     "GUID": "{73E808A7-564E-44B8-BCF3-CDA908FACC1B}",
     "Language": "SFX",
-    "Hash": "{61EB1409-0C82-4E23-642D-3DF905C59CDE}",
+    "Hash": "{2F0B91E7-27E3-5C95-20B3-C1CA3EDF3B58}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\MasterSoundbank",
     "ShortName": "MasterSoundbank",
     "Path": "MasterSoundbank.bnk",
@@ -1916,12 +1916,20 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{09F7760B-C149-6BB7-A932-E841733D4A00}",
+    "Hash": "{5D3486DB-245E-D8F2-EA01-91DAC761DB07}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
      "Custom": [
+      {
+       "Id": "33444476",
+       "Name": "RoomVerb (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom\\RoomVerb (Custom)",
+       "GUID": "{140088B9-275E-409D-AC97-CA7FF6C8DCF0}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
       {
        "Id": "335663160",
        "Name": "Underwater_Echoes (Custom)",
@@ -1965,6 +1973,14 @@
      ],
      "ShareSets": [
       {
+       "Id": "176439046",
+       "Name": "Caught_in_a_loop",
+       "ObjectPath": "\\Effects\\Factory Effects\\Stereo Delay\\Caught_in_a_loop",
+       "GUID": "{8FC64215-9A75-4BE3-A33A-584C8CA49963}",
+       "LibName": "Wwise Stereo Delay",
+       "LibId": "8847363"
+      },
+      {
        "Id": "702543456",
        "Name": "Tunnel1",
        "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Tunnel1",
@@ -1979,14 +1995,6 @@
        "GUID": "{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}",
        "LibName": "Wwise Reflect",
        "LibId": "11206659"
-      },
-      {
-       "Id": "2662085913",
-       "Name": "Large_Church1",
-       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Large_Church1",
-       "GUID": "{9B6E8B78-EF8C-494C-AADA-D01CF51B5FAC}",
-       "LibName": "Wwise Matrix Reverb",
-       "LibId": "7536643"
       }
      ],
      "AudioDevices": [
@@ -2199,9 +2207,14 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
       "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "33444476"
+        }
+       ],
        "ShareSets": [
         {
-         "Id": "2662085913"
+         "Id": "176439046"
         }
        ]
       },
@@ -2953,19 +2966,29 @@
     "Type": "Bus",
     "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
     "Language": "SFX",
-    "Hash": "{4A132655-4515-F8B0-2089-6F28974FA6FA}",
+    "Hash": "{06C46715-767C-0C35-15FA-1872B5F966E6}",
     "ObjectPath": "REV_LargeRoom",
     "ShortName": "REV_LargeRoom",
     "Path": "Bus/REV_LargeRoom.bnk",
     "Plugins": {
+     "Custom": [
+      {
+       "Id": "33444476",
+       "Name": "RoomVerb (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom\\RoomVerb (Custom)",
+       "GUID": "{140088B9-275E-409D-AC97-CA7FF6C8DCF0}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ],
      "ShareSets": [
       {
-       "Id": "2662085913",
-       "Name": "Large_Church1",
-       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Large_Church1",
-       "GUID": "{9B6E8B78-EF8C-494C-AADA-D01CF51B5FAC}",
-       "LibName": "Wwise Matrix Reverb",
-       "LibId": "7536643"
+       "Id": "176439046",
+       "Name": "Caught_in_a_loop",
+       "ObjectPath": "\\Effects\\Factory Effects\\Stereo Delay\\Caught_in_a_loop",
+       "GUID": "{8FC64215-9A75-4BE3-A33A-584C8CA49963}",
+       "LibName": "Wwise Stereo Delay",
+       "LibId": "8847363"
       }
      ]
     },
@@ -2976,9 +2999,14 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
       "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "33444476"
+        }
+       ],
        "ShareSets": [
         {
-         "Id": "2662085913"
+         "Id": "176439046"
         }
        ]
       },
@@ -3538,20 +3566,38 @@
     "Type": "Event",
     "GUID": "{C6B5191E-27E7-4097-A049-ADF0776478D2}",
     "Language": "SFX",
-    "Hash": "{4CACEC98-ACB8-27BD-06A7-93BF286A92AC}",
+    "Hash": "{76B4C6C1-AA83-35A7-ECD6-FE87F3BDFA20}",
     "ObjectPath": "SX_player_bumper",
     "ShortName": "SX_player_bumper",
     "Path": "Event/SX_player_bumper.bnk",
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "1010974337",
+       "Name": "Soundseed Air Woosh",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_jump\\Soundseed Air Woosh",
+       "GUID": "{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}",
+       "LibName": "SoundSeed Air Woosh",
+       "LibId": "7864322"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3467451382",
       "Name": "SX_player_bumper",
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_bumper",
       "GUID": "{C6B5191E-27E7-4097-A049-ADF0776478D2}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.2",
+      "DurationMax": "0.2",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "1010974337"
+        }
+       ]
+      }
      }
     ]
    },
@@ -3636,6 +3682,6 @@
     ]
    }
   ],
-  "FileHash": "{5D634B65-D59E-96FD-F168-DCB4D09921A0}"
+  "FileHash": "{4F542342-DFCB-75D5-8AF2-B495E9AB299B}"
  }
 }

@@ -165,6 +165,11 @@
 										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Tempo" Type="Real64" Value="174"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1938,8 +1943,8 @@
 												<StateRef Name="Reverb" ID="{1A0075FD-1C91-4DCD-B4AC-2029A2632B3A}"/>
 												<CustomState Name="" ID="{90695089-E0A8-4E31-9E3B-05E15A0BBE6C}" ShortID="1063597344">
 													<PropertyList>
-														<Property Name="UserAuxSendVolume0" Type="Real64" Value="-16"/>
-														<Property Name="Volume" Type="Real64" Value="-12"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64" Value="4"/>
+														<Property Name="Volume" Type="Real64" Value="-6"/>
 													</PropertyList>
 												</CustomState>
 											</CustomState>
@@ -4159,7 +4164,7 @@
 										</MusicSegment>
 										<MusicSegment Name="Explo_Phase_6" ID="{190A462A-8CAA-4031-8BA2-8A1D6E6A2014}" ShortID="124838223">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="23706.8965517241"/>
+												<Property Name="EndPosition" Type="Real64" Value="11034.4827586207"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -4833,7 +4838,7 @@
 															<MusicCue Name="Exit Cue" ID="{A0467116-E3F6-44C8-BC07-02341B91D8CB}">
 																<PropertyList>
 																	<Property Name="CueType" Type="int16" Value="1"/>
-																	<Property Name="TimeMs" Type="Real64" Value="22068.9583333333"/>
+																	<Property Name="TimeMs" Type="Real64" Value="11034.4827586207"/>
 																</PropertyList>
 															</MusicCue>
 														</Local>
@@ -5933,10 +5938,8 @@
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
-											<ReferenceList/>
 											<ChildrenList>
 												<MusicTransition Name="Transition" ID="{077C8C7B-A825-4992-B82A-CF389D65E11D}">
-													<ReferenceList/>
 													<TransitionInfo/>
 												</MusicTransition>
 											</ChildrenList>

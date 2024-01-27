@@ -10,12 +10,20 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{071D94DC-2B26-4305-23F4-6C81BFB23566}",
+    "Hash": "{E090D623-5BB2-0E35-3AB1-3E9008CC250D}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
      "Custom": [
+      {
+       "Id": "33444476",
+       "Name": "RoomVerb (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom\\RoomVerb (Custom)",
+       "GUID": "{140088B9-275E-409D-AC97-CA7FF6C8DCF0}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
       {
        "Id": "335663160",
        "Name": "Underwater_Echoes (Custom)",
@@ -59,6 +67,14 @@
      ],
      "ShareSets": [
       {
+       "Id": "176439046",
+       "Name": "Caught_in_a_loop",
+       "ObjectPath": "\\Effects\\Factory Effects\\Stereo Delay\\Caught_in_a_loop",
+       "GUID": "{8FC64215-9A75-4BE3-A33A-584C8CA49963}",
+       "LibName": "Wwise Stereo Delay",
+       "LibId": "8847363"
+      },
+      {
        "Id": "702543456",
        "Name": "Tunnel1",
        "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Tunnel1",
@@ -73,14 +89,6 @@
        "GUID": "{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}",
        "LibName": "Wwise Reflect",
        "LibId": "11206659"
-      },
-      {
-       "Id": "2662085913",
-       "Name": "Large_Church1",
-       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Large_Church1",
-       "GUID": "{9B6E8B78-EF8C-494C-AADA-D01CF51B5FAC}",
-       "LibName": "Wwise Matrix Reverb",
-       "LibId": "7536643"
       }
      ],
      "AudioDevices": [
@@ -293,9 +301,14 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
       "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "33444476"
+        }
+       ],
        "ShareSets": [
         {
-         "Id": "2662085913"
+         "Id": "176439046"
         }
        ]
       },
@@ -1003,6 +1016,6 @@
     ]
    }
   ],
-  "FileHash": "{1F53AE10-5051-C371-2DFE-99D1D58134BF}"
+  "FileHash": "{0BF99F73-839B-411D-06D7-FCFD145E8F2D}"
  }
 }

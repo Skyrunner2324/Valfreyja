@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1641293181" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{4A132655-4515-F8B0-2089-6F28974FA6FA}">
+		<SoundBank Id="1641293181" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{06C46715-767C-0C35-15FA-1872B5F966E6}">
 			<ObjectPath>REV_LargeRoom</ObjectPath>
 			<ShortName>REV_LargeRoom</ShortName>
 			<Path>Bus/REV_LargeRoom.bnk</Path>
 			<Plugins>
+				<Custom>
+					<Plugin Id="33444476" Name="RoomVerb (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_LargeRoom\RoomVerb (Custom)" GUID="{140088B9-275E-409D-AC97-CA7FF6C8DCF0}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</Custom>
 				<ShareSets>
-					<Plugin Id="2662085913" Name="Large_Church1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Large_Church1" GUID="{9B6E8B78-EF8C-494C-AADA-D01CF51B5FAC}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="176439046" Name="Caught_in_a_loop" ObjectPath="\Effects\Factory Effects\Stereo Delay\Caught_in_a_loop" GUID="{8FC64215-9A75-4BE3-A33A-584C8CA49963}" LibName="Wwise Stereo Delay" LibId="8847363"/>
 				</ShareSets>
 			</Plugins>
 			<AuxBusses>
 				<AuxBus Id="1641293181" Name="REV_LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<PluginRefs>
+						<Custom>
+							<PluginRef Id="33444476"/>
+						</Custom>
 						<ShareSets>
-							<PluginRef Id="2662085913"/>
+							<PluginRef Id="176439046"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
@@ -39,5 +45,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{391AA3EC-D7AC-C41E-4EBD-5C6342133892}</FileHash>
+	<FileHash>{E84E2D15-A81D-AB01-328F-8B26140327E0}</FileHash>
 </SoundBanksInfo>

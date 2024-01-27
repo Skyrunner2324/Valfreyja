@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="3467451382" Type="Event" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" Language="SFX" Hash="{4CACEC98-ACB8-27BD-06A7-93BF286A92AC}">
+		<SoundBank Id="3467451382" Type="Event" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" Language="SFX" Hash="{76B4C6C1-AA83-35A7-ECD6-FE87F3BDFA20}">
 			<ObjectPath>SX_player_bumper</ObjectPath>
 			<ShortName>SX_player_bumper</ShortName>
 			<Path>Event/SX_player_bumper.bnk</Path>
+			<Plugins>
+				<Custom>
+					<Plugin Id="1010974337" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_jump\Soundseed Air Woosh" GUID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+				</Custom>
+			</Plugins>
 			<Events>
-				<Event Id="3467451382" Name="SX_player_bumper" ObjectPath="\Events\Player\Movement\SX_player_bumper" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3467451382" Name="SX_player_bumper" ObjectPath="\Events\Player\Movement\SX_player_bumper" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" DurationType="OneShot" DurationMin="0.2" DurationMax="0.2">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="1010974337"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{65FA3229-5658-B354-F75F-7E8A321535A5}</FileHash>
+	<FileHash>{F86D8DAC-878E-900D-C15D-21473C5ECDE2}</FileHash>
 </SoundBanksInfo>

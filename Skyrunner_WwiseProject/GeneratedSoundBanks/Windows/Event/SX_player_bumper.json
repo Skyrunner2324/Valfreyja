@@ -10,24 +10,42 @@
     "Type": "Event",
     "GUID": "{C6B5191E-27E7-4097-A049-ADF0776478D2}",
     "Language": "SFX",
-    "Hash": "{4CACEC98-ACB8-27BD-06A7-93BF286A92AC}",
+    "Hash": "{76B4C6C1-AA83-35A7-ECD6-FE87F3BDFA20}",
     "ObjectPath": "SX_player_bumper",
     "ShortName": "SX_player_bumper",
     "Path": "Event/SX_player_bumper.bnk",
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "1010974337",
+       "Name": "Soundseed Air Woosh",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_jump\\Soundseed Air Woosh",
+       "GUID": "{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}",
+       "LibName": "SoundSeed Air Woosh",
+       "LibId": "7864322"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3467451382",
       "Name": "SX_player_bumper",
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_bumper",
       "GUID": "{C6B5191E-27E7-4097-A049-ADF0776478D2}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.2",
+      "DurationMax": "0.2",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "1010974337"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{A3BED5F4-D16D-FC0E-FA74-498D267158F7}"
+  "FileHash": "{555048D8-0BC5-5D29-F43F-8AA31C7FD429}"
  }
 }
