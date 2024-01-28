@@ -20,24 +20,17 @@ ABaseEnemy::ABaseEnemy()
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	collisionCapsule = CreateDefaultSubobject<UCapsuleComponent>(FName("Collision Capsule"));
-	collisionCapsule->SetCapsuleHalfHeight(95.f);
-	collisionCapsule->SetCapsuleRadius(50.f);
-	collisionCapsule->CanCharacterStepUpOn = ECanBeCharacterBase::ECB_No;
-	RootComponent = collisionCapsule;
+	auto capsule = Cast<UCapsuleComponent>(RootComponent);
+	capsule->CanCharacterStepUpOn = ECanBeCharacterBase::ECB_No;
+	capsule->SetCapsuleHalfHeight(95.f);
+	capsule->SetCapsuleRadius(50.f);
 
-	arrowComponent = CreateDefaultSubobject<UArrowComponent>(FName("Arrow Component"));
-	arrowComponent->SetupAttachment(RootComponent);
 	
 	collisionProjectile = CreateDefaultSubobject<UBoxComponent>(FName("CollisionProjectile"));
 	collisionProjectile->SetupAttachment(RootComponent);
 	FVector boxExtent = FVector(52, 52, 97);
 	collisionProjectile->SetBoxExtent(boxExtent);
 	collisionProjectile->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Overlap);
-
-
-	skMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(FName("Skeletal Mesh"));
-	skMeshComponent->SetupAttachment(RootComponent);
 }
 
 // Called when the game starts or when spawned

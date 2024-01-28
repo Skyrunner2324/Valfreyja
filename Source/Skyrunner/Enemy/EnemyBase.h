@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Pawn.h"
+#include "GameFramework/Character.h"
 #include "Components/BoxComponent.h"
 
 
@@ -13,7 +13,7 @@
 
 // TODO : rename EnemyBase
 UCLASS()
-class SKYRUNNER_API ABaseEnemy : public APawn
+class SKYRUNNER_API ABaseEnemy : public ACharacter
 {
 	GENERATED_BODY()
 
@@ -48,16 +48,9 @@ protected:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
 	class ACharacter* playerCharacter;
 	
-	// gfx
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
-	class USkeletalMeshComponent* skMeshComponent;
-
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
-	UPROPERTY(BlueprintReadOnly, Category = Components)
-	class UArrowComponent* arrowComponent;
 
 
 public:	
