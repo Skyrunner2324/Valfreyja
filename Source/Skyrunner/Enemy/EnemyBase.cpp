@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "BaseEnemy.h"
+#include "EnemyBase.h"
 
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/Character.h"
@@ -9,7 +9,10 @@
 #include "Components/ArrowComponent.h" 	
 #include "Components/SphereComponent.h"
 #include "Components/CapsuleComponent.h"
+
 #include "Components/SkeletalMeshComponent.h"
+
+
 
 // Sets default values
 ABaseEnemy::ABaseEnemy()
@@ -20,6 +23,7 @@ ABaseEnemy::ABaseEnemy()
 	collisionCapsule = CreateDefaultSubobject<UCapsuleComponent>(FName("Collision Capsule"));
 	collisionCapsule->SetCapsuleHalfHeight(95.f);
 	collisionCapsule->SetCapsuleRadius(50.f);
+	collisionCapsule->CanCharacterStepUpOn = ECanBeCharacterBase::ECB_No;
 	RootComponent = collisionCapsule;
 
 	arrowComponent = CreateDefaultSubobject<UArrowComponent>(FName("Arrow Component"));
@@ -31,13 +35,9 @@ ABaseEnemy::ABaseEnemy()
 	collisionProjectile->SetBoxExtent(boxExtent);
 	collisionProjectile->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Overlap);
 
-	detectionSphere = CreateDefaultSubobject<USphereComponent>(FName("Detection Sphere"));
-	detectionSphere->SetSphereRadius(2000.f);
-	detectionSphere->SetupAttachment(RootComponent);
 
 	skMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(FName("Skeletal Mesh"));
 	skMeshComponent->SetupAttachment(RootComponent);
-
 }
 
 // Called when the game starts or when spawned
@@ -57,8 +57,4 @@ void ABaseEnemy::Tick(float DeltaTime)
 
 	if (fireCooldown > 0.f)
 		fireCooldown -= DeltaTime;
-
-
 }
-
-

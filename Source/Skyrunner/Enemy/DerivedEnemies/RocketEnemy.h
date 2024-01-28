@@ -3,14 +3,15 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "AIController.h"
-#include "EnemyController.generated.h"
+#include "../EnemyBase.h"
+#include "RocketEnemy.generated.h"
 
 /**
  * 
  */
+// DEPRECATED
 UCLASS()
-class SKYRUNNER_API AEnemyController : public AAIController
+class SKYRUNNER_API ARocketEnemy : public ABaseEnemy
 {
 	GENERATED_BODY()
 	

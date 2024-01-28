@@ -5,8 +5,13 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "Components/BoxComponent.h"
-#include "BaseEnemy.generated.h"
 
+
+#include "EnemyBase.generated.h"
+
+
+
+// TODO : rename EnemyBase
 UCLASS()
 class SKYRUNNER_API ABaseEnemy : public APawn
 {
@@ -16,6 +21,7 @@ public:
 	// Sets default values for this pawn's properties
 	ABaseEnemy();
 
+
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters, 
 		meta = (ToolTip = "Fire rate, in bullets per second"))
 	float fireRate = 2.f;
@@ -23,8 +29,11 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
 	float fireCooldown = 0.f;
 
+
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
 	AActor* dotMarker = nullptr;
+
+
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
 	class UCapsuleComponent* collisionCapsule;
@@ -32,21 +41,25 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
 	class UBoxComponent* collisionProjectile;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
-	class USphereComponent* detectionSphere;
 
 protected:
+
+	// reference to player
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
 	class ACharacter* playerCharacter;
-
+	
+	// gfx
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
 	class USkeletalMeshComponent* skMeshComponent;
+
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 	UPROPERTY(BlueprintReadOnly, Category = Components)
 	class UArrowComponent* arrowComponent;
+
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

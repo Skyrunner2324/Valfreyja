@@ -4,7 +4,7 @@
 #include "SkyrunnerCharacter2.h"
 
 
-#include "Utils/DebugLog.h"
+#include "../../Utils/DebugLog.h"
 
 
 // Sets default values
