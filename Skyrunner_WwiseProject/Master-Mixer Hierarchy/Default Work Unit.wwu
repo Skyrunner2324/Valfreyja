@@ -20,7 +20,20 @@
 									</ValueList>
 								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<ObjectRef Name="Low_Pass_20KHz" ID="{830124FB-B9D5-4AE8-846E-E94A74652666}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
 							<StateInfo>
+								<StatePropertyList>
+									<Property Name="BusVolume"/>
+									<Property Name="BypassEffect0"/>
+									<Property Name="Highpass"/>
+									<Property Name="Lowpass"/>
+									<Property Name="Pitch"/>
+									<Property Name="Volume"/>
+								</StatePropertyList>
 								<StateGroupList>
 									<StateGroupInfo>
 										<StateGroupRef Name="GameStatus" ID="{B166225D-6EEC-4395-A414-2DC03ECCF043}"/>
@@ -29,12 +42,17 @@
 								<CustomStateList>
 									<CustomState>
 										<StateRef Name="InGame" ID="{EC4A1A3A-9F40-4265-A536-AB6230BB833D}"/>
-										<CustomState Name="" ID="{6E0BD3CE-0997-453A-8F4C-FBB026027602}" ShortID="617048336"/>
+										<CustomState Name="" ID="{6E0BD3CE-0997-453A-8F4C-FBB026027602}" ShortID="617048336">
+											<PropertyList>
+												<Property Name="BypassEffect0" Type="bool" Value="True"/>
+											</PropertyList>
+										</CustomState>
 									</CustomState>
 									<CustomState>
 										<StateRef Name="InMenu" ID="{B2F321F7-4EE8-4AFD-AE95-8524E71A2A7B}"/>
 										<CustomState Name="" ID="{726E60A3-4F61-41C2-9FD6-7E97A5056664}" ShortID="613737786">
 											<PropertyList>
+												<Property Name="BypassEffect0" Type="bool" Value="True"/>
 												<Property Name="Lowpass" Type="int16" Value="49"/>
 												<Property Name="Volume" Type="Real64" Value="-6"/>
 											</PropertyList>
@@ -862,8 +880,8 @@
 																<Property Name="LeftCrossfeed" Type="Real32" Value="-3"/>
 																<Property Name="LeftDelayTime" Type="Real32" Value="0.13"/>
 																<Property Name="LeftFeedback" Type="Real32" Value="-16.8"/>
-																<Property Name="RightCrossfeed" Type="Real32" Value="-3"/>
-																<Property Name="RightDelayTime" Type="Real32" Value="0.21"/>
+																<Property Name="RightCrossfeed" Type="Real32" Value="-6.9"/>
+																<Property Name="RightDelayTime" Type="Real32" Value="0.23"/>
 																<Property Name="RightFeedback" Type="Real32" Value="-24.5"/>
 																<Property Name="WetLevel" Type="Real32" Value="-12"/>
 															</PropertyList>
@@ -959,6 +977,81 @@
 																									<Point>
 																										<XPos>1</XPos>
 																										<YPos>-120</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{CE217F98-47E6-4369-8B31-29B7974902B9}" ShortID="531949900">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="RightCrossfeed"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{ABDA96CF-8255-40C6-B3F2-B8611E233F5C}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>-1</XPos>
+																										<YPos>-48</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>-0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>0</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>1</XPos>
+																										<YPos>48</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{B0AFCDEB-C34C-4D69-849A-47126DB2EECC}" ShortID="866071188">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="FrontRearBalance"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{72594F4A-3555-40C0-9E9E-A999E37072C1}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>-1</XPos>
+																										<YPos>200</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>1</XPos>
+																										<YPos>0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
 																								</PointList>
@@ -1100,7 +1193,7 @@
 																				<PointList>
 																					<Point>
 																						<XPos>-1</XPos>
-																						<YPos>32</YPos>
+																						<YPos>10</YPos>
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
@@ -1110,47 +1203,7 @@
 																					</Point>
 																					<Point>
 																						<XPos>1</XPos>
-																						<YPos>13</YPos>
-																						<Flags>37</Flags>
-																					</Point>
-																				</PointList>
-																			</Curve>
-																		</Custom>
-																	</Reference>
-																</ReferenceList>
-															</RTPC>
-														</Local>
-													</Reference>
-													<Reference>
-														<Local>
-															<RTPC Name="" ID="{CAC0A6D5-B84E-4E4B-889A-9A2434E8EBCF}" ShortID="577738708">
-																<PropertyList>
-																	<Property Name="PropertyName" Type="string" Value="Volume"/>
-																</PropertyList>
-																<ReferenceList>
-																	<Reference Name="ControlInput">
-																		<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																	</Reference>
-																	<Reference Name="Curve">
-																		<Custom>
-																			<Curve Name="" ID="{981327D3-B860-4D11-8086-9EAC9A30AFE1}">
-																				<PropertyList>
-																					<Property Name="Flags" Type="int32" Value="3"/>
-																				</PropertyList>
-																				<PointList>
-																					<Point>
-																						<XPos>-1</XPos>
-																						<YPos>-3.05553</YPos>
-																						<Flags>5</Flags>
-																					</Point>
-																					<Point>
-																						<XPos>0</XPos>
-																						<YPos>0</YPos>
-																						<Flags>0</Flags>
-																					</Point>
-																					<Point>
-																						<XPos>1</XPos>
-																						<YPos>-2.01101</YPos>
+																						<YPos>-30</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
