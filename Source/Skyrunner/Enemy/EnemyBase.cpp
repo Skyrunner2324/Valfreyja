@@ -24,13 +24,6 @@ ABaseEnemy::ABaseEnemy()
 	capsule->CanCharacterStepUpOn = ECanBeCharacterBase::ECB_No;
 	capsule->SetCapsuleHalfHeight(95.f);
 	capsule->SetCapsuleRadius(50.f);
-
-	
-	collisionProjectile = CreateDefaultSubobject<UBoxComponent>(FName("CollisionProjectile"));
-	collisionProjectile->SetupAttachment(RootComponent);
-	FVector boxExtent = FVector(52, 52, 97);
-	collisionProjectile->SetBoxExtent(boxExtent);
-	collisionProjectile->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Overlap);
 }
 
 // Called when the game starts or when spawned

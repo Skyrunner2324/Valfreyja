@@ -34,14 +34,6 @@ public:
 	AActor* dotMarker = nullptr;
 
 
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
-	class UCapsuleComponent* collisionCapsule;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Components)
-	class UBoxComponent* collisionProjectile;
-
-
 protected:
 
 	// reference to player
