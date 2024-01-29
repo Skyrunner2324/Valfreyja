@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1882419246" Type="Event" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}" Language="SFX" Hash="{413B2A38-0C6B-7F67-6036-5C76840528FF}">
+		<SoundBank Id="1882419246" Type="Event" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}" Language="SFX" Hash="{E48EE4FE-1EB2-E742-5EFC-D40B5F33A356}">
 			<ObjectPath>SX_player_slide</ObjectPath>
 			<ShortName>SX_player_slide</ShortName>
 			<Path>Event/SX_player_slide.bnk</Path>
@@ -9,17 +9,27 @@
 				<File Id="129424093" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\player_slide.wav</ShortName>
 					<Path>Media/129424093.wem</Path>
-					<CachePath>SFX/Placeholders/player_slide_97A43206.wem</CachePath>
+					<CachePath>SFX/Placeholders/player_slide_4DD066AC.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="2084516" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_slide\Parametric EQ (Custom)" GUID="{777F4BD6-7318-4F9D-A7AF-0A87E8117460}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</Custom>
+			</Plugins>
 			<Events>
 				<Event Id="1882419246" Name="SX_player_slide" ObjectPath="\Events\Player\Movement\SX_player_slide" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="129424093"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="2084516"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D1FC0EEC-EEBE-5AA3-F628-12F478A63A99}</FileHash>
+	<FileHash>{4D3AF68E-FF28-D0B3-09B5-670AF1C9DB1C}</FileHash>
 </SoundBanksInfo>

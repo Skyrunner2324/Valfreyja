@@ -59,7 +59,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{30503168-4411-0536-D123-F086B566CA05}">
+		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{18A300B0-00D6-96F2-C175-0DE8A6D443AF}">
 			<ObjectPath>SX_player_land</ObjectPath>
 			<ShortName>SX_player_land</ShortName>
 			<Path>Event/SX_player_land.bnk</Path>
@@ -67,11 +67,12 @@
 				<File Id="129424093" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\player_slide.wav</ShortName>
 					<Path>Media/129424093.wem</Path>
-					<CachePath>SFX/Placeholders/player_slide_97A43206.wem</CachePath>
+					<CachePath>SFX/Placeholders/player_slide_4DD066AC.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
 				<Custom>
+					<Plugin Id="2084516" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_slide\Parametric EQ (Custom)" GUID="{777F4BD6-7318-4F9D-A7AF-0A87E8117460}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="416403271" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_landing\Soundseed Air Woosh" GUID="{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
 				</Custom>
 			</Plugins>
@@ -90,6 +91,11 @@
 					<MediaRefs>
 						<MediaRef Id="129424093"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="2084516"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
@@ -150,7 +156,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{2E3990E7-21CF-08B5-068E-FB7BC47C13C2}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{113FED9F-DCCD-D3A6-FAC2-21663B304566}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
@@ -171,8 +177,10 @@
 					<Plugin Id="247448906" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\Soundseed Wind\Parametric EQ (Custom)" GUID="{2078FFD5-FDF7-4C01-900C-742249BE40F6}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="268374027" Name="Delay (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\Soundseed Wind\Delay (Custom)" GUID="{700FD0B8-9B20-48B5-BE3E-EF4CE88526AC}" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="666289254" Name="Soundseed Air Wind" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\Soundseed Wind\Soundseed Air Wind" GUID="{83767CC5-69B5-4564-8311-4A333A1B8AF9}" LibName="SoundSeed Air Wind" LibId="7798786"/>
+					<Plugin Id="768480562" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\hoverboots_on_rail_loop\Parametric EQ (Custom)" GUID="{795F1578-DFEF-4A0F-995B-DC9BEE878FD0}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</Custom>
 				<ShareSets>
+					<Plugin Id="2539557199" Name="Treble" ObjectPath="\Effects\Factory Effects\Flanger\Flanging\Treble" GUID="{FB516F18-AA49-4B92-BC11-FA23E8CC59B4}" LibName="Wwise Flanger" LibId="8192003"/>
 					<Plugin Id="3604890626" Name="High_Pass_60Hz" ObjectPath="\Effects\Factory Effects\Parametric EQ\High Pass Filters\High_Pass_60Hz" GUID="{F9627628-0B10-4272-BC30-D4C20423CB38}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 			</Plugins>
@@ -187,8 +195,10 @@
 							<PluginRef Id="247448906"/>
 							<PluginRef Id="268374027"/>
 							<PluginRef Id="666289254"/>
+							<PluginRef Id="768480562"/>
 						</Custom>
 						<ShareSets>
+							<PluginRef Id="2539557199"/>
 							<PluginRef Id="3604890626"/>
 						</ShareSets>
 					</PluginRefs>
@@ -310,7 +320,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="971909502" Type="User" GUID="{73E808A7-564E-44B8-BCF3-CDA908FACC1B}" Language="SFX" Hash="{C14FF45E-A954-40FD-5C50-5B51344E20A7}">
+		<SoundBank Id="971909502" Type="User" GUID="{73E808A7-564E-44B8-BCF3-CDA908FACC1B}" Language="SFX" Hash="{8118FDE1-3B11-2373-55C2-75FDD020FEE5}">
 			<ObjectPath>\SoundBanks\Default Work Unit\MasterSoundbank</ObjectPath>
 			<ShortName>MasterSoundbank</ShortName>
 			<Path>MasterSoundbank.bnk</Path>
@@ -648,11 +658,6 @@
 					<CachePath>SFX/Music/Explo_Phase_05/Sky_Explo_Duduk 1_073B4D0C.wem</CachePath>
 				</File>
 			</Media>
-			<Plugins>
-				<ShareSets>
-					<Plugin Id="1008402193" Name="Low_Pass_20KHz" ObjectPath="\Effects\Factory Effects\Parametric EQ\Low Pass Filters\Low_Pass_20KHz" GUID="{830124FB-B9D5-4AE8-846E-E94A74652666}" LibName="Wwise Parametric EQ" LibId="6881283"/>
-				</ShareSets>
-			</Plugins>
 			<Events>
 				<Event Id="3441789682" Name="MUS_Play_MainMusic" ObjectPath="\Events\Music\MUS_Play_MainMusic" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" DurationType="Infinite">
 					<MediaRefs>
@@ -669,11 +674,6 @@
 								<MediaRef Id="40410685"/>
 								<MediaRef Id="835908582"/>
 							</MediaRefs>
-							<PluginRefs>
-								<ShareSets>
-									<PluginRef Id="1008402193"/>
-								</ShareSets>
-							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1419563690" Id="2149848048" GUID="{39C32C1D-49CE-4283-8A04-C9C272E282DE}"/>
@@ -839,7 +839,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{8E9B544A-CF17-5DFD-1416-0BF641510D7F}">
+		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{DC212815-CCBF-348F-9EAF-929495A7A564}">
 			<ObjectPath>SX_player_shoot</ObjectPath>
 			<ShortName>SX_player_shoot</ShortName>
 			<Path>Event/SX_player_shoot.bnk</Path>
@@ -1011,7 +1011,7 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{ACDE01EC-58C8-2952-6A17-5F1F1AF9908A}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{E341D7BA-4EE3-96F4-2F93-FE5937AD8443}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -1306,7 +1306,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{ABFF89CE-D538-3CA9-9FE1-231A21167A4C}">
+		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{E76E69D9-8238-47FF-4FF1-2F0ED2A5D01E}">
 			<ObjectPath>SX_player_jump</ObjectPath>
 			<ShortName>SX_player_jump</ShortName>
 			<Path>Event/SX_player_jump.bnk</Path>
@@ -1316,7 +1316,7 @@
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="1532180459" Name="SX_player_jump" ObjectPath="\Events\Player\Movement\SX_player_jump" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" DurationType="OneShot" DurationMin="0.2" DurationMax="0.2">
+				<Event Id="1532180459" Name="SX_player_jump" ObjectPath="\Events\Player\Movement\SX_player_jump" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" DurationType="OneShot" DurationMin="0.13333334" DurationMax="0.13333334">
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="1010974337"/>
@@ -1409,7 +1409,7 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="1882419246" Type="Event" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}" Language="SFX" Hash="{413B2A38-0C6B-7F67-6036-5C76840528FF}">
+		<SoundBank Id="1882419246" Type="Event" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}" Language="SFX" Hash="{E48EE4FE-1EB2-E742-5EFC-D40B5F33A356}">
 			<ObjectPath>SX_player_slide</ObjectPath>
 			<ShortName>SX_player_slide</ShortName>
 			<Path>Event/SX_player_slide.bnk</Path>
@@ -1417,14 +1417,24 @@
 				<File Id="129424093" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\player_slide.wav</ShortName>
 					<Path>Media/129424093.wem</Path>
-					<CachePath>SFX/Placeholders/player_slide_97A43206.wem</CachePath>
+					<CachePath>SFX/Placeholders/player_slide_4DD066AC.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="2084516" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_slide\Parametric EQ (Custom)" GUID="{777F4BD6-7318-4F9D-A7AF-0A87E8117460}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</Custom>
+			</Plugins>
 			<Events>
 				<Event Id="1882419246" Name="SX_player_slide" ObjectPath="\Events\Player\Movement\SX_player_slide" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="129424093"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="2084516"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
@@ -1485,7 +1495,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{ABE63D07-8043-26AE-D98E-97A10115A076}">
+		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{E3D7F6F6-A6CB-DEE0-E10A-F824FF77568F}">
 			<ObjectPath>SX_player_dash</ObjectPath>
 			<ShortName>SX_player_dash</ShortName>
 			<Path>Event/SX_player_dash.bnk</Path>
@@ -1621,7 +1631,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3467451382" Type="Event" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" Language="SFX" Hash="{A4BE30A5-F9B9-4581-794A-E77D50991025}">
+		<SoundBank Id="3467451382" Type="Event" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" Language="SFX" Hash="{88BEF98E-8EC3-E40D-9BAE-61CDD51C3C2D}">
 			<ObjectPath>SX_player_bumper</ObjectPath>
 			<ShortName>SX_player_bumper</ShortName>
 			<Path>Event/SX_player_bumper.bnk</Path>
@@ -1629,11 +1639,11 @@
 				<File Id="382671654" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>SX_player_bumper.wav</ShortName>
 					<Path>Media/382671654.wem</Path>
-					<CachePath>SFX/SX_player_bumper_755F56E2.wem</CachePath>
+					<CachePath>SFX/SX_player_bumper_19258E13.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3467451382" Name="SX_player_bumper" ObjectPath="\Events\Player\Movement\SX_player_bumper" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" DurationType="OneShot" DurationMin="1.1701875" DurationMax="1.1701875">
+				<Event Id="3467451382" Name="SX_player_bumper" ObjectPath="\Events\Player\Movement\SX_player_bumper" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" DurationType="OneShot" DurationMin="0.622093" DurationMax="0.7837881">
 					<MediaRefs>
 						<MediaRef Id="382671654"/>
 					</MediaRefs>
@@ -1682,5 +1692,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{32662B9D-8E46-4A60-E6E4-87A20E5597AE}</FileHash>
+	<FileHash>{022726E4-53F4-88DA-19B0-EA59CB3168D0}</FileHash>
 </SoundBanksInfo>

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
     "Language": "SFX",
-    "Hash": "{30503168-4411-0536-D123-F086B566CA05}",
+    "Hash": "{18A300B0-00D6-96F2-C175-0DE8A6D443AF}",
     "ObjectPath": "SX_player_land",
     "ShortName": "SX_player_land",
     "Path": "Event/SX_player_land.bnk",
@@ -22,11 +22,19 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\player_slide.wav",
       "Path": "Media/129424093.wem",
-      "CachePath": "SFX/Placeholders/player_slide_97A43206.wem"
+      "CachePath": "SFX/Placeholders/player_slide_4DD066AC.wem"
      }
     ],
     "Plugins": {
      "Custom": [
+      {
+       "Id": "2084516",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_slide\\Parametric EQ (Custom)",
+       "GUID": "{777F4BD6-7318-4F9D-A7AF-0A87E8117460}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
       {
        "Id": "416403271",
        "Name": "Soundseed Air Woosh",
@@ -72,11 +80,18 @@
        {
         "Id": "129424093"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "2084516"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{E493AF4D-7BBB-E2A9-EEB2-8706196FEE63}"
+  "FileHash": "{BB951DF0-EDBB-056B-70F5-63A78AF440FA}"
  }
 }

@@ -116,7 +116,7 @@
     "Type": "Event",
     "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
     "Language": "SFX",
-    "Hash": "{30503168-4411-0536-D123-F086B566CA05}",
+    "Hash": "{18A300B0-00D6-96F2-C175-0DE8A6D443AF}",
     "ObjectPath": "SX_player_land",
     "ShortName": "SX_player_land",
     "Path": "Event/SX_player_land.bnk",
@@ -128,11 +128,19 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\player_slide.wav",
       "Path": "Media/129424093.wem",
-      "CachePath": "SFX/Placeholders/player_slide_97A43206.wem"
+      "CachePath": "SFX/Placeholders/player_slide_4DD066AC.wem"
      }
     ],
     "Plugins": {
      "Custom": [
+      {
+       "Id": "2084516",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_slide\\Parametric EQ (Custom)",
+       "GUID": "{777F4BD6-7318-4F9D-A7AF-0A87E8117460}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
       {
        "Id": "416403271",
        "Name": "Soundseed Air Woosh",
@@ -178,7 +186,14 @@
        {
         "Id": "129424093"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "2084516"
+        }
+       ]
+      }
      }
     ]
    },
@@ -296,7 +311,7 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{2E3990E7-21CF-08B5-068E-FB7BC47C13C2}",
+    "Hash": "{113FED9F-DCCD-D3A6-FAC2-21663B304566}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
@@ -345,9 +360,25 @@
        "GUID": "{83767CC5-69B5-4564-8311-4A333A1B8AF9}",
        "LibName": "SoundSeed Air Wind",
        "LibId": "7798786"
+      },
+      {
+       "Id": "768480562",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots_Other\\hoverboots_on_rail_loop\\Parametric EQ (Custom)",
+       "GUID": "{795F1578-DFEF-4A0F-995B-DC9BEE878FD0}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
       }
      ],
      "ShareSets": [
+      {
+       "Id": "2539557199",
+       "Name": "Treble",
+       "ObjectPath": "\\Effects\\Factory Effects\\Flanger\\Flanging\\Treble",
+       "GUID": "{FB516F18-AA49-4B92-BC11-FA23E8CC59B4}",
+       "LibName": "Wwise Flanger",
+       "LibId": "8192003"
+      },
       {
        "Id": "3604890626",
        "Name": "High_Pass_60Hz",
@@ -383,9 +414,15 @@
         },
         {
          "Id": "666289254"
+        },
+        {
+         "Id": "768480562"
         }
        ],
        "ShareSets": [
+        {
+         "Id": "2539557199"
+        },
         {
          "Id": "3604890626"
         }
@@ -645,7 +682,7 @@
     "Type": "User",
     "GUID": "{73E808A7-564E-44B8-BCF3-CDA908FACC1B}",
     "Language": "SFX",
-    "Hash": "{C14FF45E-A954-40FD-5C50-5B51344E20A7}",
+    "Hash": "{8118FDE1-3B11-2373-55C2-75FDD020FEE5}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\MasterSoundbank",
     "ShortName": "MasterSoundbank",
     "Path": "MasterSoundbank.bnk",
@@ -1315,18 +1352,6 @@
       "CachePath": "SFX/Music/Explo_Phase_05/Sky_Explo_Duduk 1_073B4D0C.wem"
      }
     ],
-    "Plugins": {
-     "ShareSets": [
-      {
-       "Id": "1008402193",
-       "Name": "Low_Pass_20KHz",
-       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
-       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
-       "LibName": "Wwise Parametric EQ",
-       "LibId": "6881283"
-      }
-     ]
-    },
     "Events": [
      {
       "Id": "3441789682",
@@ -1365,14 +1390,7 @@
          {
           "Id": "835908582"
          }
-        ],
-        "PluginRefs": {
-         "ShareSets": [
-          {
-           "Id": "1008402193"
-          }
-         ]
-        }
+        ]
        },
        {
         "SwitchValue": {
@@ -1818,7 +1836,7 @@
     "Type": "Event",
     "GUID": "{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}",
     "Language": "SFX",
-    "Hash": "{8E9B544A-CF17-5DFD-1416-0BF641510D7F}",
+    "Hash": "{DC212815-CCBF-348F-9EAF-929495A7A564}",
     "ObjectPath": "SX_player_shoot",
     "ShortName": "SX_player_shoot",
     "Path": "Event/SX_player_shoot.bnk",
@@ -2172,7 +2190,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{ACDE01EC-58C8-2952-6A17-5F1F1AF9908A}",
+    "Hash": "{E341D7BA-4EE3-96F4-2F93-FE5937AD8443}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -3197,7 +3215,7 @@
     "Type": "Event",
     "GUID": "{A070E3C3-67C1-4FFE-846E-631BD136D358}",
     "Language": "SFX",
-    "Hash": "{ABFF89CE-D538-3CA9-9FE1-231A21167A4C}",
+    "Hash": "{E76E69D9-8238-47FF-4FF1-2F0ED2A5D01E}",
     "ObjectPath": "SX_player_jump",
     "ShortName": "SX_player_jump",
     "Path": "Event/SX_player_jump.bnk",
@@ -3220,8 +3238,8 @@
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_jump",
       "GUID": "{A070E3C3-67C1-4FFE-846E-631BD136D358}",
       "DurationType": "OneShot",
-      "DurationMin": "0.2",
-      "DurationMax": "0.2",
+      "DurationMin": "0.13333334",
+      "DurationMax": "0.13333334",
       "PluginRefs": {
        "Custom": [
         {
@@ -3443,7 +3461,7 @@
     "Type": "Event",
     "GUID": "{18C2192F-4C95-4001-A9A0-979E3F100C3A}",
     "Language": "SFX",
-    "Hash": "{413B2A38-0C6B-7F67-6036-5C76840528FF}",
+    "Hash": "{E48EE4FE-1EB2-E742-5EFC-D40B5F33A356}",
     "ObjectPath": "SX_player_slide",
     "ShortName": "SX_player_slide",
     "Path": "Event/SX_player_slide.bnk",
@@ -3455,9 +3473,21 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\player_slide.wav",
       "Path": "Media/129424093.wem",
-      "CachePath": "SFX/Placeholders/player_slide_97A43206.wem"
+      "CachePath": "SFX/Placeholders/player_slide_4DD066AC.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "2084516",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_slide\\Parametric EQ (Custom)",
+       "GUID": "{777F4BD6-7318-4F9D-A7AF-0A87E8117460}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1882419246",
@@ -3469,7 +3499,14 @@
        {
         "Id": "129424093"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "2084516"
+        }
+       ]
+      }
      }
     ]
    },
@@ -3589,7 +3626,7 @@
     "Type": "Event",
     "GUID": "{F4227598-B79C-47C2-A22C-C305F4B1E5C2}",
     "Language": "SFX",
-    "Hash": "{ABE63D07-8043-26AE-D98E-97A10115A076}",
+    "Hash": "{E3D7F6F6-A6CB-DEE0-E10A-F824FF77568F}",
     "ObjectPath": "SX_player_dash",
     "ShortName": "SX_player_dash",
     "Path": "Event/SX_player_dash.bnk",
@@ -3874,7 +3911,7 @@
     "Type": "Event",
     "GUID": "{C6B5191E-27E7-4097-A049-ADF0776478D2}",
     "Language": "SFX",
-    "Hash": "{A4BE30A5-F9B9-4581-794A-E77D50991025}",
+    "Hash": "{88BEF98E-8EC3-E40D-9BAE-61CDD51C3C2D}",
     "ObjectPath": "SX_player_bumper",
     "ShortName": "SX_player_bumper",
     "Path": "Event/SX_player_bumper.bnk",
@@ -3886,7 +3923,7 @@
       "Location": "Loose",
       "ShortName": "SX_player_bumper.wav",
       "Path": "Media/382671654.wem",
-      "CachePath": "SFX/SX_player_bumper_755F56E2.wem"
+      "CachePath": "SFX/SX_player_bumper_19258E13.wem"
      }
     ],
     "Events": [
@@ -3896,8 +3933,8 @@
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_bumper",
       "GUID": "{C6B5191E-27E7-4097-A049-ADF0776478D2}",
       "DurationType": "OneShot",
-      "DurationMin": "1.1701875",
-      "DurationMax": "1.1701875",
+      "DurationMin": "0.622093",
+      "DurationMax": "0.7837881",
       "MediaRefs": [
        {
         "Id": "382671654"
@@ -3987,6 +4024,6 @@
     ]
    }
   ],
-  "FileHash": "{3F0B9890-D8AA-56D9-90B7-6E790A316FC0}"
+  "FileHash": "{494C3FCF-7621-B889-1766-5BD94C2C84F8}"
  }
 }
