@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1219048826" Type="Event" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" Language="SFX" Hash="{45CEB21B-BFEF-8793-FEF1-CF9CD5AE0181}">
+		<SoundBank Id="1219048826" Type="Event" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" Language="SFX" Hash="{41CD5D49-4F8A-CEC3-9236-22DC29040164}">
 			<ObjectPath>UI_start</ObjectPath>
 			<ShortName>UI_start</ShortName>
 			<Path>Event/UI_start.bnk</Path>
@@ -12,14 +12,24 @@
 					<CachePath>SFX/FX_wolf_start_755F56E2.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="397214180" Name="Pitch Shifter (Custom)" ObjectPath="\Actor-Mixer Hierarchy\UI\UI_MainMixer\FX_wolf_start\Pitch Shifter (Custom)" GUID="{82B901CF-4B51-47E9-948E-222173742D40}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+				</Custom>
+			</Plugins>
 			<Events>
-				<Event Id="1219048826" Name="UI_start" ObjectPath="\Events\UI\UI_start" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" DurationType="OneShot" DurationMin="8.749" DurationMax="8.749">
+				<Event Id="1219048826" Name="UI_start" ObjectPath="\Events\UI\UI_start" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" DurationType="OneShot" DurationMin="2.18725" DurationMax="2.18725">
 					<MediaRefs>
 						<MediaRef Id="273426957"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="397214180"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{693A6E0E-F403-276D-6025-F6CD4239F016}</FileHash>
+	<FileHash>{0BCE0949-2AF7-8731-C15A-A58675EB4C70}</FileHash>
 </SoundBanksInfo>

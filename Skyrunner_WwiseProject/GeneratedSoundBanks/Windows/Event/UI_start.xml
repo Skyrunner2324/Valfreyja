@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1219048826" Type="Event" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" Language="SFX" Hash="{45CEB21B-BFEF-8793-FEF1-CF9CD5AE0181}">
+		<SoundBank Id="1219048826" Type="Event" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" Language="SFX" Hash="{41CD5D49-4F8A-CEC3-9236-22DC29040164}">
 			<ObjectPath>UI_start</ObjectPath>
 			<ShortName>UI_start</ShortName>
 			<Path>Event/UI_start.bnk</Path>
@@ -12,14 +12,24 @@
 					<CachePath>SFX/FX_wolf_start_755F56E2.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="397214180" Name="Pitch Shifter (Custom)" ObjectPath="\Actor-Mixer Hierarchy\UI\UI_MainMixer\FX_wolf_start\Pitch Shifter (Custom)" GUID="{82B901CF-4B51-47E9-948E-222173742D40}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+				</Custom>
+			</Plugins>
 			<Events>
-				<Event Id="1219048826" Name="UI_start" ObjectPath="\Events\UI\UI_start" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" DurationType="OneShot" DurationMin="8.749" DurationMax="8.749">
+				<Event Id="1219048826" Name="UI_start" ObjectPath="\Events\UI\UI_start" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" DurationType="OneShot" DurationMin="2.18725" DurationMax="2.18725">
 					<MediaRefs>
 						<MediaRef Id="273426957"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="397214180"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{599FFB6A-5744-B2D6-4F06-D1EA24A69791}</FileHash>
+	<FileHash>{A347B87C-4A9E-CE5D-50ED-96EBD1F2EAEA}</FileHash>
 </SoundBanksInfo>

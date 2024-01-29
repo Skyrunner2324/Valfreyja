@@ -40,6 +40,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="ui_confirm" ID="{83223288-2583-499B-A9E0-16661378993D}" ShortID="671069577">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -106,9 +113,26 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="FX_wolf_start" ID="{5529D706-3D6D-4DAE-A86F-3F79AFC57DF5}" ShortID="329057283">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>2400</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Pitch Shifter (Custom)" ID="{82B901CF-4B51-47E9-948E-222173742D40}" ShortID="397214180" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+											<PropertyList>
+												<Property Name="Pitch" Type="Real32" Value="2400"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>

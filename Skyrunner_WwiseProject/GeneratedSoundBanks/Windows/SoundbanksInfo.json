@@ -14,11 +14,72 @@
   "DialogueEvents": [],
   "SoundBanks": [
    {
+    "Id": "184944533",
+    "Type": "Event",
+    "GUID": "{C3AE1EA4-2D7C-4A4B-833A-5928F7B86591}",
+    "Language": "SFX",
+    "Hash": "{2E7D1D9A-C15B-F2E6-7283-6928395C1878}",
+    "ObjectPath": "SX_player_melee",
+    "ShortName": "SX_player_melee",
+    "Path": "Event/SX_player_melee.bnk",
+    "Media": [
+     {
+      "Id": "438277429",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "player_weapon_melee01.wav",
+      "Path": "Media/438277429.wem",
+      "CachePath": "SFX/player_weapon_melee01_755F56E2.wem"
+     },
+     {
+      "Id": "904406094",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "player_weapon_melee02.wav",
+      "Path": "Media/904406094.wem",
+      "CachePath": "SFX/player_weapon_melee02_755F56E2.wem"
+     },
+     {
+      "Id": "988483919",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "player_weapon_melee03.wav",
+      "Path": "Media/988483919.wem",
+      "CachePath": "SFX/player_weapon_melee03_755F56E2.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "184944533",
+      "Name": "SX_player_melee",
+      "ObjectPath": "\\Events\\Player\\Weapon\\SX_player_melee",
+      "GUID": "{C3AE1EA4-2D7C-4A4B-833A-5928F7B86591}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.88102794",
+      "DurationMax": "1.0135972",
+      "MediaRefs": [
+       {
+        "Id": "438277429"
+       },
+       {
+        "Id": "904406094"
+       },
+       {
+        "Id": "988483919"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "216067002",
     "Type": "Event",
     "GUID": "{FC9252BB-4746-4A62-AB71-565BBB37F6D2}",
     "Language": "SFX",
-    "Hash": "{2E36B633-459B-D61A-6EF3-0BB95C98F596}",
+    "Hash": "{B541D657-F990-6410-8F22-D900D1698DF9}",
     "ObjectPath": "UI_confirm",
     "ShortName": "UI_confirm",
     "Path": "Event/UI_confirm.bnk",
@@ -198,7 +259,7 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{59B3D729-577B-2D38-27C1-9FEF8EC3E601}",
+    "Hash": "{2E3990E7-21CF-08B5-068E-FB7BC47C13C2}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
@@ -248,6 +309,16 @@
        "LibName": "SoundSeed Air Wind",
        "LibId": "7798786"
       }
+     ],
+     "ShareSets": [
+      {
+       "Id": "3604890626",
+       "Name": "High_Pass_60Hz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\High Pass Filters\\High_Pass_60Hz",
+       "GUID": "{F9627628-0B10-4272-BC30-D4C20423CB38}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
      ]
     },
     "Events": [
@@ -275,6 +346,11 @@
         },
         {
          "Id": "666289254"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "3604890626"
         }
        ]
       }
@@ -419,7 +495,7 @@
     "Type": "Event",
     "GUID": "{C2635664-3DF8-496D-BA41-22C25299ACE8}",
     "Language": "SFX",
-    "Hash": "{303360DA-5C8A-9758-8F7D-1F72D78EBE0C}",
+    "Hash": "{38962489-21C9-C54D-B75E-C56AB02CB0C7}",
     "ObjectPath": "SX_player_weapon_impact",
     "ShortName": "SX_player_weapon_impact",
     "Path": "Event/SX_player_weapon_impact.bnk",
@@ -431,7 +507,7 @@
       "Location": "Loose",
       "ShortName": "PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav",
       "Path": "Media/991022554.wem",
-      "CachePath": "SFX/PM_BBI_Bullet_Impact_Hit_Body_Flesh_25_C76A9090.wem"
+      "CachePath": "SFX/PM_BBI_Bullet_Impact_Hit_Body_Flesh_25_0F3DA3A6.wem"
      }
     ],
     "Events": [
@@ -441,8 +517,8 @@
       "ObjectPath": "\\Events\\Player\\Weapon\\SX_player_weapon_impact",
       "GUID": "{C2635664-3DF8-496D-BA41-22C25299ACE8}",
       "DurationType": "OneShot",
-      "DurationMin": "0.19669332",
-      "DurationMax": "0.42016268",
+      "DurationMin": "0.16211832",
+      "DurationMax": "0.34630594",
       "MediaRefs": [
        {
         "Id": "991022554"
@@ -456,7 +532,7 @@
     "Type": "User",
     "GUID": "{73E808A7-564E-44B8-BCF3-CDA908FACC1B}",
     "Language": "SFX",
-    "Hash": "{89477685-672A-7DEF-7518-A8E54FF0DAA6}",
+    "Hash": "{C14FF45E-A954-40FD-5C50-5B51344E20A7}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\MasterSoundbank",
     "ShortName": "MasterSoundbank",
     "Path": "MasterSoundbank.bnk",
@@ -1629,7 +1705,7 @@
     "Type": "Event",
     "GUID": "{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}",
     "Language": "SFX",
-    "Hash": "{49BF6854-B0DD-B620-494D-D88E9666AC83}",
+    "Hash": "{8E9B544A-CF17-5DFD-1416-0BF641510D7F}",
     "ObjectPath": "SX_player_shoot",
     "ShortName": "SX_player_shoot",
     "Path": "Event/SX_player_shoot.bnk",
@@ -1641,7 +1717,7 @@
       "Location": "Loose",
       "ShortName": "Player_Weapon\\04_Loop.wav",
       "Path": "Media/115262851.wem",
-      "CachePath": "SFX/Player_Weapon/04_Loop_755F56E2.wem"
+      "CachePath": "SFX/Player_Weapon/04_Loop_5ACE6FDA.wem"
      },
      {
       "Id": "352751061",
@@ -1650,7 +1726,7 @@
       "Location": "Loose",
       "ShortName": "Player_Weapon\\05_Loop.wav",
       "Path": "Media/352751061.wem",
-      "CachePath": "SFX/Player_Weapon/05_Loop_755F56E2.wem"
+      "CachePath": "SFX/Player_Weapon/05_Loop_1402CD13.wem"
      },
      {
       "Id": "461432451",
@@ -1659,7 +1735,7 @@
       "Location": "Loose",
       "ShortName": "Player_Weapon\\player_weapon_shoot_smg_mech_02.wav",
       "Path": "Media/461432451.wem",
-      "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_mech_02_755F56E2.wem"
+      "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_mech_02_67424882.wem"
      },
      {
       "Id": "550411134",
@@ -1668,7 +1744,7 @@
       "Location": "Loose",
       "ShortName": "Player_Weapon\\02_Loop.wav",
       "Path": "Media/550411134.wem",
-      "CachePath": "SFX/Player_Weapon/02_Loop_755F56E2.wem"
+      "CachePath": "SFX/Player_Weapon/02_Loop_125ADD46.wem"
      },
      {
       "Id": "631171215",
@@ -1677,7 +1753,7 @@
       "Location": "Loose",
       "ShortName": "Player_Weapon\\player_weapon_shoot_smg_mech_03.wav",
       "Path": "Media/631171215.wem",
-      "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_mech_03_755F56E2.wem"
+      "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_mech_03_DB00D05A.wem"
      },
      {
       "Id": "758486105",
@@ -1686,7 +1762,7 @@
       "Location": "Loose",
       "ShortName": "Player_Weapon\\player_weapon_shoot_smg_tail_far.wav",
       "Path": "Media/758486105.wem",
-      "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_tail_far_755F56E2.wem"
+      "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_tail_far_C6D86DB4.wem"
      },
      {
       "Id": "867861264",
@@ -1695,7 +1771,7 @@
       "Location": "Loose",
       "ShortName": "Player_Weapon\\03_Loop.wav",
       "Path": "Media/867861264.wem",
-      "CachePath": "SFX/Player_Weapon/03_Loop_755F56E2.wem"
+      "CachePath": "SFX/Player_Weapon/03_Loop_879DBA9A.wem"
      },
      {
       "Id": "867880719",
@@ -1704,7 +1780,7 @@
       "Location": "Loose",
       "ShortName": "Player_Weapon\\player_weapon_shoot_smg_close_01.wav",
       "Path": "Media/867880719.wem",
-      "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_close_01_755F56E2.wem"
+      "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_close_01_0C1979B2.wem"
      },
      {
       "Id": "942643326",
@@ -1713,7 +1789,7 @@
       "Location": "Loose",
       "ShortName": "Player_Weapon\\player_weapon_shoot_smg_mech_01.wav",
       "Path": "Media/942643326.wem",
-      "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_mech_01_755F56E2.wem"
+      "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_mech_01_67424882.wem"
      },
      {
       "Id": "967984016",
@@ -1722,7 +1798,7 @@
       "Location": "Loose",
       "ShortName": "Player_Weapon\\player_weapon_shoot_smg_sub_01.wav",
       "Path": "Media/967984016.wem",
-      "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_sub_01_755F56E2.wem"
+      "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_sub_01_95162B9D.wem"
      }
     ],
     "Events": [
@@ -1733,7 +1809,7 @@
       "GUID": "{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}",
       "DurationType": "OneShot",
       "DurationMin": "2.2916667",
-      "DurationMax": "2.572309",
+      "DurationMax": "2.2916667",
       "MediaRefs": [
        {
         "Id": "115262851"
@@ -1782,7 +1858,7 @@
     "Type": "Event",
     "GUID": "{2278516D-BA2F-4D5D-93F6-5353DF4E1405}",
     "Language": "SFX",
-    "Hash": "{67B48F68-2B22-8A10-83F0-754E3F361404}",
+    "Hash": "{722C028D-2547-B98D-BECA-770141A10B95}",
     "ObjectPath": "SX_player_hit",
     "ShortName": "SX_player_hit",
     "Path": "Event/SX_player_hit.bnk",
@@ -1816,8 +1892,8 @@
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_hit",
       "GUID": "{2278516D-BA2F-4D5D-93F6-5353DF4E1405}",
       "DurationType": "OneShot",
-      "DurationMin": "0.12600844",
-      "DurationMax": "0.16626914",
+      "DurationMin": "0.12970078",
+      "DurationMax": "0.1711412",
       "MediaRefs": [
        {
         "Id": "525622801"
@@ -1846,7 +1922,7 @@
     "Type": "Event",
     "GUID": "{59E0340B-B7CC-40AB-A104-B35788A5DFFB}",
     "Language": "SFX",
-    "Hash": "{45CEB21B-BFEF-8793-FEF1-CF9CD5AE0181}",
+    "Hash": "{41CD5D49-4F8A-CEC3-9236-22DC29040164}",
     "ObjectPath": "UI_start",
     "ShortName": "UI_start",
     "Path": "Event/UI_start.bnk",
@@ -1861,6 +1937,18 @@
       "CachePath": "SFX/FX_wolf_start_755F56E2.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "397214180",
+       "Name": "Pitch Shifter (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\UI\\UI_MainMixer\\FX_wolf_start\\Pitch Shifter (Custom)",
+       "GUID": "{82B901CF-4B51-47E9-948E-222173742D40}",
+       "LibName": "Wwise Pitch Shifter",
+       "LibId": "8912899"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1219048826",
@@ -1868,13 +1956,20 @@
       "ObjectPath": "\\Events\\UI\\UI_start",
       "GUID": "{59E0340B-B7CC-40AB-A104-B35788A5DFFB}",
       "DurationType": "OneShot",
-      "DurationMin": "8.749",
-      "DurationMax": "8.749",
+      "DurationMin": "2.18725",
+      "DurationMax": "2.18725",
       "MediaRefs": [
        {
         "Id": "273426957"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "397214180"
+        }
+       ]
+      }
      }
     ]
    },
@@ -1964,7 +2059,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{232FB213-A1EC-51ED-41FC-9359CC7FEEB6}",
+    "Hash": "{C2419E4B-F01A-C43E-4F27-155F1B6ED87D}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -3745,6 +3840,6 @@
     ]
    }
   ],
-  "FileHash": "{9FE1F8B2-880D-D7C0-D698-4C9BA52CCAD0}"
+  "FileHash": "{B9E274A4-2C64-7BC7-C3B9-97959761F162}"
  }
 }
