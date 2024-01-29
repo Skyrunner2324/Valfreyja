@@ -10,11 +10,20 @@
     "Type": "Event",
     "GUID": "{095480AE-B62A-4DB8-80EC-3AF54A959CDA}",
     "Language": "SFX",
-    "Hash": "{B9A801F8-22B9-B860-2DAF-304B448732BA}",
+    "Hash": "{C126829F-EECE-9238-B28B-3A254C4EC920}",
     "ObjectPath": "SX_player_death_notifier",
     "ShortName": "SX_player_death_notifier",
     "Path": "Event/SX_player_death_notifier.bnk",
     "Media": [
+     {
+      "Id": "325108499",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_death_feedback.wav",
+      "Path": "Media/325108499.wem",
+      "CachePath": "SFX/enemy_death_feedback_755F56E2.wem"
+     },
      {
       "Id": "525589573",
       "Language": "SFX",
@@ -22,28 +31,64 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav",
       "Path": "Media/525589573.wem",
-      "CachePath": "SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_D10598FD.wem"
+      "CachePath": "SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_CA890211.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "801230911",
+       "Name": "Guitar Distortion (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\NPC\\NPC_Feedback_MainMixer\\enemy_death_feedback\\enemy_death_feedback02\\Guitar Distortion (Custom)",
+       "GUID": "{3B85D429-0D3E-448B-8436-7DECF103D3BA}",
+       "LibName": "Wwise Guitar Distortion",
+       "LibId": "8257539"
+      }
+     ],
+     "ShareSets": [
+      {
+       "Id": "1674078407",
+       "Name": "Chorus_Like",
+       "ObjectPath": "\\Effects\\Factory Effects\\Flanger\\Chorus\\Chorus_Like",
+       "GUID": "{EEE0CC86-8CA5-4DBC-A6B7-568FCB26F290}",
+       "LibName": "Wwise Flanger",
+       "LibId": "8192003"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "618588564",
       "Name": "SX_player_death_notifier",
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_death_notifier",
       "GUID": "{095480AE-B62A-4DB8-80EC-3AF54A959CDA}",
-      "MaxAttenuation": "10000",
       "DurationType": "OneShot",
-      "DurationMin": "0.86619776",
-      "DurationMax": "1.062725",
+      "DurationMin": "1.3805",
+      "DurationMax": "1.3805",
       "MediaRefs": [
+       {
+        "Id": "325108499"
+       },
        {
         "Id": "525589573"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "801230911"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "1674078407"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{D6B645D4-72D0-B068-120F-F863D1464889}"
+  "FileHash": "{722DA92D-2A60-CFEC-7FDB-71FA7BB4DEBB}"
  }
 }

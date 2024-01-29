@@ -80,200 +80,46 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<RandomSequenceContainer Name="enemy_feedback_deathnotifier" ID="{9EEE92FB-6C4B-4E83-BB4E-1E74DAEBD9B0}" ShortID="950349422">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="2"/>
-								<Property Name="OverrideOutput" Type="bool" Value="True"/>
-								<Property Name="OverridePositioning" Type="bool" Value="True"/>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{E2AAA4D7-2975-472A-9E1D-2BFF1596CF4F}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="177"/>
-													<Property Name="Min" Type="Real64" Value="-177"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-19</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
+						<BlendContainer Name="enemy_death_feedback" ID="{253E341C-3C43-4B59-AE7C-F7153B77943C}" ShortID="540990090">
 							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
-								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="ENV Other" ID="{28DD99C7-6452-4B40-9D87-6E721A203EF0}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29" ID="{D0F4C9D6-3813-420E-AF31-235ACDC4A36B}" ShortID="1057191548">
+								<Sound Name="enemy_death_feedback02" ID="{D0F4C9D6-3813-420E-AF31-235ACDC4A36B}" ShortID="1057191548">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
-										<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<Custom>
-												<Attenuation Name="Attenuation (Custom)" ID="{245495F0-12D4-4700-8373-9386B9834A42}" ShortID="559940279">
-													<PropertyList>
-														<Property Name="RadiusMax" Type="Real64" Value="30000"/>
-													</PropertyList>
-													<CurveUsageInfoList>
-														<VolumeDryUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																<Curve Name="VolumeDry" ID="{A66F403B-C075-4941-AA36-D24AFA1547EE}">
-																	<PropertyList>
-																		<Property Name="Flags" Type="int32" Value="3"/>
-																	</PropertyList>
-																	<PointList>
-																		<Point>
-																			<XPos>0</XPos>
-																			<YPos>0</YPos>
-																			<Flags>5</Flags>
-																		</Point>
-																		<Point>
-																			<XPos>12446.48318</XPos>
-																			<YPos>-10.02665</YPos>
-																			<Flags>0</Flags>
-																		</Point>
-																		<Point>
-																			<XPos>30000</XPos>
-																			<YPos>-200</YPos>
-																			<Flags>37</Flags>
-																		</Point>
-																	</PointList>
-																</Curve>
-															</CurveUsageInfo>
-														</VolumeDryUsage>
-														<VolumeWetGameUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-														</VolumeWetGameUsage>
-														<VolumeWetUserUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-														</VolumeWetUserUsage>
-														<LowPassFilterUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																<Curve Name="LowPassFilter" ID="{F24412AA-9750-41A0-8DB6-EFAC14B02FFF}">
-																	<PropertyList>
-																		<Property Name="Flags" Type="int32" Value="65537"/>
-																	</PropertyList>
-																	<PointList>
-																		<Point>
-																			<XPos>0</XPos>
-																			<YPos>0</YPos>
-																			<Flags>5</Flags>
-																		</Point>
-																		<Point>
-																			<XPos>30000</XPos>
-																			<YPos>57</YPos>
-																			<Flags>37</Flags>
-																		</Point>
-																	</PointList>
-																</Curve>
-															</CurveUsageInfo>
-														</LowPassFilterUsage>
-														<HighPassFilterUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																<Curve Name="HighPassFilter" ID="{BF7FCC4E-BBEA-43AA-9B62-CCA7B5515F92}">
-																	<PropertyList>
-																		<Property Name="Flags" Type="int32" Value="65537"/>
-																	</PropertyList>
-																	<PointList>
-																		<Point>
-																			<XPos>0</XPos>
-																			<YPos>0</YPos>
-																			<Flags>5</Flags>
-																		</Point>
-																		<Point>
-																			<XPos>30000</XPos>
-																			<YPos>35</YPos>
-																			<Flags>37</Flags>
-																		</Point>
-																	</PointList>
-																</Curve>
-															</CurveUsageInfo>
-														</HighPassFilterUsage>
-														<SpreadUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																<Curve Name="Spread" ID="{75A3FDB9-E286-4AE5-AB5B-9199C50C6D71}">
-																	<PropertyList>
-																		<Property Name="Flags" Type="int32" Value="1"/>
-																	</PropertyList>
-																	<PointList>
-																		<Point>
-																			<XPos>0</XPos>
-																			<YPos>100</YPos>
-																			<Flags>5</Flags>
-																		</Point>
-																		<Point>
-																			<XPos>5045.87156</XPos>
-																			<YPos>20.26625</YPos>
-																			<Flags>0</Flags>
-																		</Point>
-																		<Point>
-																			<XPos>30000</XPos>
-																			<YPos>0</YPos>
-																			<Flags>37</Flags>
-																		</Point>
-																	</PointList>
-																</Curve>
-															</CurveUsageInfo>
-														</SpreadUsage>
-														<FocusUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-														</FocusUsage>
-														<ObstructionVolumeUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</ObstructionVolumeUsage>
-														<ObstructionLPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</ObstructionLPFUsage>
-														<ObstructionHPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</ObstructionHPFUsage>
-														<OcclusionVolumeUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</OcclusionVolumeUsage>
-														<OcclusionLPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</OcclusionLPFUsage>
-														<OcclusionHPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</OcclusionHPFUsage>
-														<DiffractionVolumeUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</DiffractionVolumeUsage>
-														<DiffractionLPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</DiffractionLPFUsage>
-														<DiffractionHPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</DiffractionHPFUsage>
-														<TransmissionVolumeUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</TransmissionVolumeUsage>
-														<TransmissionLPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</TransmissionLPFUsage>
-														<TransmissionHPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</TransmissionHPFUsage>
-													</CurveUsageInfoList>
-												</Attenuation>
-											</Custom>
+											<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
+											<ObjectRef Name="Chorus_Like" ID="{EEE0CC86-8CA5-4DBC-A6B7-568FCB26F290}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+										<Reference Name="Effect1">
+											<Custom>
+												<Effect Name="Guitar Distortion (Custom)" ID="{3B85D429-0D3E-448B-8436-7DECF103D3BA}" ShortID="801230911" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+													<PropertyList>
+														<Property Name="DistortionDrive" Type="Real32" Value="35"/>
+														<Property Name="DistortionType" Type="int32" Value="4"/>
+														<Property Name="Rectification" Type="Real32" Value="100"/>
+													</PropertyList>
+												</Effect>
+											</Custom>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="ENV Other" ID="{28DD99C7-6452-4B40-9D87-6E721A203EF0}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
@@ -282,6 +128,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29" ID="{264AE454-7CF8-40A9-92D7-A1B2B3544AD4}">
 											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.95944250871081"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="2.62247619047619"/>
 												<Property Name="TrimEnd" Type="Real64" Value="3.581918699187"/>
@@ -293,15 +140,34 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
-									<PositioningInfo>
-										<Position Name="" ID="{F222B0C3-DB17-4AE0-9832-EC1B05E6C960}"/>
-									</PositioningInfo>
 									<ActiveSourceList>
 										<ActiveSource Name="Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29" ID="{264AE454-7CF8-40A9-92D7-A1B2B3544AD4}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="enemy_death_feedback01" ID="{B161770F-8AA1-4644-AE83-9FC2C98794D9}" ShortID="450026176">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="enemy_death_feedback" ID="{583A1A8A-18F4-4803-8AD1-3E19CD21EB35}">
+											<Language>SFX</Language>
+											<AudioFile>enemy_death_feedback.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="325108499"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="enemy_death_feedback" ID="{583A1A8A-18F4-4803-8AD1-3E19CD21EB35}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-						</RandomSequenceContainer>
+						</BlendContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

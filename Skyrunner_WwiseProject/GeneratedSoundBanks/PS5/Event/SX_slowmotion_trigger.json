@@ -10,11 +10,20 @@
     "Type": "Event",
     "GUID": "{2CA54BC4-90CA-4B42-9465-B41131C52A7C}",
     "Language": "SFX",
-    "Hash": "{437E21FE-1E8A-8AC1-7605-3A37E8CB18FD}",
+    "Hash": "{5B8DF8B5-C0C2-1D41-0BC7-22EFCA2CFAA5}",
     "ObjectPath": "SX_slowmotion_trigger",
     "ShortName": "SX_slowmotion_trigger",
     "Path": "Event/SX_slowmotion_trigger.bnk",
     "Media": [
+     {
+      "Id": "511933506",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "player_feedback_slowmotion02.wav",
+      "Path": "Media/511933506.wem",
+      "CachePath": "SFX/player_feedback_slowmotion02_755F56E2.wem"
+     },
      {
       "Id": "897939972",
       "Language": "SFX",
@@ -22,9 +31,21 @@
       "Location": "Loose",
       "ShortName": "Player_Feedback\\player_feedback_slowmotion.wav",
       "Path": "Media/897939972.wem",
-      "CachePath": "SFX/Player_Feedback/player_feedback_slowmotion_755F56E2.wem"
+      "CachePath": "SFX/Player_Feedback/player_feedback_slowmotion_7A5FB305.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "673969004",
+       "Name": "Tremolo (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerFeedback_MainMixer\\player_feedback_slowmotion_triggered\\player_feedback_slowmotion01\\Tremolo (Custom)",
+       "GUID": "{E1ED6827-6BBC-4442-8C14-B2080BCF7155}",
+       "LibName": "Wwise Tremolo",
+       "LibId": "8585219"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "911678423",
@@ -32,17 +53,27 @@
       "ObjectPath": "\\Events\\Slowmotion\\SX_slowmotion_trigger",
       "GUID": "{2CA54BC4-90CA-4B42-9465-B41131C52A7C}",
       "DurationType": "OneShot",
-      "DurationMin": "13.808929",
-      "DurationMax": "15.5",
+      "DurationMin": "1.8252473",
+      "DurationMax": "15.144958",
       "MediaRefs": [
+       {
+        "Id": "511933506"
+       },
        {
         "Id": "897939972"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "673969004"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{3FD6EB00-B537-2D44-7F62-11202BE264C3}"
+  "FileHash": "{0713D3F7-004E-D630-AC8E-99AAB0BF2AA8}"
  }
 }

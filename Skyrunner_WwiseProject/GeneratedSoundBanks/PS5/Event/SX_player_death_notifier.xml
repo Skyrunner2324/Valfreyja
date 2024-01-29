@@ -1,25 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="618588564" Type="Event" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" Language="SFX" Hash="{B9A801F8-22B9-B860-2DAF-304B448732BA}">
+		<SoundBank Id="618588564" Type="Event" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" Language="SFX" Hash="{C126829F-EECE-9238-B28B-3A254C4EC920}">
 			<ObjectPath>SX_player_death_notifier</ObjectPath>
 			<ShortName>SX_player_death_notifier</ShortName>
 			<Path>Event/SX_player_death_notifier.bnk</Path>
 			<Media>
+				<File Id="325108499" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>enemy_death_feedback.wav</ShortName>
+					<Path>Media/325108499.wem</Path>
+					<CachePath>SFX/enemy_death_feedback_755F56E2.wem</CachePath>
+				</File>
 				<File Id="525589573" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav</ShortName>
 					<Path>Media/525589573.wem</Path>
-					<CachePath>SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_D10598FD.wem</CachePath>
+					<CachePath>SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_CA890211.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="801230911" Name="Guitar Distortion (Custom)" ObjectPath="\Actor-Mixer Hierarchy\NPC\NPC_Feedback_MainMixer\enemy_death_feedback\enemy_death_feedback02\Guitar Distortion (Custom)" GUID="{3B85D429-0D3E-448B-8436-7DECF103D3BA}" LibName="Wwise Guitar Distortion" LibId="8257539"/>
+				</Custom>
+				<ShareSets>
+					<Plugin Id="1674078407" Name="Chorus_Like" ObjectPath="\Effects\Factory Effects\Flanger\Chorus\Chorus_Like" GUID="{EEE0CC86-8CA5-4DBC-A6B7-568FCB26F290}" LibName="Wwise Flanger" LibId="8192003"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
-				<Event Id="618588564" Name="SX_player_death_notifier" ObjectPath="\Events\Player\Feedback\SX_player_death_notifier" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" MaxAttenuation="10000" DurationType="OneShot" DurationMin="0.86619776" DurationMax="1.062725">
+				<Event Id="618588564" Name="SX_player_death_notifier" ObjectPath="\Events\Player\Feedback\SX_player_death_notifier" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" DurationType="OneShot" DurationMin="1.3805" DurationMax="1.3805">
 					<MediaRefs>
+						<MediaRef Id="325108499"/>
 						<MediaRef Id="525589573"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="801230911"/>
+						</Custom>
+						<ShareSets>
+							<PluginRef Id="1674078407"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{886C0309-D00C-4991-441D-1818C083F4C5}</FileHash>
+	<FileHash>{3DD6DE2B-1061-A59C-861D-844433AC9E45}</FileHash>
 </SoundBanksInfo>

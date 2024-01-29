@@ -183,6 +183,43 @@
     ]
    },
    {
+    "Id": "387312834",
+    "Type": "Event",
+    "GUID": "{12BCF388-3B1D-4636-873A-0653AB150C1F}",
+    "Language": "SFX",
+    "Hash": "{4B4DC192-24D4-B089-E951-171A8938A9A9}",
+    "ObjectPath": "SX_player_shield_regen",
+    "ShortName": "SX_player_shield_regen",
+    "Path": "Event/SX_player_shield_regen.bnk",
+    "Media": [
+     {
+      "Id": "328453384",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SX_player_shield_regen.wav",
+      "Path": "Media/328453384.wem",
+      "CachePath": "SFX/SX_player_shield_regen_755F56E2.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "387312834",
+      "Name": "SX_player_shield_regen",
+      "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_shield_regen",
+      "GUID": "{12BCF388-3B1D-4636-873A-0653AB150C1F}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.5386667",
+      "DurationMax": "2.5386667",
+      "MediaRefs": [
+       {
+        "Id": "328453384"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "423476228",
     "Type": "Event",
     "GUID": "{85FE7A46-F893-42AA-8787-F5597C4AF630}",
@@ -420,11 +457,20 @@
     "Type": "Event",
     "GUID": "{095480AE-B62A-4DB8-80EC-3AF54A959CDA}",
     "Language": "SFX",
-    "Hash": "{B9A801F8-22B9-B860-2DAF-304B448732BA}",
+    "Hash": "{C126829F-EECE-9238-B28B-3A254C4EC920}",
     "ObjectPath": "SX_player_death_notifier",
     "ShortName": "SX_player_death_notifier",
     "Path": "Event/SX_player_death_notifier.bnk",
     "Media": [
+     {
+      "Id": "325108499",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "enemy_death_feedback.wav",
+      "Path": "Media/325108499.wem",
+      "CachePath": "SFX/enemy_death_feedback_755F56E2.wem"
+     },
      {
       "Id": "525589573",
       "Language": "SFX",
@@ -432,24 +478,60 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav",
       "Path": "Media/525589573.wem",
-      "CachePath": "SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_D10598FD.wem"
+      "CachePath": "SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_CA890211.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "801230911",
+       "Name": "Guitar Distortion (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\NPC\\NPC_Feedback_MainMixer\\enemy_death_feedback\\enemy_death_feedback02\\Guitar Distortion (Custom)",
+       "GUID": "{3B85D429-0D3E-448B-8436-7DECF103D3BA}",
+       "LibName": "Wwise Guitar Distortion",
+       "LibId": "8257539"
+      }
+     ],
+     "ShareSets": [
+      {
+       "Id": "1674078407",
+       "Name": "Chorus_Like",
+       "ObjectPath": "\\Effects\\Factory Effects\\Flanger\\Chorus\\Chorus_Like",
+       "GUID": "{EEE0CC86-8CA5-4DBC-A6B7-568FCB26F290}",
+       "LibName": "Wwise Flanger",
+       "LibId": "8192003"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "618588564",
       "Name": "SX_player_death_notifier",
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_death_notifier",
       "GUID": "{095480AE-B62A-4DB8-80EC-3AF54A959CDA}",
-      "MaxAttenuation": "10000",
       "DurationType": "OneShot",
-      "DurationMin": "0.86619776",
-      "DurationMax": "1.062725",
+      "DurationMin": "1.3805",
+      "DurationMax": "1.3805",
       "MediaRefs": [
+       {
+        "Id": "325108499"
+       },
        {
         "Id": "525589573"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "801230911"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "1674078407"
+        }
+       ]
+      }
      }
     ]
    },
@@ -458,11 +540,20 @@
     "Type": "Event",
     "GUID": "{2CA54BC4-90CA-4B42-9465-B41131C52A7C}",
     "Language": "SFX",
-    "Hash": "{437E21FE-1E8A-8AC1-7605-3A37E8CB18FD}",
+    "Hash": "{5B8DF8B5-C0C2-1D41-0BC7-22EFCA2CFAA5}",
     "ObjectPath": "SX_slowmotion_trigger",
     "ShortName": "SX_slowmotion_trigger",
     "Path": "Event/SX_slowmotion_trigger.bnk",
     "Media": [
+     {
+      "Id": "511933506",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "player_feedback_slowmotion02.wav",
+      "Path": "Media/511933506.wem",
+      "CachePath": "SFX/player_feedback_slowmotion02_755F56E2.wem"
+     },
      {
       "Id": "897939972",
       "Language": "SFX",
@@ -470,9 +561,21 @@
       "Location": "Loose",
       "ShortName": "Player_Feedback\\player_feedback_slowmotion.wav",
       "Path": "Media/897939972.wem",
-      "CachePath": "SFX/Player_Feedback/player_feedback_slowmotion_755F56E2.wem"
+      "CachePath": "SFX/Player_Feedback/player_feedback_slowmotion_7A5FB305.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "673969004",
+       "Name": "Tremolo (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerFeedback_MainMixer\\player_feedback_slowmotion_triggered\\player_feedback_slowmotion01\\Tremolo (Custom)",
+       "GUID": "{E1ED6827-6BBC-4442-8C14-B2080BCF7155}",
+       "LibName": "Wwise Tremolo",
+       "LibId": "8585219"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "911678423",
@@ -480,13 +583,23 @@
       "ObjectPath": "\\Events\\Slowmotion\\SX_slowmotion_trigger",
       "GUID": "{2CA54BC4-90CA-4B42-9465-B41131C52A7C}",
       "DurationType": "OneShot",
-      "DurationMin": "13.808929",
-      "DurationMax": "15.5",
+      "DurationMin": "1.8252473",
+      "DurationMax": "15.144958",
       "MediaRefs": [
+       {
+        "Id": "511933506"
+       },
        {
         "Id": "897939972"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "673969004"
+        }
+       ]
+      }
      }
     ]
    },
@@ -1858,7 +1971,7 @@
     "Type": "Event",
     "GUID": "{2278516D-BA2F-4D5D-93F6-5353DF4E1405}",
     "Language": "SFX",
-    "Hash": "{722C028D-2547-B98D-BECA-770141A10B95}",
+    "Hash": "{DFA0AD9B-2E48-C252-5E8F-055BC71B93C0}",
     "ObjectPath": "SX_player_hit",
     "ShortName": "SX_player_hit",
     "Path": "Event/SX_player_hit.bnk",
@@ -1892,8 +2005,8 @@
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_hit",
       "GUID": "{2278516D-BA2F-4D5D-93F6-5353DF4E1405}",
       "DurationType": "OneShot",
-      "DurationMin": "0.12970078",
-      "DurationMax": "0.1711412",
+      "DurationMin": "0.13045213",
+      "DurationMax": "0.17213261",
       "MediaRefs": [
        {
         "Id": "525622801"
@@ -2059,7 +2172,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{E3A16E77-546C-EB37-985D-EBB23012EDF8}",
+    "Hash": "{ACDE01EC-58C8-2952-6A17-5F1F1AF9908A}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -3646,6 +3759,43 @@
     ]
    },
    {
+    "Id": "2640457287",
+    "Type": "Event",
+    "GUID": "{E6BD66A9-980B-41F5-8391-C0CDA93F3275}",
+    "Language": "SFX",
+    "Hash": "{AF3D25EE-78CF-4EAB-3E6E-656F50AE5DFE}",
+    "ObjectPath": "UI_wave_clear_feedback",
+    "ShortName": "UI_wave_clear_feedback",
+    "Path": "Event/UI_wave_clear_feedback.bnk",
+    "Media": [
+     {
+      "Id": "644027202",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ui_wave_clear_feedback.wav",
+      "Path": "Media/644027202.wem",
+      "CachePath": "SFX/ui_wave_clear_feedback_755F56E2.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2640457287",
+      "Name": "UI_wave_clear_feedback",
+      "ObjectPath": "\\Events\\UI\\UI_wave_clear_feedback",
+      "GUID": "{E6BD66A9-980B-41F5-8391-C0CDA93F3275}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.3349792",
+      "DurationMax": "1.3349792",
+      "MediaRefs": [
+       {
+        "Id": "644027202"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "2644790697",
     "Type": "Event",
     "GUID": "{528674B7-E690-4AD6-8217-32726F835B11}",
@@ -3724,22 +3874,21 @@
     "Type": "Event",
     "GUID": "{C6B5191E-27E7-4097-A049-ADF0776478D2}",
     "Language": "SFX",
-    "Hash": "{76B4C6C1-AA83-35A7-ECD6-FE87F3BDFA20}",
+    "Hash": "{A4BE30A5-F9B9-4581-794A-E77D50991025}",
     "ObjectPath": "SX_player_bumper",
     "ShortName": "SX_player_bumper",
     "Path": "Event/SX_player_bumper.bnk",
-    "Plugins": {
-     "Custom": [
-      {
-       "Id": "1010974337",
-       "Name": "Soundseed Air Woosh",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_jump\\Soundseed Air Woosh",
-       "GUID": "{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}",
-       "LibName": "SoundSeed Air Woosh",
-       "LibId": "7864322"
-      }
-     ]
-    },
+    "Media": [
+     {
+      "Id": "382671654",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SX_player_bumper.wav",
+      "Path": "Media/382671654.wem",
+      "CachePath": "SFX/SX_player_bumper_755F56E2.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "3467451382",
@@ -3747,15 +3896,13 @@
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_bumper",
       "GUID": "{C6B5191E-27E7-4097-A049-ADF0776478D2}",
       "DurationType": "OneShot",
-      "DurationMin": "0.2",
-      "DurationMax": "0.2",
-      "PluginRefs": {
-       "Custom": [
-        {
-         "Id": "1010974337"
-        }
-       ]
-      }
+      "DurationMin": "1.1701875",
+      "DurationMax": "1.1701875",
+      "MediaRefs": [
+       {
+        "Id": "382671654"
+       }
+      ]
      }
     ]
    },
@@ -3840,6 +3987,6 @@
     ]
    }
   ],
-  "FileHash": "{D4588697-9EAD-9135-D4F4-051284A5B183}"
+  "FileHash": "{966CC9BF-5885-F372-AA4F-A8175A498612}"
  }
 }

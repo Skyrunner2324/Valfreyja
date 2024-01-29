@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="911678423" Type="Event" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" Language="SFX" Hash="{437E21FE-1E8A-8AC1-7605-3A37E8CB18FD}">
+		<SoundBank Id="911678423" Type="Event" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" Language="SFX" Hash="{5B8DF8B5-C0C2-1D41-0BC7-22EFCA2CFAA5}">
 			<ObjectPath>SX_slowmotion_trigger</ObjectPath>
 			<ShortName>SX_slowmotion_trigger</ShortName>
 			<Path>Event/SX_slowmotion_trigger.bnk</Path>
 			<Media>
+				<File Id="511933506" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>player_feedback_slowmotion02.wav</ShortName>
+					<Path>Media/511933506.wem</Path>
+					<CachePath>SFX/player_feedback_slowmotion02_755F56E2.wem</CachePath>
+				</File>
 				<File Id="897939972" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Feedback\player_feedback_slowmotion.wav</ShortName>
 					<Path>Media/897939972.wem</Path>
-					<CachePath>SFX/Player_Feedback/player_feedback_slowmotion_755F56E2.wem</CachePath>
+					<CachePath>SFX/Player_Feedback/player_feedback_slowmotion_7A5FB305.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="673969004" Name="Tremolo (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerFeedback_MainMixer\player_feedback_slowmotion_triggered\player_feedback_slowmotion01\Tremolo (Custom)" GUID="{E1ED6827-6BBC-4442-8C14-B2080BCF7155}" LibName="Wwise Tremolo" LibId="8585219"/>
+				</Custom>
+			</Plugins>
 			<Events>
-				<Event Id="911678423" Name="SX_slowmotion_trigger" ObjectPath="\Events\Slowmotion\SX_slowmotion_trigger" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" DurationType="OneShot" DurationMin="13.808929" DurationMax="15.5">
+				<Event Id="911678423" Name="SX_slowmotion_trigger" ObjectPath="\Events\Slowmotion\SX_slowmotion_trigger" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" DurationType="OneShot" DurationMin="1.8252473" DurationMax="15.144958">
 					<MediaRefs>
+						<MediaRef Id="511933506"/>
 						<MediaRef Id="897939972"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="673969004"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F2A75984-8F7B-CE46-72DF-16DB27063D7E}</FileHash>
+	<FileHash>{A4D2CB4B-9CB9-EF74-C31B-49A568F6B0AB}</FileHash>
 </SoundBanksInfo>

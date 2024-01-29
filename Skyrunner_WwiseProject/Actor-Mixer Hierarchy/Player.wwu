@@ -699,6 +699,28 @@
 										<ActiveSource Name="Soundseed Air Woosh" ID="{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="game_bumper" ID="{DF8F4EE9-2BD3-4ABE-93E5-381898FFEC60}" ShortID="635856933">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SX_player_bumper" ID="{2884E553-8DAC-4CD4-9AB2-4CD6FB1C8C89}">
+											<Language>SFX</Language>
+											<AudioFile>SX_player_bumper.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="382671654"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SX_player_bumper" ID="{2884E553-8DAC-4CD4-9AB2-4CD6FB1C8C89}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -1746,6 +1768,7 @@
 										<Value>1</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -1753,6 +1776,7 @@
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -1762,11 +1786,6 @@
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1779,10 +1798,30 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="player_feedback_slowmotion" ID="{B4B220D0-EBAE-4615-BE5B-9A812D917890}" ShortID="8899786">
+								<Sound Name="player_feedback_slowmotion01" ID="{B4B220D0-EBAE-4615-BE5B-9A812D917890}" ShortID="8899786">
+									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Tremolo (Custom)" ID="{E1ED6827-6BBC-4442-8C14-B2080BCF7155}" ShortID="673969004" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+													<PropertyList>
+														<Property Name="ModDepth" Type="Real32" Value="75"/>
+														<Property Name="ModFrequency" Type="Real32" Value="10"/>
+														<Property Name="ModSmoothing" Type="Real32" Value="100"/>
+														<Property Name="ModWaveform" Type="int32" Value="2"/>
+													</PropertyList>
+												</Effect>
+											</Custom>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
@@ -1790,6 +1829,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="player_feedback_slowmotion" ID="{793C613C-5823-4F78-9226-A2D64008ED82}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0508196721311478"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="12.324"/>
+												<Property Name="FadeOutShape" Type="int16" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="13.4926229508197"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Player_Feedback\player_feedback_slowmotion.wav</AudioFile>
 											<MediaIDList>
@@ -1799,6 +1845,35 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="player_feedback_slowmotion" ID="{793C613C-5823-4F78-9226-A2D64008ED82}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="player_feedback_slowmotion02" ID="{6FFCAC04-117D-4B99-B515-96B44345E21E}" ShortID="12038797">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="player_feedback_slowmotion02" ID="{049A56DC-3486-4361-A2D9-0F76711297B9}">
+											<Language>SFX</Language>
+											<AudioFile>player_feedback_slowmotion02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="511933506"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="player_feedback_slowmotion02" ID="{049A56DC-3486-4361-A2D9-0F76711297B9}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -1842,7 +1917,7 @@
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
-										<Value>810</Value>
+										<Value>800</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -2047,6 +2122,28 @@
 								<ItemRef Name="Phil Michalski - UI - Glitchy Counter_02" ID="{4712CE20-3CD6-4664-928C-36F639D93561}"/>
 							</Playlist>
 						</RandomSequenceContainer>
+						<Sound Name="player_shield_regen" ID="{C393DDB2-F61D-459C-B1E8-32F8F0391A6A}" ShortID="131267186">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SX_player_shield_regen" ID="{AAF8C52B-5A40-45DA-957F-F7A662D35694}">
+									<Language>SFX</Language>
+									<AudioFile>SX_player_shield_regen.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="328453384"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SX_player_shield_regen" ID="{AAF8C52B-5A40-45DA-957F-F7A662D35694}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
