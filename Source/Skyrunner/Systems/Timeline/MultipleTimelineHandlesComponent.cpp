@@ -27,9 +27,15 @@ void UMultipleTimelineHandlesComponent::BeginPlay()
 	{
 		for (const auto& th : timelines)
 		{
-			instancedHandles.Add(th.Key, NewObject<UInstancedTimelineHandle>(this,
+			auto& t = instancedHandles.Add(th.Key, NewObject<UInstancedTimelineHandle>(this,
 				UInstancedTimelineHandle::StaticClass(),
 				FName(th.Key)));
+			t->timeline->Rename(th.Key.GetCharArray().GetData());
+
+			// timeline component is "wildly" created using CreateDefaultSubobject
+			// it is not linked to any actor
+			// manually register the component
+			t->timeline->RegisterComponent();
 		}
 	}
 
