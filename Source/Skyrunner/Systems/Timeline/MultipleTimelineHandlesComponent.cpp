@@ -21,6 +21,18 @@ UMultipleTimelineHandlesComponent::UMultipleTimelineHandlesComponent()
 
 void UMultipleTimelineHandlesComponent::BeginPlay()
 {
+	// create all timeline components based on the timeline handle assets
+	// if constructor failed to create the instances
+	if (instancedHandles.IsEmpty() && !timelines.IsEmpty())
+	{
+		for (const auto& th : timelines)
+		{
+			instancedHandles.Add(th.Key, NewObject<UInstancedTimelineHandle>(this,
+				UInstancedTimelineHandle::StaticClass(),
+				FName(th.Key)));
+		}
+	}
+
 	for (const auto& ith : instancedHandles)
 	{
 		ith.Value->Init(*timelines.Find(ith.Key));
