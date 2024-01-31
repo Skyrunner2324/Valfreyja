@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1641293181" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{5F0A9B6D-42B2-6411-5628-D194F9DF71D4}">
+		<SoundBank Id="1641293181" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{4E8CCA5A-6A8E-F3A0-C4B3-27EFDFB2B7A2}">
 			<ObjectPath>REV_LargeRoom</ObjectPath>
 			<ShortName>REV_LargeRoom</ShortName>
 			<Path>Bus/REV_LargeRoom.bnk</Path>
 			<Plugins>
 				<Custom>
+					<Plugin Id="21631550" Name="Parametric EQ (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_LargeRoom\Parametric EQ (Custom)" GUID="{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="33444476" Name="RoomVerb (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_LargeRoom\RoomVerb (Custom)" GUID="{140088B9-275E-409D-AC97-CA7FF6C8DCF0}" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</Custom>
-				<ShareSets>
-					<Plugin Id="176439046" Name="Caught_in_a_loop" ObjectPath="\Effects\Factory Effects\Stereo Delay\Caught_in_a_loop" GUID="{8FC64215-9A75-4BE3-A33A-584C8CA49963}" LibName="Wwise Stereo Delay" LibId="8847363"/>
-				</ShareSets>
 			</Plugins>
 			<AuxBusses>
 				<AuxBus Id="1641293181" Name="REV_LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<PluginRefs>
 						<Custom>
+							<PluginRef Id="21631550"/>
 							<PluginRef Id="33444476"/>
 						</Custom>
-						<ShareSets>
-							<PluginRef Id="176439046"/>
-						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
@@ -45,5 +41,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{60BD06B5-6DB3-BC55-08AC-B167E41E2426}</FileHash>
+	<FileHash>{5C99ED5F-CA38-26EA-2A0B-918B32733B56}</FileHash>
 </SoundBanksInfo>

@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{05960EF2-846C-4440-B200-DA936247A2CF}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{E91ADA0B-490E-4228-84AF-22DC5116ACA0}" WorkUnitID="{69D16C6A-8CBD-41F2-91C9-0ADAE7074EDE}"/>
@@ -589,7 +596,7 @@
 											<PropertyList>
 												<Property Name="BusVolume" Type="Real64">
 													<ValueList>
-														<Value>-2</Value>
+														<Value>-5</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1303,24 +1310,28 @@
 							</PropertyList>
 							<ChildrenList>
 								<AuxBus Name="REV_LargeRoom" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
-									<PropertyList>
-										<Property Name="BypassEffect1" Type="bool">
-											<ValueList>
-												<Value>True</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Effect0" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
-											<ObjectRef Name="Caught_in_a_loop" ID="{8FC64215-9A75-4BE3-A33A-584C8CA49963}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-										</Reference>
-										<Reference Name="Effect1">
+										<Reference Name="Effect0">
 											<Custom>
 												<Effect Name="RoomVerb (Custom)" ID="{140088B9-275E-409D-AC97-CA7FF6C8DCF0}" ShortID="33444476" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 													<PropertyList>
 														<Property Name="DecayTime" Type="Real32" Value="4.4"/>
-														<Property Name="DryLevel" Type="Real32" Value="-28.3"/>
-														<Property Name="ERPattern" Type="int32" Value="9"/>
+														<Property Name="DryLevel" Type="Real32" Value="-26.3"/>
+														<Property Name="ERPattern" Type="int32" Value="5"/>
+														<Property Name="ReverbLevel" Type="Real32" Value="-5"/>
+														<Property Name="RoomSize" Type="Real32" Value="100"/>
+													</PropertyList>
+												</Effect>
+											</Custom>
+										</Reference>
+										<Reference Name="Effect1">
+											<Custom>
+												<Effect Name="Parametric EQ (Custom)" ID="{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}" ShortID="21631550" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+													<PropertyList>
+														<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+														<Property Name="FrequencyBand1" Type="Real32" Value="1000"/>
+														<Property Name="OnOffBand2" Type="bool" Value="False"/>
+														<Property Name="OnOffBand3" Type="bool" Value="False"/>
 													</PropertyList>
 												</Effect>
 											</Custom>

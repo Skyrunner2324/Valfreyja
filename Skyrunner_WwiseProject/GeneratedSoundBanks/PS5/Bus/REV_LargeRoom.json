@@ -10,12 +10,20 @@
     "Type": "Bus",
     "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
     "Language": "SFX",
-    "Hash": "{5F0A9B6D-42B2-6411-5628-D194F9DF71D4}",
+    "Hash": "{4E8CCA5A-6A8E-F3A0-C4B3-27EFDFB2B7A2}",
     "ObjectPath": "REV_LargeRoom",
     "ShortName": "REV_LargeRoom",
     "Path": "Bus/REV_LargeRoom.bnk",
     "Plugins": {
      "Custom": [
+      {
+       "Id": "21631550",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom\\Parametric EQ (Custom)",
+       "GUID": "{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
       {
        "Id": "33444476",
        "Name": "RoomVerb (Custom)",
@@ -23,16 +31,6 @@
        "GUID": "{140088B9-275E-409D-AC97-CA7FF6C8DCF0}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
-      }
-     ],
-     "ShareSets": [
-      {
-       "Id": "176439046",
-       "Name": "Caught_in_a_loop",
-       "ObjectPath": "\\Effects\\Factory Effects\\Stereo Delay\\Caught_in_a_loop",
-       "GUID": "{8FC64215-9A75-4BE3-A33A-584C8CA49963}",
-       "LibName": "Wwise Stereo Delay",
-       "LibId": "8847363"
       }
      ]
     },
@@ -45,12 +43,10 @@
       "PluginRefs": {
        "Custom": [
         {
-         "Id": "33444476"
-        }
-       ],
-       "ShareSets": [
+         "Id": "21631550"
+        },
         {
-         "Id": "176439046"
+         "Id": "33444476"
         }
        ]
       },
@@ -130,6 +126,6 @@
     ]
    }
   ],
-  "FileHash": "{61BFD861-875C-2562-CBAF-C850BC5DB0C7}"
+  "FileHash": "{92157A84-4DE1-53E5-D92F-2E7173898E82}"
  }
 }
