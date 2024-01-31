@@ -7,6 +7,7 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "../../Systems/CustomProjectileMovement.h"
 #include "../../Utils/DebugLog.h"
+#include "NiagaraComponent.h"
 
 
 // Sets default values for this component's properties
@@ -64,8 +65,15 @@ void UObjectPool::ActivateActor(bool hiddenIngame, bool enableColision, bool tic
 
 	for (UActorComponent* component : actor->GetComponents())
 	{
+		UNiagaraComponent* niagaraComponent = Cast<UNiagaraComponent>(component);
 		component->SetActive(!hiddenIngame, true);
-		component->SetComponentTickEnabled(!hiddenIngame);
+
+		if (niagaraComponent == nullptr) {
+			component->SetComponentTickEnabled(!hiddenIngame);
+		}
+		else {
+			niagaraComponent->ResetSystem();
+		}
 
 		UCustomProjectileMovement* projectileComponent = Cast<UCustomProjectileMovement>(component);
 
