@@ -210,7 +210,7 @@
 				<Event Id="534486512" Name="MUS_Stop_MainMusic" ObjectPath="\Events\Music\MUS_Stop_MainMusic" GUID="{A85A1CC9-5884-42CD-B3B0-A7C451B7F79D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="618588564" Type="Event" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" Language="SFX" Hash="{03B3BAF3-AB60-B92F-5953-487085DAB6E4}">
+		<SoundBank Id="618588564" Type="Event" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" Language="SFX" Hash="{25C2F0DE-E9A3-0731-FB45-8EF11F98D514}">
 			<ObjectPath>SX_player_death_notifier</ObjectPath>
 			<ShortName>SX_player_death_notifier</ShortName>
 			<Path>Event/SX_player_death_notifier.bnk</Path>
@@ -305,7 +305,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="971909502" Type="User" GUID="{73E808A7-564E-44B8-BCF3-CDA908FACC1B}" Language="SFX" Hash="{7582CFB8-8B79-0859-076F-99AFABAFD3D0}">
+		<SoundBank Id="971909502" Type="User" GUID="{73E808A7-564E-44B8-BCF3-CDA908FACC1B}" Language="SFX" Hash="{53436613-064F-4490-7056-6B24F410873D}">
 			<ObjectPath>\SoundBanks\Default Work Unit\MasterSoundbank</ObjectPath>
 			<ShortName>MasterSoundbank</ShortName>
 			<Path>MasterSoundbank.bnk</Path>
@@ -824,7 +824,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{AA7F2318-049E-E22E-F4F3-8D33ABB5B1A4}">
+		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{553EAFD1-9020-30E8-8CE8-4D2FDFF13C26}">
 			<ObjectPath>SX_player_shoot</ObjectPath>
 			<ShortName>SX_player_shoot</ShortName>
 			<Path>Event/SX_player_shoot.bnk</Path>
@@ -888,6 +888,9 @@
 						<MediaRef Id="942643326"/>
 						<MediaRef Id="967984016"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="4125012149" Name="REV_SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}"/>
+					</AuxBusRefs>
 				</Event>
 			</Events>
 			<GameParameters>
@@ -990,7 +993,7 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{0F87B69B-20CE-8FCD-D2BA-2947EA5B8CCC}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{F0162313-83E3-CAEB-FF49-EF7CCB2925FE}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -1006,7 +1009,6 @@
 				</Custom>
 				<ShareSets>
 					<Plugin Id="702543456" Name="Tunnel1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Tunnel1" GUID="{CC44B890-9865-4157-965F-86FED27BC4C6}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
-					<Plugin Id="1008402193" Name="Low_Pass_20KHz" ObjectPath="\Effects\Factory Effects\Parametric EQ\Low Pass Filters\Low_Pass_20KHz" GUID="{830124FB-B9D5-4AE8-846E-E94A74652666}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1842579981" Name="Reflect_Simplified" ObjectPath="\Effects\Factory Reflect\Reflect_Simplified" GUID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" LibName="Wwise Reflect" LibId="11206659"/>
 				</ShareSets>
 				<AudioDevices>
@@ -1018,13 +1020,7 @@
 			</Plugins>
 			<Busses>
 				<Bus Id="67442032" Name="ENV AMB Exterior" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\Environment Master\ENV AMB Exterior" GUID="{AA242E37-0C3D-41A5-8071-0C92A0F0323A}"/>
-				<Bus Id="79554116" Name="MUSIC Master" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master" GUID="{D7372867-B444-4F36-A355-173A46D13138}">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="1008402193"/>
-						</ShareSets>
-					</PluginRefs>
-				</Bus>
+				<Bus Id="79554116" Name="MUSIC Master" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master" GUID="{D7372867-B444-4F36-A355-173A46D13138}"/>
 				<Bus Id="372645086" Name="PLYR Master" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master" GUID="{880F05A2-569A-4D55-B7A0-1CD87FD195D0}">
 					<AuxBusRefs>
 						<AuxBusRef Id="1752382405" Name="Early_Reflections" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\Early_Reflections" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}"/>
@@ -1665,5 +1661,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{055FE91C-858B-B5C3-F3D4-36AF9486A661}</FileHash>
+	<FileHash>{B63A3A51-6868-D0BF-D862-94DF5EA79EA1}</FileHash>
 </SoundBanksInfo>

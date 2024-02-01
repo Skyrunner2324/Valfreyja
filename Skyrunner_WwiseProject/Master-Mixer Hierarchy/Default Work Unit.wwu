@@ -32,11 +32,7 @@
 									</ValueList>
 								</Property>
 							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
-									<ObjectRef Name="Low_Pass_20KHz" ID="{830124FB-B9D5-4AE8-846E-E94A74652666}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-								</Reference>
-							</ReferenceList>
+							<ReferenceList/>
 							<StateInfo>
 								<StatePropertyList>
 									<Property Name="BusVolume"/>
@@ -72,7 +68,13 @@
 									</CustomState>
 									<CustomState>
 										<StateRef Name="InFTUE" ID="{B7AE7D30-166A-4B19-9781-BB5E7EC54760}"/>
-										<CustomState Name="" ID="{316F09CC-00A7-414A-8FAE-6896F9BF5CCC}" ShortID="499239436"/>
+										<CustomState Name="" ID="{316F09CC-00A7-414A-8FAE-6896F9BF5CCC}" ShortID="499239436">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16" Value="10"/>
+												<Property Name="Lowpass" Type="int16" Value="30"/>
+												<Property Name="Volume" Type="Real64" Value="-3"/>
+											</PropertyList>
+										</CustomState>
 									</CustomState>
 								</CustomStateList>
 							</StateInfo>
@@ -873,6 +875,11 @@
 										</Bus>
 										<Bus Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}">
 											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
 												<Property Name="BypassEffect1" Type="bool">
 													<ValueList>
 														<Value>True</Value>
