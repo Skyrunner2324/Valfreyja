@@ -10,6 +10,11 @@
 				<ActorMixer Name="PlayerMovement_MainMixer" ID="{45A46295-887A-48BC-B1B8-7A2A1B9D5383}" ShortID="459713985">
 					<PropertyList>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-20</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -17,6 +22,9 @@
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="REV_SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -37,7 +45,7 @@
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-13</Value>
+												<Value>-18</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -53,16 +61,56 @@
 										<SourcePlugin Name="Soundseed Air Woosh" ID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" ShortID="1010974337" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="Duration" Type="Real64" Value="0.2"/>
-												<Property Name="FrequencyScale" Type="Real32" Value="1.6"/>
+												<Property Name="FrequencyScale" Type="Real32" Value="0.85"/>
+												<Property Name="FrequencyScaleRandom" Type="Real32" Value="0.47"/>
 												<Property Name="NoiseColor" Type="int16" Value="2"/>
 												<Property Name="PlaybackRate" Type="Real32" Value="1.5"/>
-												<Property Name="QFactorScale" Type="Real32" Value="-1.56"/>
-												<Property Name="Speed" Type="Real32" Value="-1"/>
+												<Property Name="QFactorScale" Type="Real32" Value="-0.51"/>
+												<Property Name="Speed" Type="Real32" Value="-2"/>
 												<Property Name="SpeedAutomate" Type="bool" Value="True"/>
 												<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="1.6"/>
-												<Property Name="SpeedPointTimeRandom" Type="Real32" Value="0.01"/>
-												<Property Name="SpeedRandom" Type="Real32" Value="4"/>
+												<Property Name="SpeedPointTimeRandom" Type="Real32" Value="0"/>
+												<Property Name="SpeedRandom" Type="Real32" Value="8"/>
 											</PropertyList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{71AD5681-0D3D-40CC-A692-1577B67B33FA}" ShortID="244195930">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Speed"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{FF3EEB6C-D47E-4FA2-81AA-4E55FF2204F8}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-8.80196</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>3000</XPos>
+																						<YPos>7.57946</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
 											<Language>SFX</Language>
 											<PluginData>
 	<WooshData>
@@ -204,7 +252,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-10</Value>
+												<Value>-15</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -731,6 +779,9 @@
 											</ValueList>
 										</Property>
 										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-130</Value>
+											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{CBD9D942-2731-4796-8EDD-EA82158ABF1A}">
@@ -750,7 +801,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-12</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -768,7 +819,7 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.163058913934426"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.354892930327869"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.216772438524591"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.455606608037828"/>
 												<Property Name="TrimEnd" Type="Real64" Value="0.915048258196721"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -1994,15 +2045,15 @@
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
-										<Value>800</Value>
+										<Value>130</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{E2F11DE5-8135-4BCE-963F-30A32111E5F5}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="228"/>
-													<Property Name="Min" Type="Real64" Value="-252"/>
+													<Property Name="Max" Type="Real64" Value="51"/>
+													<Property Name="Min" Type="Real64" Value="-126"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -2010,7 +2061,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-21</Value>
+										<Value>-23</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
