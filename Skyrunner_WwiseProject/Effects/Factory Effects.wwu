@@ -592,10 +592,49 @@
 								<Effect Name="High_Pass_60Hz" ID="{F9627628-0B10-4272-BC30-D4C20423CB38}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 									<PropertyList>
 										<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
-										<Property Name="FrequencyBand1" Type="Real32" Value="489"/>
-										<Property Name="OnOffBand2" Type="bool" Value="False"/>
+										<Property Name="FilterTypeBand2" Type="int32" Value="3"/>
+										<Property Name="FrequencyBand1" Type="Real32" Value="1646"/>
 										<Property Name="OnOffBand3" Type="bool" Value="False"/>
 									</PropertyList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{3942B026-6B52-4182-9317-1224E69F2B01}" ShortID="874302806">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="FrequencyBand2"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{5B6E0731-47AF-4FCB-AB16-916B0E0A2CEF}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="5"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>97.26393</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>3000</XPos>
+																				<YPos>2760.34811</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</Effect>
 							</ChildrenList>
 						</Folder>
@@ -1751,10 +1790,11 @@
 						</Effect>
 						<Effect Name="_1_Second_Delay" ID="{5AAB81A5-3444-4DE7-AEB3-2DDBB33D455B}" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
 							<PropertyList>
+								<Property Name="EnableFeedback" Type="bool" Value="True"/>
 								<Property Name="FilterFrequency" Type="Real32" Value="261"/>
 								<Property Name="FilterGain" Type="Real32" Value="10.5"/>
-								<Property Name="LeftDelayTime" Type="Real32" Value="1"/>
-								<Property Name="RightDelayTime" Type="Real32" Value="1"/>
+								<Property Name="LeftDelayTime" Type="Real32" Value="0.3"/>
+								<Property Name="RightDelayTime" Type="Real32" Value="0.56"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="LR_Slap_with_CrossFeed" ID="{30319A92-C5AC-437A-9864-430059762933}" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">

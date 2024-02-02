@@ -10,11 +10,20 @@
     "Type": "Event",
     "GUID": "{59E0340B-B7CC-40AB-A104-B35788A5DFFB}",
     "Language": "SFX",
-    "Hash": "{41CD5D49-4F8A-CEC3-9236-22DC29040164}",
+    "Hash": "{0CA8F6C9-241A-1015-C0AB-9811BF4D7E28}",
     "ObjectPath": "UI_start",
     "ShortName": "UI_start",
     "Path": "Event/UI_start.bnk",
     "Media": [
+     {
+      "Id": "94838007",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Placeholders\\XG_one_shot_stutter_pluck_Dbmin.wav",
+      "Path": "Media/94838007.wem",
+      "CachePath": "SFX/Placeholders/XG_one_shot_stutter_pluck_Dbmin_0ECBFDB8.wem"
+     },
      {
       "Id": "273426957",
       "Language": "SFX",
@@ -30,10 +39,20 @@
       {
        "Id": "397214180",
        "Name": "Pitch Shifter (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\UI\\UI_MainMixer\\FX_wolf_start\\Pitch Shifter (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\UI\\UI_MainMixer\\ui_start\\FX_wolf_start\\Pitch Shifter (Custom)",
        "GUID": "{82B901CF-4B51-47E9-948E-222173742D40}",
        "LibName": "Wwise Pitch Shifter",
        "LibId": "8912899"
+      }
+     ],
+     "ShareSets": [
+      {
+       "Id": "1443902288",
+       "Name": "_1_Second_Delay",
+       "ObjectPath": "\\Effects\\Factory Effects\\Stereo Delay\\_1_Second_Delay",
+       "GUID": "{5AAB81A5-3444-4DE7-AEB3-2DDBB33D455B}",
+       "LibName": "Wwise Stereo Delay",
+       "LibId": "8847363"
       }
      ]
     },
@@ -48,6 +67,9 @@
       "DurationMax": "2.18725",
       "MediaRefs": [
        {
+        "Id": "94838007"
+       },
+       {
         "Id": "273426957"
        }
       ],
@@ -56,12 +78,25 @@
         {
          "Id": "397214180"
         }
+       ],
+       "ShareSets": [
+        {
+         "Id": "1443902288"
+        }
        ]
-      }
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "4125012149",
+        "Name": "REV_SmallRoom",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom",
+        "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{5B144950-16E5-0DD3-DBDB-CA106284BCB8}"
+  "FileHash": "{AE6C90A4-E89D-22D1-15A4-31D684D8B19D}"
  }
 }

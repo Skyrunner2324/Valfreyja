@@ -112,45 +112,6 @@
 								<ActiveSource Name="ui_move" ID="{2E64574B-D24C-47ED-B0E6-E0EDB24DD4D0}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="FX_wolf_start" ID="{5529D706-3D6D-4DAE-A86F-3F79AFC57DF5}" ShortID="329057283">
-							<PropertyList>
-								<Property Name="OverrideEffect" Type="bool" Value="True"/>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>2400</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-								</Reference>
-								<Reference Name="Effect0">
-									<Custom>
-										<Effect Name="Pitch Shifter (Custom)" ID="{82B901CF-4B51-47E9-948E-222173742D40}" ShortID="397214180" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
-											<PropertyList>
-												<Property Name="Pitch" Type="Real32" Value="2400"/>
-											</PropertyList>
-										</Effect>
-									</Custom>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="FX_wolf_start" ID="{4510ED69-EE49-4849-AB6B-1B1B5B843669}">
-									<Language>SFX</Language>
-									<AudioFile>FX_wolf_start.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="273426957"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="FX_wolf_start" ID="{4510ED69-EE49-4849-AB6B-1B1B5B843669}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="ui_wave_clear_feedback" ID="{61BE65D1-29FA-409A-943C-7E7504D75239}" ShortID="683789556">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -173,6 +134,116 @@
 								<ActiveSource Name="ui_wave_clear_feedback" ID="{0330591F-30EA-4567-8867-72A244B87854}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<BlendContainer Name="ui_start" ID="{5833F779-9817-40EA-8F59-E2A0A7506CC1}" ShortID="984507466">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="FX_wolf_start" ID="{5529D706-3D6D-4DAE-A86F-3F79AFC57DF5}" ShortID="329057283">
+									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>2400</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Pitch Shifter (Custom)" ID="{82B901CF-4B51-47E9-948E-222173742D40}" ShortID="397214180" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+													<PropertyList>
+														<Property Name="Pitch" Type="Real32" Value="2400"/>
+													</PropertyList>
+												</Effect>
+											</Custom>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI Master" ID="{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_wolf_start" ID="{4510ED69-EE49-4849-AB6B-1B1B5B843669}">
+											<Language>SFX</Language>
+											<AudioFile>FX_wolf_start.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="273426957"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_wolf_start" ID="{4510ED69-EE49-4849-AB6B-1B1B5B843669}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="XG_one_shot_stutter_pluck_Dbmin" ID="{266BF47F-4955-43B1-AB84-C2BB94871D37}" ShortID="108794446">
+									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-430</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-30</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-26</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+											<ObjectRef Name="_1_Second_Delay" ID="{5AAB81A5-3444-4DE7-AEB3-2DDBB33D455B}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="REV_SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="XG_one_shot_stutter_pluck_Dbmin" ID="{9E431E02-7F23-4164-99F7-D3D97C9DD624}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="1.1381974248927"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.1381974248927"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Placeholders\XG_one_shot_stutter_pluck_Dbmin.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="94838007"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="XG_one_shot_stutter_pluck_Dbmin" ID="{9E431E02-7F23-4164-99F7-D3D97C9DD624}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

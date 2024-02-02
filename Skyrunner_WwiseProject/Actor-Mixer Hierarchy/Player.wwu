@@ -404,8 +404,8 @@
 														<ModifierInfo>
 															<Modifier Name="" ID="{01785D4F-AFE2-40AE-A3E9-24B1FF46FDD8}">
 																<PropertyList>
-																	<Property Name="Max" Type="Real64" Value="303"/>
-																	<Property Name="Min" Type="Real64" Value="-152"/>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-300"/>
 																</PropertyList>
 															</Modifier>
 														</ModifierInfo>
@@ -425,12 +425,15 @@
 													<Custom>
 														<Effect Name="Flanger (Custom)" ID="{2A02FF7C-82A9-4670-8071-EE1321113B91}" ShortID="518190610" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
 															<PropertyList>
-																<Property Name="DelayTime" Type="Real32" Value="1"/>
-																<Property Name="DryLevel" Type="Real32" Value="0.56"/>
-																<Property Name="ModDepth" Type="Real32" Value="65.8"/>
-																<Property Name="ModPhaseOffset" Type="Real32" Value="-6"/>
-																<Property Name="ModPhaseSpread" Type="Real32" Value="33"/>
-																<Property Name="WetDryMix" Type="Real32" Value="66"/>
+																<Property Name="DelayTime" Type="Real32" Value="20.7"/>
+																<Property Name="DryLevel" Type="Real32" Value="0.31"/>
+																<Property Name="FeedBackLevel" Type="Real32" Value="0.4"/>
+																<Property Name="ModDepth" Type="Real32" Value="26.3"/>
+																<Property Name="ModFrequency" Type="Real32" Value="0.78"/>
+																<Property Name="ModPWM" Type="Real32" Value="71"/>
+																<Property Name="ModPhaseOffset" Type="Real32" Value="-67"/>
+																<Property Name="ModPhaseSpread" Type="Real32" Value="180"/>
+																<Property Name="WetDryMix" Type="Real32" Value="22"/>
 															</PropertyList>
 															<ObjectLists>
 																<ObjectList Name="RTPC">
@@ -556,8 +559,10 @@
 											<ChildrenList>
 												<AudioFileSource Name="player_grap_shot" ID="{0F34A3B9-198D-48D3-A14F-415477CD733A}">
 													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.128981899207746"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0195480150214592"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0988465665236052"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.231256706008584"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Placeholders\player_grap_shot.wav</AudioFile>
@@ -581,7 +586,7 @@
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-10</Value>
+														<Value>-14</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -892,7 +897,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-11</Value>
+														<Value>-10</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -994,7 +999,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-8</Value>
+														<Value>-10</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1138,7 +1143,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-12</Value>
+														<Value>-10</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1182,11 +1187,6 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="smg_tail" ID="{3E155501-0EB5-46EE-89FB-01F89CB57414}" ShortID="694831696">
 											<PropertyList>
-												<Property Name="Inclusion" Type="bool">
-													<ValueList>
-														<Value>False</Value>
-													</ValueList>
-												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>5</Value>
@@ -2015,7 +2015,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-15</Value>
+										<Value>-20</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2038,104 +2038,6 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="SX_player_autolock" ID="{6F8BA0C7-3FDE-4E6C-8D7E-0431095F5DDD}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="player_hit" ID="{8E4A3F7C-27D6-4C09-B7DA-69A32E4E53FC}" ShortID="830842674">
-							<PropertyList>
-								<Property Name="OverrideEffect" Type="bool" Value="True"/>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>130</Value>
-									</ValueList>
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{E2F11DE5-8135-4BCE-963F-30A32111E5F5}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="51"/>
-													<Property Name="Min" Type="Real64" Value="-126"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-23</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-								</Reference>
-								<Reference Name="Effect0" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
-									<ObjectRef Name="One_Tap_Half_Second" ID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SX_player_hit" ID="{03231797-7A23-43BF-8B13-920D65B80FB8}">
-									<Language>SFX</Language>
-									<AudioFile>SX_player_hit.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="525622801"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists>
-								<ObjectList Name="RTPC">
-									<Reference>
-										<Local>
-											<RTPC Name="" ID="{9F484008-26DB-4737-AD25-34F4433EEFB5}" ShortID="732787201">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="BypassEffect0"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{1B82030F-4ECE-4365-ABBF-323A7115AB00}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="65537"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>-1</XPos>
-																		<YPos>0</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>1</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>0.001</XPos>
-																		<YPos>0</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>1</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</Local>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
-							<ActiveSourceList>
-								<ActiveSource Name="SX_player_hit" ID="{03231797-7A23-43BF-8B13-920D65B80FB8}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<RandomSequenceContainer Name="feedback_hitmarker" ID="{FD497959-0AAB-45A3-A901-F9C101D62884}" ShortID="712930108">
@@ -2251,6 +2153,13 @@
 							</Playlist>
 						</RandomSequenceContainer>
 						<Sound Name="player_shield_regen" ID="{C393DDB2-F61D-459C-B1E8-32F8F0391A6A}" ShortID="131267186">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -2261,6 +2170,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SX_player_shield_regen" ID="{AAF8C52B-5A40-45DA-957F-F7A662D35694}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.788838912732475"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>SX_player_shield_regen.wav</AudioFile>
 									<MediaIDList>
@@ -2272,6 +2186,163 @@
 								<ActiveSource Name="SX_player_shield_regen" ID="{AAF8C52B-5A40-45DA-957F-F7A662D35694}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<BlendContainer Name="player_feedback_hit" ID="{5CBF3A4F-B1E9-4810-84EC-4528A1E60904}" ShortID="683036954">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="player_shield_regen_01" ID="{7E769FE5-56D2-44EC-B430-B9D7FA036973}" ShortID="482507873">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-1690</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-20</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SX_player_shield_regen" ID="{FDE9CC31-FD9F-44E4-8420-DF0821DE8F5E}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.106776537911302"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.148179685264664"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.76726065808298"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.91544034334764"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SX_player_shield_regen.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1027306093"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SX_player_shield_regen" ID="{FDE9CC31-FD9F-44E4-8420-DF0821DE8F5E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="player_hit" ID="{8E4A3F7C-27D6-4C09-B7DA-69A32E4E53FC}" ShortID="830842674">
+									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>530</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E2F11DE5-8135-4BCE-963F-30A32111E5F5}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="51"/>
+															<Property Name="Min" Type="Real64" Value="-126"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-28</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+											<ObjectRef Name="One_Tap_Half_Second" ID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SX_player_hit" ID="{03231797-7A23-43BF-8B13-920D65B80FB8}">
+											<Language>SFX</Language>
+											<AudioFile>SX_player_hit.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="525622801"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Distorted Kick" ID="{595C657E-D2B9-4440-A426-45B01C0E5C43}">
+											<Language>SFX</Language>
+											<AudioFile>Distorted Kick.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="9139863"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{9F484008-26DB-4737-AD25-34F4433EEFB5}" ShortID="732787201">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="BypassEffect0"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{1B82030F-4ECE-4365-ABBF-323A7115AB00}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>-1</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>1</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0.001</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="Distorted Kick" ID="{595C657E-D2B9-4440-A426-45B01C0E5C43}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

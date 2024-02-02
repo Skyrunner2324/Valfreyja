@@ -10,11 +10,20 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{D892B247-7BCC-C844-527C-F716FF6CE45E}",
+    "Hash": "{21B388C0-22A4-CF95-6DF9-B93568B39836}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
     "Media": [
+     {
+      "Id": "1035111905",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Hoverboots\\jet_pack.wav",
+      "Path": "Media/1035111905.wem",
+      "CachePath": "SFX/Hoverboots/jet_pack_032D6170.wem"
+     },
      {
       "Id": "1056072145",
       "Language": "SFX",
@@ -44,6 +53,14 @@
        "GUID": "{FB516F18-AA49-4B92-BC11-FA23E8CC59B4}",
        "LibName": "Wwise Flanger",
        "LibId": "8192003"
+      },
+      {
+       "Id": "3604890626",
+       "Name": "High_Pass_60Hz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\High Pass Filters\\High_Pass_60Hz",
+       "GUID": "{F9627628-0B10-4272-BC30-D4C20423CB38}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
       }
      ]
     },
@@ -55,6 +72,9 @@
       "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
       "DurationType": "Infinite",
       "MediaRefs": [
+       {
+        "Id": "1035111905"
+       },
        {
         "Id": "1056072145"
        }
@@ -68,9 +88,20 @@
        "ShareSets": [
         {
          "Id": "2539557199"
+        },
+        {
+         "Id": "3604890626"
         }
        ]
-      }
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "4125012149",
+        "Name": "REV_SmallRoom",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom",
+        "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}"
+       }
+      ]
      }
     ],
     "GameParameters": [
@@ -79,10 +110,16 @@
       "Name": "RTPC_PlayerMovement",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerMovement",
       "GUID": "{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"
+     },
+     {
+      "Id": "2653406601",
+      "Name": "RTPC_PlayerSpeed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerSpeed",
+      "GUID": "{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"
      }
     ]
    }
   ],
-  "FileHash": "{9122CB1F-8EA1-47B9-D380-6F1D2656453E}"
+  "FileHash": "{4C8435B6-4A93-4058-231A-BF97FAC6B8EB}"
  }
 }

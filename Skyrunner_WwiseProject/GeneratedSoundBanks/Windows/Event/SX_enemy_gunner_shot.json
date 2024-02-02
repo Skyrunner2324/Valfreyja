@@ -10,39 +10,75 @@
     "Type": "Event",
     "GUID": "{85FE7A46-F893-42AA-8787-F5597C4AF630}",
     "Language": "SFX",
-    "Hash": "{28A02BBF-7969-04B1-B91A-48DB4A1A66C5}",
+    "Hash": "{7C416A85-D012-130B-2C0E-08C15F67A71B}",
     "ObjectPath": "SX_enemy_gunner_shot",
     "ShortName": "SX_enemy_gunner_shot",
     "Path": "Event/SX_enemy_gunner_shot.bnk",
     "Media": [
      {
-      "Id": "759953172",
+      "Id": "225516400",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Placeholders\\game_weapon_shoot_machinegun.wav",
-      "Path": "Media/759953172.wem",
-      "CachePath": "SFX/Placeholders/game_weapon_shoot_machinegun_755F56E2.wem"
+      "ShortName": "Placeholders\\XG_fx_feedback_chug_A#.wav",
+      "Path": "Media/225516400.wem",
+      "CachePath": "SFX/Placeholders/XG_fx_feedback_chug_A#_EE6F32D3.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "672308212",
+       "Name": "Time Stretch (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\NPC\\NPC_Weapons_MainMixer\\NPC_Weapons\\npc_weapon_shoot_machinegun\\Time Stretch (Custom)",
+       "GUID": "{D778A14F-5CA3-4820-9C27-44332D369F7C}",
+       "LibName": "Wwise Time Stretch",
+       "LibId": "8519683"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "423476228",
       "Name": "SX_enemy_gunner_shot",
       "ObjectPath": "\\Events\\Enemy\\SX_enemy_gunner_shot",
       "GUID": "{85FE7A46-F893-42AA-8787-F5597C4AF630}",
+      "MaxAttenuation": "10000",
       "DurationType": "OneShot",
-      "DurationMin": "0.10821787",
-      "DurationMax": "0.14920254",
+      "DurationMin": "0.62096906",
+      "DurationMax": "0.661705",
       "MediaRefs": [
        {
-        "Id": "759953172"
+        "Id": "225516400"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "672308212"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "4125012149",
+        "Name": "REV_SmallRoom",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom",
+        "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}"
        }
       ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2565740352",
+      "Name": "RTPC_SlowMo",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
+      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
      }
     ]
    }
   ],
-  "FileHash": "{1F295C8F-0B67-32E2-34E8-DB55F7FD4C3A}"
+  "FileHash": "{A1FCCDE9-4D5B-722A-444B-68B13CF4B9D8}"
  }
 }

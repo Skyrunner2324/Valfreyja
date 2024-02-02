@@ -169,10 +169,11 @@
 										<Property Name="Color" Type="int16" Value="13"/>
 										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Tempo" Type="Real64" Value="174"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>6</Value>
+												<Value>2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -189,6 +190,11 @@
 											<PropertyList>
 												<Property Name="EndPosition" Type="Real64" Value="54831.179138322"/>
 												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -283,6 +289,11 @@
 										<MusicSegment Name="Sky_Reveal_Alpha_Intro" ID="{31C793DF-EA3D-4D2B-AAC6-C192118E51AC}" ShortID="284897630">
 											<PropertyList>
 												<Property Name="EndPosition" Type="Real64" Value="54831.179138322"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1844,7 +1855,54 @@
 												</MusicPlaylistItem>
 												<MusicPlaylistItem Name="" ID="{23C73EAE-8AF5-4862-B419-7CFD08C9C535}" ShortID="360762667">
 													<PropertyList>
-														<Property Name="LoopCount" Type="int16" Value="0"/>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Sky_Tuto_Alpha_Reverb" ID="{7C36AB63-95E8-4652-A76E-7506F72FFEBA}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{80946E5A-A152-40D2-8969-227F524462AB}" ShortID="66898191">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Sky_Tuto_Alpha" ID="{2265904B-B6C7-4CD1-ADB9-2EBD985EB220}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{27C697C7-837E-4FE1-B70B-19DD8AC30D13}" ShortID="134702602">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Sky_Tuto_Alpha_Reverb" ID="{7C36AB63-95E8-4652-A76E-7506F72FFEBA}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{2432BBA8-9888-4FDA-9693-9DB5846E13FA}" ShortID="396710177">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Sky_Tuto_Alpha" ID="{2265904B-B6C7-4CD1-ADB9-2EBD985EB220}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{0C36CEB6-6FA2-44BB-B07C-9F5D678305C7}" ShortID="1041559527">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Sky_Tuto_Alpha_Reverb" ID="{7C36AB63-95E8-4652-A76E-7506F72FFEBA}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{6162B2D5-F653-4B0C-98C0-210EEB49EEAE}" ShortID="680150866">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Sky_Tuto_Alpha" ID="{2265904B-B6C7-4CD1-ADB9-2EBD985EB220}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{618EFD44-1685-45EB-83AC-7748FCD4C9B7}" ShortID="34770828">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Sky_Tuto_Alpha_Reverb" ID="{7C36AB63-95E8-4652-A76E-7506F72FFEBA}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{6F2912DB-B76A-4728-9132-C3CE52ADCCBE}" ShortID="482287021">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Sky_Tuto_Alpha" ID="{2265904B-B6C7-4CD1-ADB9-2EBD985EB220}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{6B058932-1690-44BB-902F-1B85597BB719}" ShortID="1013280693">
+													<PropertyList>
 														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 													</PropertyList>
 													<SegmentRef Name="Sky_Tuto_Alpha_Reverb" ID="{7C36AB63-95E8-4652-A76E-7506F72FFEBA}"/>
@@ -1859,7 +1917,7 @@
 										<Property Name="Tempo" Type="Real64" Value="174"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>7</Value>
+												<Value>4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1874,7 +1932,12 @@
 									<ChildrenList>
 										<MusicSegment Name="Explo_Phase_1" ID="{0D0116A2-4EE7-45D8-959F-3B364BA6D615}" ShortID="807626811">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="23706.8965517241"/>
+												<Property Name="EndPosition" Type="Real64" Value="22068.9583333333"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2304,7 +2367,12 @@
 										</MusicSegment>
 										<MusicSegment Name="Explo_Phase_2" ID="{62AB2D6C-A793-41EB-AE0D-2F51C8A68F7B}" ShortID="7293628">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="23706.8965517241"/>
+												<Property Name="EndPosition" Type="Real64" Value="22068.9791666667"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2827,7 +2895,12 @@
 										</MusicSegment>
 										<MusicSegment Name="Explo_Phase_4" ID="{452D0EC7-82EA-438B-93E6-8BFBCFA04270}" ShortID="657237754">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="23706.8965517241"/>
+												<Property Name="EndPosition" Type="Real64" Value="22068.9583333333"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -3400,7 +3473,12 @@
 										</MusicSegment>
 										<MusicSegment Name="Explo_Phase_5" ID="{BD909A8A-1062-49FA-B6EC-CE4C99B7AF02}" ShortID="406380581">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="23706.8965517241"/>
+												<Property Name="EndPosition" Type="Real64" Value="22068.9791666667"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -4124,6 +4202,11 @@
 										<MusicSegment Name="Explo_Phase_6" ID="{190A462A-8CAA-4031-8BA2-8A1D6E6A2014}" ShortID="124838223">
 											<PropertyList>
 												<Property Name="EndPosition" Type="Real64" Value="22068.9619252874"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -5015,8 +5098,13 @@
 										</MusicSegment>
 										<MusicSegment Name="Explo_Phase_3" ID="{86966671-553B-4BAC-99B5-35EC79451E83}" ShortID="386908376">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="23706.8965517241"/>
+												<Property Name="EndPosition" Type="Real64" Value="22068.9583333333"/>
 												<Property Name="Tempo" Type="Real64" Value="145"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -6172,11 +6260,6 @@
 										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Tempo" Type="Real64" Value="145"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-2</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -6777,11 +6860,6 @@
 										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Tempo" Type="Real64" Value="145"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-1</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -7822,7 +7900,11 @@
 										<ObjectList Name="Cues">
 											<Reference>
 												<Local>
-													<MusicCue Name="Entry Cue" ID="{2056D123-385E-4060-BE50-760C7DD57182}"/>
+													<MusicCue Name="Entry Cue" ID="{2056D123-385E-4060-BE50-760C7DD57182}">
+														<PropertyList>
+															<Property Name="TimeMs" Type="Real64" Value="8.66862137627322E-13"/>
+														</PropertyList>
+													</MusicCue>
 												</Local>
 											</Reference>
 											<Reference>
@@ -7830,7 +7912,7 @@
 													<MusicCue Name="Exit Cue" ID="{694FDFCD-9E56-4230-9CDE-15F40AACBB65}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="2758.62068965517"/>
+															<Property Name="TimeMs" Type="Real64" Value="86.206896551725"/>
 														</PropertyList>
 													</MusicCue>
 												</Local>

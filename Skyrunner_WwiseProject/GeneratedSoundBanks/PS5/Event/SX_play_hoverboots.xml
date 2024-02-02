@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{D892B247-7BCC-C844-527C-F716FF6CE45E}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{21B388C0-22A4-CF95-6DF9-B93568B39836}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
 			<Media>
+				<File Id="1035111905" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\jet_pack.wav</ShortName>
+					<Path>Media/1035111905.wem</Path>
+					<CachePath>SFX/Hoverboots/jet_pack_032D6170.wem</CachePath>
+				</File>
 				<File Id="1056072145" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Hoverboots\hoverboots_on_rail_loop.wav</ShortName>
 					<Path>Media/1056072145.wem</Path>
@@ -18,11 +23,13 @@
 				</Custom>
 				<ShareSets>
 					<Plugin Id="2539557199" Name="Treble" ObjectPath="\Effects\Factory Effects\Flanger\Flanging\Treble" GUID="{FB516F18-AA49-4B92-BC11-FA23E8CC59B4}" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="3604890626" Name="High_Pass_60Hz" ObjectPath="\Effects\Factory Effects\Parametric EQ\High Pass Filters\High_Pass_60Hz" GUID="{F9627628-0B10-4272-BC30-D4C20423CB38}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
 				<Event Id="527139965" Name="SX_play_hoverboots" ObjectPath="\Events\Hoverboots\Hoverboots\SX_play_hoverboots" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" DurationType="Infinite">
 					<MediaRefs>
+						<MediaRef Id="1035111905"/>
 						<MediaRef Id="1056072145"/>
 					</MediaRefs>
 					<PluginRefs>
@@ -31,14 +38,19 @@
 						</Custom>
 						<ShareSets>
 							<PluginRef Id="2539557199"/>
+							<PluginRef Id="3604890626"/>
 						</ShareSets>
 					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="4125012149" Name="REV_SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}"/>
+					</AuxBusRefs>
 				</Event>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="1645844663" Name="RTPC_PlayerMovement" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerMovement" GUID="{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"/>
+				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CAE1DDA0-83B2-DFC8-2824-15C29C9DD189}</FileHash>
+	<FileHash>{500C32C8-96F6-3D41-D2B3-DE7B65263FCE}</FileHash>
 </SoundBanksInfo>
