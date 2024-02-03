@@ -492,6 +492,11 @@
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Tempo" Type="Real64" Value="174"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -7912,7 +7917,7 @@
 													<MusicCue Name="Exit Cue" ID="{694FDFCD-9E56-4230-9CDE-15F40AACBB65}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="86.206896551725"/>
+															<Property Name="TimeMs" Type="Real64" Value="1379.31034482759"/>
 														</PropertyList>
 													</MusicCue>
 												</Local>
@@ -8034,6 +8039,7 @@
 												<Property Name="DestinationContextType" Type="int16" Value="2"/>
 												<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+												<Property Name="EnableTransitionFadeOut" Type="bool" Value="True"/>
 												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 												<Property Name="SourceContextType" Type="int16" Value="2"/>
 												<Property Name="UseTransitionObject" Type="bool" Value="True"/>
@@ -8060,6 +8066,15 @@
 												<DestinationFadeIn>
 													<MusicFade Name="Destination Fade-in" ID="{155384F8-0033-4510-83F2-2660E49B4975}"/>
 												</DestinationFadeIn>
+												<TransitionFadeOut>
+													<MusicFade Name="Transition Fade-out" ID="{0EDA1295-88E7-4AF9-8A0B-98FB32199602}">
+														<PropertyList>
+															<Property Name="FadeOffset" Type="Real64" Value="10"/>
+															<Property Name="FadeTime" Type="Real64" Value="10"/>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</TransitionFadeOut>
 											</TransitionInfo>
 										</MusicTransition>
 										<MusicTransition Name="Transition" ID="{5D5B6A2A-E0F3-4D86-9B30-72FFB91C44DF}">

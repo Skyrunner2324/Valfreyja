@@ -10,11 +10,29 @@
     "Type": "Event",
     "GUID": "{551300EA-C047-48F9-A1CA-75F08BC14E0B}",
     "Language": "SFX",
-    "Hash": "{D6D60D69-65F5-6AC8-470C-6A314A788ED4}",
+    "Hash": "{D30A34D4-12AB-AA1A-8B3D-3F412CB54A4A}",
     "ObjectPath": "ENV_AMB_Play_AmbienceMain",
     "ShortName": "ENV_AMB_Play_AmbienceMain",
     "Path": "Event/ENV_AMB_Play_AmbienceMain.bnk",
     "Media": [
+     {
+      "Id": "175282985",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ambience\\Ambience_Cave.wav",
+      "Path": "Media/175282985.wem",
+      "CachePath": "SFX/Ambience/Ambience_Cave_073B4D0C.wem"
+     },
+     {
+      "Id": "282791769",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ambience\\Cave_Bats_Ambience_ODY-1229-067.wav",
+      "Path": "Media/282791769.wem",
+      "CachePath": "SFX/Ambience/Cave_Bats_Ambience_ODY-1229-067_8F70E0F0.wem"
+     },
      {
       "Id": "734031120",
       "Language": "SFX",
@@ -32,15 +50,85 @@
       "ObjectPath": "\\Events\\Environment\\ENV_AMB_Play_AmbienceMain",
       "GUID": "{551300EA-C047-48F9-A1CA-75F08BC14E0B}",
       "DurationType": "Infinite",
-      "MediaRefs": [
+      "SwitchContainers": [
        {
-        "Id": "734031120"
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "3350070198",
+         "Id": "898834102",
+         "GUID": "{784F3057-5FEA-46E9-AC78-8E8DBAA9953E}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "734031120"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "3350070198",
+         "Id": "1537061107",
+         "GUID": "{A20A928E-9365-4639-A435-AB8770FD7425}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "175282985"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "3350070198",
+         "Id": "4122393694",
+         "GUID": "{A2A982D1-6137-48DC-A3D4-E75FF950ABC2}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "282791769"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "3350070198",
+      "Name": "Ambiance_States",
+      "ObjectPath": "\\States\\Default Work Unit\\Ambiance_States",
+      "GUID": "{FA5C0A06-CC03-439E-A634-38F9B1DCA444}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambiance_States\\None",
+        "GUID": "{0F92B5B9-7AD4-4529-BF3A-A1000EF93B39}"
+       },
+       {
+        "Id": "898834102",
+        "Name": "Ext",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambiance_States\\Ext",
+        "GUID": "{784F3057-5FEA-46E9-AC78-8E8DBAA9953E}"
+       },
+       {
+        "Id": "1537061107",
+        "Name": "Wind",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambiance_States\\Wind",
+        "GUID": "{A20A928E-9365-4639-A435-AB8770FD7425}"
+       },
+       {
+        "Id": "4122393694",
+        "Name": "Cave",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambiance_States\\Cave",
+        "GUID": "{A2A982D1-6137-48DC-A3D4-E75FF950ABC2}"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{7B35A6C3-C576-EB1A-1646-131A7F4A0FB4}"
+  "FileHash": "{AE32C55C-706D-7AB5-E9E7-571B9045420A}"
  }
 }
