@@ -8,7 +8,13 @@ echo.
 
 
 
+:: Unreal Engine installation directory
 set UEPATH=
+
+:: finding installation directory
+powershell -command "& { (Get-ItemProperty 'Registry::HKEY_CURRENT_USER\Software\Epic Games\Unreal Engine\Builds' -Name '{SKR_UE_5.2}' ).'{SKR_UE_5.2}' }" >path.txt
+set /p UEPATH=<path.txt
+DEL path.txt
 
 if "%UEPATH%" == "" (
 :: will not process, if the dir was not found, the powershell command will fail
@@ -42,8 +48,8 @@ set /p CONFIGURATION="Enter package configuration (Development+Test+Shipping)>"
 
 
 
-:: basic cook
-call %UEE% %~dp0%PROJECT% -run=cook -targetplatform=%PLATFORMS% -cookonthefly -iterate
+:: basic cook (no need with dynamic lighting)
+::call %UEE% %~dp0%PROJECT% -run=cook -targetplatform=%PLATFORMS% -cookonthefly -iterate
 
 :: build C++ game code
 call %UAT% BuildGame -project=%~dp0%PROJECT% -platform=%PLATFORMS% -clean -build
