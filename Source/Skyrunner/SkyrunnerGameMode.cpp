@@ -9,6 +9,8 @@
 #include "Engine/LevelStreaming.h"
 
 
+#include "TimeManagement/TimeSlippage.h"
+
 #include "Utils/DebugLog.h"
 
 
@@ -18,7 +20,19 @@ ASkyrunnerGameMode::ASkyrunnerGameMode()
 	// set default pawn class to our Blueprinted character
 	//static ConstructorHelpers::FClassFinder<APawn> PlayerPawnClassFinder(TEXT("/Game/FirstPerson/Blueprints/BP_FirstPersonCharacter"));
 	//DefaultPawnClass = PlayerPawnClassFinder.Class;
+}
 
+void ASkyrunnerGameMode::StartPlay()
+{
+	// TODO : find a way to spawn BP
+	//if (timeSlippage)
+	//	GetWorld()->SpawnActor<ATimeSlippage>(timeSlippage->GetClass());
+	//if (actorPooled)
+	//	GetWorld()->SpawnActor<AActor>(actorPooled->GetClass(),
+	//		FVector(0.f, 0.f, 0.f),
+	//		FRotator(0.f, 0.f, 0.f));
+
+	Super::StartPlay();
 }
 
 void ASkyrunnerGameMode::ResetPlayer(const bool bDestroyPlayerBeforeReset,
@@ -33,7 +47,7 @@ void ASkyrunnerGameMode::ResetPlayer(const bool bDestroyPlayerBeforeReset,
 #else
 		player->Destroy();
 #endif
-	}
+}
 
 	auto controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
 	if (PlayerStartTag == "None")

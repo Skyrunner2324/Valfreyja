@@ -18,11 +18,21 @@ class ASkyrunnerGameMode : public AGameModeBase
 	GENERATED_BODY()
 
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<class ATimeSlippage> timeSlippage;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<AActor> actorPooled;
+
+
+public:
 	UPROPERTY(BlueprintAssignable)
 	FOnPlayerReset OnPlayerResetEvent;
 
 
 	ASkyrunnerGameMode();
+
+
+	virtual void StartPlay() override;
 
 
 
