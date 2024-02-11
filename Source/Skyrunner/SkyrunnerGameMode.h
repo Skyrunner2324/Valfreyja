@@ -19,9 +19,9 @@ class ASkyrunnerGameMode : public AGameModeBase
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSubclassOf<class ATimeSlippage> timeSlippage;
+	TSubclassOf<class ATimeSlippage> timeSlippageClass;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSubclassOf<AActor> actorPooled;
+	TSubclassOf<AActor> actorPooledClass;
 
 
 public:
@@ -34,6 +34,9 @@ public:
 
 	virtual void StartPlay() override;
 
+
+	UFUNCTION(BlueprintNativeEvent)
+	void SpawnMandatoryActors();
 
 
 	// TODO : upgrade

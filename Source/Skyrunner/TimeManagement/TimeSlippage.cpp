@@ -6,8 +6,8 @@
 #include "Kismet/GameplayStatics.h"
 
 #include "../Utils/DebugLog.h"
-
 #include "TimeSlippageModifier.h"
+#include "../SkyrunnerGameMode.h"
 
 
 ATimeSlippage::ATimeSlippage()
@@ -42,7 +42,14 @@ void ATimeSlippage::Tick(float DeltaTime)
 
 ATimeSlippage* ATimeSlippage::Get(UWorld* world)
 {
-	return Cast<ATimeSlippage>(UGameplayStatics::GetActorOfClass(world, ATimeSlippage::StaticClass()));
+	AActor* instance = UGameplayStatics::GetActorOfClass(world, ATimeSlippage::StaticClass());
+	if (!instance)
+	{
+		ASkyrunnerGameMode* gm = world->GetAuthGameMode<ASkyrunnerGameMode>();
+		gm->SpawnMandatoryActors();
+		instance = UGameplayStatics::GetActorOfClass(world, ATimeSlippage::StaticClass());
+	}
+	return Cast<ATimeSlippage>(instance);
 }
 
 void ATimeSlippage::SetGlobalTimeScale(const float newScale)

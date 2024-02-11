@@ -35,6 +35,11 @@ void ASkyrunnerGameMode::StartPlay()
 	Super::StartPlay();
 }
 
+void ASkyrunnerGameMode::SpawnMandatoryActors_Implementation()
+{
+	DebugLogRed(TEXT("blueprint implementation required"));
+}
+
 void ASkyrunnerGameMode::ResetPlayer(const bool bDestroyPlayerBeforeReset,
 	const FString PlayerStartTag)
 {
@@ -47,7 +52,7 @@ void ASkyrunnerGameMode::ResetPlayer(const bool bDestroyPlayerBeforeReset,
 #else
 		player->Destroy();
 #endif
-}
+	}
 
 	auto controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
 	if (PlayerStartTag == "None")
