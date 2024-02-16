@@ -1,52 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{A6303F26-6B11-21E9-294E-DFB5E96F5FE4}">
+		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{81F4591D-1904-5EFC-B0A2-E5FF8488393D}">
 			<ObjectPath>SX_player_land</ObjectPath>
 			<ShortName>SX_player_land</ShortName>
 			<Path>Event/SX_player_land.bnk</Path>
 			<Media>
-				<File Id="129424093" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\player_slide.wav</ShortName>
-					<Path>Media/129424093.wem</Path>
-					<CachePath>SFX/Placeholders/player_slide_4DD066AC.wem</CachePath>
+				<File Id="104720702" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_land_02.wav</ShortName>
+					<Path>Media/104720702.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_land_02_755F56E2.wem</CachePath>
+				</File>
+				<File Id="167732480" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_land_01.wav</ShortName>
+					<Path>Media/167732480.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_land_01_755F56E2.wem</CachePath>
 				</File>
 			</Media>
-			<Plugins>
-				<Custom>
-					<Plugin Id="2084516" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_slide\Parametric EQ (Custom)" GUID="{777F4BD6-7318-4F9D-A7AF-0A87E8117460}" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="416403271" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_landing\Soundseed Air Woosh" GUID="{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
-				</Custom>
-			</Plugins>
 			<Events>
-				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.1875" DurationMax="0.3125">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="416403271"/>
-						</Custom>
-					</PluginRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="4125012149" Name="REV_SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}"/>
-					</AuxBusRefs>
-					<ActionPostEvent>
-						<ActionPostEventEntry Id="1882419246" Name="SX_player_slide" ObjectPath="\Events\Player\Movement\SX_player_slide" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}"/>
-					</ActionPostEvent>
-				</Event>
-				<Event Id="1882419246" Name="SX_player_slide" ObjectPath="\Events\Player\Movement\SX_player_slide" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}" DurationType="Infinite">
+				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.40641665" DurationMax="0.48891667">
 					<MediaRefs>
-						<MediaRef Id="129424093"/>
+						<MediaRef Id="104720702"/>
+						<MediaRef Id="167732480"/>
 					</MediaRefs>
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="2084516"/>
-						</Custom>
-					</PluginRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="4125012149" Name="REV_SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}"/>
-					</AuxBusRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D172DA91-2020-5FED-3488-A2DCB4F5CA9C}</FileHash>
+	<FileHash>{D1C573D6-0C66-049B-4F9B-3290521E8CBE}</FileHash>
 </SoundBanksInfo>

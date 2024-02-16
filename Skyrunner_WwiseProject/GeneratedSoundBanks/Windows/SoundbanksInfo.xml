@@ -59,49 +59,28 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{A6303F26-6B11-21E9-294E-DFB5E96F5FE4}">
+		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{81F4591D-1904-5EFC-B0A2-E5FF8488393D}">
 			<ObjectPath>SX_player_land</ObjectPath>
 			<ShortName>SX_player_land</ShortName>
 			<Path>Event/SX_player_land.bnk</Path>
 			<Media>
-				<File Id="129424093" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Placeholders\player_slide.wav</ShortName>
-					<Path>Media/129424093.wem</Path>
-					<CachePath>SFX/Placeholders/player_slide_4DD066AC.wem</CachePath>
+				<File Id="104720702" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_land_02.wav</ShortName>
+					<Path>Media/104720702.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_land_02_755F56E2.wem</CachePath>
+				</File>
+				<File Id="167732480" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_land_01.wav</ShortName>
+					<Path>Media/167732480.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_land_01_755F56E2.wem</CachePath>
 				</File>
 			</Media>
-			<Plugins>
-				<Custom>
-					<Plugin Id="2084516" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_slide\Parametric EQ (Custom)" GUID="{777F4BD6-7318-4F9D-A7AF-0A87E8117460}" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="416403271" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_landing\Soundseed Air Woosh" GUID="{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
-				</Custom>
-			</Plugins>
 			<Events>
-				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.1875" DurationMax="0.3125">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="416403271"/>
-						</Custom>
-					</PluginRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="4125012149" Name="REV_SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}"/>
-					</AuxBusRefs>
-					<ActionPostEvent>
-						<ActionPostEventEntry Id="1882419246" Name="SX_player_slide" ObjectPath="\Events\Player\Movement\SX_player_slide" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}"/>
-					</ActionPostEvent>
-				</Event>
-				<Event Id="1882419246" Name="SX_player_slide" ObjectPath="\Events\Player\Movement\SX_player_slide" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}" DurationType="Infinite">
+				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.40641665" DurationMax="0.48891667">
 					<MediaRefs>
-						<MediaRef Id="129424093"/>
+						<MediaRef Id="104720702"/>
+						<MediaRef Id="167732480"/>
 					</MediaRefs>
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="2084516"/>
-						</Custom>
-					</PluginRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="4125012149" Name="REV_SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}"/>
-					</AuxBusRefs>
 				</Event>
 			</Events>
 		</SoundBank>
@@ -482,37 +461,42 @@
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1200988362" Type="Event" GUID="{2278516D-BA2F-4D5D-93F6-5353DF4E1405}" Language="SFX" Hash="{25F8F6C5-0840-0703-8BEC-1D8BB9D8206A}">
+		<SoundBank Id="1200988362" Type="Event" GUID="{2278516D-BA2F-4D5D-93F6-5353DF4E1405}" Language="SFX" Hash="{46069642-A0F5-B6E3-1257-FD3A1E4A04F6}">
 			<ObjectPath>SX_player_hit</ObjectPath>
 			<ShortName>SX_player_hit</ShortName>
 			<Path>Event/SX_player_hit.bnk</Path>
 			<Media>
-				<File Id="9139863" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Distorted Kick.wav</ShortName>
-					<Path>Media/9139863.wem</Path>
-					<CachePath>SFX/Distorted Kick_755F56E2.wem</CachePath>
+				<File Id="20424467" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_hit_04.wav</ShortName>
+					<Path>Media/20424467.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_hit_04_755F56E2.wem</CachePath>
+				</File>
+				<File Id="579807937" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_hit_03.wav</ShortName>
+					<Path>Media/579807937.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_hit_03_755F56E2.wem</CachePath>
+				</File>
+				<File Id="668245997" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_hit_01.wav</ShortName>
+					<Path>Media/668245997.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_hit_01_755F56E2.wem</CachePath>
+				</File>
+				<File Id="1003796293" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_hit_02.wav</ShortName>
+					<Path>Media/1003796293.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_hit_02_755F56E2.wem</CachePath>
 				</File>
 			</Media>
-			<Plugins>
-				<ShareSets>
-					<Plugin Id="3487820010" Name="One_Tap_Half_Second" ObjectPath="\Effects\Factory Effects\Delay\One_Tap_Half_Second" GUID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" LibName="Wwise Delay" LibId="6946819"/>
-				</ShareSets>
-			</Plugins>
 			<Events>
-				<Event Id="1200988362" Name="SX_player_hit" ObjectPath="\Events\Player\Feedback\SX_player_hit" GUID="{2278516D-BA2F-4D5D-93F6-5353DF4E1405}" DurationType="OneShot" DurationMin="0.39012292" DurationMax="0.39012292">
+				<Event Id="1200988362" Name="SX_player_hit" ObjectPath="\Events\Player\Feedback\SX_player_hit" GUID="{2278516D-BA2F-4D5D-93F6-5353DF4E1405}" DurationType="OneShot" DurationMin="0.5405833" DurationMax="0.71510416">
 					<MediaRefs>
-						<MediaRef Id="9139863"/>
+						<MediaRef Id="20424467"/>
+						<MediaRef Id="579807937"/>
+						<MediaRef Id="668245997"/>
+						<MediaRef Id="1003796293"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3487820010"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 			</Events>
-			<GameParameters>
-				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
-			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="1219048826" Type="Event" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" Language="SFX" Hash="{0CA8F6C9-241A-1015-C0AB-9811BF4D7E28}">
 			<ObjectPath>UI_start</ObjectPath>
@@ -596,7 +580,7 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{7E820E4E-80A8-6685-6624-5FE0E425F59E}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{D16AC001-B748-1368-BFE3-119A05A3D1B6}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -1879,5 +1863,5 @@
 			</AuxBusses>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4EBCD5CE-417D-7E1F-431E-68542E26B90C}</FileHash>
+	<FileHash>{D2F8D327-DDBA-9A37-37A1-10E05F556E81}</FileHash>
 </SoundBanksInfo>

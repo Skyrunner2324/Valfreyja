@@ -116,41 +116,30 @@
     "Type": "Event",
     "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
     "Language": "SFX",
-    "Hash": "{A6303F26-6B11-21E9-294E-DFB5E96F5FE4}",
+    "Hash": "{81F4591D-1904-5EFC-B0A2-E5FF8488393D}",
     "ObjectPath": "SX_player_land",
     "ShortName": "SX_player_land",
     "Path": "Event/SX_player_land.bnk",
     "Media": [
      {
-      "Id": "129424093",
+      "Id": "104720702",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Placeholders\\player_slide.wav",
-      "Path": "Media/129424093.wem",
-      "CachePath": "SFX/Placeholders/player_slide_4DD066AC.wem"
+      "ShortName": "Player_Feedback\\player_feedback_land_02.wav",
+      "Path": "Media/104720702.wem",
+      "CachePath": "SFX/Player_Feedback/player_feedback_land_02_755F56E2.wem"
+     },
+     {
+      "Id": "167732480",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Feedback\\player_feedback_land_01.wav",
+      "Path": "Media/167732480.wem",
+      "CachePath": "SFX/Player_Feedback/player_feedback_land_01_755F56E2.wem"
      }
     ],
-    "Plugins": {
-     "Custom": [
-      {
-       "Id": "2084516",
-       "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_slide\\Parametric EQ (Custom)",
-       "GUID": "{777F4BD6-7318-4F9D-A7AF-0A87E8117460}",
-       "LibName": "Wwise Parametric EQ",
-       "LibId": "6881283"
-      },
-      {
-       "Id": "416403271",
-       "Name": "Soundseed Air Woosh",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_landing\\Soundseed Air Woosh",
-       "GUID": "{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}",
-       "LibName": "SoundSeed Air Woosh",
-       "LibId": "7864322"
-      }
-     ]
-    },
     "Events": [
      {
       "Id": "357563848",
@@ -158,56 +147,14 @@
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_land",
       "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
       "DurationType": "OneShot",
-      "DurationMin": "0.1875",
-      "DurationMax": "0.3125",
-      "PluginRefs": {
-       "Custom": [
-        {
-         "Id": "416403271"
-        }
-       ]
-      },
-      "AuxBusRefs": [
-       {
-        "Id": "4125012149",
-        "Name": "REV_SmallRoom",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom",
-        "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}"
-       }
-      ],
-      "ActionPostEvent": [
-       {
-        "Id": "1882419246",
-        "Name": "SX_player_slide",
-        "ObjectPath": "\\Events\\Player\\Movement\\SX_player_slide",
-        "GUID": "{18C2192F-4C95-4001-A9A0-979E3F100C3A}"
-       }
-      ]
-     },
-     {
-      "Id": "1882419246",
-      "Name": "SX_player_slide",
-      "ObjectPath": "\\Events\\Player\\Movement\\SX_player_slide",
-      "GUID": "{18C2192F-4C95-4001-A9A0-979E3F100C3A}",
-      "DurationType": "Infinite",
+      "DurationMin": "0.40641665",
+      "DurationMax": "0.48891667",
       "MediaRefs": [
        {
-        "Id": "129424093"
-       }
-      ],
-      "PluginRefs": {
-       "Custom": [
-        {
-         "Id": "2084516"
-        }
-       ]
-      },
-      "AuxBusRefs": [
+        "Id": "104720702"
+       },
        {
-        "Id": "4125012149",
-        "Name": "REV_SmallRoom",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom",
-        "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}"
+        "Id": "167732480"
        }
       ]
      }
@@ -1012,33 +959,48 @@
     "Type": "Event",
     "GUID": "{2278516D-BA2F-4D5D-93F6-5353DF4E1405}",
     "Language": "SFX",
-    "Hash": "{25F8F6C5-0840-0703-8BEC-1D8BB9D8206A}",
+    "Hash": "{46069642-A0F5-B6E3-1257-FD3A1E4A04F6}",
     "ObjectPath": "SX_player_hit",
     "ShortName": "SX_player_hit",
     "Path": "Event/SX_player_hit.bnk",
     "Media": [
      {
-      "Id": "9139863",
+      "Id": "20424467",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Distorted Kick.wav",
-      "Path": "Media/9139863.wem",
-      "CachePath": "SFX/Distorted Kick_755F56E2.wem"
+      "ShortName": "Player_Feedback\\player_feedback_hit_04.wav",
+      "Path": "Media/20424467.wem",
+      "CachePath": "SFX/Player_Feedback/player_feedback_hit_04_755F56E2.wem"
+     },
+     {
+      "Id": "579807937",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Feedback\\player_feedback_hit_03.wav",
+      "Path": "Media/579807937.wem",
+      "CachePath": "SFX/Player_Feedback/player_feedback_hit_03_755F56E2.wem"
+     },
+     {
+      "Id": "668245997",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Feedback\\player_feedback_hit_01.wav",
+      "Path": "Media/668245997.wem",
+      "CachePath": "SFX/Player_Feedback/player_feedback_hit_01_755F56E2.wem"
+     },
+     {
+      "Id": "1003796293",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Feedback\\player_feedback_hit_02.wav",
+      "Path": "Media/1003796293.wem",
+      "CachePath": "SFX/Player_Feedback/player_feedback_hit_02_755F56E2.wem"
      }
     ],
-    "Plugins": {
-     "ShareSets": [
-      {
-       "Id": "3487820010",
-       "Name": "One_Tap_Half_Second",
-       "ObjectPath": "\\Effects\\Factory Effects\\Delay\\One_Tap_Half_Second",
-       "GUID": "{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}",
-       "LibName": "Wwise Delay",
-       "LibId": "6946819"
-      }
-     ]
-    },
     "Events": [
      {
       "Id": "1200988362",
@@ -1046,28 +1008,22 @@
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_hit",
       "GUID": "{2278516D-BA2F-4D5D-93F6-5353DF4E1405}",
       "DurationType": "OneShot",
-      "DurationMin": "0.39012292",
-      "DurationMax": "0.39012292",
+      "DurationMin": "0.5405833",
+      "DurationMax": "0.71510416",
       "MediaRefs": [
        {
-        "Id": "9139863"
+        "Id": "20424467"
+       },
+       {
+        "Id": "579807937"
+       },
+       {
+        "Id": "668245997"
+       },
+       {
+        "Id": "1003796293"
        }
-      ],
-      "PluginRefs": {
-       "ShareSets": [
-        {
-         "Id": "3487820010"
-        }
-       ]
-      }
-     }
-    ],
-    "GameParameters": [
-     {
-      "Id": "2565740352",
-      "Name": "RTPC_SlowMo",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
-      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
+      ]
      }
     ]
    },
@@ -1256,7 +1212,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{AC5A020D-E555-B4BB-5D97-7E59E0149755}",
+    "Hash": "{27854536-D5FB-3EBA-7FF3-3618747B4B8D}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -4347,6 +4303,6 @@
     ]
    }
   ],
-  "FileHash": "{8322BE7F-193E-D638-307F-AF73A5FF9066}"
+  "FileHash": "{F9734495-95C3-85A8-51A3-42EE543B9835}"
  }
 }

@@ -10,41 +10,30 @@
     "Type": "Event",
     "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
     "Language": "SFX",
-    "Hash": "{A6303F26-6B11-21E9-294E-DFB5E96F5FE4}",
+    "Hash": "{81F4591D-1904-5EFC-B0A2-E5FF8488393D}",
     "ObjectPath": "SX_player_land",
     "ShortName": "SX_player_land",
     "Path": "Event/SX_player_land.bnk",
     "Media": [
      {
-      "Id": "129424093",
+      "Id": "104720702",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Placeholders\\player_slide.wav",
-      "Path": "Media/129424093.wem",
-      "CachePath": "SFX/Placeholders/player_slide_4DD066AC.wem"
+      "ShortName": "Player_Feedback\\player_feedback_land_02.wav",
+      "Path": "Media/104720702.wem",
+      "CachePath": "SFX/Player_Feedback/player_feedback_land_02_755F56E2.wem"
+     },
+     {
+      "Id": "167732480",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Feedback\\player_feedback_land_01.wav",
+      "Path": "Media/167732480.wem",
+      "CachePath": "SFX/Player_Feedback/player_feedback_land_01_755F56E2.wem"
      }
     ],
-    "Plugins": {
-     "Custom": [
-      {
-       "Id": "2084516",
-       "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_slide\\Parametric EQ (Custom)",
-       "GUID": "{777F4BD6-7318-4F9D-A7AF-0A87E8117460}",
-       "LibName": "Wwise Parametric EQ",
-       "LibId": "6881283"
-      },
-      {
-       "Id": "416403271",
-       "Name": "Soundseed Air Woosh",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_landing\\Soundseed Air Woosh",
-       "GUID": "{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}",
-       "LibName": "SoundSeed Air Woosh",
-       "LibId": "7864322"
-      }
-     ]
-    },
     "Events": [
      {
       "Id": "357563848",
@@ -52,62 +41,20 @@
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_land",
       "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
       "DurationType": "OneShot",
-      "DurationMin": "0.1875",
-      "DurationMax": "0.3125",
-      "PluginRefs": {
-       "Custom": [
-        {
-         "Id": "416403271"
-        }
-       ]
-      },
-      "AuxBusRefs": [
-       {
-        "Id": "4125012149",
-        "Name": "REV_SmallRoom",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom",
-        "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}"
-       }
-      ],
-      "ActionPostEvent": [
-       {
-        "Id": "1882419246",
-        "Name": "SX_player_slide",
-        "ObjectPath": "\\Events\\Player\\Movement\\SX_player_slide",
-        "GUID": "{18C2192F-4C95-4001-A9A0-979E3F100C3A}"
-       }
-      ]
-     },
-     {
-      "Id": "1882419246",
-      "Name": "SX_player_slide",
-      "ObjectPath": "\\Events\\Player\\Movement\\SX_player_slide",
-      "GUID": "{18C2192F-4C95-4001-A9A0-979E3F100C3A}",
-      "DurationType": "Infinite",
+      "DurationMin": "0.40641665",
+      "DurationMax": "0.48891667",
       "MediaRefs": [
        {
-        "Id": "129424093"
-       }
-      ],
-      "PluginRefs": {
-       "Custom": [
-        {
-         "Id": "2084516"
-        }
-       ]
-      },
-      "AuxBusRefs": [
+        "Id": "104720702"
+       },
        {
-        "Id": "4125012149",
-        "Name": "REV_SmallRoom",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom",
-        "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}"
+        "Id": "167732480"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{07895337-5601-6443-490D-578CAC9E97A9}"
+  "FileHash": "{3909338F-72F7-B4B3-D92C-74A378EF2426}"
  }
 }
