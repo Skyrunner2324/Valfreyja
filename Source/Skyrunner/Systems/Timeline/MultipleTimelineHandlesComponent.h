@@ -7,7 +7,7 @@
 #include "MultipleTimelineHandlesComponent.generated.h"
 
 
-UCLASS( Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS(Blueprintable, ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class SKYRUNNER_API UMultipleTimelineHandlesComponent : public UActorComponent
 {
 	GENERATED_BODY()
@@ -23,7 +23,16 @@ protected:
 		if (instancedHandles.IsEmpty())
 			return nullptr;
 
-		return *instancedHandles.Find(timelineName);
+		auto th = instancedHandles.Find(timelineName);
+		if (th)
+		{
+			return *th;
+		}
+		else
+		{
+			check(th);
+			return nullptr;
+		}
 	}
 
 
@@ -40,7 +49,7 @@ protected:
 	virtual void BeginPlay() override;
 
 
-public:	
+public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
