@@ -18,10 +18,14 @@ void ABulletBase::BeginPlay()
 	
 }
 
+void ABulletBase::ResetActor()
+{
+	AActor::Reset();
+}
+
 // Called every frame
 void ABulletBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
 }
-
