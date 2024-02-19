@@ -4,8 +4,8 @@
 
 FMatrix UFOVFreeSkeletalMeshComponent::GetRenderMatrix() const
 {
-	FMatrix InverseOldViewProjectionMatrix;
-	FMatrix NewViewProjectionMatrix;
+	FMatrix InverseOldViewProjectionMatrix = FMatrix::Identity;
+	FMatrix NewViewProjectionMatrix = FMatrix::Identity;
 
 	const FMatrix ModelMatrix = GetComponentTransform().ToMatrixWithScale();
 

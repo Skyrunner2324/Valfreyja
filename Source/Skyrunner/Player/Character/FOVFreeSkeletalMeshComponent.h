@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable, ClassGroup = (Rendering), meta = (BlueprintSpawnableComponent))
 class SKYRUNNER_API UFOVFreeSkeletalMeshComponent : public USkeletalMeshComponent
 {
 	GENERATED_BODY()
