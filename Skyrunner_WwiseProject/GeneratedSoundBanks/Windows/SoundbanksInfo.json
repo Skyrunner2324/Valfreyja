@@ -116,30 +116,22 @@
     "Type": "Event",
     "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
     "Language": "SFX",
-    "Hash": "{81F4591D-1904-5EFC-B0A2-E5FF8488393D}",
+    "Hash": "{1090E379-8D73-D1A6-AF80-EC922EE7D4FA}",
     "ObjectPath": "SX_player_land",
     "ShortName": "SX_player_land",
     "Path": "Event/SX_player_land.bnk",
-    "Media": [
-     {
-      "Id": "104720702",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Player_Feedback\\player_feedback_land_02.wav",
-      "Path": "Media/104720702.wem",
-      "CachePath": "SFX/Player_Feedback/player_feedback_land_02_755F56E2.wem"
-     },
-     {
-      "Id": "167732480",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Player_Feedback\\player_feedback_land_01.wav",
-      "Path": "Media/167732480.wem",
-      "CachePath": "SFX/Player_Feedback/player_feedback_land_01_755F56E2.wem"
-     }
-    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "416403271",
+       "Name": "Soundseed Air Woosh",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\game_landing\\Soundseed Air Woosh",
+       "GUID": "{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}",
+       "LibName": "SoundSeed Air Woosh",
+       "LibId": "7864322"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "357563848",
@@ -147,14 +139,21 @@
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_land",
       "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
       "DurationType": "OneShot",
-      "DurationMin": "0.40641665",
-      "DurationMax": "0.48891667",
-      "MediaRefs": [
+      "DurationMin": "0.1875",
+      "DurationMax": "0.3125",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "416403271"
+        }
+       ]
+      },
+      "AuxBusRefs": [
        {
-        "Id": "104720702"
-       },
-       {
-        "Id": "167732480"
+        "Id": "4125012149",
+        "Name": "REV_SmallRoom",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom",
+        "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}"
        }
       ]
      }
@@ -620,11 +619,20 @@
     "Type": "Event",
     "GUID": "{C2635664-3DF8-496D-BA41-22C25299ACE8}",
     "Language": "SFX",
-    "Hash": "{38962489-21C9-C54D-B75E-C56AB02CB0C7}",
+    "Hash": "{906E07A9-3CEB-E18F-61F9-7B348563CC74}",
     "ObjectPath": "SX_player_weapon_impact",
     "ShortName": "SX_player_weapon_impact",
     "Path": "Event/SX_player_weapon_impact.bnk",
     "Media": [
+     {
+      "Id": "637250404",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "SX_player_weapon_electric_impact.wav",
+      "Path": "Media/637250404.wem",
+      "CachePath": "SFX/SX_player_weapon_electric_impact_755F56E2.wem"
+     },
      {
       "Id": "991022554",
       "Language": "SFX",
@@ -642,9 +650,12 @@
       "ObjectPath": "\\Events\\Player\\Weapon\\SX_player_weapon_impact",
       "GUID": "{C2635664-3DF8-496D-BA41-22C25299ACE8}",
       "DurationType": "OneShot",
-      "DurationMin": "0.16211832",
+      "DurationMin": "0.25214583",
       "DurationMax": "0.34630594",
       "MediaRefs": [
+       {
+        "Id": "637250404"
+       },
        {
         "Id": "991022554"
        }
@@ -798,7 +809,7 @@
     "Type": "Event",
     "GUID": "{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}",
     "Language": "SFX",
-    "Hash": "{0BB15CCD-378B-8530-C51B-637590CD8064}",
+    "Hash": "{957B0DAF-5431-DD5B-316E-E43F4C2A285A}",
     "ObjectPath": "SX_player_shoot",
     "ShortName": "SX_player_shoot",
     "Path": "Event/SX_player_shoot.bnk",
@@ -840,6 +851,15 @@
       "CachePath": "SFX/Player_Weapon/02_Loop_C5A498CD.wem"
      },
      {
+      "Id": "626614084",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "player_electric_shoot.wav",
+      "Path": "Media/626614084.wem",
+      "CachePath": "SFX/player_electric_shoot_755F56E2.wem"
+     },
+     {
       "Id": "631171215",
       "Language": "SFX",
       "Streaming": "false",
@@ -855,7 +875,7 @@
       "Location": "Loose",
       "ShortName": "Player_Weapon\\player_weapon_shoot_smg_tail_far.wav",
       "Path": "Media/758486105.wem",
-      "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_tail_far_2C468A89.wem"
+      "CachePath": "SFX/Player_Weapon/player_weapon_shoot_smg_tail_far_3740919B.wem"
      },
      {
       "Id": "867861264",
@@ -901,8 +921,8 @@
       "ObjectPath": "\\Events\\Player\\Weapon\\SX_player_shoot",
       "GUID": "{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}",
       "DurationType": "OneShot",
-      "DurationMin": "2.2916667",
-      "DurationMax": "2.2916667",
+      "DurationMin": "1.5014368",
+      "DurationMax": "1.5014368",
       "MediaRefs": [
        {
         "Id": "115262851"
@@ -915,6 +935,9 @@
        },
        {
         "Id": "550411134"
+       },
+       {
+        "Id": "626614084"
        },
        {
         "Id": "631171215"
@@ -1212,7 +1235,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{D16AC001-B748-1368-BFE3-119A05A3D1B6}",
+    "Hash": "{31DC6003-026C-BB8A-6868-5365655C1543}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -2758,11 +2781,29 @@
     "Type": "Event",
     "GUID": "{6BE02D09-9271-46A7-BAA0-E99F5C869C80}",
     "Language": "SFX",
-    "Hash": "{E0BD4F8A-C7F0-837A-7E20-0E50E467E292}",
+    "Hash": "{B4DF2194-CB92-A18C-BA3F-0974A5855309}",
     "ObjectPath": "SX_player_feedback_hitmarker",
     "ShortName": "SX_player_feedback_hitmarker",
     "Path": "Event/SX_player_feedback_hitmarker.bnk",
     "Media": [
+     {
+      "Id": "286758640",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Feedback\\Phil Michalski - UI - Glitchy Counter.wav",
+      "Path": "Media/286758640.wem",
+      "CachePath": "SFX/Player_Feedback/Phil Michalski - UI - Glitchy Counter_BFC2DA86.wem"
+     },
+     {
+      "Id": "705588773",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Feedback\\Phil Michalski - UI - Glitchy Counter.wav",
+      "Path": "Media/705588773.wem",
+      "CachePath": "SFX/Player_Feedback/Phil Michalski - UI - Glitchy Counter_E00A41F1.wem"
+     },
      {
       "Id": "802440363",
       "Language": "SFX",
@@ -2770,7 +2811,7 @@
       "Location": "Loose",
       "ShortName": "Player_Feedback\\Phil Michalski - UI - Glitchy Counter.wav",
       "Path": "Media/802440363.wem",
-      "CachePath": "SFX/Player_Feedback/Phil Michalski - UI - Glitchy Counter_755F56E2.wem"
+      "CachePath": "SFX/Player_Feedback/Phil Michalski - UI - Glitchy Counter_7B8D4ABF.wem"
      }
     ],
     "Events": [
@@ -2780,9 +2821,15 @@
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_feedback_hitmarker",
       "GUID": "{6BE02D09-9271-46A7-BAA0-E99F5C869C80}",
       "DurationType": "OneShot",
-      "DurationMin": "0.5302933",
-      "DurationMax": "1.2112772",
+      "DurationMin": "0.13631363",
+      "DurationMax": "0.2980729",
       "MediaRefs": [
+       {
+        "Id": "286758640"
+       },
+       {
+        "Id": "705588773"
+       },
        {
         "Id": "802440363"
        }
@@ -4307,7 +4354,7 @@
     "Type": "Event",
     "GUID": "{85C76F44-04BA-441A-8CA9-3FD5F40AA44C}",
     "Language": "SFX",
-    "Hash": "{1C3A6A01-8755-D104-90C5-CEE89AE33A10}",
+    "Hash": "{2820556A-491E-97AA-7C8C-E01CAEF61292}",
     "ObjectPath": "SF_player_feedback_land",
     "ShortName": "SF_player_feedback_land",
     "Path": "Event/SF_player_feedback_land.bnk",
@@ -4335,7 +4382,7 @@
      {
       "Id": "4250510672",
       "Name": "SF_player_feedback_land",
-      "ObjectPath": "\\Events\\Player\\Movement\\SF_player_feedback_land",
+      "ObjectPath": "\\Events\\Player\\Feedback\\SF_player_feedback_land",
       "GUID": "{85C76F44-04BA-441A-8CA9-3FD5F40AA44C}",
       "DurationType": "OneShot",
       "DurationMin": "0.40641665",
@@ -4352,6 +4399,6 @@
     ]
    }
   ],
-  "FileHash": "{16D26D1E-5C76-B5EB-6B96-8486BD29F247}"
+  "FileHash": "{2E369EAC-A90F-420E-B013-188248B1380C}"
  }
 }

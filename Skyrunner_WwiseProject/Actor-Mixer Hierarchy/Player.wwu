@@ -878,6 +878,11 @@
 									<ChildrenList>
 										<RandomSequenceContainer Name="smg_close" ID="{3D09ABD7-674B-4B59-9F87-54F7BD2BA721}" ShortID="137205799">
 											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-96</Value>
+													</ValueList>
+												</Property>
 												<Property Name="OverrideEffect" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
@@ -982,6 +987,11 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="smg_mech" ID="{57268E80-4F44-4BE9-995A-8E305D39DC26}" ShortID="785310138">
 											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-96</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -1138,6 +1148,11 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="smg_sub" ID="{4F09C6E0-DBC0-4C55-A162-D1F81593770B}" ShortID="911926143">
 											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-96</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-10</Value>
@@ -1184,6 +1199,11 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="smg_tail" ID="{3E155501-0EB5-46EE-89FB-01F89CB57414}" ShortID="694831696">
 											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-96</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>5</Value>
@@ -1220,7 +1240,9 @@
 															<PropertyList>
 																<Property Name="FadeInDuration" Type="Real64" Value="0.0150273224043716"/>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.882855191256831"/>
+																<Property Name="FadeOutShape" Type="int16" Value="2"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.50143678160918"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Player_Weapon\player_weapon_shoot_smg_tail_far.wav</AudioFile>
@@ -1279,205 +1301,7 @@
 												</ObjectList>
 											</ObjectLists>
 										</RandomSequenceContainer>
-									</ChildrenList>
-								</BlendContainer>
-								<RandomSequenceContainer Name="bullet_impact" ID="{04A7AAC6-41DD-400B-9974-8C23F2BBF023}" ShortID="980626936">
-									<PropertyList>
-										<Property Name="3DSpatialization" Type="int16" Value="2"/>
-										<Property Name="Highpass" Type="int16">
-											<ValueList>
-												<Value>20</Value>
-											</ValueList>
-										</Property>
-										<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
-										<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-10</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Attenuation">
-											<Custom>
-												<Attenuation Name="Attenuation (Custom)" ID="{BF1BC37E-43E5-4398-832B-B668D7EE7752}" ShortID="337327336">
-													<PropertyList>
-														<Property Name="RadiusMax" Type="Real64" Value="30000"/>
-													</PropertyList>
-													<CurveUsageInfoList>
-														<VolumeDryUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																<Curve Name="VolumeDry" ID="{FB5D27E8-8FD1-4D4E-9C00-8D0ECE55D964}">
-																	<PropertyList>
-																		<Property Name="Flags" Type="int32" Value="3"/>
-																	</PropertyList>
-																	<PointList>
-																		<Point>
-																			<XPos>0</XPos>
-																			<YPos>0</YPos>
-																			<Flags>5</Flags>
-																		</Point>
-																		<Point>
-																			<XPos>12446.48318</XPos>
-																			<YPos>-10.02665</YPos>
-																			<Flags>0</Flags>
-																		</Point>
-																		<Point>
-																			<XPos>30000</XPos>
-																			<YPos>-200</YPos>
-																			<Flags>37</Flags>
-																		</Point>
-																	</PointList>
-																</Curve>
-															</CurveUsageInfo>
-														</VolumeDryUsage>
-														<VolumeWetGameUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-														</VolumeWetGameUsage>
-														<VolumeWetUserUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
-														</VolumeWetUserUsage>
-														<LowPassFilterUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																<Curve Name="LowPassFilter" ID="{465BB491-4295-48D7-AB5E-DA326939CE2D}">
-																	<PropertyList>
-																		<Property Name="Flags" Type="int32" Value="65537"/>
-																	</PropertyList>
-																	<PointList>
-																		<Point>
-																			<XPos>0</XPos>
-																			<YPos>0</YPos>
-																			<Flags>5</Flags>
-																		</Point>
-																		<Point>
-																			<XPos>30000</XPos>
-																			<YPos>57</YPos>
-																			<Flags>37</Flags>
-																		</Point>
-																	</PointList>
-																</Curve>
-															</CurveUsageInfo>
-														</LowPassFilterUsage>
-														<HighPassFilterUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																<Curve Name="HighPassFilter" ID="{8473ED20-3936-449A-8902-0D52EE8F0182}">
-																	<PropertyList>
-																		<Property Name="Flags" Type="int32" Value="65537"/>
-																	</PropertyList>
-																	<PointList>
-																		<Point>
-																			<XPos>0</XPos>
-																			<YPos>0</YPos>
-																			<Flags>5</Flags>
-																		</Point>
-																		<Point>
-																			<XPos>30000</XPos>
-																			<YPos>35</YPos>
-																			<Flags>37</Flags>
-																		</Point>
-																	</PointList>
-																</Curve>
-															</CurveUsageInfo>
-														</HighPassFilterUsage>
-														<SpreadUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																<Curve Name="Spread" ID="{22D9E3F5-1264-4466-B523-CC0428648322}">
-																	<PropertyList>
-																		<Property Name="Flags" Type="int32" Value="1"/>
-																	</PropertyList>
-																	<PointList>
-																		<Point>
-																			<XPos>0</XPos>
-																			<YPos>100</YPos>
-																			<Flags>5</Flags>
-																		</Point>
-																		<Point>
-																			<XPos>5045.87156</XPos>
-																			<YPos>20.26625</YPos>
-																			<Flags>0</Flags>
-																		</Point>
-																		<Point>
-																			<XPos>30000</XPos>
-																			<YPos>0</YPos>
-																			<Flags>37</Flags>
-																		</Point>
-																	</PointList>
-																</Curve>
-															</CurveUsageInfo>
-														</SpreadUsage>
-														<FocusUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-														</FocusUsage>
-														<ObstructionVolumeUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</ObstructionVolumeUsage>
-														<ObstructionLPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</ObstructionLPFUsage>
-														<ObstructionHPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</ObstructionHPFUsage>
-														<OcclusionVolumeUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</OcclusionVolumeUsage>
-														<OcclusionLPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</OcclusionLPFUsage>
-														<OcclusionHPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</OcclusionHPFUsage>
-														<DiffractionVolumeUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</DiffractionVolumeUsage>
-														<DiffractionLPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</DiffractionLPFUsage>
-														<DiffractionHPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</DiffractionHPFUsage>
-														<TransmissionVolumeUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</TransmissionVolumeUsage>
-														<TransmissionLPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</TransmissionLPFUsage>
-														<TransmissionHPFUsage>
-															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</TransmissionHPFUsage>
-													</CurveUsageInfoList>
-												</Attenuation>
-											</Custom>
-										</Reference>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="ENV Other" ID="{28DD99C7-6452-4B40-9D87-6E721A203EF0}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="bullet_impact_concrete_brick_01" ID="{83BDDAF0-EBAC-4443-A8B6-B282CD616491}" ShortID="897904223">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{B6438683-0308-422A-B067-906EC900C3C4}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="1187"/>
-																	<Property Name="Min" Type="Real64" Value="-127"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-10</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
+										<Sound Name="player_electric_shoot" ID="{75DC8FB1-9D24-4015-AFC7-52B2E0E36CC1}" ShortID="56187385">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -1487,29 +1311,20 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="PM_BBI_Bullet_Impact_Hit_Body_Flesh_25" ID="{E9AB18EE-ED18-47E1-8D67-8B615C43F2C7}">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0167768784153006"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.205135467896175"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.52694649931694"/>
-													</PropertyList>
+												<AudioFileSource Name="player_electric_shoot" ID="{58E02C22-B215-49B3-8FA0-C09A11F677C9}">
 													<Language>SFX</Language>
-													<AudioFile>PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav</AudioFile>
+													<AudioFile>player_electric_shoot.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="991022554"/>
+														<MediaID ID="626614084"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="PM_BBI_Bullet_Impact_Hit_Body_Flesh_25" ID="{E9AB18EE-ED18-47E1-8D67-8B615C43F2C7}" Platform="Linked"/>
+												<ActiveSource Name="player_electric_shoot" ID="{58E02C22-B215-49B3-8FA0-C09A11F677C9}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
-									<PositioningInfo>
-										<Position Name="" ID="{7447C2EF-305C-4E92-8DDB-78268299DD40}"/>
-									</PositioningInfo>
-								</RandomSequenceContainer>
+								</BlendContainer>
 								<Folder Name="game_weapon_checking_overheat" ID="{95397DB8-C6EC-436B-AA32-83F2D28306D8}" ShortID="944426958">
 									<ChildrenList>
 										<Folder Name="game_weapon_shoot" ID="{7EECDCFD-7B81-41C2-BA44-C6974ED0E576}" ShortID="42208823">
@@ -1871,6 +1686,99 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
+								<BlendContainer Name="bullet_impact" ID="{A9B32F80-E245-4234-BE0B-D087A0D55DB8}" ShortID="597209156">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>20</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="bullet_impact_concrete_brick_01" ID="{83BDDAF0-EBAC-4443-A8B6-B282CD616491}" ShortID="897904223">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{B6438683-0308-422A-B067-906EC900C3C4}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="1187"/>
+																	<Property Name="Min" Type="Real64" Value="-127"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-19</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PM_BBI_Bullet_Impact_Hit_Body_Flesh_25" ID="{E9AB18EE-ED18-47E1-8D67-8B615C43F2C7}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0167768784153006"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.205135467896175"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.52694649931694"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>PM_BBI_Bullet_Impact_Hit_Body_Flesh_25.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="991022554"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="PM_BBI_Bullet_Impact_Hit_Body_Flesh_25" ID="{E9AB18EE-ED18-47E1-8D67-8B615C43F2C7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SX_player_weapon_electric_impact" ID="{FA8D1E9B-513B-42CD-B7FE-8427FC5900CC}" ShortID="304052364">
+											<PropertyList>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SX_player_weapon_electric_impact" ID="{FF29A6FD-7606-48CA-A4EE-FBB062F4E76D}">
+													<Language>SFX</Language>
+													<AudioFile>SX_player_weapon_electric_impact.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="637250404"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SX_player_weapon_electric_impact" ID="{FF29A6FD-7606-48CA-A4EE-FBB062F4E76D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -2073,10 +1981,15 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Phil Michalski - UI - Glitchy Counter" ID="{F67D1182-04D7-49DE-8F17-25B2CD54B2A5}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0719137931034483"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.235218031609196"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Player_Feedback\Phil Michalski - UI - Glitchy Counter.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="802440363"/>
+												<MediaID ID="286758640"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -2102,10 +2015,15 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Phil Michalski - UI - Glitchy Counter" ID="{7B39D0D5-0EC9-4A3B-B3AF-698C49F1466F}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.155813218390805"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.250200071839081"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Player_Feedback\Phil Michalski - UI - Glitchy Counter.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="802440363"/>
+												<MediaID ID="705588773"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -2120,6 +2038,11 @@
 												<Value>1020</Value>
 											</ValueList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -2131,6 +2054,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Phil Michalski - UI - Glitchy Counter" ID="{B568B4B1-12CA-4577-B6A2-D39BB618F750}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.113863505747126"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.245705459770115"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Player_Feedback\Phil Michalski - UI - Glitchy Counter.wav</AudioFile>
 											<MediaIDList>
@@ -2309,6 +2237,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="player_feedback_land_01" ID="{2DAAB411-47BA-45B0-B35A-543E6E0E3749}" ShortID="890771413">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
