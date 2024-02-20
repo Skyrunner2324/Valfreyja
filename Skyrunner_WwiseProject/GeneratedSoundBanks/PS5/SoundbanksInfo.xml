@@ -701,6 +701,7 @@
 						<State Id="3352420404" Name="ArenaPhase1" ObjectPath="\States\Default Work Unit\Music_Selector\ArenaPhase1" GUID="{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"/>
 						<State Id="3352420407" Name="ArenaPhase2" ObjectPath="\States\Default Work Unit\Music_Selector\ArenaPhase2" GUID="{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"/>
 						<State Id="3814499265" Name="Explo" ObjectPath="\States\Default Work Unit\Music_Selector\Explo" GUID="{1FE92F27-401B-44A3-BFC0-65F192492AAB}"/>
+						<State Id="4033983175" Name="Breakcore" ObjectPath="\States\Default Work Unit\Music_Selector\Breakcore" GUID="{16E5D430-D692-45B9-B4C9-B90A05172B0B}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="3350070198" Name="Ambiance_States" ObjectPath="\States\Default Work Unit\Ambiance_States" GUID="{FA5C0A06-CC03-439E-A634-38F9B1DCA444}">
@@ -902,6 +903,7 @@
 						<State Id="3352420404" Name="ArenaPhase1" ObjectPath="\States\Default Work Unit\Music_Selector\ArenaPhase1" GUID="{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"/>
 						<State Id="3352420407" Name="ArenaPhase2" ObjectPath="\States\Default Work Unit\Music_Selector\ArenaPhase2" GUID="{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"/>
 						<State Id="3814499265" Name="Explo" ObjectPath="\States\Default Work Unit\Music_Selector\Explo" GUID="{1FE92F27-401B-44A3-BFC0-65F192492AAB}"/>
+						<State Id="4033983175" Name="Breakcore" ObjectPath="\States\Default Work Unit\Music_Selector\Breakcore" GUID="{16E5D430-D692-45B9-B4C9-B90A05172B0B}"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -976,7 +978,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{1E300A0D-B106-7E61-6E7F-9D4410127601}">
+		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{5888BCDB-60E8-C864-2806-2D52CBFA9496}">
 			<ObjectPath>SX_player_feedback_death</ObjectPath>
 			<ShortName>SX_player_feedback_death</ShortName>
 			<Path>Event/SX_player_feedback_death.bnk</Path>
@@ -1206,7 +1208,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{91843210-7E5A-CD30-5BDE-E4317462CB08}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{7049798D-E0AF-BD04-EA91-0B05158C0C4C}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -1621,6 +1623,11 @@
 					<Path>Media/993662789.wem</Path>
 					<CachePath>SFX/Music/Explo_Phase_04/Sky_Explo_Kick_073B4D0C.wem</CachePath>
 				</File>
+				<File Id="1002991839" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>break_the_sky.wav</ShortName>
+					<Path>Media/1002991839.wem</Path>
+					<CachePath>SFX/break_the_sky_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="1005378344" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\Nouveau dossier\Sky_Explo_Kick.wav</ShortName>
 					<Path>Media/1005378344.wem</Path>
@@ -1783,6 +1790,12 @@
 								<MediaRef Id="721774678"/>
 							</MediaRefs>
 						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1419563690" Id="4033983175" GUID="{16E5D430-D692-45B9-B4C9-B90A05172B0B}"/>
+							<MediaRefs>
+								<MediaRef Id="1002991839"/>
+							</MediaRefs>
+						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 			</Events>
@@ -1801,6 +1814,7 @@
 						<State Id="3352420404" Name="ArenaPhase1" ObjectPath="\States\Default Work Unit\Music_Selector\ArenaPhase1" GUID="{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"/>
 						<State Id="3352420407" Name="ArenaPhase2" ObjectPath="\States\Default Work Unit\Music_Selector\ArenaPhase2" GUID="{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"/>
 						<State Id="3814499265" Name="Explo" ObjectPath="\States\Default Work Unit\Music_Selector\Explo" GUID="{1FE92F27-401B-44A3-BFC0-65F192492AAB}"/>
+						<State Id="4033983175" Name="Breakcore" ObjectPath="\States\Default Work Unit\Music_Selector\Breakcore" GUID="{16E5D430-D692-45B9-B4C9-B90A05172B0B}"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -1865,7 +1879,7 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="4250510672" Type="Event" GUID="{85C76F44-04BA-441A-8CA9-3FD5F40AA44C}" Language="SFX" Hash="{2CB41A78-D92C-3AB2-77DB-5E099C55E267}">
+		<SoundBank Id="4250510672" Type="Event" GUID="{85C76F44-04BA-441A-8CA9-3FD5F40AA44C}" Language="SFX" Hash="{22716EC3-A041-7131-C2BC-5CC9D2163C49}">
 			<ObjectPath>SF_player_feedback_land</ObjectPath>
 			<ShortName>SF_player_feedback_land</ShortName>
 			<Path>Event/SF_player_feedback_land.bnk</Path>
@@ -1903,5 +1917,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B0DF1DD4-8842-9C9D-7393-A38C2E4D517A}</FileHash>
+	<FileHash>{5F5C9036-488A-CC41-A5D5-429056BB6CA0}</FileHash>
 </SoundBanksInfo>
