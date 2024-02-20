@@ -2,6 +2,11 @@
 
 #include "FOVFreeSkeletalMeshComponent.h"
 
+UFOVFreeSkeletalMeshComponent::UFOVFreeSkeletalMeshComponent()
+{
+	SetDepthPriorityGroup(ESceneDepthPriorityGroup::SDPG_MAX);
+}
+
 FMatrix UFOVFreeSkeletalMeshComponent::GetRenderMatrix() const
 {
 	FMatrix InverseOldViewProjectionMatrix = FMatrix::Identity;

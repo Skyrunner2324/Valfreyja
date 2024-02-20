@@ -14,4 +14,7 @@ class SKYRUNNER_API UFOVFreeSkeletalMeshComponent : public USkeletalMeshComponen
 {
 	GENERATED_BODY()
 	virtual FMatrix GetRenderMatrix() const override;
+
+public: 
+	UFOVFreeSkeletalMeshComponent();
 };
