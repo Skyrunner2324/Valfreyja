@@ -4,13 +4,6 @@
 		<WorkUnit Name="Default Work Unit" ID="{05960EF2-846C-4440-B200-DA936247A2CF}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
-					<PropertyList>
-						<Property Name="BusVolume" Type="Real64">
-							<ValueList>
-								<Value>12</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{E91ADA0B-490E-4228-84AF-22DC5116ACA0}" WorkUnitID="{69D16C6A-8CBD-41F2-91C9-0ADAE7074EDE}"/>
@@ -21,7 +14,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-18</Value>
+										<Value>-8</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Color" Type="int16" Value="12"/>
@@ -60,7 +53,7 @@
 										<CustomState Name="" ID="{726E60A3-4F61-41C2-9FD6-7E97A5056664}" ShortID="613737786">
 											<PropertyList>
 												<Property Name="BypassEffect0" Type="bool" Value="True"/>
-												<Property Name="Lowpass" Type="int16" Value="49"/>
+												<Property Name="Lowpass" Type="int16" Value="50"/>
 												<Property Name="Volume" Type="Real64" Value="-6"/>
 											</PropertyList>
 										</CustomState>
@@ -255,11 +248,6 @@
 												<Value>3840</Value>
 											</ValueList>
 										</Property>
-										<Property Name="BusVolume" Type="Real64">
-											<ValueList>
-												<Value>-20</Value>
-											</ValueList>
-										</Property>
 										<Property Name="Color" Type="int16" Value="18"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
@@ -438,6 +426,11 @@
 								</Bus>
 								<Bus Name="Environment Master" ID="{93794CDD-D92F-4393-9B36-96AC442DDB90}">
 									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Color" Type="int16" Value="20"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
@@ -594,13 +587,6 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Bus Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}">
-											<PropertyList>
-												<Property Name="BusVolume" Type="Real64">
-													<ValueList>
-														<Value>-5</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Effect0">
 													<Custom CreatedFrom="{3C6B127B-9DAE-4879-A4ED-75DF209310EC}">
@@ -874,11 +860,6 @@
 										</Bus>
 										<Bus Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}">
 											<PropertyList>
-												<Property Name="BusVolume" Type="Real64">
-													<ValueList>
-														<Value>-8</Value>
-													</ValueList>
-												</Property>
 												<Property Name="BypassEffect1" Type="bool">
 													<ValueList>
 														<Value>True</Value>

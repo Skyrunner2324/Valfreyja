@@ -23,9 +23,6 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="REV_SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Folder Name="Movements" ID="{EEE852FC-5981-413D-9552-72F41884F036}" ShortID="465673798">
@@ -190,11 +187,6 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>6</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -677,7 +669,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-10</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -863,7 +855,7 @@
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-12</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1194,14 +1186,9 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="smg_tail" ID="{3E155501-0EB5-46EE-89FB-01F89CB57414}" ShortID="694831696">
 											<PropertyList>
-												<Property Name="MakeUpGain" Type="Real64">
-													<ValueList>
-														<Value>-96</Value>
-													</ValueList>
-												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>5</Value>
+														<Value>-96</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1325,6 +1312,13 @@
 										<Folder Name="game_weapon_shoot" ID="{7EECDCFD-7B81-41C2-BA44-C6974ED0E576}" ShortID="42208823">
 											<ChildrenList>
 												<Sound Name="player_weapon_shoot_smg_Loop" ID="{65974D5B-F805-468A-83DB-14C07A2829DE}" ShortID="177155894">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-14</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -1374,7 +1368,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-18</Value>
+												<Value>-13</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1385,15 +1379,17 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 										</Reference>
-										<Reference Name="UserAuxSend0">
-											<ObjectRef Name="REV_SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="01_Loop" ID="{E4B91726-5C4E-444B-B332-449AC98B11EA}" ShortID="652594001">
 											<PropertyList>
 												<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1469,6 +1465,11 @@
 												<Sound Name="04_Loop" ID="{594224EE-31B1-4DD8-B598-864EAABACFBF}" ShortID="461522262">
 													<PropertyList>
 														<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
+														<Property Name="Highpass" Type="int16">
+															<ValueList>
+																<Value>16</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Pitch" Type="int32">
 															<ValueList>
 																<Value>-6</Value>
@@ -1487,7 +1488,7 @@
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>-3</Value>
+																<Value>-2</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -1505,6 +1506,8 @@
 																<Property Name="FadeInDuration" Type="Real64" Value="0.0138661202185792"/>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.122814207650273"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.337121212121212"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.890151515151515"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Player_Weapon\05_Loop.wav</AudioFile>
@@ -1533,6 +1536,11 @@
 															</ModifierList>
 														</Property>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-2</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -1571,6 +1579,11 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="player_weapon_melee" ID="{82D8E0FA-A39F-46B6-A74E-441E90ADDBED}" ShortID="53162675">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>25</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -1700,6 +1713,11 @@
 									<ChildrenList>
 										<Sound Name="bullet_impact_concrete_brick_01" ID="{83BDDAF0-EBAC-4443-A8B6-B282CD616491}" ShortID="897904223">
 											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -1716,7 +1734,7 @@
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-19</Value>
+														<Value>-17</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1750,6 +1768,11 @@
 										<Sound Name="SX_player_weapon_electric_impact" ID="{FA8D1E9B-513B-42CD-B7FE-8427FC5900CC}" ShortID="304052364">
 											<PropertyList>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-10</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1945,7 +1968,7 @@
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-18</Value>
+										<Value>-6</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2111,7 +2134,7 @@
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-20</Value>
+										<Value>-7</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2218,7 +2241,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-15</Value>
+										<Value>-7</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

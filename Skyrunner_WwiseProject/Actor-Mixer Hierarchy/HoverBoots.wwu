@@ -15,11 +15,6 @@
 							</ValueList>
 						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-4</Value>
-							</ValueList>
-						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -435,26 +430,15 @@
 										</Property>
 										<Property Name="Highpass" Type="int16">
 											<ValueList>
-												<Value>48</Value>
+												<Value>25</Value>
 											</ValueList>
 										</Property>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>49</Value>
-											</ValueList>
-										</Property>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
-										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-										<Property Name="UserAuxSendVolume0" Type="Real64">
-											<ValueList>
-												<Value>-10</Value>
-											</ValueList>
-										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-4</Value>
+												<Value>-10</Value>
 											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
@@ -473,18 +457,15 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 										</Reference>
-										<Reference Name="UserAuxSend0">
-											<ObjectRef Name="REV_SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="jet_pack" ID="{0B2B7859-08CC-4C42-9249-E77DA3836C38}">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.230452674897119"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.184362139917695"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.189112214548679"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0267686277937959"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="22.2487716137693"/>
-												<Property Name="TrimEnd" Type="Real64" Value="26.0411522633745"/>
+												<Property Name="TrimBegin" Type="Real64" Value="14.129649356716"/>
+												<Property Name="TrimEnd" Type="Real64" Value="19.2386444263839"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Hoverboots\jet_pack.wav</AudioFile>
