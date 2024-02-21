@@ -23,7 +23,7 @@ public:
 
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters, 
-		meta = (ToolTip = "Fire rate, in bullets per second"))
+		meta = (ToolTip = "Fire rate, in bullets per second", ExposeOnSpawn = "true"))
 	float fireRate = 2.f;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
