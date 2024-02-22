@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{5888BCDB-60E8-C864-2806-2D52CBFA9496}">
+		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{6E50501D-12A0-0630-127D-2266AECD7DB3}">
 			<ObjectPath>SX_player_feedback_death</ObjectPath>
 			<ShortName>SX_player_feedback_death</ShortName>
 			<Path>Event/SX_player_feedback_death.bnk</Path>
@@ -17,15 +17,25 @@
 					<CachePath>SFX/Player_Feedback/player_feedback_death_01_755F56E2.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="151222710" Name="Let_The_Power_Fall (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerFeedback_MainMixer\player_feedback_death\Let_The_Power_Fall (Custom)" GUID="{09D25CDE-6770-44B0-9E33-21AC54F6EF25}" LibName="Wwise Stereo Delay" LibId="8847363"/>
+				</Custom>
+			</Plugins>
 			<Events>
-				<Event Id="1950512069" Name="SX_player_feedback_death" ObjectPath="\Events\Player\Feedback\SX_player_feedback_death" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" DurationType="OneShot" DurationMin="0.36960417" DurationMax="0.43733335">
+				<Event Id="1950512069" Name="SX_player_feedback_death" ObjectPath="\Events\Player\Feedback\SX_player_feedback_death" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" DurationType="OneShot" DurationMin="0.31259927" DurationMax="0.3698824">
 					<MediaRefs>
 						<MediaRef Id="76065075"/>
 						<MediaRef Id="760707437"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="151222710"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D665EEFF-0709-9A46-8A1B-0A6239C14797}</FileHash>
+	<FileHash>{4A2E71E1-EE3C-6518-7C94-BDA62170C2BA}</FileHash>
 </SoundBanksInfo>

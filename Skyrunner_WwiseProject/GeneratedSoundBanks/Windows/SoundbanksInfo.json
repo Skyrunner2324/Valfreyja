@@ -193,7 +193,7 @@
     "Type": "Event",
     "GUID": "{85FE7A46-F893-42AA-8787-F5597C4AF630}",
     "Language": "SFX",
-    "Hash": "{F36BC11B-9C71-D22E-F3F3-BB0C6E44C0AE}",
+    "Hash": "{048E46BA-72F6-7A85-6F2A-B38CF8E274F4}",
     "ObjectPath": "SX_enemy_gunner_shot",
     "ShortName": "SX_enemy_gunner_shot",
     "Path": "Event/SX_enemy_gunner_shot.bnk",
@@ -214,6 +214,7 @@
       "Name": "SX_enemy_gunner_shot",
       "ObjectPath": "\\Events\\Enemy\\SX_enemy_gunner_shot",
       "GUID": "{85FE7A46-F893-42AA-8787-F5597C4AF630}",
+      "MaxAttenuation": "100000",
       "DurationType": "OneShot",
       "DurationMin": "0.493873",
       "DurationMax": "0.7399734",
@@ -1259,7 +1260,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{B93D1B34-0C7D-F055-5976-3791D49B7457}",
+    "Hash": "{BF45FA9A-1C5B-E8A2-4E02-F0B337FF2607}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -1432,8 +1433,7 @@
       "Id": "2033911932",
       "Name": "NPCMaster",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\3D OBJ Master\\NPCMaster",
-      "GUID": "{94354A62-2693-4A27-B098-F5FDE5B577C5}",
-      "MaxAttenuation": "100000"
+      "GUID": "{94354A62-2693-4A27-B098-F5FDE5B577C5}"
      },
      {
       "Id": "2093940462",
@@ -1487,8 +1487,7 @@
         "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\Early_Reflections",
         "GUID": "{DEFD7C69-35F1-4735-B101-17C49C0196D3}"
        }
-      ],
-      "MaxAttenuation": "100000"
+      ]
      },
      {
       "Id": "3222323340",
@@ -1522,7 +1521,8 @@
       "Id": "3902787355",
       "Name": "NPC Feedback",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\3D OBJ Master\\NPCMaster\\NPC Feedback",
-      "GUID": "{BFAFF62D-1AF0-4041-8835-DDC8801FFE11}"
+      "GUID": "{BFAFF62D-1AF0-4041-8835-DDC8801FFE11}",
+      "MaxAttenuation": "100000"
      },
      {
       "Id": "3976022968",
@@ -2589,7 +2589,7 @@
     "Type": "Event",
     "GUID": "{7B6982F6-686A-493A-8518-52B50A5890B9}",
     "Language": "SFX",
-    "Hash": "{5888BCDB-60E8-C864-2806-2D52CBFA9496}",
+    "Hash": "{6E50501D-12A0-0630-127D-2266AECD7DB3}",
     "ObjectPath": "SX_player_feedback_death",
     "ShortName": "SX_player_feedback_death",
     "Path": "Event/SX_player_feedback_death.bnk",
@@ -2613,6 +2613,18 @@
       "CachePath": "SFX/Player_Feedback/player_feedback_death_01_755F56E2.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "151222710",
+       "Name": "Let_The_Power_Fall (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerFeedback_MainMixer\\player_feedback_death\\Let_The_Power_Fall (Custom)",
+       "GUID": "{09D25CDE-6770-44B0-9E33-21AC54F6EF25}",
+       "LibName": "Wwise Stereo Delay",
+       "LibId": "8847363"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1950512069",
@@ -2620,8 +2632,8 @@
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_feedback_death",
       "GUID": "{7B6982F6-686A-493A-8518-52B50A5890B9}",
       "DurationType": "OneShot",
-      "DurationMin": "0.36960417",
-      "DurationMax": "0.43733335",
+      "DurationMin": "0.31259927",
+      "DurationMax": "0.3698824",
       "MediaRefs": [
        {
         "Id": "76065075"
@@ -2629,7 +2641,14 @@
        {
         "Id": "760707437"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "151222710"
+        }
+       ]
+      }
      }
     ]
    },
@@ -4504,6 +4523,6 @@
     ]
    }
   ],
-  "FileHash": "{39E84CED-8794-4255-4E1C-BFD8A0EB508B}"
+  "FileHash": "{F81620C1-0250-5D1F-2EBC-5DEE5E3285D3}"
  }
 }
