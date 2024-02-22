@@ -256,9 +256,9 @@
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="Color" Type="int16" Value="10"/>
+										<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
-										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="ReflectionsVolume" Type="Real64">
 											<ValueList>
@@ -279,7 +279,8 @@
 											<PropertyList>
 												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="Color" Type="int16" Value="10"/>
-												<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+												<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+												<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -288,7 +289,18 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Bus Name="NPC Feedback" ID="{BFAFF62D-1AF0-4041-8835-DDC8801FFE11}"/>
+												<Bus Name="NPC Feedback" ID="{BFAFF62D-1AF0-4041-8835-DDC8801FFE11}">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
+														</Reference>
+													</ReferenceList>
+												</Bus>
 												<Bus Name="NPC Weapon" ID="{A8AA54FE-EDEF-4D9A-AD19-FB5DEA129011}">
 													<PropertyList>
 														<Property Name="3DSpatialization" Type="int16" Value="2"/>
@@ -400,7 +412,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>-1</XPos>
-																				<YPos>69</YPos>
+																				<YPos>-37</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
@@ -410,7 +422,7 @@
 																			</Point>
 																			<Point>
 																				<XPos>1</XPos>
-																				<YPos>73</YPos>
+																				<YPos>-36</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>

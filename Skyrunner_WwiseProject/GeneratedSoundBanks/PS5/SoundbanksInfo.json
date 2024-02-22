@@ -193,19 +193,19 @@
     "Type": "Event",
     "GUID": "{85FE7A46-F893-42AA-8787-F5597C4AF630}",
     "Language": "SFX",
-    "Hash": "{7968F88C-9162-9890-3794-393E79A6CFCD}",
+    "Hash": "{F36BC11B-9C71-D22E-F3F3-BB0C6E44C0AE}",
     "ObjectPath": "SX_enemy_gunner_shot",
     "ShortName": "SX_enemy_gunner_shot",
     "Path": "Event/SX_enemy_gunner_shot.bnk",
     "Media": [
      {
-      "Id": "225516400",
+      "Id": "41208995",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Placeholders\\XG_fx_feedback_chug_A#.wav",
-      "Path": "Media/225516400.wem",
-      "CachePath": "SFX/Placeholders/XG_fx_feedback_chug_A#_1F390686.wem"
+      "ShortName": "Enemies\\bullet_enemy_bullet_flyby_fast_06.wav",
+      "Path": "Media/41208995.wem",
+      "CachePath": "SFX/Enemies/bullet_enemy_bullet_flyby_fast_06_755F56E2.wem"
      }
     ],
     "Events": [
@@ -215,21 +215,13 @@
       "ObjectPath": "\\Events\\Enemy\\SX_enemy_gunner_shot",
       "GUID": "{85FE7A46-F893-42AA-8787-F5597C4AF630}",
       "DurationType": "OneShot",
-      "DurationMin": "0.7134408",
-      "DurationMax": "0.7602429",
+      "DurationMin": "0.493873",
+      "DurationMax": "0.7399734",
       "MediaRefs": [
        {
-        "Id": "225516400"
+        "Id": "41208995"
        }
       ]
-     }
-    ],
-    "GameParameters": [
-     {
-      "Id": "2565740352",
-      "Name": "RTPC_SlowMo",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
-      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
      }
     ]
    },
@@ -273,7 +265,7 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{8244E19F-3E45-6F08-05EC-56142E6AE4FF}",
+    "Hash": "{A564A56B-6EEF-51D7-6C5D-5A606BF26D0E}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
@@ -299,6 +291,30 @@
     ],
     "Plugins": {
      "Custom": [
+      {
+       "Id": "247448906",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots_Other\\Soundseed Wind\\Parametric EQ (Custom)",
+       "GUID": "{2078FFD5-FDF7-4C01-900C-742249BE40F6}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "268374027",
+       "Name": "Delay (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots_Other\\Soundseed Wind\\Delay (Custom)",
+       "GUID": "{700FD0B8-9B20-48B5-BE3E-EF4CE88526AC}",
+       "LibName": "Wwise Delay",
+       "LibId": "6946819"
+      },
+      {
+       "Id": "666289254",
+       "Name": "Soundseed Air Wind",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots_Other\\Soundseed Wind\\Soundseed Air Wind",
+       "GUID": "{83767CC5-69B5-4564-8311-4A333A1B8AF9}",
+       "LibName": "SoundSeed Air Wind",
+       "LibId": "7798786"
+      },
       {
        "Id": "768480562",
        "Name": "Parametric EQ (Custom)",
@@ -344,6 +360,15 @@
       ],
       "PluginRefs": {
        "Custom": [
+        {
+         "Id": "247448906"
+        },
+        {
+         "Id": "268374027"
+        },
+        {
+         "Id": "666289254"
+        },
         {
          "Id": "768480562"
         }
@@ -423,11 +448,20 @@
     "Type": "Event",
     "GUID": "{095480AE-B62A-4DB8-80EC-3AF54A959CDA}",
     "Language": "SFX",
-    "Hash": "{02834DFB-6FA1-DDBB-D3E4-16683103063B}",
+    "Hash": "{44FB9450-E197-D474-325D-E988F30218A4}",
     "ObjectPath": "SX_player_death_notifier",
     "ShortName": "SX_player_death_notifier",
     "Path": "Event/SX_player_death_notifier.bnk",
     "Media": [
+     {
+      "Id": "172176309",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemies\\death_enemy_C-4Explosion_BW.4960.wav",
+      "Path": "Media/172176309.wem",
+      "CachePath": "SFX/Enemies/death_enemy_C-4Explosion_BW.4960_755F56E2.wem"
+     },
      {
       "Id": "325108499",
       "Language": "SFX",
@@ -445,6 +479,51 @@
       "ShortName": "Placeholders\\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav",
       "Path": "Media/525589573.wem",
       "CachePath": "SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_8CE221E4.wem"
+     },
+     {
+      "Id": "660085442",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemies\\death_enemy_C-4Explosion_BW.4959.wav",
+      "Path": "Media/660085442.wem",
+      "CachePath": "SFX/Enemies/death_enemy_C-4Explosion_BW.4959_755F56E2.wem"
+     },
+     {
+      "Id": "787685429",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemies\\death_enemy_Explosion_BW.4961.wav",
+      "Path": "Media/787685429.wem",
+      "CachePath": "SFX/Enemies/death_enemy_Explosion_BW.4961_755F56E2.wem"
+     },
+     {
+      "Id": "890875566",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemies\\death_enemy_Rupture - Concrete_Impact_B02.wav",
+      "Path": "Media/890875566.wem",
+      "CachePath": "SFX/Enemies/death_enemy_Rupture - Concrete_Impact_B02_755F56E2.wem"
+     },
+     {
+      "Id": "950667887",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemies\\death_enemy_Distant Blast 05.wav",
+      "Path": "Media/950667887.wem",
+      "CachePath": "SFX/Enemies/death_enemy_Distant Blast 05_755F56E2.wem"
+     },
+     {
+      "Id": "1069879780",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemies\\death_enemy_BombExplosion_BW.4996.wav",
+      "Path": "Media/1069879780.wem",
+      "CachePath": "SFX/Enemies/death_enemy_BombExplosion_BW.4996_755F56E2.wem"
      }
     ],
     "Plugins": {
@@ -475,16 +554,33 @@
       "Name": "SX_player_death_notifier",
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_death_notifier",
       "GUID": "{095480AE-B62A-4DB8-80EC-3AF54A959CDA}",
-      "MaxAttenuation": "10000",
       "DurationType": "OneShot",
-      "DurationMin": "1.3805",
-      "DurationMax": "1.3805",
+      "DurationMin": "4.25",
+      "DurationMax": "4.25",
       "MediaRefs": [
+       {
+        "Id": "172176309"
+       },
        {
         "Id": "325108499"
        },
        {
         "Id": "525589573"
+       },
+       {
+        "Id": "660085442"
+       },
+       {
+        "Id": "787685429"
+       },
+       {
+        "Id": "890875566"
+       },
+       {
+        "Id": "950667887"
+       },
+       {
+        "Id": "1069879780"
        }
       ],
       "PluginRefs": {
@@ -765,7 +861,7 @@
     "Type": "Event",
     "GUID": "{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}",
     "Language": "SFX",
-    "Hash": "{B99EBCCE-AC22-891F-D554-1D96E5B2E805}",
+    "Hash": "{C5488507-1F6A-BFB9-6A8A-BA43ACEB14A5}",
     "ObjectPath": "SX_player_shoot",
     "ShortName": "SX_player_shoot",
     "Path": "Event/SX_player_shoot.bnk",
@@ -1163,7 +1259,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{422BA7B9-9001-C9D6-CE84-5C694B319F47}",
+    "Hash": "{773BD9A9-52BB-D2B9-B2BC-2F9869A2077F}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -1317,7 +1413,7 @@
       "Name": "NPC Weapon",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\3D OBJ Master\\NPCMaster\\NPC Weapon",
       "GUID": "{A8AA54FE-EDEF-4D9A-AD19-FB5DEA129011}",
-      "MaxAttenuation": "10000"
+      "MaxAttenuation": "100000"
      },
      {
       "Id": "1698665495",
@@ -1330,14 +1426,14 @@
       "Name": "ENV Other",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\Environment Master\\ENV Other",
       "GUID": "{28DD99C7-6452-4B40-9D87-6E721A203EF0}",
-      "MaxAttenuation": "10000"
+      "MaxAttenuation": "100000"
      },
      {
       "Id": "2033911932",
       "Name": "NPCMaster",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\3D OBJ Master\\NPCMaster",
       "GUID": "{94354A62-2693-4A27-B098-F5FDE5B577C5}",
-      "MaxAttenuation": "10000"
+      "MaxAttenuation": "100000"
      },
      {
       "Id": "2093940462",
@@ -1392,7 +1488,7 @@
         "GUID": "{DEFD7C69-35F1-4735-B101-17C49C0196D3}"
        }
       ],
-      "MaxAttenuation": "10000"
+      "MaxAttenuation": "100000"
      },
      {
       "Id": "3222323340",
@@ -4408,6 +4504,6 @@
     ]
    }
   ],
-  "FileHash": "{4CBA50E5-F79F-0FC9-8DB5-05FA49855B59}"
+  "FileHash": "{BCF68644-5F77-0011-2D24-025DDBA52C80}"
  }
 }

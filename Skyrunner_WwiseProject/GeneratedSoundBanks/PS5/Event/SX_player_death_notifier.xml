@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="618588564" Type="Event" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" Language="SFX" Hash="{02834DFB-6FA1-DDBB-D3E4-16683103063B}">
+		<SoundBank Id="618588564" Type="Event" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" Language="SFX" Hash="{44FB9450-E197-D474-325D-E988F30218A4}">
 			<ObjectPath>SX_player_death_notifier</ObjectPath>
 			<ShortName>SX_player_death_notifier</ShortName>
 			<Path>Event/SX_player_death_notifier.bnk</Path>
 			<Media>
+				<File Id="172176309" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Enemies\death_enemy_C-4Explosion_BW.4960.wav</ShortName>
+					<Path>Media/172176309.wem</Path>
+					<CachePath>SFX/Enemies/death_enemy_C-4Explosion_BW.4960_755F56E2.wem</CachePath>
+				</File>
 				<File Id="325108499" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>enemy_death_feedback.wav</ShortName>
 					<Path>Media/325108499.wem</Path>
@@ -15,6 +20,31 @@
 					<ShortName>Placeholders\Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29.wav</ShortName>
 					<Path>Media/525589573.wem</Path>
 					<CachePath>SFX/Placeholders/Male_Vocal_Gasps_Exclamations_Saying_No_ODY-1181-29_8CE221E4.wem</CachePath>
+				</File>
+				<File Id="660085442" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Enemies\death_enemy_C-4Explosion_BW.4959.wav</ShortName>
+					<Path>Media/660085442.wem</Path>
+					<CachePath>SFX/Enemies/death_enemy_C-4Explosion_BW.4959_755F56E2.wem</CachePath>
+				</File>
+				<File Id="787685429" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Enemies\death_enemy_Explosion_BW.4961.wav</ShortName>
+					<Path>Media/787685429.wem</Path>
+					<CachePath>SFX/Enemies/death_enemy_Explosion_BW.4961_755F56E2.wem</CachePath>
+				</File>
+				<File Id="890875566" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Enemies\death_enemy_Rupture - Concrete_Impact_B02.wav</ShortName>
+					<Path>Media/890875566.wem</Path>
+					<CachePath>SFX/Enemies/death_enemy_Rupture - Concrete_Impact_B02_755F56E2.wem</CachePath>
+				</File>
+				<File Id="950667887" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Enemies\death_enemy_Distant Blast 05.wav</ShortName>
+					<Path>Media/950667887.wem</Path>
+					<CachePath>SFX/Enemies/death_enemy_Distant Blast 05_755F56E2.wem</CachePath>
+				</File>
+				<File Id="1069879780" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Enemies\death_enemy_BombExplosion_BW.4996.wav</ShortName>
+					<Path>Media/1069879780.wem</Path>
+					<CachePath>SFX/Enemies/death_enemy_BombExplosion_BW.4996_755F56E2.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -26,10 +56,16 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="618588564" Name="SX_player_death_notifier" ObjectPath="\Events\Player\Feedback\SX_player_death_notifier" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" MaxAttenuation="10000" DurationType="OneShot" DurationMin="1.3805" DurationMax="1.3805">
+				<Event Id="618588564" Name="SX_player_death_notifier" ObjectPath="\Events\Player\Feedback\SX_player_death_notifier" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" DurationType="OneShot" DurationMin="4.25" DurationMax="4.25">
 					<MediaRefs>
+						<MediaRef Id="172176309"/>
 						<MediaRef Id="325108499"/>
 						<MediaRef Id="525589573"/>
+						<MediaRef Id="660085442"/>
+						<MediaRef Id="787685429"/>
+						<MediaRef Id="890875566"/>
+						<MediaRef Id="950667887"/>
+						<MediaRef Id="1069879780"/>
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
@@ -43,5 +79,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E03DAC40-189D-9B5C-30CF-ACEA3E01325B}</FileHash>
+	<FileHash>{731797E6-805A-6BEB-4559-6FD1383A6F72}</FileHash>
 </SoundBanksInfo>
