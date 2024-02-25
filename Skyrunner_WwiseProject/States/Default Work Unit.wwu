@@ -15,25 +15,11 @@
 						<State Name="InFTUE" ID="{B7AE7D30-166A-4B19-9781-BB5E7EC54760}"/>
 					</ChildrenList>
 				</StateGroup>
-				<StateGroup Name="Music_Selector" ID="{9E363DC4-1CA9-4AAF-BFCB-E45F336CC2CE}">
+				<StateGroup Name="Ambiance_States" ID="{FA5C0A06-CC03-439E-A634-38F9B1DCA444}">
 					<PropertyList>
-						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="Color" Type="int16" Value="20"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
-					<ChildrenList>
-						<State Name="None" ID="{570EE5A7-8CDA-4FE2-BE60-BD0C6F00B022}"/>
-						<State Name="Tuto" ID="{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"/>
-						<State Name="Explo" ID="{1FE92F27-401B-44A3-BFC0-65F192492AAB}"/>
-						<State Name="Menu" ID="{DB91568E-4183-4FE0-A178-9B6516F9B6BD}"/>
-						<State Name="Reveal" ID="{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"/>
-						<State Name="Buildup" ID="{39C32C1D-49CE-4283-8A04-C9C272E282DE}"/>
-						<State Name="Reverb" ID="{1A0075FD-1C91-4DCD-B4AC-2029A2632B3A}"/>
-						<State Name="ArenaPhase1" ID="{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"/>
-						<State Name="ArenaPhase2" ID="{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"/>
-						<State Name="Breakcore" ID="{16E5D430-D692-45B9-B4C9-B90A05172B0B}"/>
-					</ChildrenList>
-				</StateGroup>
-				<StateGroup Name="Ambiance_States" ID="{FA5C0A06-CC03-439E-A634-38F9B1DCA444}">
 					<ChildrenList>
 						<State Name="None" ID="{0F92B5B9-7AD4-4529-BF3A-A1000EF93B39}"/>
 						<State Name="Ext" ID="{784F3057-5FEA-46E9-AC78-8E8DBAA9953E}"/>
@@ -41,6 +27,55 @@
 						<State Name="Wind" ID="{A20A928E-9365-4639-A435-AB8770FD7425}"/>
 					</ChildrenList>
 				</StateGroup>
+				<Folder Name="Music" ID="{EC63D6CA-E2FE-4CB6-8CE8-1DD57E41CCBC}" ShortID="300833346">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<StateGroup Name="Music_Selector" ID="{9E363DC4-1CA9-4AAF-BFCB-E45F336CC2CE}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="16"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<State Name="None" ID="{570EE5A7-8CDA-4FE2-BE60-BD0C6F00B022}"/>
+								<State Name="Tuto" ID="{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"/>
+								<State Name="Explo" ID="{1FE92F27-401B-44A3-BFC0-65F192492AAB}"/>
+								<State Name="Menu" ID="{DB91568E-4183-4FE0-A178-9B6516F9B6BD}"/>
+								<State Name="Reveal" ID="{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"/>
+								<State Name="Buildup" ID="{39C32C1D-49CE-4283-8A04-C9C272E282DE}"/>
+								<State Name="Reverb" ID="{1A0075FD-1C91-4DCD-B4AC-2029A2632B3A}"/>
+								<State Name="ArenaPhase1" ID="{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"/>
+								<State Name="ArenaPhase2" ID="{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"/>
+								<State Name="Breakcore" ID="{16E5D430-D692-45B9-B4C9-B90A05172B0B}"/>
+							</ChildrenList>
+						</StateGroup>
+						<StateGroup Name="Music_Zone" ID="{3F25AE7C-EF51-475E-955C-139B08219274}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<State Name="None" ID="{8020DD83-D1BB-454B-9683-5AD687222066}"/>
+								<State Name="A" ID="{A2C4D1B0-2D1F-4275-A355-154B8983B6A4}"/>
+								<State Name="B" ID="{F211B77D-BB52-460F-BA87-4A30B5EA4669}"/>
+								<State Name="C" ID="{92FFE5B0-21F6-4D33-A868-700147EC1499}"/>
+								<State Name="D" ID="{BCF23F2D-E0DB-48D9-ABDA-6D9550B4C083}"/>
+								<State Name="E" ID="{234D82B6-5FB1-421C-94FB-20C9C1A73B63}"/>
+							</ChildrenList>
+						</StateGroup>
+						<StateGroup Name="Music_Number" ID="{6859BDDD-0C84-4471-BE51-7BBCB0AB5E7A}">
+							<ChildrenList>
+								<State Name="None" ID="{AEBB3FC4-70F4-436F-A011-332296FDD320}"/>
+								<State Name="Music__01" ID="{C10D7FC3-6D0F-4995-AC4E-F6BDEA9EDF37}"/>
+								<State Name="Music__02" ID="{F9BD7326-90AD-4609-BCFF-F904AB2A443F}"/>
+								<State Name="Music__03" ID="{68188DD8-3818-488B-A868-9C73F1BA33DA}"/>
+								<State Name="Music__04" ID="{FF7661C4-86DF-49AC-9740-85A8519B9C8A}"/>
+							</ChildrenList>
+						</StateGroup>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</States>
