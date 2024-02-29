@@ -19,4 +19,6 @@ public:
 
 	UFUNCTION(BlueprintNativeEvent)
 	void FellOutOfWorldImpl(const class UDamageType* dmgType);
+
+	ASpectatorPawn* SpawnSpectatorPawn() override;
 };
