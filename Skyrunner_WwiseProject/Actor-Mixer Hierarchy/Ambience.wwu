@@ -125,6 +125,35 @@
 										<ActiveSource Name="Cave_Bats_Ambience_ODY-1229-067" ID="{4A9B6D92-A576-4DF8-9946-44C5D4FB5FC7}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="ambience_mountain_wind" ID="{20D79EC5-38AB-46D7-A82F-FDB318F95ABE}" ShortID="996154969">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ambience_mountain_wind" ID="{E7EFB4F9-74B7-47FC-AF9E-29B3CD70833D}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\ambience_mountain_wind.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="716141826"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ambience_mountain_wind" ID="{E7EFB4F9-74B7-47FC-AF9E-29B3CD70833D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<GroupingInfo>
 								<GroupingBehaviorList>
@@ -151,6 +180,9 @@
 											</Property>
 										</PropertyList>
 									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="ambience_mountain_wind" ID="{20D79EC5-38AB-46D7-A82F-FDB318F95ABE}"/>
+									</GroupingBehavior>
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
@@ -163,6 +195,12 @@
 										<SwitchRef Name="Wind" ID="{A20A928E-9365-4639-A435-AB8770FD7425}"/>
 										<ItemList>
 											<ItemRef Name="ambience_wind" ID="{CBF6CD0E-98C8-4CB7-A576-5493B0B1A9A2}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="None" ID="{0F92B5B9-7AD4-4529-BF3A-A1000EF93B39}"/>
+										<ItemList>
+											<ItemRef Name="ambience_mountain_wind" ID="{20D79EC5-38AB-46D7-A82F-FDB318F95ABE}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>

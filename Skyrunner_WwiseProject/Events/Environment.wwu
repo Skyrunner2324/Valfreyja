@@ -16,6 +16,41 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{470C4F2F-6234-4FDD-A12B-7A94EB649F23}" ShortID="1016205363">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B7F5C6E7-B98A-4776-9BA2-6576EE597834}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="SeekTime" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{6116A374-8555-4C05-9961-E369B447B317}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="10"/>
+													<Property Name="Min" Type="Real64" Value="-10"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_Switch" ID="{A948B150-97B6-4EF5-9C86-965468A4AAE6}" WorkUnitID="{08EA2C82-B862-4DCC-981A-58179263B7B6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 			</ChildrenList>

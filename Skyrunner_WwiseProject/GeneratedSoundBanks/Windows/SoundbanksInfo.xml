@@ -352,7 +352,7 @@
 				<AuxBus Id="980603520" Name="REV" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="987389728" Type="Event" GUID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}" Language="SFX" Hash="{8CBF8D4A-E68D-1E93-6118-D13CB2F9E6C7}">
+		<SoundBank Id="987389728" Type="Event" GUID="{551300EA-C047-48F9-A1CA-75F08BC14E0B}" Language="SFX" Hash="{93F103D5-9B1D-01F7-B542-F73ED1CB637E}">
 			<ObjectPath>ENV_AMB_Play_AmbienceMain</ObjectPath>
 			<ShortName>ENV_AMB_Play_AmbienceMain</ShortName>
 			<Path>Event/ENV_AMB_Play_AmbienceMain.bnk</Path>
@@ -366,6 +366,11 @@
 					<ShortName>Ambience\Cave_Bats_Ambience_ODY-1229-067.wav</ShortName>
 					<Path>Media/282791769.wem</Path>
 					<CachePath>SFX/Ambience/Cave_Bats_Ambience_ODY-1229-067_6A1E5C58.wem</CachePath>
+				</File>
+				<File Id="716141826" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Ambience\ambience_mountain_wind.wav</ShortName>
+					<Path>Media/716141826.wem</Path>
+					<CachePath>SFX/Ambience/ambience_mountain_wind_755F56E2.wem</CachePath>
 				</File>
 				<File Id="734031120" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Placeholders\amb_meteo_wind.wav</ShortName>
@@ -386,6 +391,12 @@
 							<SwitchValue GroupType="State" GroupId="3350070198" Id="1537061107" GUID="{A20A928E-9365-4639-A435-AB8770FD7425}"/>
 							<MediaRefs>
 								<MediaRef Id="175282985"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3350070198" Id="748895195" GUID="{0F92B5B9-7AD4-4529-BF3A-A1000EF93B39}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="716141826"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -762,6 +773,7 @@
 						<State Id="84696445" Name="B" ObjectPath="\States\Default Work Unit\Music\Music_Zone\B" GUID="{F211B77D-BB52-460F-BA87-4A30B5EA4669}"/>
 						<State Id="84696446" Name="A" ObjectPath="\States\Default Work Unit\Music\Music_Zone\A" GUID="{A2C4D1B0-2D1F-4275-A355-154B8983B6A4}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music\Music_Zone\None" GUID="{8020DD83-D1BB-454B-9683-5AD687222066}"/>
+						<State Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\Music\Music_Zone\Menu" GUID="{013BA24D-2D5A-4A3B-970D-1E27311ADAA7}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="3350070198" Name="Ambiance_States" ObjectPath="\States\Default Work Unit\Ambiance_States" GUID="{FA5C0A06-CC03-439E-A634-38F9B1DCA444}">
@@ -1287,7 +1299,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{4A0F1EA9-B0B6-8515-6DC9-CF2819B67F76}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{264A703D-4358-D62A-9779-BD0FA4F890A1}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -1401,6 +1413,12 @@
 								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2456631623" Id="2607556080" GUID="{013BA24D-2D5A-4A3B-970D-1E27311ADAA7}"/>
+							<MediaRefs>
+								<MediaRef Id="577991908"/>
+							</MediaRefs>
+						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 			</Events>
@@ -1414,6 +1432,7 @@
 						<State Id="84696445" Name="B" ObjectPath="\States\Default Work Unit\Music\Music_Zone\B" GUID="{F211B77D-BB52-460F-BA87-4A30B5EA4669}"/>
 						<State Id="84696446" Name="A" ObjectPath="\States\Default Work Unit\Music\Music_Zone\A" GUID="{A2C4D1B0-2D1F-4275-A355-154B8983B6A4}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music\Music_Zone\None" GUID="{8020DD83-D1BB-454B-9683-5AD687222066}"/>
+						<State Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\Music\Music_Zone\Menu" GUID="{013BA24D-2D5A-4A3B-970D-1E27311ADAA7}"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -1527,5 +1546,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1C0C8AB4-1CFC-298F-45D5-699C0D18580E}</FileHash>
+	<FileHash>{47B7DF48-27DB-EB99-8D25-41DCF2B2F586}</FileHash>
 </SoundBanksInfo>
