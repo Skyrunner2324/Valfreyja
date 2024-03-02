@@ -58,10 +58,49 @@
 					</SwitchOnRTPC>
 				</SwitchGroup>
 				<SwitchGroup Name="HoverbootsSwitch" ID="{CFF359FB-3643-4A54-8CD8-133153706006}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Switch Name="OnGround" ID="{13F79D10-0A22-455A-9005-CF68D7C5FC75}"/>
 						<Switch Name="Other" ID="{9D8B0E69-BBB9-4C23-8826-9882E51CE450}"/>
 					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="ParkourSwitch" ID="{702787C3-E2B6-4E60-A266-37C30239657B}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Flow" ID="{6768CC3A-F841-45F1-8A13-CF8AE7C4DC6E}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_Parkour_Flow" ID="{D4EDFB9F-0AB6-4E18-A9CB-0F34B34DEA44}"/>
+						<Curve Name="" ID="{D8AA9C6B-2D38-4B2F-8FB3-6AE47EA768D4}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>0</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>300</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>400</XPos>
+									<YPos>1</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
 				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
