@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="3467451382" Type="Event" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" Language="SFX" Hash="{B37E4E2A-7C2A-F76B-1519-B24D7B8FE371}">
+		<SoundBank Id="3467451382" Type="Event" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" Language="SFX" Hash="{18A333E6-2419-69FD-8816-2BEA83169C53}">
 			<ObjectPath>SX_player_bumper</ObjectPath>
 			<ShortName>SX_player_bumper</ShortName>
 			<Path>Event/SX_player_bumper.bnk</Path>
@@ -12,14 +12,24 @@
 					<CachePath>SFX/SX_player_bumper_E62A944E.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="131511410" Name="Let_The_Power_Fall" ObjectPath="\Effects\Factory Effects\Stereo Delay\Let_The_Power_Fall" GUID="{6C4D2827-F82F-4BE3-A8DF-F0F0FAE93630}" LibName="Wwise Stereo Delay" LibId="8847363"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="3467451382" Name="SX_player_bumper" ObjectPath="\Events\Player\Movement\SX_player_bumper" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" DurationType="OneShot" DurationMin="0.44123533" DurationMax="0.5559217">
 					<MediaRefs>
 						<MediaRef Id="382671654"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="131511410"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{73AC0628-974E-0CB8-FCFF-887550573BA2}</FileHash>
+	<FileHash>{4AD9B7CF-CCA7-EDBE-DAF3-F95F5E12C45F}</FileHash>
 </SoundBanksInfo>

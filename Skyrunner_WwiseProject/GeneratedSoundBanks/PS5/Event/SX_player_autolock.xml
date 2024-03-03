@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="2029637615" Type="Event" GUID="{A3AB33FD-834B-442A-BA55-9A77DFAC47BB}" Language="SFX" Hash="{4548BB8D-E35D-BB47-8819-8089A15C4A3B}">
+		<SoundBank Id="2029637615" Type="Event" GUID="{A3AB33FD-834B-442A-BA55-9A77DFAC47BB}" Language="SFX" Hash="{DCAFD05C-243C-F9CD-2451-A45C27A39FD5}">
 			<ObjectPath>SX_player_autolock</ObjectPath>
 			<ShortName>SX_player_autolock</ShortName>
 			<Path>Event/SX_player_autolock.bnk</Path>
@@ -12,14 +12,24 @@
 					<CachePath>SFX/SX_player_autolock_755F56E2.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="131511410" Name="Let_The_Power_Fall" ObjectPath="\Effects\Factory Effects\Stereo Delay\Let_The_Power_Fall" GUID="{6C4D2827-F82F-4BE3-A8DF-F0F0FAE93630}" LibName="Wwise Stereo Delay" LibId="8847363"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
-				<Event Id="2029637615" Name="SX_player_autolock" ObjectPath="\Events\Player\Feedback\SX_player_autolock" GUID="{A3AB33FD-834B-442A-BA55-9A77DFAC47BB}" DurationType="OneShot" DurationMin="0.12977609" DurationMax="0.12977609">
+				<Event Id="2029637615" Name="SX_player_autolock" ObjectPath="\Events\Player\Feedback\SX_player_autolock" GUID="{A3AB33FD-834B-442A-BA55-9A77DFAC47BB}" DurationType="OneShot" DurationMin="0.15433064" DurationMax="0.15433064">
 					<MediaRefs>
 						<MediaRef Id="994636613"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="131511410"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A064D444-DDEA-4792-E804-C31DCDEB9D49}</FileHash>
+	<FileHash>{0A190337-F162-2182-2684-42FE8E70D9AB}</FileHash>
 </SoundBanksInfo>

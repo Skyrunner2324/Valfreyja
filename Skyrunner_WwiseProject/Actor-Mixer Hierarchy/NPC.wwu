@@ -849,7 +849,7 @@
 															<PointList>
 																<Point>
 																	<XPos>0</XPos>
-																	<YPos>-0</YPos>
+																	<YPos>0</YPos>
 																	<Flags>5</Flags>
 																</Point>
 																<Point>
@@ -918,6 +918,12 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="bullet_enemy_bullet_flyby_fast_06" ID="{E7490A68-6DA2-4EBD-8495-24C391CEEEB7}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.117800170068027"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.24368466553288"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.279486678004535"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Enemies\bullet_enemy_bullet_flyby_fast_06.wav</AudioFile>
 									<MediaIDList>
@@ -1079,7 +1085,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-15</Value>
+												<Value>-14</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1157,6 +1163,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<RandomSequenceContainer Name="enemy_explosion" ID="{714287AA-88E8-485B-8533-C19D1CC35135}" ShortID="825029419">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>

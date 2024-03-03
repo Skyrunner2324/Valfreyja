@@ -12443,6 +12443,48 @@
 																		</MusicTransition>
 																	</TransitionList>
 																	<ObjectLists>
+																		<ObjectList Name="RTPC">
+																			<Reference>
+																				<Local>
+																					<RTPC Name="" ID="{CFFC1934-381D-4342-93FA-D2E0D0001A54}" ShortID="1010501647">
+																						<PropertyList>
+																							<Property Name="PropertyName" Type="string" Value="Volume"/>
+																						</PropertyList>
+																						<ReferenceList>
+																							<Reference Name="ControlInput">
+																								<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																							</Reference>
+																							<Reference Name="Curve">
+																								<Custom>
+																									<Curve Name="" ID="{4091DED2-B1C6-4D0F-B4D6-D89C09954B7B}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>-1</XPos>
+																												<YPos>-200</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>1</XPos>
+																												<YPos>-200</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</Custom>
+																							</Reference>
+																						</ReferenceList>
+																					</RTPC>
+																				</Local>
+																			</Reference>
+																		</ObjectList>
 																		<ObjectList Name="Sequences">
 																			<Reference>
 																				<Local>
@@ -12458,6 +12500,98 @@
 																												<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																											</PropertyList>
 																											<AudioSourceRef Name="test_parkourflow_Drums_Breakcore" ID="{038A115E-9049-4B80-8626-4BCE28A5FC2A}"/>
+																										</MusicClip>
+																									</Local>
+																								</Reference>
+																							</ObjectList>
+																						</ObjectLists>
+																					</MusicTrackSequence>
+																				</Local>
+																			</Reference>
+																		</ObjectList>
+																	</ObjectLists>
+																</MusicTrack>
+																<MusicTrack Name="test_parkourflow_Drums_Glitched_Breakcore" ID="{C63D3EE4-56A6-4188-ABDA-248AC3F589EC}" ShortID="700526097">
+																	<ReferenceList>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="test_parkourflow_Drums_Glitched_Breakcore" ID="{5E43A5F9-ADC1-4CB3-9EE2-2896AB809A0F}">
+																			<Language>SFX</Language>
+																			<AudioFile>Test\test_parkourflow_Drums_Glitched_Breakcore.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="833066249"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<TransitionList>
+																		<MusicTransition Name="Root" ID="{58CE0BC5-CB6D-4C91-9CDB-10BBC24DCD19}">
+																			<PropertyList>
+																				<Property Name="IsFolder" Type="bool" Value="True"/>
+																			</PropertyList>
+																			<TransitionInfo/>
+																		</MusicTransition>
+																	</TransitionList>
+																	<ObjectLists>
+																		<ObjectList Name="RTPC">
+																			<Reference>
+																				<Local>
+																					<RTPC Name="" ID="{0BAF620F-9460-4778-AE84-7015EB2EB060}" ShortID="182034448">
+																						<PropertyList>
+																							<Property Name="PropertyName" Type="string" Value="Volume"/>
+																						</PropertyList>
+																						<ReferenceList>
+																							<Reference Name="ControlInput">
+																								<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																							</Reference>
+																							<Reference Name="Curve">
+																								<Custom>
+																									<Curve Name="" ID="{BCF36640-1483-48AC-91BB-58640CBC450D}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>-1</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>-200</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>1</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</Custom>
+																							</Reference>
+																						</ReferenceList>
+																					</RTPC>
+																				</Local>
+																			</Reference>
+																		</ObjectList>
+																		<ObjectList Name="Sequences">
+																			<Reference>
+																				<Local>
+																					<MusicTrackSequence Name="" ID="{2488F985-569E-42D2-929C-F4AA7BDFF41D}">
+																						<ObjectLists>
+																							<ObjectList Name="Clips">
+																								<Reference>
+																									<Local>
+																										<MusicClip Name="test_parkourflow_Drums_Glitched_Breakcore" ID="{C39764C2-8EDC-40E4-A790-8F6A1E5F3299}">
+																											<PropertyList>
+																												<Property Name="EndTrimOffset" Type="Real64" Value="44137.9365079365"/>
+																												<Property Name="FadeInMode" Type="int16" Value="0"/>
+																												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																											</PropertyList>
+																											<AudioSourceRef Name="test_parkourflow_Drums_Glitched_Breakcore" ID="{5E43A5F9-ADC1-4CB3-9EE2-2896AB809A0F}"/>
 																										</MusicClip>
 																									</Local>
 																								</Reference>
@@ -12504,6 +12638,50 @@
 															<TransitionInfo/>
 														</MusicTransition>
 													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{BD7A1A7C-CF31-4DD8-A78C-8DC451BB5035}" ShortID="566203713">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="RTPC_Parkour_Flow" ID="{D4EDFB9F-0AB6-4E18-A9CB-0F34B34DEA44}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{D8636B3B-3B03-47AE-A552-5FAEC7A48DAD}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="65537"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>100</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>271.53323</XPos>
+																								<YPos>1</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>400</XPos>
+																								<YPos>1</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
 													<Playlist>
 														<MusicPlaylistItem Name="" ID="{76214E62-33D4-4E21-9177-15EA825E7A57}" ShortID="849605265">
 															<PropertyList>
@@ -12740,6 +12918,8 @@
 														<MusicTransition Name="Transition" ID="{7C85ABC7-4A95-481E-97AA-BC570018945D}">
 															<PropertyList>
 																<Property Name="DestinationContextType" Type="int16" Value="2"/>
+																<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+																<Property Name="ExitSourceAt" Type="int16" Value="2"/>
 																<Property Name="SourceContextType" Type="int16" Value="2"/>
 															</PropertyList>
 															<ReferenceList>
@@ -12750,7 +12930,15 @@
 																	<ObjectRef Name="PARKOUR_test_playlist_flow" ID="{1F82839F-7697-4EDF-97E3-0E80EFBE6851}" WorkUnitID="{97B9C5CD-8975-4396-B94B-6580A54082A0}"/>
 																</Reference>
 															</ReferenceList>
-															<TransitionInfo/>
+															<TransitionInfo>
+																<SourceFadeOut>
+																	<MusicFade Name="Source Fade-out" ID="{7F8BD168-44DE-4300-9C05-986670FED296}">
+																		<PropertyList>
+																			<Property Name="FadeType" Type="int16" Value="1"/>
+																		</PropertyList>
+																	</MusicFade>
+																</SourceFadeOut>
+															</TransitionInfo>
 														</MusicTransition>
 													</ChildrenList>
 													<TransitionInfo/>

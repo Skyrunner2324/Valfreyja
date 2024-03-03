@@ -943,6 +943,7 @@
 												<Value>1</Value>
 											</ValueList>
 										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>-130</Value>
@@ -973,6 +974,9 @@
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+											<ObjectRef Name="Let_The_Power_Fall" ID="{6C4D2827-F82F-4BE3-A8DF-F0F0FAE93630}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
@@ -2122,20 +2126,24 @@
 						</RandomSequenceContainer>
 						<Sound Name="player_autolock" ID="{DB2BC175-752F-4697-9AF1-DB8EDB22B797}" ShortID="55857999">
 							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
-										<Value>910</Value>
+										<Value>610</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-20</Value>
+										<Value>-22</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+									<ObjectRef Name="Let_The_Power_Fall" ID="{6C4D2827-F82F-4BE3-A8DF-F0F0FAE93630}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
@@ -2430,6 +2438,9 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="player_feedback_land_01" ID="{09A08F8A-2BCC-4E50-AF38-B81A477B716D}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Player_Feedback\player_feedback_land_01.wav</AudioFile>
 											<MediaIDList>
@@ -2534,14 +2545,14 @@
 																		<SegmentShape>SCurve</SegmentShape>
 																	</Point>
 																	<Point>
-																		<XPos>0.66</XPos>
+																		<XPos>1.84512</XPos>
 																		<YPos>-200</YPos>
 																		<Flags>0</Flags>
 																		<SegmentShape>Log2</SegmentShape>
 																	</Point>
 																	<Point>
 																		<XPos>5</XPos>
-																		<YPos>0.10926</YPos>
+																		<YPos>-5.87206</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
