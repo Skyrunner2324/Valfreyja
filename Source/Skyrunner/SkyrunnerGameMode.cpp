@@ -40,7 +40,7 @@ void ASkyrunnerGameMode::SpawnMandatoryActors_Implementation()
 	DebugLogRed(TEXT("blueprint implementation required"));
 }
 
-void ASkyrunnerGameMode::ResetPlayer(const bool bDestroyPlayerBeforeReset,
+void ASkyrunnerGameMode::RespawnPlayer(const bool bDestroyPlayerBeforeReset,
 	const FString PlayerStartTag)
 {
 	if (bDestroyPlayerBeforeReset)
@@ -67,6 +67,29 @@ void ASkyrunnerGameMode::ResetPlayer(const bool bDestroyPlayerBeforeReset,
 	}
 
 	// broadcast delegate that should reset player controller and player HUD
+	OnPlayerResetEvent.Broadcast();
+}
+
+APawn* ASkyrunnerGameMode::SpawnPlayer(const FOnPlayerSpawned OnSpawned,
+	const FString PlayerStartTag)
+{
+	auto controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+	AActor* playerStart = FindPlayerStart(controller, PlayerStartTag);
+
+	auto world = GetWorld();
+	auto player = world->SpawnActor<APawn>(DefaultPawnClass, playerStart->GetActorTransform());
+
+	OnSpawned.ExecuteIfBound();
+
+	return player;
+}
+
+void ASkyrunnerGameMode::ResetPlayer(APawn* player, AActor* oldCameraObject)
+{
+	auto controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+	controller->Possess(player);
+	if (oldCameraObject)
+		controller->SetViewTarget(oldCameraObject);
 	OnPlayerResetEvent.Broadcast();
 }
 

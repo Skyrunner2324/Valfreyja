@@ -10,6 +10,9 @@
 UDELEGATE()
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerReset);
 
+UDELEGATE()
+DECLARE_DYNAMIC_DELEGATE(FOnPlayerSpawned);
+
 
 
 UCLASS(minimalapi)
@@ -44,9 +47,25 @@ public:
 	inline FString GetCurrentMapName() const { return GetWorld()->GetMapName(); }
 
 
+	/**
+	 * Respawn player for player controller 0 and possess
+	 */
 	UFUNCTION(BlueprintCallable)
-	void ResetPlayer(const bool bDestroyPlayerBeforeReset,
+	void RespawnPlayer(const bool bDestroyPlayerBeforeReset,
 		const FString PlayerStartTag = "None");
+
+	/**
+	 * Spawn player, call the callback then possess with player controller 0
+	 */
+	UFUNCTION(BlueprintCallable)
+	class APawn* SpawnPlayer(const FOnPlayerSpawned OnSpawned,
+		const FString PlayerStartTag = "None");
+
+	/**
+	 * Possess and Reset the player and actors that have OnPlayerReset functions bound
+	 */
+	UFUNCTION(BlueprintCallable)
+	void ResetPlayer(class APawn* player, AActor* oldCameraObject);
 
 
 	UFUNCTION(BlueprintCallable)

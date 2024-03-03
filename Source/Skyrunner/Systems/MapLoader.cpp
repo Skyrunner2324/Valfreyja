@@ -102,7 +102,7 @@ ULevelStreamingDynamic* UMapLoader::LoadMapAsync(const TSoftObjectPtr<UWorld> le
 			ASkyrunnerGameMode* gm = Cast<ASkyrunnerGameMode>(UGameplayStatics::GetGameMode(world));
 			if (gm)
 			{
-				gm->ResetPlayer(false, playerStartTag);
+				gm->RespawnPlayer(false, playerStartTag);
 			}
 			});
 		// TODO : find a way to bind a lambda to the OnLevelShown event
