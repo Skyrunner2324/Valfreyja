@@ -138,11 +138,21 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{A564A56B-6EEF-51D7-6C5D-5A606BF26D0E}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{C31CAA0E-9B7F-EA85-7564-D0E273012BC7}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
 			<Media>
+				<File Id="17371190" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\hoverboots_simple_2.wav</ShortName>
+					<Path>Media/17371190.wem</Path>
+					<CachePath>SFX/Hoverboots/hoverboots_simple_2_CD441B8D.wem</CachePath>
+				</File>
+				<File Id="345485920" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\hoverboots_simple.wav</ShortName>
+					<Path>Media/345485920.wem</Path>
+					<CachePath>SFX/Hoverboots/hoverboots_simple_F9FDA348.wem</CachePath>
+				</File>
 				<File Id="1035111905" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Hoverboots\jet_pack.wav</ShortName>
 					<Path>Media/1035111905.wem</Path>
@@ -158,6 +168,7 @@
 				<Custom>
 					<Plugin Id="247448906" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\Soundseed Wind\Parametric EQ (Custom)" GUID="{2078FFD5-FDF7-4C01-900C-742249BE40F6}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="268374027" Name="Delay (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\Soundseed Wind\Delay (Custom)" GUID="{700FD0B8-9B20-48B5-BE3E-EF4CE88526AC}" LibName="Wwise Delay" LibId="6946819"/>
+					<Plugin Id="412212938" Name="Flanger (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\hover_grounded\hoverboots_simple\Flanger (Custom)" GUID="{FF33D76E-37D2-4508-81FB-9D384BD4AFD8}" LibName="Wwise Flanger" LibId="8192003"/>
 					<Plugin Id="666289254" Name="Soundseed Air Wind" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\Soundseed Wind\Soundseed Air Wind" GUID="{83767CC5-69B5-4564-8311-4A333A1B8AF9}" LibName="SoundSeed Air Wind" LibId="7798786"/>
 					<Plugin Id="768480562" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\hoverboots_on_rail_loop\Parametric EQ (Custom)" GUID="{795F1578-DFEF-4A0F-995B-DC9BEE878FD0}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</Custom>
@@ -169,6 +180,8 @@
 			<Events>
 				<Event Id="527139965" Name="SX_play_hoverboots" ObjectPath="\Events\Hoverboots\Hoverboots\SX_play_hoverboots" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" DurationType="Infinite">
 					<MediaRefs>
+						<MediaRef Id="17371190"/>
+						<MediaRef Id="345485920"/>
 						<MediaRef Id="1035111905"/>
 						<MediaRef Id="1056072145"/>
 					</MediaRefs>
@@ -176,6 +189,7 @@
 						<Custom>
 							<PluginRef Id="247448906"/>
 							<PluginRef Id="268374027"/>
+							<PluginRef Id="412212938"/>
 							<PluginRef Id="666289254"/>
 							<PluginRef Id="768480562"/>
 						</Custom>
@@ -611,7 +625,7 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{BBEC9A68-D984-C1D9-97AF-42C566B4111C}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{84DF1854-13D9-59E4-1EAD-7ED1A22A671F}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -1669,5 +1683,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FB6A35CA-CB70-1354-7EE1-062962770830}</FileHash>
+	<FileHash>{6B21CC41-004D-A337-2E8D-45782590F03F}</FileHash>
 </SoundBanksInfo>
