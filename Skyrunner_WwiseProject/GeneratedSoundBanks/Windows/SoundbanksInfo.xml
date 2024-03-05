@@ -611,7 +611,7 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{B02958E6-982B-3D6C-2962-42B4601F2EA4}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{1474DC21-7D5E-FB1B-DF23-725B14912B47}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -1309,7 +1309,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{5928D590-1749-6164-1385-BAF607C605C6}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{6CB21C3D-16F8-EB2A-BFBD-0FCA34EA0CAD}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -1329,20 +1329,40 @@
 					<Path>Media/177168537.wem</Path>
 					<CachePath>SFX/Test/Test_parkour_transi_073B4D0C.wem</CachePath>
 				</File>
+				<File Id="208924758" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\Menu\Loop_Sky_Menu.wav</ShortName>
+					<Path>Media/208924758.wem</Path>
+					<CachePath>SFX/Music/Menu/Loop_Sky_Menu_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="245939973" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\ZoneA\Base_Zone_A.wav</ShortName>
+					<Path>Media/245939973.wem</Path>
+					<CachePath>SFX/Music/ZoneA/Base_Zone_A_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="354836995" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\ZoneA\Bass_Zone_A.wav</ShortName>
+					<Path>Media/354836995.wem</Path>
+					<CachePath>SFX/Music/ZoneA/Bass_Zone_A_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="364434247" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Test\test_parkourflow_Drums_Breakcore.wav</ShortName>
 					<Path>Media/364434247.wem</Path>
 					<CachePath>SFX/Test/test_parkourflow_Drums_Breakcore_073B4D0C.wem</CachePath>
 				</File>
-				<File Id="577991908" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Music\Menu\music_menu.wav</ShortName>
-					<Path>Media/577991908.wem</Path>
-					<CachePath>SFX/Music/Menu/music_menu_073B4D0C.wem</CachePath>
-				</File>
 				<File Id="668571708" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Test\test_parkourflow_Vocal_Breakcore.wav</ShortName>
 					<Path>Media/668571708.wem</Path>
 					<CachePath>SFX/Test/test_parkourflow_Vocal_Breakcore_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="704758289" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\ZoneA\Drums_Zone_A.wav</ShortName>
+					<Path>Media/704758289.wem</Path>
+					<CachePath>SFX/Music/ZoneA/Drums_Zone_A_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="817992556" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\ZoneA\Violons_Zone_A.wav</ShortName>
+					<Path>Media/817992556.wem</Path>
+					<CachePath>SFX/Music/ZoneA/Violons_Zone_A_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="833066249" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Test\test_parkourflow_Drums_Glitched_Breakcore.wav</ShortName>
@@ -1358,23 +1378,14 @@
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="2456631623" Id="84696446" GUID="{A2C4D1B0-2D1F-4275-A355-154B8983B6A4}"/>
-							<MediaRefs>
-								<MediaRef Id="177168537"/>
-							</MediaRefs>
 							<Children>
 								<SwitchContainer>
 									<SwitchValue GroupType="Switch" GroupId="2262403497" Id="0" GUID="{702787C3-E2B6-4E60-A266-37C30239657B}"/>
 									<MediaRefs>
-										<MediaRef Id="76637748"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="2262403497" Id="3032049369" GUID="{6768CC3A-F841-45F1-8A13-CF8AE7C4DC6E}"/>
-									<MediaRefs>
-										<MediaRef Id="169113880"/>
-										<MediaRef Id="364434247"/>
-										<MediaRef Id="668571708"/>
-										<MediaRef Id="833066249"/>
+										<MediaRef Id="245939973"/>
+										<MediaRef Id="354836995"/>
+										<MediaRef Id="704758289"/>
+										<MediaRef Id="817992556"/>
 									</MediaRefs>
 								</SwitchContainer>
 							</Children>
@@ -1382,7 +1393,7 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="2456631623" Id="0" GUID="{3F25AE7C-EF51-475E-955C-139B08219274}"/>
 							<MediaRefs>
-								<MediaRef Id="577991908"/>
+								<MediaRef Id="208924758"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -1434,7 +1445,7 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="2456631623" Id="2607556080" GUID="{013BA24D-2D5A-4A3B-970D-1E27311ADAA7}"/>
 							<MediaRefs>
-								<MediaRef Id="577991908"/>
+								<MediaRef Id="208924758"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -1575,5 +1586,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FEEA1BBA-B9A7-0691-236C-686F90ECD686}</FileHash>
+	<FileHash>{5E8DF3A8-10C1-3434-302E-5CD8DFA2B3F3}</FileHash>
 </SoundBanksInfo>
