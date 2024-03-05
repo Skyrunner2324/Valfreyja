@@ -2126,10 +2126,24 @@
 						</RandomSequenceContainer>
 						<Sound Name="player_autolock" ID="{DB2BC175-752F-4697-9AF1-DB8EDB22B797}" ShortID="55857999">
 							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
-										<Value>610</Value>
+										<Value>1030</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
@@ -2151,6 +2165,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SX_player_autolock" ID="{6F8BA0C7-3FDE-4E6C-8D7E-0431095F5DDD}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>SX_player_autolock.wav</AudioFile>
 									<MediaIDList>

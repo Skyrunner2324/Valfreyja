@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{6CB21C3D-16F8-EB2A-BFBD-0FCA34EA0CAD}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{8B3AEEA2-20CA-7E93-68FA-2B4DC562AFC2}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
 			<Media>
+				<File Id="16441669" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\ZoneA\Azone_bass_parkour_high.wav</ShortName>
+					<Path>Media/16441669.wem</Path>
+					<CachePath>SFX/Music/ZoneA/Azone_bass_parkour_high_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="76637748" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Test\Test_parkour_base.wav</ShortName>
 					<Path>Media/76637748.wem</Path>
 					<CachePath>SFX/Test/Test_parkour_base_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="80841443" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\ZoneA\Azone_drums_slomo.wav</ShortName>
+					<Path>Media/80841443.wem</Path>
+					<CachePath>SFX/Music/ZoneA/Azone_drums_slomo_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="168169656" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\ZoneA\Azone_stringssynths_parkour_low.wav</ShortName>
+					<Path>Media/168169656.wem</Path>
+					<CachePath>SFX/Music/ZoneA/Azone_stringssynths_parkour_low_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="169113880" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Test\test_parkourflow_Bass_Synths_Breakcore.wav</ShortName>
@@ -41,6 +56,16 @@
 					<Path>Media/364434247.wem</Path>
 					<CachePath>SFX/Test/test_parkourflow_Drums_Breakcore_073B4D0C.wem</CachePath>
 				</File>
+				<File Id="581769070" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\ZoneA\Azone_glitch_parkour_flow.wav</ShortName>
+					<Path>Media/581769070.wem</Path>
+					<CachePath>SFX/Music/ZoneA/Azone_glitch_parkour_flow_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="661484211" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\ZoneA\Azone_pluck_parkour_base.wav</ShortName>
+					<Path>Media/661484211.wem</Path>
+					<CachePath>SFX/Music/ZoneA/Azone_pluck_parkour_base_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="668571708" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Test\test_parkourflow_Vocal_Breakcore.wav</ShortName>
 					<Path>Media/668571708.wem</Path>
@@ -61,6 +86,11 @@
 					<Path>Media/833066249.wem</Path>
 					<CachePath>SFX/Test/test_parkourflow_Drums_Glitched_Breakcore_073B4D0C.wem</CachePath>
 				</File>
+				<File Id="911080061" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\ZoneA\End_Zone_A.wav</ShortName>
+					<Path>Media/911080061.wem</Path>
+					<CachePath>SFX/Music/ZoneA/End_Zone_A_073B4D0C.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
 				<Event Id="3441789682" Name="MUS_Play_MainMusic" ObjectPath="\Events\Music\MUS_Play_MainMusic" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" DurationType="Infinite">
@@ -73,12 +103,57 @@
 							<Children>
 								<SwitchContainer>
 									<SwitchValue GroupType="Switch" GroupId="2262403497" Id="0" GUID="{702787C3-E2B6-4E60-A266-37C30239657B}"/>
-									<MediaRefs>
-										<MediaRef Id="245939973"/>
-										<MediaRef Id="354836995"/>
-										<MediaRef Id="704758289"/>
-										<MediaRef Id="817992556"/>
-									</MediaRefs>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="2368434850" Id="0" GUID="{6859BDDD-0C84-4471-BE51-7BBCB0AB5E7A}"/>
+											<MediaRefs>
+												<MediaRef Id="245939973"/>
+												<MediaRef Id="354836995"/>
+												<MediaRef Id="704758289"/>
+												<MediaRef Id="817992556"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="2262403497" Id="0" GUID="{702787C3-E2B6-4E60-A266-37C30239657B}"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="2368434850" Id="1454074649" GUID="{C10D7FC3-6D0F-4995-AC4E-F6BDEA9EDF37}"/>
+											<MediaRefs>
+												<MediaRef Id="245939973"/>
+												<MediaRef Id="354836995"/>
+												<MediaRef Id="704758289"/>
+												<MediaRef Id="817992556"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="2262403497" Id="0" GUID="{702787C3-E2B6-4E60-A266-37C30239657B}"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="2368434850" Id="1454074650" GUID="{F9BD7326-90AD-4609-BCFF-F904AB2A443F}"/>
+											<MediaRefs>
+												<MediaRef Id="911080061"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="2262403497" Id="3032049369" GUID="{6768CC3A-F841-45F1-8A13-CF8AE7C4DC6E}"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="2368434850" Id="1454074649" GUID="{C10D7FC3-6D0F-4995-AC4E-F6BDEA9EDF37}"/>
+											<MediaRefs>
+												<MediaRef Id="16441669"/>
+												<MediaRef Id="80841443"/>
+												<MediaRef Id="168169656"/>
+												<MediaRef Id="581769070"/>
+												<MediaRef Id="661484211"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
 								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
@@ -148,6 +223,14 @@
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="2368434850" Name="Music_Number" ObjectPath="\States\Default Work Unit\Music\Music_Number" GUID="{6859BDDD-0C84-4471-BE51-7BBCB0AB5E7A}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music\Music_Number\None" GUID="{AEBB3FC4-70F4-436F-A011-332296FDD320}"/>
+						<State Id="1454074649" Name="Music__01" ObjectPath="\States\Default Work Unit\Music\Music_Number\Music__01" GUID="{C10D7FC3-6D0F-4995-AC4E-F6BDEA9EDF37}"/>
+						<State Id="1454074650" Name="Music__02" ObjectPath="\States\Default Work Unit\Music\Music_Number\Music__02" GUID="{F9BD7326-90AD-4609-BCFF-F904AB2A443F}"/>
+						<State Id="1454074651" Name="Music__03" ObjectPath="\States\Default Work Unit\Music\Music_Number\Music__03" GUID="{68188DD8-3818-488B-A868-9C73F1BA33DA}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="2456631623" Name="Music_Zone" ObjectPath="\States\Default Work Unit\Music\Music_Zone" GUID="{3F25AE7C-EF51-475E-955C-139B08219274}">
 					<States>
 						<State Id="84696444" Name="C" ObjectPath="\States\Default Work Unit\Music\Music_Zone\C" GUID="{92FFE5B0-21F6-4D33-A868-700147EC1499}"/>
@@ -168,5 +251,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E9F3FFB5-7AF5-A418-7C9F-2AB23765ED83}</FileHash>
+	<FileHash>{B75BA974-61E9-DAC1-0A16-6D189199BB95}</FileHash>
 </SoundBanksInfo>
