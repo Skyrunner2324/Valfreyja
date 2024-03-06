@@ -753,189 +753,6 @@
 										</Sound>
 									</ChildrenList>
 								</Folder>
-								<Sound Name="game_landing" ID="{4B806CCE-032B-48D7-BAFD-B949690A332B}" ShortID="531563138">
-									<PropertyList>
-										<Property Name="Highpass" Type="int16">
-											<ValueList>
-												<Value>45</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-5</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<SourcePlugin Name="Soundseed Air Woosh" ID="{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}" ShortID="416403271" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
-											<PropertyList>
-												<Property Name="Duration" Type="Real64" Value="0.2"/>
-												<Property Name="DurationRandom" Type="Real32" Value="0.05"/>
-												<Property Name="FrequencyScale" Type="Real32" Value="-0.84"/>
-												<Property Name="FrequencyScaleRandom" Type="Real32" Value="0.19"/>
-												<Property Name="NoiseColor" Type="int16" Value="1"/>
-												<Property Name="PlaybackRate" Type="Real32" Value="0.8"/>
-												<Property Name="SpeedAutomate" Type="bool" Value="True"/>
-											</PropertyList>
-											<ObjectLists>
-												<ObjectList Name="RTPC">
-													<Reference>
-														<Local>
-															<RTPC Name="" ID="{C6762161-DCB6-462C-B137-2A69D905B32D}" ShortID="547573576">
-																<PropertyList>
-																	<Property Name="PropertyName" Type="string" Value="FrequencyScale"/>
-																</PropertyList>
-																<ReferenceList>
-																	<Reference Name="ControlInput">
-																		<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																	</Reference>
-																	<Reference Name="Curve">
-																		<Custom>
-																			<Curve Name="" ID="{A0997AF1-373D-4756-91AB-103439438C3A}">
-																				<PropertyList>
-																					<Property Name="Flags" Type="int32" Value="1"/>
-																				</PropertyList>
-																				<PointList>
-																					<Point>
-																						<XPos>0</XPos>
-																						<YPos>0</YPos>
-																						<Flags>5</Flags>
-																					</Point>
-																					<Point>
-																						<XPos>5</XPos>
-																						<YPos>0.1128</YPos>
-																						<Flags>37</Flags>
-																					</Point>
-																				</PointList>
-																			</Curve>
-																		</Custom>
-																	</Reference>
-																</ReferenceList>
-															</RTPC>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-											<Language>SFX</Language>
-											<PluginData>
-	<WooshData>
-		<CurveList Version="1">
-			<CurveInfo Name="Speed">
-				<Curve Name="" ID="{2133EFBC-3F6C-41AB-A39E-ABBAC07D9517}">
-					<PropertyList>
-						<Property Name="Flags" Type="int32" Value="1"/>
-					</PropertyList>
-					<PointList>
-						<Point>
-							<XPos>0</XPos>
-							<YPos>0</YPos>
-							<Flags>5</Flags>
-						</Point>
-						<Point>
-							<XPos>0.01569</XPos>
-							<YPos>63.63637</YPos>
-							<Flags>0</Flags>
-						</Point>
-						<Point>
-							<XPos>0.0356466666666667</XPos>
-							<YPos>66.16493</YPos>
-							<Flags>0</Flags>
-						</Point>
-						<Point>
-							<XPos>0.10357</XPos>
-							<YPos>29.13674</YPos>
-							<Flags>0</Flags>
-						</Point>
-						<Point>
-							<XPos>0.2</XPos>
-							<YPos>0</YPos>
-							<Flags>37</Flags>
-						</Point>
-					</PointList>
-				</Curve>
-			</CurveInfo>
-		</CurveList>
-		<Path Version="1">
-			<Path2D Name="" ID="{F18C76D4-1087-4FC6-A196-20CA895C1DDD}">
-				<PropertyList>
-					<Property Name="LinearTime" Type="bool" Value="False"/>
-				</PropertyList>
-				<PointList>
-					<Point>
-						<XPos>0</XPos>
-						<YPos>0</YPos>
-						<Flags>12</Flags>
-						<Time>0</Time>
-					</Point>
-					<Point>
-						<XPos>0.25974</XPos>
-						<YPos>-5.18519</YPos>
-						<Flags>0</Flags>
-						<Time>1000</Time>
-					</Point>
-				</PointList>
-			</Path2D>
-		</Path>
-	</WooshData>
-</PluginData>
-											<PluginInnerObjectList>
-												<List Name="Deflectors">
-													<PluginInnerObject Name="" ID="{655B3D5C-7937-435D-B699-C17D99A9B7F5}" PluginName="Deflector" CompanyID="0" PluginID="122"/>
-												</List>
-											</PluginInnerObjectList>
-										</SourcePlugin>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<Reference>
-												<Local>
-													<RTPC Name="" ID="{58CA4554-3E08-43D9-BC28-781D849F9BEA}" ShortID="679966097">
-														<PropertyList>
-															<Property Name="PropertyName" Type="string" Value="Volume"/>
-														</PropertyList>
-														<ReferenceList>
-															<Reference Name="ControlInput">
-																<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-															</Reference>
-															<Reference Name="Curve">
-																<Custom>
-																	<Curve Name="" ID="{649CDDB3-3072-4BF5-9DB3-C076170CE7B5}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="3"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>5</XPos>
-																				<YPos>-4.15182</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</Custom>
-															</Reference>
-														</ReferenceList>
-													</RTPC>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-									<ActiveSourceList>
-										<ActiveSource Name="Soundseed Air Woosh" ID="{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="game_bumper" ID="{DF8F4EE9-2BD3-4ABE-93E5-381898FFEC60}" ShortID="635856933">
 									<PropertyList>
 										<Property Name="MaxSoundPerInstance" Type="int16">
@@ -1002,6 +819,386 @@
 										<ActiveSource Name="SX_player_bumper" ID="{2884E553-8DAC-4CD4-9AB2-4CD6FB1C8C89}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<BlendContainer Name="game_land" ID="{F816745C-890D-4982-95CE-1A0E463FAF7D}" ShortID="202724146">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="game_landing" ID="{4B806CCE-032B-48D7-BAFD-B949690A332B}" ShortID="531563138">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>45</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Soundseed Air Woosh" ID="{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}" ShortID="416403271" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
+													<PropertyList>
+														<Property Name="Duration" Type="Real64" Value="0.2"/>
+														<Property Name="DurationRandom" Type="Real32" Value="0.05"/>
+														<Property Name="FrequencyScale" Type="Real32" Value="-0.84"/>
+														<Property Name="FrequencyScaleRandom" Type="Real32" Value="0.19"/>
+														<Property Name="NoiseColor" Type="int16" Value="1"/>
+														<Property Name="PlaybackRate" Type="Real32" Value="0.8"/>
+														<Property Name="SpeedAutomate" Type="bool" Value="True"/>
+													</PropertyList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{C6762161-DCB6-462C-B137-2A69D905B32D}" ShortID="547573576">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="FrequencyScale"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{A0997AF1-373D-4756-91AB-103439438C3A}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>0.1128</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<Language>SFX</Language>
+													<PluginData>
+	<WooshData>
+		<CurveList Version="1">
+			<CurveInfo Name="Speed">
+				<Curve Name="" ID="{2133EFBC-3F6C-41AB-A39E-ABBAC07D9517}">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="1"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>0</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>0.01569</XPos>
+							<YPos>63.63637</YPos>
+							<Flags>0</Flags>
+						</Point>
+						<Point>
+							<XPos>0.0356466666666667</XPos>
+							<YPos>66.16493</YPos>
+							<Flags>0</Flags>
+						</Point>
+						<Point>
+							<XPos>0.10357</XPos>
+							<YPos>29.13674</YPos>
+							<Flags>0</Flags>
+						</Point>
+						<Point>
+							<XPos>0.2</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+		</CurveList>
+		<Path Version="1">
+			<Path2D Name="" ID="{F18C76D4-1087-4FC6-A196-20CA895C1DDD}">
+				<PropertyList>
+					<Property Name="LinearTime" Type="bool" Value="False"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0</YPos>
+						<Flags>12</Flags>
+						<Time>0</Time>
+					</Point>
+					<Point>
+						<XPos>0.25974</XPos>
+						<YPos>-5.18519</YPos>
+						<Flags>0</Flags>
+						<Time>1000</Time>
+					</Point>
+				</PointList>
+			</Path2D>
+		</Path>
+	</WooshData>
+</PluginData>
+													<PluginInnerObjectList>
+														<List Name="Deflectors">
+															<PluginInnerObject Name="" ID="{655B3D5C-7937-435D-B699-C17D99A9B7F5}" PluginName="Deflector" CompanyID="0" PluginID="122"/>
+														</List>
+													</PluginInnerObjectList>
+												</SourcePlugin>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{58CA4554-3E08-43D9-BC28-781D849F9BEA}" ShortID="679966097">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{649CDDB3-3072-4BF5-9DB3-C076170CE7B5}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>5</XPos>
+																						<YPos>-4.15182</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="Soundseed Air Woosh" ID="{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<RandomSequenceContainer Name="random_land" ID="{27F1D799-D7CA-412D-888A-C7E55C8D4DF4}" ShortID="569465467">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-15</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="hoverboots_landing_ice_skate_land_01" ID="{9C6DEF13-CCEF-486C-9194-A351AE71AB03}" ShortID="313315075">
+													<PropertyList>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-20</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-10</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="hoverboots_landing_ice_skate_land_01" ID="{260C718B-954D-4E86-9BF5-C06F9957C7B6}">
+															<Language>SFX</Language>
+															<AudioFile>Hoverboots\hoverboots_landing_ice_skate_land_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="856018667"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="hoverboots_landing_ice_skate_land_01" ID="{260C718B-954D-4E86-9BF5-C06F9957C7B6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="hoverboots_landing_ice_skate_land_02" ID="{3F7BD8DD-DE6A-4478-9702-5975EE5EA998}" ShortID="56207316">
+													<PropertyList>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-20</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-6</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="hoverboots_landing_ice_skate_land_02" ID="{E54A5467-E1F6-456C-8177-AF412CB945B1}">
+															<Language>SFX</Language>
+															<AudioFile>Hoverboots\hoverboots_landing_ice_skate_land_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="165382445"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="hoverboots_landing_ice_skate_land_02" ID="{E54A5467-E1F6-456C-8177-AF412CB945B1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="hoverboots_landing_ice_skate_land_05" ID="{DF6B44AA-E031-43FA-8139-4410CB379894}" ShortID="263300134">
+													<PropertyList>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-20</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="hoverboots_landing_ice_skate_land_05" ID="{7FDFCD46-A364-414D-9C68-EC11EC275D18}">
+															<Language>SFX</Language>
+															<AudioFile>Hoverboots\hoverboots_landing_ice_skate_land_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1031907268"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="hoverboots_landing_ice_skate_land_05" ID="{7FDFCD46-A364-414D-9C68-EC11EC275D18}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="hoverboots_landing_ice_skate_land_04" ID="{85C94906-3A69-4B03-B0AC-E4BEA2BA86A3}" ShortID="945738729">
+													<PropertyList>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-20</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="hoverboots_landing_ice_skate_land_04" ID="{C3CC8906-29EE-4043-B3DC-6CCD4898CB76}">
+															<Language>SFX</Language>
+															<AudioFile>Hoverboots\hoverboots_landing_ice_skate_land_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="874819989"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="hoverboots_landing_ice_skate_land_04" ID="{C3CC8906-29EE-4043-B3DC-6CCD4898CB76}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="hoverboots_landing_ice_skate_land_03" ID="{9289DB8A-0C4F-4780-A416-37C21F2F9718}" ShortID="30076078">
+													<PropertyList>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-20</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="hoverboots_landing_ice_skate_land_03" ID="{13476D22-5BFE-4921-8541-3C06A561F0D3}">
+															<Language>SFX</Language>
+															<AudioFile>Hoverboots\hoverboots_landing_ice_skate_land_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="533701511"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="hoverboots_landing_ice_skate_land_03" ID="{13476D22-5BFE-4921-8541-3C06A561F0D3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</BlendContainer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
