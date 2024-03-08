@@ -5,11 +5,13 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Components/BoxComponent.h"
+#include "Components/ActorComponent.h"
 
 
 #include "EnemyBase.generated.h"
 
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FDelegateTakeDmage, AActor*, Actor);
 
 // TODO : rename EnemyBase
 UCLASS()
@@ -29,6 +31,8 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
 	float fireCooldown = 0.f;
 
+	UPROPERTY(BlueprintAssignable, BlueprintCallable)
+	FDelegateTakeDmage OnTakeDamage;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
 	AActor* dotMarker = nullptr;
