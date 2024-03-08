@@ -97,7 +97,7 @@
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-20</Value>
+												<Value>-10</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -568,9 +568,24 @@
 										<Sound Name="hoverboots_simple_2" ID="{797E911F-B022-4D51-8F8E-4F1D93829BC0}" ShortID="918775972">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>530</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{0EA2A26F-0BF2-4F3E-ADD3-7FC1F1A02B06}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-732"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-6</Value>
+														<Value>-18</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -617,12 +632,12 @@
 																				<PointList>
 																					<Point>
 																						<XPos>0</XPos>
-																						<YPos>-1031</YPos>
+																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
 																						<XPos>3000</XPos>
-																						<YPos>913</YPos>
+																						<YPos>2390</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -637,6 +652,180 @@
 											</ObjectLists>
 											<ActiveSourceList>
 												<ActiveSource Name="hoverboots_simple_2" ID="{A58B6032-5174-4454-814D-748DAF6CB1AD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="hoverboots_simple" ID="{6BF42BE5-06A3-4D38-B1E5-EC3B8E5C67C6}" ShortID="443234562">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>81</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="hoverboots_simple" ID="{D64C32DF-1ADF-4A53-A64E-64A1DF2FF0F0}">
+													<Language>SFX</Language>
+													<AudioFile>Hoverboots\hoverboots_simple.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="842316658"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{7A44A9FB-7368-4038-9520-C80ED299E2BA}" ShortID="447027741">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{8FE4C607-4851-46D8-A93E-63F861748344}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																						<SegmentShape>Log1</SegmentShape>
+																					</Point>
+																					<Point>
+																						<XPos>351.16045</XPos>
+																						<YPos>259</YPos>
+																						<Flags>0</Flags>
+																						<SegmentShape>Exp2</SegmentShape>
+																					</Point>
+																					<Point>
+																						<XPos>2073.66296</XPos>
+																						<YPos>-551</YPos>
+																						<Flags>0</Flags>
+																						<SegmentShape>Log1</SegmentShape>
+																					</Point>
+																					<Point>
+																						<XPos>3000</XPos>
+																						<YPos>-38</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{C09DEFF6-B947-4791-90E4-8E936A346577}" ShortID="661391831">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<Custom>
+																			<ModulatorLfo Name="Modulator LFO (Custom)" ID="{B1B86999-8E0A-450C-9D60-5F0FEBB9BE77}" ShortID="1027896860">
+																				<PropertyList>
+																					<Property Name="LfoFrequency" Type="Real64" Value="0.5"/>
+																				</PropertyList>
+																				<ObjectLists>
+																					<ObjectList Name="RTPC">
+																						<Reference>
+																							<Local>
+																								<RTPC Name="" ID="{0FB567FD-6364-4713-8CAA-4F392677EA52}" ShortID="59253361">
+																									<PropertyList>
+																										<Property Name="PropertyName" Type="string" Value="LfoFrequency"/>
+																									</PropertyList>
+																									<ReferenceList>
+																										<Reference Name="ControlInput">
+																											<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																										</Reference>
+																										<Reference Name="Curve">
+																											<Custom>
+																												<Curve Name="" ID="{5EF6FAA8-3B88-4B99-9125-2D95AD5B8867}">
+																													<PropertyList>
+																														<Property Name="Flags" Type="int32" Value="5"/>
+																													</PropertyList>
+																													<PointList>
+																														<Point>
+																															<XPos>0</XPos>
+																															<YPos>18.05119</YPos>
+																															<Flags>5</Flags>
+																															<SegmentShape>Exp3</SegmentShape>
+																														</Point>
+																														<Point>
+																															<XPos>193.74369</XPos>
+																															<YPos>2.041</YPos>
+																															<Flags>0</Flags>
+																															<SegmentShape>Log3</SegmentShape>
+																														</Point>
+																														<Point>
+																															<XPos>3000</XPos>
+																															<YPos>0.36733</YPos>
+																															<Flags>37</Flags>
+																														</Point>
+																													</PointList>
+																												</Curve>
+																											</Custom>
+																										</Reference>
+																									</ReferenceList>
+																								</RTPC>
+																							</Local>
+																						</Reference>
+																					</ObjectList>
+																				</ObjectLists>
+																			</ModulatorLfo>
+																		</Custom>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{1873FE19-89D3-4B0B-ACB1-CB86A4EF273E}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-1.71004</YPos>
+																						<Flags>21</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>-14.24771</YPos>
+																						<Flags>53</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="hoverboots_simple" ID="{D64C32DF-1ADF-4A53-A64E-64A1DF2FF0F0}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -666,14 +855,14 @@
 																				<SegmentShape>Log3</SegmentShape>
 																			</Point>
 																			<Point>
-																				<XPos>402.62361</XPos>
-																				<YPos>-6.43166</YPos>
+																				<XPos>405.65086</XPos>
+																				<YPos>-2.14435</YPos>
 																				<Flags>0</Flags>
 																				<SegmentShape>Log3</SegmentShape>
 																			</Point>
 																			<Point>
 																				<XPos>3000</XPos>
-																				<YPos>0</YPos>
+																				<YPos>0.79017</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -691,26 +880,10 @@
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-20</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="Effect0">
-											<Custom>
-												<Effect Name="Delay (Custom)" ID="{16141DF4-9526-460D-A025-4D3DAA83351E}" ShortID="444051504" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
-													<PropertyList>
-														<Property Name="DelayTime" Type="Real32" Value="0.32"/>
-														<Property Name="Feedback" Type="Real32" Value="6.5"/>
-														<Property Name="WetDryMix" Type="Real32" Value="71"/>
-													</PropertyList>
-												</Effect>
-											</Custom>
 										</Reference>
 										<Reference Name="Effect1">
 											<Custom>
@@ -810,10 +983,11 @@
 												<Property Name="AttenuationRollOff" Type="Real32" Value="0.9"/>
 												<Property Name="AverageVelocity" Type="Real32" Value="-2400"/>
 												<Property Name="ChannelMask" Type="int16" Value="2"/>
+												<Property Name="Direction" Type="Real32" Value="-12"/>
+												<Property Name="Duration" Type="Real64" Value="19.8"/>
 												<Property Name="FrequencyScale" Type="Real32" Value="0.04"/>
 												<Property Name="Gustiness" Type="Real32" Value="0"/>
 												<Property Name="MinDistance" Type="Real32" Value="11.4"/>
-												<Property Name="QFactorScale" Type="Real32" Value="1.26"/>
 												<Property Name="Variability" Type="Real32" Value="0"/>
 												<Property Name="VelocityDynamicRange" Type="Real32" Value="0.81"/>
 											</PropertyList>
@@ -838,19 +1012,12 @@
 																				<PointList>
 																					<Point>
 																						<XPos>0</XPos>
-																						<YPos>-2400</YPos>
+																						<YPos>632.0442</YPos>
 																						<Flags>5</Flags>
-																						<SegmentShape>Log2</SegmentShape>
-																					</Point>
-																					<Point>
-																						<XPos>1250</XPos>
-																						<YPos>384.79808</YPos>
-																						<Flags>0</Flags>
-																						<SegmentShape>Log2</SegmentShape>
 																					</Point>
 																					<Point>
 																						<XPos>3000</XPos>
-																						<YPos>1223.76237</YPos>
+																						<YPos>924.87086</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -869,7 +1036,7 @@
 																</PropertyList>
 																<ReferenceList>
 																	<Reference Name="ControlInput">
-																		<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																		<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
 																	</Reference>
 																	<Reference Name="Curve">
 																		<Custom>
@@ -880,19 +1047,13 @@
 																				<PointList>
 																					<Point>
 																						<XPos>0</XPos>
-																						<YPos>0.68317</YPos>
+																						<YPos>0</YPos>
 																						<Flags>5</Flags>
 																						<SegmentShape>Log1</SegmentShape>
 																					</Point>
 																					<Point>
-																						<XPos>2355.10282</XPos>
-																						<YPos>0.14703</YPos>
-																						<Flags>0</Flags>
-																						<SegmentShape>Exp1</SegmentShape>
-																					</Point>
-																					<Point>
-																						<XPos>3000</XPos>
-																						<YPos>0</YPos>
+																						<XPos>5</XPos>
+																						<YPos>0.18564</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -905,30 +1066,30 @@
 													</Reference>
 													<Reference>
 														<Local>
-															<RTPC Name="" ID="{81F1CC31-DE6F-4AEA-B1B7-53EB387837BC}" ShortID="102335104">
+															<RTPC Name="" ID="{56BE47D4-3A2E-4287-95C6-0EBDF5FE6182}" ShortID="993669509">
 																<PropertyList>
-																	<Property Name="PropertyName" Type="string" Value="Variability"/>
+																	<Property Name="PropertyName" Type="string" Value="FrequencyScale"/>
 																</PropertyList>
 																<ReferenceList>
 																	<Reference Name="ControlInput">
-																		<ObjectRef Name="HoverBootsLFO" ID="{C2B695E1-6BED-43CD-9CAD-1CA440E8267E}" WorkUnitID="{2580B0AA-A017-41D7-A24A-07362368F2BB}"/>
+																		<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
 																	</Reference>
 																	<Reference Name="Curve">
 																		<Custom>
-																			<Curve Name="" ID="{C187E861-69A3-4B2E-AA3B-7C28D513800F}">
+																			<Curve Name="" ID="{F2211511-3A32-4F35-8933-48F50072F0D8}">
 																				<PropertyList>
 																					<Property Name="Flags" Type="int32" Value="1"/>
 																				</PropertyList>
 																				<PointList>
 																					<Point>
 																						<XPos>0</XPos>
-																						<YPos>0.25</YPos>
-																						<Flags>21</Flags>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>1</XPos>
-																						<YPos>0.89569</YPos>
-																						<Flags>53</Flags>
+																						<XPos>5</XPos>
+																						<YPos>0.20664</YPos>
+																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
 																			</Curve>
@@ -946,16 +1107,37 @@
 												<List Name="Deflectors">
 													<PluginInnerObject Name="" ID="{284B874C-DB0D-4680-B1A7-6CA2350DFE82}" PluginName="Deflector" CompanyID="0" PluginID="121">
 														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="152"/>
-															<Property Name="Gain" Type="Real32" Value="1"/>
-															<Property Name="PanX" Type="Real64" Value="59.2207792207792"/>
-															<Property Name="PanY" Type="Real64" Value="16.9576059850374"/>
+															<Property Name="Frequency" Type="Real32" Value="84"/>
+															<Property Name="PanX" Type="Real64" Value="31.6883116883117"/>
+															<Property Name="PanY" Type="Real64" Value="-52.3690773067332"/>
+															<Property Name="QFactor" Type="Real32" Value="15"/>
 														</PropertyList>
 													</PluginInnerObject>
 													<PluginInnerObject Name="" ID="{F84D5DFE-54A2-4FD9-8A91-B1CF3870F4B5}" PluginName="Deflector" CompanyID="0" PluginID="121">
 														<PropertyList>
-															<Property Name="PanX" Type="Real64" Value="-33.5064935064936"/>
-															<Property Name="PanY" Type="Real64" Value="81.5461346633417"/>
+															<Property Name="Frequency" Type="Real32" Value="583"/>
+															<Property Name="Gain" Type="Real32" Value="-10"/>
+															<Property Name="PanX" Type="Real64" Value="-0.259740259740335"/>
+															<Property Name="PanY" Type="Real64" Value="78.0548628428928"/>
+															<Property Name="QFactor" Type="Real32" Value="24.97"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{ADFC9096-A04E-4E60-BBCE-4554217348CF}" PluginName="Deflector" CompanyID="0" PluginID="121">
+														<PropertyList>
+															<Property Name="Frequency" Type="Real32" Value="1570"/>
+															<Property Name="Gain" Type="Real32" Value="-3"/>
+															<Property Name="PanX" Type="Real64" Value="-22.5974025974026"/>
+															<Property Name="PanY" Type="Real64" Value="59.6009975062344"/>
+															<Property Name="QFactor" Type="Real32" Value="0.1"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{9EE96F07-A0F8-4760-ADF9-F2B4B00177D3}" PluginName="Deflector" CompanyID="0" PluginID="121">
+														<PropertyList>
+															<Property Name="Frequency" Type="Real32" Value="483"/>
+															<Property Name="Gain" Type="Real32" Value="-4"/>
+															<Property Name="PanX" Type="Real64" Value="21.2987012987013"/>
+															<Property Name="PanY" Type="Real64" Value="56.359102244389"/>
+															<Property Name="QFactor" Type="Real32" Value="34.69"/>
 														</PropertyList>
 													</PluginInnerObject>
 												</List>
@@ -966,17 +1148,17 @@
 										<ObjectList Name="RTPC">
 											<Reference>
 												<Local>
-													<RTPC Name="" ID="{B66EADB4-7A9F-4436-B659-19D905432642}" ShortID="120197384">
+													<RTPC Name="" ID="{1997D5EA-D3B5-4B7D-AAD1-1943F64755EA}" ShortID="1028569455">
 														<PropertyList>
 															<Property Name="PropertyName" Type="string" Value="Volume"/>
 														</PropertyList>
 														<ReferenceList>
 															<Reference Name="ControlInput">
-																<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
 															</Reference>
 															<Reference Name="Curve">
 																<Custom>
-																	<Curve Name="" ID="{91B6F64D-3B5F-467D-A679-8B4ECCED4BE5}">
+																	<Curve Name="" ID="{29158987-83AF-4E64-8D45-9D08FE929DEE}">
 																		<PropertyList>
 																			<Property Name="Flags" Type="int32" Value="3"/>
 																		</PropertyList>
@@ -985,17 +1167,23 @@
 																				<XPos>0</XPos>
 																				<YPos>-200</YPos>
 																				<Flags>5</Flags>
-																				<SegmentShape>Log2</SegmentShape>
+																				<SegmentShape>Exp1</SegmentShape>
 																			</Point>
 																			<Point>
-																				<XPos>1086.49506</XPos>
-																				<YPos>-1.60532000000001</YPos>
+																				<XPos>0.23713</XPos>
+																				<YPos>-29.33312</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp2</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>1.87689</XPos>
+																				<YPos>-0.17125</YPos>
 																				<Flags>0</Flags>
 																				<SegmentShape>Log1</SegmentShape>
 																			</Point>
 																			<Point>
-																				<XPos>3000</XPos>
-																				<YPos>0</YPos>
+																				<XPos>5</XPos>
+																				<YPos>8.62032</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>

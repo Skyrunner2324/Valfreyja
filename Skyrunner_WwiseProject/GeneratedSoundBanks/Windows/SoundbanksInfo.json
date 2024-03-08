@@ -274,7 +274,7 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{4DBD3973-59DA-DB5A-0979-851CCBBE5E0C}",
+    "Hash": "{91518EA2-84D3-346C-F294-27C3C5CA1E79}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
@@ -287,6 +287,15 @@
       "ShortName": "Hoverboots\\hoverboots_simple_2.wav",
       "Path": "Media/17371190.wem",
       "CachePath": "SFX/Hoverboots/hoverboots_simple_2_5E8E589E.wem"
+     },
+     {
+      "Id": "842316658",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Hoverboots\\hoverboots_simple.wav",
+      "Path": "Media/842316658.wem",
+      "CachePath": "SFX/Hoverboots/hoverboots_simple_073B4D0C.wem"
      },
      {
       "Id": "1035111905",
@@ -332,14 +341,6 @@
        "GUID": "{68D94B12-DD08-4422-964D-F5F2113A5B67}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
-      },
-      {
-       "Id": "444051504",
-       "Name": "Delay (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots_Other\\Soundseed Wind_01\\Delay (Custom)",
-       "GUID": "{16141DF4-9526-460D-A025-4D3DAA83351E}",
-       "LibName": "Wwise Delay",
-       "LibId": "6946819"
       },
       {
        "Id": "666289254",
@@ -397,6 +398,9 @@
         "Id": "17371190"
        },
        {
+        "Id": "842316658"
+       },
+       {
         "Id": "1035111905"
        },
        {
@@ -413,9 +417,6 @@
         },
         {
          "Id": "326889141"
-        },
-        {
-         "Id": "444051504"
         },
         {
          "Id": "666289254"
@@ -450,6 +451,12 @@
       "Name": "RTPC_PlayerSpeed",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerSpeed",
       "GUID": "{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"
+     },
+     {
+      "Id": "3289214803",
+      "Name": "RTPC_Time_in_Air",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Parkour\\RTPC_Time_in_Air",
+      "GUID": "{EA244CFE-2C93-4808-BE87-966632323505}"
      }
     ]
    },
@@ -792,7 +799,7 @@
     "Type": "Event",
     "GUID": "{551300EA-C047-48F9-A1CA-75F08BC14E0B}",
     "Language": "SFX",
-    "Hash": "{B75003B1-CB7E-937C-1F65-1664C035B7E3}",
+    "Hash": "{A4B96C1A-9C2C-4D02-332E-15BB02C11358}",
     "ObjectPath": "ENV_AMB_Play_AmbienceMain",
     "ShortName": "ENV_AMB_Play_AmbienceMain",
     "Path": "Event/ENV_AMB_Play_AmbienceMain.bnk",
@@ -1336,7 +1343,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{D9918AF1-756B-4880-152A-5506F1DE740F}",
+    "Hash": "{CC4E4C98-09EF-C4D5-1F08-86DE895D16CE}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -1900,6 +1907,12 @@
         "Name": "Music__03",
         "ObjectPath": "\\States\\Default Work Unit\\Music\\Music_Number\\Music__03",
         "GUID": "{68188DD8-3818-488B-A868-9C73F1BA33DA}"
+       },
+       {
+        "Id": "1564072717",
+        "Name": "Music__Reset",
+        "ObjectPath": "\\States\\Default Work Unit\\Music\\Music_Number\\Music__Reset",
+        "GUID": "{3DBBEE2E-770F-48D9-8E4E-8AC6A89EA147}"
        }
       ]
      },
@@ -3205,7 +3218,7 @@
     "Type": "Event",
     "GUID": "{528674B7-E690-4AD6-8217-32726F835B11}",
     "Language": "SFX",
-    "Hash": "{A7861587-D1B6-85C0-2365-48E18D952567}",
+    "Hash": "{E89525B2-C43B-4DDA-3E1A-A1E42EF070AF}",
     "ObjectPath": "UI_move",
     "ShortName": "UI_move",
     "Path": "Event/UI_move.bnk",
@@ -3217,7 +3230,7 @@
       "Location": "Loose",
       "ShortName": "Placeholders\\ui_move.wav",
       "Path": "Media/935278826.wem",
-      "CachePath": "SFX/Placeholders/ui_move_755F56E2.wem"
+      "CachePath": "SFX/Placeholders/ui_move_FD7B0FC2.wem"
      }
     ],
     "Events": [
@@ -3227,8 +3240,8 @@
       "ObjectPath": "\\Events\\UI\\UI_move",
       "GUID": "{528674B7-E690-4AD6-8217-32726F835B11}",
       "DurationType": "OneShot",
-      "DurationMin": "0.11733333",
-      "DurationMax": "0.11733333",
+      "DurationMin": "0.022468084",
+      "DurationMax": "0.022468084",
       "MediaRefs": [
        {
         "Id": "935278826"
@@ -3279,20 +3292,11 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{F659D571-5006-F4AE-96C5-3067622D7757}",
+    "Hash": "{F87E6032-11FE-D0F5-0B47-BBCBE171836D}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
     "Media": [
-     {
-      "Id": "16441669",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Music\\ZoneA\\Azone_bass_parkour_high.wav",
-      "Path": "Media/16441669.wem",
-      "CachePath": "SFX/Music/ZoneA/Azone_bass_parkour_high_073B4D0C.wem"
-     },
      {
       "Id": "76637748",
       "Language": "SFX",
@@ -3303,22 +3307,13 @@
       "CachePath": "SFX/Test/Test_parkour_base_073B4D0C.wem"
      },
      {
-      "Id": "80841443",
+      "Id": "137835896",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Music\\ZoneA\\Azone_drums_slomo.wav",
-      "Path": "Media/80841443.wem",
-      "CachePath": "SFX/Music/ZoneA/Azone_drums_slomo_073B4D0C.wem"
-     },
-     {
-      "Id": "168169656",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Music\\ZoneA\\Azone_stringssynths_parkour_low.wav",
-      "Path": "Media/168169656.wem",
-      "CachePath": "SFX/Music/ZoneA/Azone_stringssynths_parkour_low_073B4D0C.wem"
+      "ShortName": "Music\\ZoneA\\A2_Base_Buildup.wav",
+      "Path": "Media/137835896.wem",
+      "CachePath": "SFX/Music/ZoneA/A2_Base_Buildup_073B4D0C.wem"
      },
      {
       "Id": "169113880",
@@ -3366,6 +3361,24 @@
       "CachePath": "SFX/Music/ZoneA/Base_Zone_A_073B4D0C.wem"
      },
      {
+      "Id": "270154809",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\ZoneA\\A2_Buildup_Guitar.wav",
+      "Path": "Media/270154809.wem",
+      "CachePath": "SFX/Music/ZoneA/A2_Buildup_Guitar_073B4D0C.wem"
+     },
+     {
+      "Id": "283174900",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\ZoneB\\Mysterious_Bells.wav",
+      "Path": "Media/283174900.wem",
+      "CachePath": "SFX/Music/ZoneB/Mysterious_Bells_073B4D0C.wem"
+     },
+     {
       "Id": "297104328",
       "Language": "SFX",
       "Streaming": "false",
@@ -3373,6 +3386,15 @@
       "ShortName": "Music\\ZoneA\\A2_Fight_Bass.wav",
       "Path": "Media/297104328.wem",
       "CachePath": "SFX/Music/ZoneA/A2_Fight_Bass_073B4D0C.wem"
+     },
+     {
+      "Id": "339478487",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\ZoneB\\Drums_Breakcore.wav",
+      "Path": "Media/339478487.wem",
+      "CachePath": "SFX/Music/ZoneB/Drums_Breakcore_073B4D0C.wem"
      },
      {
       "Id": "354836995",
@@ -3402,6 +3424,15 @@
       "CachePath": "SFX/Music/ZoneA/A2_Fight_Drums_073B4D0C.wem"
      },
      {
+      "Id": "449511730",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music\\ZoneB\\End_Zone_A.wav",
+      "Path": "Media/449511730.wem",
+      "CachePath": "SFX/Music/ZoneB/End_Zone_A_073B4D0C.wem"
+     },
+     {
       "Id": "489807810",
       "Language": "SFX",
       "Streaming": "false",
@@ -3409,24 +3440,6 @@
       "ShortName": "Music\\ZoneA\\A2_Fight_Kick.wav",
       "Path": "Media/489807810.wem",
       "CachePath": "SFX/Music/ZoneA/A2_Fight_Kick_073B4D0C.wem"
-     },
-     {
-      "Id": "581769070",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Music\\ZoneA\\Azone_glitch_parkour_flow.wav",
-      "Path": "Media/581769070.wem",
-      "CachePath": "SFX/Music/ZoneA/Azone_glitch_parkour_flow_073B4D0C.wem"
-     },
-     {
-      "Id": "661484211",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Music\\ZoneA\\Azone_pluck_parkour_base.wav",
-      "Path": "Media/661484211.wem",
-      "CachePath": "SFX/Music/ZoneA/Azone_pluck_parkour_base_073B4D0C.wem"
      },
      {
       "Id": "668571708",
@@ -3603,36 +3616,36 @@
           "SwitchValue": {
            "GroupType": "Switch",
            "GroupId": "2262403497",
-           "Id": "3032049369",
-           "GUID": "{6768CC3A-F841-45F1-8A13-CF8AE7C4DC6E}"
+           "Id": "0",
+           "GUID": "{702787C3-E2B6-4E60-A266-37C30239657B}"
           },
           "Children": [
            {
             "SwitchValue": {
              "GroupType": "State",
              "GroupId": "2368434850",
-             "Id": "1454074649",
-             "GUID": "{C10D7FC3-6D0F-4995-AC4E-F6BDEA9EDF37}"
+             "Id": "1454074651",
+             "GUID": "{68188DD8-3818-488B-A868-9C73F1BA33DA}"
             },
             "MediaRefs": [
              {
-              "Id": "16441669"
+              "Id": "137835896"
              },
              {
-              "Id": "80841443"
-             },
-             {
-              "Id": "168169656"
-             },
-             {
-              "Id": "581769070"
-             },
-             {
-              "Id": "661484211"
+              "Id": "270154809"
              }
             ]
            }
           ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "2262403497",
+           "Id": "0",
+           "GUID": "{702787C3-E2B6-4E60-A266-37C30239657B}"
+          },
+          "Children": []
          }
         ]
        },
@@ -3706,44 +3719,80 @@
          "Id": "84696445",
          "GUID": "{F211B77D-BB52-460F-BA87-4A30B5EA4669}"
         },
-        "MediaRefs": [
-         {
-          "Id": "177168537"
-         }
-        ],
         "Children": [
          {
           "SwitchValue": {
-           "GroupType": "Switch",
-           "GroupId": "2262403497",
-           "Id": "0",
-           "GUID": "{702787C3-E2B6-4E60-A266-37C30239657B}"
+           "GroupType": "State",
+           "GroupId": "2368434850",
+           "Id": "1454074649",
+           "GUID": "{C10D7FC3-6D0F-4995-AC4E-F6BDEA9EDF37}"
           },
           "MediaRefs": [
            {
-            "Id": "76637748"
+            "Id": "283174900"
+           },
+           {
+            "Id": "339478487"
+           },
+           {
+            "Id": "449511730"
            }
           ]
          },
          {
           "SwitchValue": {
-           "GroupType": "Switch",
-           "GroupId": "2262403497",
-           "Id": "3032049369",
-           "GUID": "{6768CC3A-F841-45F1-8A13-CF8AE7C4DC6E}"
+           "GroupType": "State",
+           "GroupId": "2368434850",
+           "Id": "1454074650",
+           "GUID": "{F9BD7326-90AD-4609-BCFF-F904AB2A443F}"
           },
           "MediaRefs": [
            {
-            "Id": "169113880"
+            "Id": "283174900"
            },
            {
-            "Id": "364434247"
+            "Id": "339478487"
            },
            {
-            "Id": "668571708"
+            "Id": "449511730"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "2368434850",
+           "Id": "1454074651",
+           "GUID": "{68188DD8-3818-488B-A868-9C73F1BA33DA}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "283174900"
            },
            {
-            "Id": "833066249"
+            "Id": "339478487"
+           },
+           {
+            "Id": "449511730"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "State",
+           "GroupId": "2368434850",
+           "Id": "1564072717",
+           "GUID": "{3DBBEE2E-770F-48D9-8E4E-8AC6A89EA147}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "283174900"
+           },
+           {
+            "Id": "339478487"
+           },
+           {
+            "Id": "449511730"
            }
           ]
          }
@@ -3771,6 +3820,12 @@
       "Name": "RTPC_Parkour_Flow",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Parkour\\RTPC_Parkour_Flow",
       "GUID": "{D4EDFB9F-0AB6-4E18-A9CB-0F34B34DEA44}"
+     },
+     {
+      "Id": "1645844663",
+      "Name": "RTPC_PlayerMovement",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerMovement",
+      "GUID": "{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"
      },
      {
       "Id": "2565740352",
@@ -3809,6 +3864,12 @@
         "Name": "Music__03",
         "ObjectPath": "\\States\\Default Work Unit\\Music\\Music_Number\\Music__03",
         "GUID": "{68188DD8-3818-488B-A868-9C73F1BA33DA}"
+       },
+       {
+        "Id": "1564072717",
+        "Name": "Music__Reset",
+        "ObjectPath": "\\States\\Default Work Unit\\Music\\Music_Number\\Music__Reset",
+        "GUID": "{3DBBEE2E-770F-48D9-8E4E-8AC6A89EA147}"
        }
       ]
      },
@@ -4089,6 +4150,6 @@
     ]
    }
   ],
-  "FileHash": "{A41077F6-95CB-0B3F-9531-219C635A14C2}"
+  "FileHash": "{F0AFDF0B-60B5-51CE-1552-8378F02FE9FB}"
  }
 }

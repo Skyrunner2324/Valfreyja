@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{4DBD3973-59DA-DB5A-0979-851CCBBE5E0C}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{91518EA2-84D3-346C-F294-27C3C5CA1E79}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
@@ -10,6 +10,11 @@
 					<ShortName>Hoverboots\hoverboots_simple_2.wav</ShortName>
 					<Path>Media/17371190.wem</Path>
 					<CachePath>SFX/Hoverboots/hoverboots_simple_2_5E8E589E.wem</CachePath>
+				</File>
+				<File Id="842316658" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\hoverboots_simple.wav</ShortName>
+					<Path>Media/842316658.wem</Path>
+					<CachePath>SFX/Hoverboots/hoverboots_simple_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="1035111905" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Hoverboots\jet_pack.wav</ShortName>
@@ -27,7 +32,6 @@
 					<Plugin Id="247448906" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\Soundseed Wind\Parametric EQ (Custom)" GUID="{2078FFD5-FDF7-4C01-900C-742249BE40F6}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="268374027" Name="Delay (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\Soundseed Wind\Delay (Custom)" GUID="{700FD0B8-9B20-48B5-BE3E-EF4CE88526AC}" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="326889141" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\Soundseed Wind_01\Parametric EQ (Custom)" GUID="{68D94B12-DD08-4422-964D-F5F2113A5B67}" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="444051504" Name="Delay (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\Soundseed Wind_01\Delay (Custom)" GUID="{16141DF4-9526-460D-A025-4D3DAA83351E}" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="666289254" Name="Soundseed Air Wind" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\Soundseed Wind\Soundseed Air Wind" GUID="{83767CC5-69B5-4564-8311-4A333A1B8AF9}" LibName="SoundSeed Air Wind" LibId="7798786"/>
 					<Plugin Id="711371262" Name="Soundseed Air Wind" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\Soundseed Wind_01\Soundseed Air Wind" GUID="{62F5B9C1-245C-4369-84E3-2164C83CB428}" LibName="SoundSeed Air Wind" LibId="7798786"/>
 					<Plugin Id="768480562" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots_Other\hoverboots_on_rail_loop\Parametric EQ (Custom)" GUID="{795F1578-DFEF-4A0F-995B-DC9BEE878FD0}" LibName="Wwise Parametric EQ" LibId="6881283"/>
@@ -41,6 +45,7 @@
 				<Event Id="527139965" Name="SX_play_hoverboots" ObjectPath="\Events\Hoverboots\Hoverboots\SX_play_hoverboots" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="17371190"/>
+						<MediaRef Id="842316658"/>
 						<MediaRef Id="1035111905"/>
 						<MediaRef Id="1056072145"/>
 					</MediaRefs>
@@ -49,7 +54,6 @@
 							<PluginRef Id="247448906"/>
 							<PluginRef Id="268374027"/>
 							<PluginRef Id="326889141"/>
-							<PluginRef Id="444051504"/>
 							<PluginRef Id="666289254"/>
 							<PluginRef Id="711371262"/>
 							<PluginRef Id="768480562"/>
@@ -64,8 +68,9 @@
 			<GameParameters>
 				<GameParameter Id="1645844663" Name="RTPC_PlayerMovement" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerMovement" GUID="{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"/>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
+				<GameParameter Id="3289214803" Name="RTPC_Time_in_Air" ObjectPath="\Game Parameters\Default Work Unit\Parkour\RTPC_Time_in_Air" GUID="{EA244CFE-2C93-4808-BE87-966632323505}"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{ADCA9088-7753-0F84-F1F9-1DAEFEA2EF08}</FileHash>
+	<FileHash>{C008EEC5-4C04-E46C-511A-3D0B8085EE9B}</FileHash>
 </SoundBanksInfo>
