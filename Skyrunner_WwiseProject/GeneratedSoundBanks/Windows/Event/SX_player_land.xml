@@ -1,17 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{2A02E15F-9B54-360C-5300-E17E4C556B9A}">
+		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{035F23F9-3B6C-BFFB-6214-DE68DFB995BC}">
 			<ObjectPath>SX_player_land</ObjectPath>
 			<ShortName>SX_player_land</ShortName>
 			<Path>Event/SX_player_land.bnk</Path>
+			<Media>
+				<File Id="4329989" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_land_04.wav</ShortName>
+					<Path>Media/4329989.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_land_04_755F56E2.wem</CachePath>
+				</File>
+				<File Id="104720702" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_land_02.wav</ShortName>
+					<Path>Media/104720702.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_land_02_755F56E2.wem</CachePath>
+				</File>
+				<File Id="165382445" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\hoverboots_landing_ice_skate_land_02.wav</ShortName>
+					<Path>Media/165382445.wem</Path>
+					<CachePath>SFX/Hoverboots/hoverboots_landing_ice_skate_land_02_3BBB9164.wem</CachePath>
+				</File>
+				<File Id="167732480" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_land_01.wav</ShortName>
+					<Path>Media/167732480.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_land_01_755F56E2.wem</CachePath>
+				</File>
+				<File Id="533701511" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\hoverboots_landing_ice_skate_land_03.wav</ShortName>
+					<Path>Media/533701511.wem</Path>
+					<CachePath>SFX/Hoverboots/hoverboots_landing_ice_skate_land_03_8A3C1344.wem</CachePath>
+				</File>
+				<File Id="589869063" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\player_feedback_land_03.wav</ShortName>
+					<Path>Media/589869063.wem</Path>
+					<CachePath>SFX/Player_Feedback/player_feedback_land_03_755F56E2.wem</CachePath>
+				</File>
+				<File Id="856018667" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\hoverboots_landing_ice_skate_land_01.wav</ShortName>
+					<Path>Media/856018667.wem</Path>
+					<CachePath>SFX/Hoverboots/hoverboots_landing_ice_skate_land_01_EDA5C884.wem</CachePath>
+				</File>
+				<File Id="874819989" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\hoverboots_landing_ice_skate_land_04.wav</ShortName>
+					<Path>Media/874819989.wem</Path>
+					<CachePath>SFX/Hoverboots/hoverboots_landing_ice_skate_land_04_42E7F82C.wem</CachePath>
+				</File>
+				<File Id="1031907268" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\hoverboots_landing_ice_skate_land_05.wav</ShortName>
+					<Path>Media/1031907268.wem</Path>
+					<CachePath>SFX/Hoverboots/hoverboots_landing_ice_skate_land_05_92C83300.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
 				<Custom>
 					<Plugin Id="416403271" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_land\game_landing\Soundseed Air Woosh" GUID="{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.1875" DurationMax="0.3125">
+				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.847343" DurationMax="1.0510072">
+					<MediaRefs>
+						<MediaRef Id="4329989"/>
+						<MediaRef Id="104720702"/>
+						<MediaRef Id="165382445"/>
+						<MediaRef Id="167732480"/>
+						<MediaRef Id="533701511"/>
+						<MediaRef Id="589869063"/>
+						<MediaRef Id="856018667"/>
+						<MediaRef Id="874819989"/>
+						<MediaRef Id="1031907268"/>
+					</MediaRefs>
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="416403271"/>
@@ -20,9 +78,10 @@
 				</Event>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 				<GameParameter Id="3289214803" Name="RTPC_Time_in_Air" ObjectPath="\Game Parameters\Default Work Unit\Parkour\RTPC_Time_in_Air" GUID="{EA244CFE-2C93-4808-BE87-966632323505}"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BE025039-E194-488F-4733-E1F90A722553}</FileHash>
+	<FileHash>{37A20C0B-637C-6342-A564-0C4FBE9E768D}</FileHash>
 </SoundBanksInfo>

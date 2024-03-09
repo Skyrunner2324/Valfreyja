@@ -568,21 +568,21 @@
 										<Sound Name="hoverboots_simple_2" ID="{797E911F-B022-4D51-8F8E-4F1D93829BC0}" ShortID="918775972">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>530</Value>
-													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
 															<Modifier Name="" ID="{0EA2A26F-0BF2-4F3E-ADD3-7FC1F1A02B06}">
 																<PropertyList>
 																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Min" Type="Real64" Value="-732"/>
+																	<Property Name="Max" Type="Real64" Value="500"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
 																</PropertyList>
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-18</Value>
@@ -611,6 +611,14 @@
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
+											<PositioningInfo>
+												<Panner Name="" ID="{29CDA8AD-C87C-4311-8E25-D4212049EF6B}">
+													<PropertyList>
+														<Property Name="PanX" Type="Real64" Value="-12.6760563380282"/>
+														<Property Name="PanY" Type="Real64" Value="18.8059701492537"/>
+													</PropertyList>
+												</Panner>
+											</PositioningInfo>
 											<ObjectLists>
 												<ObjectList Name="RTPC">
 													<Reference>
@@ -662,11 +670,9 @@
 														<Value>81</Value>
 													</ValueList>
 												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-6</Value>
-													</ValueList>
-												</Property>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -685,6 +691,14 @@
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
+											<PositioningInfo>
+												<Panner Name="" ID="{40EFFD94-AAF2-46D1-804C-AF51633F0D48}">
+													<PropertyList>
+														<Property Name="PanX" Type="Real64" Value="7.04225352112678"/>
+														<Property Name="PanY" Type="Real64" Value="19.7014925373134"/>
+													</PropertyList>
+												</Panner>
+											</PositioningInfo>
 											<ObjectLists>
 												<ObjectList Name="RTPC">
 													<Reference>
@@ -711,8 +725,8 @@
 																						<SegmentShape>Log1</SegmentShape>
 																					</Point>
 																					<Point>
-																						<XPos>351.16045</XPos>
-																						<YPos>259</YPos>
+																						<XPos>357.21494</XPos>
+																						<YPos>451</YPos>
 																						<Flags>0</Flags>
 																						<SegmentShape>Exp2</SegmentShape>
 																					</Point>
@@ -806,7 +820,7 @@
 																				<PointList>
 																					<Point>
 																						<XPos>0</XPos>
-																						<YPos>-1.71004</YPos>
+																						<YPos>-0.44729</YPos>
 																						<Flags>21</Flags>
 																					</Point>
 																					<Point>

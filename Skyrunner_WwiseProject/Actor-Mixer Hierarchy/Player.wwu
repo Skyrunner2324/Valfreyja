@@ -842,11 +842,6 @@
 														<Value>-20</Value>
 													</ValueList>
 												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-5</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -996,12 +991,12 @@
 																				<PointList>
 																					<Point>
 																						<XPos>0</XPos>
-																						<YPos>0</YPos>
+																						<YPos>-11.14701</YPos>
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
 																						<XPos>5</XPos>
-																						<YPos>-4.15182</YPos>
+																						<YPos>1.3314</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -1020,9 +1015,16 @@
 										</Sound>
 										<RandomSequenceContainer Name="random_land" ID="{27F1D799-D7CA-412D-888A-C7E55C8D4DF4}" ShortID="569465467">
 											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{041EEE0C-51A8-4BF8-85E5-69383B3805EF}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-15</Value>
+														<Value>-10</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1059,6 +1061,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="hoverboots_landing_ice_skate_land_01" ID="{260C718B-954D-4E86-9BF5-C06F9957C7B6}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.859914893617021"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.859914893617021"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Hoverboots\hoverboots_landing_ice_skate_land_01.wav</AudioFile>
 															<MediaIDList>
@@ -1094,6 +1101,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="hoverboots_landing_ice_skate_land_02" ID="{E54A5467-E1F6-456C-8177-AF412CB945B1}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.862429264650989"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.862429264650989"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Hoverboots\hoverboots_landing_ice_skate_land_02.wav</AudioFile>
 															<MediaIDList>
@@ -1124,6 +1136,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="hoverboots_landing_ice_skate_land_05" ID="{7FDFCD46-A364-414D-9C68-EC11EC275D18}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.847343038447182"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.847343038447182"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Hoverboots\hoverboots_landing_ice_skate_land_05.wav</AudioFile>
 															<MediaIDList>
@@ -1154,6 +1171,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="hoverboots_landing_ice_skate_land_04" ID="{C3CC8906-29EE-4043-B3DC-6CCD4898CB76}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.993176558417321"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.993176558417321"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Hoverboots\hoverboots_landing_ice_skate_land_04.wav</AudioFile>
 															<MediaIDList>
@@ -1184,6 +1206,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="hoverboots_landing_ice_skate_land_03" ID="{13476D22-5BFE-4921-8541-3C06A561F0D3}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="1.05100709219858"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.05100709219858"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Hoverboots\hoverboots_landing_ice_skate_land_03.wav</AudioFile>
 															<MediaIDList>
@@ -1196,8 +1223,123 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{2F2A22DF-A6A0-49C9-98A2-4380664452F5}" ShortID="742080767">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{433C28A8-3CE1-49F8-AAA0-BBEEA81B0CB9}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>3000</XPos>
+																						<YPos>656</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{9ACF5F89-C4E2-4B29-ACCC-D42C88F6228F}" ShortID="248190583">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{6B689A9B-4A1C-4D56-AC26-BEC7BEEF3776}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-16.32833</YPos>
+																						<Flags>5</Flags>
+																						<SegmentShape>Exp1</SegmentShape>
+																					</Point>
+																					<Point>
+																						<XPos>5</XPos>
+																						<YPos>1.19479000000001</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
 										</RandomSequenceContainer>
 									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{2B641B07-762A-44B1-B2F2-B228E08E0E79}" ShortID="497451193">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{819C7EBD-BB30-4F6D-9978-9A6A49710A7E}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-3.4178</YPos>
+																				<Flags>5</Flags>
+																				<SegmentShape>Exp1</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>5</XPos>
+																				<YPos>1.19479</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</BlendContainer>
 							</ChildrenList>
 						</Folder>
@@ -3085,14 +3227,14 @@
 																		<SegmentShape>SCurve</SegmentShape>
 																	</Point>
 																	<Point>
-																		<XPos>1.84512</XPos>
+																		<XPos>1.90062</XPos>
 																		<YPos>-200</YPos>
 																		<Flags>0</Flags>
 																		<SegmentShape>Log2</SegmentShape>
 																	</Point>
 																	<Point>
 																		<XPos>5</XPos>
-																		<YPos>-5.87206</YPos>
+																		<YPos>-2.69172</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
