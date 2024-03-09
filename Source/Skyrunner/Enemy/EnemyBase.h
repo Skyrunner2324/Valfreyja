@@ -11,7 +11,7 @@
 #include "EnemyBase.generated.h"
 
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FDelegateTakeDmage, AActor*, Actor);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FDelegateTakeDmage, float, numberSequencePointDamageEnemy);
 
 // TODO : rename EnemyBase
 UCLASS()
