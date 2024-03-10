@@ -1,3 +1,5 @@
+call %~dp0\Plugins\Clean.bat
+
 del %~dp0\.vsconfig
 del %~dp0\*.sln
 rmdir %~dp0\.vs /S /Q
