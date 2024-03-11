@@ -41,20 +41,6 @@ set UEE="%UEPATH%\Engine\Binaries\Win64\UnrealEditor-Cmd.exe"
 set PROJECT=Skyrunner.uproject
 
 
-
-set PLATFORMS=Win64+PS5
-set CONFIGURATION=Development
-
-
-
-
-:: basic cook (no need with dynamic lighting)
-::call %UEE% %~dp0%PROJECT% -run=cook -targetplatform=%PLATFORMS% -cookonthefly -iterate
-
-:: build C++ game code
-call %UAT% BuildGame -project=%~dp0%PROJECT% -platform=%PLATFORMS% -clean -build
-
-:: package
-call %UAT% BuildCookRun -project=%~dp0%PROJECT% -platform=%PLATFORMS% -CookAll -cook -stage -pak -build -package -configuration=%CONFIGURATION%
+%UEE% Skyrunner -run=ResavePackages -fixupredirects -autocheckout -projectonly -unattended
 
 pause

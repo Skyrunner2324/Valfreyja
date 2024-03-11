@@ -31,7 +31,7 @@ echo %UEPATH%
 :: Unreal Automation Tool
 set UAT="%UEPATH%\Engine\Build\BatchFiles\RunUAT.bat"
 :: Unreal Engine Editor
-set UEE="%UEPATH%\Engine\Binaries\Win64\UE4Editor-Cmd.exe"
+set UEE="%UEPATH%\Engine\Binaries\Win64\UnrealEditor-Cmd.exe"
 
 
 
