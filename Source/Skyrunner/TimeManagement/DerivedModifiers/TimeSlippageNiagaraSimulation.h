@@ -13,7 +13,7 @@ class SKYRUNNER_API UTimeSlippageNiagaraSimulation : public UTimeSlippageModifie
 	GENERATED_BODY()
 
 private:
-	TArray<UActorComponent*> niagaraComponents;
+	TArray<class UNiagaraComponent*> niagaraComponents;
 
 public:	
 	UTimeSlippageNiagaraSimulation();

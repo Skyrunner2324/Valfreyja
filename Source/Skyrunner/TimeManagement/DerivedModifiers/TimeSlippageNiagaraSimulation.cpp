@@ -18,7 +18,7 @@ UTimeSlippageNiagaraSimulation::UTimeSlippageNiagaraSimulation()
 void UTimeSlippageNiagaraSimulation::BeginPlay()
 {
 	UTimeSlippageModifier::BeginPlay();
-	niagaraComponents = GetOwner()->GetComponentsByClass(UNiagaraComponent::StaticClass());
+	GetOwner()->GetComponents<UNiagaraComponent>(niagaraComponents);
 }
 
 

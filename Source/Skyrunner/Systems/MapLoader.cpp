@@ -29,7 +29,7 @@ public:
 	{
 		DebugLog(15.f, FColor::Cyan, TEXT("Pending"));
 		while (!pendingLoadMap->IsLevelVisible() &&
-			pendingLoadMap->GetCurrentState() != ULevelStreaming::ECurrentState::LoadedVisible)
+			pendingLoadMap->GetLevelStreamingState() != ELevelStreamingState::LoadedVisible)
 		{
 		}
 		DebugLog(15.f, FColor::Orange, TEXT("Finished loading"));
