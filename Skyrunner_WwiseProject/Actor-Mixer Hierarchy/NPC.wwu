@@ -13,6 +13,7 @@
 						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
 					</PropertyList>
 					<ReferenceList>
@@ -943,6 +944,7 @@
 						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -1982,6 +1984,8 @@
 				</ActorMixer>
 				<RandomSequenceContainer Name="Valhalla Voice Feedback" ID="{615B2024-56E1-4669-9F5F-AFB8424510BC}" ShortID="619834955">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="5"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>

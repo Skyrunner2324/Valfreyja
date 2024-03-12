@@ -307,7 +307,17 @@
 														</Reference>
 													</ReferenceList>
 												</Bus>
-												<Bus Name="Valhalla Voice Feedback" ID="{0B65F8CE-3721-497F-82EE-E5E1117E0ECF}"/>
+												<Bus Name="Valhalla Voice Feedback" ID="{0B65F8CE-3721-497F-82EE-E5E1117E0ECF}">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
+														</Reference>
+													</ReferenceList>
+												</Bus>
 											</ChildrenList>
 										</Bus>
 										<Bus Name="OBJ 3D" ID="{D0ED54DA-B5B7-4F73-98DD-6D286A925089}"/>
