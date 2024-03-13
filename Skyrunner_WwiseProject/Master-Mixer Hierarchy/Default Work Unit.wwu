@@ -273,6 +273,11 @@
 										<Bus Name="NPCMaster" ID="{94354A62-2693-4A27-B098-F5FDE5B577C5}">
 											<PropertyList>
 												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="BusChannelConfig" Type="int32">
+													<ValueList>
+														<Value>3584</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Color" Type="int16" Value="10"/>
 												<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 												<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
@@ -300,6 +305,7 @@
 													<PropertyList>
 														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 														<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -307,18 +313,21 @@
 														</Reference>
 													</ReferenceList>
 												</Bus>
-												<Bus Name="Valhalla Voice Feedback" ID="{0B65F8CE-3721-497F-82EE-E5E1117E0ECF}">
+												<Bus Name="Door Aura Feedback" ID="{0B65F8CE-3721-497F-82EE-E5E1117E0ECF}">
 													<PropertyList>
 														<Property Name="3DSpatialization" Type="int16" Value="2"/>
-														<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 														<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 														<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+														<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="75"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
-															<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
+															<ObjectRef Name="Door_Att" ID="{7B686B69-B316-49E7-A315-368AD1270EA1}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
 														</Reference>
 													</ReferenceList>
+													<PositioningInfo>
+														<Panner Name="" ID="{AE7C517A-E4C6-48F3-8356-3B736D0995F5}"/>
+													</PositioningInfo>
 												</Bus>
 											</ChildrenList>
 										</Bus>

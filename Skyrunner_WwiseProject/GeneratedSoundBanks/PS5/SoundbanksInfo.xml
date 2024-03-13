@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="184944533" Type="Event" GUID="{C3AE1EA4-2D7C-4A4B-833A-5928F7B86591}" Language="SFX" Hash="{34733E26-6C28-EA30-3B0A-BBE376B38863}">
+		<SoundBank Id="184944533" Type="Event" GUID="{C3AE1EA4-2D7C-4A4B-833A-5928F7B86591}" Language="SFX" Hash="{AB8B1A25-2AC2-0CD3-66B4-7B05294BAB72}">
 			<ObjectPath>SX_player_melee</ObjectPath>
 			<ShortName>SX_player_melee</ShortName>
 			<Path>Event/SX_player_melee.bnk</Path>
@@ -177,7 +177,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="412746475" Type="Event" GUID="{C93A5CBE-E6E6-432D-86DC-5C2BB41CD152}" Language="SFX" Hash="{5D7AC661-53EF-9071-6A78-874104F2BF3E}">
+		<SoundBank Id="412746475" Type="Event" GUID="{C93A5CBE-E6E6-432D-86DC-5C2BB41CD152}" Language="SFX" Hash="{3E564173-293B-4CEE-937B-8CD71D8AD171}">
 			<ObjectPath>Valhalla_Voice</ObjectPath>
 			<ShortName>Valhalla_Voice</ShortName>
 			<Path>Event/Valhalla_Voice.bnk</Path>
@@ -200,12 +200,17 @@
 				<File Id="365481830" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>World_Feedback\feedback_valhalla_dune_06.wav</ShortName>
 					<Path>Media/365481830.wem</Path>
-					<CachePath>SFX/World_Feedback/feedback_valhalla_dune_06_755F56E2.wem</CachePath>
+					<CachePath>SFX/World_Feedback/feedback_valhalla_dune_06_6EFF4ECC.wem</CachePath>
 				</File>
 				<File Id="451114234" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>World_Feedback\feedback_valhalla_dune_02.wav</ShortName>
 					<Path>Media/451114234.wem</Path>
 					<CachePath>SFX/World_Feedback/feedback_valhalla_dune_02_755F56E2.wem</CachePath>
+				</File>
+				<File Id="541406239" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>World_Feedback\feedback_valhalla_dune_06_loop.wav</ShortName>
+					<Path>Media/541406239.wem</Path>
+					<CachePath>SFX/World_Feedback/feedback_valhalla_dune_06_loop_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="626393891" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>World_Feedback\feedback_valhalla_dune_01.wav</ShortName>
@@ -219,13 +224,14 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="412746475" Name="Valhalla_Voice" ObjectPath="\Events\Environment\Valhalla_Voice" GUID="{C93A5CBE-E6E6-432D-86DC-5C2BB41CD152}" DurationType="OneShot" DurationMin="7.708625" DurationMax="7.708625">
+				<Event Id="412746475" Name="Valhalla_Voice" ObjectPath="\Events\Environment\Valhalla_Voice" GUID="{C93A5CBE-E6E6-432D-86DC-5C2BB41CD152}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="141559184"/>
 						<MediaRef Id="187150253"/>
 						<MediaRef Id="281640280"/>
 						<MediaRef Id="365481830"/>
 						<MediaRef Id="451114234"/>
+						<MediaRef Id="541406239"/>
 						<MediaRef Id="626393891"/>
 						<MediaRef Id="635735891"/>
 					</MediaRefs>
@@ -358,7 +364,7 @@
 				<Event Id="534486512" Name="MUS_Stop_MainMusic" ObjectPath="\Events\Music\MUS_Stop_MainMusic" GUID="{A85A1CC9-5884-42CD-B3B0-A7C451B7F79D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="618588564" Type="Event" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" Language="SFX" Hash="{9D42BF8F-FE37-1BD2-2BEB-505DBAEA040D}">
+		<SoundBank Id="618588564" Type="Event" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" Language="SFX" Hash="{DF4ABDD8-6C21-C136-B305-A33069519355}">
 			<ObjectPath>SX_player_death_notifier</ObjectPath>
 			<ShortName>SX_player_death_notifier</ShortName>
 			<Path>Event/SX_player_death_notifier.bnk</Path>
@@ -494,7 +500,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="946406252" Type="Event" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" Language="SFX" Hash="{CFEC18AF-5B8B-624E-1444-171AF2A63212}">
+		<SoundBank Id="946406252" Type="Event" GUID="{C2635664-3DF8-496D-BA41-22C25299ACE8}" Language="SFX" Hash="{61BBD722-6A2B-F5BE-A095-EEF3CF00B3B3}">
 			<ObjectPath>SX_player_weapon_impact</ObjectPath>
 			<ShortName>SX_player_weapon_impact</ShortName>
 			<Path>Event/SX_player_weapon_impact.bnk</Path>
@@ -594,7 +600,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{9A0B2C8D-9A1A-CC6B-8459-8BAA2FAFF88C}">
+		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{C164FDA8-02C8-3D48-089D-A12AB81A25E4}">
 			<ObjectPath>SX_player_shoot</ObjectPath>
 			<ShortName>SX_player_shoot</ShortName>
 			<Path>Event/SX_player_shoot.bnk</Path>
@@ -878,7 +884,7 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{491C48FA-548C-3E11-5ADB-3D4FCE01173D}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{57783DB8-4E3E-989C-5EB1-ADB12D80C9FE}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -913,8 +919,8 @@
 				</Bus>
 				<Bus Id="985987111" Name="Motion Factory Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Motion Factory Bus" GUID="{2AF9B9C6-6EF1-46E9-B5F2-E30C9E602C74}"/>
 				<Bus Id="1036470302" Name="NPC Weapon" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master\NPCMaster\NPC Weapon" GUID="{A8AA54FE-EDEF-4D9A-AD19-FB5DEA129011}" MaxAttenuation="10000"/>
-				<Bus Id="1204890999" Name="Valhalla Voice Feedback" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master\NPCMaster\Valhalla Voice Feedback" GUID="{0B65F8CE-3721-497F-82EE-E5E1117E0ECF}"/>
 				<Bus Id="1698665495" Name="UI Master" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\UI Master" GUID="{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}"/>
+				<Bus Id="1717150251" Name="Door Aura Feedback" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master\NPCMaster\Door Aura Feedback" GUID="{0B65F8CE-3721-497F-82EE-E5E1117E0ECF}" MaxAttenuation="10000"/>
 				<Bus Id="1974888476" Name="ENV Other" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\Environment Master\ENV Other" GUID="{28DD99C7-6452-4B40-9D87-6E721A203EF0}" MaxAttenuation="10000"/>
 				<Bus Id="2033911932" Name="NPCMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master\NPCMaster" GUID="{94354A62-2693-4A27-B098-F5FDE5B577C5}"/>
 				<Bus Id="2093940462" Name="ENV AMB Interior" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\Environment Master\ENV AMB Interior" GUID="{FAEBE40F-E726-4C02-8A40-76374BDF8140}"/>
@@ -1192,6 +1198,31 @@
 					</Properties>
 				</AcousticTexture>
 			</AcousticTextures>
+		</SoundBank>
+		<SoundBank Id="1381971542" Type="Event" GUID="{3E2862BA-8803-49BF-BA95-23B08FD4AD17}" Language="SFX" Hash="{8A5A4B88-059D-29CE-8F03-6EC81951B3BC}">
+			<ObjectPath>Door_Destroy</ObjectPath>
+			<ShortName>Door_Destroy</ShortName>
+			<Path>Event/Door_Destroy.bnk</Path>
+			<Media>
+				<File Id="419649882" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>World_Feedback\angel_voice_01.wav</ShortName>
+					<Path>Media/419649882.wem</Path>
+					<CachePath>SFX/World_Feedback/angel_voice_01_755F56E2.wem</CachePath>
+				</File>
+				<File Id="1062254792" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>door_destroy_01.wav</ShortName>
+					<Path>Media/1062254792.wem</Path>
+					<CachePath>SFX/door_destroy_01_755F56E2.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1381971542" Name="Door_Destroy" ObjectPath="\Events\Environment\Door_Destroy" GUID="{3E2862BA-8803-49BF-BA95-23B08FD4AD17}" DurationType="OneShot" DurationMin="8.571438" DurationMax="8.571438">
+					<MediaRefs>
+						<MediaRef Id="419649882"/>
+						<MediaRef Id="1062254792"/>
+					</MediaRefs>
+				</Event>
+			</Events>
 		</SoundBank>
 		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{D6A7CFFE-7799-9538-FAB8-9661B35D923B}">
 			<ObjectPath>SX_player_jump</ObjectPath>
@@ -2173,5 +2204,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8CAEC2C9-408F-E408-88D3-78D2A598996C}</FileHash>
+	<FileHash>{94CDBC7A-A9A4-66F7-28E7-7AAA4F8EEEFE}</FileHash>
 </SoundBanksInfo>

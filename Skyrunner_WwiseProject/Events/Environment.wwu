@@ -58,7 +58,36 @@
 						<Action Name="" ID="{BAB91BFC-182B-4CC5-B42E-7C510CE33CD3}" ShortID="461849232">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Valhalla Voice Feedback" ID="{615B2024-56E1-4669-9F5F-AFB8424510BC}" WorkUnitID="{2648BE89-DB61-40DD-9520-81427D5C7D0E}"/>
+									<ObjectRef Name="Valhalla_Voice_Feedback" ID="{615B2024-56E1-4669-9F5F-AFB8424510BC}" WorkUnitID="{2648BE89-DB61-40DD-9520-81427D5C7D0E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4E201F0D-0000-44E5-A879-0577CFEF3C10}" ShortID="663307038">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Door_Aura_Feedback" ID="{EA5F3750-AAD0-4C46-ABB9-DCB20A083130}" WorkUnitID="{2648BE89-DB61-40DD-9520-81427D5C7D0E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Door_Destroy" ID="{3E2862BA-8803-49BF-BA95-23B08FD4AD17}">
+					<ChildrenList>
+						<Action Name="" ID="{D8B54163-BFCF-45D6-A51F-89E76E2BCE40}" ShortID="1020403020">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Door_Aura_Feedback" ID="{EA5F3750-AAD0-4C46-ABB9-DCB20A083130}" WorkUnitID="{2648BE89-DB61-40DD-9520-81427D5C7D0E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3ABD04D8-3BE7-456A-A73F-80B1F1D5C63C}" ShortID="121928608">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Door_Destroy_Feedback" ID="{B7230244-1388-46B5-9ED6-E8958A304F66}" WorkUnitID="{2648BE89-DB61-40DD-9520-81427D5C7D0E}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
