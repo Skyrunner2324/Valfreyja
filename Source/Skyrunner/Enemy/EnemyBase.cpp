@@ -1,3 +1,4 @@
+#include "EnemyBase.h"
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
@@ -44,3 +45,8 @@ void ABaseEnemy::Tick(float DeltaTime)
 	if (fireCooldown > 0.f)
 		fireCooldown -= DeltaTime;
 }
+
+void ABaseEnemy::EnemyLocked_Implementation(bool locked)
+{
+}
+
