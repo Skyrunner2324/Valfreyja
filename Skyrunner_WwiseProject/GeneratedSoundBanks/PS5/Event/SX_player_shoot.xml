@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{69BFAE0A-4AC9-3AF2-FEB5-F7BA35C9A697}">
+		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{B534137F-45ED-639D-B871-A744B6557A37}">
 			<ObjectPath>SX_player_shoot</ObjectPath>
 			<ShortName>SX_player_shoot</ShortName>
 			<Path>Event/SX_player_shoot.bnk</Path>
@@ -151,6 +151,9 @@
 				<Custom>
 					<Plugin Id="996715726" Name="Compressor (Custom)" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerWeapon_MainMixer\Weapons\game_weapon_shoot\Compressor (Custom)" GUID="{59925C2E-4E75-4CAD-9F3A-AFCCD157A5C5}" LibName="Wwise Compressor" LibId="7077891"/>
 				</Custom>
+				<ShareSets>
+					<Plugin Id="3014317828" Name="Shoot_Meter" ObjectPath="\Effects\Default Work Unit\Shoot_Meter" GUID="{ACD53570-9FE9-4E6D-BF0C-8A9F446FF48D}" LibName="Wwise Meter" LibId="8454147"/>
+				</ShareSets>
 			</Plugins>
 			<Events>
 				<Event Id="1030870044" Name="SX_player_shoot" ObjectPath="\Events\Player\Weapon\SX_player_shoot" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" DurationType="OneShot" DurationMin="2.875" DurationMax="3.6834607">
@@ -188,6 +191,9 @@
 						<Custom>
 							<PluginRef Id="996715726"/>
 						</Custom>
+						<ShareSets>
+							<PluginRef Id="3014317828"/>
+						</ShareSets>
 					</PluginRefs>
 				</Event>
 			</Events>
@@ -196,5 +202,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B0421CD9-EC38-9E13-C719-7369722C0B45}</FileHash>
+	<FileHash>{093DCFC1-35B8-FFD6-ADAA-DC83D91066B1}</FileHash>
 </SoundBanksInfo>
