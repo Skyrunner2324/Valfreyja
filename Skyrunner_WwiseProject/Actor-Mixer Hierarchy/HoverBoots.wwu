@@ -122,11 +122,30 @@
 													</ValueList>
 												</Property>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="Effect0">
+													<Custom CreatedFrom="{F7CBE859-36A8-4174-B553-AE32A7FE95FA}">
+														<Effect Name="Small_Wooden_Room1 (Custom)" ID="{60F7C3D2-F7D0-4CF8-B819-36AFB626C95F}" ShortID="18984756" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+															<PropertyList>
+																<Property Name="DryLevel" Type="Real32" Value="-1.3"/>
+																<Property Name="HFRatio" Type="Real32" Value="10"/>
+																<Property Name="NumberOfDelays" Type="int32" Value="12"/>
+																<Property Name="ReverbTime" Type="Real32" Value="1.5"/>
+																<Property Name="WetLevel" Type="Real32" Value="-30"/>
+															</PropertyList>
+														</Effect>
+													</Custom>
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
@@ -180,6 +199,76 @@
 																					<Point>
 																						<XPos>3000</XPos>
 																						<YPos>2.59268</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{7751BE35-7368-4436-B8C4-92A06519F7BE}" ShortID="952456445">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Highpass"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{8515EF03-4DEB-4CBB-9DA1-5E76C71CA1E7}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>76</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>3000</XPos>
+																						<YPos>0</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{FF266ADF-D10C-43E6-9131-3D09D6C8D661}" ShortID="37170667">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{756AE565-A825-4638-A269-6FB32E0083C0}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>3000</XPos>
+																						<YPos>1085</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
