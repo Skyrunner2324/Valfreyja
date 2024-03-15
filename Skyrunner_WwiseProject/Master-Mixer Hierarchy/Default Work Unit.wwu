@@ -12,6 +12,11 @@
 					<ChildrenList>
 						<Bus Name="MUSIC Master" ID="{D7372867-B444-4F36-A355-173A46D13138}">
 							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Color" Type="int16" Value="12"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
@@ -299,9 +304,6 @@
 									<ReferenceList>
 										<Reference Name="Attenuation">
 											<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
-										</Reference>
-										<Reference Name="ReflectionsAuxSend">
-											<ObjectRef Name="Early_Reflections" ID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -644,14 +646,8 @@
 											</ValueList>
 										</Property>
 									</PropertyList>
-									<ReferenceList>
-										<Reference Name="ReflectionsAuxSend">
-											<ObjectRef Name="Early_Reflections" ID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
 									<ChildrenList>
 										<Bus Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}">
-											<ReferenceList/>
 											<ObjectLists>
 												<ObjectList Name="RTPC">
 													<Reference>
