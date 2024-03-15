@@ -205,6 +205,93 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
+						<RandomSequenceContainer Name="Alien_Birds" ID="{ADC43C0E-23C5-458D-B17C-60E87C9214A4}" ShortID="462545339">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="ENV AMB Exterior" ID="{AA242E37-0C3D-41A5-8071-0C92A0F0323A}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ambiance_alien_birds_2" ID="{16CD364A-5034-457B-B467-EF627AE9E415}" ShortID="1027107601">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="ENV AMB Exterior" ID="{AA242E37-0C3D-41A5-8071-0C92A0F0323A}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ambiance_alien_birds_2" ID="{F2325356-36E7-46EA-8FCE-8CAA9504DEB3}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="7.91493150289017"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="7.72188439306359"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Ambience\ambiance_alien_birds_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="542370218"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ambiance_alien_birds_2" ID="{F2325356-36E7-46EA-8FCE-8CAA9504DEB3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ambiance_alien_birds" ID="{B4BEC362-4267-4929-8D49-C70A436CA73B}" ShortID="961055462">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="ENV AMB Exterior" ID="{AA242E37-0C3D-41A5-8071-0C92A0F0323A}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ambiance_alien_birds" ID="{957E51DF-0066-4984-B6CA-FBF4E641C214}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.694858526011561"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.35479833815029"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Ambience\ambiance_alien_birds.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="166482498"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ambiance_alien_birds" ID="{957E51DF-0066-4984-B6CA-FBF4E641C214}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

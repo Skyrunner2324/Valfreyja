@@ -276,7 +276,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{36FBCE52-226D-3F44-2256-AD16119F5B64}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{A24B660B-C440-29D4-98DC-51724467D698}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
@@ -596,7 +596,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{B534137F-45ED-639D-B871-A744B6557A37}">
+		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{1863ED8E-87B8-6A88-89A3-DDF1AB710E3E}">
 			<ObjectPath>SX_player_shoot</ObjectPath>
 			<ShortName>SX_player_shoot</ShortName>
 			<Path>Event/SX_player_shoot.bnk</Path>
@@ -1235,7 +1235,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1381971542" Type="Event" GUID="{3E2862BA-8803-49BF-BA95-23B08FD4AD17}" Language="SFX" Hash="{DC043CC1-90A3-9505-38EE-99B5933A30A9}">
+		<SoundBank Id="1381971542" Type="Event" GUID="{3E2862BA-8803-49BF-BA95-23B08FD4AD17}" Language="SFX" Hash="{F696D16E-16B2-129F-0C68-EB8B3E9C468B}">
 			<ObjectPath>Door_Destroy</ObjectPath>
 			<ShortName>Door_Destroy</ShortName>
 			<Path>Event/Door_Destroy.bnk</Path>
@@ -1516,6 +1516,31 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="2041690827" Type="Event" GUID="{499739A7-A19C-4D35-A43D-6E43729F9830}" Language="SFX" Hash="{E7D47C37-0176-4276-83A1-036851B1336B}">
+			<ObjectPath>Amb_Bird</ObjectPath>
+			<ShortName>Amb_Bird</ShortName>
+			<Path>Event/Amb_Bird.bnk</Path>
+			<Media>
+				<File Id="166482498" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Ambience\ambiance_alien_birds.wav</ShortName>
+					<Path>Media/166482498.wem</Path>
+					<CachePath>SFX/Ambience/ambiance_alien_birds_4DB5F673.wem</CachePath>
+				</File>
+				<File Id="542370218" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Ambience\ambiance_alien_birds_2.wav</ShortName>
+					<Path>Media/542370218.wem</Path>
+					<CachePath>SFX/Ambience/ambiance_alien_birds_2_6217FA0F.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2041690827" Name="Amb_Bird" ObjectPath="\Events\Environment\Amb_Bird" GUID="{499739A7-A19C-4D35-A43D-6E43729F9830}" MaxAttenuation="10000" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="166482498"/>
+						<MediaRef Id="542370218"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{1121A2FF-D472-5031-EF6F-1A50E914B7D0}">
 			<ObjectPath>SX_player_dash</ObjectPath>
 			<ShortName>SX_player_dash</ShortName>
@@ -1664,7 +1689,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{F8CE565F-3D1E-4CD9-77E8-910D45D5829E}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{868A8615-A8AA-46F7-1227-6E0510566E2D}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -1834,7 +1859,6 @@
 				<Event Id="3441789682" Name="MUS_Play_MainMusic" ObjectPath="\Events\Music\MUS_Play_MainMusic" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" DurationType="Infinite">
 					<AuxBusRefs>
 						<AuxBusRef Id="1641293181" Name="REV_LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"/>
-						<AuxBusRef Id="2172616000" Name="REV_Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}"/>
 					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
@@ -2240,5 +2264,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{91D87FEC-041A-B5FE-1CF1-23EC35892E4D}</FileHash>
+	<FileHash>{0E01DC06-1DCC-9BA1-61F9-B0B67CED9482}</FileHash>
 </SoundBanksInfo>

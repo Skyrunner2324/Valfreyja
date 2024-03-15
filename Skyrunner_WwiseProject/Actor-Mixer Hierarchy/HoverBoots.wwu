@@ -991,22 +991,23 @@
 										<SourcePlugin Name="Soundseed Air Wind" ID="{83767CC5-69B5-4564-8311-4A333A1B8AF9}" ShortID="666289254" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 											<PropertyList>
 												<Property Name="AttenuationRollOff" Type="Real32" Value="0.9"/>
-												<Property Name="AverageVelocity" Type="Real32" Value="-2400"/>
 												<Property Name="ChannelMask" Type="int16" Value="2"/>
-												<Property Name="FrequencyScale" Type="Real32" Value="0.04"/>
-												<Property Name="Gustiness" Type="Real32" Value="0.21"/>
+												<Property Name="Direction" Type="Real32" Value="-180"/>
+												<Property Name="Duration" Type="Real64" Value="14"/>
+												<Property Name="Gustiness" Type="Real32" Value="0.47"/>
 												<Property Name="MinDistance" Type="Real32" Value="11.4"/>
-												<Property Name="QFactorScale" Type="Real32" Value="1.26"/>
-												<Property Name="Variability" Type="Real32" Value="0"/>
+												<Property Name="PlaybackRate" Type="Real32" Value="1.1"/>
+												<Property Name="QFactorScale" Type="Real32" Value="-1.85"/>
+												<Property Name="Variability" Type="Real32" Value="0.54"/>
 												<Property Name="VelocityDynamicRange" Type="Real32" Value="0.81"/>
 											</PropertyList>
 											<ObjectLists>
 												<ObjectList Name="RTPC">
 													<Reference>
 														<Local>
-															<RTPC Name="" ID="{03841525-A159-47C7-9CB3-CDE931B64A2C}" ShortID="796645691">
+															<RTPC Name="" ID="{DD6A1CF1-F94E-4062-9E3B-113A826120FC}" ShortID="219448986">
 																<PropertyList>
-																	<Property Name="PropertyName" Type="string" Value="AverageVelocity"/>
+																	<Property Name="PropertyName" Type="string" Value="Direction"/>
 																</PropertyList>
 																<ReferenceList>
 																	<Reference Name="ControlInput">
@@ -1014,20 +1015,19 @@
 																	</Reference>
 																	<Reference Name="Curve">
 																		<Custom>
-																			<Curve Name="" ID="{4DC41504-6DD8-4638-AB94-9C6667D7FA8B}">
+																			<Curve Name="" ID="{FD84FAF3-A8A9-4877-830D-90C2F37232C1}">
 																				<PropertyList>
 																					<Property Name="Flags" Type="int32" Value="1"/>
 																				</PropertyList>
 																				<PointList>
 																					<Point>
 																						<XPos>0</XPos>
-																						<YPos>-2400</YPos>
+																						<YPos>-180</YPos>
 																						<Flags>5</Flags>
-																						<SegmentShape>Log2</SegmentShape>
 																					</Point>
 																					<Point>
 																						<XPos>3000</XPos>
-																						<YPos>-1.41246</YPos>
+																						<YPos>180</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -1048,15 +1048,25 @@
 														<PropertyList>
 															<Property Name="Frequency" Type="Real32" Value="956"/>
 															<Property Name="Gain" Type="Real32" Value="1"/>
-															<Property Name="PanX" Type="Real64" Value="56.6233766233766"/>
-															<Property Name="PanY" Type="Real64" Value="16.9576059850374"/>
+															<Property Name="PanX" Type="Real64" Value="51.9480519480519"/>
+															<Property Name="PanY" Type="Real64" Value="21.4463840399003"/>
+															<Property Name="QFactor" Type="Real32" Value="21.56"/>
 														</PropertyList>
 													</PluginInnerObject>
 													<PluginInnerObject Name="" ID="{3B909F4B-A6E3-4033-B257-70B0B902B3A4}" PluginName="Deflector" CompanyID="0" PluginID="121">
 														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="1142"/>
+															<Property Name="Frequency" Type="Real32" Value="1429"/>
 															<Property Name="PanX" Type="Real64" Value="-48.0519480519481"/>
 															<Property Name="PanY" Type="Real64" Value="27.1820448877806"/>
+															<Property Name="QFactor" Type="Real32" Value="18.4"/>
+														</PropertyList>
+													</PluginInnerObject>
+													<PluginInnerObject Name="" ID="{2CE711A0-6999-43E8-BCA3-F299EB0B16FC}" PluginName="Deflector" CompanyID="0" PluginID="121">
+														<PropertyList>
+															<Property Name="Frequency" Type="Real32" Value="612"/>
+															<Property Name="PanX" Type="Real64" Value="16.8831168831169"/>
+															<Property Name="PanY" Type="Real64" Value="57.1072319201995"/>
+															<Property Name="QFactor" Type="Real32" Value="24.18"/>
 														</PropertyList>
 													</PluginInnerObject>
 												</List>
@@ -1084,19 +1094,19 @@
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>-10.37028</YPos>
+																				<YPos>-31.7948</YPos>
 																				<Flags>5</Flags>
 																				<SegmentShape>Log2</SegmentShape>
 																			</Point>
 																			<Point>
-																				<XPos>915.1555</XPos>
-																				<YPos>-0.97564</YPos>
+																				<XPos>993.03712</XPos>
+																				<YPos>-11.58432</YPos>
 																				<Flags>0</Flags>
 																				<SegmentShape>Log1</SegmentShape>
 																			</Point>
 																			<Point>
 																				<XPos>3000</XPos>
-																				<YPos>4.60086</YPos>
+																				<YPos>-0.22668</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
