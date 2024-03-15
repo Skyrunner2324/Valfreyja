@@ -1,17 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{20609C6D-C833-1EE6-F910-3D890AB6E98C}">
+		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{BAAAF4DC-0EA7-EB96-7A87-6AC4376DE60E}">
 			<ObjectPath>SX_player_jump</ObjectPath>
 			<ShortName>SX_player_jump</ShortName>
 			<Path>Event/SX_player_jump.bnk</Path>
+			<Media>
+				<File Id="136203569" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_jump_04.wav</ShortName>
+					<Path>Media/136203569.wem</Path>
+					<CachePath>SFX/Player_Movement/player_jump_04_755F56E2.wem</CachePath>
+				</File>
+				<File Id="353509468" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_jump_02.wav</ShortName>
+					<Path>Media/353509468.wem</Path>
+					<CachePath>SFX/Player_Movement/player_jump_02_706CDE26.wem</CachePath>
+				</File>
+				<File Id="378334761" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_jump_06.wav</ShortName>
+					<Path>Media/378334761.wem</Path>
+					<CachePath>SFX/Player_Movement/player_jump_06_755F56E2.wem</CachePath>
+				</File>
+				<File Id="840503778" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_jump_01.wav</ShortName>
+					<Path>Media/840503778.wem</Path>
+					<CachePath>SFX/Player_Movement/player_jump_01_B0F78F39.wem</CachePath>
+				</File>
+				<File Id="927425016" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_jump_03.wav</ShortName>
+					<Path>Media/927425016.wem</Path>
+					<CachePath>SFX/Player_Movement/player_jump_03_B2E5DFBA.wem</CachePath>
+				</File>
+				<File Id="1048809174" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_jump_05.wav</ShortName>
+					<Path>Media/1048809174.wem</Path>
+					<CachePath>SFX/Player_Movement/player_jump_05_755F56E2.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="1010974337" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_jump\Soundseed Air Woosh" GUID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+					<Plugin Id="1010974337" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\player_jump\game_jump\Soundseed Air Woosh" GUID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="1532180459" Name="SX_player_jump" ObjectPath="\Events\Player\Movement\SX_player_jump" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" DurationType="OneShot" DurationMin="0.13333334" DurationMax="0.13333334">
+				<Event Id="1532180459" Name="SX_player_jump" ObjectPath="\Events\Player\Movement\SX_player_jump" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" DurationType="OneShot" DurationMin="0.84360045" DurationMax="1.1131375">
+					<MediaRefs>
+						<MediaRef Id="136203569"/>
+						<MediaRef Id="353509468"/>
+						<MediaRef Id="378334761"/>
+						<MediaRef Id="840503778"/>
+						<MediaRef Id="927425016"/>
+						<MediaRef Id="1048809174"/>
+					</MediaRefs>
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="1010974337"/>
@@ -24,5 +64,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CB3DD7BF-DC4F-7759-576C-BA6D6C742D7C}</FileHash>
+	<FileHash>{E6F56DF3-29F3-E7F0-0F90-D0AB4903A3D5}</FileHash>
 </SoundBanksInfo>

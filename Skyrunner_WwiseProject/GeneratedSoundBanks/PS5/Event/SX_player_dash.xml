@@ -1,17 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{1121A2FF-D472-5031-EF6F-1A50E914B7D0}">
+		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{5FA2EC56-F3F6-C8B8-FD20-145E1140B3CA}">
 			<ObjectPath>SX_player_dash</ObjectPath>
 			<ShortName>SX_player_dash</ShortName>
 			<Path>Event/SX_player_dash.bnk</Path>
+			<Media>
+				<File Id="22359102" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_dash_05.wav</ShortName>
+					<Path>Media/22359102.wem</Path>
+					<CachePath>SFX/Player_Movement/player_dash_05_755F56E2.wem</CachePath>
+				</File>
+				<File Id="291190893" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_dash_DNF_140_Lazerbeam.wav</ShortName>
+					<Path>Media/291190893.wem</Path>
+					<CachePath>SFX/Player_Movement/player_dash_DNF_140_Lazerbeam_755F56E2.wem</CachePath>
+				</File>
+				<File Id="336656279" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_dash_01.wav</ShortName>
+					<Path>Media/336656279.wem</Path>
+					<CachePath>SFX/Player_Movement/player_dash_01_755F56E2.wem</CachePath>
+				</File>
+				<File Id="345764600" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_dash_02.wav</ShortName>
+					<Path>Media/345764600.wem</Path>
+					<CachePath>SFX/Player_Movement/player_dash_02_755F56E2.wem</CachePath>
+				</File>
+				<File Id="752369847" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_dash_03.wav</ShortName>
+					<Path>Media/752369847.wem</Path>
+					<CachePath>SFX/Player_Movement/player_dash_03_755F56E2.wem</CachePath>
+				</File>
+				<File Id="985541282" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_dash_04.wav</ShortName>
+					<Path>Media/985541282.wem</Path>
+					<CachePath>SFX/Player_Movement/player_dash_04_755F56E2.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="631246921" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_dash\Soundseed Air Woosh" GUID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+					<Plugin Id="631246921" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\player_dash\game_dash\Soundseed Air Woosh" GUID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="2162617371" Name="SX_player_dash" ObjectPath="\Events\Player\Movement\SX_player_dash" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" DurationType="OneShot" DurationMin="0.25" DurationMax="0.35">
+				<Event Id="2162617371" Name="SX_player_dash" ObjectPath="\Events\Player\Movement\SX_player_dash" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" DurationType="OneShot" DurationMin="1.4142135" DurationMax="2.828427">
+					<MediaRefs>
+						<MediaRef Id="22359102"/>
+						<MediaRef Id="291190893"/>
+						<MediaRef Id="336656279"/>
+						<MediaRef Id="345764600"/>
+						<MediaRef Id="752369847"/>
+						<MediaRef Id="985541282"/>
+					</MediaRefs>
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="631246921"/>
@@ -24,5 +64,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{71E41063-D71F-5C80-14B9-DD1EDB599FF0}</FileHash>
+	<FileHash>{9959E0FD-8672-3712-09AC-DD3AB88AA512}</FileHash>
 </SoundBanksInfo>

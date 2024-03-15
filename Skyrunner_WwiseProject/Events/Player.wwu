@@ -68,9 +68,13 @@
 							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{F594CB07-5CF7-491A-B6D1-469997C1B73B}" ShortID="132240115">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="game_jump" ID="{469655F8-E589-471B-89A4-A70EB822E721}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+											<ObjectRef Name="player_jump" ID="{D18043B8-123E-4B3B-868F-DBF6F3BAE4B0}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -105,6 +109,9 @@
 							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{07E095B4-7CF0-4706-91A8-1ED0B26298A0}" ShortID="711070669">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="game_slide" ID="{0F8FE257-4D33-4454-AADA-B67BCA030904}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
@@ -122,7 +129,7 @@
 								<Action Name="" ID="{284E38B5-9E6B-4BDF-BED5-184CC3BA4ED9}" ShortID="735400021">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="game_dash" ID="{1F66B6C0-B738-4563-BEB5-416E7C8B14E1}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+											<ObjectRef Name="player_dash" ID="{499B06F4-8244-4807-A151-8018FD55B175}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

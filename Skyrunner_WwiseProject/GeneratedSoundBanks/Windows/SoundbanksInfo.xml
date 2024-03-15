@@ -276,7 +276,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{A24B660B-C440-29D4-98DC-51724467D698}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{C4E517DD-3B68-A0C3-1E9D-675678889E92}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
@@ -290,6 +290,11 @@
 					<ShortName>Hoverboots\hoverboots_simple.wav</ShortName>
 					<Path>Media/842316658.wem</Path>
 					<CachePath>SFX/Hoverboots/hoverboots_simple_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="1023074526" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\wind_speed.wav</ShortName>
+					<Path>Media/1023074526.wem</Path>
+					<CachePath>SFX/Player_Movement/wind_speed_755F56E2.wem</CachePath>
 				</File>
 				<File Id="1035111905" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Hoverboots\jet_pack.wav</ShortName>
@@ -320,6 +325,7 @@
 					<MediaRefs>
 						<MediaRef Id="17371190"/>
 						<MediaRef Id="842316658"/>
+						<MediaRef Id="1023074526"/>
 						<MediaRef Id="1035111905"/>
 						<MediaRef Id="1056072145"/>
 					</MediaRefs>
@@ -919,7 +925,7 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{8266D3D7-C500-75F6-A351-AFAC2B7F1D64}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{C153E8D2-A968-7F39-66E8-1C26529BA077}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -927,10 +933,8 @@
 				<Custom>
 					<Plugin Id="21631550" Name="Parametric EQ (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_LargeRoom\Parametric EQ (Custom)" GUID="{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="33444476" Name="RoomVerb (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_LargeRoom\RoomVerb (Custom)" GUID="{140088B9-275E-409D-AC97-CA7FF6C8DCF0}" LibName="Wwise RoomVerb" LibId="7733251"/>
-					<Plugin Id="335663160" Name="Underwater_Echoes (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Movement\Underwater_Echoes (Custom)" GUID="{68094E56-564C-4D9E-9B9D-70C81AC10C52}" LibName="Wwise Stereo Delay" LibId="8847363"/>
 					<Plugin Id="365634587" Name="Pitch Shifter (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Weapon\Pitch Shifter (Custom)" GUID="{33D57BB0-F3A5-4610-B197-20FDAEA0D225}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 					<Plugin Id="544066397" Name="Matrix Reverb (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\REV_SmallRoom\Matrix Reverb (Custom)" GUID="{46B2EC8C-FD61-4366-9674-9524E30CFFA7}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
-					<Plugin Id="715153284" Name="Pitch Shifter (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Movement\Pitch Shifter (Custom)" GUID="{491994D5-274E-4B7F-BF7F-689644E819AF}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 					<Plugin Id="945211497" Name="Underwater_Echoes (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Weapon\Underwater_Echoes (Custom)" GUID="{E99B9354-6E3C-40D3-B57E-B74097729115}" LibName="Wwise Stereo Delay" LibId="8847363"/>
 				</Custom>
 				<ShareSets>
@@ -962,14 +966,7 @@
 				<Bus Id="2126441370" Name="Environment Master" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\Environment Master" GUID="{93794CDD-D92F-4393-9B36-96AC442DDB90}"/>
 				<Bus Id="2452310558" Name="WwiseMotion" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\WwiseMotion" GUID="{A725A1F7-24D8-429B-98AE-EDE935A1E857}"/>
 				<Bus Id="2663637017" Name="OBJ 3D" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master\OBJ 3D" GUID="{D0ED54DA-B5B7-4F73-98DD-6D286A925089}"/>
-				<Bus Id="2701788107" Name="PLYR Movement" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Movement" GUID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="335663160"/>
-							<PluginRef Id="715153284"/>
-						</Custom>
-					</PluginRefs>
-				</Bus>
+				<Bus Id="2701788107" Name="PLYR Movement" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Movement" GUID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}"/>
 				<Bus Id="3115011207" Name="3D OBJ Master" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master" GUID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}">
 					<AuxBusRefs>
 						<AuxBusRef Id="1752382405" Name="Early_Reflections" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REV\Early_Reflections" GUID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}"/>
@@ -1260,17 +1257,57 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{20609C6D-C833-1EE6-F910-3D890AB6E98C}">
+		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{BAAAF4DC-0EA7-EB96-7A87-6AC4376DE60E}">
 			<ObjectPath>SX_player_jump</ObjectPath>
 			<ShortName>SX_player_jump</ShortName>
 			<Path>Event/SX_player_jump.bnk</Path>
+			<Media>
+				<File Id="136203569" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_jump_04.wav</ShortName>
+					<Path>Media/136203569.wem</Path>
+					<CachePath>SFX/Player_Movement/player_jump_04_755F56E2.wem</CachePath>
+				</File>
+				<File Id="353509468" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_jump_02.wav</ShortName>
+					<Path>Media/353509468.wem</Path>
+					<CachePath>SFX/Player_Movement/player_jump_02_706CDE26.wem</CachePath>
+				</File>
+				<File Id="378334761" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_jump_06.wav</ShortName>
+					<Path>Media/378334761.wem</Path>
+					<CachePath>SFX/Player_Movement/player_jump_06_755F56E2.wem</CachePath>
+				</File>
+				<File Id="840503778" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_jump_01.wav</ShortName>
+					<Path>Media/840503778.wem</Path>
+					<CachePath>SFX/Player_Movement/player_jump_01_B0F78F39.wem</CachePath>
+				</File>
+				<File Id="927425016" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_jump_03.wav</ShortName>
+					<Path>Media/927425016.wem</Path>
+					<CachePath>SFX/Player_Movement/player_jump_03_B2E5DFBA.wem</CachePath>
+				</File>
+				<File Id="1048809174" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_jump_05.wav</ShortName>
+					<Path>Media/1048809174.wem</Path>
+					<CachePath>SFX/Player_Movement/player_jump_05_755F56E2.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="1010974337" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_jump\Soundseed Air Woosh" GUID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+					<Plugin Id="1010974337" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\player_jump\game_jump\Soundseed Air Woosh" GUID="{2CE4CD63-7CB9-4911-A680-FC72A4101CB1}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="1532180459" Name="SX_player_jump" ObjectPath="\Events\Player\Movement\SX_player_jump" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" DurationType="OneShot" DurationMin="0.13333334" DurationMax="0.13333334">
+				<Event Id="1532180459" Name="SX_player_jump" ObjectPath="\Events\Player\Movement\SX_player_jump" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" DurationType="OneShot" DurationMin="0.84360045" DurationMax="1.1131375">
+					<MediaRefs>
+						<MediaRef Id="136203569"/>
+						<MediaRef Id="353509468"/>
+						<MediaRef Id="378334761"/>
+						<MediaRef Id="840503778"/>
+						<MediaRef Id="927425016"/>
+						<MediaRef Id="1048809174"/>
+					</MediaRefs>
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="1010974337"/>
@@ -1363,7 +1400,7 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="1882419246" Type="Event" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}" Language="SFX" Hash="{5CE84EDE-DB03-9EA7-BA21-9BCB55031CB2}">
+		<SoundBank Id="1882419246" Type="Event" GUID="{18C2192F-4C95-4001-A9A0-979E3F100C3A}" Language="SFX" Hash="{05895C9D-30D0-7729-CC77-03FCB0A27D91}">
 			<ObjectPath>SX_player_slide</ObjectPath>
 			<ShortName>SX_player_slide</ShortName>
 			<Path>Event/SX_player_slide.bnk</Path>
@@ -1516,7 +1553,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2041690827" Type="Event" GUID="{499739A7-A19C-4D35-A43D-6E43729F9830}" Language="SFX" Hash="{E7D47C37-0176-4276-83A1-036851B1336B}">
+		<SoundBank Id="2041690827" Type="Event" GUID="{499739A7-A19C-4D35-A43D-6E43729F9830}" Language="SFX" Hash="{608E23A9-6AE9-F334-961E-4A3BBB53C585}">
 			<ObjectPath>Amb_Bird</ObjectPath>
 			<ShortName>Amb_Bird</ShortName>
 			<Path>Event/Amb_Bird.bnk</Path>
@@ -1541,17 +1578,57 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{1121A2FF-D472-5031-EF6F-1A50E914B7D0}">
+		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{5FA2EC56-F3F6-C8B8-FD20-145E1140B3CA}">
 			<ObjectPath>SX_player_dash</ObjectPath>
 			<ShortName>SX_player_dash</ShortName>
 			<Path>Event/SX_player_dash.bnk</Path>
+			<Media>
+				<File Id="22359102" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_dash_05.wav</ShortName>
+					<Path>Media/22359102.wem</Path>
+					<CachePath>SFX/Player_Movement/player_dash_05_755F56E2.wem</CachePath>
+				</File>
+				<File Id="291190893" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_dash_DNF_140_Lazerbeam.wav</ShortName>
+					<Path>Media/291190893.wem</Path>
+					<CachePath>SFX/Player_Movement/player_dash_DNF_140_Lazerbeam_755F56E2.wem</CachePath>
+				</File>
+				<File Id="336656279" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_dash_01.wav</ShortName>
+					<Path>Media/336656279.wem</Path>
+					<CachePath>SFX/Player_Movement/player_dash_01_755F56E2.wem</CachePath>
+				</File>
+				<File Id="345764600" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_dash_02.wav</ShortName>
+					<Path>Media/345764600.wem</Path>
+					<CachePath>SFX/Player_Movement/player_dash_02_755F56E2.wem</CachePath>
+				</File>
+				<File Id="752369847" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_dash_03.wav</ShortName>
+					<Path>Media/752369847.wem</Path>
+					<CachePath>SFX/Player_Movement/player_dash_03_755F56E2.wem</CachePath>
+				</File>
+				<File Id="985541282" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_dash_04.wav</ShortName>
+					<Path>Media/985541282.wem</Path>
+					<CachePath>SFX/Player_Movement/player_dash_04_755F56E2.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="631246921" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\game_dash\Soundseed Air Woosh" GUID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
+					<Plugin Id="631246921" Name="Soundseed Air Woosh" ObjectPath="\Actor-Mixer Hierarchy\Player\PlayerMovement_MainMixer\Movements\player_dash\game_dash\Soundseed Air Woosh" GUID="{2AD328FC-8E47-409D-8B2C-ED5636C356C3}" LibName="SoundSeed Air Woosh" LibId="7864322"/>
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="2162617371" Name="SX_player_dash" ObjectPath="\Events\Player\Movement\SX_player_dash" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" DurationType="OneShot" DurationMin="0.25" DurationMax="0.35">
+				<Event Id="2162617371" Name="SX_player_dash" ObjectPath="\Events\Player\Movement\SX_player_dash" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" DurationType="OneShot" DurationMin="1.4142135" DurationMax="2.828427">
+					<MediaRefs>
+						<MediaRef Id="22359102"/>
+						<MediaRef Id="291190893"/>
+						<MediaRef Id="336656279"/>
+						<MediaRef Id="345764600"/>
+						<MediaRef Id="752369847"/>
+						<MediaRef Id="985541282"/>
+					</MediaRefs>
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="631246921"/>
@@ -2264,5 +2341,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DAAC2B78-F97E-A7D5-FB21-E5FA0A84F8E2}</FileHash>
+	<FileHash>{AAA1D36D-9056-213D-B4C8-80A37C375659}</FileHash>
 </SoundBanksInfo>
