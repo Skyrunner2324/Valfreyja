@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{AB01A610-C4D3-0FBE-F1DD-5F45B821B199}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{19DB72FA-F071-5A58-6749-834F2592DF0A}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -51,6 +51,11 @@
 					<Path>Media/261801959.wem</Path>
 					<CachePath>SFX/Music/vocal_break_the_sky_073B4D0C.wem</CachePath>
 				</File>
+				<File Id="262962377" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\D_Arp.wav</ShortName>
+					<Path>Media/262962377.wem</Path>
+					<CachePath>SFX/Music/D_Arp_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="270154809" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\ZoneA\A2_Buildup_Guitar.wav</ShortName>
 					<Path>Media/270154809.wem</Path>
@@ -95,6 +100,16 @@
 					<ShortName>Music\music_Buildup_Breakcore_C2.wav</ShortName>
 					<Path>Media/459310322.wem</Path>
 					<CachePath>SFX/Music/music_Buildup_Breakcore_C2_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="475442014" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\D_Pad.wav</ShortName>
+					<Path>Media/475442014.wem</Path>
+					<CachePath>SFX/Music/D_Pad_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="550066409" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\D_Synths.wav</ShortName>
+					<Path>Media/550066409.wem</Path>
+					<CachePath>SFX/Music/D_Synths_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="658128171" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\music_Reveal_B3-001.wav</ShortName>
@@ -165,6 +180,16 @@
 					<ShortName>Music\music_Drums_Glitched_Breakcore_C2.wav</ShortName>
 					<Path>Media/972084870.wem</Path>
 					<CachePath>SFX/Music/music_Drums_Glitched_Breakcore_C2_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="1017597674" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\D_Kick.wav</ShortName>
+					<Path>Media/1017597674.wem</Path>
+					<CachePath>SFX/Music/D_Kick_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="1064976624" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\D_Drums.wav</ShortName>
+					<Path>Media/1064976624.wem</Path>
+					<CachePath>SFX/Music/D_Drums_073B4D0C.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -419,6 +444,36 @@
 										</SwitchContainer>
 									</Children>
 								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="2262403497" Id="0" GUID="{702787C3-E2B6-4E60-A266-37C30239657B}"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="2368434850" Id="1454074651" GUID="{68188DD8-3818-488B-A868-9C73F1BA33DA}"/>
+											<MediaRefs>
+												<MediaRef Id="262962377"/>
+												<MediaRef Id="475442014"/>
+												<MediaRef Id="550066409"/>
+												<MediaRef Id="1017597674"/>
+												<MediaRef Id="1064976624"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="2262403497" Id="3032049369" GUID="{6768CC3A-F841-45F1-8A13-CF8AE7C4DC6E}"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="2368434850" Id="1454074651" GUID="{68188DD8-3818-488B-A868-9C73F1BA33DA}"/>
+											<MediaRefs>
+												<MediaRef Id="262962377"/>
+												<MediaRef Id="475442014"/>
+												<MediaRef Id="550066409"/>
+												<MediaRef Id="1017597674"/>
+												<MediaRef Id="1064976624"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -466,5 +521,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C285812E-4CDB-A676-AB4D-1CD7FB61A6A6}</FileHash>
+	<FileHash>{802C5304-F5A9-51B2-D978-A2785D220805}</FileHash>
 </SoundBanksInfo>
