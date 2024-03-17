@@ -27,27 +27,32 @@ AActor* UObjectPool::GetObjectPooled(FVector position, FRotator rotation, TSubcl
 	if (copyPoolObject.ContainsByPredicate([&](const AActor* a) { return a->IsA(actorClass.Get()); }))
 		actorPooled = *copyPoolObject.FindByPredicate([&](const AActor* a) { return a->IsA(actorClass.Get()); });
 
-	if (actorPooled == nullptr) {
+	if (actorPooled == nullptr)
+	{
 		SpawnActor(actorClass);
 		return GetObjectPooled(position, rotation, actorClass);
 	}
 
 	copyPoolObject.Remove(actorPooled);
+
 	actorPooled->Reset();
 	actorPooled->SetActorLocation(position);
 	actorPooled->SetActorRotation(rotation);
 	ActivateActor(false, true, true, actorPooled);
 
+
+	check(actorPooled);
 	return actorPooled;
 }
 
-void UObjectPool::DestroyComponent(bool bPromoteChildren)
-{
-	Super::DestroyComponent(bPromoteChildren);
-}
+//void UObjectPool::DestroyComponent(bool bPromoteChildren)
+//{
+//	Super::DestroyComponent(bPromoteChildren);
+//}
 
 void UObjectPool::RemoveObjectPooled(AActor* objectToDeactivate)
 {
+	// placed back in stand by
 	copyPoolObject.Add(objectToDeactivate);
 	ActivateActor(true, false, false, objectToDeactivate);
 }
@@ -68,21 +73,20 @@ void UObjectPool::ActivateActor(bool hiddenIngame, bool enableColision, bool tic
 		UNiagaraComponent* niagaraComponent = Cast<UNiagaraComponent>(component);
 		component->SetActive(!hiddenIngame, true);
 
-		if (niagaraComponent == nullptr) {
+		if (niagaraComponent == nullptr)
 			component->SetComponentTickEnabled(!hiddenIngame);
-		}
-		else {
+		else
 			niagaraComponent->ResetSystem();
-		}
 
 		UCustomProjectileMovement* projectileComponent = Cast<UCustomProjectileMovement>(component);
 
-		if (projectileComponent != nullptr) {
+		if (projectileComponent != nullptr)
+		{
 			projectileComponent->Velocity = FVector(1.f, 0.f, 0.f);
 			projectileComponent->Init();
 			projectileComponent->UpdateComponentVelocity();
 		}
-	};
+	}
 }
 
 void UObjectPool::SpawnActor(TSubclassOf<AActor> actorClass, int numberActorToSpawn)
@@ -98,7 +102,9 @@ void UObjectPool::SpawnActor(TSubclassOf<AActor> actorClass, int numberActorToSp
 		ActivateActor(true, false, false, actor);
 		poolObject.Insert(actor, 0);
 		copyPoolObject.Insert(actor, 0);
+
 		UPoolObject* poolObjectComponent = Cast<UPoolObject>(actor->GetComponentByClass(UPoolObject::StaticClass()));
+		check(poolObjectComponent);
 		poolObjectComponent->OnDeath.AddDynamic(this, &UObjectPool::ActorDeath);
 	}
 }
@@ -108,7 +114,8 @@ void UObjectPool::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (!arrayClass.IsEmpty()) {
+	if (!arrayClass.IsEmpty())
+	{
 		for (FStructActorClass structActorClass : arrayClass)
 		{
 			SpawnActor(structActorClass.actorClass, structActorClass.numberToCreateAtstart);

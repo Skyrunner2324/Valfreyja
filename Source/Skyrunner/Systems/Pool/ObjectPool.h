@@ -7,7 +7,8 @@
 #include "ObjectPool.generated.h"
 
 USTRUCT(BlueprintType)
-struct FStructActorClass{
+struct FStructActorClass
+{
 	GENERATED_USTRUCT_BODY()
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -16,7 +17,7 @@ struct FStructActorClass{
 	int numberToCreateAtstart = 0;
 
 	//FStructActorClass() { }
-} ;
+};
 
 
 UCLASS(Blueprintable, ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
@@ -32,15 +33,18 @@ public:
 	TArray<FStructActorClass> arrayClass;
 
 private:
+	// all instantiated objects
 	TArray <AActor*> poolObject;
+	// standby objects
 	TArray <AActor*> copyPoolObject;
 
 public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
 	UFUNCTION(BlueprintCallable)
 	AActor* GetObjectPooled(FVector position, FRotator rotation, TSubclassOf<AActor> actorClass);
-	virtual void DestroyComponent(bool bPromoteChildren) override;
+	//virtual void DestroyComponent(bool bPromoteChildren) override;
 
 protected:
 	// Called when the game starts
