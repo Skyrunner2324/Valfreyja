@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="423476228" Type="Event" GUID="{85FE7A46-F893-42AA-8787-F5597C4AF630}" Language="SFX" Hash="{0DCD7AFB-E60C-4495-BD24-200D65CF19CA}">
+		<SoundBank Id="423476228" Type="Event" GUID="{85FE7A46-F893-42AA-8787-F5597C4AF630}" Language="SFX" Hash="{B6CF5A30-DBA5-8319-DB66-FDE1EBD1A4C6}">
 			<ObjectPath>SX_enemy_gunner_shot</ObjectPath>
 			<ShortName>SX_enemy_gunner_shot</ShortName>
 			<Path>Event/SX_enemy_gunner_shot.bnk</Path>
@@ -11,15 +11,61 @@
 					<Path>Media/41208995.wem</Path>
 					<CachePath>SFX/Enemies/bullet_enemy_bullet_flyby_fast_06_497AD5A8.wem</CachePath>
 				</File>
+				<File Id="461432451" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Weapon\player_weapon_shoot_smg_mech_02.wav</ShortName>
+					<Path>Media/461432451.wem</Path>
+					<CachePath>SFX/Player_Weapon/player_weapon_shoot_smg_mech_02_C7AA5A5C.wem</CachePath>
+				</File>
+				<File Id="626614084" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>player_electric_shoot.wav</ShortName>
+					<Path>Media/626614084.wem</Path>
+					<CachePath>SFX/player_electric_shoot_755F56E2.wem</CachePath>
+				</File>
+				<File Id="631171215" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Weapon\player_weapon_shoot_smg_mech_03.wav</ShortName>
+					<Path>Media/631171215.wem</Path>
+					<CachePath>SFX/Player_Weapon/player_weapon_shoot_smg_mech_03_3254F09D.wem</CachePath>
+				</File>
+				<File Id="867880719" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Weapon\player_weapon_shoot_smg_close_01.wav</ShortName>
+					<Path>Media/867880719.wem</Path>
+					<CachePath>SFX/Player_Weapon/player_weapon_shoot_smg_close_01_74E489A9.wem</CachePath>
+				</File>
+				<File Id="942643326" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Weapon\player_weapon_shoot_smg_mech_01.wav</ShortName>
+					<Path>Media/942643326.wem</Path>
+					<CachePath>SFX/Player_Weapon/player_weapon_shoot_smg_mech_01_C7AA5A5C.wem</CachePath>
+				</File>
+				<File Id="967984016" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Weapon\player_weapon_shoot_smg_sub_01.wav</ShortName>
+					<Path>Media/967984016.wem</Path>
+					<CachePath>SFX/Player_Weapon/player_weapon_shoot_smg_sub_01_4CC5E05E.wem</CachePath>
+				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="611089814" Name="Flanger (Custom)" ObjectPath="\Actor-Mixer Hierarchy\NPC\NPC_Feedback_MainMixer\NPC_Weapons_MainMixer\NPC_Weapons\Flanger (Custom)" GUID="{0B8DEB6B-33A9-4F49-A8FD-CC576BC5FA28}" LibName="Wwise Flanger" LibId="8192003"/>
+				</Custom>
+			</Plugins>
 			<Events>
-				<Event Id="423476228" Name="SX_enemy_gunner_shot" ObjectPath="\Events\Enemy\SX_enemy_gunner_shot" GUID="{85FE7A46-F893-42AA-8787-F5597C4AF630}" MaxAttenuation="100000" DurationType="OneShot" DurationMin="0.24899432" DurationMax="0.37306997">
+				<Event Id="423476228" Name="SX_enemy_gunner_shot" ObjectPath="\Events\Enemy\SX_enemy_gunner_shot" GUID="{85FE7A46-F893-42AA-8787-F5597C4AF630}" MaxAttenuation="100000" DurationType="OneShot" DurationMin="1.0174744" DurationMax="1.2819375">
 					<MediaRefs>
 						<MediaRef Id="41208995"/>
+						<MediaRef Id="461432451"/>
+						<MediaRef Id="626614084"/>
+						<MediaRef Id="631171215"/>
+						<MediaRef Id="867880719"/>
+						<MediaRef Id="942643326"/>
+						<MediaRef Id="967984016"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="611089814"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{58547E42-CAE6-393B-445D-7B6AFF890655}</FileHash>
+	<FileHash>{EDD52838-7017-91F1-2E35-688407EA7062}</FileHash>
 </SoundBanksInfo>
