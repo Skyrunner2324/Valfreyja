@@ -253,6 +253,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="SX_player_feedback_death" ID="{7B6982F6-686A-493A-8518-52B50A5890B9}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{D7017930-589E-480E-B8A4-DCEA6AF65C6E}" ShortID="335963203">
 									<ReferenceList>
@@ -283,6 +287,36 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="low_life_feedback" ID="{814A37DD-3A0E-43F3-BC8A-F77A2D59F512}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="SX_player_dash_regen" ID="{6D13E3BD-F5FB-4B8B-8184-DB05606BBF7C}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{80112CE2-0C8A-41E9-852D-FADD868B57FF}" ShortID="354315571">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="player_dash_regen" ID="{ED34ADB2-3343-4200-BBA2-2AFB235064BA}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="SX_player_grap_lock" ID="{D7BC11F0-4EB9-4FC1-9367-FFB057615127}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{E537E440-C084-4AF1-85FA-3AC49B78F855}" ShortID="838151130">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="player_grap_lock" ID="{CF744AB9-532B-444B-866E-39F6E1908411}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

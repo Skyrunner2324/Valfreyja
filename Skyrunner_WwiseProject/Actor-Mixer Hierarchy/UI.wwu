@@ -25,6 +25,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="ui_back" ID="{9C057583-EC7E-4766-9BD6-8D16C790C219}" ShortID="226550563">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -495,6 +502,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="ui_move_atonal_01" ID="{90357515-9778-4D21-BD45-D7049BB9FF58}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0738900862068965"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.119567594043887"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>UI\ui_move_atonal_01.wav</AudioFile>
 											<MediaIDList>
@@ -800,6 +812,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="ui_move_atonal_02" ID="{9108F489-BAD2-4A4A-8C0D-A16A425335DF}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0846377351097179"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.173305838557994"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>UI\ui_move_atonal_02.wav</AudioFile>
 											<MediaIDList>
@@ -839,6 +856,46 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="PSX_splashscreen" ID="{7FFF03D9-7E1D-4EF9-BB15-FD546CB52EED}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ui_back_02" ID="{E5B3CA76-A411-4501-9766-7FE413A314E1}" ShortID="933829162">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{77032ABA-875D-48EE-9DA7-2FD2113EFD62}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ui_back_02" ID="{DC60159C-48E9-424F-ABCD-ED2B782C7E5F}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>UI\ui_back_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="260729675"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ui_back_02" ID="{DC60159C-48E9-424F-ABCD-ED2B782C7E5F}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

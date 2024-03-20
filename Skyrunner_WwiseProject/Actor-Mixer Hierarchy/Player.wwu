@@ -577,69 +577,119 @@
 														<ActiveSource Name="player_grap2" ID="{6611B255-385C-43D3-8118-0905502B3C67}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="player_shield_regen" ID="{C393DDB2-F61D-459C-B1E8-32F8F0391A6A}" ShortID="131267186">
-													<PropertyList>
-														<Property Name="OverridePositioning" Type="bool" Value="True"/>
-														<Property Name="Pitch" Type="int32">
-															<ValueList>
-																<Value>1710</Value>
-															</ValueList>
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{C4BFAFF1-7FEA-4CF9-A7CD-F7162D93E5D1}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Min" Type="Real64" Value="-582"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="SpeakerPanning" Type="int16" Value="2"/>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>-27</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="SX_player_shield_regen" ID="{AAF8C52B-5A40-45DA-957F-F7A662D35694}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.126511627906977"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.708465116279069"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="1.2482480620155"/>
-																<Property Name="TrimEnd" Type="Real64" Value="2.24347286821705"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>SX_player_shield_regen.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="328453384"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<PositioningInfo>
-														<Panner Name="" ID="{68A929A3-1F76-457B-BAA3-8B4529291705}">
-															<PropertyList>
-																<Property Name="PanX" Type="Real64" Value="-9.06515580736544"/>
-																<Property Name="PanY" Type="Real64" Value="-94.8948948948949"/>
-															</PropertyList>
-														</Panner>
-													</PositioningInfo>
-													<ActiveSourceList>
-														<ActiveSource Name="SX_player_shield_regen" ID="{AAF8C52B-5A40-45DA-957F-F7A662D35694}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
 											</ChildrenList>
 										</BlendContainer>
+										<Sound Name="player_grap_lock" ID="{CF744AB9-532B-444B-866E-39F6E1908411}" ShortID="736229664">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>500</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{FE36A2B7-CC63-4933-A877-EA769E2FAC0E}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="300"/>
+																	<Property Name="Min" Type="Real64" Value="-300"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_grap2" ID="{A431D756-428C-4E34-BC7A-CFBF8486A168}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0163356990408954"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.00807175717314829"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0540300706672737"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.145586963691215"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Player_Weapon\player_grap2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="765447055"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{937C5C50-230C-4F52-8D06-4270E0982659}" ShortID="29937689">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_PlayerMovement" ID="{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{74601504-AD7F-44D3-A5BD-486C9FF3907E}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>2.999</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>3</XPos>
+																						<YPos>-20</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>4</XPos>
+																						<YPos>-20</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>4.001</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>5</XPos>
+																						<YPos>0</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="player_grap2" ID="{A431D756-428C-4E34-BC7A-CFBF8486A168}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</Folder>
 								<Sound Name="game_bumper" ID="{DF8F4EE9-2BD3-4ABE-93E5-381898FFEC60}" ShortID="635856933">
@@ -1363,7 +1413,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>-0</YPos>
+																				<YPos>0</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
@@ -1803,6 +1853,31 @@
 										</Sound>
 									</ChildrenList>
 								</BlendContainer>
+								<Sound Name="player_movement_wallslide" ID="{77FFC32C-0B16-4A43-95A8-F2CD9B2DDA0D}" ShortID="951852584">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="player_movement_wallslide" ID="{01389116-BC01-489A-BE57-76469DC46B48}">
+											<Language>SFX</Language>
+											<AudioFile>player_movement_wallslide.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="694258383"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="player_movement_wallslide" ID="{01389116-BC01-489A-BE57-76469DC46B48}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 						<BlendContainer Name="player_jump" ID="{D18043B8-123E-4B3B-868F-DBF6F3BAE4B0}" ShortID="909320866">
@@ -4544,123 +4619,6 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<RandomSequenceContainer Name="player_feedback_slowmotion_triggered" ID="{7D06C5B9-3B32-484F-86FC-EFC827A8E5E3}" ShortID="777893459">
-							<PropertyList>
-								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
-								<Property Name="MaxSoundPerInstance" Type="int16">
-									<ValueList>
-										<Value>1</Value>
-									</ValueList>
-								</Property>
-								<Property Name="OverrideEffect" Type="bool" Value="True"/>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{E426A48D-8C97-4CEC-91A7-EC8910D09DB6}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="200"/>
-													<Property Name="Min" Type="Real64" Value="-200"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="UseMaxSoundPerInstance" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="player_feedback_slowmotion01" ID="{B4B220D0-EBAE-4615-BE5B-9A812D917890}" ShortID="8899786">
-									<PropertyList>
-										<Property Name="OverrideEffect" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-4</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="Effect0">
-											<Custom>
-												<Effect Name="Tremolo (Custom)" ID="{E1ED6827-6BBC-4442-8C14-B2080BCF7155}" ShortID="673969004" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
-													<PropertyList>
-														<Property Name="ModDepth" Type="Real32" Value="75"/>
-														<Property Name="ModFrequency" Type="Real32" Value="10"/>
-														<Property Name="ModSmoothing" Type="Real32" Value="100"/>
-														<Property Name="ModWaveform" Type="int32" Value="2"/>
-													</PropertyList>
-												</Effect>
-											</Custom>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="player_feedback_slowmotion" ID="{793C613C-5823-4F78-9226-A2D64008ED82}">
-											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0508196721311478"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="12.324"/>
-												<Property Name="FadeOutShape" Type="int16" Value="0"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="13.4926229508197"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Player_Feedback\player_feedback_slowmotion.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="897939972"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="player_feedback_slowmotion" ID="{793C613C-5823-4F78-9226-A2D64008ED82}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="player_feedback_slowmotion02" ID="{6FFCAC04-117D-4B99-B515-96B44345E21E}" ShortID="12038797">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-6</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="player_feedback_slowmotion02" ID="{049A56DC-3486-4361-A2D9-0F76711297B9}">
-											<Language>SFX</Language>
-											<AudioFile>player_feedback_slowmotion02.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="511933506"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="player_feedback_slowmotion02" ID="{049A56DC-3486-4361-A2D9-0F76711297B9}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
 						<Sound Name="player_autolock" ID="{DB2BC175-752F-4697-9AF1-DB8EDB22B797}" ShortID="55857999">
 							<PropertyList>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
@@ -5183,6 +5141,7 @@
 						<Sound Name="low_life_feedback" ID="{814A37DD-3A0E-43F3-BC8A-F77A2D59F512}" ShortID="287722694">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -5226,6 +5185,410 @@
 								<ActiveSource Name="low_life_feedback" ID="{1A0F571E-79BF-447D-8AAA-124C16B6BF23}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="player_shield_regen" ID="{C393DDB2-F61D-459C-B1E8-32F8F0391A6A}" ShortID="131267186">
+							<PropertyList>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>1710</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C4BFAFF1-7FEA-4CF9-A7CD-F7162D93E5D1}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-582"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="SpeakerPanning" Type="int16" Value="2"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SX_player_shield_regen" ID="{AAF8C52B-5A40-45DA-957F-F7A662D35694}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.126511627906977"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.605272873077203"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.41139121771038"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.18850574712644"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>SX_player_shield_regen.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="328453384"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{68A929A3-1F76-457B-BAA3-8B4529291705}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-9.06515580736544"/>
+										<Property Name="PanY" Type="Real64" Value="-94.8948948948949"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="SX_player_shield_regen" ID="{AAF8C52B-5A40-45DA-957F-F7A662D35694}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="player_dash_regen" ID="{ED34ADB2-3343-4200-BBA2-2AFB235064BA}" ShortID="505090057">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{55ADCF82-24C9-4824-ADB6-F9C2E55E7ED8}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="player_dash_regen" ID="{40EE34F1-5285-4049-B889-85810AD34F61}">
+									<Language>SFX</Language>
+									<AudioFile>Player_Feedback\player_dash_regen.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="438067580"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="player_dash_regen" ID="{40EE34F1-5285-4049-B889-85810AD34F61}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Folder Name="SlowMo" ID="{8028EB71-95B9-41E4-8E41-AADF11F526A7}" ShortID="328015840">
+							<ChildrenList>
+								<RandomSequenceContainer Name="player_feedback_slowmotion_triggered" ID="{7D06C5B9-3B32-484F-86FC-EFC827A8E5E3}" ShortID="777893459">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E426A48D-8C97-4CEC-91A7-EC8910D09DB6}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="200"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="player_feedback_slowmotion01" ID="{B4B220D0-EBAE-4615-BE5B-9A812D917890}" ShortID="8899786">
+											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="Effect0">
+													<Custom>
+														<Effect Name="Tremolo (Custom)" ID="{E1ED6827-6BBC-4442-8C14-B2080BCF7155}" ShortID="673969004" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+															<PropertyList>
+																<Property Name="ModDepth" Type="Real32" Value="75"/>
+																<Property Name="ModFrequency" Type="Real32" Value="10"/>
+																<Property Name="ModSmoothing" Type="Real32" Value="100"/>
+																<Property Name="ModWaveform" Type="int32" Value="2"/>
+															</PropertyList>
+														</Effect>
+													</Custom>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_feedback_slowmotion" ID="{793C613C-5823-4F78-9226-A2D64008ED82}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0508196721311478"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="12.324"/>
+														<Property Name="FadeOutShape" Type="int16" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="13.4926229508197"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Player_Feedback\player_feedback_slowmotion.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="897939972"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="player_feedback_slowmotion" ID="{793C613C-5823-4F78-9226-A2D64008ED82}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="player_feedback_slowmotion02" ID="{6FFCAC04-117D-4B99-B515-96B44345E21E}" ShortID="12038797">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_feedback_slowmotion02" ID="{049A56DC-3486-4361-A2D9-0F76711297B9}">
+													<Language>SFX</Language>
+													<AudioFile>player_feedback_slowmotion02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="511933506"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="player_feedback_slowmotion02" ID="{049A56DC-3486-4361-A2D9-0F76711297B9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<BlendContainer Name="slowmotion_trigger" ID="{9FAEC910-822B-45AE-8D62-24ACBA50A218}" ShortID="727230748">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="slowmo_random_feedback" ID="{A5400A1E-A053-4830-9D3A-35BFFF220752}" ShortID="335878768">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>50</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="slowmo_random_01" ID="{4154428B-44BA-4B13-A2A7-807E3094C58B}" ShortID="584259815">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="slowmo_random_01" ID="{64D83E98-B639-4427-8617-728B0C0A2490}">
+															<Language>SFX</Language>
+															<AudioFile>slowmo_random_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1020341242"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="slowmo_random_01" ID="{64D83E98-B639-4427-8617-728B0C0A2490}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="slowmo_random_02" ID="{E6430491-2CCA-4491-ADB0-154AA54C66C3}" ShortID="45128061">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="slowmo_random_02" ID="{00EB458B-8C65-4C2B-9DC8-B6653D810AB4}">
+															<Language>SFX</Language>
+															<AudioFile>slowmo_random_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="336499936"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="slowmo_random_02" ID="{00EB458B-8C65-4C2B-9DC8-B6653D810AB4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="slowmo_random_03" ID="{2CC7029A-4503-45A9-ABD3-B05739D6CD7A}" ShortID="743155882">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="slowmo_random_03" ID="{4D15A8DA-79F7-45DA-974E-2885506318FD}">
+															<Language>SFX</Language>
+															<AudioFile>slowmo_random_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="330224296"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="slowmo_random_03" ID="{4D15A8DA-79F7-45DA-974E-2885506318FD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="slowmo_random_04" ID="{A755B1BD-DD00-4781-B2A4-C7241E9A6E85}" ShortID="424789317">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="slowmo_random_04" ID="{A0A970B0-1870-4465-B0A1-A5CF010E2734}">
+															<Language>SFX</Language>
+															<AudioFile>slowmo_random_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="81565075"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="slowmo_random_04" ID="{A0A970B0-1870-4465-B0A1-A5CF010E2734}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<Sound Name="slowmo_tictac" ID="{534E0158-4A3D-4972-8F9E-4936533F57A1}" ShortID="529463380">
+											<PropertyList>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="slowmo_tictac" ID="{A3F95072-EC4F-4117-A6D9-E189F24EC6A5}">
+													<Language>SFX</Language>
+													<AudioFile>slowmo_tictac.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="731755744"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="slowmo_tictac" ID="{A3F95072-EC4F-4117-A6D9-E189F24EC6A5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
