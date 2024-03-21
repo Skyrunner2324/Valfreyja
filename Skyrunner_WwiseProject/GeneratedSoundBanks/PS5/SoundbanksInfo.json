@@ -112,6 +112,51 @@
     ]
    },
    {
+    "Id": "198069585",
+    "Type": "Bus",
+    "GUID": "{58AA054E-4425-4C68-811E-D8F0012467E9}",
+    "Language": "SFX",
+    "Hash": "{354C9C2B-B2C7-3B65-C6FE-C689127A3A1A}",
+    "ObjectPath": "REV_SmallRoom_01",
+    "ShortName": "REV_SmallRoom_01",
+    "Path": "Bus/REV_SmallRoom_01.bnk",
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "585087015",
+       "Name": "Matrix Reverb (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\REV_SmallRoom_01\\Matrix Reverb (Custom)",
+       "GUID": "{88235782-51D1-4E5C-84CD-64C254857225}",
+       "LibName": "Wwise Matrix Reverb",
+       "LibId": "7536643"
+      }
+     ]
+    },
+    "AuxBusses": [
+     {
+      "Id": "198069585",
+      "Name": "REV_SmallRoom_01",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\REV_SmallRoom_01",
+      "GUID": "{58AA054E-4425-4C68-811E-D8F0012467E9}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "585087015"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "2588398148",
+        "Name": "REV_MUSIC",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC",
+        "GUID": "{51D0B729-C328-4E6F-B258-E07D3F07A2FE}"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "216067002",
     "Type": "Event",
     "GUID": "{FC9252BB-4746-4A62-AB71-565BBB37F6D2}",
@@ -701,7 +746,7 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{A5715E9A-E65F-C162-62D2-711E8A68467F}",
+    "Hash": "{7DE7B9DA-F483-95D2-8022-0A53409F6B15}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
@@ -740,11 +785,19 @@
       "Location": "Loose",
       "ShortName": "Hoverboots\\hoverboots_on_rail_loop.wav",
       "Path": "Media/1056072145.wem",
-      "CachePath": "SFX/Hoverboots/hoverboots_on_rail_loop_154F2566.wem"
+      "CachePath": "SFX/Hoverboots/hoverboots_on_rail_loop_35E62677.wem"
      }
     ],
     "Plugins": {
      "Custom": [
+      {
+       "Id": "174977445",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots and Wind\\Hoverboots_Other\\player_movement_aerial\\Parametric EQ (Custom)",
+       "GUID": "{E39A6796-AD9D-4361-AFBC-512D0CBDE7C8}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
       {
        "Id": "768480562",
        "Name": "Parametric EQ (Custom)",
@@ -752,6 +805,14 @@
        "GUID": "{795F1578-DFEF-4A0F-995B-DC9BEE878FD0}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
+      },
+      {
+       "Id": "942906617",
+       "Name": "Tremolo (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots and Wind\\Hoverboots_Other\\player_movement_aerial\\Tremolo (Custom)",
+       "GUID": "{B0E7CB90-1F41-4ADD-8AE2-D3B20B8709CA}",
+       "LibName": "Wwise Tremolo",
+       "LibId": "8585219"
       }
      ],
      "ShareSets": [
@@ -789,7 +850,13 @@
       "PluginRefs": {
        "Custom": [
         {
+         "Id": "174977445"
+        },
+        {
          "Id": "768480562"
+        },
+        {
+         "Id": "942906617"
         }
        ],
        "ShareSets": [
@@ -870,7 +937,7 @@
     "Type": "Event",
     "GUID": "{095480AE-B62A-4DB8-80EC-3AF54A959CDA}",
     "Language": "SFX",
-    "Hash": "{6AD77E90-FD70-3DF7-3D74-55470A174E29}",
+    "Hash": "{82292EE1-EF4A-E9FB-E571-A0B59146F1E0}",
     "ObjectPath": "SX_player_death_notifier",
     "ShortName": "SX_player_death_notifier",
     "Path": "Event/SX_player_death_notifier.bnk",
@@ -979,6 +1046,132 @@
         }
        ]
       }
+     }
+    ]
+   },
+   {
+    "Id": "691483865",
+    "Type": "Bus",
+    "GUID": "{53A6AA4A-9B88-40AE-B087-0CA8639947CE}",
+    "Language": "SFX",
+    "Hash": "{9A1E2D73-FC10-5B4B-8E99-FD56805DE3FB}",
+    "ObjectPath": "REV_LargeRoom_01",
+    "ShortName": "REV_LargeRoom_01",
+    "Path": "Bus/REV_LargeRoom_01.bnk",
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "332815239",
+       "Name": "RoomVerb (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\REV_LargeRoom_01\\RoomVerb (Custom)",
+       "GUID": "{29915F24-228E-4788-92BC-C759095F9F4E}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "854493452",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\REV_LargeRoom_01\\Parametric EQ (Custom)",
+       "GUID": "{450F407D-271F-4103-B84B-90F5ED24B203}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
+    "AuxBusses": [
+     {
+      "Id": "691483865",
+      "Name": "REV_LargeRoom_01",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\REV_LargeRoom_01",
+      "GUID": "{53A6AA4A-9B88-40AE-B087-0CA8639947CE}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "332815239"
+        },
+        {
+         "Id": "854493452"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "2588398148",
+        "Name": "REV_MUSIC",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC",
+        "GUID": "{51D0B729-C328-4E6F-B258-E07D3F07A2FE}"
+       }
+      ]
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "1419563690",
+      "Name": "Music_Selector",
+      "ObjectPath": "\\States\\Default Work Unit\\Music\\Music_Selector",
+      "GUID": "{9E363DC4-1CA9-4AAF-BFCB-E45F336CC2CE}",
+      "States": [
+       {
+        "Id": "348963605",
+        "Name": "Reverb",
+        "ObjectPath": "\\States\\Default Work Unit\\Music\\Music_Selector\\Reverb",
+        "GUID": "{1A0075FD-1C91-4DCD-B4AC-2029A2632B3A}"
+       },
+       {
+        "Id": "634183254",
+        "Name": "Reveal",
+        "ObjectPath": "\\States\\Default Work Unit\\Music\\Music_Selector\\Reveal",
+        "GUID": "{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Music\\Music_Selector\\None",
+        "GUID": "{570EE5A7-8CDA-4FE2-BE60-BD0C6F00B022}"
+       },
+       {
+        "Id": "2149848048",
+        "Name": "Buildup",
+        "ObjectPath": "\\States\\Default Work Unit\\Music\\Music_Selector\\Buildup",
+        "GUID": "{39C32C1D-49CE-4283-8A04-C9C272E282DE}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\States\\Default Work Unit\\Music\\Music_Selector\\Menu",
+        "GUID": "{DB91568E-4183-4FE0-A178-9B6516F9B6BD}"
+       },
+       {
+        "Id": "3037000007",
+        "Name": "Tuto",
+        "ObjectPath": "\\States\\Default Work Unit\\Music\\Music_Selector\\Tuto",
+        "GUID": "{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"
+       },
+       {
+        "Id": "3352420404",
+        "Name": "ArenaPhase1",
+        "ObjectPath": "\\States\\Default Work Unit\\Music\\Music_Selector\\ArenaPhase1",
+        "GUID": "{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"
+       },
+       {
+        "Id": "3352420407",
+        "Name": "ArenaPhase2",
+        "ObjectPath": "\\States\\Default Work Unit\\Music\\Music_Selector\\ArenaPhase2",
+        "GUID": "{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"
+       },
+       {
+        "Id": "3814499265",
+        "Name": "Explo",
+        "ObjectPath": "\\States\\Default Work Unit\\Music\\Music_Selector\\Explo",
+        "GUID": "{1FE92F27-401B-44A3-BFC0-65F192492AAB}"
+       },
+       {
+        "Id": "4033983175",
+        "Name": "Breakcore",
+        "ObjectPath": "\\States\\Default Work Unit\\Music\\Music_Selector\\Breakcore",
+        "GUID": "{16E5D430-D692-45B9-B4C9-B90A05172B0B}"
+       }
+      ]
      }
     ]
    },
@@ -1142,24 +1335,6 @@
         "Id": "991022554"
        }
       ]
-     }
-    ]
-   },
-   {
-    "Id": "980603520",
-    "Type": "Bus",
-    "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}",
-    "Language": "SFX",
-    "Hash": "{DCA606BF-07D3-25EA-C812-C66D053E74E5}",
-    "ObjectPath": "REV",
-    "ShortName": "REV",
-    "Path": "Bus/REV.bnk",
-    "AuxBusses": [
-     {
-      "Id": "980603520",
-      "Name": "REV",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
-      "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
      }
     ]
    },
@@ -1857,7 +2032,7 @@
        {
         "Id": "4125012149",
         "Name": "REV_SmallRoom",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_SmallRoom",
         "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}"
        }
       ]
@@ -1968,7 +2143,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{E7E3AEBA-0735-85D9-B4F5-3F8404CB604F}",
+    "Hash": "{A52FCE2F-1C54-E086-12CD-35746EE87B8F}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -1977,7 +2152,7 @@
       {
        "Id": "21631550",
        "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom\\Parametric EQ (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_LargeRoom\\Parametric EQ (Custom)",
        "GUID": "{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
@@ -1985,8 +2160,16 @@
       {
        "Id": "33444476",
        "Name": "RoomVerb (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom\\RoomVerb (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_LargeRoom\\RoomVerb (Custom)",
        "GUID": "{140088B9-275E-409D-AC97-CA7FF6C8DCF0}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "332815239",
+       "Name": "RoomVerb (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\REV_LargeRoom_01\\RoomVerb (Custom)",
+       "GUID": "{29915F24-228E-4788-92BC-C759095F9F4E}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
       },
@@ -2001,10 +2184,26 @@
       {
        "Id": "544066397",
        "Name": "Matrix Reverb (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom\\Matrix Reverb (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_SmallRoom\\Matrix Reverb (Custom)",
        "GUID": "{46B2EC8C-FD61-4366-9674-9524E30CFFA7}",
        "LibName": "Wwise Matrix Reverb",
        "LibId": "7536643"
+      },
+      {
+       "Id": "585087015",
+       "Name": "Matrix Reverb (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\REV_SmallRoom_01\\Matrix Reverb (Custom)",
+       "GUID": "{88235782-51D1-4E5C-84CD-64C254857225}",
+       "LibName": "Wwise Matrix Reverb",
+       "LibId": "7536643"
+      },
+      {
+       "Id": "854493452",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\REV_LargeRoom_01\\Parametric EQ (Custom)",
+       "GUID": "{450F407D-271F-4103-B84B-90F5ED24B203}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
       },
       {
        "Id": "945211497",
@@ -2103,7 +2302,7 @@
      {
       "Id": "1698665495",
       "Name": "UI Master",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\UI Master",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\UI Master",
       "GUID": "{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}"
      },
      {
@@ -2212,15 +2411,60 @@
     ],
     "AuxBusses": [
      {
-      "Id": "980603520",
-      "Name": "REV",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
+      "Id": "198069585",
+      "Name": "REV_SmallRoom_01",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\REV_SmallRoom_01",
+      "GUID": "{58AA054E-4425-4C68-811E-D8F0012467E9}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "585087015"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "2588398148",
+        "Name": "REV_MUSIC",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC",
+        "GUID": "{51D0B729-C328-4E6F-B258-E07D3F07A2FE}"
+       }
+      ]
+     },
+     {
+      "Id": "691483865",
+      "Name": "REV_LargeRoom_01",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\REV_LargeRoom_01",
+      "GUID": "{53A6AA4A-9B88-40AE-B087-0CA8639947CE}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "332815239"
+        },
+        {
+         "Id": "854493452"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "2588398148",
+        "Name": "REV_MUSIC",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC",
+        "GUID": "{51D0B729-C328-4E6F-B258-E07D3F07A2FE}"
+       }
+      ]
+     },
+     {
+      "Id": "1377950732",
+      "Name": "REV_SFX",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX",
       "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
      },
      {
       "Id": "1641293181",
       "Name": "REV_LargeRoom",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_LargeRoom",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
       "PluginRefs": {
        "Custom": [
@@ -2234,17 +2478,38 @@
       },
       "AuxBusRefs": [
        {
-        "Id": "980603520",
-        "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
+        "Id": "1377950732",
+        "Name": "REV_SFX",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
+       }
+      ]
+     },
+     {
+      "Id": "1713108470",
+      "Name": "REV_Cave_01",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\REV_Cave_01",
+      "GUID": "{7AAF8EC4-3F60-48A4-945E-D2EC526E7530}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "702543456"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "2588398148",
+        "Name": "REV_MUSIC",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC",
+        "GUID": "{51D0B729-C328-4E6F-B258-E07D3F07A2FE}"
        }
       ]
      },
      {
       "Id": "1752382405",
       "Name": "Early_Reflections",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\Early_Reflections",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\Early_Reflections",
       "GUID": "{DEFD7C69-35F1-4735-B101-17C49C0196D3}",
       "PluginRefs": {
        "ShareSets": [
@@ -2255,9 +2520,9 @@
       },
       "AuxBusRefs": [
        {
-        "Id": "980603520",
-        "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
+        "Id": "1377950732",
+        "Name": "REV_SFX",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
        }
       ]
@@ -2265,7 +2530,7 @@
      {
       "Id": "2172616000",
       "Name": "REV_Cave",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_Cave",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Cave",
       "GUID": "{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}",
       "PluginRefs": {
        "ShareSets": [
@@ -2276,17 +2541,44 @@
       },
       "AuxBusRefs": [
        {
-        "Id": "980603520",
-        "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
+        "Id": "1377950732",
+        "Name": "REV_SFX",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
+       }
+      ]
+     },
+     {
+      "Id": "2588398148",
+      "Name": "REV_MUSIC",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC",
+      "GUID": "{51D0B729-C328-4E6F-B258-E07D3F07A2FE}"
+     },
+     {
+      "Id": "2883409121",
+      "Name": "Early_Reflections_01",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\Early_Reflections_01",
+      "GUID": "{21B58C11-31DA-4F32-B9DD-07CA369F362D}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1842579981"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "2588398148",
+        "Name": "REV_MUSIC",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC",
+        "GUID": "{51D0B729-C328-4E6F-B258-E07D3F07A2FE}"
        }
       ]
      },
      {
       "Id": "4125012149",
       "Name": "REV_SmallRoom",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_SmallRoom",
       "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}",
       "PluginRefs": {
        "Custom": [
@@ -2297,9 +2589,9 @@
       },
       "AuxBusRefs": [
        {
-        "Id": "980603520",
-        "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
+        "Id": "1377950732",
+        "Name": "REV_SFX",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
        }
       ]
@@ -3059,6 +3351,24 @@
     ]
    },
    {
+    "Id": "1377950732",
+    "Type": "Bus",
+    "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}",
+    "Language": "SFX",
+    "Hash": "{B1CE2CAC-5CB3-3DB9-7D2E-839B7F5CE50D}",
+    "ObjectPath": "REV_SFX",
+    "ShortName": "REV_SFX",
+    "Path": "Bus/REV_SFX.bnk",
+    "AuxBusses": [
+     {
+      "Id": "1377950732",
+      "Name": "REV_SFX",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX",
+      "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
+     }
+    ]
+   },
+   {
     "Id": "1381971542",
     "Type": "Event",
     "GUID": "{3E2862BA-8803-49BF-BA95-23B08FD4AD17}",
@@ -3225,7 +3535,7 @@
     "Type": "Bus",
     "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
     "Language": "SFX",
-    "Hash": "{4E8CCA5A-6A8E-F3A0-C4B3-27EFDFB2B7A2}",
+    "Hash": "{0C131201-20F3-2D2C-DEAC-6B7FD8085F94}",
     "ObjectPath": "REV_LargeRoom",
     "ShortName": "REV_LargeRoom",
     "Path": "Bus/REV_LargeRoom.bnk",
@@ -3234,7 +3544,7 @@
       {
        "Id": "21631550",
        "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom\\Parametric EQ (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_LargeRoom\\Parametric EQ (Custom)",
        "GUID": "{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
@@ -3242,7 +3552,7 @@
       {
        "Id": "33444476",
        "Name": "RoomVerb (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom\\RoomVerb (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_LargeRoom\\RoomVerb (Custom)",
        "GUID": "{140088B9-275E-409D-AC97-CA7FF6C8DCF0}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
@@ -3253,7 +3563,7 @@
      {
       "Id": "1641293181",
       "Name": "REV_LargeRoom",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_LargeRoom",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
       "PluginRefs": {
        "Custom": [
@@ -3267,9 +3577,9 @@
       },
       "AuxBusRefs": [
        {
-        "Id": "980603520",
-        "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
+        "Id": "1377950732",
+        "Name": "REV_SFX",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
        }
       ]
@@ -3384,11 +3694,56 @@
     ]
    },
    {
+    "Id": "1713108470",
+    "Type": "Bus",
+    "GUID": "{7AAF8EC4-3F60-48A4-945E-D2EC526E7530}",
+    "Language": "SFX",
+    "Hash": "{80684AC2-A106-979B-B234-41FD324F5C54}",
+    "ObjectPath": "REV_Cave_01",
+    "ShortName": "REV_Cave_01",
+    "Path": "Bus/REV_Cave_01.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "702543456",
+       "Name": "Tunnel1",
+       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Tunnel1",
+       "GUID": "{CC44B890-9865-4157-965F-86FED27BC4C6}",
+       "LibName": "Wwise Matrix Reverb",
+       "LibId": "7536643"
+      }
+     ]
+    },
+    "AuxBusses": [
+     {
+      "Id": "1713108470",
+      "Name": "REV_Cave_01",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\REV_Cave_01",
+      "GUID": "{7AAF8EC4-3F60-48A4-945E-D2EC526E7530}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "702543456"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "2588398148",
+        "Name": "REV_MUSIC",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC",
+        "GUID": "{51D0B729-C328-4E6F-B258-E07D3F07A2FE}"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "1752382405",
     "Type": "Bus",
     "GUID": "{DEFD7C69-35F1-4735-B101-17C49C0196D3}",
     "Language": "SFX",
-    "Hash": "{A12D2F76-93E8-CCB4-66E4-4690545D6660}",
+    "Hash": "{46C28983-A173-F7F9-6789-D6087926FA40}",
     "ObjectPath": "Early_Reflections",
     "ShortName": "Early_Reflections",
     "Path": "Bus/Early_Reflections.bnk",
@@ -3408,7 +3763,7 @@
      {
       "Id": "1752382405",
       "Name": "Early_Reflections",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\Early_Reflections",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\Early_Reflections",
       "GUID": "{DEFD7C69-35F1-4735-B101-17C49C0196D3}",
       "PluginRefs": {
        "ShareSets": [
@@ -3419,9 +3774,9 @@
       },
       "AuxBusRefs": [
        {
-        "Id": "980603520",
-        "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
+        "Id": "1377950732",
+        "Name": "REV_SFX",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
        }
       ]
@@ -3517,7 +3872,7 @@
     "Type": "Event",
     "GUID": "{021EA252-4F76-49F3-B5CC-94B86C367796}",
     "Language": "SFX",
-    "Hash": "{58897126-D7F4-F834-B04D-90463F0CEC3E}",
+    "Hash": "{C7C35ADD-A4C8-D655-0404-EBD9EE249ECF}",
     "ObjectPath": "UI_move_values",
     "ShortName": "UI_move_values",
     "Path": "Event/UI_move_values.bnk",
@@ -3812,7 +4167,7 @@
       "Location": "Loose",
       "ShortName": "Enemies\\Kill_Humans_Vox.wav",
       "Path": "Media/64017903.wem",
-      "CachePath": "SFX/Enemies/Kill_Humans_Vox_34470901.wem"
+      "CachePath": "SFX/Enemies/Kill_Humans_Vox_45AEDA12.wem"
      },
      {
       "Id": "76110187",
@@ -3961,7 +4316,7 @@
     "Type": "Bus",
     "GUID": "{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}",
     "Language": "SFX",
-    "Hash": "{9169229D-517E-96FD-B843-58898A5BB68E}",
+    "Hash": "{62E1468B-FDDC-A20F-71B3-821D4FA353E6}",
     "ObjectPath": "REV_Cave",
     "ShortName": "REV_Cave",
     "Path": "Bus/REV_Cave.bnk",
@@ -3981,7 +4336,7 @@
      {
       "Id": "2172616000",
       "Name": "REV_Cave",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_Cave",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Cave",
       "GUID": "{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}",
       "PluginRefs": {
        "ShareSets": [
@@ -3992,9 +4347,9 @@
       },
       "AuxBusRefs": [
        {
-        "Id": "980603520",
-        "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
+        "Id": "1377950732",
+        "Name": "REV_SFX",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
        }
       ]
@@ -4142,6 +4497,24 @@
     ]
    },
    {
+    "Id": "2588398148",
+    "Type": "Bus",
+    "GUID": "{51D0B729-C328-4E6F-B258-E07D3F07A2FE}",
+    "Language": "SFX",
+    "Hash": "{DB682DBA-52DD-6FB9-2E5D-DF0C706647CE}",
+    "ObjectPath": "REV_MUSIC",
+    "ShortName": "REV_MUSIC",
+    "Path": "Bus/REV_MUSIC.bnk",
+    "AuxBusses": [
+     {
+      "Id": "2588398148",
+      "Name": "REV_MUSIC",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC",
+      "GUID": "{51D0B729-C328-4E6F-B258-E07D3F07A2FE}"
+     }
+    ]
+   },
+   {
     "Id": "2640457287",
     "Type": "Event",
     "GUID": "{E6BD66A9-980B-41F5-8391-C0CDA93F3275}",
@@ -4183,7 +4556,7 @@
     "Type": "Event",
     "GUID": "{528674B7-E690-4AD6-8217-32726F835B11}",
     "Language": "SFX",
-    "Hash": "{E8D9339F-E2EA-37AB-F16A-0411AC40B13B}",
+    "Hash": "{48F58A0C-C650-6C2F-D3A2-0AD1D0438B9F}",
     "ObjectPath": "UI_move",
     "ShortName": "UI_move",
     "Path": "Event/UI_move.bnk",
@@ -4253,6 +4626,51 @@
     ]
    },
    {
+    "Id": "2883409121",
+    "Type": "Bus",
+    "GUID": "{21B58C11-31DA-4F32-B9DD-07CA369F362D}",
+    "Language": "SFX",
+    "Hash": "{E410E679-0D48-BB82-EB0B-B0B160028C18}",
+    "ObjectPath": "Early_Reflections_01",
+    "ShortName": "Early_Reflections_01",
+    "Path": "Bus/Early_Reflections_01.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1842579981",
+       "Name": "Reflect_Simplified",
+       "ObjectPath": "\\Effects\\Factory Reflect\\Reflect_Simplified",
+       "GUID": "{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}",
+       "LibName": "Wwise Reflect",
+       "LibId": "11206659"
+      }
+     ]
+    },
+    "AuxBusses": [
+     {
+      "Id": "2883409121",
+      "Name": "Early_Reflections_01",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\Early_Reflections_01",
+      "GUID": "{21B58C11-31DA-4F32-B9DD-07CA369F362D}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1842579981"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "2588398148",
+        "Name": "REV_MUSIC",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC",
+        "GUID": "{51D0B729-C328-4E6F-B258-E07D3F07A2FE}"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "3390387889",
     "Type": "Event",
     "GUID": "{6D13E3BD-F5FB-4B8B-8184-DB05606BBF7C}",
@@ -4278,7 +4696,7 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{4721C2B5-45E7-14F7-306A-CF70E5396C1D}",
+    "Hash": "{6CCA8E7C-8EBD-24A9-B9EE-E0C525595873}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
@@ -4628,7 +5046,7 @@
        {
         "Id": "1641293181",
         "Name": "REV_LargeRoom",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_LargeRoom",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_LargeRoom",
         "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"
        }
       ],
@@ -4752,6 +5170,9 @@
             "MediaRefs": [
              {
               "Id": "222995635"
+             },
+             {
+              "Id": "881316664"
              }
             ]
            }
@@ -4784,6 +5205,9 @@
              },
              {
               "Id": "297104328"
+             },
+             {
+              "Id": "881316664"
              }
             ]
            }
@@ -5536,7 +5960,7 @@
     "Type": "Bus",
     "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}",
     "Language": "SFX",
-    "Hash": "{0EF0A0A1-7931-538A-8307-FCA57BB099F9}",
+    "Hash": "{D2DC5BED-7723-1A75-E021-5D3B473EFEB3}",
     "ObjectPath": "REV_SmallRoom",
     "ShortName": "REV_SmallRoom",
     "Path": "Bus/REV_SmallRoom.bnk",
@@ -5545,7 +5969,7 @@
       {
        "Id": "544066397",
        "Name": "Matrix Reverb (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom\\Matrix Reverb (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_SmallRoom\\Matrix Reverb (Custom)",
        "GUID": "{46B2EC8C-FD61-4366-9674-9524E30CFFA7}",
        "LibName": "Wwise Matrix Reverb",
        "LibId": "7536643"
@@ -5556,7 +5980,7 @@
      {
       "Id": "4125012149",
       "Name": "REV_SmallRoom",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV\\REV_SmallRoom",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_SmallRoom",
       "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}",
       "PluginRefs": {
        "Custom": [
@@ -5567,9 +5991,9 @@
       },
       "AuxBusRefs": [
        {
-        "Id": "980603520",
-        "Name": "REV",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\REV",
+        "Id": "1377950732",
+        "Name": "REV_SFX",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX",
         "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}"
        }
       ]
@@ -5658,6 +6082,6 @@
     ]
    }
   ],
-  "FileHash": "{3175E3E9-2ECA-1E8E-4520-7E6242C4A00F}"
+  "FileHash": "{5D6FDAA7-6C05-FE49-368F-A2D1F4A4F64A}"
  }
 }

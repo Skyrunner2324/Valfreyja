@@ -25,6 +25,151 @@
 									</ValueList>
 								</Property>
 							</PropertyList>
+							<ChildrenList>
+								<AuxBus Name="REV_MUSIC" ID="{51D0B729-C328-4E6F-B258-E07D3F07A2FE}">
+									<PropertyList>
+										<Property Name="BusChannelConfig" Type="int32">
+											<ValueList>
+												<Value>3584</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Color" Type="int16" Value="15"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<AuxBus Name="REV_LargeRoom_01" ID="{53A6AA4A-9B88-40AE-B087-0CA8639947CE}">
+											<ReferenceList>
+												<Reference Name="Effect0">
+													<Custom>
+														<Effect Name="RoomVerb (Custom)" ID="{29915F24-228E-4788-92BC-C759095F9F4E}" ShortID="332815239" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+															<PropertyList>
+																<Property Name="DecayTime" Type="Real32" Value="4.4"/>
+																<Property Name="DryLevel" Type="Real32" Value="-26.3"/>
+																<Property Name="ERPattern" Type="int32" Value="5"/>
+																<Property Name="ReverbLevel" Type="Real32" Value="-5"/>
+																<Property Name="RoomSize" Type="Real32" Value="100"/>
+															</PropertyList>
+														</Effect>
+													</Custom>
+												</Reference>
+												<Reference Name="Effect1">
+													<Custom>
+														<Effect Name="Parametric EQ (Custom)" ID="{450F407D-271F-4103-B84B-90F5ED24B203}" ShortID="854493452" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+															<PropertyList>
+																<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+																<Property Name="FrequencyBand1" Type="Real32" Value="1000"/>
+																<Property Name="OnOffBand2" Type="bool" Value="False"/>
+																<Property Name="OnOffBand3" Type="bool" Value="False"/>
+															</PropertyList>
+														</Effect>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="Music_Selector" ID="{9E363DC4-1CA9-4AAF-BFCB-E45F336CC2CE}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="Buildup" ID="{39C32C1D-49CE-4283-8A04-C9C272E282DE}"/>
+														<CustomState Name="" ID="{2269AFE1-FF8A-4096-9161-2B006C2CFAA9}" ShortID="723110153">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Explo" ID="{1FE92F27-401B-44A3-BFC0-65F192492AAB}"/>
+														<CustomState Name="" ID="{5C8EDDDC-99DF-44F5-9E09-96B6B0BE61DF}" ShortID="529701964">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="ArenaPhase2" ID="{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"/>
+														<CustomState Name="" ID="{3BB9FE55-6DC7-4C15-A9D9-694833E6DEB2}" ShortID="833820722">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Breakcore" ID="{16E5D430-D692-45B9-B4C9-B90A05172B0B}"/>
+														<CustomState Name="" ID="{7FF1A247-7645-4B9C-970B-4DAEB32FB88E}" ShortID="543384654"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Reveal" ID="{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"/>
+														<CustomState Name="" ID="{5D2AA52F-6427-47E5-965F-FAC68F27BBDB}" ShortID="275691392">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="ArenaPhase1" ID="{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"/>
+														<CustomState Name="" ID="{AEC2A58D-DABC-4088-A103-49BAFE7A9527}" ShortID="674668091">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Tuto" ID="{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"/>
+														<CustomState Name="" ID="{0A71FB3A-47C0-468C-834D-A2DD1A4F111B}" ShortID="57588839">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Reverb" ID="{1A0075FD-1C91-4DCD-B4AC-2029A2632B3A}"/>
+														<CustomState Name="" ID="{79318968-E8F6-4C6A-A464-8440D28211E6}" ShortID="151473645"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Menu" ID="{DB91568E-4183-4FE0-A178-9B6516F9B6BD}"/>
+														<CustomState Name="" ID="{D2AA28ED-A887-42E4-B14B-79A77B091EEF}" ShortID="211200506">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+										</AuxBus>
+										<AuxBus Name="REV_SmallRoom_01" ID="{58AA054E-4425-4C68-811E-D8F0012467E9}">
+											<ReferenceList>
+												<Reference Name="Effect0">
+													<Custom>
+														<Effect Name="Matrix Reverb (Custom)" ID="{88235782-51D1-4E5C-84CD-64C254857225}" ShortID="585087015" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3"/>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+										</AuxBus>
+										<AuxBus Name="REV_Cave_01" ID="{7AAF8EC4-3F60-48A4-945E-D2EC526E7530}">
+											<ReferenceList>
+												<Reference Name="Effect0" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+													<ObjectRef Name="Tunnel1" ID="{CC44B890-9865-4157-965F-86FED27BC4C6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+												</Reference>
+											</ReferenceList>
+										</AuxBus>
+										<AuxBus Name="Early_Reflections_01" ID="{21B58C11-31DA-4F32-B9DD-07CA369F362D}">
+											<PropertyList>
+												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+												<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Effect0" PluginName="Wwise Reflect" CompanyID="0" PluginID="171" PluginType="3">
+													<ObjectRef Name="Reflect_Simplified" ID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" WorkUnitID="{923039AD-F8B4-46D4-BDA7-CB5A6EE595E0}"/>
+												</Reference>
+											</ReferenceList>
+										</AuxBus>
+									</ChildrenList>
+								</AuxBus>
+							</ChildrenList>
 							<StateInfo>
 								<StatePropertyList>
 									<Property Name="BusVolume"/>
@@ -91,17 +236,19 @@
 																<PointList>
 																	<Point>
 																		<XPos>-1</XPos>
-																		<YPos>10</YPos>
+																		<YPos>70</YPos>
 																		<Flags>5</Flags>
+																		<SegmentShape>Log1</SegmentShape>
 																	</Point>
 																	<Point>
 																		<XPos>0</XPos>
 																		<YPos>0</YPos>
 																		<Flags>0</Flags>
+																		<SegmentShape>Exp2</SegmentShape>
 																	</Point>
 																	<Point>
 																		<XPos>1</XPos>
-																		<YPos>11</YPos>
+																		<YPos>69</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -276,17 +423,6 @@
 								</Property>
 							</PropertyList>
 							<ChildrenList>
-								<Bus Name="UI Master" ID="{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}">
-									<PropertyList>
-										<Property Name="BusChannelConfig" Type="int32">
-											<ValueList>
-												<Value>3840</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Color" Type="int16" Value="18"/>
-										<Property Name="OverrideColor" Type="bool" Value="True"/>
-									</PropertyList>
-								</Bus>
 								<Bus Name="3D OBJ Master" ID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
@@ -1078,6 +1214,149 @@
 										</CustomStateList>
 									</StateInfo>
 								</Bus>
+								<AuxBus Name="REV_SFX" ID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}">
+									<PropertyList>
+										<Property Name="BusChannelConfig" Type="int32">
+											<ValueList>
+												<Value>3584</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Color" Type="int16" Value="15"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<AuxBus Name="REV_LargeRoom" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
+											<ReferenceList>
+												<Reference Name="Effect0">
+													<Custom>
+														<Effect Name="RoomVerb (Custom)" ID="{140088B9-275E-409D-AC97-CA7FF6C8DCF0}" ShortID="33444476" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+															<PropertyList>
+																<Property Name="DecayTime" Type="Real32" Value="4.4"/>
+																<Property Name="DryLevel" Type="Real32" Value="-26.3"/>
+																<Property Name="ERPattern" Type="int32" Value="5"/>
+																<Property Name="ReverbLevel" Type="Real32" Value="-5"/>
+																<Property Name="RoomSize" Type="Real32" Value="100"/>
+															</PropertyList>
+														</Effect>
+													</Custom>
+												</Reference>
+												<Reference Name="Effect1">
+													<Custom>
+														<Effect Name="Parametric EQ (Custom)" ID="{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}" ShortID="21631550" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+															<PropertyList>
+																<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+																<Property Name="FrequencyBand1" Type="Real32" Value="1000"/>
+																<Property Name="OnOffBand2" Type="bool" Value="False"/>
+																<Property Name="OnOffBand3" Type="bool" Value="False"/>
+															</PropertyList>
+														</Effect>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="Music_Selector" ID="{9E363DC4-1CA9-4AAF-BFCB-E45F336CC2CE}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="Buildup" ID="{39C32C1D-49CE-4283-8A04-C9C272E282DE}"/>
+														<CustomState Name="" ID="{F33AA82F-4529-45B7-A45C-0F87C6CD0556}" ShortID="3148699">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Explo" ID="{1FE92F27-401B-44A3-BFC0-65F192492AAB}"/>
+														<CustomState Name="" ID="{F1122628-8295-4C00-AE32-8F92812156EC}" ShortID="500240427">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="ArenaPhase2" ID="{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"/>
+														<CustomState Name="" ID="{78EA1313-CF20-452B-B368-4E50F9937AB7}" ShortID="1059640641">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Breakcore" ID="{16E5D430-D692-45B9-B4C9-B90A05172B0B}"/>
+														<CustomState Name="" ID="{86CE8BA8-EC46-4D3C-9ECC-CC318FA6B1EF}" ShortID="406677942"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Reveal" ID="{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"/>
+														<CustomState Name="" ID="{5180C457-62E7-4F14-AAA8-2B85F117D8F9}" ShortID="1044106812">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="ArenaPhase1" ID="{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"/>
+														<CustomState Name="" ID="{36008921-A34A-4856-B39E-DBCA4D46C98F}" ShortID="516019468">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Tuto" ID="{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"/>
+														<CustomState Name="" ID="{A311E189-4A24-4179-AB7B-F1CCF03F14CD}" ShortID="401041643">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Reverb" ID="{1A0075FD-1C91-4DCD-B4AC-2029A2632B3A}"/>
+														<CustomState Name="" ID="{991D7324-69D0-4187-9498-8282064DC07F}" ShortID="228396751"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Menu" ID="{DB91568E-4183-4FE0-A178-9B6516F9B6BD}"/>
+														<CustomState Name="" ID="{F48CF232-F06E-4CC2-AE05-496831AB2E38}" ShortID="622111368">
+															<PropertyList>
+																<Property Name="BusVolume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+										</AuxBus>
+										<AuxBus Name="REV_SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
+											<ReferenceList>
+												<Reference Name="Effect0">
+													<Custom>
+														<Effect Name="Matrix Reverb (Custom)" ID="{46B2EC8C-FD61-4366-9674-9524E30CFFA7}" ShortID="544066397" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3"/>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+										</AuxBus>
+										<AuxBus Name="REV_Cave" ID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
+											<ReferenceList>
+												<Reference Name="Effect0" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+													<ObjectRef Name="Tunnel1" ID="{CC44B890-9865-4157-965F-86FED27BC4C6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+												</Reference>
+											</ReferenceList>
+										</AuxBus>
+										<AuxBus Name="Early_Reflections" ID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}">
+											<PropertyList>
+												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+												<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Effect0" PluginName="Wwise Reflect" CompanyID="0" PluginID="171" PluginType="3">
+													<ObjectRef Name="Reflect_Simplified" ID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" WorkUnitID="{923039AD-F8B4-46D4-BDA7-CB5A6EE595E0}"/>
+												</Reference>
+											</ReferenceList>
+										</AuxBus>
+									</ChildrenList>
+								</AuxBus>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
@@ -1119,149 +1398,17 @@
 								</ObjectList>
 							</ObjectLists>
 						</Bus>
-						<AuxBus Name="REV" ID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}">
+						<Bus Name="UI Master" ID="{23C62AF6-FE7F-4B7E-ACE0-7FDA171CCBB0}">
 							<PropertyList>
 								<Property Name="BusChannelConfig" Type="int32">
 									<ValueList>
-										<Value>3584</Value>
+										<Value>3840</Value>
 									</ValueList>
 								</Property>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="18"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
-							<ChildrenList>
-								<AuxBus Name="REV_LargeRoom" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
-									<ReferenceList>
-										<Reference Name="Effect0">
-											<Custom>
-												<Effect Name="RoomVerb (Custom)" ID="{140088B9-275E-409D-AC97-CA7FF6C8DCF0}" ShortID="33444476" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-													<PropertyList>
-														<Property Name="DecayTime" Type="Real32" Value="4.4"/>
-														<Property Name="DryLevel" Type="Real32" Value="-26.3"/>
-														<Property Name="ERPattern" Type="int32" Value="5"/>
-														<Property Name="ReverbLevel" Type="Real32" Value="-5"/>
-														<Property Name="RoomSize" Type="Real32" Value="100"/>
-													</PropertyList>
-												</Effect>
-											</Custom>
-										</Reference>
-										<Reference Name="Effect1">
-											<Custom>
-												<Effect Name="Parametric EQ (Custom)" ID="{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}" ShortID="21631550" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
-													<PropertyList>
-														<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
-														<Property Name="FrequencyBand1" Type="Real32" Value="1000"/>
-														<Property Name="OnOffBand2" Type="bool" Value="False"/>
-														<Property Name="OnOffBand3" Type="bool" Value="False"/>
-													</PropertyList>
-												</Effect>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-									<StateInfo>
-										<StateGroupList>
-											<StateGroupInfo>
-												<StateGroupRef Name="Music_Selector" ID="{9E363DC4-1CA9-4AAF-BFCB-E45F336CC2CE}"/>
-											</StateGroupInfo>
-										</StateGroupList>
-										<CustomStateList>
-											<CustomState>
-												<StateRef Name="Buildup" ID="{39C32C1D-49CE-4283-8A04-C9C272E282DE}"/>
-												<CustomState Name="" ID="{F33AA82F-4529-45B7-A45C-0F87C6CD0556}" ShortID="3148699">
-													<PropertyList>
-														<Property Name="BusVolume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Explo" ID="{1FE92F27-401B-44A3-BFC0-65F192492AAB}"/>
-												<CustomState Name="" ID="{F1122628-8295-4C00-AE32-8F92812156EC}" ShortID="500240427">
-													<PropertyList>
-														<Property Name="BusVolume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="ArenaPhase2" ID="{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"/>
-												<CustomState Name="" ID="{78EA1313-CF20-452B-B368-4E50F9937AB7}" ShortID="1059640641">
-													<PropertyList>
-														<Property Name="BusVolume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Breakcore" ID="{16E5D430-D692-45B9-B4C9-B90A05172B0B}"/>
-												<CustomState Name="" ID="{86CE8BA8-EC46-4D3C-9ECC-CC318FA6B1EF}" ShortID="406677942"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Reveal" ID="{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"/>
-												<CustomState Name="" ID="{5180C457-62E7-4F14-AAA8-2B85F117D8F9}" ShortID="1044106812">
-													<PropertyList>
-														<Property Name="BusVolume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="ArenaPhase1" ID="{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"/>
-												<CustomState Name="" ID="{36008921-A34A-4856-B39E-DBCA4D46C98F}" ShortID="516019468">
-													<PropertyList>
-														<Property Name="BusVolume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Tuto" ID="{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"/>
-												<CustomState Name="" ID="{A311E189-4A24-4179-AB7B-F1CCF03F14CD}" ShortID="401041643">
-													<PropertyList>
-														<Property Name="BusVolume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Reverb" ID="{1A0075FD-1C91-4DCD-B4AC-2029A2632B3A}"/>
-												<CustomState Name="" ID="{991D7324-69D0-4187-9498-8282064DC07F}" ShortID="228396751"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Menu" ID="{DB91568E-4183-4FE0-A178-9B6516F9B6BD}"/>
-												<CustomState Name="" ID="{F48CF232-F06E-4CC2-AE05-496831AB2E38}" ShortID="622111368">
-													<PropertyList>
-														<Property Name="BusVolume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-										</CustomStateList>
-									</StateInfo>
-								</AuxBus>
-								<AuxBus Name="REV_SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
-									<ReferenceList>
-										<Reference Name="Effect0">
-											<Custom>
-												<Effect Name="Matrix Reverb (Custom)" ID="{46B2EC8C-FD61-4366-9674-9524E30CFFA7}" ShortID="544066397" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3"/>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-								</AuxBus>
-								<AuxBus Name="REV_Cave" ID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
-									<ReferenceList>
-										<Reference Name="Effect0" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
-											<ObjectRef Name="Tunnel1" ID="{CC44B890-9865-4157-965F-86FED27BC4C6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-										</Reference>
-									</ReferenceList>
-								</AuxBus>
-								<AuxBus Name="Early_Reflections" ID="{DEFD7C69-35F1-4735-B101-17C49C0196D3}">
-									<PropertyList>
-										<Property Name="EnableAttenuation" Type="bool" Value="False"/>
-										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Effect0" PluginName="Wwise Reflect" CompanyID="0" PluginID="171" PluginType="3">
-											<ObjectRef Name="Reflect_Simplified" ID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" WorkUnitID="{923039AD-F8B4-46D4-BDA7-CB5A6EE595E0}"/>
-										</Reference>
-									</ReferenceList>
-								</AuxBus>
-							</ChildrenList>
-						</AuxBus>
+						</Bus>
 					</ChildrenList>
 					<ObjectLists>
 						<ObjectList Name="RTPC">

@@ -115,20 +115,22 @@
 																												<XPos>0</XPos>
 																												<YPos>-200</YPos>
 																												<Flags>5</Flags>
+																												<SegmentShape>Exp1</SegmentShape>
+																											</Point>
+																											<Point>
+																												<XPos>100</XPos>
+																												<YPos>-6</YPos>
+																												<Flags>0</Flags>
+																												<SegmentShape>Exp3</SegmentShape>
 																											</Point>
 																											<Point>
 																												<XPos>200</XPos>
-																												<YPos>-6</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>400</XPos>
-																												<YPos>-5.98463</YPos>
+																												<YPos>0</YPos>
 																												<Flags>0</Flags>
 																											</Point>
 																											<Point>
 																												<XPos>800</XPos>
-																												<YPos>-5.98463</YPos>
+																												<YPos>0</YPos>
 																												<Flags>37</Flags>
 																											</Point>
 																										</PointList>
@@ -226,13 +228,6 @@
 																	</ObjectLists>
 																</MusicTrack>
 																<MusicTrack Name="Bass_Zone_A" ID="{1993E99F-B470-4A59-BA71-B78D18B196A5}" ShortID="508792583">
-																	<PropertyList>
-																		<Property Name="Volume" Type="Real64">
-																			<ValueList>
-																				<Value>-6</Value>
-																			</ValueList>
-																		</Property>
-																	</PropertyList>
 																	<ReferenceList>
 																		<Reference Name="OutputBus">
 																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
@@ -278,20 +273,22 @@
 																												<XPos>0</XPos>
 																												<YPos>-200</YPos>
 																												<Flags>5</Flags>
+																												<SegmentShape>SCurve</SegmentShape>
 																											</Point>
 																											<Point>
 																												<XPos>200</XPos>
 																												<YPos>-6</YPos>
 																												<Flags>0</Flags>
+																												<SegmentShape>Exp3</SegmentShape>
 																											</Point>
 																											<Point>
-																												<XPos>400</XPos>
-																												<YPos>-5.98463</YPos>
+																												<XPos>400.83074</XPos>
+																												<YPos>0</YPos>
 																												<Flags>0</Flags>
 																											</Point>
 																											<Point>
 																												<XPos>800</XPos>
-																												<YPos>-5.98463</YPos>
+																												<YPos>0</YPos>
 																												<Flags>37</Flags>
 																											</Point>
 																										</PointList>
@@ -489,11 +486,6 @@
 																<MusicTrack Name="A_Lead" ID="{51C1375E-1D4F-4CD5-B422-0993F45017F9}" ShortID="211908423">
 																	<PropertyList>
 																		<Property Name="OverrideEffect" Type="bool" Value="True"/>
-																		<Property Name="Volume" Type="Real64">
-																			<ValueList>
-																				<Value>-6</Value>
-																			</ValueList>
-																		</Property>
 																	</PropertyList>
 																	<ReferenceList>
 																		<Reference Name="OutputBus">
@@ -538,7 +530,7 @@
 																										<PointList>
 																											<Point>
 																												<XPos>0</XPos>
-																												<YPos>-3.82662</YPos>
+																												<YPos>-1.88676</YPos>
 																												<Flags>5</Flags>
 																											</Point>
 																											<Point>
@@ -553,7 +545,7 @@
 																											</Point>
 																											<Point>
 																												<XPos>5</XPos>
-																												<YPos>-3.67289</YPos>
+																												<YPos>-1.30005</YPos>
 																												<Flags>37</Flags>
 																											</Point>
 																										</PointList>
@@ -676,16 +668,58 @@
 																										<PointList>
 																											<Point>
 																												<XPos>0</XPos>
-																												<YPos>100</YPos>
+																												<YPos>75</YPos>
 																												<Flags>5</Flags>
+																												<SegmentShape>Log1</SegmentShape>
 																											</Point>
 																											<Point>
-																												<XPos>300.30272</XPos>
-																												<YPos>3</YPos>
+																												<XPos>201.44498</XPos>
+																												<YPos>1</YPos>
 																												<Flags>0</Flags>
 																											</Point>
 																											<Point>
 																												<XPos>800</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</Custom>
+																							</Reference>
+																						</ReferenceList>
+																					</RTPC>
+																				</Local>
+																			</Reference>
+																			<Reference>
+																				<Local>
+																					<RTPC Name="" ID="{50B6C47A-DFE3-4D6F-BB61-9424C7D96A8C}" ShortID="1040613006">
+																						<PropertyList>
+																							<Property Name="PropertyName" Type="string" Value="Volume"/>
+																						</PropertyList>
+																						<ReferenceList>
+																							<Reference Name="ControlInput">
+																								<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																							</Reference>
+																							<Reference Name="Curve">
+																								<Custom>
+																									<Curve Name="" ID="{B1D71386-969D-4722-B997-67CA48137362}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>-5.92133000000001</YPos>
+																												<Flags>5</Flags>
+																												<SegmentShape>Log2</SegmentShape>
+																											</Point>
+																											<Point>
+																												<XPos>236.12513</XPos>
+																												<YPos>0.0145200000000045</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>3000</XPos>
 																												<YPos>0</YPos>
 																												<Flags>37</Flags>
 																											</Point>
@@ -1023,7 +1057,7 @@
 													<ChildrenList>
 														<MusicSegment Name="First_Fight" ID="{770A3E6C-1E52-4D20-95D8-4E7EF0E258BB}" ShortID="110356223">
 															<PropertyList>
-																<Property Name="EndPosition" Type="Real64" Value="22758.6206896552"/>
+																<Property Name="EndPosition" Type="Real64" Value="53599.1383219955"/>
 															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
@@ -1143,6 +1177,140 @@
 																		</ObjectList>
 																	</ObjectLists>
 																</MusicTrack>
+																<MusicTrack Name="A_Pluck" ID="{15216EB8-769D-42C2-B092-87AE51B04DC1}" ShortID="853327501">
+																	<ReferenceList>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="A_Pluck" ID="{A5C1343A-B6C1-4229-99E9-EA2C36400F36}">
+																			<Language>SFX</Language>
+																			<AudioFile>Music\ZoneA\A_Pluck.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="881316664"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<TransitionList>
+																		<MusicTransition Name="Root" ID="{62FF9779-ED82-4DF3-866B-8016B439A37D}">
+																			<PropertyList>
+																				<Property Name="IsFolder" Type="bool" Value="True"/>
+																			</PropertyList>
+																			<TransitionInfo/>
+																		</MusicTransition>
+																	</TransitionList>
+																	<ObjectLists>
+																		<ObjectList Name="RTPC">
+																			<Reference>
+																				<Local>
+																					<RTPC Name="" ID="{2853F7E3-3F6A-4627-AB1B-1FA7AFF84298}" ShortID="974454953">
+																						<PropertyList>
+																							<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																						</PropertyList>
+																						<ReferenceList>
+																							<Reference Name="ControlInput">
+																								<ObjectRef Name="RTPC_Parkour_Flow" ID="{D4EDFB9F-0AB6-4E18-A9CB-0F34B34DEA44}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																							</Reference>
+																							<Reference Name="Curve">
+																								<Custom>
+																									<Curve Name="" ID="{E06E780B-215C-49BD-84A7-19DDEFF7741B}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="65537"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>75</YPos>
+																												<Flags>5</Flags>
+																												<SegmentShape>Log1</SegmentShape>
+																											</Point>
+																											<Point>
+																												<XPos>201.44498</XPos>
+																												<YPos>1</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>800</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</Custom>
+																							</Reference>
+																						</ReferenceList>
+																					</RTPC>
+																				</Local>
+																			</Reference>
+																			<Reference>
+																				<Local>
+																					<RTPC Name="" ID="{13A25DA8-1581-464E-9867-2E75EB785165}" ShortID="836383307">
+																						<PropertyList>
+																							<Property Name="PropertyName" Type="string" Value="Volume"/>
+																						</PropertyList>
+																						<ReferenceList>
+																							<Reference Name="ControlInput">
+																								<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																							</Reference>
+																							<Reference Name="Curve">
+																								<Custom>
+																									<Curve Name="" ID="{E6BAC12E-73F4-4A54-A064-28FB7F23CDB1}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>-5.92133000000001</YPos>
+																												<Flags>5</Flags>
+																												<SegmentShape>Log2</SegmentShape>
+																											</Point>
+																											<Point>
+																												<XPos>236.12513</XPos>
+																												<YPos>0.0145200000000045</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>3000</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</Custom>
+																							</Reference>
+																						</ReferenceList>
+																					</RTPC>
+																				</Local>
+																			</Reference>
+																		</ObjectList>
+																		<ObjectList Name="Sequences">
+																			<Reference>
+																				<Local>
+																					<MusicTrackSequence Name="" ID="{65126A65-970C-4CFC-B68F-10EDA9F273DD}">
+																						<ObjectLists>
+																							<ObjectList Name="Clips">
+																								<Reference>
+																									<Local>
+																										<MusicClip Name="A_Pluck" ID="{65CE3038-3F65-4C8D-A2EA-CA1F6BCBBDCB}">
+																											<PropertyList>
+																												<Property Name="EndTrimOffset" Type="Real64" Value="53599.1383219955"/>
+																												<Property Name="FadeInMode" Type="int16" Value="0"/>
+																												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																											</PropertyList>
+																											<AudioSourceRef Name="A_Pluck" ID="{A5C1343A-B6C1-4229-99E9-EA2C36400F36}"/>
+																										</MusicClip>
+																									</Local>
+																								</Reference>
+																							</ObjectList>
+																						</ObjectLists>
+																					</MusicTrackSequence>
+																				</Local>
+																			</Reference>
+																		</ObjectList>
+																	</ObjectLists>
+																</MusicTrack>
 															</ChildrenList>
 															<ObjectLists>
 																<ObjectList Name="Cues">
@@ -1206,7 +1374,7 @@
 													<ChildrenList>
 														<MusicSegment Name="A3_Build" ID="{96867FB9-183A-4866-B46B-6DD849BC58BF}" ShortID="18397584">
 															<PropertyList>
-																<Property Name="EndPosition" Type="Real64" Value="44137.9419813902"/>
+																<Property Name="EndPosition" Type="Real64" Value="53599.1383219955"/>
 															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
@@ -1661,6 +1829,199 @@
 																												<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																											</PropertyList>
 																											<AudioSourceRef Name="A2_Fight_Bass" ID="{2D8A89C3-D8BD-4DC3-A634-63D47CBDF77D}"/>
+																										</MusicClip>
+																									</Local>
+																								</Reference>
+																							</ObjectList>
+																						</ObjectLists>
+																					</MusicTrackSequence>
+																				</Local>
+																			</Reference>
+																		</ObjectList>
+																	</ObjectLists>
+																</MusicTrack>
+																<MusicTrack Name="A_Pluck" ID="{7CE11A47-C2EF-43E2-BD22-D2F702364CF4}" ShortID="907481224">
+																	<ReferenceList>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="A_Pluck" ID="{F78FC57D-09BC-42CB-9ECE-A124254530FD}">
+																			<Language>SFX</Language>
+																			<AudioFile>Music\ZoneA\A_Pluck.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="881316664"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<TransitionList>
+																		<MusicTransition Name="Root" ID="{E57C731F-606F-487A-B708-5D5BB0EF34E2}">
+																			<PropertyList>
+																				<Property Name="IsFolder" Type="bool" Value="True"/>
+																			</PropertyList>
+																			<TransitionInfo/>
+																		</MusicTransition>
+																	</TransitionList>
+																	<ObjectLists>
+																		<ObjectList Name="RTPC">
+																			<Reference>
+																				<Local>
+																					<RTPC Name="" ID="{30FE5AB4-7288-40EE-A41C-0DEE41DA6FE1}" ShortID="890293867">
+																						<PropertyList>
+																							<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																						</PropertyList>
+																						<ReferenceList>
+																							<Reference Name="ControlInput">
+																								<ObjectRef Name="RTPC_Parkour_Flow" ID="{D4EDFB9F-0AB6-4E18-A9CB-0F34B34DEA44}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																							</Reference>
+																							<Reference Name="Curve">
+																								<Custom>
+																									<Curve Name="" ID="{02347E94-18F7-41C8-A4C6-AD89DFEDA40A}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="65537"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>75</YPos>
+																												<Flags>5</Flags>
+																												<SegmentShape>Log1</SegmentShape>
+																											</Point>
+																											<Point>
+																												<XPos>201.44498</XPos>
+																												<YPos>1</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>800</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</Custom>
+																							</Reference>
+																						</ReferenceList>
+																					</RTPC>
+																				</Local>
+																			</Reference>
+																			<Reference>
+																				<Local>
+																					<RTPC Name="" ID="{14909312-D12D-495A-A8EF-1DC6C86DAD42}" ShortID="875301831">
+																						<PropertyList>
+																							<Property Name="PropertyName" Type="string" Value="Volume"/>
+																						</PropertyList>
+																						<ReferenceList>
+																							<Reference Name="ControlInput">
+																								<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																							</Reference>
+																							<Reference Name="Curve">
+																								<Custom>
+																									<Curve Name="" ID="{DD036547-AE01-4197-B285-64D49EAD6019}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>-5.92133000000001</YPos>
+																												<Flags>5</Flags>
+																												<SegmentShape>Log2</SegmentShape>
+																											</Point>
+																											<Point>
+																												<XPos>236.12513</XPos>
+																												<YPos>0.0145200000000045</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>3000</XPos>
+																												<YPos>0</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</Custom>
+																							</Reference>
+																						</ReferenceList>
+																					</RTPC>
+																				</Local>
+																			</Reference>
+																		</ObjectList>
+																		<ObjectList Name="Sequences">
+																			<Reference>
+																				<Local>
+																					<MusicTrackSequence Name="" ID="{781B4C67-F86D-4A5A-9BC4-2527DDDF9E5C}">
+																						<ObjectLists>
+																							<ObjectList Name="Clips">
+																								<Reference>
+																									<Local>
+																										<MusicClip Name="A_Pluck" ID="{48248B76-EBA9-4FB3-8994-98A1C46895C0}">
+																											<PropertyList>
+																												<Property Name="EndTrimOffset" Type="Real64" Value="24827.5862068966"/>
+																												<Property Name="FadeInMode" Type="int16" Value="0"/>
+																												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																											</PropertyList>
+																											<AudioSourceRef Name="A_Pluck" ID="{F78FC57D-09BC-42CB-9ECE-A124254530FD}"/>
+																											<PropertyCurveList>
+																												<PropertyCurve PropertyName="Highpass">
+																													<Curve Name="" ID="{B696FDEE-6D25-4B1E-ABF2-EB7D88C7BF3A}">
+																														<PropertyList>
+																															<Property Name="Flags" Type="int32" Value="1"/>
+																														</PropertyList>
+																														<PointList>
+																															<Point>
+																																<XPos>0</XPos>
+																																<YPos>0</YPos>
+																																<Flags>5</Flags>
+																															</Point>
+																															<Point>
+																																<XPos>24.82759</XPos>
+																																<YPos>0</YPos>
+																																<Flags>37</Flags>
+																															</Point>
+																														</PointList>
+																													</Curve>
+																												</PropertyCurve>
+																												<PropertyCurve PropertyName="Lowpass">
+																													<Curve Name="" ID="{1EA85B3D-5714-4866-8740-1899CC65348A}">
+																														<PropertyList>
+																															<Property Name="Flags" Type="int32" Value="1"/>
+																														</PropertyList>
+																														<PointList>
+																															<Point>
+																																<XPos>0</XPos>
+																																<YPos>0</YPos>
+																																<Flags>5</Flags>
+																															</Point>
+																															<Point>
+																																<XPos>24.82759</XPos>
+																																<YPos>0</YPos>
+																																<Flags>37</Flags>
+																															</Point>
+																														</PointList>
+																													</Curve>
+																												</PropertyCurve>
+																												<PropertyCurve PropertyName="Volume">
+																													<Curve Name="" ID="{D45FDBE5-B6D7-401E-B6A9-D718E8843C18}">
+																														<PropertyList>
+																															<Property Name="Flags" Type="int32" Value="3"/>
+																														</PropertyList>
+																														<PointList>
+																															<Point>
+																																<XPos>0</XPos>
+																																<YPos>0</YPos>
+																																<Flags>5</Flags>
+																															</Point>
+																															<Point>
+																																<XPos>24.82759</XPos>
+																																<YPos>0</YPos>
+																																<Flags>37</Flags>
+																															</Point>
+																														</PointList>
+																													</Curve>
+																												</PropertyCurve>
+																											</PropertyCurveList>
 																										</MusicClip>
 																									</Local>
 																								</Reference>
@@ -2266,6 +2627,13 @@
 																	</ObjectLists>
 																</MusicTrack>
 																<MusicTrack Name="Azone_drums_slomo" ID="{A5B26DDC-967F-487B-97BE-CB387D46A820}" ShortID="686478565">
+																	<PropertyList>
+																		<Property Name="Volume" Type="Real64">
+																			<ValueList>
+																				<Value>6</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
 																	<ReferenceList>
 																		<Reference Name="OutputBus">
 																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
@@ -2450,6 +2818,13 @@
 																	</ObjectLists>
 																</MusicTrack>
 																<MusicTrack Name="A2_Fight_Loop" ID="{92D8C542-5C67-4A05-91B2-5F7D34682A63}" ShortID="438279782">
+																	<PropertyList>
+																		<Property Name="Volume" Type="Real64">
+																			<ValueList>
+																				<Value>1</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
 																	<ReferenceList>
 																		<Reference Name="OutputBus">
 																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
@@ -2529,6 +2904,78 @@
 																												</PropertyCurve>
 																												<PropertyCurve PropertyName="Volume">
 																													<Curve Name="" ID="{86AE93B1-23B3-4B33-9225-CB1EB39FB688}">
+																														<PropertyList>
+																															<Property Name="Flags" Type="int32" Value="3"/>
+																														</PropertyList>
+																														<PointList>
+																															<Point>
+																																<XPos>0</XPos>
+																																<YPos>0</YPos>
+																																<Flags>5</Flags>
+																															</Point>
+																															<Point>
+																																<XPos>22.75862</XPos>
+																																<YPos>0</YPos>
+																																<Flags>37</Flags>
+																															</Point>
+																														</PointList>
+																													</Curve>
+																												</PropertyCurve>
+																											</PropertyCurveList>
+																										</MusicClip>
+																									</Local>
+																								</Reference>
+																								<Reference>
+																									<Local>
+																										<MusicClip Name="A2_Fight_Loop" ID="{1A5D554E-A05B-467D-BBD1-A7F45C61E665}">
+																											<PropertyList>
+																												<Property Name="EndTrimOffset" Type="Real64" Value="22758.6206896552"/>
+																												<Property Name="FadeInMode" Type="int16" Value="0"/>
+																												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																												<Property Name="PlayAt" Type="Real64" Value="22068.9655172414"/>
+																											</PropertyList>
+																											<AudioSourceRef Name="A2_Fight_Loop" ID="{820F5D85-53C6-4B36-9528-FA378C3F0482}"/>
+																											<PropertyCurveList>
+																												<PropertyCurve PropertyName="Highpass">
+																													<Curve Name="" ID="{E0F58FAF-F42A-40F1-AEC6-B50F8A132FC8}">
+																														<PropertyList>
+																															<Property Name="Flags" Type="int32" Value="1"/>
+																														</PropertyList>
+																														<PointList>
+																															<Point>
+																																<XPos>0</XPos>
+																																<YPos>0</YPos>
+																																<Flags>5</Flags>
+																															</Point>
+																															<Point>
+																																<XPos>22.75862</XPos>
+																																<YPos>0</YPos>
+																																<Flags>37</Flags>
+																															</Point>
+																														</PointList>
+																													</Curve>
+																												</PropertyCurve>
+																												<PropertyCurve PropertyName="Lowpass">
+																													<Curve Name="" ID="{FA243210-685B-427D-88DA-A53E7E53D1C9}">
+																														<PropertyList>
+																															<Property Name="Flags" Type="int32" Value="1"/>
+																														</PropertyList>
+																														<PointList>
+																															<Point>
+																																<XPos>0</XPos>
+																																<YPos>0</YPos>
+																																<Flags>5</Flags>
+																															</Point>
+																															<Point>
+																																<XPos>22.75862</XPos>
+																																<YPos>0</YPos>
+																																<Flags>37</Flags>
+																															</Point>
+																														</PointList>
+																													</Curve>
+																												</PropertyCurve>
+																												<PropertyCurve PropertyName="Volume">
+																													<Curve Name="" ID="{750597EE-6297-491B-915A-E3F3EBE62722}">
 																														<PropertyList>
 																															<Property Name="Flags" Type="int32" Value="3"/>
 																														</PropertyList>
@@ -2911,6 +3358,11 @@
 											<PropertyList>
 												<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
 												<Property Name="Tempo" Type="Real64" Value="174"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2924,6 +3376,11 @@
 												<MusicSegment Name="music_MENU" ID="{B8DF3158-ED0F-435E-AF78-C942E9D72C4B}" ShortID="677750533">
 													<PropertyList>
 														<Property Name="EndPosition" Type="Real64" Value="48000"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>6</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
