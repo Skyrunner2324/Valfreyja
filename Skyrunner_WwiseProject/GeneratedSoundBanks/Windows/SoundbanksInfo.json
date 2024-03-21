@@ -14,6 +14,43 @@
   "DialogueEvents": [],
   "SoundBanks": [
    {
+    "Id": "183167143",
+    "Type": "Event",
+    "GUID": "{6F843338-8506-42BF-867D-169F4A0DAA16}",
+    "Language": "SFX",
+    "Hash": "{DF5CB4A5-3937-530A-5806-E38E19139C44}",
+    "ObjectPath": "UI_unpause",
+    "ShortName": "UI_unpause",
+    "Path": "Event/UI_unpause.bnk",
+    "Media": [
+     {
+      "Id": "1054044112",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UI\\ui_unpause_02.wav",
+      "Path": "Media/1054044112.wem",
+      "CachePath": "SFX/UI/ui_unpause_02_755F56E2.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "183167143",
+      "Name": "UI_unpause",
+      "ObjectPath": "\\Events\\UI\\UI_unpause",
+      "GUID": "{6F843338-8506-42BF-867D-169F4A0DAA16}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.2674375",
+      "DurationMax": "0.2674375",
+      "MediaRefs": [
+       {
+        "Id": "1054044112"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "184944533",
     "Type": "Event",
     "GUID": "{C3AE1EA4-2D7C-4A4B-833A-5928F7B86591}",
@@ -79,7 +116,7 @@
     "Type": "Event",
     "GUID": "{FC9252BB-4746-4A62-AB71-565BBB37F6D2}",
     "Language": "SFX",
-    "Hash": "{C51A3481-BFAB-81EC-C1BA-965D47B3B82F}",
+    "Hash": "{E9521CDC-2D53-5349-8E30-9B5ABD7592A0}",
     "ObjectPath": "UI_confirm",
     "ShortName": "UI_confirm",
     "Path": "Event/UI_confirm.bnk",
@@ -152,7 +189,7 @@
     "Type": "Event",
     "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
     "Language": "SFX",
-    "Hash": "{BDA73D68-E9E0-4625-C3B1-F91AD6777D81}",
+    "Hash": "{BC71FE29-551D-1D42-B332-9D94E28472E2}",
     "ObjectPath": "SX_player_land",
     "ShortName": "SX_player_land",
     "Path": "Event/SX_player_land.bnk",
@@ -360,21 +397,10 @@
     "Type": "Event",
     "GUID": "{12BCF388-3B1D-4636-873A-0653AB150C1F}",
     "Language": "SFX",
-    "Hash": "{E628A681-EF35-6452-CEE5-FB334A2F4E60}",
+    "Hash": "{AD8FC507-18C0-230E-BE52-8719463A9B58}",
     "ObjectPath": "SX_player_shield_regen",
     "ShortName": "SX_player_shield_regen",
     "Path": "Event/SX_player_shield_regen.bnk",
-    "Media": [
-     {
-      "Id": "328453384",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "SX_player_shield_regen.wav",
-      "Path": "Media/328453384.wem",
-      "CachePath": "SFX/SX_player_shield_regen_32B758D2.wem"
-     }
-    ],
     "Events": [
      {
       "Id": "387312834",
@@ -382,13 +408,8 @@
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_shield_regen",
       "GUID": "{12BCF388-3B1D-4636-873A-0653AB150C1F}",
       "DurationType": "OneShot",
-      "DurationMin": "0.2894125",
-      "DurationMax": "0.40505764",
-      "MediaRefs": [
-       {
-        "Id": "328453384"
-       }
-      ]
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    },
@@ -680,7 +701,7 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{9DBB14E7-1967-4DFE-664E-A94A26AF04BD}",
+    "Hash": "{A5715E9A-E65F-C162-62D2-711E8A68467F}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
@@ -693,6 +714,15 @@
       "ShortName": "Player_Movement\\player_movement_aerial.wav",
       "Path": "Media/596869245.wem",
       "CachePath": "SFX/Player_Movement/player_movement_aerial_073B4D0C.wem"
+     },
+     {
+      "Id": "694258383",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "player_movement_wallslide.wav",
+      "Path": "Media/694258383.wem",
+      "CachePath": "SFX/player_movement_wallslide_073B4D0C.wem"
      },
      {
       "Id": "1023074526",
@@ -710,7 +740,7 @@
       "Location": "Loose",
       "ShortName": "Hoverboots\\hoverboots_on_rail_loop.wav",
       "Path": "Media/1056072145.wem",
-      "CachePath": "SFX/Hoverboots/hoverboots_on_rail_loop_9C43FCB0.wem"
+      "CachePath": "SFX/Hoverboots/hoverboots_on_rail_loop_154F2566.wem"
      }
     ],
     "Plugins": {
@@ -718,7 +748,7 @@
       {
        "Id": "768480562",
        "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots and Wind\\Hoverboots_Other\\hoverboots_on_rail_loop\\Parametric EQ (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots and Wind\\Hoverboots_Other\\player_movement_wallrun\\hoverboots_on_rail_loop\\Parametric EQ (Custom)",
        "GUID": "{795F1578-DFEF-4A0F-995B-DC9BEE878FD0}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
@@ -745,6 +775,9 @@
       "MediaRefs": [
        {
         "Id": "596869245"
+       },
+       {
+        "Id": "694258383"
        },
        {
         "Id": "1023074526"
@@ -954,21 +987,10 @@
     "Type": "Event",
     "GUID": "{D7BC11F0-4EB9-4FC1-9367-FFB057615127}",
     "Language": "SFX",
-    "Hash": "{1F456446-F435-682D-2A65-9A4978A2CACF}",
+    "Hash": "{A4F4B836-8DAC-920D-9DB2-FE32E1F9B64F}",
     "ObjectPath": "SX_player_grap_lock",
     "ShortName": "SX_player_grap_lock",
     "Path": "Event/SX_player_grap_lock.bnk",
-    "Media": [
-     {
-      "Id": "765447055",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Player_Weapon\\player_grap2.wav",
-      "Path": "Media/765447055.wem",
-      "CachePath": "SFX/Player_Weapon/player_grap2_A0EBE662.wem"
-     }
-    ],
     "Events": [
      {
       "Id": "882230951",
@@ -976,21 +998,8 @@
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_grap_lock",
       "GUID": "{D7BC11F0-4EB9-4FC1-9367-FFB057615127}",
       "DurationType": "OneShot",
-      "DurationMin": "0.057677228",
-      "DurationMax": "0.08156791",
-      "MediaRefs": [
-       {
-        "Id": "765447055"
-       }
-      ]
-     }
-    ],
-    "GameParameters": [
-     {
-      "Id": "1645844663",
-      "Name": "RTPC_PlayerMovement",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_PlayerMovement",
-      "GUID": "{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    },
@@ -999,7 +1008,7 @@
     "Type": "Event",
     "GUID": "{2CA54BC4-90CA-4B42-9465-B41131C52A7C}",
     "Language": "SFX",
-    "Hash": "{4D2DF855-DDEA-811E-EB4C-CB968888F9AD}",
+    "Hash": "{3BC3A9DC-2A1E-EF79-2117-E7B720A7D63C}",
     "ObjectPath": "SX_slowmotion_trigger",
     "ShortName": "SX_slowmotion_trigger",
     "Path": "Event/SX_slowmotion_trigger.bnk",
@@ -1076,6 +1085,14 @@
         "Id": "1020341242"
        }
       ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2565740352",
+      "Name": "RTPC_SlowMo",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
+      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
      }
     ]
    },
@@ -3779,6 +3796,67 @@
     ]
    },
    {
+    "Id": "2116764893",
+    "Type": "Event",
+    "GUID": "{2C5E9B4F-92D9-4B9C-B581-8D73092753E2}",
+    "Language": "SFX",
+    "Hash": "{CD60AB58-C126-457B-1312-F9D4886CF3F9}",
+    "ObjectPath": "SX_enemy_speaks",
+    "ShortName": "SX_enemy_speaks",
+    "Path": "Event/SX_enemy_speaks.bnk",
+    "Media": [
+     {
+      "Id": "64017903",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemies\\Kill_Humans_Vox.wav",
+      "Path": "Media/64017903.wem",
+      "CachePath": "SFX/Enemies/Kill_Humans_Vox_34470901.wem"
+     },
+     {
+      "Id": "76110187",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemies\\Transform01_Vox.wav",
+      "Path": "Media/76110187.wem",
+      "CachePath": "SFX/Enemies/Transform01_Vox_755F56E2.wem"
+     },
+     {
+      "Id": "904213721",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemies\\Destroy02_Vox.wav",
+      "Path": "Media/904213721.wem",
+      "CachePath": "SFX/Enemies/Destroy02_Vox_755F56E2.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2116764893",
+      "Name": "SX_enemy_speaks",
+      "ObjectPath": "\\Events\\Enemy\\SX_enemy_speaks",
+      "GUID": "{2C5E9B4F-92D9-4B9C-B581-8D73092753E2}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.85067254",
+      "DurationMax": "1.8750113",
+      "MediaRefs": [
+       {
+        "Id": "64017903"
+       },
+       {
+        "Id": "76110187"
+       },
+       {
+        "Id": "904213721"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "2162617371",
     "Type": "Event",
     "GUID": "{F4227598-B79C-47C2-A22C-C305F4B1E5C2}",
@@ -4142,19 +4220,19 @@
     "Type": "Event",
     "GUID": "{194991E3-9D95-4E83-BAAB-87D009E9C2CB}",
     "Language": "SFX",
-    "Hash": "{FD1221A2-FE39-8D8C-131D-0F79FDC8D323}",
+    "Hash": "{A6EA42F3-B13B-C739-6E18-4AA8FA02F73F}",
     "ObjectPath": "UI_pause",
     "ShortName": "UI_pause",
     "Path": "Event/UI_pause.bnk",
     "Media": [
      {
-      "Id": "1034020112",
+      "Id": "240445589",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Placeholders\\ui_pause.wav",
-      "Path": "Media/1034020112.wem",
-      "CachePath": "SFX/Placeholders/ui_pause_755F56E2.wem"
+      "ShortName": "UI\\ui_pause_02.wav",
+      "Path": "Media/240445589.wem",
+      "CachePath": "SFX/UI/ui_pause_02_755F56E2.wem"
      }
     ],
     "Events": [
@@ -4164,11 +4242,11 @@
       "ObjectPath": "\\Events\\UI\\UI_pause",
       "GUID": "{194991E3-9D95-4E83-BAAB-87D009E9C2CB}",
       "DurationType": "OneShot",
-      "DurationMin": "0.1705",
-      "DurationMax": "0.1705",
+      "DurationMin": "0.213875",
+      "DurationMax": "0.213875",
       "MediaRefs": [
        {
-        "Id": "1034020112"
+        "Id": "240445589"
        }
       ]
      }
@@ -4179,21 +4257,10 @@
     "Type": "Event",
     "GUID": "{6D13E3BD-F5FB-4B8B-8184-DB05606BBF7C}",
     "Language": "SFX",
-    "Hash": "{38D2FB61-4D10-EA87-08E8-BF0D8E37D48D}",
+    "Hash": "{D8604E0D-FECB-438D-904A-A95669B5448F}",
     "ObjectPath": "SX_player_dash_regen",
     "ShortName": "SX_player_dash_regen",
     "Path": "Event/SX_player_dash_regen.bnk",
-    "Media": [
-     {
-      "Id": "438067580",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Player_Feedback\\player_dash_regen.wav",
-      "Path": "Media/438067580.wem",
-      "CachePath": "SFX/Player_Feedback/player_dash_regen_755F56E2.wem"
-     }
-    ],
     "Events": [
      {
       "Id": "3390387889",
@@ -4201,13 +4268,8 @@
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_dash_regen",
       "GUID": "{6D13E3BD-F5FB-4B8B-8184-DB05606BBF7C}",
       "DurationType": "OneShot",
-      "DurationMin": "0.17795962",
-      "DurationMax": "0.19975294",
-      "MediaRefs": [
-       {
-        "Id": "438067580"
-       }
-      ]
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    },
@@ -4216,7 +4278,7 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{19DB72FA-F071-5A58-6749-834F2592DF0A}",
+    "Hash": "{4721C2B5-45E7-14F7-306A-CF70E5396C1D}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
@@ -5596,6 +5658,6 @@
     ]
    }
   ],
-  "FileHash": "{1B5B859F-DE35-5765-9EAA-E7BA2264FE72}"
+  "FileHash": "{B299898D-BEA4-F95F-370D-2207C6ECF51C}"
  }
 }

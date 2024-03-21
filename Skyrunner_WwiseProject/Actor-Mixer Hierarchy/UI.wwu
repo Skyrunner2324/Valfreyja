@@ -55,6 +55,11 @@
 						</Sound>
 						<Sound Name="ui_pause" ID="{E0951876-2175-45DB-85A3-BEEF4CA43C1F}" ShortID="39230111">
 							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-2</Value>
@@ -522,7 +527,22 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="ui_confirm" ID="{500C60E6-B3C0-443C-B7CF-103A194A0701}" ShortID="1009317571">
 							<PropertyList>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -578,6 +598,9 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="UI_confirm_01" ID="{05B817DA-890E-43AE-998C-8A56EE7B0506}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>UI\UI_confirm_01.wav</AudioFile>
 											<MediaIDList>
@@ -896,6 +919,64 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="ui_back_02" ID="{DC60159C-48E9-424F-ABCD-ED2B782C7E5F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ui_pause_02" ID="{0E6FDA78-5DA5-4311-B80E-7D90F842A60F}" ShortID="72440173">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ui_pause_02" ID="{9799372A-1DAE-490A-815B-A590AC36EFD5}">
+									<Language>SFX</Language>
+									<AudioFile>UI\ui_pause_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="240445589"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ui_pause_02" ID="{9799372A-1DAE-490A-815B-A590AC36EFD5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ui_unpause_02" ID="{BEB7DBA4-15A9-414E-B302-D0BCE4FDF98F}" ShortID="817804062">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ui_unpause_02" ID="{BFE478A7-3246-425D-89A0-EAB4FECB4C30}">
+									<Language>SFX</Language>
+									<AudioFile>UI\ui_unpause_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1054044112"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ui_unpause_02" ID="{BFE478A7-3246-425D-89A0-EAB4FECB4C30}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

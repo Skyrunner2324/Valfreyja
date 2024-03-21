@@ -2833,6 +2833,97 @@
 						</BlendContainer>
 					</ChildrenList>
 				</Folder>
+				<RandomSequenceContainer Name="NPC_Enemy_Speaks" ID="{631B8E53-79D9-4D13-8EFB-9DE21FCA690A}" ShortID="425202276">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-15</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Kill_Humans_Vox" ID="{45FBFC81-7429-457A-8B68-46256F35279F}" ShortID="478203974">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Kill_Humans_Vox" ID="{D539A73E-2B6F-4F20-BB18-DCC0B4AD52A9}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.187773868167957"/>
+										<Property Name="FadeOutShape" Type="int16" Value="1"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.850672523973017"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Enemies\Kill_Humans_Vox.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="64017903"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Kill_Humans_Vox" ID="{D539A73E-2B6F-4F20-BB18-DCC0B4AD52A9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Transform01_Vox" ID="{8A3A92B9-06F5-4645-AE4A-162D7BE17789}" ShortID="658597074">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Transform01_Vox" ID="{BCBD6164-F671-4478-AB69-16E64633D910}">
+									<Language>SFX</Language>
+									<AudioFile>Enemies\Transform01_Vox.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="76110187"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Transform01_Vox" ID="{BCBD6164-F671-4478-AB69-16E64633D910}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Destroy02_Vox" ID="{E824833B-14AF-4A13-B582-E1EFB61898E5}" ShortID="419548506">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Destroy02_Vox" ID="{EBB03955-0F8B-496D-8D19-35CD85A8485C}">
+									<Language>SFX</Language>
+									<AudioFile>Enemies\Destroy02_Vox.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="904213721"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Destroy02_Vox" ID="{EBB03955-0F8B-496D-8D19-35CD85A8485C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

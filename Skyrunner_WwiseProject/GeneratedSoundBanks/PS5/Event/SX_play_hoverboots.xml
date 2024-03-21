@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{9DBB14E7-1967-4DFE-664E-A94A26AF04BD}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{A5715E9A-E65F-C162-62D2-711E8A68467F}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
@@ -11,6 +11,11 @@
 					<Path>Media/596869245.wem</Path>
 					<CachePath>SFX/Player_Movement/player_movement_aerial_073B4D0C.wem</CachePath>
 				</File>
+				<File Id="694258383" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>player_movement_wallslide.wav</ShortName>
+					<Path>Media/694258383.wem</Path>
+					<CachePath>SFX/player_movement_wallslide_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="1023074526" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\wind_speed.wav</ShortName>
 					<Path>Media/1023074526.wem</Path>
@@ -19,12 +24,12 @@
 				<File Id="1056072145" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Hoverboots\hoverboots_on_rail_loop.wav</ShortName>
 					<Path>Media/1056072145.wem</Path>
-					<CachePath>SFX/Hoverboots/hoverboots_on_rail_loop_9C43FCB0.wem</CachePath>
+					<CachePath>SFX/Hoverboots/hoverboots_on_rail_loop_154F2566.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="768480562" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\hoverboots_on_rail_loop\Parametric EQ (Custom)" GUID="{795F1578-DFEF-4A0F-995B-DC9BEE878FD0}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="768480562" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\player_movement_wallrun\hoverboots_on_rail_loop\Parametric EQ (Custom)" GUID="{795F1578-DFEF-4A0F-995B-DC9BEE878FD0}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</Custom>
 				<ShareSets>
 					<Plugin Id="2539557199" Name="Treble" ObjectPath="\Effects\Factory Effects\Flanger\Flanging\Treble" GUID="{FB516F18-AA49-4B92-BC11-FA23E8CC59B4}" LibName="Wwise Flanger" LibId="8192003"/>
@@ -34,6 +39,7 @@
 				<Event Id="527139965" Name="SX_play_hoverboots" ObjectPath="\Events\Hoverboots\Hoverboots\SX_play_hoverboots" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="596869245"/>
+						<MediaRef Id="694258383"/>
 						<MediaRef Id="1023074526"/>
 						<MediaRef Id="1056072145"/>
 					</MediaRefs>
@@ -54,5 +60,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{84B98EA8-11A1-EB33-0DCE-62E8355668C9}</FileHash>
+	<FileHash>{DA665167-AE06-9FE5-F082-C3E1F935349A}</FileHash>
 </SoundBanksInfo>
