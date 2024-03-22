@@ -236,7 +236,7 @@
 																<PointList>
 																	<Point>
 																		<XPos>-1</XPos>
-																		<YPos>70</YPos>
+																		<YPos>62</YPos>
 																		<Flags>5</Flags>
 																		<SegmentShape>Log1</SegmentShape>
 																	</Point>
@@ -248,7 +248,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>1</XPos>
-																		<YPos>69</YPos>
+																		<YPos>58</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -602,17 +602,17 @@
 																		<PointList>
 																			<Point>
 																				<XPos>-1</XPos>
-																				<YPos>-37</YPos>
+																				<YPos>67</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>0.00207</XPos>
-																				<YPos>-100</YPos>
+																				<XPos>-0</XPos>
+																				<YPos>0</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
 																				<XPos>1</XPos>
-																				<YPos>-36</YPos>
+																				<YPos>64</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -809,8 +809,8 @@
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>0.00207</XPos>
-																						<YPos>-100</YPos>
+																						<XPos>-0</XPos>
+																						<YPos>0</YPos>
 																						<Flags>0</Flags>
 																					</Point>
 																					<Point>
@@ -1186,7 +1186,52 @@
 												</ObjectList>
 											</ObjectLists>
 										</Bus>
-										<Bus Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}"/>
+										<Bus Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}">
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{B51C42E4-C867-41B5-8753-AB3CA281080B}" ShortID="13506101">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{4D5295EB-62E9-4A36-9D96-3AB1C21FB02C}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-1</XPos>
+																						<YPos>70</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>-0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>70</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</Bus>
 									</ChildrenList>
 									<StateInfo>
 										<StateGroupList>
