@@ -2258,6 +2258,7 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="Valhalla_Voice_Feedback" ID="{615B2024-56E1-4669-9F5F-AFB8424510BC}" ShortID="619834955">
 							<PropertyList>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="5"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -2270,7 +2271,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+									<ObjectRef Name="OBJ 3D" ID="{D0ED54DA-B5B7-4F73-98DD-6D286A925089}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2413,6 +2414,7 @@
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 							</PropertyList>
@@ -2639,6 +2641,7 @@
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
