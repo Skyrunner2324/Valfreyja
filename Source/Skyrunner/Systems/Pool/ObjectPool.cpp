@@ -23,11 +23,21 @@ UObjectPool::UObjectPool()
 
 AActor* UObjectPool::GetObjectPooled(FVector position, FRotator rotation, TSubclassOf<AActor> actorClass)
 {
-	AActor* actorPooled = nullptr;
-	if (copyPoolObject.ContainsByPredicate([&](const AActor* a) { return a->IsA(actorClass.Get()); }))
-		actorPooled = *copyPoolObject.FindByPredicate([&](const AActor* a) { return a->IsA(actorClass.Get()); });
+	check(!copyPoolObject.IsEmpty());
+	if (copyPoolObject.IsEmpty())
+	{
+		SpawnActor(actorClass);
+		return GetObjectPooled(position, rotation, actorClass);
+	}
 
-	if (actorPooled == nullptr)
+
+	auto predicate = [&](const AActor* a) { return a->IsA(actorClass.Get()); };
+	auto find = copyPoolObject.FindByPredicate(predicate);
+	AActor* actorPooled = nullptr;
+	if (find)
+		actorPooled = *find;
+
+	if (!actorPooled)
 	{
 		SpawnActor(actorClass);
 		return GetObjectPooled(position, rotation, actorClass);
