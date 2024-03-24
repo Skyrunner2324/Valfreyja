@@ -9496,6 +9496,8 @@
 															<PropertyList>
 																<Property Name="DestinationContextType" Type="int16" Value="2"/>
 																<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
+																<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+																<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 																<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 																<Property Name="SourceContextType" Type="int16" Value="2"/>
 															</PropertyList>
@@ -9507,7 +9509,24 @@
 																	<ObjectRef Name="C3_Flow" ID="{0C3C37D6-2931-4C7E-A5A8-14F749755CA0}" WorkUnitID="{97B9C5CD-8975-4396-B94B-6580A54082A0}"/>
 																</Reference>
 															</ReferenceList>
-															<TransitionInfo/>
+															<TransitionInfo>
+																<SourceFadeOut>
+																	<MusicFade Name="Source Fade-out" ID="{41EE4F53-FF1B-4F15-AE8D-59950A576E85}">
+																		<PropertyList>
+																			<Property Name="FadeOffset" Type="Real64" Value="1"/>
+																			<Property Name="FadeTime" Type="Real64" Value="1"/>
+																			<Property Name="FadeType" Type="int16" Value="1"/>
+																		</PropertyList>
+																	</MusicFade>
+																</SourceFadeOut>
+																<DestinationFadeIn>
+																	<MusicFade Name="Destination Fade-in" ID="{BF5F704A-AD4A-4D5D-AA29-7484C284CFBD}">
+																		<PropertyList>
+																			<Property Name="FadeTime" Type="Real64" Value="1"/>
+																		</PropertyList>
+																	</MusicFade>
+																</DestinationFadeIn>
+															</TransitionInfo>
 														</MusicTransition>
 													</ChildrenList>
 													<TransitionInfo/>
