@@ -10,10 +10,8 @@
 				<ActorMixer Name="NPC_Feedback_MainMixer" ID="{221792EF-7C77-4FB7-B8EC-60D973ABD514}" ShortID="858129276">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
-						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -121,7 +119,6 @@
 										<Value>3</Value>
 									</ValueList>
 								</Property>
-								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
@@ -2258,7 +2255,7 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="Valhalla_Voice_Feedback" ID="{615B2024-56E1-4669-9F5F-AFB8424510BC}" ShortID="619834955">
 							<PropertyList>
-								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="5"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -2414,33 +2411,26 @@
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
-								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<Custom CreatedFrom="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}">
-										<Attenuation Name="ENV_Other_Att (Custom)" ID="{AA288264-A573-455C-98EE-114BAE6A90C9}" ShortID="586493373">
+									<Custom CreatedFrom="{7B686B69-B316-49E7-A315-368AD1270EA1}">
+										<Attenuation Name="Door_Att (Custom)" ID="{ABADA0B1-8BE1-49CD-B228-63804014DDE1}" ShortID="319178535">
 											<PropertyList>
 												<Property Name="ConeAttenuation" Type="Real64">
 													<ValueList>
 														<Value>-4</Value>
 													</ValueList>
 												</Property>
-												<Property Name="ConeInnerAngle" Type="int32" Value="75"/>
-												<Property Name="ConeOuterAngle" Type="int32" Value="115"/>
-												<Property Name="ConeUse" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
+												<Property Name="ConeOuterAngle" Type="int32" Value="90"/>
 												<Property Name="RadiusMax" Type="Real64" Value="10000"/>
 											</PropertyList>
 											<CurveUsageInfoList>
 												<VolumeDryUsage>
 													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-														<Curve Name="VolumeDry" ID="{270248EA-5DC9-4F1C-89B5-27862F20D42A}">
+														<Curve Name="VolumeDry" ID="{AB8F9071-47A6-4E63-B6EB-7C073855C537}">
 															<PropertyList>
 																<Property Name="Flags" Type="int32" Value="3"/>
 															</PropertyList>
@@ -2452,8 +2442,8 @@
 																	<SegmentShape>Log3</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>3982.4997</XPos>
-																	<YPos>-2.878</YPos>
+																	<XPos>3995.92252</XPos>
+																	<YPos>-4.0997</YPos>
 																	<Flags>0</Flags>
 																</Point>
 																<Point>
@@ -2473,7 +2463,7 @@
 												</VolumeWetUserUsage>
 												<LowPassFilterUsage>
 													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-														<Curve Name="LowPassFilter" ID="{B8CFA71A-DFE2-465F-BD49-EC1C91260275}">
+														<Curve Name="LowPassFilter" ID="{C1EE2233-1FAE-4C65-9BAF-7123B2E823D4}">
 															<PropertyList>
 																<Property Name="Flags" Type="int32" Value="65537"/>
 															</PropertyList>
@@ -2503,7 +2493,7 @@
 												</HighPassFilterUsage>
 												<SpreadUsage>
 													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-														<Curve Name="Spread" ID="{FE550C7E-44CA-44EE-9071-5FD9FC3838C6}">
+														<Curve Name="Spread" ID="{0AB9D1AE-449D-482B-822D-F7BD5C2D1B81}">
 															<PropertyList>
 																<Property Name="Flags" Type="int32" Value="1"/>
 															</PropertyList>
@@ -2512,15 +2502,16 @@
 																	<XPos>0</XPos>
 																	<YPos>0</YPos>
 																	<Flags>5</Flags>
+																	<SegmentShape>Exp3</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>4544.73262</XPos>
-																	<YPos>100</YPos>
+																	<XPos>0.001</XPos>
+																	<YPos>75</YPos>
 																	<Flags>0</Flags>
 																</Point>
 																<Point>
 																	<XPos>10000</XPos>
-																	<YPos>100</YPos>
+																	<YPos>75</YPos>
 																	<Flags>37</Flags>
 																</Point>
 															</PointList>
@@ -2641,31 +2632,24 @@
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
-								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<Custom CreatedFrom="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}">
-										<Attenuation Name="ENV_Other_Att (Custom)" ID="{8877F492-C8A2-40C6-933A-2F0B906AD9C2}" ShortID="390397336">
+									<Custom CreatedFrom="{7B686B69-B316-49E7-A315-368AD1270EA1}">
+										<Attenuation Name="Door_Att (Custom)" ID="{AAA9E552-6EBF-4D48-8C7B-325D9A959B6B}" ShortID="196142584">
 											<PropertyList>
 												<Property Name="ConeAttenuation" Type="Real64">
 													<ValueList>
 														<Value>-4</Value>
 													</ValueList>
 												</Property>
-												<Property Name="ConeInnerAngle" Type="int32" Value="75"/>
-												<Property Name="ConeOuterAngle" Type="int32" Value="115"/>
-												<Property Name="ConeUse" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
+												<Property Name="ConeOuterAngle" Type="int32" Value="90"/>
 												<Property Name="RadiusMax" Type="Real64" Value="10000"/>
 											</PropertyList>
 											<CurveUsageInfoList>
 												<VolumeDryUsage>
 													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-														<Curve Name="VolumeDry" ID="{BA3B2FCF-1DBD-49EC-BA54-4E81F0576248}">
+														<Curve Name="VolumeDry" ID="{71FF3FF0-0B85-46DC-97FF-216B12BDE7DE}">
 															<PropertyList>
 																<Property Name="Flags" Type="int32" Value="3"/>
 															</PropertyList>
@@ -2698,7 +2682,7 @@
 												</VolumeWetUserUsage>
 												<LowPassFilterUsage>
 													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-														<Curve Name="LowPassFilter" ID="{A6A94956-EB32-482C-AE8D-E78D83206D20}">
+														<Curve Name="LowPassFilter" ID="{77C6570B-4360-4869-9A7E-D6FE1EAA5818}">
 															<PropertyList>
 																<Property Name="Flags" Type="int32" Value="65537"/>
 															</PropertyList>
@@ -2728,7 +2712,7 @@
 												</HighPassFilterUsage>
 												<SpreadUsage>
 													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-														<Curve Name="Spread" ID="{22E3463C-CDCA-4CAB-B14E-A8EEB71A9AFF}">
+														<Curve Name="Spread" ID="{7903C3F5-A83F-4BA2-A9B7-E06DA306A368}">
 															<PropertyList>
 																<Property Name="Flags" Type="int32" Value="1"/>
 															</PropertyList>
@@ -2737,15 +2721,16 @@
 																	<XPos>0</XPos>
 																	<YPos>0</YPos>
 																	<Flags>5</Flags>
+																	<SegmentShape>Exp3</SegmentShape>
 																</Point>
 																<Point>
-																	<XPos>4544.73262</XPos>
-																	<YPos>100</YPos>
+																	<XPos>0.001</XPos>
+																	<YPos>75</YPos>
 																	<Flags>0</Flags>
 																</Point>
 																<Point>
 																	<XPos>10000</XPos>
-																	<YPos>100</YPos>
+																	<YPos>75</YPos>
 																	<Flags>37</Flags>
 																</Point>
 															</PointList>
@@ -2843,9 +2828,10 @@
 				</Folder>
 				<RandomSequenceContainer Name="NPC_Enemy_Speaks" ID="{631B8E53-79D9-4D13-8EFB-9DE21FCA690A}" ShortID="425202276">
 					<PropertyList>
+						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-15</Value>
+								<Value>-96</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
