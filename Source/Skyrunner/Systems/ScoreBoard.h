@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Score.h"
 #include "ScoreBoard.generated.h"
 
 UCLASS()
@@ -16,16 +15,16 @@ public:
 	// Sets default values for this actor's properties
 	AScoreBoard();
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
-		AScore* BestScore = nullptr;
+		double BestScore = 0.f;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
-		AScore* CurrentScore = nullptr;
+		double CurrentScore = 0.f;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
-		TArray<AScore*> ScoreBoard;
+		TArray<double> ScoreBoard;
 
-	//UFUNCTION(BlueprintCallable)
-	//	void SortScoreBoard();
+	UFUNCTION(BlueprintCallable)
+		void SortScoreBoard();
 
 protected:
 	// Called when the game starts or when spawned
