@@ -12,6 +12,11 @@
 					<ChildrenList>
 						<Bus Name="MUSIC Master" ID="{D7372867-B444-4F36-A355-173A46D13138}">
 							<PropertyList>
+								<Property Name="BusChannelConfig" Type="int32">
+									<ValueList>
+										<Value>3840</Value>
+									</ValueList>
+								</Property>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
 										<Value>-5</Value>
@@ -169,6 +174,68 @@
 										</AuxBus>
 									</ChildrenList>
 								</AuxBus>
+								<Bus Name="Kick_Bus" ID="{B5B48217-C5B6-4732-BA78-4C845E526E1D}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+											<ObjectRef Name="Kick_Meter" ID="{F60F1939-BF4D-4E8B-B75A-F49C8D833CDA}" WorkUnitID="{8BD86EFF-55C8-46D2-960A-F45D68172A31}"/>
+										</Reference>
+									</ReferenceList>
+								</Bus>
+								<Bus Name="Sidechain_Bus" ID="{E2A98F34-1E8A-4C87-98AE-789E479189CC}">
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{5ECF3B9F-7469-4139-A3E9-C250DBEFA187}" ShortID="586792217">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="Sidechain_Kick" ID="{707723CD-FAC9-4E9F-8166-DC9C2E02FD42}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{8C32149A-99D2-4EBB-B878-53687217268D}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>-48</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																				<SegmentShape>Exp3</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>-30</XPos>
+																				<YPos>-0</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp2</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>-19.94973</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Log2</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</Bus>
+								<Bus Name="Non_Sidechain_Bus" ID="{59240D38-5BD1-41CB-9D2A-DD90B6C36064}"/>
 							</ChildrenList>
 							<StateInfo>
 								<StatePropertyList>
