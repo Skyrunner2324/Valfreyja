@@ -8,7 +8,15 @@
 			</PropertyList>
 			<ChildrenList>
 				<ActorMixer Name="AmbienceMainMixer" ID="{3A07317B-A634-4417-A587-6E815EE6CC16}" ShortID="906141550">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 						</Reference>
@@ -17,200 +25,17 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<SwitchContainer Name="Ambience_Switch" ID="{A948B150-97B6-4EF5-9C86-965468A4AAE6}" ShortID="13096652">
-							<PropertyList>
-								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-								</Reference>
-								<Reference Name="DefaultSwitchOrState">
-									<ObjectRef Name="None" ID="{0F92B5B9-7AD4-4529-BF3A-A1000EF93B39}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-								</Reference>
-								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="Ambiance_States" ID="{FA5C0A06-CC03-439E-A634-38F9B1DCA444}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="amb_light_wind" ID="{5A2AE0A0-6025-48B7-941A-4B61EBC8A246}" ShortID="521508577">
-									<PropertyList>
-										<Property Name="Color" Type="int16" Value="20"/>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="OverrideColor" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="ENV AMB Exterior" ID="{AA242E37-0C3D-41A5-8071-0C92A0F0323A}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="amb_meteo_wind" ID="{CA281ECB-FF78-4C6E-AFD4-A7175A400FCF}">
-											<PropertyList>
-												<Property Name="OverrideColor" Type="bool" Value="True"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Placeholders\amb_meteo_wind.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="734031120"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="amb_meteo_wind" ID="{CA281ECB-FF78-4C6E-AFD4-A7175A400FCF}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="ambience_wind" ID="{CBF6CD0E-98C8-4CB7-A576-5493B0B1A9A2}" ShortID="972641980">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>150</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="ENV AMB Exterior" ID="{AA242E37-0C3D-41A5-8071-0C92A0F0323A}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Ambience_Cave" ID="{C37060D3-380D-46BA-9EDE-CF1E95CF5004}">
-											<Language>SFX</Language>
-											<AudioFile>Ambience\Ambience_Cave.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="175282985"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Ambience_Cave" ID="{C37060D3-380D-46BA-9EDE-CF1E95CF5004}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="amb_cave" ID="{DA29B164-B5B0-48D1-8F1A-DC4772DD8A75}" ShortID="462062291">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="ENV AMB Exterior" ID="{AA242E37-0C3D-41A5-8071-0C92A0F0323A}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Cave_Bats_Ambience_ODY-1229-067" ID="{4A9B6D92-A576-4DF8-9946-44C5D4FB5FC7}">
-											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="1.55449499284692"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Ambience\Cave_Bats_Ambience_ODY-1229-067.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="282791769"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Cave_Bats_Ambience_ODY-1229-067" ID="{4A9B6D92-A576-4DF8-9946-44C5D4FB5FC7}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="ambience_mountain_wind" ID="{20D79EC5-38AB-46D7-A82F-FDB318F95ABE}" ShortID="996154969">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="ambience_mountain_wind" ID="{E7EFB4F9-74B7-47FC-AF9E-29B3CD70833D}">
-											<Language>SFX</Language>
-											<AudioFile>Ambience\ambience_mountain_wind.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="716141826"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="ambience_mountain_wind" ID="{E7EFB4F9-74B7-47FC-AF9E-29B3CD70833D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-							<GroupingInfo>
-								<GroupingBehaviorList>
-									<GroupingBehavior>
-										<ItemRef Name="ambience_wind" ID="{CBF6CD0E-98C8-4CB7-A576-5493B0B1A9A2}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="amb_cave" ID="{DA29B164-B5B0-48D1-8F1A-DC4772DD8A75}"/>
-										<PropertyList>
-											<Property Name="FadeOutTime" Type="Real64">
-												<ValueList>
-													<Value>1</Value>
-												</ValueList>
-											</Property>
-										</PropertyList>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="amb_light_wind" ID="{5A2AE0A0-6025-48B7-941A-4B61EBC8A246}"/>
-										<PropertyList>
-											<Property Name="FadeInTime" Type="Real64">
-												<ValueList>
-													<Value>5</Value>
-												</ValueList>
-											</Property>
-										</PropertyList>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="ambience_mountain_wind" ID="{20D79EC5-38AB-46D7-A82F-FDB318F95ABE}"/>
-									</GroupingBehavior>
-								</GroupingBehaviorList>
-								<GroupingList>
-									<Grouping>
-										<SwitchRef Name="Ext" ID="{784F3057-5FEA-46E9-AC78-8E8DBAA9953E}"/>
-										<ItemList>
-											<ItemRef Name="amb_light_wind" ID="{5A2AE0A0-6025-48B7-941A-4B61EBC8A246}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Wind" ID="{A20A928E-9365-4639-A435-AB8770FD7425}"/>
-										<ItemList>
-											<ItemRef Name="ambience_wind" ID="{CBF6CD0E-98C8-4CB7-A576-5493B0B1A9A2}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="None" ID="{0F92B5B9-7AD4-4529-BF3A-A1000EF93B39}"/>
-										<ItemList>
-											<ItemRef Name="ambience_mountain_wind" ID="{20D79EC5-38AB-46D7-A82F-FDB318F95ABE}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Cave" ID="{A2A982D1-6137-48DC-A3D4-E75FF950ABC2}"/>
-										<ItemList>
-											<ItemRef Name="amb_cave" ID="{DA29B164-B5B0-48D1-8F1A-DC4772DD8A75}"/>
-										</ItemList>
-									</Grouping>
-								</GroupingList>
-							</GroupingInfo>
-						</SwitchContainer>
 						<RandomSequenceContainer Name="Alien_Birds" ID="{ADC43C0E-23C5-458D-B17C-60E87C9214A4}" ShortID="462545339">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -293,7 +118,15 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<Sound Name="ambiance_crackling_slope" ID="{B3D1B686-F77A-4FBE-B992-193092DB5775}" ShortID="909586899">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 								</Reference>
@@ -315,6 +148,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="ambiance_creepy" ID="{10C27066-05A9-45E0-9DE5-765CD843ED97}" ShortID="428854291">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -337,6 +173,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="ambiance_mechanism" ID="{E8740495-7FB3-4DFB-899E-A276370C7D2A}" ShortID="164568206">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -359,6 +198,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="ambiance_wind_heavy" ID="{641BCA83-4FFC-4E55-951C-863A37FE4396}" ShortID="1016180850">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -381,6 +223,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="ambiance_wind_light" ID="{C5C4E6B0-3C7D-4B5E-AC77-CB2E78B7719A}" ShortID="138456014">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -403,6 +248,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="ambiance_wind_trees" ID="{EEAACB08-961D-40AB-A980-1F400A6DA054}" ShortID="826962240">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -425,6 +273,14 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="ambience_mountain_wind" ID="{9DA56F62-DF35-4A1F-B1FF-40F6ACF27CFC}" ShortID="94347972">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -438,7 +294,7 @@
 									<Language>SFX</Language>
 									<AudioFile>Ambience\ambience_mountain_wind.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="716141826"/>
+										<MediaID ID="799016928"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -446,6 +302,194 @@
 								<ActiveSource Name="ambience_mountain_wind" ID="{FF030298-2477-401A-A403-CC8D23886689}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="amb_cave" ID="{DA29B164-B5B0-48D1-8F1A-DC4772DD8A75}" ShortID="462062291">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cave_Bats_Ambience_ODY-1229-067" ID="{4A9B6D92-A576-4DF8-9946-44C5D4FB5FC7}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.55449499284692"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Ambience\Cave_Bats_Ambience_ODY-1229-067.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="282791769"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cave_Bats_Ambience_ODY-1229-067" ID="{4A9B6D92-A576-4DF8-9946-44C5D4FB5FC7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="Ambience2dMixer" ID="{C264072C-9AD7-4F37-B781-C6273EEB77AB}" ShortID="1046050562">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SwitchContainer Name="Ambience_Switch" ID="{A948B150-97B6-4EF5-9C86-965468A4AAE6}" ShortID="13096652">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="None" ID="{0F92B5B9-7AD4-4529-BF3A-A1000EF93B39}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="ENV AMB Exterior" ID="{AA242E37-0C3D-41A5-8071-0C92A0F0323A}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Ambiance_States" ID="{FA5C0A06-CC03-439E-A634-38F9B1DCA444}" WorkUnitID="{CB824820-6F51-48E7-9E09-8AD34C27AA8D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="amb_light_wind" ID="{5A2AE0A0-6025-48B7-941A-4B61EBC8A246}" ShortID="521508577">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="20"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="ENV AMB Exterior" ID="{AA242E37-0C3D-41A5-8071-0C92A0F0323A}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="amb_meteo_wind" ID="{CA281ECB-FF78-4C6E-AFD4-A7175A400FCF}">
+											<PropertyList>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Placeholders\amb_meteo_wind.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="734031120"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="amb_meteo_wind" ID="{CA281ECB-FF78-4C6E-AFD4-A7175A400FCF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ambience_wind" ID="{CBF6CD0E-98C8-4CB7-A576-5493B0B1A9A2}" ShortID="972641980">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>150</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="ENV AMB Exterior" ID="{AA242E37-0C3D-41A5-8071-0C92A0F0323A}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambience_Cave" ID="{C37060D3-380D-46BA-9EDE-CF1E95CF5004}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\Ambience_Cave.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="175282985"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambience_Cave" ID="{C37060D3-380D-46BA-9EDE-CF1E95CF5004}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ambience_mountain_wind" ID="{20D79EC5-38AB-46D7-A82F-FDB318F95ABE}" ShortID="996154969">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ambience_mountain_wind" ID="{E7EFB4F9-74B7-47FC-AF9E-29B3CD70833D}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\ambience_mountain_wind.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="716141826"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ambience_mountain_wind" ID="{E7EFB4F9-74B7-47FC-AF9E-29B3CD70833D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="ambience_wind" ID="{CBF6CD0E-98C8-4CB7-A576-5493B0B1A9A2}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="amb_light_wind" ID="{5A2AE0A0-6025-48B7-941A-4B61EBC8A246}"/>
+										<PropertyList>
+											<Property Name="FadeInTime" Type="Real64">
+												<ValueList>
+													<Value>5</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="ambience_mountain_wind" ID="{20D79EC5-38AB-46D7-A82F-FDB318F95ABE}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Ext" ID="{784F3057-5FEA-46E9-AC78-8E8DBAA9953E}"/>
+										<ItemList>
+											<ItemRef Name="amb_light_wind" ID="{5A2AE0A0-6025-48B7-941A-4B61EBC8A246}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wind" ID="{A20A928E-9365-4639-A435-AB8770FD7425}"/>
+										<ItemList>
+											<ItemRef Name="ambience_wind" ID="{CBF6CD0E-98C8-4CB7-A576-5493B0B1A9A2}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="None" ID="{0F92B5B9-7AD4-4529-BF3A-A1000EF93B39}"/>
+										<ItemList>
+											<ItemRef Name="ambience_mountain_wind" ID="{20D79EC5-38AB-46D7-A82F-FDB318F95ABE}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
