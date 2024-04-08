@@ -209,7 +209,7 @@
 																			</Point>
 																			<Point>
 																				<XPos>-30</XPos>
-																				<YPos>-0</YPos>
+																				<YPos>0</YPos>
 																				<Flags>0</Flags>
 																				<SegmentShape>Exp2</SegmentShape>
 																			</Point>
@@ -1275,17 +1275,29 @@
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 									<ChildrenList>
-										<AuxBus Name="REV_LargeRoom" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
+										<AuxBus Name="REV_Large" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 											<ReferenceList>
 												<Reference Name="Effect0">
-													<Custom>
-														<Effect Name="RoomVerb (Custom)" ID="{140088B9-275E-409D-AC97-CA7FF6C8DCF0}" ShortID="33444476" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+													<Custom CreatedFrom="{B35D266A-CE6E-40A1-B197-14C12F9C21B1}">
+														<Effect Name="Hall_Guns (Custom)" ID="{78ECAA45-7CB6-47A6-8807-086FF39B4FE0}" ShortID="290471130" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 															<PropertyList>
-																<Property Name="DecayTime" Type="Real32" Value="4.4"/>
-																<Property Name="DryLevel" Type="Real32" Value="-26.3"/>
-																<Property Name="ERPattern" Type="int32" Value="5"/>
-																<Property Name="ReverbLevel" Type="Real32" Value="-5"/>
-																<Property Name="RoomSize" Type="Real32" Value="100"/>
+																<Property Name="DecayTime" Type="Real32" Value="4.8"/>
+																<Property Name="Density" Type="Real32" Value="70"/>
+																<Property Name="ERLevel" Type="Real32" Value="-16"/>
+																<Property Name="ERPattern" Type="int32" Value="12"/>
+																<Property Name="Filter1Freq" Type="Real32" Value="590"/>
+																<Property Name="Filter1Gain" Type="Real32" Value="1"/>
+																<Property Name="Filter1InsertPos" Type="int32" Value="2"/>
+																<Property Name="Filter2Freq" Type="Real32" Value="9860"/>
+																<Property Name="Filter2Gain" Type="Real32" Value="-2.5"/>
+																<Property Name="Filter3Freq" Type="Real32" Value="8440"/>
+																<Property Name="Filter3Gain" Type="Real32" Value="1"/>
+																<Property Name="HFDamping" Type="Real32" Value="3"/>
+																<Property Name="PreDelay" Type="Real32" Value="137"/>
+																<Property Name="Quality" Type="int32" Value="14"/>
+																<Property Name="ReverbLevel" Type="Real32" Value="-21"/>
+																<Property Name="RoomShape" Type="Real32" Value="55"/>
+																<Property Name="RoomSize" Type="Real32" Value="45"/>
 															</PropertyList>
 														</Effect>
 													</Custom>
@@ -1377,19 +1389,26 @@
 												</CustomStateList>
 											</StateInfo>
 										</AuxBus>
-										<AuxBus Name="REV_SmallRoom" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
+										<AuxBus Name="REV_Arena" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
 											<ReferenceList>
 												<Reference Name="Effect0">
-													<Custom>
-														<Effect Name="Matrix Reverb (Custom)" ID="{46B2EC8C-FD61-4366-9674-9524E30CFFA7}" ShortID="544066397" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3"/>
+													<Custom CreatedFrom="{41EEE722-3009-4B3F-8820-F414623783E3}">
+														<Effect Name="Small_Tiled_Room1 (Custom)" ID="{3EAD5560-D0B7-45F6-8664-801516D32485}" ShortID="667118077" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+															<PropertyList>
+																<Property Name="HFRatio" Type="Real32" Value="8"/>
+																<Property Name="NumberOfDelays" Type="int32" Value="12"/>
+																<Property Name="ReverbTime" Type="Real32" Value="1.5"/>
+																<Property Name="WetLevel" Type="Real32" Value="-25"/>
+															</PropertyList>
+														</Effect>
 													</Custom>
 												</Reference>
 											</ReferenceList>
 										</AuxBus>
-										<AuxBus Name="REV_Cave" ID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
+										<AuxBus Name="REV_Couloir" ID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
 											<ReferenceList>
 												<Reference Name="Effect0" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
-													<ObjectRef Name="Tunnel1" ID="{CC44B890-9865-4157-965F-86FED27BC4C6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													<ObjectRef Name="Medium_Room1" ID="{71B802A7-03E2-4998-B241-B2B84FE9DDFF}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 												</Reference>
 											</ReferenceList>
 										</AuxBus>

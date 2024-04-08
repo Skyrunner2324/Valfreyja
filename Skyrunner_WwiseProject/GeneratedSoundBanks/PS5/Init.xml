@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{B9F58131-C329-7591-7493-89FA10A93FE0}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{BDA8AA95-B7F8-A79A-CA00-CD737057A733}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<Custom>
-					<Plugin Id="21631550" Name="Parametric EQ (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_LargeRoom\Parametric EQ (Custom)" GUID="{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="33444476" Name="RoomVerb (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_LargeRoom\RoomVerb (Custom)" GUID="{140088B9-275E-409D-AC97-CA7FF6C8DCF0}" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="21631550" Name="Parametric EQ (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large\Parametric EQ (Custom)" GUID="{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="290471130" Name="Hall_Guns (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large\Hall_Guns (Custom)" GUID="{78ECAA45-7CB6-47A6-8807-086FF39B4FE0}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="332815239" Name="RoomVerb (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC\REV_LargeRoom_01\RoomVerb (Custom)" GUID="{29915F24-228E-4788-92BC-C759095F9F4E}" LibName="Wwise RoomVerb" LibId="7733251"/>
-					<Plugin Id="544066397" Name="Matrix Reverb (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_SmallRoom\Matrix Reverb (Custom)" GUID="{46B2EC8C-FD61-4366-9674-9524E30CFFA7}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="585087015" Name="Matrix Reverb (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC\REV_SmallRoom_01\Matrix Reverb (Custom)" GUID="{88235782-51D1-4E5C-84CD-64C254857225}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="667118077" Name="Small_Tiled_Room1 (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Arena\Small_Tiled_Room1 (Custom)" GUID="{3EAD5560-D0B7-45F6-8664-801516D32485}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="854493452" Name="Parametric EQ (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC\REV_LargeRoom_01\Parametric EQ (Custom)" GUID="{450F407D-271F-4103-B84B-90F5ED24B203}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="945211497" Name="Underwater_Echoes (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Weapon\Underwater_Echoes (Custom)" GUID="{E99B9354-6E3C-40D3-B57E-B74097729115}" LibName="Wwise Stereo Delay" LibId="8847363"/>
 				</Custom>
 				<ShareSets>
 					<Plugin Id="702543456" Name="Tunnel1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Tunnel1" GUID="{CC44B890-9865-4157-965F-86FED27BC4C6}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="1313634581" Name="Kick_Meter" ObjectPath="\Effects\Default Work Unit\Kick_Meter" GUID="{F60F1939-BF4D-4E8B-B75A-F49C8D833CDA}" LibName="Wwise Meter" LibId="8454147"/>
 					<Plugin Id="1842579981" Name="Reflect_Simplified" ObjectPath="\Effects\Factory Reflect\Reflect_Simplified" GUID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" LibName="Wwise Reflect" LibId="11206659"/>
+					<Plugin Id="1904434771" Name="Medium_Room1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Medium_Room1" GUID="{71B802A7-03E2-4998-B241-B2B84FE9DDFF}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="1334442663" Name="Controller_Speaker" ObjectPath="\Audio Devices\Default Work Unit\Controller_Speaker" GUID="{DBAC18E4-4565-4995-8D85-16A16A6DEC90}" LibName="Controller Speaker" LibId="11730951"/>
@@ -39,9 +41,17 @@
 				<Bus Id="2033911932" Name="NPCMaster" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master\NPCMaster" GUID="{94354A62-2693-4A27-B098-F5FDE5B577C5}"/>
 				<Bus Id="2093940462" Name="ENV AMB Interior" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\Environment Master\ENV AMB Interior" GUID="{FAEBE40F-E726-4C02-8A40-76374BDF8140}"/>
 				<Bus Id="2126441370" Name="Environment Master" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\Environment Master" GUID="{93794CDD-D92F-4393-9B36-96AC442DDB90}"/>
+				<Bus Id="2403719364" Name="Non_Sidechain_Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\Non_Sidechain_Bus" GUID="{59240D38-5BD1-41CB-9D2A-DD90B6C36064}"/>
 				<Bus Id="2452310558" Name="WwiseMotion" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\WwiseMotion" GUID="{A725A1F7-24D8-429B-98AE-EDE935A1E857}"/>
 				<Bus Id="2663637017" Name="OBJ 3D" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master\OBJ 3D" GUID="{D0ED54DA-B5B7-4F73-98DD-6D286A925089}"/>
 				<Bus Id="2701788107" Name="PLYR Movement" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Movement" GUID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}"/>
+				<Bus Id="3016197896" Name="Kick_Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\Kick_Bus" GUID="{B5B48217-C5B6-4732-BA78-4C845E526E1D}">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1313634581"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="3115011207" Name="3D OBJ Master" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master" GUID="{A2B2600D-5065-4D3F-90B5-7ACF4F6C103B}"/>
 				<Bus Id="3222323340" Name="SFX Master" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master" GUID="{B22B8F69-015E-4A85-B8EF-A2F0A4E8D1FC}"/>
 				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
@@ -54,6 +64,7 @@
 				</Bus>
 				<Bus Id="3902787355" Name="NPC Feedback" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\3D OBJ Master\NPCMaster\NPC Feedback" GUID="{BFAFF62D-1AF0-4041-8835-DDC8801FFE11}"/>
 				<Bus Id="3976022968" Name="ENV AMB Emitter" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\Environment Master\ENV AMB Emitter" GUID="{245011AE-9CCB-4755-804E-D34FBAF3F0CC}"/>
+				<Bus Id="4034371544" Name="Sidechain_Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\Sidechain_Bus" GUID="{E2A98F34-1E8A-4C87-98AE-789E479189CC}"/>
 				<Bus Id="4287995521" Name="PLYR Feedback" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Feedback" GUID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}"/>
 			</Busses>
 			<AuxBusses>
@@ -65,6 +76,26 @@
 					</PluginRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="2588398148" Name="REV_MUSIC" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC" GUID="{51D0B729-C328-4E6F-B258-E07D3F07A2FE}"/>
+					</AuxBusRefs>
+				</AuxBus>
+				<AuxBus Id="435591300" Name="REV_Couloir" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Couloir" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1904434771"/>
+						</ShareSets>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="1377950732" Name="REV_SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
+					</AuxBusRefs>
+				</AuxBus>
+				<AuxBus Id="641705904" Name="REV_Arena" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Arena" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="667118077"/>
+						</Custom>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="1377950732" Name="REV_SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
 				<AuxBus Id="691483865" Name="REV_LargeRoom_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC\REV_LargeRoom_01" GUID="{53A6AA4A-9B88-40AE-B087-0CA8639947CE}">
@@ -79,17 +110,6 @@
 					</AuxBusRefs>
 				</AuxBus>
 				<AuxBus Id="1377950732" Name="REV_SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
-				<AuxBus Id="1641293181" Name="REV_LargeRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_LargeRoom" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="21631550"/>
-							<PluginRef Id="33444476"/>
-						</Custom>
-					</PluginRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="1377950732" Name="REV_SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
-					</AuxBusRefs>
-				</AuxBus>
 				<AuxBus Id="1713108470" Name="REV_Cave_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC\REV_Cave_01" GUID="{7AAF8EC4-3F60-48A4-945E-D2EC526E7530}">
 					<PluginRefs>
 						<ShareSets>
@@ -110,16 +130,6 @@
 						<AuxBusRef Id="1377950732" Name="REV_SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
 					</AuxBusRefs>
 				</AuxBus>
-				<AuxBus Id="2172616000" Name="REV_Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Cave" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="702543456"/>
-						</ShareSets>
-					</PluginRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="1377950732" Name="REV_SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
-					</AuxBusRefs>
-				</AuxBus>
 				<AuxBus Id="2588398148" Name="REV_MUSIC" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC" GUID="{51D0B729-C328-4E6F-B258-E07D3F07A2FE}"/>
 				<AuxBus Id="2883409121" Name="Early_Reflections_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC\Early_Reflections_01" GUID="{21B58C11-31DA-4F32-B9DD-07CA369F362D}">
 					<PluginRefs>
@@ -131,10 +141,11 @@
 						<AuxBusRef Id="2588398148" Name="REV_MUSIC" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC" GUID="{51D0B729-C328-4E6F-B258-E07D3F07A2FE}"/>
 					</AuxBusRefs>
 				</AuxBus>
-				<AuxBus Id="4125012149" Name="REV_SmallRoom" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_SmallRoom" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
+				<AuxBus Id="3750820532" Name="REV_Large" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<PluginRefs>
 						<Custom>
-							<PluginRef Id="544066397"/>
+							<PluginRef Id="21631550"/>
+							<PluginRef Id="290471130"/>
 						</Custom>
 					</PluginRefs>
 					<AuxBusRefs>
@@ -144,6 +155,7 @@
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="262290038" Name="RTPC_Distance" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Distance" GUID="{EF3CABA9-5812-4B07-97BE-69A25DA3E423}"/>
+				<GameParameter Id="703207264" Name="Sidechain_Kick" ObjectPath="\Game Parameters\Default Work Unit\Mix_Music\Sidechain_Kick" GUID="{707723CD-FAC9-4E9F-8166-DC9C2E02FD42}"/>
 				<GameParameter Id="1006694123" Name="Music_Volume" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Volumes\Music_Volume" GUID="{E99B18A0-3F76-4D04-8C37-D87E540781AA}"/>
 				<GameParameter Id="1524814686" Name="RTPC_Parkour_Flow" ObjectPath="\Game Parameters\Default Work Unit\Parkour\RTPC_Parkour_Flow" GUID="{D4EDFB9F-0AB6-4E18-A9CB-0F34B34DEA44}"/>
 				<GameParameter Id="1564184899" Name="SFX_Volume" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Volumes\SFX_Volume" GUID="{2C10916C-C952-4AB6-B234-07816DF05541}"/>
@@ -346,5 +358,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BEB5D79F-D6E4-7679-6354-3F83A5BC8D31}</FileHash>
+	<FileHash>{47314F21-003F-43CA-104C-8BA897FEC4E5}</FileHash>
 </SoundBanksInfo>
