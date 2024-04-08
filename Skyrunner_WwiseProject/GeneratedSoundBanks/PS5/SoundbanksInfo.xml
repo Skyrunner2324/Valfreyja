@@ -372,7 +372,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="435591300" Type="Bus" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" Language="SFX" Hash="{08CF78E1-1ABC-BF66-534F-F41B31504065}">
+		<SoundBank Id="435591300" Type="Bus" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" Language="SFX" Hash="{7D94654D-C52A-E5EC-F57B-F488AE19B577}">
 			<ObjectPath>REV_Couloir</ObjectPath>
 			<ShortName>REV_Couloir</ShortName>
 			<Path>Bus/REV_Couloir.bnk</Path>
@@ -393,6 +393,16 @@
 					</AuxBusRefs>
 				</AuxBus>
 			</AuxBusses>
+			<StateGroups>
+				<StateGroup Id="3206201398" Name="Reverb_States" ObjectPath="\States\Default Work Unit\Reverb_States" GUID="{1335BED0-6CCC-45E5-9CE4-65918550FB06}">
+					<States>
+						<State Id="680256650" Name="Arena" ObjectPath="\States\Default Work Unit\Reverb_States\Arena" GUID="{D35BDB60-FC6F-461F-A698-9A09DB3C1AAE}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Reverb_States\None" GUID="{C843B14B-4D02-4526-8AEA-45E500B394D8}"/>
+						<State Id="3842894270" Name="Couloir" ObjectPath="\States\Default Work Unit\Reverb_States\Couloir" GUID="{A4DBFCF1-CE50-495F-AE1B-13A0F302E73B}"/>
+						<State Id="4284352190" Name="Large" ObjectPath="\States\Default Work Unit\Reverb_States\Large" GUID="{057D768C-2716-4026-A7C0-F4B42A7F81F5}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 		<SoundBank Id="523232931" Type="Event" GUID="{29088148-6827-4D6A-8542-7D2208093511}" Language="SFX" Hash="{9CD36C15-2F01-5272-2E90-15D3771087F0}">
 			<ObjectPath>Play_TestBeep_Loop</ObjectPath>
@@ -550,7 +560,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="641705904" Type="Bus" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" Language="SFX" Hash="{C44E889D-CAF1-5FA9-178F-EFFD94F64934}">
+		<SoundBank Id="641705904" Type="Bus" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" Language="SFX" Hash="{58E98D2F-F02A-69F4-5D4C-A6314790283C}">
 			<ObjectPath>REV_Arena</ObjectPath>
 			<ShortName>REV_Arena</ShortName>
 			<Path>Bus/REV_Arena.bnk</Path>
@@ -571,6 +581,16 @@
 					</AuxBusRefs>
 				</AuxBus>
 			</AuxBusses>
+			<StateGroups>
+				<StateGroup Id="3206201398" Name="Reverb_States" ObjectPath="\States\Default Work Unit\Reverb_States" GUID="{1335BED0-6CCC-45E5-9CE4-65918550FB06}">
+					<States>
+						<State Id="680256650" Name="Arena" ObjectPath="\States\Default Work Unit\Reverb_States\Arena" GUID="{D35BDB60-FC6F-461F-A698-9A09DB3C1AAE}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Reverb_States\None" GUID="{C843B14B-4D02-4526-8AEA-45E500B394D8}"/>
+						<State Id="3842894270" Name="Couloir" ObjectPath="\States\Default Work Unit\Reverb_States\Couloir" GUID="{A4DBFCF1-CE50-495F-AE1B-13A0F302E73B}"/>
+						<State Id="4284352190" Name="Large" ObjectPath="\States\Default Work Unit\Reverb_States\Large" GUID="{057D768C-2716-4026-A7C0-F4B42A7F81F5}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 		<SoundBank Id="691483865" Type="Bus" GUID="{53A6AA4A-9B88-40AE-B087-0CA8639947CE}" Language="SFX" Hash="{9A1E2D73-FC10-5B4B-8E99-FD56805DE3FB}">
 			<ObjectPath>REV_LargeRoom_01</ObjectPath>
@@ -1085,7 +1105,7 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{BDA8AA95-B7F8-A79A-CA00-CD737057A733}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{D1222C84-69A2-448F-5EA9-A619753789C6}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -1291,6 +1311,14 @@
 						<State Id="84696446" Name="A" ObjectPath="\States\Default Work Unit\Music\Music_Zone\A" GUID="{A2C4D1B0-2D1F-4275-A355-154B8983B6A4}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music\Music_Zone\None" GUID="{8020DD83-D1BB-454B-9683-5AD687222066}"/>
 						<State Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\Music\Music_Zone\Menu" GUID="{013BA24D-2D5A-4A3B-970D-1E27311ADAA7}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3206201398" Name="Reverb_States" ObjectPath="\States\Default Work Unit\Reverb_States" GUID="{1335BED0-6CCC-45E5-9CE4-65918550FB06}">
+					<States>
+						<State Id="680256650" Name="Arena" ObjectPath="\States\Default Work Unit\Reverb_States\Arena" GUID="{D35BDB60-FC6F-461F-A698-9A09DB3C1AAE}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Reverb_States\None" GUID="{C843B14B-4D02-4526-8AEA-45E500B394D8}"/>
+						<State Id="3842894270" Name="Couloir" ObjectPath="\States\Default Work Unit\Reverb_States\Couloir" GUID="{A4DBFCF1-CE50-495F-AE1B-13A0F302E73B}"/>
+						<State Id="4284352190" Name="Large" ObjectPath="\States\Default Work Unit\Reverb_States\Large" GUID="{057D768C-2716-4026-A7C0-F4B42A7F81F5}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="3350070198" Name="Ambiance_States" ObjectPath="\States\Default Work Unit\Ambiance_States" GUID="{FA5C0A06-CC03-439E-A634-38F9B1DCA444}">
@@ -2011,7 +2039,7 @@
 				<Event Id="3390387889" Name="SX_player_dash_regen" ObjectPath="\Events\Player\Feedback\SX_player_dash_regen" GUID="{6D13E3BD-F5FB-4B8B-8184-DB05606BBF7C}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{B8EB9728-5CB7-1D58-7F1C-CDCCC3544842}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{C5B88C53-88E5-EFAC-328D-B8D83E9371F2}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -2229,9 +2257,6 @@
 			</Media>
 			<Events>
 				<Event Id="3441789682" Name="MUS_Play_MainMusic" ObjectPath="\Events\Music\MUS_Play_MainMusic" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" DurationType="Infinite">
-					<AuxBusRefs>
-						<AuxBusRef Id="3750820532" Name="REV_Large" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"/>
-					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="2456631623" Id="84696446" GUID="{A2C4D1B0-2D1F-4275-A355-154B8983B6A4}"/>
@@ -2765,7 +2790,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3750820532" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{6DBA0411-A553-34DE-01C6-3B01240F10D8}">
+		<SoundBank Id="3750820532" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{69606CAE-8ED8-C51E-3EFE-6433EC96DB5F}">
 			<ObjectPath>REV_Large</ObjectPath>
 			<ShortName>REV_Large</ShortName>
 			<Path>Bus/REV_Large.bnk</Path>
@@ -2789,18 +2814,12 @@
 				</AuxBus>
 			</AuxBusses>
 			<StateGroups>
-				<StateGroup Id="1419563690" Name="Music_Selector" ObjectPath="\States\Default Work Unit\Music\Music_Selector" GUID="{9E363DC4-1CA9-4AAF-BFCB-E45F336CC2CE}">
+				<StateGroup Id="3206201398" Name="Reverb_States" ObjectPath="\States\Default Work Unit\Reverb_States" GUID="{1335BED0-6CCC-45E5-9CE4-65918550FB06}">
 					<States>
-						<State Id="348963605" Name="Reverb" ObjectPath="\States\Default Work Unit\Music\Music_Selector\Reverb" GUID="{1A0075FD-1C91-4DCD-B4AC-2029A2632B3A}"/>
-						<State Id="634183254" Name="Reveal" ObjectPath="\States\Default Work Unit\Music\Music_Selector\Reveal" GUID="{BB9E1E42-0DB2-45F5-BDA6-36E798A861B4}"/>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music\Music_Selector\None" GUID="{570EE5A7-8CDA-4FE2-BE60-BD0C6F00B022}"/>
-						<State Id="2149848048" Name="Buildup" ObjectPath="\States\Default Work Unit\Music\Music_Selector\Buildup" GUID="{39C32C1D-49CE-4283-8A04-C9C272E282DE}"/>
-						<State Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\Music\Music_Selector\Menu" GUID="{DB91568E-4183-4FE0-A178-9B6516F9B6BD}"/>
-						<State Id="3037000007" Name="Tuto" ObjectPath="\States\Default Work Unit\Music\Music_Selector\Tuto" GUID="{EE7BD922-D0BA-4C2C-B64B-683F41D24265}"/>
-						<State Id="3352420404" Name="ArenaPhase1" ObjectPath="\States\Default Work Unit\Music\Music_Selector\ArenaPhase1" GUID="{1BB92A01-5C19-4703-8AD4-E4C792DC310B}"/>
-						<State Id="3352420407" Name="ArenaPhase2" ObjectPath="\States\Default Work Unit\Music\Music_Selector\ArenaPhase2" GUID="{CA3B3222-C451-44F1-8FD6-99839F43EBC8}"/>
-						<State Id="3814499265" Name="Explo" ObjectPath="\States\Default Work Unit\Music\Music_Selector\Explo" GUID="{1FE92F27-401B-44A3-BFC0-65F192492AAB}"/>
-						<State Id="4033983175" Name="Breakcore" ObjectPath="\States\Default Work Unit\Music\Music_Selector\Breakcore" GUID="{16E5D430-D692-45B9-B4C9-B90A05172B0B}"/>
+						<State Id="680256650" Name="Arena" ObjectPath="\States\Default Work Unit\Reverb_States\Arena" GUID="{D35BDB60-FC6F-461F-A698-9A09DB3C1AAE}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Reverb_States\None" GUID="{C843B14B-4D02-4526-8AEA-45E500B394D8}"/>
+						<State Id="3842894270" Name="Couloir" ObjectPath="\States\Default Work Unit\Reverb_States\Couloir" GUID="{A4DBFCF1-CE50-495F-AE1B-13A0F302E73B}"/>
+						<State Id="4284352190" Name="Large" ObjectPath="\States\Default Work Unit\Reverb_States\Large" GUID="{057D768C-2716-4026-A7C0-F4B42A7F81F5}"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -2865,5 +2884,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2C3ACD16-19D8-029C-3694-2EB1290E17EC}</FileHash>
+	<FileHash>{5CE1C2A7-518F-EDBA-9B8E-AA59C3A0834E}</FileHash>
 </SoundBanksInfo>
