@@ -1605,6 +1605,13 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="player_dash_02" ID="{C0BEF38C-D1C0-4DA1-B542-C6582A6FDA21}" ShortID="15300156">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -1785,7 +1792,7 @@
 												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-4</Value>
+														<Value>-27</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1944,6 +1951,43 @@
 												</Sound>
 											</ChildrenList>
 										</RandomSequenceContainer>
+										<Sound Name="woosh_dash_rework_01" ID="{D6F78455-A417-4937-AB5D-E39B7CF8E5B9}" ShortID="316359171">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{135566E7-AA1D-4B9F-89ED-F55EB32E7E00}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="woosh_dash_rework_01" ID="{4594553C-66B0-475E-B7CA-9F4F4C96FFD6}">
+													<Language>SFX</Language>
+													<AudioFile>Player_Movement\woosh_dash_rework_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="313647539"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="woosh_dash_rework_01" ID="{4594553C-66B0-475E-B7CA-9F4F4C96FFD6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</BlendContainer>
 								<BlendContainer Name="game_bumper" ID="{41595989-88E7-42A4-BA4B-484228D9F488}" ShortID="6221859">
@@ -2290,6 +2334,11 @@
 										<Sound Name="game_jump" ID="{469655F8-E589-471B-89A4-A70EB822E721}" ShortID="535523027">
 											<PropertyList>
 												<Property Name="Color" Type="int16" Value="1"/>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 												<Property Name="UserAuxSendVolume0" Type="Real64">
@@ -2449,6 +2498,11 @@
 										</Sound>
 										<RandomSequenceContainer Name="jetpack" ID="{5DC8EF2C-289B-4ADF-9383-F082AEC4274C}" ShortID="577507298">
 											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>610</Value>
@@ -2591,6 +2645,11 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="jump" ID="{25FDF5DA-CDFF-4D9F-950B-8BD1C4DE5CE3}" ShortID="599518726">
 											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -2728,6 +2787,11 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="woosh_jump" ID="{17ECAEEE-C0F1-4663-9892-D7858016662D}" ShortID="71656077">
 											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="7"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -2944,6 +3008,581 @@
 												</Sound>
 											</ChildrenList>
 										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="game_dashh" ID="{3C30C559-4264-45A9-BB88-AAC675B3311F}" ShortID="347568097">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>30</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>1000</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{13061B3B-6D49-4346-8F66-72F0B07245F1}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="player_dash_01" ID="{A97A169F-3099-4F53-BE1F-08590CF83CEA}" ShortID="257619136">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="player_dash_01" ID="{A21C4427-D87D-4A7A-BA8F-ED8C6627C316}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0752351097178683"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.335423197492163"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.103448275862069"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.617554858934169"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Player_Movement\player_dash_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="336656279"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="player_dash_01" ID="{A21C4427-D87D-4A7A-BA8F-ED8C6627C316}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="player_dash_02" ID="{117AB8D8-A095-45C8-BE3F-9DCD827A4132}" ShortID="70578664">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="player_dash_02" ID="{11516355-256C-4A1B-8B80-4F85A81C37CA}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0752351097178683"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.275862068965517"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0658307210031348"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.58307210031348"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Player_Movement\player_dash_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="345764600"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="player_dash_02" ID="{11516355-256C-4A1B-8B80-4F85A81C37CA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="player_dash_03" ID="{C6F57D4A-8C03-415B-9B10-527D6FBB512A}" ShortID="34494289">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="player_dash_03" ID="{1014470E-FD92-45BD-A2ED-41303303C4D5}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.115987460815047"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0877742946708464"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0501567398119122"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.454545454545454"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Player_Movement\player_dash_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="752369847"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="player_dash_03" ID="{1014470E-FD92-45BD-A2ED-41303303C4D5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="player_dash_04" ID="{F5BD88C5-CC8B-4842-9C3B-C63DB7F7004F}" ShortID="564797127">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="player_dash_04" ID="{7BC89BE4-63F5-48E3-A134-C7BEA48DB28C}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.109717868338558"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.175548589341693"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.128526645768025"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.55485893416928"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Player_Movement\player_dash_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="985541282"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="player_dash_04" ID="{7BC89BE4-63F5-48E3-A134-C7BEA48DB28C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="player_dash_05" ID="{9B94D1D6-EFA9-4E12-BDE9-844056C77B31}" ShortID="1038074064">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="player_dash_05" ID="{57F5BB23-7676-4A37-A3C4-A54CC56F40D4}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.200626959247649"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.128526645768025"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.501567398119122"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Player_Movement\player_dash_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="22359102"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="player_dash_05" ID="{57F5BB23-7676-4A37-A3C4-A54CC56F40D4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="woosh_dash" ID="{A6DDBD5B-366B-4C2F-81CB-8FA165405884}" ShortID="134725175">
+											<PropertyList>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-21</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="woosh_dash_01" ID="{6A8B2EDB-18CA-423A-8129-D6A6DBC32434}" ShortID="434154500">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="woosh_dash_01" ID="{45AE5E5A-6206-4F25-BF5C-FBEDED403200}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0139909638554217"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.137111445783133"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.140842369477912"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Player_Movement\woosh_dash_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="870352394"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="woosh_dash_01" ID="{45AE5E5A-6206-4F25-BF5C-FBEDED403200}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="woosh_dash_02" ID="{9E5159F9-1941-4F00-B8C0-9D29213F122C}" ShortID="836746469">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="woosh_dash_02" ID="{E43D683B-B8EE-4E3A-A126-8673606897C6}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0220358935742972"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0450298694779117"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.160957831325301"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.42443047188755"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Player_Movement\woosh_dash_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="76388274"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="woosh_dash_02" ID="{E43D683B-B8EE-4E3A-A126-8673606897C6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="woosh_dash_03" ID="{C036F174-BD4D-41A7-BAAF-0CA35E18A63A}" ShortID="959192413">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="woosh_dash_03" ID="{774159FA-46A8-45EF-BAB7-AF98CFD9275D}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0335694862784471"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0383651271753681"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.143869226907631"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.422975527108434"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Player_Movement\woosh_dash_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="679633165"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="woosh_dash_03" ID="{774159FA-46A8-45EF-BAB7-AF98CFD9275D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="woosh_dash_04" ID="{DBF50E4D-E930-4E29-AB93-036F03236319}" ShortID="936303266">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="woosh_dash_04" ID="{A288BF35-E572-46E6-BD79-8485F88B50C2}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.032754016064257"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0722515060240964"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.153173192771084"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.470116465863454"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Player_Movement\woosh_dash_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="949832797"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="woosh_dash_04" ID="{A288BF35-E572-46E6-BD79-8485F88B50C2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="woosh_dash_05" ID="{E937FFFF-C6FE-48F2-8A85-DBEC65908BDF}" ShortID="355049201">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="woosh_dash_05" ID="{3F07E788-D936-429F-BFFE-4775FE371610}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0286189759036145"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0830873493975904"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.162481927710843"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.435746987951807"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Player_Movement\woosh_dash_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="729647487"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="woosh_dash_05" ID="{3F07E788-D936-429F-BFFE-4775FE371610}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<Sound Name="game_dash" ID="{9D9C5A09-1554-44CD-8287-2933BFD8A970}" ShortID="1012804017">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="1"/>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>50</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Soundseed Air Woosh" ID="{9DA9D552-A5E2-4FF3-BF4F-C50FC4A57A11}" ShortID="54514342" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
+													<PropertyList>
+														<Property Name="ChannelMask" Type="int32" Value="0"/>
+														<Property Name="Duration" Type="Real64" Value="0.3"/>
+														<Property Name="DurationRandom" Type="Real32" Value="0.05"/>
+														<Property Name="FrequencyScale" Type="Real32" Value="-0.21"/>
+														<Property Name="QFactorScale" Type="Real32" Value="-4"/>
+														<Property Name="Speed" Type="Real32" Value="-10"/>
+														<Property Name="SpeedAutomate" Type="bool" Value="True"/>
+														<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="0"/>
+														<Property Name="SpeedPointTimeRandom" Type="Real32" Value="0.66"/>
+													</PropertyList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{461F40C8-3AF0-4F69-B8A7-C96CD078BF6D}" ShortID="569307059">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="FrequencyScale"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{6827A145-AC26-42C1-84FD-1E470B318BE9}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>3000</XPos>
+																								<YPos>2.10527</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<Language>SFX</Language>
+													<PluginData>
+	<WooshData>
+		<CurveList Version="1">
+			<CurveInfo Name="Speed">
+				<Curve Name="" ID="{3161CC80-4A57-4056-819D-C34022A27D21}">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="1"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>0</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>0.07944</XPos>
+							<YPos>84.05693</YPos>
+							<Flags>0</Flags>
+						</Point>
+						<Point>
+							<XPos>0.19341</XPos>
+							<YPos>33.99818</YPos>
+							<Flags>0</Flags>
+						</Point>
+						<Point>
+							<XPos>0.3</XPos>
+							<YPos>23.50427</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+		</CurveList>
+		<Path Version="1">
+			<Path2D Name="" ID="{FB1D4BB4-3AD0-4052-830B-5C7F8D8D34F1}">
+				<PropertyList>
+					<Property Name="LinearTime" Type="bool" Value="False"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>-0.51947</XPos>
+						<YPos>7.90123</YPos>
+						<Flags>12</Flags>
+						<Time>0</Time>
+					</Point>
+					<Point>
+						<XPos>-0.259740259740255</XPos>
+						<YPos>17.5308641975309</YPos>
+						<Flags>0</Flags>
+						<Time>1000</Time>
+					</Point>
+				</PointList>
+			</Path2D>
+		</Path>
+	</WooshData>
+</PluginData>
+													<PluginInnerObjectList>
+														<List Name="Deflectors">
+															<PluginInnerObject Name="" ID="{927C2137-CBDC-4057-BA00-015FB075F045}" PluginName="Deflector" CompanyID="0" PluginID="122">
+																<PropertyList>
+																	<Property Name="Frequency" Type="Real32" Value="860"/>
+																</PropertyList>
+															</PluginInnerObject>
+														</List>
+													</PluginInnerObjectList>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Soundseed Air Woosh" ID="{9DA9D552-A5E2-4FF3-BF4F-C50FC4A57A11}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="woosh_dash_rework_01" ID="{BA286759-7D41-4553-8CF4-B4601657612A}" ShortID="309526433">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{6517D1CA-9D45-4BB0-93DE-ECA4F81F64F2}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="woosh_dash_rework_01" ID="{DD855D73-98C5-4DCE-873C-C4A5477602F6}">
+													<Language>SFX</Language>
+													<AudioFile>Player_Movement\woosh_dash_rework_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="313647539"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="woosh_dash_rework_01" ID="{DD855D73-98C5-4DCE-873C-C4A5477602F6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</BlendContainer>
 							</ChildrenList>
