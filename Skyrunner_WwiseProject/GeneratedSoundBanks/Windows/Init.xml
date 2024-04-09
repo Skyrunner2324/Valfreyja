@@ -1,25 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{8FE17A46-DAD2-8342-D475-BC1F0D68648B}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{0E6FD293-B36B-3429-1C4F-99A27D3EBBD0}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<Media>
+				<File Id="304471121" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AK_Factory_IR\Large Spaces\AK Stair Way Hall.wav</ShortName>
+					<Path>Media/304471121.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AK_Factory_IR/Large Spaces/AK Stair Way Hall_EC3E8250.wem</CachePath>
+				</File>
+				<File Id="766552005" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Staircase.wav</ShortName>
+					<Path>Media/766552005.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Domestic/AE_Staircase_632765F8.wem</CachePath>
+				</File>
+				<File Id="932825353" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsClose.wav</ShortName>
+					<Path>Media/932825353.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Field/AE_DistantBuilding_MicsClose_26E9612A.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="21631550" Name="Parametric EQ (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large\Parametric EQ (Custom)" GUID="{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="290471130" Name="Hall_Guns (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large\Hall_Guns (Custom)" GUID="{78ECAA45-7CB6-47A6-8807-086FF39B4FE0}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="332815239" Name="RoomVerb (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC\REV_LargeRoom_01\RoomVerb (Custom)" GUID="{29915F24-228E-4788-92BC-C759095F9F4E}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="585087015" Name="Matrix Reverb (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC\REV_SmallRoom_01\Matrix Reverb (Custom)" GUID="{88235782-51D1-4E5C-84CD-64C254857225}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
-					<Plugin Id="667118077" Name="Small_Tiled_Room1 (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Arena\Small_Tiled_Room1 (Custom)" GUID="{3EAD5560-D0B7-45F6-8664-801516D32485}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="854493452" Name="Parametric EQ (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC\REV_LargeRoom_01\Parametric EQ (Custom)" GUID="{450F407D-271F-4103-B84B-90F5ED24B203}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="945211497" Name="Underwater_Echoes (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Weapon\Underwater_Echoes (Custom)" GUID="{E99B9354-6E3C-40D3-B57E-B74097729115}" LibName="Wwise Stereo Delay" LibId="8847363"/>
 				</Custom>
 				<ShareSets>
 					<Plugin Id="702543456" Name="Tunnel1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Tunnel1" GUID="{CC44B890-9865-4157-965F-86FED27BC4C6}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="1139053157" Name="DistantBuilding_MicsClose" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Field\DistantBuilding_MicsClose" GUID="{A7BD5797-187C-4D6B-B020-A55A737A3916}" LibName="Wwise Convolution Reverb" LibId="8323075">
+						<MediaRefs>
+							<MediaRef Id="932825353"/>
+						</MediaRefs>
+					</Plugin>
 					<Plugin Id="1313634581" Name="Kick_Meter" ObjectPath="\Effects\Default Work Unit\Kick_Meter" GUID="{F60F1939-BF4D-4E8B-B75A-F49C8D833CDA}" LibName="Wwise Meter" LibId="8454147"/>
+					<Plugin Id="1756167208" Name="Staircase" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\Staircase" GUID="{127E52AD-3162-4A20-B3CF-D02B7FAD04B5}" LibName="Wwise Convolution Reverb" LibId="8323075">
+						<MediaRefs>
+							<MediaRef Id="766552005"/>
+						</MediaRefs>
+					</Plugin>
 					<Plugin Id="1842579981" Name="Reflect_Simplified" ObjectPath="\Effects\Factory Reflect\Reflect_Simplified" GUID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" LibName="Wwise Reflect" LibId="11206659"/>
-					<Plugin Id="1904434771" Name="Medium_Room1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Medium_Room1" GUID="{71B802A7-03E2-4998-B241-B2B84FE9DDFF}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="2928304598" Name="Gated_Metallic_Reflections_Stereo" ObjectPath="\Effects\Factory AK Convolution Reverb Effects Stereo\Rooms\Gated_Metallic_Reflections_Stereo" GUID="{54CE8B32-9AA8-4EF3-A620-4530C27ABBF7}" LibName="Wwise Convolution Reverb" LibId="8323075">
+						<MediaRefs>
+							<MediaRef Id="304471121"/>
+						</MediaRefs>
+					</Plugin>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="1334442663" Name="Controller_Speaker" ObjectPath="\Audio Devices\Default Work Unit\Controller_Speaker" GUID="{DBAC18E4-4565-4995-8D85-16A16A6DEC90}" LibName="Controller Speaker" LibId="11730951"/>
@@ -81,7 +109,7 @@
 				<AuxBus Id="435591300" Name="REV_Couloir" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Couloir" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="1904434771"/>
+							<PluginRef Id="2928304598"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
@@ -90,9 +118,9 @@
 				</AuxBus>
 				<AuxBus Id="641705904" Name="REV_Arena" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Arena" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
 					<PluginRefs>
-						<Custom>
-							<PluginRef Id="667118077"/>
-						</Custom>
+						<ShareSets>
+							<PluginRef Id="1139053157"/>
+						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="1377950732" Name="REV_SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
@@ -143,10 +171,9 @@
 				</AuxBus>
 				<AuxBus Id="3750820532" Name="REV_Large" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<PluginRefs>
-						<Custom>
-							<PluginRef Id="21631550"/>
-							<PluginRef Id="290471130"/>
-						</Custom>
+						<ShareSets>
+							<PluginRef Id="1756167208"/>
+						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="1377950732" Name="REV_SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
@@ -367,5 +394,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AFAC4A55-CFA4-9946-8457-28B1E2CBECE8}</FileHash>
+	<FileHash>{B048175D-D181-D0C5-DF66-CBBCA51F488F}</FileHash>
 </SoundBanksInfo>

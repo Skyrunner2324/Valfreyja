@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="641705904" Type="Bus" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" Language="SFX" Hash="{58E98D2F-F02A-69F4-5D4C-A6314790283C}">
+		<SoundBank Id="641705904" Type="Bus" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" Language="SFX" Hash="{FB702FB0-A353-C8B8-C552-7F63A6655D2E}">
 			<ObjectPath>REV_Arena</ObjectPath>
 			<ShortName>REV_Arena</ShortName>
 			<Path>Bus/REV_Arena.bnk</Path>
+			<Media>
+				<File Id="932825353" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsClose.wav</ShortName>
+					<Path>Media/932825353.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Field/AE_DistantBuilding_MicsClose_26E9612A.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
-				<Custom>
-					<Plugin Id="667118077" Name="Small_Tiled_Room1 (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Arena\Small_Tiled_Room1 (Custom)" GUID="{3EAD5560-D0B7-45F6-8664-801516D32485}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
-				</Custom>
+				<ShareSets>
+					<Plugin Id="1139053157" Name="DistantBuilding_MicsClose" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Field\DistantBuilding_MicsClose" GUID="{A7BD5797-187C-4D6B-B020-A55A737A3916}" LibName="Wwise Convolution Reverb" LibId="8323075">
+						<MediaRefs>
+							<MediaRef Id="932825353"/>
+						</MediaRefs>
+					</Plugin>
+				</ShareSets>
 			</Plugins>
 			<AuxBusses>
 				<AuxBus Id="641705904" Name="REV_Arena" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Arena" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
 					<PluginRefs>
-						<Custom>
-							<PluginRef Id="667118077"/>
-						</Custom>
+						<ShareSets>
+							<PluginRef Id="1139053157"/>
+						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="1377950732" Name="REV_SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
@@ -34,5 +45,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2E047847-0FAD-9864-8586-15F99AA7472B}</FileHash>
+	<FileHash>{4E9BC2E4-DF18-9568-B1DA-BBD7C653D228}</FileHash>
 </SoundBanksInfo>

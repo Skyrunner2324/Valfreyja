@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="3750820532" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{69606CAE-8ED8-C51E-3EFE-6433EC96DB5F}">
+		<SoundBank Id="3750820532" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{AA65CDB5-FD95-3FDD-7E3D-0588BD8EEF1D}">
 			<ObjectPath>REV_Large</ObjectPath>
 			<ShortName>REV_Large</ShortName>
 			<Path>Bus/REV_Large.bnk</Path>
+			<Media>
+				<File Id="766552005" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Staircase.wav</ShortName>
+					<Path>Media/766552005.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Domestic/AE_Staircase_632765F8.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
-				<Custom>
-					<Plugin Id="21631550" Name="Parametric EQ (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large\Parametric EQ (Custom)" GUID="{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="290471130" Name="Hall_Guns (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large\Hall_Guns (Custom)" GUID="{78ECAA45-7CB6-47A6-8807-086FF39B4FE0}" LibName="Wwise RoomVerb" LibId="7733251"/>
-				</Custom>
+				<ShareSets>
+					<Plugin Id="1756167208" Name="Staircase" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\Staircase" GUID="{127E52AD-3162-4A20-B3CF-D02B7FAD04B5}" LibName="Wwise Convolution Reverb" LibId="8323075">
+						<MediaRefs>
+							<MediaRef Id="766552005"/>
+						</MediaRefs>
+					</Plugin>
+				</ShareSets>
 			</Plugins>
 			<AuxBusses>
 				<AuxBus Id="3750820532" Name="REV_Large" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<PluginRefs>
-						<Custom>
-							<PluginRef Id="21631550"/>
-							<PluginRef Id="290471130"/>
-						</Custom>
+						<ShareSets>
+							<PluginRef Id="1756167208"/>
+						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="1377950732" Name="REV_SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
@@ -36,5 +45,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DFC68D95-CABB-B969-3A2B-1EE054953CBB}</FileHash>
+	<FileHash>{6BF9CB2A-8B3C-CAF0-2ADE-69EAFA590629}</FileHash>
 </SoundBanksInfo>

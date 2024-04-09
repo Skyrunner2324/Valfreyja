@@ -10,27 +10,35 @@
     "Type": "Bus",
     "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
     "Language": "SFX",
-    "Hash": "{69606CAE-8ED8-C51E-3EFE-6433EC96DB5F}",
+    "Hash": "{AA65CDB5-FD95-3FDD-7E3D-0588BD8EEF1D}",
     "ObjectPath": "REV_Large",
     "ShortName": "REV_Large",
     "Path": "Bus/REV_Large.bnk",
+    "Media": [
+     {
+      "Id": "766552005",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "AudioEase\\Altiverb - Outdoor and More\\Domestic\\AE_Staircase.wav",
+      "Path": "Media/766552005.wem",
+      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Domestic/AE_Staircase_632765F8.wem"
+     }
+    ],
     "Plugins": {
-     "Custom": [
+     "ShareSets": [
       {
-       "Id": "21631550",
-       "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Large\\Parametric EQ (Custom)",
-       "GUID": "{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}",
-       "LibName": "Wwise Parametric EQ",
-       "LibId": "6881283"
-      },
-      {
-       "Id": "290471130",
-       "Name": "Hall_Guns (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Large\\Hall_Guns (Custom)",
-       "GUID": "{78ECAA45-7CB6-47A6-8807-086FF39B4FE0}",
-       "LibName": "Wwise RoomVerb",
-       "LibId": "7733251"
+       "Id": "1756167208",
+       "Name": "Staircase",
+       "ObjectPath": "\\Effects\\Factory Altiverb - Outdoor and More\\Altiverb - Outdoor and More\\Domestic\\Staircase",
+       "GUID": "{127E52AD-3162-4A20-B3CF-D02B7FAD04B5}",
+       "LibName": "Wwise Convolution Reverb",
+       "LibId": "8323075",
+       "MediaRefs": [
+        {
+         "Id": "766552005"
+        }
+       ]
       }
      ]
     },
@@ -41,12 +49,9 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Large",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
       "PluginRefs": {
-       "Custom": [
+       "ShareSets": [
         {
-         "Id": "21631550"
-        },
-        {
-         "Id": "290471130"
+         "Id": "1756167208"
         }
        ]
       },
@@ -96,6 +101,6 @@
     ]
    }
   ],
-  "FileHash": "{59F861B8-5593-09C7-7A5F-7F2A824DAB93}"
+  "FileHash": "{3FAE6DC6-F934-F9B0-B6F2-3968FC54DC7B}"
  }
 }

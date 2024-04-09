@@ -10,19 +10,35 @@
     "Type": "Bus",
     "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}",
     "Language": "SFX",
-    "Hash": "{58E98D2F-F02A-69F4-5D4C-A6314790283C}",
+    "Hash": "{FB702FB0-A353-C8B8-C552-7F63A6655D2E}",
     "ObjectPath": "REV_Arena",
     "ShortName": "REV_Arena",
     "Path": "Bus/REV_Arena.bnk",
+    "Media": [
+     {
+      "Id": "932825353",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "AudioEase\\Altiverb - Outdoor and More\\Outdoor\\Field\\AE_DistantBuilding_MicsClose.wav",
+      "Path": "Media/932825353.wem",
+      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Field/AE_DistantBuilding_MicsClose_26E9612A.wem"
+     }
+    ],
     "Plugins": {
-     "Custom": [
+     "ShareSets": [
       {
-       "Id": "667118077",
-       "Name": "Small_Tiled_Room1 (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Arena\\Small_Tiled_Room1 (Custom)",
-       "GUID": "{3EAD5560-D0B7-45F6-8664-801516D32485}",
-       "LibName": "Wwise Matrix Reverb",
-       "LibId": "7536643"
+       "Id": "1139053157",
+       "Name": "DistantBuilding_MicsClose",
+       "ObjectPath": "\\Effects\\Factory Altiverb - Outdoor and More\\Altiverb - Outdoor and More\\Outdoor Field\\DistantBuilding_MicsClose",
+       "GUID": "{A7BD5797-187C-4D6B-B020-A55A737A3916}",
+       "LibName": "Wwise Convolution Reverb",
+       "LibId": "8323075",
+       "MediaRefs": [
+        {
+         "Id": "932825353"
+        }
+       ]
       }
      ]
     },
@@ -33,9 +49,9 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Arena",
       "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}",
       "PluginRefs": {
-       "Custom": [
+       "ShareSets": [
         {
-         "Id": "667118077"
+         "Id": "1139053157"
         }
        ]
       },
@@ -85,6 +101,6 @@
     ]
    }
   ],
-  "FileHash": "{B8B5E313-3C1E-7C7A-7734-91B8F5332470}"
+  "FileHash": "{E163F40A-CCF4-C9DA-F098-F069CE63DE3D}"
  }
 }

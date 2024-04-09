@@ -747,19 +747,35 @@
     "Type": "Bus",
     "GUID": "{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}",
     "Language": "SFX",
-    "Hash": "{7D94654D-C52A-E5EC-F57B-F488AE19B577}",
+    "Hash": "{2CF36614-6C3F-7026-B452-00269947E9A8}",
     "ObjectPath": "REV_Couloir",
     "ShortName": "REV_Couloir",
     "Path": "Bus/REV_Couloir.bnk",
+    "Media": [
+     {
+      "Id": "304471121",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "AK_Factory_IR\\Large Spaces\\AK Stair Way Hall.wav",
+      "Path": "Media/304471121.wem",
+      "CachePath": "Plugins/Wwise Convolution Reverb/AK_Factory_IR/Large Spaces/AK Stair Way Hall_EC3E8250.wem"
+     }
+    ],
     "Plugins": {
      "ShareSets": [
       {
-       "Id": "1904434771",
-       "Name": "Medium_Room1",
-       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Medium_Room1",
-       "GUID": "{71B802A7-03E2-4998-B241-B2B84FE9DDFF}",
-       "LibName": "Wwise Matrix Reverb",
-       "LibId": "7536643"
+       "Id": "2928304598",
+       "Name": "Gated_Metallic_Reflections_Stereo",
+       "ObjectPath": "\\Effects\\Factory AK Convolution Reverb Effects Stereo\\Rooms\\Gated_Metallic_Reflections_Stereo",
+       "GUID": "{54CE8B32-9AA8-4EF3-A620-4530C27ABBF7}",
+       "LibName": "Wwise Convolution Reverb",
+       "LibId": "8323075",
+       "MediaRefs": [
+        {
+         "Id": "304471121"
+        }
+       ]
       }
      ]
     },
@@ -772,7 +788,7 @@
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "1904434771"
+         "Id": "2928304598"
         }
        ]
       },
@@ -861,7 +877,7 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{5635A5C1-8558-2FE7-D7EC-448F7B2619CA}",
+    "Hash": "{5D5DB0B8-A167-6F4A-73F7-183CBEC4A0E2}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
@@ -1169,19 +1185,35 @@
     "Type": "Bus",
     "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}",
     "Language": "SFX",
-    "Hash": "{58E98D2F-F02A-69F4-5D4C-A6314790283C}",
+    "Hash": "{FB702FB0-A353-C8B8-C552-7F63A6655D2E}",
     "ObjectPath": "REV_Arena",
     "ShortName": "REV_Arena",
     "Path": "Bus/REV_Arena.bnk",
+    "Media": [
+     {
+      "Id": "932825353",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "AudioEase\\Altiverb - Outdoor and More\\Outdoor\\Field\\AE_DistantBuilding_MicsClose.wav",
+      "Path": "Media/932825353.wem",
+      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Field/AE_DistantBuilding_MicsClose_26E9612A.wem"
+     }
+    ],
     "Plugins": {
-     "Custom": [
+     "ShareSets": [
       {
-       "Id": "667118077",
-       "Name": "Small_Tiled_Room1 (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Arena\\Small_Tiled_Room1 (Custom)",
-       "GUID": "{3EAD5560-D0B7-45F6-8664-801516D32485}",
-       "LibName": "Wwise Matrix Reverb",
-       "LibId": "7536643"
+       "Id": "1139053157",
+       "Name": "DistantBuilding_MicsClose",
+       "ObjectPath": "\\Effects\\Factory Altiverb - Outdoor and More\\Altiverb - Outdoor and More\\Outdoor Field\\DistantBuilding_MicsClose",
+       "GUID": "{A7BD5797-187C-4D6B-B020-A55A737A3916}",
+       "LibName": "Wwise Convolution Reverb",
+       "LibId": "8323075",
+       "MediaRefs": [
+        {
+         "Id": "932825353"
+        }
+       ]
       }
      ]
     },
@@ -1192,9 +1224,9 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Arena",
       "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}",
       "PluginRefs": {
-       "Custom": [
+       "ShareSets": [
         {
-         "Id": "667118077"
+         "Id": "1139053157"
         }
        ]
       },
@@ -1374,7 +1406,7 @@
     "Type": "Event",
     "GUID": "{45B75918-88DC-4592-9F27-6C746C945B7A}",
     "Language": "SFX",
-    "Hash": "{7B095873-B2F2-653F-F3B8-3B7E93946C14}",
+    "Hash": "{06C9ADFB-5643-728A-6290-6140CD4B783B}",
     "ObjectPath": "Amb_Mountain_Wind",
     "ShortName": "Amb_Mountain_Wind",
     "Path": "Event/Amb_Mountain_Wind.bnk",
@@ -2140,7 +2172,7 @@
     "Type": "Event",
     "GUID": "{7E4A6C7B-541E-4F66-A804-807DEC01DB1B}",
     "Language": "SFX",
-    "Hash": "{17C1E690-251C-81F0-CC69-C33BA829F74E}",
+    "Hash": "{3875B9CF-FAE2-765F-755B-AC1BFC54679E}",
     "ObjectPath": "Amb_Mechanism",
     "ShortName": "Amb_Mechanism",
     "Path": "Event/Amb_Mechanism.bnk",
@@ -2176,7 +2208,7 @@
     "Type": "Event",
     "GUID": "{F550970C-A8FC-4520-A4CD-A03DF04BDF72}",
     "Language": "SFX",
-    "Hash": "{C07BEF67-206E-A26E-53B8-9197F14CE69D}",
+    "Hash": "{B0EAA3DF-C893-41BC-352D-8EFFB3DE5412}",
     "ObjectPath": "Amb_Crackling_Slope",
     "ShortName": "Amb_Crackling_Slope",
     "Path": "Event/Amb_Crackling_Slope.bnk",
@@ -2463,28 +2495,41 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{8FE17A46-DAD2-8342-D475-BC1F0D68648B}",
+    "Hash": "{0E6FD293-B36B-3429-1C4F-99A27D3EBBD0}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
+    "Media": [
+     {
+      "Id": "304471121",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "AK_Factory_IR\\Large Spaces\\AK Stair Way Hall.wav",
+      "Path": "Media/304471121.wem",
+      "CachePath": "Plugins/Wwise Convolution Reverb/AK_Factory_IR/Large Spaces/AK Stair Way Hall_EC3E8250.wem"
+     },
+     {
+      "Id": "766552005",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "AudioEase\\Altiverb - Outdoor and More\\Domestic\\AE_Staircase.wav",
+      "Path": "Media/766552005.wem",
+      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Domestic/AE_Staircase_632765F8.wem"
+     },
+     {
+      "Id": "932825353",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "AudioEase\\Altiverb - Outdoor and More\\Outdoor\\Field\\AE_DistantBuilding_MicsClose.wav",
+      "Path": "Media/932825353.wem",
+      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Field/AE_DistantBuilding_MicsClose_26E9612A.wem"
+     }
+    ],
     "Plugins": {
      "Custom": [
-      {
-       "Id": "21631550",
-       "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Large\\Parametric EQ (Custom)",
-       "GUID": "{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}",
-       "LibName": "Wwise Parametric EQ",
-       "LibId": "6881283"
-      },
-      {
-       "Id": "290471130",
-       "Name": "Hall_Guns (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Large\\Hall_Guns (Custom)",
-       "GUID": "{78ECAA45-7CB6-47A6-8807-086FF39B4FE0}",
-       "LibName": "Wwise RoomVerb",
-       "LibId": "7733251"
-      },
       {
        "Id": "332815239",
        "Name": "RoomVerb (Custom)",
@@ -2498,14 +2543,6 @@
        "Name": "Matrix Reverb (Custom)",
        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\REV_SmallRoom_01\\Matrix Reverb (Custom)",
        "GUID": "{88235782-51D1-4E5C-84CD-64C254857225}",
-       "LibName": "Wwise Matrix Reverb",
-       "LibId": "7536643"
-      },
-      {
-       "Id": "667118077",
-       "Name": "Small_Tiled_Room1 (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Arena\\Small_Tiled_Room1 (Custom)",
-       "GUID": "{3EAD5560-D0B7-45F6-8664-801516D32485}",
        "LibName": "Wwise Matrix Reverb",
        "LibId": "7536643"
       },
@@ -2536,12 +2573,38 @@
        "LibId": "7536643"
       },
       {
+       "Id": "1139053157",
+       "Name": "DistantBuilding_MicsClose",
+       "ObjectPath": "\\Effects\\Factory Altiverb - Outdoor and More\\Altiverb - Outdoor and More\\Outdoor Field\\DistantBuilding_MicsClose",
+       "GUID": "{A7BD5797-187C-4D6B-B020-A55A737A3916}",
+       "LibName": "Wwise Convolution Reverb",
+       "LibId": "8323075",
+       "MediaRefs": [
+        {
+         "Id": "932825353"
+        }
+       ]
+      },
+      {
        "Id": "1313634581",
        "Name": "Kick_Meter",
        "ObjectPath": "\\Effects\\Default Work Unit\\Kick_Meter",
        "GUID": "{F60F1939-BF4D-4E8B-B75A-F49C8D833CDA}",
        "LibName": "Wwise Meter",
        "LibId": "8454147"
+      },
+      {
+       "Id": "1756167208",
+       "Name": "Staircase",
+       "ObjectPath": "\\Effects\\Factory Altiverb - Outdoor and More\\Altiverb - Outdoor and More\\Domestic\\Staircase",
+       "GUID": "{127E52AD-3162-4A20-B3CF-D02B7FAD04B5}",
+       "LibName": "Wwise Convolution Reverb",
+       "LibId": "8323075",
+       "MediaRefs": [
+        {
+         "Id": "766552005"
+        }
+       ]
       },
       {
        "Id": "1842579981",
@@ -2552,12 +2615,17 @@
        "LibId": "11206659"
       },
       {
-       "Id": "1904434771",
-       "Name": "Medium_Room1",
-       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Medium_Room1",
-       "GUID": "{71B802A7-03E2-4998-B241-B2B84FE9DDFF}",
-       "LibName": "Wwise Matrix Reverb",
-       "LibId": "7536643"
+       "Id": "2928304598",
+       "Name": "Gated_Metallic_Reflections_Stereo",
+       "ObjectPath": "\\Effects\\Factory AK Convolution Reverb Effects Stereo\\Rooms\\Gated_Metallic_Reflections_Stereo",
+       "GUID": "{54CE8B32-9AA8-4EF3-A620-4530C27ABBF7}",
+       "LibName": "Wwise Convolution Reverb",
+       "LibId": "8323075",
+       "MediaRefs": [
+        {
+         "Id": "304471121"
+        }
+       ]
       }
      ],
      "AudioDevices": [
@@ -2792,7 +2860,7 @@
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "1904434771"
+         "Id": "2928304598"
         }
        ]
       },
@@ -2811,9 +2879,9 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Arena",
       "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}",
       "PluginRefs": {
-       "Custom": [
+       "ShareSets": [
         {
-         "Id": "667118077"
+         "Id": "1139053157"
         }
        ]
       },
@@ -2931,12 +2999,9 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Large",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
       "PluginRefs": {
-       "Custom": [
+       "ShareSets": [
         {
-         "Id": "21631550"
-        },
-        {
-         "Id": "290471130"
+         "Id": "1756167208"
         }
        ]
       },
@@ -3963,7 +4028,7 @@
     "Type": "Event",
     "GUID": "{7BC5CDA3-ADDA-414C-88EA-DA385A0BB02A}",
     "Language": "SFX",
-    "Hash": "{304B5E8F-2990-43A6-E5D5-2743C69A02D3}",
+    "Hash": "{76028D7B-6CE5-CC73-74E0-B5E51F4297EC}",
     "ObjectPath": "Amb_Wind_Heavy",
     "ShortName": "Amb_Wind_Heavy",
     "Path": "Event/Amb_Wind_Heavy.bnk",
@@ -4210,7 +4275,7 @@
     "Type": "Event",
     "GUID": "{7CE7E7ED-8F13-426F-BC42-4D730658C8F7}",
     "Language": "SFX",
-    "Hash": "{80FD70E8-FAA7-2FD5-5595-982ED22AC3DA}",
+    "Hash": "{92FD01A6-1CAA-1354-17A0-54996963629E}",
     "ObjectPath": "Amb_Wind_Light",
     "ShortName": "Amb_Wind_Light",
     "Path": "Event/Amb_Wind_Light.bnk",
@@ -4413,7 +4478,7 @@
     "Type": "Event",
     "GUID": "{499739A7-A19C-4D35-A43D-6E43729F9830}",
     "Language": "SFX",
-    "Hash": "{ADA79D0C-52F2-9805-414B-536E086E3458}",
+    "Hash": "{475F0C00-E960-724E-EE4B-292128C08B2C}",
     "ObjectPath": "Amb_Bird",
     "ShortName": "Amb_Bird",
     "Path": "Event/Amb_Bird.bnk",
@@ -4938,7 +5003,7 @@
     "Type": "Event",
     "GUID": "{97A39C71-6024-4A20-A666-3E641EBF8422}",
     "Language": "SFX",
-    "Hash": "{C46A6B07-AF3B-7EA0-840D-08C33FC39BDB}",
+    "Hash": "{FF442995-14BA-A7E1-5FE9-0BC2DE7C5B60}",
     "ObjectPath": "Amb_Creepy",
     "ShortName": "Amb_Creepy",
     "Path": "Event/Amb_Creepy.bnk",
@@ -6597,11 +6662,20 @@
     "Type": "Event",
     "GUID": "{C6B5191E-27E7-4097-A049-ADF0776478D2}",
     "Language": "SFX",
-    "Hash": "{24EA3235-5196-C02B-23E3-31387D710C7A}",
+    "Hash": "{43A590D3-A46A-E2C4-FBF4-E4DADE73DB36}",
     "ObjectPath": "SX_player_bumper",
     "ShortName": "SX_player_bumper",
     "Path": "Event/SX_player_bumper.bnk",
     "Media": [
+     {
+      "Id": "37170476",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ambience\\SFX,Magic,Light Flash,Vocal 3.wav",
+      "Path": "Media/37170476.wem",
+      "CachePath": "SFX/Ambience/SFX,Magic,Light Flash,Vocal 3_10FEA4B0.wem"
+     },
      {
       "Id": "65984394",
       "Language": "SFX",
@@ -6619,6 +6693,15 @@
       "ShortName": "Player_Movement\\woosh_bumper_02.wav",
       "Path": "Media/108909392.wem",
       "CachePath": "SFX/Player_Movement/woosh_bumper_02_755F56E2.wem"
+     },
+     {
+      "Id": "147886768",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ambience\\SFX,Magic,Light Flash,Vocal 2.wav",
+      "Path": "Media/147886768.wem",
+      "CachePath": "SFX/Ambience/SFX,Magic,Light Flash,Vocal 2_75C91F0C.wem"
      },
      {
       "Id": "317149178",
@@ -6646,6 +6729,15 @@
       "ShortName": "Player_Movement\\woosh_bumper_06.wav",
       "Path": "Media/390101601.wem",
       "CachePath": "SFX/Player_Movement/woosh_bumper_06_755F56E2.wem"
+     },
+     {
+      "Id": "459894047",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ambience\\SFX,Magic,Light Flash,Vocal 1.wav",
+      "Path": "Media/459894047.wem",
+      "CachePath": "SFX/Ambience/SFX,Magic,Light Flash,Vocal 1_2E9D99AA.wem"
      },
      {
       "Id": "566287118",
@@ -6713,13 +6805,19 @@
       "GUID": "{C6B5191E-27E7-4097-A049-ADF0776478D2}",
       "DurationType": "OneShot",
       "DurationMin": "0.74691665",
-      "DurationMax": "0.86345834",
+      "DurationMax": "2.0747526",
       "MediaRefs": [
+       {
+        "Id": "37170476"
+       },
        {
         "Id": "65984394"
        },
        {
         "Id": "108909392"
+       },
+       {
+        "Id": "147886768"
        },
        {
         "Id": "317149178"
@@ -6729,6 +6827,9 @@
        },
        {
         "Id": "390101601"
+       },
+       {
+        "Id": "459894047"
        },
        {
         "Id": "566287118"
@@ -6796,27 +6897,35 @@
     "Type": "Bus",
     "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
     "Language": "SFX",
-    "Hash": "{69606CAE-8ED8-C51E-3EFE-6433EC96DB5F}",
+    "Hash": "{AA65CDB5-FD95-3FDD-7E3D-0588BD8EEF1D}",
     "ObjectPath": "REV_Large",
     "ShortName": "REV_Large",
     "Path": "Bus/REV_Large.bnk",
+    "Media": [
+     {
+      "Id": "766552005",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "AudioEase\\Altiverb - Outdoor and More\\Domestic\\AE_Staircase.wav",
+      "Path": "Media/766552005.wem",
+      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Domestic/AE_Staircase_632765F8.wem"
+     }
+    ],
     "Plugins": {
-     "Custom": [
+     "ShareSets": [
       {
-       "Id": "21631550",
-       "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Large\\Parametric EQ (Custom)",
-       "GUID": "{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}",
-       "LibName": "Wwise Parametric EQ",
-       "LibId": "6881283"
-      },
-      {
-       "Id": "290471130",
-       "Name": "Hall_Guns (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Large\\Hall_Guns (Custom)",
-       "GUID": "{78ECAA45-7CB6-47A6-8807-086FF39B4FE0}",
-       "LibName": "Wwise RoomVerb",
-       "LibId": "7733251"
+       "Id": "1756167208",
+       "Name": "Staircase",
+       "ObjectPath": "\\Effects\\Factory Altiverb - Outdoor and More\\Altiverb - Outdoor and More\\Domestic\\Staircase",
+       "GUID": "{127E52AD-3162-4A20-B3CF-D02B7FAD04B5}",
+       "LibName": "Wwise Convolution Reverb",
+       "LibId": "8323075",
+       "MediaRefs": [
+        {
+         "Id": "766552005"
+        }
+       ]
       }
      ]
     },
@@ -6827,12 +6936,9 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Large",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
       "PluginRefs": {
-       "Custom": [
+       "ShareSets": [
         {
-         "Id": "21631550"
-        },
-        {
-         "Id": "290471130"
+         "Id": "1756167208"
         }
        ]
       },
@@ -6886,7 +6992,7 @@
     "Type": "Event",
     "GUID": "{A4E26606-8423-4B2B-9B42-08CE1DB084CD}",
     "Language": "SFX",
-    "Hash": "{730A0F69-028A-F1D9-772D-9C62E24614C6}",
+    "Hash": "{4FB1A59E-1A28-A704-109A-EF776BD1D179}",
     "ObjectPath": "Amb_Cave",
     "ShortName": "Amb_Cave",
     "Path": "Event/Amb_Cave.bnk",
@@ -6922,19 +7028,19 @@
     "Type": "Event",
     "GUID": "{F5B804B1-5506-4197-9ED9-F39E5A921CE8}",
     "Language": "SFX",
-    "Hash": "{6D4317CC-B339-EBF8-806A-F137A48F1FA0}",
+    "Hash": "{D4150C24-7D54-568A-AD13-AB9A44298D72}",
     "ObjectPath": "Amb_Bumper_Aura",
     "ShortName": "Amb_Bumper_Aura",
     "Path": "Event/Amb_Bumper_Aura.bnk",
     "Media": [
      {
-      "Id": "149187972",
+      "Id": "907537953",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Ambience\\bumper_aura.wav",
-      "Path": "Media/149187972.wem",
-      "CachePath": "SFX/Ambience/bumper_aura_073B4D0C.wem"
+      "ShortName": "Ambience\\bumper_magic.wav",
+      "Path": "Media/907537953.wem",
+      "CachePath": "SFX/Ambience/bumper_magic_073B4D0C.wem"
      }
     ],
     "Events": [
@@ -6947,7 +7053,7 @@
       "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "149187972"
+        "Id": "907537953"
        }
       ]
      }
@@ -7098,7 +7204,7 @@
     "Type": "Event",
     "GUID": "{AF023191-835D-40F3-B33D-929589737D81}",
     "Language": "SFX",
-    "Hash": "{9163F32B-136E-68AC-E802-280CA7206188}",
+    "Hash": "{F6409B51-392F-D8C9-D384-32CFF49C8D8F}",
     "ObjectPath": "Amb_Wind_Trees",
     "ShortName": "Amb_Wind_Trees",
     "Path": "Event/Amb_Wind_Trees.bnk",
@@ -7130,6 +7236,6 @@
     ]
    }
   ],
-  "FileHash": "{D8B01AF1-2B95-DDF0-A06F-40FB56C60CC2}"
+  "FileHash": "{A12BE2CC-3460-2961-7A42-97CD98DE652E}"
  }
 }

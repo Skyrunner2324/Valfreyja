@@ -10,28 +10,41 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{5235BCA6-97C7-5E12-BFB6-EB71DC8E5F6C}",
+    "Hash": "{D369DFE9-0540-615A-BA39-2BE457C18D77}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
+    "Media": [
+     {
+      "Id": "304471121",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "AK_Factory_IR\\Large Spaces\\AK Stair Way Hall.wav",
+      "Path": "Media/304471121.wem",
+      "CachePath": "Plugins/Wwise Convolution Reverb/AK_Factory_IR/Large Spaces/AK Stair Way Hall_EC3E8250.wem"
+     },
+     {
+      "Id": "766552005",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "AudioEase\\Altiverb - Outdoor and More\\Domestic\\AE_Staircase.wav",
+      "Path": "Media/766552005.wem",
+      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Domestic/AE_Staircase_632765F8.wem"
+     },
+     {
+      "Id": "932825353",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "AudioEase\\Altiverb - Outdoor and More\\Outdoor\\Field\\AE_DistantBuilding_MicsClose.wav",
+      "Path": "Media/932825353.wem",
+      "CachePath": "Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Field/AE_DistantBuilding_MicsClose_26E9612A.wem"
+     }
+    ],
     "Plugins": {
      "Custom": [
-      {
-       "Id": "21631550",
-       "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Large\\Parametric EQ (Custom)",
-       "GUID": "{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}",
-       "LibName": "Wwise Parametric EQ",
-       "LibId": "6881283"
-      },
-      {
-       "Id": "290471130",
-       "Name": "Hall_Guns (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Large\\Hall_Guns (Custom)",
-       "GUID": "{78ECAA45-7CB6-47A6-8807-086FF39B4FE0}",
-       "LibName": "Wwise RoomVerb",
-       "LibId": "7733251"
-      },
       {
        "Id": "332815239",
        "Name": "RoomVerb (Custom)",
@@ -45,14 +58,6 @@
        "Name": "Matrix Reverb (Custom)",
        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MUSIC Master\\REV_MUSIC\\REV_SmallRoom_01\\Matrix Reverb (Custom)",
        "GUID": "{88235782-51D1-4E5C-84CD-64C254857225}",
-       "LibName": "Wwise Matrix Reverb",
-       "LibId": "7536643"
-      },
-      {
-       "Id": "667118077",
-       "Name": "Small_Tiled_Room1 (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Arena\\Small_Tiled_Room1 (Custom)",
-       "GUID": "{3EAD5560-D0B7-45F6-8664-801516D32485}",
        "LibName": "Wwise Matrix Reverb",
        "LibId": "7536643"
       },
@@ -83,12 +88,38 @@
        "LibId": "7536643"
       },
       {
+       "Id": "1139053157",
+       "Name": "DistantBuilding_MicsClose",
+       "ObjectPath": "\\Effects\\Factory Altiverb - Outdoor and More\\Altiverb - Outdoor and More\\Outdoor Field\\DistantBuilding_MicsClose",
+       "GUID": "{A7BD5797-187C-4D6B-B020-A55A737A3916}",
+       "LibName": "Wwise Convolution Reverb",
+       "LibId": "8323075",
+       "MediaRefs": [
+        {
+         "Id": "932825353"
+        }
+       ]
+      },
+      {
        "Id": "1313634581",
        "Name": "Kick_Meter",
        "ObjectPath": "\\Effects\\Default Work Unit\\Kick_Meter",
        "GUID": "{F60F1939-BF4D-4E8B-B75A-F49C8D833CDA}",
        "LibName": "Wwise Meter",
        "LibId": "8454147"
+      },
+      {
+       "Id": "1756167208",
+       "Name": "Staircase",
+       "ObjectPath": "\\Effects\\Factory Altiverb - Outdoor and More\\Altiverb - Outdoor and More\\Domestic\\Staircase",
+       "GUID": "{127E52AD-3162-4A20-B3CF-D02B7FAD04B5}",
+       "LibName": "Wwise Convolution Reverb",
+       "LibId": "8323075",
+       "MediaRefs": [
+        {
+         "Id": "766552005"
+        }
+       ]
       },
       {
        "Id": "1842579981",
@@ -99,12 +130,17 @@
        "LibId": "11206659"
       },
       {
-       "Id": "1904434771",
-       "Name": "Medium_Room1",
-       "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Medium_Room1",
-       "GUID": "{71B802A7-03E2-4998-B241-B2B84FE9DDFF}",
-       "LibName": "Wwise Matrix Reverb",
-       "LibId": "7536643"
+       "Id": "2928304598",
+       "Name": "Gated_Metallic_Reflections_Stereo",
+       "ObjectPath": "\\Effects\\Factory AK Convolution Reverb Effects Stereo\\Rooms\\Gated_Metallic_Reflections_Stereo",
+       "GUID": "{54CE8B32-9AA8-4EF3-A620-4530C27ABBF7}",
+       "LibName": "Wwise Convolution Reverb",
+       "LibId": "8323075",
+       "MediaRefs": [
+        {
+         "Id": "304471121"
+        }
+       ]
       }
      ],
      "AudioDevices": [
@@ -339,7 +375,7 @@
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "1904434771"
+         "Id": "2928304598"
         }
        ]
       },
@@ -358,9 +394,9 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Arena",
       "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}",
       "PluginRefs": {
-       "Custom": [
+       "ShareSets": [
         {
-         "Id": "667118077"
+         "Id": "1139053157"
         }
        ]
       },
@@ -478,12 +514,9 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Large",
       "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
       "PluginRefs": {
-       "Custom": [
+       "ShareSets": [
         {
-         "Id": "21631550"
-        },
-        {
-         "Id": "290471130"
+         "Id": "1756167208"
         }
        ]
       },
@@ -1301,6 +1334,6 @@
     ]
    }
   ],
-  "FileHash": "{90628611-8520-7271-A3A5-FC674563A592}"
+  "FileHash": "{FFB7A924-D67D-E4CA-D875-825406008CE2}"
  }
 }

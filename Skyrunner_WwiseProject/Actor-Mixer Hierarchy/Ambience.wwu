@@ -12,6 +12,11 @@
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -345,15 +350,27 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="bumper_aura" ID="{CD82E645-01DB-4663-9657-2663E35F7B70}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.834333333333333"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.834333333333333"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Ambience\bumper_aura.wav</AudioFile>
 									<MediaIDList>
 										<MediaID ID="149187972"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="bumper_magic" ID="{D010F412-0516-4C48-8A31-2733BDCE4645}">
+									<Language>SFX</Language>
+									<AudioFile>Ambience\bumper_magic.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="907537953"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="bumper_aura" ID="{CD82E645-01DB-4663-9657-2663E35F7B70}" Platform="Linked"/>
+								<ActiveSource Name="bumper_magic" ID="{D010F412-0516-4C48-8A31-2733BDCE4645}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

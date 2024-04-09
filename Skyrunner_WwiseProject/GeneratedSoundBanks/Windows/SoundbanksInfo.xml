@@ -372,20 +372,31 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="435591300" Type="Bus" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" Language="SFX" Hash="{7D94654D-C52A-E5EC-F57B-F488AE19B577}">
+		<SoundBank Id="435591300" Type="Bus" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" Language="SFX" Hash="{2CF36614-6C3F-7026-B452-00269947E9A8}">
 			<ObjectPath>REV_Couloir</ObjectPath>
 			<ShortName>REV_Couloir</ShortName>
 			<Path>Bus/REV_Couloir.bnk</Path>
+			<Media>
+				<File Id="304471121" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AK_Factory_IR\Large Spaces\AK Stair Way Hall.wav</ShortName>
+					<Path>Media/304471121.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AK_Factory_IR/Large Spaces/AK Stair Way Hall_EC3E8250.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
 				<ShareSets>
-					<Plugin Id="1904434771" Name="Medium_Room1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Medium_Room1" GUID="{71B802A7-03E2-4998-B241-B2B84FE9DDFF}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="2928304598" Name="Gated_Metallic_Reflections_Stereo" ObjectPath="\Effects\Factory AK Convolution Reverb Effects Stereo\Rooms\Gated_Metallic_Reflections_Stereo" GUID="{54CE8B32-9AA8-4EF3-A620-4530C27ABBF7}" LibName="Wwise Convolution Reverb" LibId="8323075">
+						<MediaRefs>
+							<MediaRef Id="304471121"/>
+						</MediaRefs>
+					</Plugin>
 				</ShareSets>
 			</Plugins>
 			<AuxBusses>
 				<AuxBus Id="435591300" Name="REV_Couloir" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Couloir" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="1904434771"/>
+							<PluginRef Id="2928304598"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
@@ -423,7 +434,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{5635A5C1-8558-2FE7-D7EC-448F7B2619CA}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{5D5DB0B8-A167-6F4A-73F7-183CBEC4A0E2}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
@@ -560,21 +571,32 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="641705904" Type="Bus" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" Language="SFX" Hash="{58E98D2F-F02A-69F4-5D4C-A6314790283C}">
+		<SoundBank Id="641705904" Type="Bus" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" Language="SFX" Hash="{FB702FB0-A353-C8B8-C552-7F63A6655D2E}">
 			<ObjectPath>REV_Arena</ObjectPath>
 			<ShortName>REV_Arena</ShortName>
 			<Path>Bus/REV_Arena.bnk</Path>
+			<Media>
+				<File Id="932825353" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsClose.wav</ShortName>
+					<Path>Media/932825353.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Field/AE_DistantBuilding_MicsClose_26E9612A.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
-				<Custom>
-					<Plugin Id="667118077" Name="Small_Tiled_Room1 (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Arena\Small_Tiled_Room1 (Custom)" GUID="{3EAD5560-D0B7-45F6-8664-801516D32485}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
-				</Custom>
+				<ShareSets>
+					<Plugin Id="1139053157" Name="DistantBuilding_MicsClose" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Field\DistantBuilding_MicsClose" GUID="{A7BD5797-187C-4D6B-B020-A55A737A3916}" LibName="Wwise Convolution Reverb" LibId="8323075">
+						<MediaRefs>
+							<MediaRef Id="932825353"/>
+						</MediaRefs>
+					</Plugin>
+				</ShareSets>
 			</Plugins>
 			<AuxBusses>
 				<AuxBus Id="641705904" Name="REV_Arena" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Arena" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
 					<PluginRefs>
-						<Custom>
-							<PluginRef Id="667118077"/>
-						</Custom>
+						<ShareSets>
+							<PluginRef Id="1139053157"/>
+						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="1377950732" Name="REV_SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
@@ -632,7 +654,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="858959884" Type="Event" GUID="{45B75918-88DC-4592-9F27-6C746C945B7A}" Language="SFX" Hash="{7B095873-B2F2-653F-F3B8-3B7E93946C14}">
+		<SoundBank Id="858959884" Type="Event" GUID="{45B75918-88DC-4592-9F27-6C746C945B7A}" Language="SFX" Hash="{06C9ADFB-5643-728A-6290-6140CD4B783B}">
 			<ObjectPath>Amb_Mountain_Wind</ObjectPath>
 			<ShortName>Amb_Mountain_Wind</ShortName>
 			<Path>Event/Amb_Mountain_Wind.bnk</Path>
@@ -996,7 +1018,7 @@
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1060363905" Type="Event" GUID="{7E4A6C7B-541E-4F66-A804-807DEC01DB1B}" Language="SFX" Hash="{17C1E690-251C-81F0-CC69-C33BA829F74E}">
+		<SoundBank Id="1060363905" Type="Event" GUID="{7E4A6C7B-541E-4F66-A804-807DEC01DB1B}" Language="SFX" Hash="{3875B9CF-FAE2-765F-755B-AC1BFC54679E}">
 			<ObjectPath>Amb_Mechanism</ObjectPath>
 			<ShortName>Amb_Mechanism</ShortName>
 			<Path>Event/Amb_Mechanism.bnk</Path>
@@ -1015,7 +1037,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1188665612" Type="Event" GUID="{F550970C-A8FC-4520-A4CD-A03DF04BDF72}" Language="SFX" Hash="{C07BEF67-206E-A26E-53B8-9197F14CE69D}">
+		<SoundBank Id="1188665612" Type="Event" GUID="{F550970C-A8FC-4520-A4CD-A03DF04BDF72}" Language="SFX" Hash="{B0EAA3DF-C893-41BC-352D-8EFFB3DE5412}">
 			<ObjectPath>Amb_Crackling_Slope</ObjectPath>
 			<ShortName>Amb_Crackling_Slope</ShortName>
 			<Path>Event/Amb_Crackling_Slope.bnk</Path>
@@ -1151,25 +1173,53 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{8FE17A46-DAD2-8342-D475-BC1F0D68648B}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{0E6FD293-B36B-3429-1C4F-99A27D3EBBD0}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<Media>
+				<File Id="304471121" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AK_Factory_IR\Large Spaces\AK Stair Way Hall.wav</ShortName>
+					<Path>Media/304471121.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AK_Factory_IR/Large Spaces/AK Stair Way Hall_EC3E8250.wem</CachePath>
+				</File>
+				<File Id="766552005" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Staircase.wav</ShortName>
+					<Path>Media/766552005.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Domestic/AE_Staircase_632765F8.wem</CachePath>
+				</File>
+				<File Id="932825353" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Field\AE_DistantBuilding_MicsClose.wav</ShortName>
+					<Path>Media/932825353.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Field/AE_DistantBuilding_MicsClose_26E9612A.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="21631550" Name="Parametric EQ (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large\Parametric EQ (Custom)" GUID="{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="290471130" Name="Hall_Guns (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large\Hall_Guns (Custom)" GUID="{78ECAA45-7CB6-47A6-8807-086FF39B4FE0}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="332815239" Name="RoomVerb (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC\REV_LargeRoom_01\RoomVerb (Custom)" GUID="{29915F24-228E-4788-92BC-C759095F9F4E}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="585087015" Name="Matrix Reverb (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC\REV_SmallRoom_01\Matrix Reverb (Custom)" GUID="{88235782-51D1-4E5C-84CD-64C254857225}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
-					<Plugin Id="667118077" Name="Small_Tiled_Room1 (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Arena\Small_Tiled_Room1 (Custom)" GUID="{3EAD5560-D0B7-45F6-8664-801516D32485}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="854493452" Name="Parametric EQ (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC\REV_LargeRoom_01\Parametric EQ (Custom)" GUID="{450F407D-271F-4103-B84B-90F5ED24B203}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="945211497" Name="Underwater_Echoes (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\PLYR Master\PLYR Weapon\Underwater_Echoes (Custom)" GUID="{E99B9354-6E3C-40D3-B57E-B74097729115}" LibName="Wwise Stereo Delay" LibId="8847363"/>
 				</Custom>
 				<ShareSets>
 					<Plugin Id="702543456" Name="Tunnel1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Tunnel1" GUID="{CC44B890-9865-4157-965F-86FED27BC4C6}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="1139053157" Name="DistantBuilding_MicsClose" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Field\DistantBuilding_MicsClose" GUID="{A7BD5797-187C-4D6B-B020-A55A737A3916}" LibName="Wwise Convolution Reverb" LibId="8323075">
+						<MediaRefs>
+							<MediaRef Id="932825353"/>
+						</MediaRefs>
+					</Plugin>
 					<Plugin Id="1313634581" Name="Kick_Meter" ObjectPath="\Effects\Default Work Unit\Kick_Meter" GUID="{F60F1939-BF4D-4E8B-B75A-F49C8D833CDA}" LibName="Wwise Meter" LibId="8454147"/>
+					<Plugin Id="1756167208" Name="Staircase" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\Staircase" GUID="{127E52AD-3162-4A20-B3CF-D02B7FAD04B5}" LibName="Wwise Convolution Reverb" LibId="8323075">
+						<MediaRefs>
+							<MediaRef Id="766552005"/>
+						</MediaRefs>
+					</Plugin>
 					<Plugin Id="1842579981" Name="Reflect_Simplified" ObjectPath="\Effects\Factory Reflect\Reflect_Simplified" GUID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" LibName="Wwise Reflect" LibId="11206659"/>
-					<Plugin Id="1904434771" Name="Medium_Room1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Medium_Room1" GUID="{71B802A7-03E2-4998-B241-B2B84FE9DDFF}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="2928304598" Name="Gated_Metallic_Reflections_Stereo" ObjectPath="\Effects\Factory AK Convolution Reverb Effects Stereo\Rooms\Gated_Metallic_Reflections_Stereo" GUID="{54CE8B32-9AA8-4EF3-A620-4530C27ABBF7}" LibName="Wwise Convolution Reverb" LibId="8323075">
+						<MediaRefs>
+							<MediaRef Id="304471121"/>
+						</MediaRefs>
+					</Plugin>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="1334442663" Name="Controller_Speaker" ObjectPath="\Audio Devices\Default Work Unit\Controller_Speaker" GUID="{DBAC18E4-4565-4995-8D85-16A16A6DEC90}" LibName="Controller Speaker" LibId="11730951"/>
@@ -1231,7 +1281,7 @@
 				<AuxBus Id="435591300" Name="REV_Couloir" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Couloir" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="1904434771"/>
+							<PluginRef Id="2928304598"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
@@ -1240,9 +1290,9 @@
 				</AuxBus>
 				<AuxBus Id="641705904" Name="REV_Arena" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Arena" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
 					<PluginRefs>
-						<Custom>
-							<PluginRef Id="667118077"/>
-						</Custom>
+						<ShareSets>
+							<PluginRef Id="1139053157"/>
+						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="1377950732" Name="REV_SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
@@ -1293,10 +1343,9 @@
 				</AuxBus>
 				<AuxBus Id="3750820532" Name="REV_Large" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<PluginRefs>
-						<Custom>
-							<PluginRef Id="21631550"/>
-							<PluginRef Id="290471130"/>
-						</Custom>
+						<ShareSets>
+							<PluginRef Id="1756167208"/>
+						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="1377950732" Name="REV_SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
@@ -1618,7 +1667,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1692621772" Type="Event" GUID="{7BC5CDA3-ADDA-414C-88EA-DA385A0BB02A}" Language="SFX" Hash="{304B5E8F-2990-43A6-E5D5-2743C69A02D3}">
+		<SoundBank Id="1692621772" Type="Event" GUID="{7BC5CDA3-ADDA-414C-88EA-DA385A0BB02A}" Language="SFX" Hash="{76028D7B-6CE5-CC73-74E0-B5E51F4297EC}">
 			<ObjectPath>Amb_Wind_Heavy</ObjectPath>
 			<ShortName>Amb_Wind_Heavy</ShortName>
 			<Path>Event/Amb_Wind_Heavy.bnk</Path>
@@ -1740,7 +1789,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1936453145" Type="Event" GUID="{7CE7E7ED-8F13-426F-BC42-4D730658C8F7}" Language="SFX" Hash="{80FD70E8-FAA7-2FD5-5595-982ED22AC3DA}">
+		<SoundBank Id="1936453145" Type="Event" GUID="{7CE7E7ED-8F13-426F-BC42-4D730658C8F7}" Language="SFX" Hash="{92FD01A6-1CAA-1354-17A0-54996963629E}">
 			<ObjectPath>Amb_Wind_Light</ObjectPath>
 			<ShortName>Amb_Wind_Light</ShortName>
 			<Path>Event/Amb_Wind_Light.bnk</Path>
@@ -1845,7 +1894,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2041690827" Type="Event" GUID="{499739A7-A19C-4D35-A43D-6E43729F9830}" Language="SFX" Hash="{ADA79D0C-52F2-9805-414B-536E086E3458}">
+		<SoundBank Id="2041690827" Type="Event" GUID="{499739A7-A19C-4D35-A43D-6E43729F9830}" Language="SFX" Hash="{475F0C00-E960-724E-EE4B-292128C08B2C}">
 			<ObjectPath>Amb_Bird</ObjectPath>
 			<ShortName>Amb_Bird</ShortName>
 			<Path>Event/Amb_Bird.bnk</Path>
@@ -2106,7 +2155,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2872651194" Type="Event" GUID="{97A39C71-6024-4A20-A666-3E641EBF8422}" Language="SFX" Hash="{C46A6B07-AF3B-7EA0-840D-08C33FC39BDB}">
+		<SoundBank Id="2872651194" Type="Event" GUID="{97A39C71-6024-4A20-A666-3E641EBF8422}" Language="SFX" Hash="{FF442995-14BA-A7E1-5FE9-0BC2DE7C5B60}">
 			<ObjectPath>Amb_Creepy</ObjectPath>
 			<ShortName>Amb_Creepy</ShortName>
 			<Path>Event/Amb_Creepy.bnk</Path>
@@ -2859,11 +2908,16 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3467451382" Type="Event" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" Language="SFX" Hash="{24EA3235-5196-C02B-23E3-31387D710C7A}">
+		<SoundBank Id="3467451382" Type="Event" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" Language="SFX" Hash="{43A590D3-A46A-E2C4-FBF4-E4DADE73DB36}">
 			<ObjectPath>SX_player_bumper</ObjectPath>
 			<ShortName>SX_player_bumper</ShortName>
 			<Path>Event/SX_player_bumper.bnk</Path>
 			<Media>
+				<File Id="37170476" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Ambience\SFX,Magic,Light Flash,Vocal 3.wav</ShortName>
+					<Path>Media/37170476.wem</Path>
+					<CachePath>SFX/Ambience/SFX,Magic,Light Flash,Vocal 3_10FEA4B0.wem</CachePath>
+				</File>
 				<File Id="65984394" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\woosh_bumper_04.wav</ShortName>
 					<Path>Media/65984394.wem</Path>
@@ -2873,6 +2927,11 @@
 					<ShortName>Player_Movement\woosh_bumper_02.wav</ShortName>
 					<Path>Media/108909392.wem</Path>
 					<CachePath>SFX/Player_Movement/woosh_bumper_02_755F56E2.wem</CachePath>
+				</File>
+				<File Id="147886768" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Ambience\SFX,Magic,Light Flash,Vocal 2.wav</ShortName>
+					<Path>Media/147886768.wem</Path>
+					<CachePath>SFX/Ambience/SFX,Magic,Light Flash,Vocal 2_75C91F0C.wem</CachePath>
 				</File>
 				<File Id="317149178" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\woosh_bumper_01.wav</ShortName>
@@ -2888,6 +2947,11 @@
 					<ShortName>Player_Movement\woosh_bumper_06.wav</ShortName>
 					<Path>Media/390101601.wem</Path>
 					<CachePath>SFX/Player_Movement/woosh_bumper_06_755F56E2.wem</CachePath>
+				</File>
+				<File Id="459894047" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Ambience\SFX,Magic,Light Flash,Vocal 1.wav</ShortName>
+					<Path>Media/459894047.wem</Path>
+					<CachePath>SFX/Ambience/SFX,Magic,Light Flash,Vocal 1_2E9D99AA.wem</CachePath>
 				</File>
 				<File Id="566287118" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\impact_bumper_01.wav</ShortName>
@@ -2921,13 +2985,16 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="3467451382" Name="SX_player_bumper" ObjectPath="\Events\Player\Movement\SX_player_bumper" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" DurationType="OneShot" DurationMin="0.74691665" DurationMax="0.86345834">
+				<Event Id="3467451382" Name="SX_player_bumper" ObjectPath="\Events\Player\Movement\SX_player_bumper" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" DurationType="OneShot" DurationMin="0.74691665" DurationMax="2.0747526">
 					<MediaRefs>
+						<MediaRef Id="37170476"/>
 						<MediaRef Id="65984394"/>
 						<MediaRef Id="108909392"/>
+						<MediaRef Id="147886768"/>
 						<MediaRef Id="317149178"/>
 						<MediaRef Id="382671654"/>
 						<MediaRef Id="390101601"/>
+						<MediaRef Id="459894047"/>
 						<MediaRef Id="566287118"/>
 						<MediaRef Id="591042273"/>
 						<MediaRef Id="605617724"/>
@@ -2961,23 +3028,32 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3750820532" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{69606CAE-8ED8-C51E-3EFE-6433EC96DB5F}">
+		<SoundBank Id="3750820532" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{AA65CDB5-FD95-3FDD-7E3D-0588BD8EEF1D}">
 			<ObjectPath>REV_Large</ObjectPath>
 			<ShortName>REV_Large</ShortName>
 			<Path>Bus/REV_Large.bnk</Path>
+			<Media>
+				<File Id="766552005" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Staircase.wav</ShortName>
+					<Path>Media/766552005.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Domestic/AE_Staircase_632765F8.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
-				<Custom>
-					<Plugin Id="21631550" Name="Parametric EQ (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large\Parametric EQ (Custom)" GUID="{B92DB2C5-E656-40BB-A6BE-76F2D30CC9A5}" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="290471130" Name="Hall_Guns (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large\Hall_Guns (Custom)" GUID="{78ECAA45-7CB6-47A6-8807-086FF39B4FE0}" LibName="Wwise RoomVerb" LibId="7733251"/>
-				</Custom>
+				<ShareSets>
+					<Plugin Id="1756167208" Name="Staircase" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\Staircase" GUID="{127E52AD-3162-4A20-B3CF-D02B7FAD04B5}" LibName="Wwise Convolution Reverb" LibId="8323075">
+						<MediaRefs>
+							<MediaRef Id="766552005"/>
+						</MediaRefs>
+					</Plugin>
+				</ShareSets>
 			</Plugins>
 			<AuxBusses>
 				<AuxBus Id="3750820532" Name="REV_Large" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<PluginRefs>
-						<Custom>
-							<PluginRef Id="21631550"/>
-							<PluginRef Id="290471130"/>
-						</Custom>
+						<ShareSets>
+							<PluginRef Id="1756167208"/>
+						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="1377950732" Name="REV_SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}"/>
@@ -2995,7 +3071,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3755979049" Type="Event" GUID="{A4E26606-8423-4B2B-9B42-08CE1DB084CD}" Language="SFX" Hash="{730A0F69-028A-F1D9-772D-9C62E24614C6}">
+		<SoundBank Id="3755979049" Type="Event" GUID="{A4E26606-8423-4B2B-9B42-08CE1DB084CD}" Language="SFX" Hash="{4FB1A59E-1A28-A704-109A-EF776BD1D179}">
 			<ObjectPath>Amb_Cave</ObjectPath>
 			<ShortName>Amb_Cave</ShortName>
 			<Path>Event/Amb_Cave.bnk</Path>
@@ -3014,21 +3090,21 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3821670275" Type="Event" GUID="{F5B804B1-5506-4197-9ED9-F39E5A921CE8}" Language="SFX" Hash="{6D4317CC-B339-EBF8-806A-F137A48F1FA0}">
+		<SoundBank Id="3821670275" Type="Event" GUID="{F5B804B1-5506-4197-9ED9-F39E5A921CE8}" Language="SFX" Hash="{D4150C24-7D54-568A-AD13-AB9A44298D72}">
 			<ObjectPath>Amb_Bumper_Aura</ObjectPath>
 			<ShortName>Amb_Bumper_Aura</ShortName>
 			<Path>Event/Amb_Bumper_Aura.bnk</Path>
 			<Media>
-				<File Id="149187972" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Ambience\bumper_aura.wav</ShortName>
-					<Path>Media/149187972.wem</Path>
-					<CachePath>SFX/Ambience/bumper_aura_073B4D0C.wem</CachePath>
+				<File Id="907537953" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Ambience\bumper_magic.wav</ShortName>
+					<Path>Media/907537953.wem</Path>
+					<CachePath>SFX/Ambience/bumper_magic_073B4D0C.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
 				<Event Id="3821670275" Name="Amb_Bumper_Aura" ObjectPath="\Events\Environment\Amb_Bumper_Aura" GUID="{F5B804B1-5506-4197-9ED9-F39E5A921CE8}" MaxAttenuation="10000" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="149187972"/>
+						<MediaRef Id="907537953"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -3100,7 +3176,7 @@
 				<Event Id="4142977861" Name="SX_player_game_restart" ObjectPath="\Events\Player\Feedback\SX_player_game_restart" GUID="{8268ED73-B317-4719-887E-F9D8B8D4AA85}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4239386522" Type="Event" GUID="{AF023191-835D-40F3-B33D-929589737D81}" Language="SFX" Hash="{9163F32B-136E-68AC-E802-280CA7206188}">
+		<SoundBank Id="4239386522" Type="Event" GUID="{AF023191-835D-40F3-B33D-929589737D81}" Language="SFX" Hash="{F6409B51-392F-D8C9-D384-32CFF49C8D8F}">
 			<ObjectPath>Amb_Wind_Trees</ObjectPath>
 			<ShortName>Amb_Wind_Trees</ShortName>
 			<Path>Event/Amb_Wind_Trees.bnk</Path>
@@ -3120,5 +3196,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6087574D-5865-826B-E9F2-B47A22C11976}</FileHash>
+	<FileHash>{A53EBE5A-4411-F328-C1EC-AC74854779FB}</FileHash>
 </SoundBanksInfo>
