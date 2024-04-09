@@ -462,7 +462,7 @@
     "Type": "Event",
     "GUID": "{12BCF388-3B1D-4636-873A-0653AB150C1F}",
     "Language": "SFX",
-    "Hash": "{74C63F80-6A24-EC82-6148-D5173A3B8B41}",
+    "Hash": "{2DC1B20E-D21F-4102-F251-B6F05487F24F}",
     "ObjectPath": "SX_player_shield_regen",
     "ShortName": "SX_player_shield_regen",
     "Path": "Event/SX_player_shield_regen.bnk",
@@ -474,9 +474,21 @@
       "Location": "Loose",
       "ShortName": "SX_player_shield_regen.wav",
       "Path": "Media/328453384.wem",
-      "CachePath": "SFX/SX_player_shield_regen_32B758D2.wem"
+      "CachePath": "SFX/SX_player_shield_regen_C7E044D2.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "3948262040",
+       "Name": "Octave_Down",
+       "ObjectPath": "\\Effects\\Factory Effects\\Pitch Shifter\\Harmonize\\Octave_Down",
+       "GUID": "{062EC4B1-5372-4D1E-917B-C757293F2B42}",
+       "LibName": "Wwise Pitch Shifter",
+       "LibId": "8912899"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "387312834",
@@ -484,13 +496,20 @@
       "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_shield_regen",
       "GUID": "{12BCF388-3B1D-4636-873A-0653AB150C1F}",
       "DurationType": "OneShot",
-      "DurationMin": "0.2894125",
-      "DurationMax": "0.40505764",
+      "DurationMin": "1.59049",
+      "DurationMax": "1.59049",
       "MediaRefs": [
        {
         "Id": "328453384"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3948262040"
+        }
+       ]
+      }
      }
     ]
    },
@@ -499,7 +518,7 @@
     "Type": "Event",
     "GUID": "{C93A5CBE-E6E6-432D-86DC-5C2BB41CD152}",
     "Language": "SFX",
-    "Hash": "{C6E0BBB5-D3A8-FC33-E4B8-C2D4234BCD86}",
+    "Hash": "{57A78BC2-4039-4EF3-BAB0-097AA95702A3}",
     "ObjectPath": "Valhalla_Voice",
     "ShortName": "Valhalla_Voice",
     "Path": "Event/Valhalla_Voice.bnk",
@@ -877,7 +896,7 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{5D5DB0B8-A167-6F4A-73F7-183CBEC4A0E2}",
+    "Hash": "{B764C690-53CA-3A4C-C01B-8B6FE90031E4}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
@@ -4526,28 +4545,64 @@
     "Type": "Event",
     "GUID": "{2C5E9B4F-92D9-4B9C-B581-8D73092753E2}",
     "Language": "SFX",
-    "Hash": "{DE4F9CD0-DF46-BF24-655C-EE2609BD00AD}",
+    "Hash": "{E603A1D0-61EF-E931-1940-07B0EAD59FAF}",
     "ObjectPath": "SX_enemy_speaks",
     "ShortName": "SX_enemy_speaks",
     "Path": "Event/SX_enemy_speaks.bnk",
     "Media": [
      {
-      "Id": "585040764",
+      "Id": "60995543",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Enemies\\ennemy_sound_loop02.wav",
-      "Path": "Media/585040764.wem",
-      "CachePath": "SFX/Enemies/ennemy_sound_loop02_755F56E2.wem"
+      "ShortName": "Enemies\\robot_voice_01.wav",
+      "Path": "Media/60995543.wem",
+      "CachePath": "SFX/Enemies/robot_voice_01_755F56E2.wem"
      },
      {
-      "Id": "820370898",
+      "Id": "280576100",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Enemies\\ennemy_sound_loop01.wav",
-      "Path": "Media/820370898.wem",
-      "CachePath": "SFX/Enemies/ennemy_sound_loop01_755F56E2.wem"
+      "ShortName": "Enemies\\robot_voice_04.wav",
+      "Path": "Media/280576100.wem",
+      "CachePath": "SFX/Enemies/robot_voice_04_755F56E2.wem"
+     },
+     {
+      "Id": "425211992",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemies\\robot_move_01.wav",
+      "Path": "Media/425211992.wem",
+      "CachePath": "SFX/Enemies/robot_move_01_B0778E98.wem"
+     },
+     {
+      "Id": "791829952",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemies\\robot_move_02.wav",
+      "Path": "Media/791829952.wem",
+      "CachePath": "SFX/Enemies/robot_move_02_35F27711.wem"
+     },
+     {
+      "Id": "916682299",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemies\\robot_voice_03.wav",
+      "Path": "Media/916682299.wem",
+      "CachePath": "SFX/Enemies/robot_voice_03_755F56E2.wem"
+     },
+     {
+      "Id": "1020311501",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Enemies\\robot_voice_02.wav",
+      "Path": "Media/1020311501.wem",
+      "CachePath": "SFX/Enemies/robot_voice_02_755F56E2.wem"
      }
     ],
     "Events": [
@@ -4560,10 +4615,22 @@
       "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "585040764"
+        "Id": "60995543"
        },
        {
-        "Id": "820370898"
+        "Id": "280576100"
+       },
+       {
+        "Id": "425211992"
+       },
+       {
+        "Id": "791829952"
+       },
+       {
+        "Id": "916682299"
+       },
+       {
+        "Id": "1020311501"
        }
       ]
      }
@@ -4839,7 +4906,7 @@
     "Type": "Event",
     "GUID": "{D7F61B65-CFFF-43D3-86C7-ED9354CBDDC3}",
     "Language": "SFX",
-    "Hash": "{4CA97B78-33C2-15C2-AE84-FD3CFB4E404B}",
+    "Hash": "{9F88F533-45B0-6719-4B2C-73791147D392}",
     "ObjectPath": "SX_lowlife_loop",
     "ShortName": "SX_lowlife_loop",
     "Path": "Event/SX_lowlife_loop.bnk",
@@ -6662,7 +6729,7 @@
     "Type": "Event",
     "GUID": "{C6B5191E-27E7-4097-A049-ADF0776478D2}",
     "Language": "SFX",
-    "Hash": "{43A590D3-A46A-E2C4-FBF4-E4DADE73DB36}",
+    "Hash": "{8ADA4BCF-1908-963D-0A39-5642694E020F}",
     "ObjectPath": "SX_player_bumper",
     "ShortName": "SX_player_bumper",
     "Path": "Event/SX_player_bumper.bnk",
@@ -6674,7 +6741,7 @@
       "Location": "Loose",
       "ShortName": "Ambience\\SFX,Magic,Light Flash,Vocal 3.wav",
       "Path": "Media/37170476.wem",
-      "CachePath": "SFX/Ambience/SFX,Magic,Light Flash,Vocal 3_10FEA4B0.wem"
+      "CachePath": "SFX/Ambience/SFX,Magic,Light Flash,Vocal 3_05E7C2F3.wem"
      },
      {
       "Id": "65984394",
@@ -6804,7 +6871,7 @@
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_bumper",
       "GUID": "{C6B5191E-27E7-4097-A049-ADF0776478D2}",
       "DurationType": "OneShot",
-      "DurationMin": "0.74691665",
+      "DurationMin": "0.60116667",
       "DurationMax": "2.0747526",
       "MediaRefs": [
        {
@@ -7236,6 +7303,6 @@
     ]
    }
   ],
-  "FileHash": "{A12BE2CC-3460-2961-7A42-97CD98DE652E}"
+  "FileHash": "{78B73F47-922A-8F04-73F7-104D96EEBE09}"
  }
 }

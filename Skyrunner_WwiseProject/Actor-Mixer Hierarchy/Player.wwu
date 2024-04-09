@@ -2230,7 +2230,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-10</Value>
+														<Value>-2</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -2312,6 +2312,13 @@
 											</ChildrenList>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="magic_bumper" ID="{DEA6FB02-665E-4F8C-AA4B-7023B24574A5}" ShortID="267327914">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -2386,7 +2393,8 @@
 													<ChildrenList>
 														<AudioFileSource Name="SFX,Magic,Light Flash,Vocal 3" ID="{AE41CC62-25AB-4ABE-993E-DA330A62AC33}">
 															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.568372759856632"/>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0360481927710843"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.568372759856629"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 																<Property Name="TrimBegin" Type="Real64" Value="0.434322580645161"/>
 																<Property Name="TrimEnd" Type="Real64" Value="1.00269534050179"/>
@@ -6433,7 +6441,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-8</Value>
+										<Value>-96</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -6464,16 +6472,13 @@
 						</Sound>
 						<Sound Name="player_shield_regen" ID="{C393DDB2-F61D-459C-B1E8-32F8F0391A6A}" ShortID="131267186">
 							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>1710</Value>
-									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{C4BFAFF1-7FEA-4CF9-A7CD-F7162D93E5D1}">
 												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Min" Type="Real64" Value="-582"/>
 												</PropertyList>
 											</Modifier>
@@ -6497,6 +6502,9 @@
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+									<ObjectRef Name="Octave_Down" ID="{062EC4B1-5372-4D1E-917B-C757293F2B42}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 								</Reference>
@@ -6504,11 +6512,12 @@
 							<ChildrenList>
 								<AudioFileSource Name="SX_player_shield_regen" ID="{AAF8C52B-5A40-45DA-957F-F7A662D35694}">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.126511627906977"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.605272873077203"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.993124747050216"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.494479250334672"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="1.41139121771038"/>
-										<Property Name="TrimEnd" Type="Real64" Value="2.18850574712644"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.795244979919678"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.38573493975904"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>SX_player_shield_regen.wav</AudioFile>
