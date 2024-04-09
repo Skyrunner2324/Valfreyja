@@ -307,7 +307,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="423476228" Type="Event" GUID="{85FE7A46-F893-42AA-8787-F5597C4AF630}" Language="SFX" Hash="{ECDA1C15-98F8-6C2F-0A78-1B0BD6C551C1}">
+		<SoundBank Id="423476228" Type="Event" GUID="{85FE7A46-F893-42AA-8787-F5597C4AF630}" Language="SFX" Hash="{FFD95C47-C733-17F3-2ED7-8E7FA81C2ECF}">
 			<ObjectPath>SX_enemy_gunner_shot</ObjectPath>
 			<ShortName>SX_enemy_gunner_shot</ShortName>
 			<Path>Event/SX_enemy_gunner_shot.bnk</Path>
@@ -1819,7 +1819,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{AC69770B-C4D0-0856-68EE-F08EA1FF8163}">
+		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{FBC1066E-2E9A-C8C8-E431-71BE00EBE9B7}">
 			<ObjectPath>SX_player_feedback_death</ObjectPath>
 			<ShortName>SX_player_feedback_death</ShortName>
 			<Path>Event/SX_player_feedback_death.bnk</Path>
@@ -1827,11 +1827,11 @@
 				<File Id="246221016" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Feedback\player_game_over.wav</ShortName>
 					<Path>Media/246221016.wem</Path>
-					<CachePath>SFX/Player_Feedback/player_game_over_755F56E2.wem</CachePath>
+					<CachePath>SFX/Player_Feedback/player_game_over_58575314.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1950512069" Name="SX_player_feedback_death" ObjectPath="\Events\Player\Feedback\SX_player_feedback_death" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" DurationType="OneShot" DurationMin="16" DurationMax="16">
+				<Event Id="1950512069" Name="SX_player_feedback_death" ObjectPath="\Events\Player\Feedback\SX_player_feedback_death" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" DurationType="OneShot" DurationMin="11.333333" DurationMax="11.333333">
 					<MediaRefs>
 						<MediaRef Id="246221016"/>
 					</MediaRefs>
@@ -1930,33 +1930,27 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2116764893" Type="Event" GUID="{2C5E9B4F-92D9-4B9C-B581-8D73092753E2}" Language="SFX" Hash="{80C5A291-4CC3-0020-B3D1-18D91F356521}">
+		<SoundBank Id="2116764893" Type="Event" GUID="{2C5E9B4F-92D9-4B9C-B581-8D73092753E2}" Language="SFX" Hash="{DE4F9CD0-DF46-BF24-655C-EE2609BD00AD}">
 			<ObjectPath>SX_enemy_speaks</ObjectPath>
 			<ShortName>SX_enemy_speaks</ShortName>
 			<Path>Event/SX_enemy_speaks.bnk</Path>
 			<Media>
-				<File Id="64017903" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Enemies\Kill_Humans_Vox.wav</ShortName>
-					<Path>Media/64017903.wem</Path>
-					<CachePath>SFX/Enemies/Kill_Humans_Vox_45AEDA12.wem</CachePath>
+				<File Id="585040764" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Enemies\ennemy_sound_loop02.wav</ShortName>
+					<Path>Media/585040764.wem</Path>
+					<CachePath>SFX/Enemies/ennemy_sound_loop02_755F56E2.wem</CachePath>
 				</File>
-				<File Id="76110187" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Enemies\Transform01_Vox.wav</ShortName>
-					<Path>Media/76110187.wem</Path>
-					<CachePath>SFX/Enemies/Transform01_Vox_755F56E2.wem</CachePath>
-				</File>
-				<File Id="904213721" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Enemies\Destroy02_Vox.wav</ShortName>
-					<Path>Media/904213721.wem</Path>
-					<CachePath>SFX/Enemies/Destroy02_Vox_755F56E2.wem</CachePath>
+				<File Id="820370898" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Enemies\ennemy_sound_loop01.wav</ShortName>
+					<Path>Media/820370898.wem</Path>
+					<CachePath>SFX/Enemies/ennemy_sound_loop01_755F56E2.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2116764893" Name="SX_enemy_speaks" ObjectPath="\Events\Enemy\SX_enemy_speaks" GUID="{2C5E9B4F-92D9-4B9C-B581-8D73092753E2}" DurationType="OneShot" DurationMin="0.85067254" DurationMax="1.8750113">
+				<Event Id="2116764893" Name="SX_enemy_speaks" ObjectPath="\Events\Enemy\SX_enemy_speaks" GUID="{2C5E9B4F-92D9-4B9C-B581-8D73092753E2}" MaxAttenuation="10000" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="64017903"/>
-						<MediaRef Id="76110187"/>
-						<MediaRef Id="904213721"/>
+						<MediaRef Id="585040764"/>
+						<MediaRef Id="820370898"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -3099,29 +3093,10 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4239386522" Type="Event" GUID="{AF023191-835D-40F3-B33D-929589737D81}" Language="SFX" Hash="{9163F32B-136E-68AC-E802-280CA7206188}">
-			<ObjectPath>Amb_Wind_Trees</ObjectPath>
-			<ShortName>Amb_Wind_Trees</ShortName>
-			<Path>Event/Amb_Wind_Trees.bnk</Path>
-			<Media>
-				<File Id="210933079" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Ambience\ambiance_wind_trees.wav</ShortName>
-					<Path>Media/210933079.wem</Path>
-					<CachePath>SFX/Ambience/ambiance_wind_trees_073B4D0C.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="4239386522" Name="Amb_Wind_Trees" ObjectPath="\Events\Environment\Amb_Wind_Trees" GUID="{AF023191-835D-40F3-B33D-929589737D81}" MaxAttenuation="10000" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="210933079"/>
-					</MediaRefs>
-				</Event>
-			</Events>
-		</SoundBank>
-		<SoundBank Id="4250510672" Type="Event" GUID="{85C76F44-04BA-441A-8CA9-3FD5F40AA44C}" Language="SFX" Hash="{7BAF2688-7CBA-64E8-FC7E-95735C2C2AD1}">
-			<ObjectPath>SF_player_feedback_land</ObjectPath>
-			<ShortName>SF_player_feedback_land</ShortName>
-			<Path>Event/SF_player_feedback_land.bnk</Path>
+		<SoundBank Id="4013308834" Type="Event" GUID="{85C76F44-04BA-441A-8CA9-3FD5F40AA44C}" Language="SFX" Hash="{FEEE282F-25EE-6AF6-DB66-94741995405C}">
+			<ObjectPath>SX_player_feedback_land</ObjectPath>
+			<ShortName>SX_player_feedback_land</ShortName>
+			<Path>Event/SX_player_feedback_land.bnk</Path>
 			<Media>
 				<File Id="4329989" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Feedback\player_feedback_land_04.wav</ShortName>
@@ -3145,7 +3120,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="4250510672" Name="SF_player_feedback_land" ObjectPath="\Events\Player\Feedback\SF_player_feedback_land" GUID="{85C76F44-04BA-441A-8CA9-3FD5F40AA44C}" DurationType="OneShot" DurationMin="0.1508125" DurationMax="0.22964583">
+				<Event Id="4013308834" Name="SX_player_feedback_land" ObjectPath="\Events\Player\Feedback\SX_player_feedback_land" GUID="{85C76F44-04BA-441A-8CA9-3FD5F40AA44C}" DurationType="OneShot" DurationMin="0.1508125" DurationMax="0.22964583">
 					<MediaRefs>
 						<MediaRef Id="4329989"/>
 						<MediaRef Id="104720702"/>
@@ -3158,6 +3133,33 @@
 				<GameParameter Id="3289214803" Name="RTPC_Time_in_Air" ObjectPath="\Game Parameters\Default Work Unit\Parkour\RTPC_Time_in_Air" GUID="{EA244CFE-2C93-4808-BE87-966632323505}"/>
 			</GameParameters>
 		</SoundBank>
+		<SoundBank Id="4142977861" Type="Event" GUID="{8268ED73-B317-4719-887E-F9D8B8D4AA85}" Language="SFX" Hash="{BD0F410A-28C9-6C55-F914-B875D0D6C479}">
+			<ObjectPath>SX_player_game_restart</ObjectPath>
+			<ShortName>SX_player_game_restart</ShortName>
+			<Path>Event/SX_player_game_restart.bnk</Path>
+			<Events>
+				<Event Id="4142977861" Name="SX_player_game_restart" ObjectPath="\Events\Player\Feedback\SX_player_game_restart" GUID="{8268ED73-B317-4719-887E-F9D8B8D4AA85}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="4239386522" Type="Event" GUID="{AF023191-835D-40F3-B33D-929589737D81}" Language="SFX" Hash="{9163F32B-136E-68AC-E802-280CA7206188}">
+			<ObjectPath>Amb_Wind_Trees</ObjectPath>
+			<ShortName>Amb_Wind_Trees</ShortName>
+			<Path>Event/Amb_Wind_Trees.bnk</Path>
+			<Media>
+				<File Id="210933079" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Ambience\ambiance_wind_trees.wav</ShortName>
+					<Path>Media/210933079.wem</Path>
+					<CachePath>SFX/Ambience/ambiance_wind_trees_073B4D0C.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="4239386522" Name="Amb_Wind_Trees" ObjectPath="\Events\Environment\Amb_Wind_Trees" GUID="{AF023191-835D-40F3-B33D-929589737D81}" MaxAttenuation="10000" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="210933079"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7F033408-A972-C218-583F-0C23C3A78938}</FileHash>
+	<FileHash>{20217057-27A1-D859-82CA-B565D2C269AA}</FileHash>
 </SoundBanksInfo>
