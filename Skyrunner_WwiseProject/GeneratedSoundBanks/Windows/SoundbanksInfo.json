@@ -896,11 +896,20 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{B764C690-53CA-3A4C-C01B-8B6FE90031E4}",
+    "Hash": "{07742B7C-C91B-4B52-BB68-1B1E00B5D34D}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
     "Media": [
+     {
+      "Id": "488552020",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Hoverboots\\slide_metal_loop.wav",
+      "Path": "Media/488552020.wem",
+      "CachePath": "SFX/Hoverboots/slide_metal_loop_073B4D0C.wem"
+     },
      {
       "Id": "596869245",
       "Language": "SFX",
@@ -911,15 +920,6 @@
       "CachePath": "SFX/Player_Movement/player_movement_aerial_073B4D0C.wem"
      },
      {
-      "Id": "694258383",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "player_movement_wallslide.wav",
-      "Path": "Media/694258383.wem",
-      "CachePath": "SFX/player_movement_wallslide_073B4D0C.wem"
-     },
-     {
       "Id": "1023074526",
       "Language": "SFX",
       "Streaming": "false",
@@ -927,15 +927,6 @@
       "ShortName": "Player_Movement\\wind_speed.wav",
       "Path": "Media/1023074526.wem",
       "CachePath": "SFX/Player_Movement/wind_speed_755F56E2.wem"
-     },
-     {
-      "Id": "1056072145",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Hoverboots\\hoverboots_on_rail_loop.wav",
-      "Path": "Media/1056072145.wem",
-      "CachePath": "SFX/Hoverboots/hoverboots_on_rail_loop_35E62677.wem"
      }
     ],
     "Plugins": {
@@ -949,30 +940,12 @@
        "LibId": "6881283"
       },
       {
-       "Id": "768480562",
-       "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots and Wind\\Hoverboots_Other\\player_movement_wallrun\\hoverboots_on_rail_loop\\Parametric EQ (Custom)",
-       "GUID": "{795F1578-DFEF-4A0F-995B-DC9BEE878FD0}",
-       "LibName": "Wwise Parametric EQ",
-       "LibId": "6881283"
-      },
-      {
        "Id": "942906617",
        "Name": "Tremolo (Custom)",
        "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots and Wind\\Hoverboots_Other\\player_movement_aerial\\Tremolo (Custom)",
        "GUID": "{B0E7CB90-1F41-4ADD-8AE2-D3B20B8709CA}",
        "LibName": "Wwise Tremolo",
        "LibId": "8585219"
-      }
-     ],
-     "ShareSets": [
-      {
-       "Id": "2539557199",
-       "Name": "Treble",
-       "ObjectPath": "\\Effects\\Factory Effects\\Flanger\\Flanging\\Treble",
-       "GUID": "{FB516F18-AA49-4B92-BC11-FA23E8CC59B4}",
-       "LibName": "Wwise Flanger",
-       "LibId": "8192003"
       }
      ]
     },
@@ -985,16 +958,13 @@
       "DurationType": "Infinite",
       "MediaRefs": [
        {
+        "Id": "488552020"
+       },
+       {
         "Id": "596869245"
        },
        {
-        "Id": "694258383"
-       },
-       {
         "Id": "1023074526"
-       },
-       {
-        "Id": "1056072145"
        }
       ],
       "PluginRefs": {
@@ -1003,15 +973,7 @@
          "Id": "174977445"
         },
         {
-         "Id": "768480562"
-        },
-        {
          "Id": "942906617"
-        }
-       ],
-       "ShareSets": [
-        {
-         "Id": "2539557199"
         }
        ]
       }
@@ -5147,6 +5109,43 @@
     ]
    },
    {
+    "Id": "3129104079",
+    "Type": "Event",
+    "GUID": "{6F24A296-5907-4F40-A9D0-16FF5B44660B}",
+    "Language": "SFX",
+    "Hash": "{601A65C9-2627-21A0-0209-79AC0C21D409}",
+    "ObjectPath": "SX_player_metal_enter",
+    "ShortName": "SX_player_metal_enter",
+    "Path": "Event/SX_player_metal_enter.bnk",
+    "Media": [
+     {
+      "Id": "143796492",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Movement\\slide_metal_enter.wav",
+      "Path": "Media/143796492.wem",
+      "CachePath": "SFX/Player_Movement/slide_metal_enter_C1AD2FC0.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3129104079",
+      "Name": "SX_player_metal_enter",
+      "ObjectPath": "\\Events\\Player\\Movement\\SX_player_metal_enter",
+      "GUID": "{6F24A296-5907-4F40-A9D0-16FF5B44660B}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.213547",
+      "DurationMax": "1.3621606",
+      "MediaRefs": [
+       {
+        "Id": "143796492"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "3390387889",
     "Type": "Event",
     "GUID": "{6D13E3BD-F5FB-4B8B-8184-DB05606BBF7C}",
@@ -7095,7 +7094,7 @@
     "Type": "Event",
     "GUID": "{F5B804B1-5506-4197-9ED9-F39E5A921CE8}",
     "Language": "SFX",
-    "Hash": "{0B232AB3-1B71-F0F4-28EB-F8CC65E94E91}",
+    "Hash": "{FA23217C-E264-99F3-8130-EB3522F508FE}",
     "ObjectPath": "Amb_Bumper_Aura",
     "ShortName": "Amb_Bumper_Aura",
     "Path": "Event/Amb_Bumper_Aura.bnk",
@@ -7315,6 +7314,6 @@
     ]
    }
   ],
-  "FileHash": "{2432A7BB-2C42-AFAE-0E28-2C3FE47071F5}"
+  "FileHash": "{E2FA96D9-F019-9CBA-1BB2-61A9AB8CBE7F}"
  }
 }

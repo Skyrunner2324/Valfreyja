@@ -1,59 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{B764C690-53CA-3A4C-C01B-8B6FE90031E4}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{07742B7C-C91B-4B52-BB68-1B1E00B5D34D}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
 			<Media>
+				<File Id="488552020" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\slide_metal_loop.wav</ShortName>
+					<Path>Media/488552020.wem</Path>
+					<CachePath>SFX/Hoverboots/slide_metal_loop_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="596869245" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\player_movement_aerial.wav</ShortName>
 					<Path>Media/596869245.wem</Path>
 					<CachePath>SFX/Player_Movement/player_movement_aerial_073B4D0C.wem</CachePath>
-				</File>
-				<File Id="694258383" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>player_movement_wallslide.wav</ShortName>
-					<Path>Media/694258383.wem</Path>
-					<CachePath>SFX/player_movement_wallslide_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="1023074526" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\wind_speed.wav</ShortName>
 					<Path>Media/1023074526.wem</Path>
 					<CachePath>SFX/Player_Movement/wind_speed_755F56E2.wem</CachePath>
 				</File>
-				<File Id="1056072145" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Hoverboots\hoverboots_on_rail_loop.wav</ShortName>
-					<Path>Media/1056072145.wem</Path>
-					<CachePath>SFX/Hoverboots/hoverboots_on_rail_loop_35E62677.wem</CachePath>
-				</File>
 			</Media>
 			<Plugins>
 				<Custom>
 					<Plugin Id="174977445" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\player_movement_aerial\Parametric EQ (Custom)" GUID="{E39A6796-AD9D-4361-AFBC-512D0CBDE7C8}" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="768480562" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\player_movement_wallrun\hoverboots_on_rail_loop\Parametric EQ (Custom)" GUID="{795F1578-DFEF-4A0F-995B-DC9BEE878FD0}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="942906617" Name="Tremolo (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\player_movement_aerial\Tremolo (Custom)" GUID="{B0E7CB90-1F41-4ADD-8AE2-D3B20B8709CA}" LibName="Wwise Tremolo" LibId="8585219"/>
 				</Custom>
-				<ShareSets>
-					<Plugin Id="2539557199" Name="Treble" ObjectPath="\Effects\Factory Effects\Flanger\Flanging\Treble" GUID="{FB516F18-AA49-4B92-BC11-FA23E8CC59B4}" LibName="Wwise Flanger" LibId="8192003"/>
-				</ShareSets>
 			</Plugins>
 			<Events>
 				<Event Id="527139965" Name="SX_play_hoverboots" ObjectPath="\Events\Hoverboots\Hoverboots\SX_play_hoverboots" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" DurationType="Infinite">
 					<MediaRefs>
+						<MediaRef Id="488552020"/>
 						<MediaRef Id="596869245"/>
-						<MediaRef Id="694258383"/>
 						<MediaRef Id="1023074526"/>
-						<MediaRef Id="1056072145"/>
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="174977445"/>
-							<PluginRef Id="768480562"/>
 							<PluginRef Id="942906617"/>
 						</Custom>
-						<ShareSets>
-							<PluginRef Id="2539557199"/>
-						</ShareSets>
 					</PluginRefs>
 				</Event>
 			</Events>
@@ -64,5 +50,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9E6E4860-674B-1E7A-0AC2-C838941A8ECA}</FileHash>
+	<FileHash>{DA717780-B8FF-2019-A8DC-112F6B7A26EA}</FileHash>
 </SoundBanksInfo>
