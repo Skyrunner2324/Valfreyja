@@ -352,17 +352,7 @@
 												<ActiveSource Name="player_movement_aerial_01" ID="{6D7A55AC-48DB-4A31-AF7C-8ACA0A0C9F86}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<BlendContainer Name="player_movement_wallrun_left" ID="{B0ADA90F-568F-4B37-A5B0-A020ED445F34}" ShortID="240526864">
-											<PropertyList>
-												<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
-												<Property Name="OverridePositioning" Type="bool" Value="True"/>
-												<Property Name="SpeakerPanning" Type="int16" Value="1"/>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-5</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
+										<BlendContainer Name="Hoverboots_Wallrun" ID="{FFE9EA2B-B36A-456A-826E-2830A3C7E3CD}" ShortID="145615946">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -372,29 +362,20 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="hoverboots_on_rail_loop" ID="{E345E7C5-53D4-47DD-863B-5D9161361C0D}" ShortID="151456391">
+												<BlendContainer Name="player_movement_wallrun_left" ID="{B0ADA90F-568F-4B37-A5B0-A020ED445F34}" ShortID="240526864">
 													<PropertyList>
-														<Property Name="BypassEffect0" Type="bool">
-															<ValueList>
-																<Value>True</Value>
-															</ValueList>
-														</Property>
+														<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 														<Property Name="GameAuxSendVolume" Type="Real64">
 															<ValueList>
 																<Value>4</Value>
 															</ValueList>
 														</Property>
-														<Property Name="Highpass" Type="int16">
-															<ValueList>
-																<Value>1</Value>
-															</ValueList>
-														</Property>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-														<Property Name="OverrideEffect" Type="bool" Value="True"/>
+														<Property Name="OverridePositioning" Type="bool" Value="True"/>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>-2</Value>
+																<Value>-5</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -402,129 +383,333 @@
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 														</Reference>
-														<Reference Name="Effect0" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
-															<ObjectRef Name="Treble" ID="{FB516F18-AA49-4B92-BC11-FA23E8CC59B4}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 														</Reference>
-														<Reference Name="Effect1">
-															<Custom>
-																<Effect Name="Parametric EQ (Custom)" ID="{795F1578-DFEF-4A0F-995B-DC9BEE878FD0}" ShortID="768480562" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="hoverboots_on_rail_loop" ID="{E345E7C5-53D4-47DD-863B-5D9161361C0D}" ShortID="151456391">
+															<PropertyList>
+																<Property Name="BypassEffect0" Type="bool">
+																	<ValueList>
+																		<Value>True</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="GameAuxSendVolume" Type="Real64">
+																	<ValueList>
+																		<Value>4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Highpass" Type="int16">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+																<Property Name="OverrideEffect" Type="bool" Value="True"/>
+																<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="Effect0" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
+																	<ObjectRef Name="Treble" ID="{FB516F18-AA49-4B92-BC11-FA23E8CC59B4}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+																</Reference>
+																<Reference Name="Effect1">
+																	<Custom>
+																		<Effect Name="Parametric EQ (Custom)" ID="{795F1578-DFEF-4A0F-995B-DC9BEE878FD0}" ShortID="768480562" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																			<PropertyList>
+																				<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+																				<Property Name="FrequencyBand1" Type="Real32" Value="2077"/>
+																				<Property Name="OnOffBand2" Type="bool" Value="False"/>
+																				<Property Name="OnOffBand3" Type="bool" Value="False"/>
+																			</PropertyList>
+																		</Effect>
+																	</Custom>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="hoverboots_on_rail_loop" ID="{1D95FE8F-FAF9-44B7-9AB6-4AB7659EF519}">
 																	<PropertyList>
-																		<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
-																		<Property Name="FrequencyBand1" Type="Real32" Value="2077"/>
-																		<Property Name="OnOffBand2" Type="bool" Value="False"/>
-																		<Property Name="OnOffBand3" Type="bool" Value="False"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.180903866248694"/>
 																	</PropertyList>
-																</Effect>
-															</Custom>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="hoverboots_on_rail_loop" ID="{1D95FE8F-FAF9-44B7-9AB6-4AB7659EF519}">
+																	<Language>SFX</Language>
+																	<AudioFile>Hoverboots\hoverboots_on_rail_loop.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1056072145"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists>
+																<ObjectList Name="RTPC">
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{4F557D46-AC5B-4B2B-A9C2-B95EA6BF9349}" ShortID="41208351">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{FB3C6C06-FF47-4328-BDA9-868AF32A3450}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="65537"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>520</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>5</XPos>
+																										<YPos>-2009</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{672D3800-3340-49D3-8C6D-841142F12235}" ShortID="819849633">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="Volume"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{29DDC97D-3730-4B7D-B89F-F089537D225F}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0.06759</YPos>
+																										<Flags>5</Flags>
+																										<SegmentShape>Exp1</SegmentShape>
+																									</Point>
+																									<Point>
+																										<XPos>5</XPos>
+																										<YPos>11.33044</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																</ObjectList>
+															</ObjectLists>
+															<ActiveSourceList>
+																<ActiveSource Name="hoverboots_on_rail_loop" ID="{1D95FE8F-FAF9-44B7-9AB6-4AB7659EF519}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="player_movement_wallslide" ID="{77FFC32C-0B16-4A43-95A8-F2CD9B2DDA0D}" ShortID="951852584">
 															<PropertyList>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.180903866248694"/>
+																<Property Name="GameAuxSendVolume" Type="Real64">
+																	<ValueList>
+																		<Value>4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+																<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>4</Value>
+																	</ValueList>
+																</Property>
 															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>Hoverboots\hoverboots_on_rail_loop.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="1056072145"/>
-															</MediaIDList>
-														</AudioFileSource>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="player_movement_wallslide" ID="{01389116-BC01-489A-BE57-76469DC46B48}">
+																	<Language>SFX</Language>
+																	<AudioFile>player_movement_wallslide.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="694258383"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists>
+																<ObjectList Name="RTPC">
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{ECC5B911-C560-4D2E-9529-0A06F1BB91C7}" ShortID="1043361411">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{E41A9639-8997-4590-A359-9E5F1D5CE298}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="65537"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>-967</YPos>
+																										<Flags>5</Flags>
+																										<SegmentShape>Exp1</SegmentShape>
+																									</Point>
+																									<Point>
+																										<XPos>5</XPos>
+																										<YPos>448</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																</ObjectList>
+															</ObjectLists>
+															<ActiveSourceList>
+																<ActiveSource Name="player_movement_wallslide" ID="{01389116-BC01-489A-BE57-76469DC46B48}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="slide_metal_loop" ID="{C31CC4E4-BE04-40DC-86F8-D06EFC9D78CD}" ShortID="77953148">
+															<PropertyList>
+																<Property Name="Inclusion" Type="bool">
+																	<ValueList>
+																		<Value>False</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="slide_metal_loop" ID="{6F00177E-6CB3-4E9D-8075-D339067AE41E}">
+																	<Language>SFX</Language>
+																	<AudioFile>Hoverboots\slide_metal_loop.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="488552020"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="slide_metal_loop" ID="{6F00177E-6CB3-4E9D-8075-D339067AE41E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="slide_metal_loop_rework" ID="{DFA2517C-DF97-446C-8416-6F8E974E7A2E}" ShortID="944289577">
+															<PropertyList>
+																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="slide_metal_loop_rework" ID="{86B904B5-8CF4-41DF-8A61-F0BE6596D16E}">
+																	<Language>SFX</Language>
+																	<AudioFile>Hoverboots\slide_metal_loop_rework.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="932134860"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="slide_metal_loop_rework" ID="{86B904B5-8CF4-41DF-8A61-F0BE6596D16E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
 													</ChildrenList>
-													<ObjectLists>
-														<ObjectList Name="RTPC">
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{4F557D46-AC5B-4B2B-A9C2-B95EA6BF9349}" ShortID="41208351">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="Pitch"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{FB3C6C06-FF47-4328-BDA9-868AF32A3450}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="65537"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>520</YPos>
-																								<Flags>5</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>5</XPos>
-																								<YPos>-2009</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{672D3800-3340-49D3-8C6D-841142F12235}" ShortID="819849633">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="Volume"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{29DDC97D-3730-4B7D-B89F-F089537D225F}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="3"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>0.06759</YPos>
-																								<Flags>5</Flags>
-																								<SegmentShape>Exp1</SegmentShape>
-																							</Point>
-																							<Point>
-																								<XPos>5</XPos>
-																								<YPos>11.33044</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-														</ObjectList>
-													</ObjectLists>
-													<ActiveSourceList>
-														<ActiveSource Name="hoverboots_on_rail_loop" ID="{1D95FE8F-FAF9-44B7-9AB6-4AB7659EF519}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="player_movement_wallslide" ID="{77FFC32C-0B16-4A43-95A8-F2CD9B2DDA0D}" ShortID="951852584">
+													<PositioningInfo>
+														<Panner Name="" ID="{2852DEAF-9CDB-4297-AD6A-A7FB1D1F5910}">
+															<PropertyList>
+																<Property Name="PanX" Type="Real64" Value="-40"/>
+																<Property Name="PanY" Type="Real64" Value="4.44089209850063E-16"/>
+															</PropertyList>
+														</Panner>
+													</PositioningInfo>
+													<StateInfo>
+														<StateGroupList>
+															<StateGroupInfo>
+																<StateGroupRef Name="Wallrun_Side" ID="{B78D3E07-DB70-40EE-8D91-0EF8E08B108A}"/>
+															</StateGroupInfo>
+														</StateGroupList>
+														<CustomStateList>
+															<CustomState>
+																<StateRef Name="Left" ID="{53C44D90-3FF2-4C82-81DE-711D5349CE0B}"/>
+																<CustomState Name="" ID="{4525679F-5D7D-4FB0-ACAE-1840AAC1A330}" ShortID="307641601"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="Right" ID="{9A1A4827-B952-4D99-94C2-72C2ACC07C07}"/>
+																<CustomState Name="" ID="{DA8D9BDA-E728-4975-A4AE-B3C9DCBE8C8E}" ShortID="929529939">
+																	<PropertyList>
+																		<Property Name="Volume" Type="Real64" Value="-108"/>
+																	</PropertyList>
+																</CustomState>
+															</CustomState>
+														</CustomStateList>
+													</StateInfo>
+												</BlendContainer>
+												<BlendContainer Name="player_movement_wallrun_right" ID="{5986E4BF-6A2D-4DF6-9CA8-7D98E82EDAEA}" ShortID="447839155">
 													<PropertyList>
+														<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 														<Property Name="GameAuxSendVolume" Type="Real64">
 															<ValueList>
 																<Value>4</Value>
 															</ValueList>
 														</Property>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+														<Property Name="OverridePositioning" Type="bool" Value="True"/>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>4</Value>
+																<Value>-5</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -537,160 +722,316 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="player_movement_wallslide" ID="{01389116-BC01-489A-BE57-76469DC46B48}">
-															<Language>SFX</Language>
-															<AudioFile>player_movement_wallslide.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="694258383"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists>
-														<ObjectList Name="RTPC">
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{ECC5B911-C560-4D2E-9529-0A06F1BB91C7}" ShortID="1043361411">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="Pitch"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{E41A9639-8997-4590-A359-9E5F1D5CE298}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="65537"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>-967</YPos>
-																								<Flags>5</Flags>
-																								<SegmentShape>Exp1</SegmentShape>
-																							</Point>
-																							<Point>
-																								<XPos>5</XPos>
-																								<YPos>448</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-														</ObjectList>
-													</ObjectLists>
-													<ActiveSourceList>
-														<ActiveSource Name="player_movement_wallslide" ID="{01389116-BC01-489A-BE57-76469DC46B48}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="slide_metal_loop" ID="{C31CC4E4-BE04-40DC-86F8-D06EFC9D78CD}" ShortID="77953148">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="slide_metal_loop" ID="{6F00177E-6CB3-4E9D-8075-D339067AE41E}">
-															<Language>SFX</Language>
-															<AudioFile>Hoverboots\slide_metal_loop.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="488552020"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="slide_metal_loop" ID="{6F00177E-6CB3-4E9D-8075-D339067AE41E}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="slide_metal_loop_rework" ID="{DFA2517C-DF97-446C-8416-6F8E974E7A2E}" ShortID="944289577">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>2</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="slide_metal_loop_rework" ID="{86B904B5-8CF4-41DF-8A61-F0BE6596D16E}">
-															<Language>SFX</Language>
-															<AudioFile>Hoverboots\slide_metal_loop_rework.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="932134860"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="slide_metal_loop_rework" ID="{86B904B5-8CF4-41DF-8A61-F0BE6596D16E}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-											<PositioningInfo>
-												<Panner Name="" ID="{2852DEAF-9CDB-4297-AD6A-A7FB1D1F5910}">
-													<PropertyList>
-														<Property Name="PanX" Type="Real64" Value="-40"/>
-														<Property Name="PanY" Type="Real64" Value="4.44089209850063E-16"/>
-													</PropertyList>
-												</Panner>
-											</PositioningInfo>
-											<StateInfo>
-												<StateGroupList>
-													<StateGroupInfo>
-														<StateGroupRef Name="Wallrun_Side" ID="{B78D3E07-DB70-40EE-8D91-0EF8E08B108A}"/>
-													</StateGroupInfo>
-												</StateGroupList>
-												<CustomStateList>
-													<CustomState>
-														<StateRef Name="Left" ID="{53C44D90-3FF2-4C82-81DE-711D5349CE0B}"/>
-														<CustomState Name="" ID="{4525679F-5D7D-4FB0-ACAE-1840AAC1A330}" ShortID="307641601"/>
-													</CustomState>
-													<CustomState>
-														<StateRef Name="Right" ID="{9A1A4827-B952-4D99-94C2-72C2ACC07C07}"/>
-														<CustomState Name="" ID="{DA8D9BDA-E728-4975-A4AE-B3C9DCBE8C8E}" ShortID="929529939">
+														<Sound Name="hoverboots_on_rail_loop" ID="{A9BC8A96-3B0A-43BA-BA56-CEB96BF992DB}" ShortID="44762703">
 															<PropertyList>
-																<Property Name="Volume" Type="Real64" Value="-108"/>
+																<Property Name="BypassEffect0" Type="bool">
+																	<ValueList>
+																		<Value>True</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="GameAuxSendVolume" Type="Real64">
+																	<ValueList>
+																		<Value>4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Highpass" Type="int16">
+																	<ValueList>
+																		<Value>1</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+																<Property Name="OverrideEffect" Type="bool" Value="True"/>
+																<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-2</Value>
+																	</ValueList>
+																</Property>
 															</PropertyList>
-														</CustomState>
-													</CustomState>
-												</CustomStateList>
-											</StateInfo>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="Effect0" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
+																	<ObjectRef Name="Treble" ID="{FB516F18-AA49-4B92-BC11-FA23E8CC59B4}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+																</Reference>
+																<Reference Name="Effect1">
+																	<Custom>
+																		<Effect Name="Parametric EQ (Custom)" ID="{01C845E6-599D-4A5B-817E-BEF9E7FF86DF}" ShortID="899741083" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																			<PropertyList>
+																				<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+																				<Property Name="FrequencyBand1" Type="Real32" Value="2077"/>
+																				<Property Name="OnOffBand2" Type="bool" Value="False"/>
+																				<Property Name="OnOffBand3" Type="bool" Value="False"/>
+																			</PropertyList>
+																		</Effect>
+																	</Custom>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="hoverboots_on_rail_loop" ID="{0C4F48E7-1F6F-45CC-B71A-E22CDF9F9F7E}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.180903866248694"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Hoverboots\hoverboots_on_rail_loop.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1056072145"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists>
+																<ObjectList Name="RTPC">
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{6213423E-6C1D-4474-9075-0E5BC84C9B1B}" ShortID="335321791">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{4B646FEA-1277-4F81-83D7-7217EDC39FD4}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="65537"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>520</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>5</XPos>
+																										<YPos>-2009</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{D8DF0A46-33DB-4817-82DC-5CA838FE39D3}" ShortID="451183979">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="Volume"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{FD595972-95BF-4DD0-A086-38E78BE1EEC3}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0.06759</YPos>
+																										<Flags>5</Flags>
+																										<SegmentShape>Exp1</SegmentShape>
+																									</Point>
+																									<Point>
+																										<XPos>5</XPos>
+																										<YPos>11.33044</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																</ObjectList>
+															</ObjectLists>
+															<ActiveSourceList>
+																<ActiveSource Name="hoverboots_on_rail_loop" ID="{0C4F48E7-1F6F-45CC-B71A-E22CDF9F9F7E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="player_movement_wallslide" ID="{50F306AC-FAD6-427E-8DE5-498059D62296}" ShortID="509652570">
+															<PropertyList>
+																<Property Name="GameAuxSendVolume" Type="Real64">
+																	<ValueList>
+																		<Value>4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+																<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>4</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="player_movement_wallslide" ID="{15C356EB-A151-4C7C-83AE-2EAE9FB64BFB}">
+																	<Language>SFX</Language>
+																	<AudioFile>player_movement_wallslide.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="694258383"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists>
+																<ObjectList Name="RTPC">
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{642CAD4A-16E6-4B90-BCDE-69E9B68BFCA3}" ShortID="692979807">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{CBA74455-4624-427F-9A0E-3A22773EAB1A}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="65537"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>-967</YPos>
+																										<Flags>5</Flags>
+																										<SegmentShape>Exp1</SegmentShape>
+																									</Point>
+																									<Point>
+																										<XPos>5</XPos>
+																										<YPos>448</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																</ObjectList>
+															</ObjectLists>
+															<ActiveSourceList>
+																<ActiveSource Name="player_movement_wallslide" ID="{15C356EB-A151-4C7C-83AE-2EAE9FB64BFB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="slide_metal_loop" ID="{D00212B5-3EEA-48F2-86F8-959E55DF42AD}" ShortID="646035399">
+															<PropertyList>
+																<Property Name="Inclusion" Type="bool">
+																	<ValueList>
+																		<Value>False</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="slide_metal_loop" ID="{81DAB44A-9413-4895-924C-F43E2FE167C8}">
+																	<Language>SFX</Language>
+																	<AudioFile>Hoverboots\slide_metal_loop.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="488552020"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="slide_metal_loop" ID="{81DAB44A-9413-4895-924C-F43E2FE167C8}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="slide_metal_loop_rework" ID="{F98A29EF-29C2-4FCE-B4C6-760784B1D22F}" ShortID="332814140">
+															<PropertyList>
+																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="slide_metal_loop_rework" ID="{26734BC3-2DA5-4DCA-BB34-AD428B3C651E}">
+																	<Language>SFX</Language>
+																	<AudioFile>Hoverboots\slide_metal_loop_rework.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="932134860"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="slide_metal_loop_rework" ID="{26734BC3-2DA5-4DCA-BB34-AD428B3C651E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{A2024B12-2BE2-4329-A9EB-2E8979DF35FD}">
+															<PropertyList>
+																<Property Name="PanX" Type="Real64" Value="40"/>
+															</PropertyList>
+														</Panner>
+													</PositioningInfo>
+													<StateInfo>
+														<StateGroupList>
+															<StateGroupInfo>
+																<StateGroupRef Name="Wallrun_Side" ID="{B78D3E07-DB70-40EE-8D91-0EF8E08B108A}"/>
+															</StateGroupInfo>
+														</StateGroupList>
+														<CustomStateList>
+															<CustomState>
+																<StateRef Name="Left" ID="{53C44D90-3FF2-4C82-81DE-711D5349CE0B}"/>
+																<CustomState Name="" ID="{6FE4FA5C-EF10-468A-884D-5D9E16261ABE}" ShortID="609430349">
+																	<PropertyList>
+																		<Property Name="Volume" Type="Real64" Value="-108"/>
+																	</PropertyList>
+																</CustomState>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="Right" ID="{9A1A4827-B952-4D99-94C2-72C2ACC07C07}"/>
+																<CustomState Name="" ID="{98513492-9280-45AE-99FE-DBCE3C0E70A5}" ShortID="1027150837"/>
+															</CustomState>
+														</CustomStateList>
+													</StateInfo>
+												</BlendContainer>
+											</ChildrenList>
 										</BlendContainer>
-										<BlendContainer Name="player_movement_wallrun_right" ID="{5986E4BF-6A2D-4DF6-9CA8-7D98E82EDAEA}" ShortID="447839155">
-											<PropertyList>
-												<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
-												<Property Name="OverridePositioning" Type="bool" Value="True"/>
-												<Property Name="SpeakerPanning" Type="int16" Value="1"/>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-5</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
+										<BlendContainer Name="Hoverboots_Rail" ID="{69AD3BA5-1D99-4879-9AD8-0F9A05309067}" ShortID="1020282052">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -700,7 +1041,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="hoverboots_on_rail_loop" ID="{A9BC8A96-3B0A-43BA-BA56-CEB96BF992DB}" ShortID="44762703">
+												<Sound Name="hoverboots_on_rail_loop" ID="{DA76CC07-467A-40A3-B4CB-E95BCFF85BD8}" ShortID="1012444265">
 													<PropertyList>
 														<Property Name="BypassEffect0" Type="bool">
 															<ValueList>
@@ -735,7 +1076,7 @@
 														</Reference>
 														<Reference Name="Effect1">
 															<Custom>
-																<Effect Name="Parametric EQ (Custom)" ID="{01C845E6-599D-4A5B-817E-BEF9E7FF86DF}" ShortID="899741083" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																<Effect Name="Parametric EQ (Custom)" ID="{18DFA90C-457A-4164-980A-5D55838278C2}" ShortID="696083285" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 																	<PropertyList>
 																		<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
 																		<Property Name="FrequencyBand1" Type="Real32" Value="2077"/>
@@ -750,7 +1091,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="hoverboots_on_rail_loop" ID="{0C4F48E7-1F6F-45CC-B71A-E22CDF9F9F7E}">
+														<AudioFileSource Name="hoverboots_on_rail_loop" ID="{53E243B3-82F0-4111-8D59-68EA27630EC7}">
 															<PropertyList>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 																<Property Name="TrimBegin" Type="Real64" Value="0.180903866248694"/>
@@ -766,7 +1107,7 @@
 														<ObjectList Name="RTPC">
 															<Reference>
 																<Local>
-																	<RTPC Name="" ID="{6213423E-6C1D-4474-9075-0E5BC84C9B1B}" ShortID="335321791">
+																	<RTPC Name="" ID="{AFB84414-D8EB-46A8-B7CB-3818A11EFBD4}" ShortID="295304746">
 																		<PropertyList>
 																			<Property Name="PropertyName" Type="string" Value="Pitch"/>
 																		</PropertyList>
@@ -776,7 +1117,7 @@
 																			</Reference>
 																			<Reference Name="Curve">
 																				<Custom>
-																					<Curve Name="" ID="{4B646FEA-1277-4F81-83D7-7217EDC39FD4}">
+																					<Curve Name="" ID="{49A5E9A5-AE1B-435F-9D56-919F3E25BC4B}">
 																						<PropertyList>
 																							<Property Name="Flags" Type="int32" Value="65537"/>
 																						</PropertyList>
@@ -801,7 +1142,7 @@
 															</Reference>
 															<Reference>
 																<Local>
-																	<RTPC Name="" ID="{D8DF0A46-33DB-4817-82DC-5CA838FE39D3}" ShortID="451183979">
+																	<RTPC Name="" ID="{7141C9F9-8F70-4CDF-8F46-AB839F470CED}" ShortID="972988515">
 																		<PropertyList>
 																			<Property Name="PropertyName" Type="string" Value="Volume"/>
 																		</PropertyList>
@@ -811,7 +1152,7 @@
 																			</Reference>
 																			<Reference Name="Curve">
 																				<Custom>
-																					<Curve Name="" ID="{FD595972-95BF-4DD0-A086-38E78BE1EEC3}">
+																					<Curve Name="" ID="{8A8A3183-7215-4B09-AF69-F289CAED1377}">
 																						<PropertyList>
 																							<Property Name="Flags" Type="int32" Value="3"/>
 																						</PropertyList>
@@ -838,10 +1179,10 @@
 														</ObjectList>
 													</ObjectLists>
 													<ActiveSourceList>
-														<ActiveSource Name="hoverboots_on_rail_loop" ID="{0C4F48E7-1F6F-45CC-B71A-E22CDF9F9F7E}" Platform="Linked"/>
+														<ActiveSource Name="hoverboots_on_rail_loop" ID="{53E243B3-82F0-4111-8D59-68EA27630EC7}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="player_movement_wallslide" ID="{50F306AC-FAD6-427E-8DE5-498059D62296}" ShortID="509652570">
+												<Sound Name="player_movement_wallslide" ID="{7C71A06B-D0F3-430A-97A7-7E6768C856B3}" ShortID="477002278">
 													<PropertyList>
 														<Property Name="GameAuxSendVolume" Type="Real64">
 															<ValueList>
@@ -865,7 +1206,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="player_movement_wallslide" ID="{15C356EB-A151-4C7C-83AE-2EAE9FB64BFB}">
+														<AudioFileSource Name="player_movement_wallslide" ID="{7FEF51BE-2169-48CF-92F5-E36235F70C34}">
 															<Language>SFX</Language>
 															<AudioFile>player_movement_wallslide.wav</AudioFile>
 															<MediaIDList>
@@ -877,7 +1218,7 @@
 														<ObjectList Name="RTPC">
 															<Reference>
 																<Local>
-																	<RTPC Name="" ID="{642CAD4A-16E6-4B90-BCDE-69E9B68BFCA3}" ShortID="692979807">
+																	<RTPC Name="" ID="{0760B811-FABB-4EA5-AFE2-322D6C0D66DE}" ShortID="225263868">
 																		<PropertyList>
 																			<Property Name="PropertyName" Type="string" Value="Pitch"/>
 																		</PropertyList>
@@ -887,7 +1228,7 @@
 																			</Reference>
 																			<Reference Name="Curve">
 																				<Custom>
-																					<Curve Name="" ID="{CBA74455-4624-427F-9A0E-3A22773EAB1A}">
+																					<Curve Name="" ID="{9CF19D75-8523-40A8-A6D8-1BB87B5AB315}">
 																						<PropertyList>
 																							<Property Name="Flags" Type="int32" Value="65537"/>
 																						</PropertyList>
@@ -914,41 +1255,16 @@
 														</ObjectList>
 													</ObjectLists>
 													<ActiveSourceList>
-														<ActiveSource Name="player_movement_wallslide" ID="{15C356EB-A151-4C7C-83AE-2EAE9FB64BFB}" Platform="Linked"/>
+														<ActiveSource Name="player_movement_wallslide" ID="{7FEF51BE-2169-48CF-92F5-E36235F70C34}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="slide_metal_loop" ID="{D00212B5-3EEA-48F2-86F8-959E55DF42AD}" ShortID="646035399">
+												<Sound Name="slide_metal_loop_rework" ID="{098FFAC2-DB31-4F64-A45A-1FA16DFCDC64}" ShortID="886773255">
 													<PropertyList>
 														<Property Name="Inclusion" Type="bool">
 															<ValueList>
 																<Value>False</Value>
 															</ValueList>
 														</Property>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="slide_metal_loop" ID="{81DAB44A-9413-4895-924C-F43E2FE167C8}">
-															<Language>SFX</Language>
-															<AudioFile>Hoverboots\slide_metal_loop.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="488552020"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="slide_metal_loop" ID="{81DAB44A-9413-4895-924C-F43E2FE167C8}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="slide_metal_loop_rework" ID="{F98A29EF-29C2-4FCE-B4C6-760784B1D22F}" ShortID="332814140">
-													<PropertyList>
 														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
@@ -965,7 +1281,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="slide_metal_loop_rework" ID="{26734BC3-2DA5-4DCA-BB34-AD428B3C651E}">
+														<AudioFileSource Name="slide_metal_loop_rework" ID="{A76CA238-259B-4F12-8703-06404761E88F}">
 															<Language>SFX</Language>
 															<AudioFile>Hoverboots\slide_metal_loop_rework.wav</AudioFile>
 															<MediaIDList>
@@ -974,38 +1290,10 @@
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="slide_metal_loop_rework" ID="{26734BC3-2DA5-4DCA-BB34-AD428B3C651E}" Platform="Linked"/>
+														<ActiveSource Name="slide_metal_loop_rework" ID="{A76CA238-259B-4F12-8703-06404761E88F}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
-											<PositioningInfo>
-												<Panner Name="" ID="{A2024B12-2BE2-4329-A9EB-2E8979DF35FD}">
-													<PropertyList>
-														<Property Name="PanX" Type="Real64" Value="100"/>
-													</PropertyList>
-												</Panner>
-											</PositioningInfo>
-											<StateInfo>
-												<StateGroupList>
-													<StateGroupInfo>
-														<StateGroupRef Name="Wallrun_Side" ID="{B78D3E07-DB70-40EE-8D91-0EF8E08B108A}"/>
-													</StateGroupInfo>
-												</StateGroupList>
-												<CustomStateList>
-													<CustomState>
-														<StateRef Name="Left" ID="{53C44D90-3FF2-4C82-81DE-711D5349CE0B}"/>
-														<CustomState Name="" ID="{6FE4FA5C-EF10-468A-884D-5D9E16261ABE}" ShortID="609430349">
-															<PropertyList>
-																<Property Name="Volume" Type="Real64" Value="-108"/>
-															</PropertyList>
-														</CustomState>
-													</CustomState>
-													<CustomState>
-														<StateRef Name="Right" ID="{9A1A4827-B952-4D99-94C2-72C2ACC07C07}"/>
-														<CustomState Name="" ID="{98513492-9280-45AE-99FE-DBCE3C0E70A5}" ShortID="1027150837"/>
-													</CustomState>
-												</CustomStateList>
-											</StateInfo>
 										</BlendContainer>
 									</ChildrenList>
 									<ObjectLists>
@@ -1062,16 +1350,25 @@
 												<BlendTrackAssoc>
 													<ItemRef Name="player_movement_aerial" ID="{0BFD3570-62A0-445D-81D3-4020BFC2F67A}"/>
 													<CrossfadingInfo>
-														<LeftEdgePos>0</LeftEdgePos>
+														<LeftEdgePos>0.49975</LeftEdgePos>
 														<LeftFadingMode>Automatic</LeftFadingMode>
 														<RightEdgePos>1</RightEdgePos>
 														<RightFadingMode>Automatic</RightFadingMode>
 													</CrossfadingInfo>
 												</BlendTrackAssoc>
 												<BlendTrackAssoc>
-													<ItemRef Name="player_movement_wallrun_left" ID="{B0ADA90F-568F-4B37-A5B0-A020ED445F34}"/>
+													<ItemRef Name="Hoverboots_Rail" ID="{69AD3BA5-1D99-4879-9AD8-0F9A05309067}"/>
 													<CrossfadingInfo>
-														<LeftEdgePos>2.00025</LeftEdgePos>
+														<LeftEdgePos>2</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>3</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="Hoverboots_Wallrun" ID="{FFE9EA2B-B36A-456A-826E-2830A3C7E3CD}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>3</LeftEdgePos>
 														<LeftFadingMode>Automatic</LeftFadingMode>
 														<RightEdgePos>4</RightEdgePos>
 														<RightFadingMode>Automatic</RightFadingMode>
