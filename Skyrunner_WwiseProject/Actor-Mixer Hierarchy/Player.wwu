@@ -2007,6 +2007,19 @@
 								</BlendContainer>
 								<BlendContainer Name="game_bumper" ID="{41595989-88E7-42A4-BA4B-484228D9F488}" ShortID="6221859">
 									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{9B58C193-32A7-4F40-88B7-D7C07FEB35EF}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="200"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-5</Value>
@@ -3708,27 +3721,7 @@
 										</Sound>
 									</ChildrenList>
 								</BlendContainer>
-								<Sound Name="slide_metal_enter" ID="{793609F5-E2D6-432F-8EDD-B920B854E4AD}" ShortID="992580283">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{8C2A38E2-1BBE-4A8B-809E-D0C4F306468E}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="100"/>
-															<Property Name="Min" Type="Real64" Value="-100"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-3</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+								<BlendContainer Name="slide_metal_enter" ID="{3E392D43-14F2-4715-8C7E-4D6F7A06959D}" ShortID="1062222716">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -3738,23 +3731,146 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="slide_metal_enter" ID="{D7145213-3E85-40B8-B359-E301B8D6F758}">
+										<Sound Name="slide_metal_impact" ID="{793609F5-E2D6-432F-8EDD-B920B854E4AD}" ShortID="992580283">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.472225729316117"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{8C2A38E2-1BBE-4A8B-809E-D0C4F306468E}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Player_Movement\slide_metal_enter.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="143796492"/>
-											</MediaIDList>
-										</AudioFileSource>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="slide_metal_enter" ID="{D7145213-3E85-40B8-B359-E301B8D6F758}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.472225729316117"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Player_Movement\slide_metal_enter.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="143796492"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="slide_metal_enter" ID="{D7145213-3E85-40B8-B359-E301B8D6F758}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<RandomSequenceContainer Name="impact_bumper" ID="{C13E04B9-CDC8-4A68-84ED-1CD6E2F10560}" ShortID="688307267">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="impact_bumper_01" ID="{C3C0F653-A97D-4C0C-8086-5C2890C23314}" ShortID="585103977">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="impact_bumper_01" ID="{733F1708-EE8E-4A65-A5D1-DEA9712A671F}">
+															<Language>SFX</Language>
+															<AudioFile>Player_Movement\impact_bumper_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="566287118"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="impact_bumper_01" ID="{733F1708-EE8E-4A65-A5D1-DEA9712A671F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="impact_bumper_02" ID="{E6E27065-B80D-4588-B7A9-438FF66D02E1}" ShortID="525114382">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="impact_bumper_02" ID="{20FDD52D-4B40-473F-84E5-9F32D81D37E1}">
+															<Language>SFX</Language>
+															<AudioFile>Player_Movement\impact_bumper_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="605617724"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="impact_bumper_02" ID="{20FDD52D-4B40-473F-84E5-9F32D81D37E1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="impact_bumper_03" ID="{53799C42-5268-41FE-AD10-80D6812A6DEE}" ShortID="211278247">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="impact_bumper_03" ID="{B4971756-2986-4596-A2CB-F4A825D1CD0B}">
+															<Language>SFX</Language>
+															<AudioFile>Player_Movement\impact_bumper_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="591042273"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="impact_bumper_03" ID="{B4971756-2986-4596-A2CB-F4A825D1CD0B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="slide_metal_enter" ID="{D7145213-3E85-40B8-B359-E301B8D6F758}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								</BlendContainer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

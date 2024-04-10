@@ -444,16 +444,11 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{37B279D6-093E-4749-FCD5-A09482A942F8}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{7B39254A-038B-56DE-B363-FF6DC2C8B315}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
 			<Media>
-				<File Id="488552020" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Hoverboots\slide_metal_loop.wav</ShortName>
-					<Path>Media/488552020.wem</Path>
-					<CachePath>SFX/Hoverboots/slide_metal_loop_073B4D0C.wem</CachePath>
-				</File>
 				<File Id="596869245" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\player_movement_aerial.wav</ShortName>
 					<Path>Media/596869245.wem</Path>
@@ -463,6 +458,11 @@
 					<ShortName>player_movement_wallslide.wav</ShortName>
 					<Path>Media/694258383.wem</Path>
 					<CachePath>SFX/player_movement_wallslide_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="932134860" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\slide_metal_loop_rework.wav</ShortName>
+					<Path>Media/932134860.wem</Path>
+					<CachePath>SFX/Hoverboots/slide_metal_loop_rework_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="1023074526" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\wind_speed.wav</ShortName>
@@ -488,9 +488,9 @@
 			<Events>
 				<Event Id="527139965" Name="SX_play_hoverboots" ObjectPath="\Events\Hoverboots\Hoverboots\SX_play_hoverboots" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="488552020"/>
 						<MediaRef Id="596869245"/>
 						<MediaRef Id="694258383"/>
+						<MediaRef Id="932134860"/>
 						<MediaRef Id="1023074526"/>
 						<MediaRef Id="1056072145"/>
 					</MediaRefs>
@@ -2236,7 +2236,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3129104079" Type="Event" GUID="{6F24A296-5907-4F40-A9D0-16FF5B44660B}" Language="SFX" Hash="{601A65C9-2627-21A0-0209-79AC0C21D409}">
+		<SoundBank Id="3129104079" Type="Event" GUID="{6F24A296-5907-4F40-A9D0-16FF5B44660B}" Language="SFX" Hash="{4683E71D-6AEE-B868-08F4-58143DB01DCE}">
 			<ObjectPath>SX_player_metal_enter</ObjectPath>
 			<ShortName>SX_player_metal_enter</ShortName>
 			<Path>Event/SX_player_metal_enter.bnk</Path>
@@ -2246,11 +2246,29 @@
 					<Path>Media/143796492.wem</Path>
 					<CachePath>SFX/Player_Movement/slide_metal_enter_C1AD2FC0.wem</CachePath>
 				</File>
+				<File Id="566287118" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\impact_bumper_01.wav</ShortName>
+					<Path>Media/566287118.wem</Path>
+					<CachePath>SFX/Player_Movement/impact_bumper_01_755F56E2.wem</CachePath>
+				</File>
+				<File Id="591042273" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\impact_bumper_03.wav</ShortName>
+					<Path>Media/591042273.wem</Path>
+					<CachePath>SFX/Player_Movement/impact_bumper_03_755F56E2.wem</CachePath>
+				</File>
+				<File Id="605617724" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\impact_bumper_02.wav</ShortName>
+					<Path>Media/605617724.wem</Path>
+					<CachePath>SFX/Player_Movement/impact_bumper_02_755F56E2.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
 				<Event Id="3129104079" Name="SX_player_metal_enter" ObjectPath="\Events\Player\Movement\SX_player_metal_enter" GUID="{6F24A296-5907-4F40-A9D0-16FF5B44660B}" DurationType="OneShot" DurationMin="1.213547" DurationMax="1.3621606">
 					<MediaRefs>
 						<MediaRef Id="143796492"/>
+						<MediaRef Id="566287118"/>
+						<MediaRef Id="591042273"/>
+						<MediaRef Id="605617724"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -2967,7 +2985,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3467451382" Type="Event" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" Language="SFX" Hash="{AEFDA9ED-D80F-5500-A5B6-B28D1DCAFFAB}">
+		<SoundBank Id="3467451382" Type="Event" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" Language="SFX" Hash="{6EDC8B49-DB60-4803-CC00-438292D5DB61}">
 			<ObjectPath>SX_player_bumper</ObjectPath>
 			<ShortName>SX_player_bumper</ShortName>
 			<Path>Event/SX_player_bumper.bnk</Path>
@@ -3044,7 +3062,7 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="3467451382" Name="SX_player_bumper" ObjectPath="\Events\Player\Movement\SX_player_bumper" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" DurationType="OneShot" DurationMin="0.60116667" DurationMax="2.0747526">
+				<Event Id="3467451382" Name="SX_player_bumper" ObjectPath="\Events\Player\Movement\SX_player_bumper" GUID="{C6B5191E-27E7-4097-A049-ADF0776478D2}" DurationType="OneShot" DurationMin="0.5355786" DurationMax="2.328831">
 					<MediaRefs>
 						<MediaRef Id="37170476"/>
 						<MediaRef Id="65984394"/>
@@ -3261,5 +3279,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DE1DAE17-05EB-7973-28FB-D6919A6C4375}</FileHash>
+	<FileHash>{368CB436-36A3-F757-8B0B-107E4A1FC995}</FileHash>
 </SoundBanksInfo>

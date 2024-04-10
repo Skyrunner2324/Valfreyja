@@ -588,6 +588,11 @@
 												</Sound>
 												<Sound Name="slide_metal_loop" ID="{C31CC4E4-BE04-40DC-86F8-D06EFC9D78CD}" ShortID="77953148">
 													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
 														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 													</PropertyList>
 													<ReferenceList>
@@ -609,6 +614,36 @@
 													</ChildrenList>
 													<ActiveSourceList>
 														<ActiveSource Name="slide_metal_loop" ID="{6F00177E-6CB3-4E9D-8075-D339067AE41E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="slide_metal_loop_rework" ID="{DFA2517C-DF97-446C-8416-6F8E974E7A2E}" ShortID="944289577">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="slide_metal_loop_rework" ID="{86B904B5-8CF4-41DF-8A61-F0BE6596D16E}">
+															<Language>SFX</Language>
+															<AudioFile>Hoverboots\slide_metal_loop_rework.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="932134860"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="slide_metal_loop_rework" ID="{86B904B5-8CF4-41DF-8A61-F0BE6596D16E}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
