@@ -396,6 +396,23 @@
 								<Sound Name="bumper_aura_pulse" ID="{B4B98CBF-EB10-4FA6-832D-0EABD8C78A6A}" ShortID="684157282">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5B994BAE-7951-421E-AF68-2AC67FF4C967}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="500"/>
+															<Property Name="Min" Type="Real64" Value="-500"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -416,6 +433,31 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="bumper_aura" ID="{438CE609-95E3-4E9B-9DC8-6A456EB722E3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="bumper_aura_rework" ID="{9DC74BE8-01CD-4396-A7CA-62D46A864501}" ShortID="335766530">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="bumper_aura_rework" ID="{9B921ADA-3163-4CE1-A747-84A58AC77389}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\bumper_aura_rework.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="641159900"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="bumper_aura_rework" ID="{9B921ADA-3163-4CE1-A747-84A58AC77389}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
