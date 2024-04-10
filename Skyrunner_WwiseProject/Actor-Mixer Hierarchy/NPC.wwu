@@ -1235,7 +1235,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2890,6 +2890,11 @@
 							</ChildrenList>
 						</BlendContainer>
 						<ActorMixer Name="NPC_Voice" ID="{69559E97-43FB-4F8E-A3D8-0E0C6EE63509}" ShortID="91992945">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
 									<Custom CreatedFrom="{7B686B69-B316-49E7-A315-368AD1270EA1}">
@@ -3279,7 +3284,7 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="enemy_voice" ID="{ED84C6DD-0BCB-4FAB-81AB-A7398583C019}" ShortID="1025615746">
+								<RandomSequenceContainer Name="robot_presence" ID="{ED84C6DD-0BCB-4FAB-81AB-A7398583C019}" ShortID="1025615746">
 									<PropertyList>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
@@ -3444,7 +3449,7 @@
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2.5"/>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 											</PropertyList>
@@ -4131,7 +4136,22 @@
 												</Sound>
 											</ChildrenList>
 										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="random_robot_move" ID="{ABD8C30D-AEC5-47B8-94F1-1CD23FD5110A}" ShortID="689311096">
+										<RandomSequenceContainer Name="random_robot_move" ID="{B882E951-DEDC-4609-9DC8-71AC0DAA4368}" ShortID="1002986819">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{1B870DD5-C1F2-4648-BE3C-9EED00448B94}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -4142,10 +4162,14 @@
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="robot_move_02" ID="{FABB4057-3B6C-45B5-B9BC-AF74600990BE}" ShortID="560762969">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
 															<Custom CreatedFrom="{7B686B69-B316-49E7-A315-368AD1270EA1}">
-																<Attenuation Name="Door_Att (Custom)" ID="{4CE4DE9F-141A-4C6A-BD5E-EE2D80BAF009}" ShortID="1036260507">
+																<Attenuation Name="Door_Att (Custom)" ID="{2AD4B997-365A-4C85-AB89-91A7177D7A52}" ShortID="771955673">
 																	<PropertyList>
 																		<Property Name="ConeAttenuation" Type="Real64">
 																			<ValueList>
@@ -4163,7 +4187,7 @@
 																	<CurveUsageInfoList>
 																		<VolumeDryUsage>
 																			<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																				<Curve Name="VolumeDry" ID="{8A471078-315B-46D6-A5D5-43DC8AC8FCEE}">
+																				<Curve Name="VolumeDry" ID="{7434427D-C259-49A3-A4EE-60A8F3CAD317}">
 																					<PropertyList>
 																						<Property Name="Flags" Type="int32" Value="3"/>
 																					</PropertyList>
@@ -4175,8 +4199,8 @@
 																							<SegmentShape>Log3</SegmentShape>
 																						</Point>
 																						<Point>
-																							<XPos>2632.28616</XPos>
-																							<YPos>-11.48236</YPos>
+																							<XPos>2994.16795</XPos>
+																							<YPos>-7.12883</YPos>
 																							<Flags>0</Flags>
 																						</Point>
 																						<Point>
@@ -4196,7 +4220,7 @@
 																		</VolumeWetUserUsage>
 																		<LowPassFilterUsage>
 																			<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																				<Curve Name="LowPassFilter" ID="{914F0A84-AB22-496C-A8A5-B1407633342D}">
+																				<Curve Name="LowPassFilter" ID="{A02478C3-DBA8-4022-9275-8E9F7247B74E}">
 																					<PropertyList>
 																						<Property Name="Flags" Type="int32" Value="65537"/>
 																					</PropertyList>
@@ -4221,7 +4245,7 @@
 																		</HighPassFilterUsage>
 																		<SpreadUsage>
 																			<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																				<Curve Name="Spread" ID="{5AD1CD81-BE80-46BF-966E-643E8B984D31}">
+																				<Curve Name="Spread" ID="{13F0D10F-DABA-410A-B2F2-9AFAD8FB4BEA}">
 																					<PropertyList>
 																						<Property Name="Flags" Type="int32" Value="1"/>
 																					</PropertyList>
@@ -4315,10 +4339,14 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="robot_move_01" ID="{34962A3A-3166-4E1B-88B8-2D9617D27B47}" ShortID="307776634">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
 															<Custom CreatedFrom="{7B686B69-B316-49E7-A315-368AD1270EA1}">
-																<Attenuation Name="Door_Att (Custom)" ID="{442E0782-A083-4A74-A5D6-6EA5E024F61F}" ShortID="593614154">
+																<Attenuation Name="Door_Att (Custom)" ID="{BAA9287B-7480-4CCC-BCB0-C066B9B16EE7}" ShortID="952040171">
 																	<PropertyList>
 																		<Property Name="ConeAttenuation" Type="Real64">
 																			<ValueList>
@@ -4336,7 +4364,7 @@
 																	<CurveUsageInfoList>
 																		<VolumeDryUsage>
 																			<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																				<Curve Name="VolumeDry" ID="{36D0EDC3-A8D0-44EE-B9EA-87A4743B0DC4}">
+																				<Curve Name="VolumeDry" ID="{EBB5E496-B4D1-46C0-ADA2-95D36FA91956}">
 																					<PropertyList>
 																						<Property Name="Flags" Type="int32" Value="3"/>
 																					</PropertyList>
@@ -4348,8 +4376,8 @@
 																							<SegmentShape>Log3</SegmentShape>
 																						</Point>
 																						<Point>
-																							<XPos>2632.28616</XPos>
-																							<YPos>-11.48236</YPos>
+																							<XPos>2994.16795</XPos>
+																							<YPos>-7.12883</YPos>
 																							<Flags>0</Flags>
 																						</Point>
 																						<Point>
@@ -4369,7 +4397,7 @@
 																		</VolumeWetUserUsage>
 																		<LowPassFilterUsage>
 																			<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																				<Curve Name="LowPassFilter" ID="{19AF8F67-220C-4B43-A5C1-DD5197C11924}">
+																				<Curve Name="LowPassFilter" ID="{91DD50BC-3602-4697-97BA-A5F8D819FAF9}">
 																					<PropertyList>
 																						<Property Name="Flags" Type="int32" Value="65537"/>
 																					</PropertyList>
@@ -4394,7 +4422,7 @@
 																		</HighPassFilterUsage>
 																		<SpreadUsage>
 																			<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-																				<Curve Name="Spread" ID="{7D48CFA9-E6D5-4564-B7E4-5E997F9BF0C2}">
+																				<Curve Name="Spread" ID="{057FA938-3135-48D1-BE3F-E2C8BAA4D3F9}">
 																					<PropertyList>
 																						<Property Name="Flags" Type="int32" Value="1"/>
 																					</PropertyList>
@@ -4491,7 +4519,7 @@
 										</RandomSequenceContainer>
 									</ChildrenList>
 									<Playlist>
-										<ItemRef Name="random_robot_move" ID="{ABD8C30D-AEC5-47B8-94F1-1CD23FD5110A}"/>
+										<ItemRef Name="random_robot_move" ID="{B882E951-DEDC-4609-9DC8-71AC0DAA4368}"/>
 										<ItemRef Name="random_robot_voice" ID="{A959E852-30EA-4319-A0B9-FBC014C4DB5A}"/>
 									</Playlist>
 								</RandomSequenceContainer>
@@ -4504,7 +4532,7 @@
 						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-96</Value>
+								<Value>-20</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
