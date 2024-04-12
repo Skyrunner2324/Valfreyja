@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="3750820532" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{AA65CDB5-FD95-3FDD-7E3D-0588BD8EEF1D}">
+		<SoundBank Id="3750820532" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{1ADAEDE8-BF05-3D62-4894-79DA300B7A3D}">
 			<ObjectPath>REV_Large</ObjectPath>
 			<ShortName>REV_Large</ShortName>
 			<Path>Bus/REV_Large.bnk</Path>
 			<Media>
-				<File Id="766552005" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>AudioEase\Altiverb - Outdoor and More\Domestic\AE_Staircase.wav</ShortName>
-					<Path>Media/766552005.wem</Path>
-					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Domestic/AE_Staircase_632765F8.wem</CachePath>
+				<File Id="216221817" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AK_Factory_IR_Amb\Large Spaces\AK Amb Hamburg Parkhaus.wav</ShortName>
+					<Path>Media/216221817.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AK_Factory_IR_Amb/Large Spaces/AK Amb Hamburg Parkhaus_F5DBD060.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
 				<ShareSets>
-					<Plugin Id="1756167208" Name="Staircase" ObjectPath="\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Domestic\Staircase" GUID="{127E52AD-3162-4A20-B3CF-D02B7FAD04B5}" LibName="Wwise Convolution Reverb" LibId="8323075">
+					<Plugin Id="319664383" Name="HamburgParkhaus_Ambisonics" ObjectPath="\Effects\Factory AK Convolution Reverb Effects Ambisonics\Large Spaces\HamburgParkhaus_Ambisonics" GUID="{C22C3DF3-1F41-4D73-91CA-C1376B82C2D6}" LibName="Wwise Convolution Reverb" LibId="8323075">
 						<MediaRefs>
-							<MediaRef Id="766552005"/>
+							<MediaRef Id="216221817"/>
 						</MediaRefs>
 					</Plugin>
 				</ShareSets>
@@ -25,7 +25,7 @@
 				<AuxBus Id="3750820532" Name="REV_Large" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="1756167208"/>
+							<PluginRef Id="319664383"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
@@ -45,5 +45,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{525DF7D7-6F1D-B341-1B7D-009E6341A7E9}</FileHash>
+	<FileHash>{70ECBB87-1FA5-F492-2B9B-58E51DA321B3}</FileHash>
 </SoundBanksInfo>

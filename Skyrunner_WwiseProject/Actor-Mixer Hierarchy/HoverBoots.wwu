@@ -75,9 +75,64 @@
 												</Reference>
 												<Reference Name="Effect0">
 													<Custom>
+														<Effect Name="Parametric EQ (Custom)" ID="{E39A6796-AD9D-4361-AFBC-512D0CBDE7C8}" ShortID="174977445" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+															<PropertyList>
+																<Property Name="FrequencyBand1" Type="Real32" Value="8679"/>
+																<Property Name="GainBand1" Type="Real32" Value="-24"/>
+															</PropertyList>
+															<ObjectLists>
+																<ObjectList Name="RTPC">
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{2B8D859D-A6C2-4F00-98D8-52FE3FBF50B9}" ShortID="666453100">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="FrequencyBand1"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{55177B1F-F59C-42BD-AFC0-DC747AE5CD8E}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="5"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>8120.52461</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>3000</XPos>
+																										<YPos>101.25698</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																</ObjectList>
+															</ObjectLists>
+														</Effect>
+													</Custom>
+												</Reference>
+												<Reference Name="Effect1">
+													<Custom>
+														<Effect Name="Stereo Delay (Custom)" ID="{C99BFEED-A84D-44AB-B400-2C434694CE6C}" ShortID="1068121039" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3"/>
+													</Custom>
+												</Reference>
+												<Reference Name="Effect2">
+													<Custom>
 														<Effect Name="Tremolo (Custom)" ID="{B0E7CB90-1F41-4ADD-8AE2-D3B20B8709CA}" ShortID="942906617" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
 															<PropertyList>
-																<Property Name="ModDepth" Type="Real32" Value="70"/>
+																<Property Name="ModDepth" Type="Real32" Value="80"/>
+																<Property Name="ModPhaseSpread" Type="Real32" Value="94"/>
 																<Property Name="ModWaveform" Type="int32" Value="1"/>
 															</PropertyList>
 															<ObjectLists>
@@ -143,55 +198,6 @@
 																									<Point>
 																										<XPos>3000</XPos>
 																										<YPos>25.7528</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</Custom>
-																					</Reference>
-																				</ReferenceList>
-																			</RTPC>
-																		</Local>
-																	</Reference>
-																</ObjectList>
-															</ObjectLists>
-														</Effect>
-													</Custom>
-												</Reference>
-												<Reference Name="Effect1">
-													<Custom>
-														<Effect Name="Parametric EQ (Custom)" ID="{E39A6796-AD9D-4361-AFBC-512D0CBDE7C8}" ShortID="174977445" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
-															<PropertyList>
-																<Property Name="FrequencyBand1" Type="Real32" Value="8679"/>
-																<Property Name="GainBand1" Type="Real32" Value="-24"/>
-															</PropertyList>
-															<ObjectLists>
-																<ObjectList Name="RTPC">
-																	<Reference>
-																		<Local>
-																			<RTPC Name="" ID="{2B8D859D-A6C2-4F00-98D8-52FE3FBF50B9}" ShortID="666453100">
-																				<PropertyList>
-																					<Property Name="PropertyName" Type="string" Value="FrequencyBand1"/>
-																				</PropertyList>
-																				<ReferenceList>
-																					<Reference Name="ControlInput">
-																						<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																					</Reference>
-																					<Reference Name="Curve">
-																						<Custom>
-																							<Curve Name="" ID="{55177B1F-F59C-42BD-AFC0-DC747AE5CD8E}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="5"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>0</XPos>
-																										<YPos>8120.52461</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>3000</XPos>
-																										<YPos>101.25698</YPos>
 																										<Flags>37</Flags>
 																									</Point>
 																								</PointList>

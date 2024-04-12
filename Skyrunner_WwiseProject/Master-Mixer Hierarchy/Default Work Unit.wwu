@@ -503,6 +503,15 @@
 										<Reference Name="Attenuation">
 											<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
 										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="REV_Arena" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+										<Reference Name="UserAuxSend1">
+											<ObjectRef Name="REV_Couloir" ID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+										<Reference Name="UserAuxSend2">
+											<ObjectRef Name="REV_Large" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<Bus Name="NPCMaster" ID="{94354A62-2693-4A27-B098-F5FDE5B577C5}">
@@ -663,7 +672,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>-1</XPos>
-																				<YPos>75</YPos>
+																				<YPos>67</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
@@ -673,7 +682,7 @@
 																			</Point>
 																			<Point>
 																				<XPos>1</XPos>
-																				<YPos>75</YPos>
+																				<YPos>66</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -843,6 +852,7 @@
 											</ValueList>
 										</Property>
 									</PropertyList>
+									<ReferenceList/>
 									<ChildrenList>
 										<Bus Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}">
 											<ObjectLists>
@@ -1090,6 +1100,15 @@
 														</Effect>
 													</Custom>
 												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="REV_Arena" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+												<Reference Name="UserAuxSend1">
+													<ObjectRef Name="REV_Couloir" ID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+												<Reference Name="UserAuxSend2">
+													<ObjectRef Name="REV_Large" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
 											</ReferenceList>
 											<ObjectLists>
 												<ObjectList Name="RTPC">
@@ -1273,7 +1292,7 @@
 										<AuxBus Name="REV_Large" ID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 											<ReferenceList>
 												<Reference Name="Effect0" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
-													<ObjectRef Name="Staircase" ID="{127E52AD-3162-4A20-B3CF-D02B7FAD04B5}" WorkUnitID="{C0E78DAA-768A-438F-8F7B-3701395185C3}"/>
+													<ObjectRef Name="HamburgParkhaus_Ambisonics" ID="{C22C3DF3-1F41-4D73-91CA-C1376B82C2D6}" WorkUnitID="{1562D13C-41E8-4FA1-A341-D4CB726E2AEC}"/>
 												</Reference>
 											</ReferenceList>
 											<StateInfo>
@@ -1307,9 +1326,16 @@
 											</StateInfo>
 										</AuxBus>
 										<AuxBus Name="REV_Arena" ID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-12</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
-												<Reference Name="Effect0" PluginName="Wwise Convolution Reverb" CompanyID="0" PluginID="127" PluginType="3">
-													<ObjectRef Name="DistantBuilding_MicsClose" ID="{A7BD5797-187C-4D6B-B020-A55A737A3916}" WorkUnitID="{C0E78DAA-768A-438F-8F7B-3701395185C3}"/>
+												<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+													<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 												</Reference>
 											</ReferenceList>
 											<StateInfo>
