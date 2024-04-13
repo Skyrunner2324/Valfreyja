@@ -43,12 +43,6 @@
 															<XPos>0</XPos>
 															<YPos>0</YPos>
 															<Flags>5</Flags>
-															<SegmentShape>Log3</SegmentShape>
-														</Point>
-														<Point>
-															<XPos>3995.92252</XPos>
-															<YPos>-4.0997</YPos>
-															<Flags>0</Flags>
 														</Point>
 														<Point>
 															<XPos>10000</XPos>
@@ -85,7 +79,7 @@
 														</Point>
 														<Point>
 															<XPos>10000</XPos>
-															<YPos>62</YPos>
+															<YPos>84</YPos>
 															<Flags>37</Flags>
 														</Point>
 													</PointList>
@@ -2103,6 +2097,11 @@
 										<Sound Name="bullet_enemy_bullet_flyby_fast_06" ID="{6333CE5C-BB67-4973-982B-2477BD6C2A33}" ShortID="287643141">
 											<PropertyList>
 												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>0.05</Value>
+													</ValueList>
+												</Property>
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
@@ -2116,6 +2115,11 @@
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -2144,11 +2148,7 @@
 																					<XPos>0</XPos>
 																					<YPos>0</YPos>
 																					<Flags>5</Flags>
-																				</Point>
-																				<Point>
-																					<XPos>29867.4821</XPos>
-																					<YPos>-1.91684</YPos>
-																					<Flags>0</Flags>
+																					<SegmentShape>Log1</SegmentShape>
 																				</Point>
 																				<Point>
 																					<XPos>100000</XPos>
@@ -2176,16 +2176,11 @@
 																					<XPos>0</XPos>
 																					<YPos>0</YPos>
 																					<Flags>5</Flags>
-																				</Point>
-																				<Point>
-																					<XPos>29969.41892</XPos>
-																					<YPos>0</YPos>
-																					<Flags>0</Flags>
-																					<SegmentShape>Exp1</SegmentShape>
+																					<SegmentShape>Log3</SegmentShape>
 																				</Point>
 																				<Point>
 																					<XPos>100000</XPos>
-																					<YPos>62</YPos>
+																					<YPos>100</YPos>
 																					<Flags>37</Flags>
 																				</Point>
 																			</PointList>
@@ -2294,6 +2289,11 @@
 											<PropertyList>
 												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>0.1</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -2517,6 +2517,50 @@
 									</ChildrenList>
 								</BlendContainer>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{9A1D0C5F-9386-477C-B930-6E92B0256693}" ShortID="809065685">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Pitch"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{BB12D3BC-A972-4296-B4DA-31FB01404887}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-1</XPos>
+																		<YPos>-4800</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-4800</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>
@@ -3109,12 +3153,8 @@
 														<Value>-4</Value>
 													</ValueList>
 												</Property>
-												<Property Name="ConeOuterAngle" Type="int32" Value="90"/>
-												<Property Name="ConeUse" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
+												<Property Name="ConeInnerAngle" Type="int32" Value="40"/>
+												<Property Name="ConeOuterAngle" Type="int32" Value="165"/>
 												<Property Name="RadiusMax" Type="Real64" Value="10000"/>
 											</PropertyList>
 											<CurveUsageInfoList>
@@ -3129,7 +3169,7 @@
 																	<XPos>0</XPos>
 																	<YPos>-0.28377</YPos>
 																	<Flags>5</Flags>
-																	<SegmentShape>Log2</SegmentShape>
+																	<SegmentShape>Exp2</SegmentShape>
 																</Point>
 																<Point>
 																	<XPos>10000</XPos>
@@ -3161,7 +3201,7 @@
 																</Point>
 																<Point>
 																	<XPos>10000</XPos>
-																	<YPos>77</YPos>
+																	<YPos>89</YPos>
 																	<Flags>37</Flags>
 																</Point>
 															</PointList>
@@ -3186,8 +3226,9 @@
 																</Point>
 																<Point>
 																	<XPos>0.001</XPos>
-																	<YPos>70.01487</YPos>
+																	<YPos>-0</YPos>
 																	<Flags>0</Flags>
+																	<SegmentShape>Exp1</SegmentShape>
 																</Point>
 																<Point>
 																	<XPos>10000</XPos>
@@ -3202,7 +3243,38 @@
 													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
 												</FocusUsage>
 												<ObstructionVolumeUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None">
+														<Curve Name="ObstructionVolume" ID="{A12A02BC-A60B-47E2-90A4-D3A872C0CF7B}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																	<SegmentShape>Exp1</SegmentShape>
+																</Point>
+																<Point>
+																	<XPos>62.05674</XPos>
+																	<YPos>-4.01318</YPos>
+																	<Flags>0</Flags>
+																	<SegmentShape>Exp1</SegmentShape>
+																</Point>
+																<Point>
+																	<XPos>82.80142</XPos>
+																	<YPos>-8.67518</YPos>
+																	<Flags>0</Flags>
+																	<SegmentShape>Log1</SegmentShape>
+																</Point>
+																<Point>
+																	<XPos>100</XPos>
+																	<YPos>-15.71897</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
 												</ObstructionVolumeUsage>
 												<ObstructionLPFUsage>
 													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
@@ -3211,7 +3283,32 @@
 													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
 												</ObstructionHPFUsage>
 												<OcclusionVolumeUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None">
+														<Curve Name="ObstructionVolume" ID="{F86256D3-8D35-4AB8-AB85-C506EAFB035E}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																	<SegmentShape>Log1</SegmentShape>
+																</Point>
+																<Point>
+																	<XPos>60.28369</XPos>
+																	<YPos>-5.95617</YPos>
+																	<Flags>0</Flags>
+																	<SegmentShape>Exp1</SegmentShape>
+																</Point>
+																<Point>
+																	<XPos>100</XPos>
+																	<YPos>-11.94896</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
 												</OcclusionVolumeUsage>
 												<OcclusionLPFUsage>
 													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
@@ -3662,6 +3759,11 @@
 												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2.5"/>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -4345,6 +4447,50 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{36898302-E8EF-4109-839D-6A3E66CEFA60}" ShortID="49227863">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{0DC09AE5-0768-4129-A8C8-1C385B4B2AC2}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-1</XPos>
+																						<YPos>-2270</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>-0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>-1675</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="random_robot_move" ID="{B882E951-DEDC-4609-9DC8-71AC0DAA4368}" ShortID="1002986819">
 											<PropertyList>

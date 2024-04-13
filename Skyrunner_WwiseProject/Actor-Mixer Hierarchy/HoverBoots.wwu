@@ -406,19 +406,9 @@
 																		<Value>4</Value>
 																	</ValueList>
 																</Property>
-																<Property Name="Highpass" Type="int16">
-																	<ValueList>
-																		<Value>1</Value>
-																	</ValueList>
-																</Property>
 																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 																<Property Name="OverrideEffect" Type="bool" Value="True"/>
 																<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>-2</Value>
-																	</ValueList>
-																</Property>
 															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
@@ -477,12 +467,12 @@
 																								<PointList>
 																									<Point>
 																										<XPos>0</XPos>
-																										<YPos>520</YPos>
+																										<YPos>1912</YPos>
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
 																										<XPos>5</XPos>
-																										<YPos>-2009</YPos>
+																										<YPos>-2595</YPos>
 																										<Flags>37</Flags>
 																									</Point>
 																								</PointList>
@@ -544,11 +534,6 @@
 																</Property>
 																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 																<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>4</Value>
-																	</ValueList>
-																</Property>
 															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
@@ -594,7 +579,7 @@
 																									</Point>
 																									<Point>
 																										<XPos>5</XPos>
-																										<YPos>448</YPos>
+																										<YPos>1413</YPos>
 																										<Flags>37</Flags>
 																									</Point>
 																								</PointList>
@@ -675,7 +660,7 @@
 													<PositioningInfo>
 														<Panner Name="" ID="{2852DEAF-9CDB-4297-AD6A-A7FB1D1F5910}">
 															<PropertyList>
-																<Property Name="PanX" Type="Real64" Value="-40"/>
+																<Property Name="PanX" Type="Real64" Value="-35"/>
 																<Property Name="PanY" Type="Real64" Value="4.44089209850063E-16"/>
 															</PropertyList>
 														</Panner>
@@ -740,19 +725,9 @@
 																		<Value>4</Value>
 																	</ValueList>
 																</Property>
-																<Property Name="Highpass" Type="int16">
-																	<ValueList>
-																		<Value>1</Value>
-																	</ValueList>
-																</Property>
 																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 																<Property Name="OverrideEffect" Type="bool" Value="True"/>
 																<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>-2</Value>
-																	</ValueList>
-																</Property>
 															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
@@ -794,41 +769,6 @@
 																<ObjectList Name="RTPC">
 																	<Reference>
 																		<Local>
-																			<RTPC Name="" ID="{6213423E-6C1D-4474-9075-0E5BC84C9B1B}" ShortID="335321791">
-																				<PropertyList>
-																					<Property Name="PropertyName" Type="string" Value="Pitch"/>
-																				</PropertyList>
-																				<ReferenceList>
-																					<Reference Name="ControlInput">
-																						<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																					</Reference>
-																					<Reference Name="Curve">
-																						<Custom>
-																							<Curve Name="" ID="{4B646FEA-1277-4F81-83D7-7217EDC39FD4}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="65537"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>0</XPos>
-																										<YPos>520</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>5</XPos>
-																										<YPos>-2009</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</Custom>
-																					</Reference>
-																				</ReferenceList>
-																			</RTPC>
-																		</Local>
-																	</Reference>
-																	<Reference>
-																		<Local>
 																			<RTPC Name="" ID="{D8DF0A46-33DB-4817-82DC-5CA838FE39D3}" ShortID="451183979">
 																				<PropertyList>
 																					<Property Name="PropertyName" Type="string" Value="Volume"/>
@@ -863,6 +803,41 @@
 																			</RTPC>
 																		</Local>
 																	</Reference>
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{780F167F-7700-4D8C-B458-888777547B58}" ShortID="379396673">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{A57B729C-8213-41E9-AF6F-32BFD5B6892C}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="65537"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>1912</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>5</XPos>
+																										<YPos>-2595</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
 																</ObjectList>
 															</ObjectLists>
 															<ActiveSourceList>
@@ -878,11 +853,6 @@
 																</Property>
 																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 																<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>4</Value>
-																	</ValueList>
-																</Property>
 															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
@@ -928,7 +898,7 @@
 																									</Point>
 																									<Point>
 																										<XPos>5</XPos>
-																										<YPos>448</YPos>
+																										<YPos>1617</YPos>
 																										<Flags>37</Flags>
 																									</Point>
 																								</PointList>
@@ -1009,7 +979,7 @@
 													<PositioningInfo>
 														<Panner Name="" ID="{A2024B12-2BE2-4329-A9EB-2E8979DF35FD}">
 															<PropertyList>
-																<Property Name="PanX" Type="Real64" Value="40"/>
+																<Property Name="PanX" Type="Real64" Value="35"/>
 															</PropertyList>
 														</Panner>
 													</PositioningInfo>
@@ -1430,7 +1400,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>-5.67694</YPos>
+																				<YPos>-12</YPos>
 																				<Flags>5</Flags>
 																				<SegmentShape>Exp1</SegmentShape>
 																			</Point>
@@ -1518,7 +1488,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>28</YPos>
+																				<YPos>51</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>

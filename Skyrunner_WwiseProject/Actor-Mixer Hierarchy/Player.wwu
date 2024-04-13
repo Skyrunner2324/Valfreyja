@@ -172,484 +172,6 @@
 										<ActiveSource Name="player_slide" ID="{B7E7A1C1-8F45-4F85-8576-3B8D5EEFEC9D}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Folder Name="Grap" ID="{11E135C0-B075-46B0-9083-E8DF86D70761}" ShortID="902859210">
-									<PropertyList>
-										<Property Name="Color" Type="int16" Value="1"/>
-										<Property Name="OverrideColor" Type="bool" Value="True"/>
-									</PropertyList>
-									<ChildrenList>
-										<BlendContainer Name="grappin" ID="{1F68D640-EC77-4AC0-BC56-9FFB822279A6}" ShortID="574350796">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-2</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="game_grap_shot" ID="{87049EC6-A228-4E62-BB17-D25F07B8DDA2}" ShortID="558668865">
-													<PropertyList>
-														<Property Name="Color" Type="int16" Value="1"/>
-														<Property Name="OverrideColor" Type="bool" Value="True"/>
-														<Property Name="OverrideEffect" Type="bool" Value="True"/>
-														<Property Name="Pitch" Type="int32">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{01785D4F-AFE2-40AE-A3E9-24B1FF46FDD8}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Min" Type="Real64" Value="-300"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-														<Property Name="UserAuxSendVolume0" Type="Real64">
-															<ValueList>
-																<Value>-20</Value>
-															</ValueList>
-														</Property>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>-10</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-														</Reference>
-														<Reference Name="Effect0">
-															<Custom>
-																<Effect Name="Flanger (Custom)" ID="{2A02FF7C-82A9-4670-8071-EE1321113B91}" ShortID="518190610" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
-																	<PropertyList>
-																		<Property Name="DelayTime" Type="Real32" Value="6.6"/>
-																		<Property Name="EnableLFO" Type="bool" Value="False"/>
-																		<Property Name="FeedBackLevel" Type="Real32" Value="0.8"/>
-																		<Property Name="FeedForwardLevel" Type="Real32" Value="-1"/>
-																		<Property Name="ModDepth" Type="Real32" Value="31"/>
-																		<Property Name="ModFrequency" Type="Real32" Value="0.78"/>
-																		<Property Name="ModPWM" Type="Real32" Value="37"/>
-																		<Property Name="ModPhaseOffset" Type="Real32" Value="3"/>
-																		<Property Name="ModPhaseSpread" Type="Real32" Value="180"/>
-																		<Property Name="WetDryMix" Type="Real32" Value="65"/>
-																	</PropertyList>
-																	<ObjectLists>
-																		<ObjectList Name="RTPC">
-																			<Reference>
-																				<Local>
-																					<RTPC Name="" ID="{F1CD92C1-4CD8-4996-A0D5-4213724A5EDB}" ShortID="194316164">
-																						<PropertyList>
-																							<Property Name="PropertyName" Type="string" Value="ModDepth"/>
-																						</PropertyList>
-																						<ReferenceList>
-																							<Reference Name="ControlInput">
-																								<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																							</Reference>
-																							<Reference Name="Curve">
-																								<Custom>
-																									<Curve Name="" ID="{C8F10147-96BA-4C90-BC52-223BF3FD22FD}">
-																										<PropertyList>
-																											<Property Name="Flags" Type="int32" Value="1"/>
-																										</PropertyList>
-																										<PointList>
-																											<Point>
-																												<XPos>0</XPos>
-																												<YPos>-100</YPos>
-																												<Flags>5</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>3000</XPos>
-																												<YPos>100</YPos>
-																												<Flags>37</Flags>
-																											</Point>
-																										</PointList>
-																									</Curve>
-																								</Custom>
-																							</Reference>
-																						</ReferenceList>
-																					</RTPC>
-																				</Local>
-																			</Reference>
-																			<Reference>
-																				<Local>
-																					<RTPC Name="" ID="{47FBDE5A-2500-4513-8661-95674AFE9E2E}" ShortID="69289809">
-																						<PropertyList>
-																							<Property Name="PropertyName" Type="string" Value="FeedBackLevel"/>
-																						</PropertyList>
-																						<ReferenceList>
-																							<Reference Name="ControlInput">
-																								<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																							</Reference>
-																							<Reference Name="Curve">
-																								<Custom>
-																									<Curve Name="" ID="{5694235D-53CA-4CE6-A8B6-542B5802F0DE}">
-																										<PropertyList>
-																											<Property Name="Flags" Type="int32" Value="1"/>
-																										</PropertyList>
-																										<PointList>
-																											<Point>
-																												<XPos>-1</XPos>
-																												<YPos>0.09819</YPos>
-																												<Flags>5</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>0.001</XPos>
-																												<YPos>0</YPos>
-																												<Flags>0</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>1</XPos>
-																												<YPos>0</YPos>
-																												<Flags>37</Flags>
-																											</Point>
-																										</PointList>
-																									</Curve>
-																								</Custom>
-																							</Reference>
-																						</ReferenceList>
-																					</RTPC>
-																				</Local>
-																			</Reference>
-																			<Reference>
-																				<Local>
-																					<RTPC Name="" ID="{7D30AD36-7E48-4023-9E1A-A90ED7C16A3C}" ShortID="999298289">
-																						<PropertyList>
-																							<Property Name="PropertyName" Type="string" Value="FeedBackLevel"/>
-																						</PropertyList>
-																						<ReferenceList>
-																							<Reference Name="ControlInput">
-																								<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																							</Reference>
-																							<Reference Name="Curve">
-																								<Custom>
-																									<Curve Name="" ID="{7A22D474-3B56-4D6D-808E-273EB5B31CEC}">
-																										<PropertyList>
-																											<Property Name="Flags" Type="int32" Value="1"/>
-																										</PropertyList>
-																										<PointList>
-																											<Point>
-																												<XPos>0</XPos>
-																												<YPos>0</YPos>
-																												<Flags>5</Flags>
-																											</Point>
-																											<Point>
-																												<XPos>3000</XPos>
-																												<YPos>0.06202</YPos>
-																												<Flags>37</Flags>
-																											</Point>
-																										</PointList>
-																									</Curve>
-																								</Custom>
-																							</Reference>
-																						</ReferenceList>
-																					</RTPC>
-																				</Local>
-																			</Reference>
-																		</ObjectList>
-																	</ObjectLists>
-																</Effect>
-															</Custom>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="player_grap_shot" ID="{0F34A3B9-198D-48D3-A14F-415477CD733A}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.0195480150214592"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.0988465665236052"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimEnd" Type="Real64" Value="0.305488433583335"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>Placeholders\player_grap_shot.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="642346148"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="player_grap_shot" ID="{0F34A3B9-198D-48D3-A14F-415477CD733A}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="game_grap_woosh" ID="{3A64FC17-1CF8-4D36-8540-3802578E578D}" ShortID="796402596">
-													<PropertyList>
-														<Property Name="Color" Type="int16" Value="1"/>
-														<Property Name="InitialDelay" Type="Real64">
-															<ValueList>
-																<Value>0.2</Value>
-															</ValueList>
-														</Property>
-														<Property Name="OverrideColor" Type="bool" Value="True"/>
-														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-														<Property Name="UserAuxSendVolume0" Type="Real64">
-															<ValueList>
-																<Value>-20</Value>
-															</ValueList>
-														</Property>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>-8</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<SourcePlugin Name="Soundseed Air Woosh" ID="{A341E8D9-733C-420F-858A-0DA3151904E5}" ShortID="1018588396" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
-															<PropertyList>
-																<Property Name="Duration" Type="Real64" Value="0.4"/>
-																<Property Name="FrequencyScale" Type="Real32" Value="-4"/>
-																<Property Name="GainOffset" Type="Real32" Value="-18.3"/>
-																<Property Name="Speed" Type="Real32" Value="50"/>
-																<Property Name="SpeedAutomate" Type="bool" Value="True"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<PluginData>
-	<WooshData>
-		<CurveList Version="1">
-			<CurveInfo Name="Speed">
-				<Curve Name="" ID="{94A64A96-E8CE-4E77-96BE-8E8AE030479B}">
-					<PropertyList>
-						<Property Name="Flags" Type="int32" Value="1"/>
-					</PropertyList>
-					<PointList>
-						<Point>
-							<XPos>0</XPos>
-							<YPos>0</YPos>
-							<Flags>5</Flags>
-						</Point>
-						<Point>
-							<XPos>0.11839</XPos>
-							<YPos>99.07834</YPos>
-							<Flags>0</Flags>
-						</Point>
-						<Point>
-							<XPos>0.4</XPos>
-							<YPos>0</YPos>
-							<Flags>37</Flags>
-						</Point>
-					</PointList>
-				</Curve>
-			</CurveInfo>
-		</CurveList>
-		<Path Version="1">
-			<Path2D Name="" ID="{0BB9EFAA-F791-4653-8D4D-F5FA693D2876}">
-				<PropertyList>
-					<Property Name="LinearTime" Type="bool" Value="False"/>
-				</PropertyList>
-				<PointList>
-					<Point>
-						<XPos>0</XPos>
-						<YPos>0</YPos>
-						<Flags>12</Flags>
-						<Time>0</Time>
-					</Point>
-				</PointList>
-			</Path2D>
-		</Path>
-	</WooshData>
-</PluginData>
-															<PluginInnerObjectList>
-																<List Name="Deflectors">
-																	<PluginInnerObject Name="" ID="{6B8564E1-D698-4BE9-9840-01DAF995B9E4}" PluginName="Deflector" CompanyID="0" PluginID="122"/>
-																	<PluginInnerObject Name="" ID="{74FAD4C9-D1E8-4158-A4B0-E405EC449A07}" PluginName="Deflector" CompanyID="0" PluginID="122">
-																		<PropertyList>
-																			<Property Name="Frequency" Type="Real32" Value="200"/>
-																		</PropertyList>
-																	</PluginInnerObject>
-																</List>
-															</PluginInnerObjectList>
-														</SourcePlugin>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Soundseed Air Woosh" ID="{A341E8D9-733C-420F-858A-0DA3151904E5}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="player_grap2" ID="{F8385D16-6ABA-4C61-A076-9398EDB1F776}" ShortID="404468616">
-													<PropertyList>
-														<Property Name="Pitch" Type="int32">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{10094F9E-80D8-43C3-AB64-D81FF9B95339}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Max" Type="Real64" Value="354"/>
-																			<Property Name="Min" Type="Real64" Value="-253"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>-8</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="player_grap2" ID="{6611B255-385C-43D3-8118-0905502B3C67}">
-															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.509767441860469"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimEnd" Type="Real64" Value="0.956420819490589"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>Player_Weapon\player_grap2.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="372667715"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists>
-														<ObjectList Name="RTPC">
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{59300DC2-89B2-44EB-8304-B4F42DBCACB4}" ShortID="156347504">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="Volume"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="RTPC_PlayerMovement" ID="{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{8E5A53BB-3724-4A54-91F6-4EF540E1F949}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="3"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>0</YPos>
-																								<Flags>5</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>2.999</XPos>
-																								<YPos>0</YPos>
-																								<Flags>0</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>3</XPos>
-																								<YPos>-20</YPos>
-																								<Flags>0</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>4</XPos>
-																								<YPos>-20</YPos>
-																								<Flags>0</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>4.001</XPos>
-																								<YPos>0</YPos>
-																								<Flags>0</Flags>
-																							</Point>
-																							<Point>
-																								<XPos>5</XPos>
-																								<YPos>0</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-														</ObjectList>
-													</ObjectLists>
-													<ActiveSourceList>
-														<ActiveSource Name="player_grap2" ID="{6611B255-385C-43D3-8118-0905502B3C67}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</BlendContainer>
-										<Sound Name="player_grap_lock" ID="{CF744AB9-532B-444B-866E-39F6E1908411}" ShortID="736229664">
-											<PropertyList>
-												<Property Name="Inclusion" Type="bool">
-													<ValueList>
-														<Value>False</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>500</Value>
-													</ValueList>
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{FE36A2B7-CC63-4933-A877-EA769E2FAC0E}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="300"/>
-																	<Property Name="Min" Type="Real64" Value="-300"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-8</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="player_grap2" ID="{A431D756-428C-4E34-BC7A-CFBF8486A168}">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0163356990408954"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.00807175717314829"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.0540300706672737"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.145586963691215"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Player_Weapon\player_grap2.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="765447055"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="player_grap2" ID="{A431D756-428C-4E34-BC7A-CFBF8486A168}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</Folder>
 								<BlendContainer Name="game_land" ID="{F816745C-890D-4982-95CE-1A0E463FAF7D}" ShortID="202724146">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
@@ -814,45 +336,6 @@
 													</PluginInnerObjectList>
 												</SourcePlugin>
 											</ChildrenList>
-											<ObjectLists>
-												<ObjectList Name="RTPC">
-													<Reference>
-														<Local>
-															<RTPC Name="" ID="{EEAB8076-8DF4-4FC4-831F-1A0CEB6D1FC8}" ShortID="904625507">
-																<PropertyList>
-																	<Property Name="PropertyName" Type="string" Value="Volume"/>
-																</PropertyList>
-																<ReferenceList>
-																	<Reference Name="ControlInput">
-																		<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
-																	</Reference>
-																	<Reference Name="Curve">
-																		<Custom>
-																			<Curve Name="" ID="{1812F8F5-1381-46E6-B2DB-35568FB6B7D2}">
-																				<PropertyList>
-																					<Property Name="Flags" Type="int32" Value="3"/>
-																				</PropertyList>
-																				<PointList>
-																					<Point>
-																						<XPos>0</XPos>
-																						<YPos>-5.86777</YPos>
-																						<Flags>5</Flags>
-																					</Point>
-																					<Point>
-																						<XPos>5</XPos>
-																						<YPos>0.1034</YPos>
-																						<Flags>37</Flags>
-																					</Point>
-																				</PointList>
-																			</Curve>
-																		</Custom>
-																	</Reference>
-																</ReferenceList>
-															</RTPC>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
 											<ActiveSourceList>
 												<ActiveSource Name="Soundseed Air Woosh" ID="{EEF5AFE1-AAF9-4658-ACB9-6B105611FE75}" Platform="Linked"/>
 											</ActiveSourceList>
@@ -1269,6 +752,13 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="land_09" ID="{502B6483-D94E-4826-A4AE-D1D493E753E5}" ShortID="315834154">
+													<PropertyList>
+														<Property Name="Highpass" Type="int16">
+															<ValueList>
+																<Value>15</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -1437,12 +927,12 @@
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>50</YPos>
+																				<YPos>41</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
 																				<XPos>5</XPos>
-																				<YPos>-2</YPos>
+																				<YPos>18</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -2588,7 +2078,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-5</Value>
+														<Value>-12</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -4231,6 +3721,425 @@
 												</Sound>
 											</ChildrenList>
 										</RandomSequenceContainer>
+									</ChildrenList>
+								</BlendContainer>
+								<BlendContainer Name="grappin" ID="{1F68D640-EC77-4AC0-BC56-9FFB822279A6}" ShortID="574350796">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-20</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="game_grap_shot" ID="{87049EC6-A228-4E62-BB17-D25F07B8DDA2}" ShortID="558668865">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="1"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{01785D4F-AFE2-40AE-A3E9-24B1FF46FDD8}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-300"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="Effect0">
+													<Custom>
+														<Effect Name="Flanger (Custom)" ID="{2A02FF7C-82A9-4670-8071-EE1321113B91}" ShortID="518190610" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
+															<PropertyList>
+																<Property Name="DelayTime" Type="Real32" Value="6.6"/>
+																<Property Name="EnableLFO" Type="bool" Value="False"/>
+																<Property Name="FeedBackLevel" Type="Real32" Value="0.8"/>
+																<Property Name="FeedForwardLevel" Type="Real32" Value="-1"/>
+																<Property Name="ModDepth" Type="Real32" Value="31"/>
+																<Property Name="ModFrequency" Type="Real32" Value="0.78"/>
+																<Property Name="ModPWM" Type="Real32" Value="37"/>
+																<Property Name="ModPhaseOffset" Type="Real32" Value="3"/>
+																<Property Name="ModPhaseSpread" Type="Real32" Value="180"/>
+																<Property Name="WetDryMix" Type="Real32" Value="65"/>
+															</PropertyList>
+															<ObjectLists>
+																<ObjectList Name="RTPC">
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{F1CD92C1-4CD8-4996-A0D5-4213724A5EDB}" ShortID="194316164">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="ModDepth"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{C8F10147-96BA-4C90-BC52-223BF3FD22FD}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>-100</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>3000</XPos>
+																										<YPos>100</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{47FBDE5A-2500-4513-8661-95674AFE9E2E}" ShortID="69289809">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="FeedBackLevel"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{5694235D-53CA-4CE6-A8B6-542B5802F0DE}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>-1</XPos>
+																										<YPos>0.09819</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>0.001</XPos>
+																										<YPos>0</YPos>
+																										<Flags>0</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>1</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{7D30AD36-7E48-4023-9E1A-A90ED7C16A3C}" ShortID="999298289">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="FeedBackLevel"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{7A22D474-3B56-4D6D-808E-273EB5B31CEC}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>3000</XPos>
+																										<YPos>0.06202</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																</ObjectList>
+															</ObjectLists>
+														</Effect>
+													</Custom>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_grap_shot" ID="{0F34A3B9-198D-48D3-A14F-415477CD733A}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0195480150214592"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0988465665236052"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.305488433583335"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Placeholders\player_grap_shot.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="642346148"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="player_grap_shot" ID="{0F34A3B9-198D-48D3-A14F-415477CD733A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="game_grap_woosh" ID="{3A64FC17-1CF8-4D36-8540-3802578E578D}" ShortID="796402596">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="1"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>0.2</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-20</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Movement" ID="{788A8AD6-6BC3-480E-8AB6-6E9B3B5C0396}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Soundseed Air Woosh" ID="{A341E8D9-733C-420F-858A-0DA3151904E5}" ShortID="1018588396" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
+													<PropertyList>
+														<Property Name="Duration" Type="Real64" Value="0.4"/>
+														<Property Name="FrequencyScale" Type="Real32" Value="-4"/>
+														<Property Name="GainOffset" Type="Real32" Value="-18.3"/>
+														<Property Name="Speed" Type="Real32" Value="50"/>
+														<Property Name="SpeedAutomate" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<PluginData>
+	<WooshData>
+		<CurveList Version="1">
+			<CurveInfo Name="Speed">
+				<Curve Name="" ID="{94A64A96-E8CE-4E77-96BE-8E8AE030479B}">
+					<PropertyList>
+						<Property Name="Flags" Type="int32" Value="1"/>
+					</PropertyList>
+					<PointList>
+						<Point>
+							<XPos>0</XPos>
+							<YPos>0</YPos>
+							<Flags>5</Flags>
+						</Point>
+						<Point>
+							<XPos>0.11839</XPos>
+							<YPos>99.07834</YPos>
+							<Flags>0</Flags>
+						</Point>
+						<Point>
+							<XPos>0.4</XPos>
+							<YPos>0</YPos>
+							<Flags>37</Flags>
+						</Point>
+					</PointList>
+				</Curve>
+			</CurveInfo>
+		</CurveList>
+		<Path Version="1">
+			<Path2D Name="" ID="{0BB9EFAA-F791-4653-8D4D-F5FA693D2876}">
+				<PropertyList>
+					<Property Name="LinearTime" Type="bool" Value="False"/>
+				</PropertyList>
+				<PointList>
+					<Point>
+						<XPos>0</XPos>
+						<YPos>0</YPos>
+						<Flags>12</Flags>
+						<Time>0</Time>
+					</Point>
+				</PointList>
+			</Path2D>
+		</Path>
+	</WooshData>
+</PluginData>
+													<PluginInnerObjectList>
+														<List Name="Deflectors">
+															<PluginInnerObject Name="" ID="{6B8564E1-D698-4BE9-9840-01DAF995B9E4}" PluginName="Deflector" CompanyID="0" PluginID="122"/>
+															<PluginInnerObject Name="" ID="{74FAD4C9-D1E8-4158-A4B0-E405EC449A07}" PluginName="Deflector" CompanyID="0" PluginID="122">
+																<PropertyList>
+																	<Property Name="Frequency" Type="Real32" Value="200"/>
+																</PropertyList>
+															</PluginInnerObject>
+														</List>
+													</PluginInnerObjectList>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Soundseed Air Woosh" ID="{A341E8D9-733C-420F-858A-0DA3151904E5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="player_grap2" ID="{F8385D16-6ABA-4C61-A076-9398EDB1F776}" ShortID="404468616">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{10094F9E-80D8-43C3-AB64-D81FF9B95339}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="354"/>
+																	<Property Name="Min" Type="Real64" Value="-253"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_grap2" ID="{6611B255-385C-43D3-8118-0905502B3C67}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.509767441860469"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.956420819490589"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Player_Weapon\player_grap2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="372667715"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{59300DC2-89B2-44EB-8304-B4F42DBCACB4}" ShortID="156347504">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_PlayerMovement" ID="{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{8E5A53BB-3724-4A54-91F6-4EF540E1F949}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>2.999</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>3</XPos>
+																						<YPos>-20</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>4</XPos>
+																						<YPos>-20</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>4.001</XPos>
+																						<YPos>0</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>5</XPos>
+																						<YPos>0</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="player_grap2" ID="{6611B255-385C-43D3-8118-0905502B3C67}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</BlendContainer>
 							</ChildrenList>
@@ -6742,8 +6651,12 @@
 												<Value>20</Value>
 											</ValueList>
 										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ENV_Other_Att" ID="{9A014A3F-0E71-4CE8-B89A-A62162041CB0}" WorkUnitID="{7AC94ADD-C8EB-4C66-8D47-8E09CE973A8D}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 										</Reference>
@@ -6773,11 +6686,6 @@
 													</ModifierList>
 												</Property>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-17</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">

@@ -10,20 +10,11 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{64756422-F857-FC0F-F54E-5E4C86CF1D80}",
+    "Hash": "{1BA4071B-2A79-643B-8D77-5D13C2FBD75B}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Media": [
-     {
-      "Id": "216221817",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "AK_Factory_IR_Amb\\Large Spaces\\AK Amb Hamburg Parkhaus.wav",
-      "Path": "Media/216221817.wem",
-      "CachePath": "Plugins/Wwise Convolution Reverb/AK_Factory_IR_Amb/Large Spaces/AK Amb Hamburg Parkhaus_F5DBD060.wem"
-     },
      {
       "Id": "304471121",
       "Language": "SFX",
@@ -32,6 +23,15 @@
       "ShortName": "AK_Factory_IR\\Large Spaces\\AK Stair Way Hall.wav",
       "Path": "Media/304471121.wem",
       "CachePath": "Plugins/Wwise Convolution Reverb/AK_Factory_IR/Large Spaces/AK Stair Way Hall_EC3E8250.wem"
+     },
+     {
+      "Id": "822076648",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "AK_Factory_IR_Amb\\Exteriors\\AK Amb Hamburg Stadtpark 01.wav",
+      "Path": "Media/822076648.wem",
+      "CachePath": "Plugins/Wwise Convolution Reverb/AK_Factory_IR_Amb/Exteriors/AK Amb Hamburg Stadtpark 01_44C79C61.wem"
      }
     ],
     "Plugins": {
@@ -79,19 +79,6 @@
        "LibId": "7733251"
       },
       {
-       "Id": "319664383",
-       "Name": "HamburgParkhaus_Ambisonics",
-       "ObjectPath": "\\Effects\\Factory AK Convolution Reverb Effects Ambisonics\\Large Spaces\\HamburgParkhaus_Ambisonics",
-       "GUID": "{C22C3DF3-1F41-4D73-91CA-C1376B82C2D6}",
-       "LibName": "Wwise Convolution Reverb",
-       "LibId": "8323075",
-       "MediaRefs": [
-        {
-         "Id": "216221817"
-        }
-       ]
-      },
-      {
        "Id": "702543456",
        "Name": "Tunnel1",
        "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Tunnel1",
@@ -125,6 +112,19 @@
        "MediaRefs": [
         {
          "Id": "304471121"
+        }
+       ]
+      },
+      {
+       "Id": "3075486160",
+       "Name": "HamburgStadtpark_ER_Ambisonics",
+       "ObjectPath": "\\Effects\\Factory AK Convolution Reverb Effects Ambisonics\\Exteriors\\HamburgStadtpark_ER_Ambisonics",
+       "GUID": "{2CD55A74-4B73-4E87-B30A-41A032980111}",
+       "LibName": "Wwise Convolution Reverb",
+       "LibId": "8323075",
+       "MediaRefs": [
+        {
+         "Id": "822076648"
         }
        ]
       }
@@ -542,7 +542,7 @@
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "319664383"
+         "Id": "3075486160"
         }
        ]
       },
@@ -1386,6 +1386,6 @@
     ]
    }
   ],
-  "FileHash": "{4DB71DEF-2877-79AD-F768-40D2581055A8}"
+  "FileHash": "{8026C94A-F913-9037-B410-EEBCE54A99A5}"
  }
 }

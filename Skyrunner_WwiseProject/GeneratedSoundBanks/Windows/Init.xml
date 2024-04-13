@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{64756422-F857-FC0F-F54E-5E4C86CF1D80}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{1BA4071B-2A79-643B-8D77-5D13C2FBD75B}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Media>
-				<File Id="216221817" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>AK_Factory_IR_Amb\Large Spaces\AK Amb Hamburg Parkhaus.wav</ShortName>
-					<Path>Media/216221817.wem</Path>
-					<CachePath>Plugins/Wwise Convolution Reverb/AK_Factory_IR_Amb/Large Spaces/AK Amb Hamburg Parkhaus_F5DBD060.wem</CachePath>
-				</File>
 				<File Id="304471121" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>AK_Factory_IR\Large Spaces\AK Stair Way Hall.wav</ShortName>
 					<Path>Media/304471121.wem</Path>
 					<CachePath>Plugins/Wwise Convolution Reverb/AK_Factory_IR/Large Spaces/AK Stair Way Hall_EC3E8250.wem</CachePath>
+				</File>
+				<File Id="822076648" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AK_Factory_IR_Amb\Exteriors\AK Amb Hamburg Stadtpark 01.wav</ShortName>
+					<Path>Media/822076648.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AK_Factory_IR_Amb/Exteriors/AK Amb Hamburg Stadtpark 01_44C79C61.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -26,17 +26,17 @@
 				</Custom>
 				<ShareSets>
 					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" ObjectPath="\Effects\Factory Effects\RoomVerb\Exteriors\Have_U_Ever_Been_Outside" GUID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" LibName="Wwise RoomVerb" LibId="7733251"/>
-					<Plugin Id="319664383" Name="HamburgParkhaus_Ambisonics" ObjectPath="\Effects\Factory AK Convolution Reverb Effects Ambisonics\Large Spaces\HamburgParkhaus_Ambisonics" GUID="{C22C3DF3-1F41-4D73-91CA-C1376B82C2D6}" LibName="Wwise Convolution Reverb" LibId="8323075">
-						<MediaRefs>
-							<MediaRef Id="216221817"/>
-						</MediaRefs>
-					</Plugin>
 					<Plugin Id="702543456" Name="Tunnel1" ObjectPath="\Effects\Factory Effects\Matrix Reverb\Tunnel1" GUID="{CC44B890-9865-4157-965F-86FED27BC4C6}" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="1313634581" Name="Kick_Meter" ObjectPath="\Effects\Default Work Unit\Kick_Meter" GUID="{F60F1939-BF4D-4E8B-B75A-F49C8D833CDA}" LibName="Wwise Meter" LibId="8454147"/>
 					<Plugin Id="1842579981" Name="Reflect_Simplified" ObjectPath="\Effects\Factory Reflect\Reflect_Simplified" GUID="{26D1B778-1690-400C-9DBA-3B2CDEE9B3AE}" LibName="Wwise Reflect" LibId="11206659"/>
 					<Plugin Id="2928304598" Name="Gated_Metallic_Reflections_Stereo" ObjectPath="\Effects\Factory AK Convolution Reverb Effects Stereo\Rooms\Gated_Metallic_Reflections_Stereo" GUID="{54CE8B32-9AA8-4EF3-A620-4530C27ABBF7}" LibName="Wwise Convolution Reverb" LibId="8323075">
 						<MediaRefs>
 							<MediaRef Id="304471121"/>
+						</MediaRefs>
+					</Plugin>
+					<Plugin Id="3075486160" Name="HamburgStadtpark_ER_Ambisonics" ObjectPath="\Effects\Factory AK Convolution Reverb Effects Ambisonics\Exteriors\HamburgStadtpark_ER_Ambisonics" GUID="{2CD55A74-4B73-4E87-B30A-41A032980111}" LibName="Wwise Convolution Reverb" LibId="8323075">
+						<MediaRefs>
+							<MediaRef Id="822076648"/>
 						</MediaRefs>
 					</Plugin>
 				</ShareSets>
@@ -174,7 +174,7 @@
 				<AuxBus Id="3750820532" Name="REV_Large" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="319664383"/>
+							<PluginRef Id="3075486160"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
@@ -403,5 +403,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2618C9FC-14D6-627B-9A9A-949887827922}</FileHash>
+	<FileHash>{663E2DFD-6907-3B93-3C8A-88CAAA28FFE9}</FileHash>
 </SoundBanksInfo>

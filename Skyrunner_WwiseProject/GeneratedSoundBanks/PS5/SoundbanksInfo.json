@@ -234,7 +234,7 @@
     "Type": "Event",
     "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
     "Language": "SFX",
-    "Hash": "{39126754-1764-0AE7-49A3-4C4B0F3A5954}",
+    "Hash": "{40F4729F-3CEB-3CE8-8E86-ACCAF78333D9}",
     "ObjectPath": "SX_player_land",
     "ShortName": "SX_player_land",
     "Path": "Event/SX_player_land.bnk",
@@ -689,7 +689,7 @@
     "Type": "Event",
     "GUID": "{85FE7A46-F893-42AA-8787-F5597C4AF630}",
     "Language": "SFX",
-    "Hash": "{D6392B96-F039-C358-D3F9-54D767A174B3}",
+    "Hash": "{557BF65F-1ED5-FE4E-D03F-5A57776844FD}",
     "ObjectPath": "SX_enemy_gunner_shot",
     "ShortName": "SX_enemy_gunner_shot",
     "Path": "Event/SX_enemy_gunner_shot.bnk",
@@ -822,6 +822,14 @@
         }
        ]
       }
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2565740352",
+      "Name": "RTPC_SlowMo",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
+      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
      }
     ]
    },
@@ -960,7 +968,7 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{0805A72D-9EE5-2D4E-2F43-F65E06131EDE}",
+    "Hash": "{95AF758E-5EEC-B749-9D22-2BF4B01DC70A}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
@@ -1196,7 +1204,7 @@
     "Type": "Event",
     "GUID": "{095480AE-B62A-4DB8-80EC-3AF54A959CDA}",
     "Language": "SFX",
-    "Hash": "{9CC09CDE-A038-FBAF-6E53-A0527A548EB9}",
+    "Hash": "{B65476B8-816F-8A10-FFE4-DAE0C152D59F}",
     "ObjectPath": "SX_player_death_notifier",
     "ShortName": "SX_player_death_notifier",
     "Path": "Event/SX_player_death_notifier.bnk",
@@ -1313,7 +1321,7 @@
     "Type": "Bus",
     "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}",
     "Language": "SFX",
-    "Hash": "{F6E36F6B-2A38-B6E8-01A8-E3D8CA1F8293}",
+    "Hash": "{4B992DCC-3CAF-64D5-A876-9F8812B33776}",
     "ObjectPath": "REV_Arena",
     "ShortName": "REV_Arena",
     "Path": "Bus/REV_Arena.bnk",
@@ -1518,7 +1526,7 @@
     "Type": "Event",
     "GUID": "{45B75918-88DC-4592-9F27-6C746C945B7A}",
     "Language": "SFX",
-    "Hash": "{06C9ADFB-5643-728A-6290-6140CD4B783B}",
+    "Hash": "{B7DB5AA4-869D-85E9-593A-4C53A8787FB3}",
     "ObjectPath": "Amb_Mountain_Wind",
     "ShortName": "Amb_Mountain_Wind",
     "Path": "Event/Amb_Mountain_Wind.bnk",
@@ -1546,27 +1554,6 @@
         "Id": "799016928"
        }
       ]
-     }
-    ]
-   },
-   {
-    "Id": "882230951",
-    "Type": "Event",
-    "GUID": "{D7BC11F0-4EB9-4FC1-9367-FFB057615127}",
-    "Language": "SFX",
-    "Hash": "{A4F4B836-8DAC-920D-9DB2-FE32E1F9B64F}",
-    "ObjectPath": "SX_player_grap_lock",
-    "ShortName": "SX_player_grap_lock",
-    "Path": "Event/SX_player_grap_lock.bnk",
-    "Events": [
-     {
-      "Id": "882230951",
-      "Name": "SX_player_grap_lock",
-      "ObjectPath": "\\Events\\Player\\Feedback\\SX_player_grap_lock",
-      "GUID": "{D7BC11F0-4EB9-4FC1-9367-FFB057615127}",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
      }
     ]
    },
@@ -1668,7 +1655,7 @@
     "Type": "Event",
     "GUID": "{C2635664-3DF8-496D-BA41-22C25299ACE8}",
     "Language": "SFX",
-    "Hash": "{61BBD722-6A2B-F5BE-A095-EEF3CF00B3B3}",
+    "Hash": "{9ACF23A6-939B-92FD-0362-297A202C3048}",
     "ObjectPath": "SX_player_weapon_impact",
     "ShortName": "SX_player_weapon_impact",
     "Path": "Event/SX_player_weapon_impact.bnk",
@@ -1698,6 +1685,7 @@
       "Name": "SX_player_weapon_impact",
       "ObjectPath": "\\Events\\Player\\Weapon\\SX_player_weapon_impact",
       "GUID": "{C2635664-3DF8-496D-BA41-22C25299ACE8}",
+      "MaxAttenuation": "10000",
       "DurationType": "OneShot",
       "DurationMin": "0.25214583",
       "DurationMax": "0.34630594",
@@ -1717,7 +1705,7 @@
     "Type": "Event",
     "GUID": "{551300EA-C047-48F9-A1CA-75F08BC14E0B}",
     "Language": "SFX",
-    "Hash": "{49F93A4F-EB65-A4A9-B5E9-C2AD7664BB6B}",
+    "Hash": "{F3ABC776-DAC3-9073-5FE7-18D811752093}",
     "ObjectPath": "ENV_AMB_Play_AmbienceMain",
     "ShortName": "ENV_AMB_Play_AmbienceMain",
     "Path": "Event/ENV_AMB_Play_AmbienceMain.bnk",
@@ -2244,7 +2232,7 @@
     "Type": "Event",
     "GUID": "{7E4A6C7B-541E-4F66-A804-807DEC01DB1B}",
     "Language": "SFX",
-    "Hash": "{3875B9CF-FAE2-765F-755B-AC1BFC54679E}",
+    "Hash": "{DC88DC59-6845-90A6-E86A-0622EB4D87D6}",
     "ObjectPath": "Amb_Mechanism",
     "ShortName": "Amb_Mechanism",
     "Path": "Event/Amb_Mechanism.bnk",
@@ -2280,7 +2268,7 @@
     "Type": "Event",
     "GUID": "{F550970C-A8FC-4520-A4CD-A03DF04BDF72}",
     "Language": "SFX",
-    "Hash": "{B0EAA3DF-C893-41BC-352D-8EFFB3DE5412}",
+    "Hash": "{689B2DB7-FB71-7FF0-C08A-FD5A5160FB14}",
     "ObjectPath": "Amb_Crackling_Slope",
     "ShortName": "Amb_Crackling_Slope",
     "Path": "Event/Amb_Crackling_Slope.bnk",
@@ -2480,7 +2468,7 @@
     "Type": "Event",
     "GUID": "{A670372F-931C-41E6-925A-FA1480FED58F}",
     "Language": "SFX",
-    "Hash": "{767AA35A-1161-7784-CE62-06D37E17A040}",
+    "Hash": "{AAE99094-0CD4-DB4D-CE0F-6CA66A7D51E1}",
     "ObjectPath": "SX_player_grap_shot",
     "ShortName": "SX_player_grap_shot",
     "Path": "Event/SX_player_grap_shot.bnk",
@@ -2509,7 +2497,7 @@
       {
        "Id": "518190610",
        "Name": "Flanger (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\Grap\\grappin\\game_grap_shot\\Flanger (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\grappin\\game_grap_shot\\Flanger (Custom)",
        "GUID": "{2A02FF7C-82A9-4670-8071-EE1321113B91}",
        "LibName": "Wwise Flanger",
        "LibId": "8192003"
@@ -2517,7 +2505,7 @@
       {
        "Id": "1018588396",
        "Name": "Soundseed Air Woosh",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\Grap\\grappin\\game_grap_woosh\\Soundseed Air Woosh",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Player\\PlayerMovement_MainMixer\\Movements\\grappin\\game_grap_woosh\\Soundseed Air Woosh",
        "GUID": "{A341E8D9-733C-420F-858A-0DA3151904E5}",
        "LibName": "SoundSeed Air Woosh",
        "LibId": "7864322"
@@ -2579,20 +2567,11 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{E0823A1E-E427-7C54-80E0-9C861300AB39}",
+    "Hash": "{7D553CA8-479C-C386-59F6-CC88D52183FE}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Media": [
-     {
-      "Id": "216221817",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "AK_Factory_IR_Amb\\Large Spaces\\AK Amb Hamburg Parkhaus.wav",
-      "Path": "Media/216221817.wem",
-      "CachePath": "Plugins/Wwise Convolution Reverb/AK_Factory_IR_Amb/Large Spaces/AK Amb Hamburg Parkhaus_F5DBD060.wem"
-     },
      {
       "Id": "304471121",
       "Language": "SFX",
@@ -2601,6 +2580,15 @@
       "ShortName": "AK_Factory_IR\\Large Spaces\\AK Stair Way Hall.wav",
       "Path": "Media/304471121.wem",
       "CachePath": "Plugins/Wwise Convolution Reverb/AK_Factory_IR/Large Spaces/AK Stair Way Hall_EC3E8250.wem"
+     },
+     {
+      "Id": "822076648",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "AK_Factory_IR_Amb\\Exteriors\\AK Amb Hamburg Stadtpark 01.wav",
+      "Path": "Media/822076648.wem",
+      "CachePath": "Plugins/Wwise Convolution Reverb/AK_Factory_IR_Amb/Exteriors/AK Amb Hamburg Stadtpark 01_44C79C61.wem"
      }
     ],
     "Plugins": {
@@ -2648,19 +2636,6 @@
        "LibId": "7733251"
       },
       {
-       "Id": "319664383",
-       "Name": "HamburgParkhaus_Ambisonics",
-       "ObjectPath": "\\Effects\\Factory AK Convolution Reverb Effects Ambisonics\\Large Spaces\\HamburgParkhaus_Ambisonics",
-       "GUID": "{C22C3DF3-1F41-4D73-91CA-C1376B82C2D6}",
-       "LibName": "Wwise Convolution Reverb",
-       "LibId": "8323075",
-       "MediaRefs": [
-        {
-         "Id": "216221817"
-        }
-       ]
-      },
-      {
        "Id": "702543456",
        "Name": "Tunnel1",
        "ObjectPath": "\\Effects\\Factory Effects\\Matrix Reverb\\Tunnel1",
@@ -2694,6 +2669,19 @@
        "MediaRefs": [
         {
          "Id": "304471121"
+        }
+       ]
+      },
+      {
+       "Id": "3075486160",
+       "Name": "HamburgStadtpark_ER_Ambisonics",
+       "ObjectPath": "\\Effects\\Factory AK Convolution Reverb Effects Ambisonics\\Exteriors\\HamburgStadtpark_ER_Ambisonics",
+       "GUID": "{2CD55A74-4B73-4E87-B30A-41A032980111}",
+       "LibName": "Wwise Convolution Reverb",
+       "LibId": "8323075",
+       "MediaRefs": [
+        {
+         "Id": "822076648"
         }
        ]
       }
@@ -3111,7 +3099,7 @@
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "319664383"
+         "Id": "3075486160"
         }
        ]
       },
@@ -4164,7 +4152,7 @@
     "Type": "Event",
     "GUID": "{7BC5CDA3-ADDA-414C-88EA-DA385A0BB02A}",
     "Language": "SFX",
-    "Hash": "{76028D7B-6CE5-CC73-74E0-B5E51F4297EC}",
+    "Hash": "{A6F94A3B-BFEF-E518-CDA7-07F890D23A4C}",
     "ObjectPath": "Amb_Wind_Heavy",
     "ShortName": "Amb_Wind_Heavy",
     "Path": "Event/Amb_Wind_Heavy.bnk",
@@ -4411,7 +4399,7 @@
     "Type": "Event",
     "GUID": "{7CE7E7ED-8F13-426F-BC42-4D730658C8F7}",
     "Language": "SFX",
-    "Hash": "{92FD01A6-1CAA-1354-17A0-54996963629E}",
+    "Hash": "{5A0DC24B-A3D9-38D9-23A6-D75A177D7CB3}",
     "ObjectPath": "Amb_Wind_Light",
     "ShortName": "Amb_Wind_Light",
     "Path": "Event/Amb_Wind_Light.bnk",
@@ -4614,7 +4602,7 @@
     "Type": "Event",
     "GUID": "{499739A7-A19C-4D35-A43D-6E43729F9830}",
     "Language": "SFX",
-    "Hash": "{475F0C00-E960-724E-EE4B-292128C08B2C}",
+    "Hash": "{3AE0F16C-9747-46F7-F6E8-00BC99A80DD6}",
     "ObjectPath": "Amb_Bird",
     "ShortName": "Amb_Bird",
     "Path": "Event/Amb_Bird.bnk",
@@ -5091,7 +5079,7 @@
     "Type": "Event",
     "GUID": "{97A39C71-6024-4A20-A666-3E641EBF8422}",
     "Language": "SFX",
-    "Hash": "{FF442995-14BA-A7E1-5FE9-0BC2DE7C5B60}",
+    "Hash": "{C0CDD7CA-4522-B85A-6C53-30ED46D660B2}",
     "ObjectPath": "Amb_Creepy",
     "ShortName": "Amb_Creepy",
     "Path": "Event/Amb_Creepy.bnk",
@@ -5172,7 +5160,7 @@
     "Type": "Event",
     "GUID": "{2C5E9B4F-92D9-4B9C-B581-8D73092753E2}",
     "Language": "SFX",
-    "Hash": "{322225F2-0CFA-A67B-F1DD-06BAA33B113A}",
+    "Hash": "{29B5D56D-7EDE-E96D-0485-B0CCB034F2CD}",
     "ObjectPath": "SX_robot_presence",
     "ShortName": "SX_robot_presence",
     "Path": "Event/SX_robot_presence.bnk",
@@ -5260,6 +5248,14 @@
         "Id": "1020311501"
        }
       ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2565740352",
+      "Name": "RTPC_SlowMo",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_SlowMo",
+      "GUID": "{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"
      }
     ]
    },
@@ -6919,7 +6915,7 @@
     "Type": "Event",
     "GUID": "{C6B5191E-27E7-4097-A049-ADF0776478D2}",
     "Language": "SFX",
-    "Hash": "{B492D2D0-2F3D-D068-9E7A-E5A64B5DE832}",
+    "Hash": "{A0A48E93-DD43-D55C-6B97-A6290EC61F5A}",
     "ObjectPath": "SX_player_bumper",
     "ShortName": "SX_player_bumper",
     "Path": "Event/SX_player_bumper.bnk",
@@ -7166,33 +7162,33 @@
     "Type": "Bus",
     "GUID": "{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}",
     "Language": "SFX",
-    "Hash": "{1ADAEDE8-BF05-3D62-4894-79DA300B7A3D}",
+    "Hash": "{03790DC2-FC7E-42F1-E072-57C74650F301}",
     "ObjectPath": "REV_Large",
     "ShortName": "REV_Large",
     "Path": "Bus/REV_Large.bnk",
     "Media": [
      {
-      "Id": "216221817",
+      "Id": "822076648",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "AK_Factory_IR_Amb\\Large Spaces\\AK Amb Hamburg Parkhaus.wav",
-      "Path": "Media/216221817.wem",
-      "CachePath": "Plugins/Wwise Convolution Reverb/AK_Factory_IR_Amb/Large Spaces/AK Amb Hamburg Parkhaus_F5DBD060.wem"
+      "ShortName": "AK_Factory_IR_Amb\\Exteriors\\AK Amb Hamburg Stadtpark 01.wav",
+      "Path": "Media/822076648.wem",
+      "CachePath": "Plugins/Wwise Convolution Reverb/AK_Factory_IR_Amb/Exteriors/AK Amb Hamburg Stadtpark 01_44C79C61.wem"
      }
     ],
     "Plugins": {
      "ShareSets": [
       {
-       "Id": "319664383",
-       "Name": "HamburgParkhaus_Ambisonics",
-       "ObjectPath": "\\Effects\\Factory AK Convolution Reverb Effects Ambisonics\\Large Spaces\\HamburgParkhaus_Ambisonics",
-       "GUID": "{C22C3DF3-1F41-4D73-91CA-C1376B82C2D6}",
+       "Id": "3075486160",
+       "Name": "HamburgStadtpark_ER_Ambisonics",
+       "ObjectPath": "\\Effects\\Factory AK Convolution Reverb Effects Ambisonics\\Exteriors\\HamburgStadtpark_ER_Ambisonics",
+       "GUID": "{2CD55A74-4B73-4E87-B30A-41A032980111}",
        "LibName": "Wwise Convolution Reverb",
        "LibId": "8323075",
        "MediaRefs": [
         {
-         "Id": "216221817"
+         "Id": "822076648"
         }
        ]
       }
@@ -7207,7 +7203,7 @@
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "319664383"
+         "Id": "3075486160"
         }
        ]
       },
@@ -7261,7 +7257,7 @@
     "Type": "Event",
     "GUID": "{A4E26606-8423-4B2B-9B42-08CE1DB084CD}",
     "Language": "SFX",
-    "Hash": "{4FB1A59E-1A28-A704-109A-EF776BD1D179}",
+    "Hash": "{C714DC8A-D629-BD66-4657-C8F21A5CEE87}",
     "ObjectPath": "Amb_Cave",
     "ShortName": "Amb_Cave",
     "Path": "Event/Amb_Cave.bnk",
@@ -7297,7 +7293,7 @@
     "Type": "Event",
     "GUID": "{F5B804B1-5506-4197-9ED9-F39E5A921CE8}",
     "Language": "SFX",
-    "Hash": "{FA23217C-E264-99F3-8130-EB3522F508FE}",
+    "Hash": "{A9496B33-921E-DFE3-E7D8-480748FDBA16}",
     "ObjectPath": "Amb_Bumper_Aura",
     "ShortName": "Amb_Bumper_Aura",
     "Path": "Event/Amb_Bumper_Aura.bnk",
@@ -7485,7 +7481,7 @@
     "Type": "Event",
     "GUID": "{AF023191-835D-40F3-B33D-929589737D81}",
     "Language": "SFX",
-    "Hash": "{F6409B51-392F-D8C9-D384-32CFF49C8D8F}",
+    "Hash": "{494511F2-1907-CCEE-2CF3-B1F9760DD6EF}",
     "ObjectPath": "Amb_Wind_Trees",
     "ShortName": "Amb_Wind_Trees",
     "Path": "Event/Amb_Wind_Trees.bnk",
@@ -7517,6 +7513,6 @@
     ]
    }
   ],
-  "FileHash": "{FF91C4CF-C0A8-6E60-F910-54FC5FECA17A}"
+  "FileHash": "{17537847-0D58-4ACF-68BF-AC11305A426A}"
  }
 }
