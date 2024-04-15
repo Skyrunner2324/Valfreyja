@@ -12,6 +12,8 @@
 
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FDelegateTakeDmage, float, numberSequencePointDamageEnemy);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDelegateAimUnlocked);
+
 
 // TODO : rename EnemyBase
 UCLASS()
@@ -56,4 +58,6 @@ public:
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	void EnemyLocked(bool locked);
 
+	UPROPERTY(BlueprintAssignable, BlueprintCallable)
+	FDelegateAimUnlocked OnAimUnlocked;
 };
