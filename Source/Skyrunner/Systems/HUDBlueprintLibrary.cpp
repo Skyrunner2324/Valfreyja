@@ -1,7 +1,8 @@
-#include "UHUDBlueprintLibrary.h"
-#include <Kismet/GameplayStatics.h>
-#include <GameFramework/Character.h>
-#include <Engine/Engine.h>
+#include "HUDBlueprintLibrary.h"
+
+#include "Kismet/GameplayStatics.h"
+#include "GameFramework/Character.h"
+#include "Engine/Engine.h"
 
 void UHUDBlueprintLibrary::FindScreenEdgeLocationForWorldLocation(UObject* WorldContextObject, const FVector& InLocation, const float EdgePercent, const FVector2D ViewportCenterLoc, FVector2D& OutScreenPosition, float& OutRotationAngleDegrees, bool& bIsOnScreen)
 {

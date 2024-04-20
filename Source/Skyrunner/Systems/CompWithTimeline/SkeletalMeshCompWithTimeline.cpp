@@ -13,7 +13,7 @@
 USkeletalMeshCompWithTimeline::USkeletalMeshCompWithTimeline()
 {
 #if 0
-	timelineHandles = CreateDefaultSubobject<UMultipleTimelineHandlesComponent>(FName("Timeline Handles"));
+	timelineHandles = CreateDefaultSubobject<UMultipleTimelineHandlesComponent2>(FName("Timeline Handles"));
 #else
 	timelineHandle = CreateDefaultSubobject<UTimelineHandleComponent>(FName("Timeline"));
 #endif

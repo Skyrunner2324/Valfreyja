@@ -11,6 +11,8 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnUpdateDelegate, float, scale);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnFinishedDelegate);
 
 
+// This component is deprecated (one must use MultipleTimelineHandlesComponent from the plugin)
+
 UCLASS( Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class SKYRUNNER_API UTimelineHandleComponent : public UActorComponent
 {

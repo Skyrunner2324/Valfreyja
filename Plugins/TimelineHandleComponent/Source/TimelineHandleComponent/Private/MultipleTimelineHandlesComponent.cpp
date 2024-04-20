@@ -3,7 +3,7 @@
 
 #include "MultipleTimelineHandlesComponent.h"
 
-#include "TimelineHandleComponent/Public/InstancedTimelineHandle.h"
+#include "InstancedTimelineHandle.h"
 #include "Components/TimelineComponent.h"
 
 

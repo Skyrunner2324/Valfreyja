@@ -8,7 +8,7 @@
 #include "Components/ActorComponent.h"
 
 
-#include "EnemyBase.generated.h"
+#include "BaseEnemy.generated.h"
 
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FDelegateTakeDmage, float, numberSequencePointDamageEnemy);

@@ -8,7 +8,7 @@
 
 
 UCLASS(Blueprintable, ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
-class SKYRUNNER_API UMultipleTimelineHandlesComponent : public UActorComponent
+class TIMELINEHANDLECOMPONENT_API UMultipleTimelineHandlesComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
