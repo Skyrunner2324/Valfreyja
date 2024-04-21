@@ -31,7 +31,10 @@ AActor* UObjectPool::GetObjectPooled(FVector position, FRotator rotation, TSubcl
 	}
 
 
-	auto predicate = [&](const AActor* a) { return a->IsA(actorClass.Get()); };
+	auto predicate = [&](const AActor* a) {
+		// TODO : use something else than IsA()
+		return a && a->IsA(actorClass.Get());
+		};
 	auto find = copyPoolObject.FindByPredicate(predicate);
 	AActor* actorPooled = nullptr;
 	if (find)
