@@ -32,8 +32,9 @@ AActor* UObjectPool::GetObjectPooled(FVector position, FRotator rotation, TSubcl
 
 
 	auto predicate = [&](const AActor* a) {
-		// TODO : use something else than IsA()
-		return a && a->IsA(actorClass.Get());
+		// https://forums.unrealengine.com/t/please-explain-isa/340055
+		// https://stackoverflow.com/questions/22609736/check-if-a-is-a-subclass-of-b
+		return a && (a->GetClass() == actorClass.Get());
 		};
 	auto find = copyPoolObject.FindByPredicate(predicate);
 	AActor* actorPooled = nullptr;
