@@ -32,6 +32,7 @@ void UInstancedTimelineHandle::Init(const UTimelineHandle* asset)
 	timeline->SetTimelineLength(asset->length);
 	timeline->SetPlayRate(asset->playRate);
 	timeline->SetPlaybackPosition(0.f, false, false);
+	timeline->SetIgnoreTimeDilation(asset->bIgnoreTimeDilation);
 
 	FOnTimelineFloat update;
 	update.BindUFunction(this, FName("UpdateCallback"));
