@@ -2316,7 +2316,7 @@
 				<Event Id="3390387889" Name="SX_player_dash_regen" ObjectPath="\Events\Player\Feedback\SX_player_dash_regen" GUID="{6D13E3BD-F5FB-4B8B-8184-DB05606BBF7C}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{CC584022-5705-85A7-B0E9-74D4CA3575AC}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{518A6BF6-586F-BBD3-542B-16FCC3D1C667}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -2326,10 +2326,20 @@
 					<Path>Media/80841443.wem</Path>
 					<CachePath>SFX/Music/ZoneA/Azone_drums_slomo_073B4D0C.wem</CachePath>
 				</File>
+				<File Id="87113123" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\transi arena half.wav</ShortName>
+					<Path>Media/87113123.wem</Path>
+					<CachePath>SFX/Music/transi arena half_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="115798640" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\ZoneA\A_Lead.wav</ShortName>
 					<Path>Media/115798640.wem</Path>
 					<CachePath>SFX/Music/ZoneA/A_Lead_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="125037447" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\Halftime Diva.wav</ShortName>
+					<Path>Media/125037447.wem</Path>
+					<CachePath>SFX/Music/Halftime Diva_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="132075390" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\ZoneA\Lead_A_First_Situation.wav</ShortName>
@@ -2350,11 +2360,6 @@
 					<ShortName>Music\Sky_Explo_DRUMS_Phase3.wav</ShortName>
 					<Path>Media/189204732.wem</Path>
 					<CachePath>SFX/Music/Sky_Explo_DRUMS_Phase3_073B4D0C.wem</CachePath>
-				</File>
-				<File Id="198127671" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Music\Sky_Explo_Pluck 1.wav</ShortName>
-					<Path>Media/198127671.wem</Path>
-					<CachePath>SFX/Music/Sky_Explo_Pluck 1_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="205024771" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\Arena 2 - Enter.wav</ShortName>
@@ -2451,6 +2456,11 @@
 					<Path>Media/506963029.wem</Path>
 					<CachePath>SFX/Music/Arena 3 - Loop_073B4D0C.wem</CachePath>
 				</File>
+				<File Id="550313287" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\drums delayed.wav</ShortName>
+					<Path>Media/550313287.wem</Path>
+					<CachePath>SFX/Music/drums delayed_073B4D0C.wem</CachePath>
+				</File>
 				<File Id="587423524" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\Slope After Arena 3.wav</ShortName>
 					<Path>Media/587423524.wem</Path>
@@ -2465,11 +2475,6 @@
 					<ShortName>Music\Halftime Vocal.wav</ShortName>
 					<Path>Media/605123794.wem</Path>
 					<CachePath>SFX/Music/Halftime Vocal_073B4D0C.wem</CachePath>
-				</File>
-				<File Id="617638129" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Music\Sky_Explo_Pad 3.wav</ShortName>
-					<Path>Media/617638129.wem</Path>
-					<CachePath>SFX/Music/Sky_Explo_Pad 3_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="623476732" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\Haltime Drums.wav</ShortName>
@@ -2500,6 +2505,11 @@
 					<ShortName>Music\Halftime Pad Bass.wav</ShortName>
 					<Path>Media/736853801.wem</Path>
 					<CachePath>SFX/Music/Halftime Pad Bass_073B4D0C.wem</CachePath>
+				</File>
+				<File Id="754230025" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\transi neuro half.wav</ShortName>
+					<Path>Media/754230025.wem</Path>
+					<CachePath>SFX/Music/transi neuro half_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="786811872" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\vocal.wav</ShortName>
@@ -2569,6 +2579,9 @@
 			</Media>
 			<Events>
 				<Event Id="3441789682" Name="MUS_Play_MainMusic" ObjectPath="\Events\Music\MUS_Play_MainMusic" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="754230025"/>
+					</MediaRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="2456631623" Id="84696446" GUID="{A2C4D1B0-2D1F-4275-A355-154B8983B6A4}"/>
@@ -2756,7 +2769,12 @@
 										<SwitchContainer>
 											<SwitchValue GroupType="State" GroupId="2368434850" Id="1454074651" GUID="{68188DD8-3818-488B-A868-9C73F1BA33DA}"/>
 											<MediaRefs>
+												<MediaRef Id="455162581"/>
+												<MediaRef Id="490028483"/>
 												<MediaRef Id="587423524"/>
+												<MediaRef Id="804491443"/>
+												<MediaRef Id="849166554"/>
+												<MediaRef Id="950595867"/>
 											</MediaRefs>
 										</SwitchContainer>
 									</Children>
@@ -2767,12 +2785,11 @@
 										<SwitchContainer>
 											<SwitchValue GroupType="State" GroupId="2368434850" Id="1454074651" GUID="{68188DD8-3818-488B-A868-9C73F1BA33DA}"/>
 											<MediaRefs>
-												<MediaRef Id="198127671"/>
 												<MediaRef Id="455162581"/>
 												<MediaRef Id="490028483"/>
 												<MediaRef Id="587423524"/>
-												<MediaRef Id="617638129"/>
 												<MediaRef Id="804491443"/>
+												<MediaRef Id="849166554"/>
 												<MediaRef Id="950595867"/>
 											</MediaRefs>
 										</SwitchContainer>
@@ -2983,6 +3000,9 @@
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="2456631623" Id="84696443" GUID="{D5C6C300-D752-42C0-8002-A8EC6AF41889}"/>
+							<MediaRefs>
+								<MediaRef Id="87113123"/>
+							</MediaRefs>
 							<Children>
 								<SwitchContainer>
 									<SwitchValue GroupType="State" GroupId="2368434850" Id="1454074650" GUID="{F9BD7326-90AD-4609-BCFF-F904AB2A443F}"/>
@@ -2995,6 +3015,7 @@
 												<MediaRef Id="458858035"/>
 												<MediaRef Id="786811872"/>
 												<MediaRef Id="829204541"/>
+												<MediaRef Id="849166554"/>
 											</MediaRefs>
 										</SwitchContainer>
 									</Children>
@@ -3005,6 +3026,8 @@
 										<SwitchContainer>
 											<SwitchValue GroupType="Switch" GroupId="2262403497" Id="0" GUID="{702787C3-E2B6-4E60-A266-37C30239657B}"/>
 											<MediaRefs>
+												<MediaRef Id="125037447"/>
+												<MediaRef Id="550313287"/>
 												<MediaRef Id="605123794"/>
 												<MediaRef Id="641832513"/>
 												<MediaRef Id="908395491"/>
@@ -3424,5 +3447,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6A918835-6B54-E737-A024-33228F8A9F38}</FileHash>
+	<FileHash>{DBCC51A5-1727-A2A4-19CD-C53973125550}</FileHash>
 </SoundBanksInfo>
