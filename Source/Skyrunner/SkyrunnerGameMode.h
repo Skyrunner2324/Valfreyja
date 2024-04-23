@@ -59,7 +59,8 @@ public:
 	 */
 	UFUNCTION(BlueprintCallable)
 	class APawn* SpawnPlayer(const FOnPlayerSpawned OnSpawned,
-		const FString PlayerStartTag = "None");
+		const FString PlayerStartTag = "None",
+		const ESpawnActorCollisionHandlingMethod collisionHandlingOverride = ESpawnActorCollisionHandlingMethod::Undefined);
 
 	/**
 	 * Possess and Reset the player and actors that have OnPlayerReset functions bound

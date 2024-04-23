@@ -71,13 +71,16 @@ void ASkyrunnerGameMode::RespawnPlayer(const bool bDestroyPlayerBeforeReset,
 }
 
 APawn* ASkyrunnerGameMode::SpawnPlayer(const FOnPlayerSpawned OnSpawned,
-	const FString PlayerStartTag)
+	const FString PlayerStartTag,
+	const ESpawnActorCollisionHandlingMethod collisionHandlingOverride)
 {
 	auto controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
 	AActor* playerStart = FindPlayerStart(controller, PlayerStartTag);
 
 	auto world = GetWorld();
-	auto player = world->SpawnActor<APawn>(DefaultPawnClass, playerStart->GetActorTransform());
+	FActorSpawnParameters param;
+	param.SpawnCollisionHandlingOverride = collisionHandlingOverride;
+	auto player = world->SpawnActor<APawn>(DefaultPawnClass, playerStart->GetActorTransform(), param);
 
 	OnSpawned.ExecuteIfBound();
 
