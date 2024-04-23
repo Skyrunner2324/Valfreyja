@@ -15,16 +15,25 @@ public:
 	// Sets default values for this actor's properties
 	AScoreBoard();
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
-		double BestScore = 0.f;
+		double BestTime = 0.f;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
-		double CurrentScore = 0.f;
+		double CurrentTime = 0.f;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
-		TArray<double> ScoreBoard;
+		int BestScore = 0;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
+		int CurrentScore = 0;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
+		TArray<double> TimeLeaderBoard;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
+		TArray<int> ScoreLeaderBoard;
 
 	UFUNCTION(BlueprintCallable)
-		void SortScoreBoard();
+		void SortLeaderBoards();
 
 protected:
 	// Called when the game starts or when spawned

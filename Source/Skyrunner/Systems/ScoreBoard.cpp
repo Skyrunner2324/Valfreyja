@@ -25,8 +25,9 @@ void AScoreBoard::Tick(float DeltaTime)
 
 }
 
-void AScoreBoard::SortScoreBoard()
+void AScoreBoard::SortLeaderBoards()
 {
-	ScoreBoard.Sort([](const double& A, const double& B) {return A < B;});
+	TimeLeaderBoard.Sort([](const double& A, const double& B) {return A < B;});
+	ScoreLeaderBoard.Sort([](const double& A, const double& B) {return A < B;});
 }
 
