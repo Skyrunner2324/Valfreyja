@@ -91,6 +91,8 @@ void ASkyrunnerGameMode::ResetPlayer(APawn* player, AActor* oldCameraObject)
 {
 	auto controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
 	controller->Possess(player);
+	controller->SetInputMode(FInputModeGameOnly());
+	controller->SetShowMouseCursor(false);
 	if (oldCameraObject)
 		controller->SetViewTarget(oldCameraObject);
 	OnPlayerResetEvent.Broadcast();
