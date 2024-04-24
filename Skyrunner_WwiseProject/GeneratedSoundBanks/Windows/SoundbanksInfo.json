@@ -234,7 +234,7 @@
     "Type": "Event",
     "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
     "Language": "SFX",
-    "Hash": "{40F4729F-3CEB-3CE8-8E86-ACCAF78333D9}",
+    "Hash": "{5A8990E9-E750-5ADE-1A43-68A0CC6478D3}",
     "ObjectPath": "SX_player_land",
     "ShortName": "SX_player_land",
     "Path": "Event/SX_player_land.bnk",
@@ -247,6 +247,15 @@
       "ShortName": "Player_Feedback\\player_feedback_land_04.wav",
       "Path": "Media/4329989.wem",
       "CachePath": "SFX/Player_Feedback/player_feedback_land_04_755F56E2.wem"
+     },
+     {
+      "Id": "12396239",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Movement\\player_land_big.wav",
+      "Path": "Media/12396239.wem",
+      "CachePath": "SFX/Player_Movement/player_land_big_755F56E2.wem"
      },
      {
       "Id": "87893221",
@@ -430,11 +439,14 @@
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_land",
       "GUID": "{E922F247-9AC9-4091-A047-4D54AB068BC4}",
       "DurationType": "OneShot",
-      "DurationMin": "0.22090207",
-      "DurationMax": "0.625",
+      "DurationMin": "0.64447916",
+      "DurationMax": "0.64447916",
       "MediaRefs": [
        {
         "Id": "4329989"
+       },
+       {
+        "Id": "12396239"
        },
        {
         "Id": "87893221"
@@ -968,11 +980,20 @@
     "Type": "Event",
     "GUID": "{01BE2D77-CD2A-4302-9AAB-A4079D048B51}",
     "Language": "SFX",
-    "Hash": "{95AF758E-5EEC-B749-9D22-2BF4B01DC70A}",
+    "Hash": "{25F4BD3B-5557-F4EB-C241-B62863A4E3C9}",
     "ObjectPath": "SX_play_hoverboots",
     "ShortName": "SX_play_hoverboots",
     "Path": "Event/SX_play_hoverboots.bnk",
     "Media": [
+     {
+      "Id": "320370682",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Hoverboots\\hoverboots_on_rail_loop.wav",
+      "Path": "Media/320370682.wem",
+      "CachePath": "SFX/Hoverboots/hoverboots_on_rail_loop_6F90467A.wem"
+     },
      {
       "Id": "596869245",
       "Language": "SFX",
@@ -992,13 +1013,13 @@
       "CachePath": "SFX/player_movement_wallslide_073B4D0C.wem"
      },
      {
-      "Id": "932134860",
+      "Id": "936775416",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Hoverboots\\slide_metal_loop_rework.wav",
-      "Path": "Media/932134860.wem",
-      "CachePath": "SFX/Hoverboots/slide_metal_loop_rework_073B4D0C.wem"
+      "ShortName": "Hoverboots\\wallslide_metal.wav",
+      "Path": "Media/936775416.wem",
+      "CachePath": "SFX/Hoverboots/wallslide_metal_073B4D0C.wem"
      },
      {
       "Id": "1023074526",
@@ -1028,6 +1049,22 @@
        "GUID": "{E39A6796-AD9D-4361-AFBC-512D0CBDE7C8}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
+      },
+      {
+       "Id": "195687962",
+       "Name": "Tremolo (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots and Wind\\Hoverboots_Other\\Hoverboots_Rail\\Tremolo (Custom)",
+       "GUID": "{1CF8A921-6B4C-4AE5-8670-9632F9540B81}",
+       "LibName": "Wwise Tremolo",
+       "LibId": "8585219"
+      },
+      {
+       "Id": "343051397",
+       "Name": "Tremolo (Custom)",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\HoverBoots\\HoverBootsMainMixer\\Hoverboots and Wind\\Hoverboots_Other\\Hoverboots_Wallrun\\Tremolo (Custom)",
+       "GUID": "{FD6EE920-EE81-47BC-80E4-06A5F95ECFE6}",
+       "LibName": "Wwise Tremolo",
+       "LibId": "8585219"
       },
       {
        "Id": "696083285",
@@ -1090,13 +1127,16 @@
       "DurationType": "Infinite",
       "MediaRefs": [
        {
+        "Id": "320370682"
+       },
+       {
         "Id": "596869245"
        },
        {
         "Id": "694258383"
        },
        {
-        "Id": "932134860"
+        "Id": "936775416"
        },
        {
         "Id": "1023074526"
@@ -1109,6 +1149,12 @@
        "Custom": [
         {
          "Id": "174977445"
+        },
+        {
+         "Id": "195687962"
+        },
+        {
+         "Id": "343051397"
         },
         {
          "Id": "696083285"
@@ -3943,6 +3989,41 @@
     ]
    },
    {
+    "Id": "1367154311",
+    "Type": "Event",
+    "GUID": "{8CF5411D-CBAD-4AC0-942A-05EED05D48E1}",
+    "Language": "SFX",
+    "Hash": "{64A1BA94-E4D6-DF0C-509C-DA6117418D97}",
+    "ObjectPath": "Play_wind_blast",
+    "ShortName": "Play_wind_blast",
+    "Path": "Event/Play_wind_blast.bnk",
+    "Media": [
+     {
+      "Id": "184971089",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Hoverboots\\wind_blast.wav",
+      "Path": "Media/184971089.wem",
+      "CachePath": "SFX/Hoverboots/wind_blast_073B4D0C.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1367154311",
+      "Name": "Play_wind_blast",
+      "ObjectPath": "\\Events\\Hoverboots\\Hoverboots\\Play_wind_blast",
+      "GUID": "{8CF5411D-CBAD-4AC0-942A-05EED05D48E1}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "184971089"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "1377950732",
     "Type": "Bus",
     "GUID": "{45BF782C-985A-4974-93C6-46E1DEFB22D5}",
@@ -5038,6 +5119,28 @@
     ]
    },
    {
+    "Id": "2731311753",
+    "Type": "Event",
+    "GUID": "{0ABAE37C-66CF-4C93-B479-0F0A80566DCC}",
+    "Language": "SFX",
+    "Hash": "{32447E0C-C995-6ADF-9ABF-9C0C9244BD3B}",
+    "ObjectPath": "Stop_wind_blast",
+    "ShortName": "Stop_wind_blast",
+    "Path": "Event/Stop_wind_blast.bnk",
+    "Events": [
+     {
+      "Id": "2731311753",
+      "Name": "Stop_wind_blast",
+      "ObjectPath": "\\Events\\Hoverboots\\Hoverboots\\Stop_wind_blast",
+      "GUID": "{0ABAE37C-66CF-4C93-B479-0F0A80566DCC}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   },
+   {
     "Id": "2792155208",
     "Type": "Event",
     "GUID": "{194991E3-9D95-4E83-BAAB-87D009E9C2CB}",
@@ -5264,48 +5367,10 @@
     "Type": "Event",
     "GUID": "{6F24A296-5907-4F40-A9D0-16FF5B44660B}",
     "Language": "SFX",
-    "Hash": "{4683E71D-6AEE-B868-08F4-58143DB01DCE}",
+    "Hash": "{8CD94273-9448-EE57-9603-BADE0636E1C2}",
     "ObjectPath": "SX_player_metal_enter",
     "ShortName": "SX_player_metal_enter",
     "Path": "Event/SX_player_metal_enter.bnk",
-    "Media": [
-     {
-      "Id": "143796492",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Player_Movement\\slide_metal_enter.wav",
-      "Path": "Media/143796492.wem",
-      "CachePath": "SFX/Player_Movement/slide_metal_enter_C1AD2FC0.wem"
-     },
-     {
-      "Id": "566287118",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Player_Movement\\impact_bumper_01.wav",
-      "Path": "Media/566287118.wem",
-      "CachePath": "SFX/Player_Movement/impact_bumper_01_755F56E2.wem"
-     },
-     {
-      "Id": "591042273",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Player_Movement\\impact_bumper_03.wav",
-      "Path": "Media/591042273.wem",
-      "CachePath": "SFX/Player_Movement/impact_bumper_03_755F56E2.wem"
-     },
-     {
-      "Id": "605617724",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Player_Movement\\impact_bumper_02.wav",
-      "Path": "Media/605617724.wem",
-      "CachePath": "SFX/Player_Movement/impact_bumper_02_755F56E2.wem"
-     }
-    ],
     "Events": [
      {
       "Id": "3129104079",
@@ -5313,22 +5378,8 @@
       "ObjectPath": "\\Events\\Player\\Movement\\SX_player_metal_enter",
       "GUID": "{6F24A296-5907-4F40-A9D0-16FF5B44660B}",
       "DurationType": "OneShot",
-      "DurationMin": "1.213547",
-      "DurationMax": "1.3621606",
-      "MediaRefs": [
-       {
-        "Id": "143796492"
-       },
-       {
-        "Id": "566287118"
-       },
-       {
-        "Id": "591042273"
-       },
-       {
-        "Id": "605617724"
-       }
-      ]
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    },
@@ -5358,7 +5409,7 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{20EAE5CF-2C2C-4C59-72F0-0A29EF5B02CF}",
+    "Hash": "{1907D9AE-4220-5455-D3C6-B1830DD928D3}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
@@ -7541,7 +7592,7 @@
     "Type": "Event",
     "GUID": "{F5B804B1-5506-4197-9ED9-F39E5A921CE8}",
     "Language": "SFX",
-    "Hash": "{A9496B33-921E-DFE3-E7D8-480748FDBA16}",
+    "Hash": "{F57F7DF0-97B3-83C2-5086-D996C4C1FF9F}",
     "ObjectPath": "Amb_Bumper_Aura",
     "ShortName": "Amb_Bumper_Aura",
     "Path": "Event/Amb_Bumper_Aura.bnk",
@@ -7761,6 +7812,6 @@
     ]
    }
   ],
-  "FileHash": "{02633D9C-0F90-B812-8231-93DA565561ED}"
+  "FileHash": "{340D2EA9-497A-1902-4824-2479D5497D9F}"
  }
 }

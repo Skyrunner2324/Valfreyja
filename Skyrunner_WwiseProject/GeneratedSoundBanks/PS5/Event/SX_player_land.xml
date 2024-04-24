@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{40F4729F-3CEB-3CE8-8E86-ACCAF78333D9}">
+		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{5A8990E9-E750-5ADE-1A43-68A0CC6478D3}">
 			<ObjectPath>SX_player_land</ObjectPath>
 			<ShortName>SX_player_land</ShortName>
 			<Path>Event/SX_player_land.bnk</Path>
@@ -10,6 +10,11 @@
 					<ShortName>Player_Feedback\player_feedback_land_04.wav</ShortName>
 					<Path>Media/4329989.wem</Path>
 					<CachePath>SFX/Player_Feedback/player_feedback_land_04_755F56E2.wem</CachePath>
+				</File>
+				<File Id="12396239" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_land_big.wav</ShortName>
+					<Path>Media/12396239.wem</Path>
+					<CachePath>SFX/Player_Movement/player_land_big_755F56E2.wem</CachePath>
 				</File>
 				<File Id="87893221" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\land_03.wav</ShortName>
@@ -108,9 +113,10 @@
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.22090207" DurationMax="0.625">
+				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.64447916" DurationMax="0.64447916">
 					<MediaRefs>
 						<MediaRef Id="4329989"/>
+						<MediaRef Id="12396239"/>
 						<MediaRef Id="87893221"/>
 						<MediaRef Id="104720702"/>
 						<MediaRef Id="152146658"/>
@@ -142,5 +148,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{473BE696-7B02-2A74-7C78-403371C64EFF}</FileHash>
+	<FileHash>{5B862259-E514-0833-6C95-C7A2A7C9ADD4}</FileHash>
 </SoundBanksInfo>

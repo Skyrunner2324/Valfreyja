@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{95AF758E-5EEC-B749-9D22-2BF4B01DC70A}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{25F4BD3B-5557-F4EB-C241-B62863A4E3C9}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
 			<Media>
+				<File Id="320370682" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\hoverboots_on_rail_loop.wav</ShortName>
+					<Path>Media/320370682.wem</Path>
+					<CachePath>SFX/Hoverboots/hoverboots_on_rail_loop_6F90467A.wem</CachePath>
+				</File>
 				<File Id="596869245" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\player_movement_aerial.wav</ShortName>
 					<Path>Media/596869245.wem</Path>
@@ -16,10 +21,10 @@
 					<Path>Media/694258383.wem</Path>
 					<CachePath>SFX/player_movement_wallslide_073B4D0C.wem</CachePath>
 				</File>
-				<File Id="932134860" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Hoverboots\slide_metal_loop_rework.wav</ShortName>
-					<Path>Media/932134860.wem</Path>
-					<CachePath>SFX/Hoverboots/slide_metal_loop_rework_073B4D0C.wem</CachePath>
+				<File Id="936775416" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\wallslide_metal.wav</ShortName>
+					<Path>Media/936775416.wem</Path>
+					<CachePath>SFX/Hoverboots/wallslide_metal_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="1023074526" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\wind_speed.wav</ShortName>
@@ -35,6 +40,8 @@
 			<Plugins>
 				<Custom>
 					<Plugin Id="174977445" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\player_movement_aerial\Parametric EQ (Custom)" GUID="{E39A6796-AD9D-4361-AFBC-512D0CBDE7C8}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="195687962" Name="Tremolo (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\Hoverboots_Rail\Tremolo (Custom)" GUID="{1CF8A921-6B4C-4AE5-8670-9632F9540B81}" LibName="Wwise Tremolo" LibId="8585219"/>
+					<Plugin Id="343051397" Name="Tremolo (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\Hoverboots_Wallrun\Tremolo (Custom)" GUID="{FD6EE920-EE81-47BC-80E4-06A5F95ECFE6}" LibName="Wwise Tremolo" LibId="8585219"/>
 					<Plugin Id="696083285" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\Hoverboots_Rail\hoverboots_on_rail_loop\Parametric EQ (Custom)" GUID="{18DFA90C-457A-4164-980A-5D55838278C2}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="768480562" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\Hoverboots_Wallrun\player_movement_wallrun_left\hoverboots_on_rail_loop\Parametric EQ (Custom)" GUID="{795F1578-DFEF-4A0F-995B-DC9BEE878FD0}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="899741083" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\Hoverboots_Wallrun\player_movement_wallrun_right\hoverboots_on_rail_loop\Parametric EQ (Custom)" GUID="{01C845E6-599D-4A5B-817E-BEF9E7FF86DF}" LibName="Wwise Parametric EQ" LibId="6881283"/>
@@ -48,15 +55,18 @@
 			<Events>
 				<Event Id="527139965" Name="SX_play_hoverboots" ObjectPath="\Events\Hoverboots\Hoverboots\SX_play_hoverboots" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" DurationType="Infinite">
 					<MediaRefs>
+						<MediaRef Id="320370682"/>
 						<MediaRef Id="596869245"/>
 						<MediaRef Id="694258383"/>
-						<MediaRef Id="932134860"/>
+						<MediaRef Id="936775416"/>
 						<MediaRef Id="1023074526"/>
 						<MediaRef Id="1056072145"/>
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="174977445"/>
+							<PluginRef Id="195687962"/>
+							<PluginRef Id="343051397"/>
 							<PluginRef Id="696083285"/>
 							<PluginRef Id="768480562"/>
 							<PluginRef Id="899741083"/>
@@ -76,5 +86,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{33B34913-7745-71CD-96E8-CE40574FEBC3}</FileHash>
+	<FileHash>{AB2B4E21-8992-A6C7-497D-35EE7F83173B}</FileHash>
 </SoundBanksInfo>

@@ -118,7 +118,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{40F4729F-3CEB-3CE8-8E86-ACCAF78333D9}">
+		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{5A8990E9-E750-5ADE-1A43-68A0CC6478D3}">
 			<ObjectPath>SX_player_land</ObjectPath>
 			<ShortName>SX_player_land</ShortName>
 			<Path>Event/SX_player_land.bnk</Path>
@@ -127,6 +127,11 @@
 					<ShortName>Player_Feedback\player_feedback_land_04.wav</ShortName>
 					<Path>Media/4329989.wem</Path>
 					<CachePath>SFX/Player_Feedback/player_feedback_land_04_755F56E2.wem</CachePath>
+				</File>
+				<File Id="12396239" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\player_land_big.wav</ShortName>
+					<Path>Media/12396239.wem</Path>
+					<CachePath>SFX/Player_Movement/player_land_big_755F56E2.wem</CachePath>
 				</File>
 				<File Id="87893221" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\land_03.wav</ShortName>
@@ -225,9 +230,10 @@
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.22090207" DurationMax="0.625">
+				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.64447916" DurationMax="0.64447916">
 					<MediaRefs>
 						<MediaRef Id="4329989"/>
+						<MediaRef Id="12396239"/>
 						<MediaRef Id="87893221"/>
 						<MediaRef Id="104720702"/>
 						<MediaRef Id="152146658"/>
@@ -484,11 +490,16 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{95AF758E-5EEC-B749-9D22-2BF4B01DC70A}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{25F4BD3B-5557-F4EB-C241-B62863A4E3C9}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
 			<Media>
+				<File Id="320370682" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\hoverboots_on_rail_loop.wav</ShortName>
+					<Path>Media/320370682.wem</Path>
+					<CachePath>SFX/Hoverboots/hoverboots_on_rail_loop_6F90467A.wem</CachePath>
+				</File>
 				<File Id="596869245" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\player_movement_aerial.wav</ShortName>
 					<Path>Media/596869245.wem</Path>
@@ -499,10 +510,10 @@
 					<Path>Media/694258383.wem</Path>
 					<CachePath>SFX/player_movement_wallslide_073B4D0C.wem</CachePath>
 				</File>
-				<File Id="932134860" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Hoverboots\slide_metal_loop_rework.wav</ShortName>
-					<Path>Media/932134860.wem</Path>
-					<CachePath>SFX/Hoverboots/slide_metal_loop_rework_073B4D0C.wem</CachePath>
+				<File Id="936775416" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\wallslide_metal.wav</ShortName>
+					<Path>Media/936775416.wem</Path>
+					<CachePath>SFX/Hoverboots/wallslide_metal_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="1023074526" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\wind_speed.wav</ShortName>
@@ -518,6 +529,8 @@
 			<Plugins>
 				<Custom>
 					<Plugin Id="174977445" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\player_movement_aerial\Parametric EQ (Custom)" GUID="{E39A6796-AD9D-4361-AFBC-512D0CBDE7C8}" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="195687962" Name="Tremolo (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\Hoverboots_Rail\Tremolo (Custom)" GUID="{1CF8A921-6B4C-4AE5-8670-9632F9540B81}" LibName="Wwise Tremolo" LibId="8585219"/>
+					<Plugin Id="343051397" Name="Tremolo (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\Hoverboots_Wallrun\Tremolo (Custom)" GUID="{FD6EE920-EE81-47BC-80E4-06A5F95ECFE6}" LibName="Wwise Tremolo" LibId="8585219"/>
 					<Plugin Id="696083285" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\Hoverboots_Rail\hoverboots_on_rail_loop\Parametric EQ (Custom)" GUID="{18DFA90C-457A-4164-980A-5D55838278C2}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="768480562" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\Hoverboots_Wallrun\player_movement_wallrun_left\hoverboots_on_rail_loop\Parametric EQ (Custom)" GUID="{795F1578-DFEF-4A0F-995B-DC9BEE878FD0}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="899741083" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\HoverBoots\HoverBootsMainMixer\Hoverboots and Wind\Hoverboots_Other\Hoverboots_Wallrun\player_movement_wallrun_right\hoverboots_on_rail_loop\Parametric EQ (Custom)" GUID="{01C845E6-599D-4A5B-817E-BEF9E7FF86DF}" LibName="Wwise Parametric EQ" LibId="6881283"/>
@@ -531,15 +544,18 @@
 			<Events>
 				<Event Id="527139965" Name="SX_play_hoverboots" ObjectPath="\Events\Hoverboots\Hoverboots\SX_play_hoverboots" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" DurationType="Infinite">
 					<MediaRefs>
+						<MediaRef Id="320370682"/>
 						<MediaRef Id="596869245"/>
 						<MediaRef Id="694258383"/>
-						<MediaRef Id="932134860"/>
+						<MediaRef Id="936775416"/>
 						<MediaRef Id="1023074526"/>
 						<MediaRef Id="1056072145"/>
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="174977445"/>
+							<PluginRef Id="195687962"/>
+							<PluginRef Id="343051397"/>
 							<PluginRef Id="696083285"/>
 							<PluginRef Id="768480562"/>
 							<PluginRef Id="899741083"/>
@@ -1613,6 +1629,25 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
+		<SoundBank Id="1367154311" Type="Event" GUID="{8CF5411D-CBAD-4AC0-942A-05EED05D48E1}" Language="SFX" Hash="{64A1BA94-E4D6-DF0C-509C-DA6117418D97}">
+			<ObjectPath>Play_wind_blast</ObjectPath>
+			<ShortName>Play_wind_blast</ShortName>
+			<Path>Event/Play_wind_blast.bnk</Path>
+			<Media>
+				<File Id="184971089" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Hoverboots\wind_blast.wav</ShortName>
+					<Path>Media/184971089.wem</Path>
+					<CachePath>SFX/Hoverboots/wind_blast_073B4D0C.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1367154311" Name="Play_wind_blast" ObjectPath="\Events\Hoverboots\Hoverboots\Play_wind_blast" GUID="{8CF5411D-CBAD-4AC0-942A-05EED05D48E1}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="184971089"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="1377950732" Type="Bus" GUID="{45BF782C-985A-4974-93C6-46E1DEFB22D5}" Language="SFX" Hash="{B1CE2CAC-5CB3-3DB9-7D2E-839B7F5CE50D}">
 			<ObjectPath>REV_SFX</ObjectPath>
 			<ShortName>REV_SFX</ShortName>
@@ -2159,6 +2194,14 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="2731311753" Type="Event" GUID="{0ABAE37C-66CF-4C93-B479-0F0A80566DCC}" Language="SFX" Hash="{32447E0C-C995-6ADF-9ABF-9C0C9244BD3B}">
+			<ObjectPath>Stop_wind_blast</ObjectPath>
+			<ShortName>Stop_wind_blast</ShortName>
+			<Path>Event/Stop_wind_blast.bnk</Path>
+			<Events>
+				<Event Id="2731311753" Name="Stop_wind_blast" ObjectPath="\Events\Hoverboots\Hoverboots\Stop_wind_blast" GUID="{0ABAE37C-66CF-4C93-B479-0F0A80566DCC}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="2792155208" Type="Event" GUID="{194991E3-9D95-4E83-BAAB-87D009E9C2CB}" Language="SFX" Hash="{75880582-E6A3-E7AB-9278-1374A052BD7B}">
 			<ObjectPath>UI_pause</ObjectPath>
 			<ShortName>UI_pause</ShortName>
@@ -2271,41 +2314,12 @@
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3129104079" Type="Event" GUID="{6F24A296-5907-4F40-A9D0-16FF5B44660B}" Language="SFX" Hash="{4683E71D-6AEE-B868-08F4-58143DB01DCE}">
+		<SoundBank Id="3129104079" Type="Event" GUID="{6F24A296-5907-4F40-A9D0-16FF5B44660B}" Language="SFX" Hash="{8CD94273-9448-EE57-9603-BADE0636E1C2}">
 			<ObjectPath>SX_player_metal_enter</ObjectPath>
 			<ShortName>SX_player_metal_enter</ShortName>
 			<Path>Event/SX_player_metal_enter.bnk</Path>
-			<Media>
-				<File Id="143796492" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Player_Movement\slide_metal_enter.wav</ShortName>
-					<Path>Media/143796492.wem</Path>
-					<CachePath>SFX/Player_Movement/slide_metal_enter_C1AD2FC0.wem</CachePath>
-				</File>
-				<File Id="566287118" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Player_Movement\impact_bumper_01.wav</ShortName>
-					<Path>Media/566287118.wem</Path>
-					<CachePath>SFX/Player_Movement/impact_bumper_01_755F56E2.wem</CachePath>
-				</File>
-				<File Id="591042273" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Player_Movement\impact_bumper_03.wav</ShortName>
-					<Path>Media/591042273.wem</Path>
-					<CachePath>SFX/Player_Movement/impact_bumper_03_755F56E2.wem</CachePath>
-				</File>
-				<File Id="605617724" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Player_Movement\impact_bumper_02.wav</ShortName>
-					<Path>Media/605617724.wem</Path>
-					<CachePath>SFX/Player_Movement/impact_bumper_02_755F56E2.wem</CachePath>
-				</File>
-			</Media>
 			<Events>
-				<Event Id="3129104079" Name="SX_player_metal_enter" ObjectPath="\Events\Player\Movement\SX_player_metal_enter" GUID="{6F24A296-5907-4F40-A9D0-16FF5B44660B}" DurationType="OneShot" DurationMin="1.213547" DurationMax="1.3621606">
-					<MediaRefs>
-						<MediaRef Id="143796492"/>
-						<MediaRef Id="566287118"/>
-						<MediaRef Id="591042273"/>
-						<MediaRef Id="605617724"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="3129104079" Name="SX_player_metal_enter" ObjectPath="\Events\Player\Movement\SX_player_metal_enter" GUID="{6F24A296-5907-4F40-A9D0-16FF5B44660B}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="3390387889" Type="Event" GUID="{6D13E3BD-F5FB-4B8B-8184-DB05606BBF7C}" Language="SFX" Hash="{D8604E0D-FECB-438D-904A-A95669B5448F}">
@@ -2316,7 +2330,7 @@
 				<Event Id="3390387889" Name="SX_player_dash_regen" ObjectPath="\Events\Player\Feedback\SX_player_dash_regen" GUID="{6D13E3BD-F5FB-4B8B-8184-DB05606BBF7C}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{20EAE5CF-2C2C-4C59-72F0-0A29EF5B02CF}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{1907D9AE-4220-5455-D3C6-B1830DD928D3}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -3339,7 +3353,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3821670275" Type="Event" GUID="{F5B804B1-5506-4197-9ED9-F39E5A921CE8}" Language="SFX" Hash="{A9496B33-921E-DFE3-E7D8-480748FDBA16}">
+		<SoundBank Id="3821670275" Type="Event" GUID="{F5B804B1-5506-4197-9ED9-F39E5A921CE8}" Language="SFX" Hash="{F57F7DF0-97B3-83C2-5086-D996C4C1FF9F}">
 			<ObjectPath>Amb_Bumper_Aura</ObjectPath>
 			<ShortName>Amb_Bumper_Aura</ShortName>
 			<Path>Event/Amb_Bumper_Aura.bnk</Path>
@@ -3451,5 +3465,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9C50C943-02B7-5EE8-918C-BAA5061E02CC}</FileHash>
+	<FileHash>{886789CC-142E-7FB0-24CF-F303CE670A51}</FileHash>
 </SoundBanksInfo>

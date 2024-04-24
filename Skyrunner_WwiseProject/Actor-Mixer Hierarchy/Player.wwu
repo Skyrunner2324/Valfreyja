@@ -202,6 +202,11 @@
 														<Value>-20</Value>
 													</ValueList>
 												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-10</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -905,6 +910,79 @@
 												</Sound>
 											</ChildrenList>
 										</RandomSequenceContainer>
+										<Sound Name="player_land_big" ID="{6B0CDBB2-3433-4D04-8C7D-C7C08F8A02B2}" ShortID="640592559">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>30</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_land_big" ID="{8C9FC164-B515-402A-A015-78A0AF0248B9}">
+													<Language>SFX</Language>
+													<AudioFile>Player_Movement\player_land_big.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="12396239"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{6E41123E-1571-4688-B37B-3886119E9076}" ShortID="738843580">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="RTPC_Time_in_Air" ID="{EA244CFE-2C93-4808-BE87-966632323505}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{90195BA8-08B3-4E53-85EB-AC109429EB19}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-3</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>5</XPos>
+																						<YPos>0</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="player_land_big" ID="{8C9FC164-B515-402A-A015-78A0AF0248B9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="RTPC">
@@ -962,7 +1040,7 @@
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>0</YPos>
+																				<YPos>2</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
@@ -3585,6 +3663,11 @@
 									<ChildrenList>
 										<Sound Name="slide_metal_impact" ID="{793609F5-E2D6-432F-8EDD-B920B854E4AD}" ShortID="992580283">
 											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -3606,7 +3689,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-6</Value>
+														<Value>-13</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3621,9 +3704,11 @@
 											<ChildrenList>
 												<AudioFileSource Name="slide_metal_enter" ID="{D7145213-3E85-40B8-B359-E301B8D6F758}">
 													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.472225729316117"/>
-														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.129124222859875"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.213977283596365"/>
+														<Property Name="FadeOutShape" Type="int16" Value="1"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.453779411764708"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Player_Movement\slide_metal_enter.wav</AudioFile>
@@ -3636,11 +3721,16 @@
 												<ActiveSource Name="slide_metal_enter" ID="{D7145213-3E85-40B8-B359-E301B8D6F758}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<RandomSequenceContainer Name="impact_bumper" ID="{C13E04B9-CDC8-4A68-84ED-1CD6E2F10560}" ShortID="688307267">
+										<RandomSequenceContainer Name="slide_impact" ID="{C13E04B9-CDC8-4A68-84ED-1CD6E2F10560}" ShortID="688307267">
 											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-2</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3664,10 +3754,15 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="impact_bumper_01" ID="{733F1708-EE8E-4A65-A5D1-DEA9712A671F}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0905182926829274"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.18813605930177"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Player_Movement\impact_bumper_01.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="566287118"/>
+																<MediaID ID="258535358"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
@@ -3686,10 +3781,15 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="impact_bumper_02" ID="{20FDD52D-4B40-473F-84E5-9F32D81D37E1}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0973296269727403"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.202074844571975"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Player_Movement\impact_bumper_02.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="605617724"/>
+																<MediaID ID="428711483"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
@@ -3708,10 +3808,15 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="impact_bumper_03" ID="{B4971756-2986-4596-A2CB-F4A825D1CD0B}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.124200860832138"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.193201339072214"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Player_Movement\impact_bumper_03.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="591042273"/>
+																<MediaID ID="1043703996"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
