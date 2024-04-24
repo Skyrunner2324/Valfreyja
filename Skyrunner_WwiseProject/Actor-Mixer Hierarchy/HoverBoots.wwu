@@ -1673,6 +1673,11 @@
 								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1684,6 +1689,12 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="wind_blast" ID="{C0999D7D-BB32-4BDD-8B43-099A7816F020}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="2.46472166427547"/>
+										<Property Name="LoopBegin" Type="Real64" Value="1.06646610473458"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.47398493543759"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Hoverboots\wind_blast.wav</AudioFile>
 									<MediaIDList>
