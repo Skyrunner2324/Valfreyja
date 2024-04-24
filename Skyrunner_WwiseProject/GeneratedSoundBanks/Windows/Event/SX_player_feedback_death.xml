@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{FBC1066E-2E9A-C8C8-E431-71BE00EBE9B7}">
+		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{4DF1825D-C348-71B3-A0FC-16299283CADB}">
 			<ObjectPath>SX_player_feedback_death</ObjectPath>
 			<ShortName>SX_player_feedback_death</ShortName>
 			<Path>Event/SX_player_feedback_death.bnk</Path>
@@ -9,17 +9,27 @@
 				<File Id="246221016" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Feedback\player_game_over.wav</ShortName>
 					<Path>Media/246221016.wem</Path>
-					<CachePath>SFX/Player_Feedback/player_game_over_58575314.wem</CachePath>
+					<CachePath>SFX/Player_Feedback/player_game_over_C1FD160F.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1125262053" Name="Blue_Distant_Echoes" ObjectPath="\Effects\Factory Effects\Stereo Delay\Blue_Distant_Echoes" GUID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" LibName="Wwise Stereo Delay" LibId="8847363"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
-				<Event Id="1950512069" Name="SX_player_feedback_death" ObjectPath="\Events\Player\Feedback\SX_player_feedback_death" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" DurationType="OneShot" DurationMin="11.333333" DurationMax="11.333333">
+				<Event Id="1950512069" Name="SX_player_feedback_death" ObjectPath="\Events\Player\Feedback\SX_player_feedback_death" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" DurationType="OneShot" DurationMin="3.4185793" DurationMax="3.4185793">
 					<MediaRefs>
 						<MediaRef Id="246221016"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1125262053"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{18691FD0-E1C0-7672-D417-D03460932FAB}</FileHash>
+	<FileHash>{3A7DDA78-17AB-DA23-68DD-4017AAFEEF51}</FileHash>
 </SoundBanksInfo>

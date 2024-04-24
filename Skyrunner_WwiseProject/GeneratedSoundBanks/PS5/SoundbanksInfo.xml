@@ -490,7 +490,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{25F4BD3B-5557-F4EB-C241-B62863A4E3C9}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{7E3B2A1B-8B1E-FA54-6B80-91FBF922A8A6}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
@@ -1629,7 +1629,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1367154311" Type="Event" GUID="{8CF5411D-CBAD-4AC0-942A-05EED05D48E1}" Language="SFX" Hash="{9334CE59-2E49-FBC0-1C16-1DC7415A5DE5}">
+		<SoundBank Id="1367154311" Type="Event" GUID="{8CF5411D-CBAD-4AC0-942A-05EED05D48E1}" Language="SFX" Hash="{73EB1BAA-9DF7-9EC4-1F6B-1925D9CEA024}">
 			<ObjectPath>Play_wind_blast</ObjectPath>
 			<ShortName>Play_wind_blast</ShortName>
 			<Path>Event/Play_wind_blast.bnk</Path>
@@ -1637,7 +1637,7 @@
 				<File Id="184971089" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Hoverboots\wind_blast.wav</ShortName>
 					<Path>Media/184971089.wem</Path>
-					<CachePath>SFX/Hoverboots/wind_blast_5699E47F.wem</CachePath>
+					<CachePath>SFX/Hoverboots/wind_blast_398307AC.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -1891,7 +1891,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{FBC1066E-2E9A-C8C8-E431-71BE00EBE9B7}">
+		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{4DF1825D-C348-71B3-A0FC-16299283CADB}">
 			<ObjectPath>SX_player_feedback_death</ObjectPath>
 			<ShortName>SX_player_feedback_death</ShortName>
 			<Path>Event/SX_player_feedback_death.bnk</Path>
@@ -1899,14 +1899,24 @@
 				<File Id="246221016" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Feedback\player_game_over.wav</ShortName>
 					<Path>Media/246221016.wem</Path>
-					<CachePath>SFX/Player_Feedback/player_game_over_58575314.wem</CachePath>
+					<CachePath>SFX/Player_Feedback/player_game_over_C1FD160F.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1125262053" Name="Blue_Distant_Echoes" ObjectPath="\Effects\Factory Effects\Stereo Delay\Blue_Distant_Echoes" GUID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" LibName="Wwise Stereo Delay" LibId="8847363"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
-				<Event Id="1950512069" Name="SX_player_feedback_death" ObjectPath="\Events\Player\Feedback\SX_player_feedback_death" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" DurationType="OneShot" DurationMin="11.333333" DurationMax="11.333333">
+				<Event Id="1950512069" Name="SX_player_feedback_death" ObjectPath="\Events\Player\Feedback\SX_player_feedback_death" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" DurationType="OneShot" DurationMin="3.4185793" DurationMax="3.4185793">
 					<MediaRefs>
 						<MediaRef Id="246221016"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1125262053"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
@@ -2175,7 +2185,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2644790697" Type="Event" GUID="{528674B7-E690-4AD6-8217-32726F835B11}" Language="SFX" Hash="{48F58A0C-C650-6C2F-D3A2-0AD1D0438B9F}">
+		<SoundBank Id="2644790697" Type="Event" GUID="{528674B7-E690-4AD6-8217-32726F835B11}" Language="SFX" Hash="{1445DC4A-B875-5492-4299-0B1104A14F1F}">
 			<ObjectPath>UI_move</ObjectPath>
 			<ShortName>UI_move</ShortName>
 			<Path>Event/UI_move.bnk</Path>
@@ -2185,11 +2195,17 @@
 					<Path>Media/422963594.wem</Path>
 					<CachePath>SFX/UI/ui_move_atonal_01_4B1472D9.wem</CachePath>
 				</File>
+				<File Id="1056324768" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>UI\ui_move_light_01.wav</ShortName>
+					<Path>Media/1056324768.wem</Path>
+					<CachePath>SFX/UI/ui_move_light_01_755F56E2.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
-				<Event Id="2644790697" Name="UI_move" ObjectPath="\Events\UI\UI_move" GUID="{528674B7-E690-4AD6-8217-32726F835B11}" DurationType="OneShot" DurationMin="0.112856776" DurationMax="0.12667745">
+				<Event Id="2644790697" Name="UI_move" ObjectPath="\Events\UI\UI_move" GUID="{528674B7-E690-4AD6-8217-32726F835B11}" DurationType="OneShot" DurationMin="0.6293333" DurationMax="0.6293333">
 					<MediaRefs>
 						<MediaRef Id="422963594"/>
+						<MediaRef Id="1056324768"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -2314,12 +2330,41 @@
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3129104079" Type="Event" GUID="{6F24A296-5907-4F40-A9D0-16FF5B44660B}" Language="SFX" Hash="{8CD94273-9448-EE57-9603-BADE0636E1C2}">
+		<SoundBank Id="3129104079" Type="Event" GUID="{6F24A296-5907-4F40-A9D0-16FF5B44660B}" Language="SFX" Hash="{9D9F9B6F-3B3F-784B-A126-41C6EFB9D443}">
 			<ObjectPath>SX_player_metal_enter</ObjectPath>
 			<ShortName>SX_player_metal_enter</ShortName>
 			<Path>Event/SX_player_metal_enter.bnk</Path>
+			<Media>
+				<File Id="143796492" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\slide_metal_enter.wav</ShortName>
+					<Path>Media/143796492.wem</Path>
+					<CachePath>SFX/Player_Movement/slide_metal_enter_891EC41E.wem</CachePath>
+				</File>
+				<File Id="258535358" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\impact_bumper_01.wav</ShortName>
+					<Path>Media/258535358.wem</Path>
+					<CachePath>SFX/Player_Movement/impact_bumper_01_CBA20145.wem</CachePath>
+				</File>
+				<File Id="428711483" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\impact_bumper_02.wav</ShortName>
+					<Path>Media/428711483.wem</Path>
+					<CachePath>SFX/Player_Movement/impact_bumper_02_DB47FB7C.wem</CachePath>
+				</File>
+				<File Id="1043703996" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Movement\impact_bumper_03.wav</ShortName>
+					<Path>Media/1043703996.wem</Path>
+					<CachePath>SFX/Player_Movement/impact_bumper_03_C5754ACF.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="3129104079" Name="SX_player_metal_enter" ObjectPath="\Events\Player\Movement\SX_player_metal_enter" GUID="{6F24A296-5907-4F40-A9D0-16FF5B44660B}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3129104079" Name="SX_player_metal_enter" ObjectPath="\Events\Player\Movement\SX_player_metal_enter" GUID="{6F24A296-5907-4F40-A9D0-16FF5B44660B}" DurationType="OneShot" DurationMin="0.70682967" DurationMax="0.79338956">
+					<MediaRefs>
+						<MediaRef Id="143796492"/>
+						<MediaRef Id="258535358"/>
+						<MediaRef Id="428711483"/>
+						<MediaRef Id="1043703996"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="3390387889" Type="Event" GUID="{6D13E3BD-F5FB-4B8B-8184-DB05606BBF7C}" Language="SFX" Hash="{D8604E0D-FECB-438D-904A-A95669B5448F}">
@@ -2330,7 +2375,7 @@
 				<Event Id="3390387889" Name="SX_player_dash_regen" ObjectPath="\Events\Player\Feedback\SX_player_dash_regen" GUID="{6D13E3BD-F5FB-4B8B-8184-DB05606BBF7C}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{1907D9AE-4220-5455-D3C6-B1830DD928D3}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{8E0E9898-AB3D-2694-7504-57F04736761F}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -2748,6 +2793,7 @@
 										<SwitchContainer>
 											<SwitchValue GroupType="State" GroupId="2368434850" Id="1454074649" GUID="{C10D7FC3-6D0F-4995-AC4E-F6BDEA9EDF37}"/>
 											<MediaRefs>
+												<MediaRef Id="132075390"/>
 												<MediaRef Id="506963029"/>
 											</MediaRefs>
 										</SwitchContainer>
@@ -2784,6 +2830,7 @@
 										<SwitchContainer>
 											<SwitchValue GroupType="State" GroupId="2368434850" Id="1454074651" GUID="{68188DD8-3818-488B-A868-9C73F1BA33DA}"/>
 											<MediaRefs>
+												<MediaRef Id="182440689"/>
 												<MediaRef Id="455162581"/>
 												<MediaRef Id="490028483"/>
 												<MediaRef Id="587423524"/>
@@ -2801,6 +2848,7 @@
 										<SwitchContainer>
 											<SwitchValue GroupType="State" GroupId="2368434850" Id="1454074651" GUID="{68188DD8-3818-488B-A868-9C73F1BA33DA}"/>
 											<MediaRefs>
+												<MediaRef Id="182440689"/>
 												<MediaRef Id="455162581"/>
 												<MediaRef Id="490028483"/>
 												<MediaRef Id="587423524"/>
@@ -2818,7 +2866,9 @@
 										<SwitchContainer>
 											<SwitchValue GroupType="State" GroupId="2368434850" Id="1454074650" GUID="{F9BD7326-90AD-4609-BCFF-F904AB2A443F}"/>
 											<MediaRefs>
+												<MediaRef Id="132075390"/>
 												<MediaRef Id="506963029"/>
+												<MediaRef Id="714854420"/>
 											</MediaRefs>
 										</SwitchContainer>
 									</Children>
@@ -2840,7 +2890,9 @@
 										<SwitchContainer>
 											<SwitchValue GroupType="State" GroupId="2368434850" Id="826451327" GUID="{7912FA04-B14C-401F-A585-255815CD8177}"/>
 											<MediaRefs>
+												<MediaRef Id="132075390"/>
 												<MediaRef Id="506963029"/>
+												<MediaRef Id="714854420"/>
 											</MediaRefs>
 										</SwitchContainer>
 									</Children>
@@ -2851,7 +2903,9 @@
 										<SwitchContainer>
 											<SwitchValue GroupType="State" GroupId="2368434850" Id="826451327" GUID="{7912FA04-B14C-401F-A585-255815CD8177}"/>
 											<MediaRefs>
+												<MediaRef Id="132075390"/>
 												<MediaRef Id="506963029"/>
+												<MediaRef Id="714854420"/>
 											</MediaRefs>
 										</SwitchContainer>
 									</Children>
@@ -3058,6 +3112,7 @@
 										<SwitchContainer>
 											<SwitchValue GroupType="Switch" GroupId="2262403497" Id="0" GUID="{702787C3-E2B6-4E60-A266-37C30239657B}"/>
 											<MediaRefs>
+												<MediaRef Id="132075390"/>
 												<MediaRef Id="182440689"/>
 												<MediaRef Id="605123794"/>
 												<MediaRef Id="623476732"/>
@@ -3074,6 +3129,7 @@
 										<SwitchContainer>
 											<SwitchValue GroupType="Switch" GroupId="2262403497" Id="0" GUID="{702787C3-E2B6-4E60-A266-37C30239657B}"/>
 											<MediaRefs>
+												<MediaRef Id="132075390"/>
 												<MediaRef Id="182440689"/>
 												<MediaRef Id="605123794"/>
 												<MediaRef Id="623476732"/>
@@ -3090,6 +3146,7 @@
 										<SwitchContainer>
 											<SwitchValue GroupType="Switch" GroupId="2262403497" Id="3032049369" GUID="{6768CC3A-F841-45F1-8A13-CF8AE7C4DC6E}"/>
 											<MediaRefs>
+												<MediaRef Id="132075390"/>
 												<MediaRef Id="182440689"/>
 												<MediaRef Id="605123794"/>
 												<MediaRef Id="623476732"/>
@@ -3107,6 +3164,7 @@
 											<SwitchValue GroupType="Switch" GroupId="2262403497" Id="0" GUID="{702787C3-E2B6-4E60-A266-37C30239657B}"/>
 											<MediaRefs>
 												<MediaRef Id="684918816"/>
+												<MediaRef Id="714854420"/>
 												<MediaRef Id="786811872"/>
 											</MediaRefs>
 										</SwitchContainer>
@@ -3119,6 +3177,7 @@
 											<SwitchValue GroupType="Switch" GroupId="2262403497" Id="3032049369" GUID="{6768CC3A-F841-45F1-8A13-CF8AE7C4DC6E}"/>
 											<MediaRefs>
 												<MediaRef Id="684918816"/>
+												<MediaRef Id="714854420"/>
 												<MediaRef Id="786811872"/>
 											</MediaRefs>
 										</SwitchContainer>
@@ -3465,5 +3524,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{751AFE77-3A8C-7C8E-2EC2-2211AB8C28A3}</FileHash>
+	<FileHash>{0B3561D8-7D8C-5EAC-30C5-DCC063CC6D20}</FileHash>
 </SoundBanksInfo>

@@ -3663,11 +3663,6 @@
 									<ChildrenList>
 										<Sound Name="slide_metal_impact" ID="{793609F5-E2D6-432F-8EDD-B920B854E4AD}" ShortID="992580283">
 											<PropertyList>
-												<Property Name="Inclusion" Type="bool">
-													<ValueList>
-														<Value>False</Value>
-													</ValueList>
-												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -3689,7 +3684,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-13</Value>
+														<Value>-8</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3704,11 +3699,11 @@
 											<ChildrenList>
 												<AudioFileSource Name="slide_metal_enter" ID="{D7145213-3E85-40B8-B359-E301B8D6F758}">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.129124222859875"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.213977283596365"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0701081026412958"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.361517584142813"/>
 														<Property Name="FadeOutShape" Type="int16" Value="1"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.453779411764708"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.748860012857604"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Player_Movement\slide_metal_enter.wav</AudioFile>
@@ -3723,14 +3718,14 @@
 										</Sound>
 										<RandomSequenceContainer Name="slide_impact" ID="{C13E04B9-CDC8-4A68-84ED-1CD6E2F10560}" ShortID="688307267">
 											<PropertyList>
-												<Property Name="Inclusion" Type="bool">
+												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>False</Value>
+														<Value>54</Value>
 													</ValueList>
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-6</Value>
+														<Value>-10</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
