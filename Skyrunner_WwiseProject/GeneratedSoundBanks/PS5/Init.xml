@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{538F40F7-B7C5-5498-C3FE-AE776E96C3B8}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{BF21BED8-4213-73CB-3BA6-0DD131331F77}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Media>
+				<File Id="152920738" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AK_Factory_IR\Exteriors\AK Hamburg Stadtpark 01.wav</ShortName>
+					<Path>Media/152920738.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AK_Factory_IR/Exteriors/AK Hamburg Stadtpark 01_4746A6ED.wem</CachePath>
+				</File>
 				<File Id="304471121" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>AK_Factory_IR\Large Spaces\AK Stair Way Hall.wav</ShortName>
 					<Path>Media/304471121.wem</Path>
 					<CachePath>Plugins/Wwise Convolution Reverb/AK_Factory_IR/Large Spaces/AK Stair Way Hall_EC3E8250.wem</CachePath>
-				</File>
-				<File Id="822076648" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>AK_Factory_IR_Amb\Exteriors\AK Amb Hamburg Stadtpark 01.wav</ShortName>
-					<Path>Media/822076648.wem</Path>
-					<CachePath>Plugins/Wwise Convolution Reverb/AK_Factory_IR_Amb/Exteriors/AK Amb Hamburg Stadtpark 01_44C79C61.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -34,9 +34,9 @@
 							<MediaRef Id="304471121"/>
 						</MediaRefs>
 					</Plugin>
-					<Plugin Id="3075486160" Name="HamburgStadtpark_ER_Ambisonics" ObjectPath="\Effects\Factory AK Convolution Reverb Effects Ambisonics\Exteriors\HamburgStadtpark_ER_Ambisonics" GUID="{2CD55A74-4B73-4E87-B30A-41A032980111}" LibName="Wwise Convolution Reverb" LibId="8323075">
+					<Plugin Id="3383185710" Name="HamburgStadtpark_ER_Stereo" ObjectPath="\Effects\Factory AK Convolution Reverb Effects Stereo\Exteriors\HamburgStadtpark_ER_Stereo" GUID="{4B9E6294-B9AB-44D5-880A-745E92E2AC34}" LibName="Wwise Convolution Reverb" LibId="8323075">
 						<MediaRefs>
-							<MediaRef Id="822076648"/>
+							<MediaRef Id="152920738"/>
 						</MediaRefs>
 					</Plugin>
 				</ShareSets>
@@ -174,7 +174,7 @@
 				<AuxBus Id="3750820532" Name="REV_Large" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="3075486160"/>
+							<PluginRef Id="3383185710"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
@@ -403,5 +403,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4AEE6675-02CE-6D0C-9118-467E7D4875F1}</FileHash>
+	<FileHash>{4CE18335-11BA-75E8-D738-9613A1C64E56}</FileHash>
 </SoundBanksInfo>

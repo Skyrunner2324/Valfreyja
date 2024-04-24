@@ -490,7 +490,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{7E3B2A1B-8B1E-FA54-6B80-91FBF922A8A6}">
+		<SoundBank Id="527139965" Type="Event" GUID="{01BE2D77-CD2A-4302-9AAB-A4079D048B51}" Language="SFX" Hash="{0C2BAC89-6703-5152-C364-D7397F2D3663}">
 			<ObjectPath>SX_play_hoverboots</ObjectPath>
 			<ShortName>SX_play_hoverboots</ShortName>
 			<Path>Event/SX_play_hoverboots.bnk</Path>
@@ -1228,20 +1228,20 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{538F40F7-B7C5-5498-C3FE-AE776E96C3B8}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{BF21BED8-4213-73CB-3BA6-0DD131331F77}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Media>
+				<File Id="152920738" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AK_Factory_IR\Exteriors\AK Hamburg Stadtpark 01.wav</ShortName>
+					<Path>Media/152920738.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AK_Factory_IR/Exteriors/AK Hamburg Stadtpark 01_4746A6ED.wem</CachePath>
+				</File>
 				<File Id="304471121" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>AK_Factory_IR\Large Spaces\AK Stair Way Hall.wav</ShortName>
 					<Path>Media/304471121.wem</Path>
 					<CachePath>Plugins/Wwise Convolution Reverb/AK_Factory_IR/Large Spaces/AK Stair Way Hall_EC3E8250.wem</CachePath>
-				</File>
-				<File Id="822076648" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>AK_Factory_IR_Amb\Exteriors\AK Amb Hamburg Stadtpark 01.wav</ShortName>
-					<Path>Media/822076648.wem</Path>
-					<CachePath>Plugins/Wwise Convolution Reverb/AK_Factory_IR_Amb/Exteriors/AK Amb Hamburg Stadtpark 01_44C79C61.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -1261,9 +1261,9 @@
 							<MediaRef Id="304471121"/>
 						</MediaRefs>
 					</Plugin>
-					<Plugin Id="3075486160" Name="HamburgStadtpark_ER_Ambisonics" ObjectPath="\Effects\Factory AK Convolution Reverb Effects Ambisonics\Exteriors\HamburgStadtpark_ER_Ambisonics" GUID="{2CD55A74-4B73-4E87-B30A-41A032980111}" LibName="Wwise Convolution Reverb" LibId="8323075">
+					<Plugin Id="3383185710" Name="HamburgStadtpark_ER_Stereo" ObjectPath="\Effects\Factory AK Convolution Reverb Effects Stereo\Exteriors\HamburgStadtpark_ER_Stereo" GUID="{4B9E6294-B9AB-44D5-880A-745E92E2AC34}" LibName="Wwise Convolution Reverb" LibId="8323075">
 						<MediaRefs>
-							<MediaRef Id="822076648"/>
+							<MediaRef Id="152920738"/>
 						</MediaRefs>
 					</Plugin>
 				</ShareSets>
@@ -1401,7 +1401,7 @@
 				<AuxBus Id="3750820532" Name="REV_Large" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="3075486160"/>
+							<PluginRef Id="3383185710"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
@@ -1629,7 +1629,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1367154311" Type="Event" GUID="{8CF5411D-CBAD-4AC0-942A-05EED05D48E1}" Language="SFX" Hash="{73EB1BAA-9DF7-9EC4-1F6B-1925D9CEA024}">
+		<SoundBank Id="1367154311" Type="Event" GUID="{8CF5411D-CBAD-4AC0-942A-05EED05D48E1}" Language="SFX" Hash="{3395F6DC-FD3C-49A5-5A4E-288CCF89E4E1}">
 			<ObjectPath>Play_wind_blast</ObjectPath>
 			<ShortName>Play_wind_blast</ShortName>
 			<Path>Event/Play_wind_blast.bnk</Path>
@@ -1637,7 +1637,7 @@
 				<File Id="184971089" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Hoverboots\wind_blast.wav</ShortName>
 					<Path>Media/184971089.wem</Path>
-					<CachePath>SFX/Hoverboots/wind_blast_398307AC.wem</CachePath>
+					<CachePath>SFX/Hoverboots/wind_blast_62550860.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -2375,7 +2375,7 @@
 				<Event Id="3390387889" Name="SX_player_dash_regen" ObjectPath="\Events\Player\Feedback\SX_player_dash_regen" GUID="{6D13E3BD-F5FB-4B8B-8184-DB05606BBF7C}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{8E0E9898-AB3D-2694-7504-57F04736761F}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{62626460-FFD9-3053-F900-8DBC154CA710}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -2504,11 +2504,6 @@
 					<ShortName>Music\Sky_Explo_DRUMS_Phase01.wav</ShortName>
 					<Path>Media/482939136.wem</Path>
 					<CachePath>SFX/Music/Sky_Explo_DRUMS_Phase01_073B4D0C.wem</CachePath>
-				</File>
-				<File Id="490028483" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>Music\Sky_Explo_Voice Am.wav</ShortName>
-					<Path>Media/490028483.wem</Path>
-					<CachePath>SFX/Music/Sky_Explo_Voice Am_073B4D0C.wem</CachePath>
 				</File>
 				<File Id="506963029" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Music\Arena 3 - Loop.wav</ShortName>
@@ -2832,9 +2827,7 @@
 											<MediaRefs>
 												<MediaRef Id="182440689"/>
 												<MediaRef Id="455162581"/>
-												<MediaRef Id="490028483"/>
 												<MediaRef Id="587423524"/>
-												<MediaRef Id="786811872"/>
 												<MediaRef Id="804491443"/>
 												<MediaRef Id="849166554"/>
 												<MediaRef Id="950595867"/>
@@ -2850,9 +2843,7 @@
 											<MediaRefs>
 												<MediaRef Id="182440689"/>
 												<MediaRef Id="455162581"/>
-												<MediaRef Id="490028483"/>
 												<MediaRef Id="587423524"/>
-												<MediaRef Id="786811872"/>
 												<MediaRef Id="804491443"/>
 												<MediaRef Id="849166554"/>
 												<MediaRef Id="950595867"/>
@@ -2869,6 +2860,8 @@
 												<MediaRef Id="132075390"/>
 												<MediaRef Id="506963029"/>
 												<MediaRef Id="714854420"/>
+												<MediaRef Id="804491443"/>
+												<MediaRef Id="950595867"/>
 											</MediaRefs>
 										</SwitchContainer>
 									</Children>
@@ -2893,6 +2886,8 @@
 												<MediaRef Id="132075390"/>
 												<MediaRef Id="506963029"/>
 												<MediaRef Id="714854420"/>
+												<MediaRef Id="804491443"/>
+												<MediaRef Id="950595867"/>
 											</MediaRefs>
 										</SwitchContainer>
 									</Children>
@@ -2906,6 +2901,8 @@
 												<MediaRef Id="132075390"/>
 												<MediaRef Id="506963029"/>
 												<MediaRef Id="714854420"/>
+												<MediaRef Id="804491443"/>
+												<MediaRef Id="950595867"/>
 											</MediaRefs>
 										</SwitchContainer>
 									</Children>
@@ -3350,22 +3347,22 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3750820532" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{03790DC2-FC7E-42F1-E072-57C74650F301}">
+		<SoundBank Id="3750820532" Type="Bus" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}" Language="SFX" Hash="{0C147EA6-C004-B056-9713-FD82D36D33CB}">
 			<ObjectPath>REV_Large</ObjectPath>
 			<ShortName>REV_Large</ShortName>
 			<Path>Bus/REV_Large.bnk</Path>
 			<Media>
-				<File Id="822076648" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>AK_Factory_IR_Amb\Exteriors\AK Amb Hamburg Stadtpark 01.wav</ShortName>
-					<Path>Media/822076648.wem</Path>
-					<CachePath>Plugins/Wwise Convolution Reverb/AK_Factory_IR_Amb/Exteriors/AK Amb Hamburg Stadtpark 01_44C79C61.wem</CachePath>
+				<File Id="152920738" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>AK_Factory_IR\Exteriors\AK Hamburg Stadtpark 01.wav</ShortName>
+					<Path>Media/152920738.wem</Path>
+					<CachePath>Plugins/Wwise Convolution Reverb/AK_Factory_IR/Exteriors/AK Hamburg Stadtpark 01_4746A6ED.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
 				<ShareSets>
-					<Plugin Id="3075486160" Name="HamburgStadtpark_ER_Ambisonics" ObjectPath="\Effects\Factory AK Convolution Reverb Effects Ambisonics\Exteriors\HamburgStadtpark_ER_Ambisonics" GUID="{2CD55A74-4B73-4E87-B30A-41A032980111}" LibName="Wwise Convolution Reverb" LibId="8323075">
+					<Plugin Id="3383185710" Name="HamburgStadtpark_ER_Stereo" ObjectPath="\Effects\Factory AK Convolution Reverb Effects Stereo\Exteriors\HamburgStadtpark_ER_Stereo" GUID="{4B9E6294-B9AB-44D5-880A-745E92E2AC34}" LibName="Wwise Convolution Reverb" LibId="8323075">
 						<MediaRefs>
-							<MediaRef Id="822076648"/>
+							<MediaRef Id="152920738"/>
 						</MediaRefs>
 					</Plugin>
 				</ShareSets>
@@ -3374,7 +3371,7 @@
 				<AuxBus Id="3750820532" Name="REV_Large" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="3075486160"/>
+							<PluginRef Id="3383185710"/>
 						</ShareSets>
 					</PluginRefs>
 					<AuxBusRefs>
@@ -3524,5 +3521,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0B3561D8-7D8C-5EAC-30C5-DCC063CC6D20}</FileHash>
+	<FileHash>{295DA65A-B361-1016-8932-7C7B2304A791}</FileHash>
 </SoundBanksInfo>
