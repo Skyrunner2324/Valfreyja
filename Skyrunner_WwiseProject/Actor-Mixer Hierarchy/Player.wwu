@@ -5624,6 +5624,71 @@
 												<ActiveSource Name="barrel_SteampunkDeviceWind_BW_46333" ID="{15265BC8-7B4A-4C66-B81F-028FA3F44E33}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="player_weapon_shoot_smg_tail_far" ID="{5A7F11DD-BF79-47B3-8F4E-29A235DA8519}" ShortID="771597504">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>0.5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Weapon" ID="{F894E37D-7A93-4E9D-88BB-6560520EEBD6}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_weapon_shoot_smg_tail_far" ID="{B9613E54-3575-47C1-A2DD-0CFC0505B2F0}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.563524590163934"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.882855191256831"/>
+														<Property Name="FadeOutShape" Type="int16" Value="2"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.1776662898059"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Player_Weapon\player_weapon_shoot_smg_tail_far.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="587923448"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="Reverb_States" ID="{1335BED0-6CCC-45E5-9CE4-65918550FB06}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="Large" ID="{057D768C-2716-4026-A7C0-F4B42A7F81F5}"/>
+														<CustomState Name="" ID="{1AE3111A-2843-4E7A-9962-FB1C50103463}" ShortID="763834523"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Arena" ID="{D35BDB60-FC6F-461F-A698-9A09DB3C1AAE}"/>
+														<CustomState Name="" ID="{EA0F1311-7CB4-4CD9-B58B-A4DFC3DC479F}" ShortID="714372027">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Couloir" ID="{A4DBFCF1-CE50-495F-AE1B-13A0F302E73B}"/>
+														<CustomState Name="" ID="{491E02DA-5BAD-4A94-ACC5-6CD4C98033C0}" ShortID="991343925">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64" Value="-108"/>
+															</PropertyList>
+														</CustomState>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+											<ActiveSourceList>
+												<ActiveSource Name="player_weapon_shoot_smg_tail_far" ID="{B9613E54-3575-47C1-A2DD-0CFC0505B2F0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</BlendContainer>
 								<Folder Name="game_weapon_checking_overheat" ID="{95397DB8-C6EC-436B-AA32-83F2D28306D8}" ShortID="944426958">
@@ -7049,6 +7114,11 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="player_feedback_land" ID="{3A8B0205-BDFA-4D17-B9F6-D5B022AFFFF6}" ShortID="388970443">
 							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
