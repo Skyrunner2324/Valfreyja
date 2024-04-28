@@ -29,6 +29,16 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{B32412F0-B74D-4056-A88B-4AA75CF0A729}" ShortID="401561900">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="50"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resp_player" ID="{BCD906AC-6F09-45BA-ADB1-14900E22BF82}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="SX_player_weapon_impact" ID="{C2635664-3DF8-496D-BA41-22C25299ACE8}">
@@ -85,6 +95,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="voice_jump" ID="{FB7E47F6-CDB7-4F22-BE84-889E3A40E3A1}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D800B255-313C-4DC9-802D-E469180E9108}" ShortID="512505763">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="50"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resp_player" ID="{BCD906AC-6F09-45BA-ADB1-14900E22BF82}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -166,7 +186,7 @@
 								</Action>
 								<Action Name="" ID="{894E314A-8D98-4A38-B885-B20E8C805B19}" ShortID="382300721">
 									<PropertyList>
-										<Property Name="Probability" Type="Real64" Value="50"/>
+										<Property Name="Probability" Type="Real64" Value="75"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -185,6 +205,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="game_slide" ID="{0F8FE257-4D33-4454-AADA-B67BCA030904}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B4241EF4-ECED-4E8D-857A-EBB7A4CE147D}" ShortID="500609545">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="20"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resp_player" ID="{BCD906AC-6F09-45BA-ADB1-14900E22BF82}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -210,6 +240,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="slide_metal_enter" ID="{3E392D43-14F2-4715-8C7E-4D6F7A06959D}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{235DE9DA-37BC-4267-83F3-26FFA50ED97D}" ShortID="721138586">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="25"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resp_player" ID="{BCD906AC-6F09-45BA-ADB1-14900E22BF82}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -283,7 +323,7 @@
 								<Action Name="" ID="{34E6FD17-4328-41F2-AE55-3539EDE71B48}" ShortID="440563716">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="player_shield_regen" ID="{C393DDB2-F61D-459C-B1E8-32F8F0391A6A}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+											<ObjectRef Name="shield_feedback_up" ID="{C896D03F-E6A1-437E-A9E1-28C879E62E9A}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -319,6 +359,13 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{C50BE461-976C-4B66-A5CA-C33695DB98C0}" ShortID="117359344">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="death_glitch" ID="{2782505A-9246-4E3D-88CF-2351F869CD1A}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="SX_lowlife_loop" ID="{D7F61B65-CFFF-43D3-86C7-ED9354CBDDC3}">
@@ -327,6 +374,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="low_life_feedback" ID="{814A37DD-3A0E-43F3-BC8A-F77A2D59F512}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{579610FA-D986-4343-85CF-E66FBC210C04}" ShortID="260871576">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resp_player" ID="{BCD906AC-6F09-45BA-ADB1-14900E22BF82}" WorkUnitID="{B69EA258-24C1-4F97-A805-F7EDB287E24D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

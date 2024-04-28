@@ -154,7 +154,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{91DAC94D-8D2D-3116-4C07-CC9115AC016D}">
+		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{49E63CA5-E0E1-FF9C-D868-5A79040B4B0C}">
 			<ObjectPath>SX_player_land</ObjectPath>
 			<ShortName>SX_player_land</ShortName>
 			<Path>Event/SX_player_land.bnk</Path>
@@ -224,6 +224,11 @@
 					<Path>Media/533701511.wem</Path>
 					<CachePath>SFX/Hoverboots/hoverboots_landing_ice_skate_land_03_92A8EA78.wem</CachePath>
 				</File>
+				<File Id="599692893" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>LAND_40.wav</ShortName>
+					<Path>Media/599692893.wem</Path>
+					<CachePath>SFX/LAND_40_178798F0.wem</CachePath>
+				</File>
 				<File Id="663953407" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\land_07.wav</ShortName>
 					<Path>Media/663953407.wem</Path>
@@ -232,7 +237,7 @@
 				<File Id="738363783" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>LAND_37.wav</ShortName>
 					<Path>Media/738363783.wem</Path>
-					<CachePath>SFX/LAND_37_69E86A89.wem</CachePath>
+					<CachePath>SFX/LAND_37_D8F594EE.wem</CachePath>
 				</File>
 				<File Id="758476162" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>LAND_35.wav</ShortName>
@@ -267,7 +272,7 @@
 				<File Id="893342093" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>LAND_39.wav</ShortName>
 					<Path>Media/893342093.wem</Path>
-					<CachePath>SFX/LAND_39_6C60AF24.wem</CachePath>
+					<CachePath>SFX/LAND_39_4EC779C4.wem</CachePath>
 				</File>
 				<File Id="897664368" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\land_08.wav</ShortName>
@@ -301,7 +306,7 @@
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.64447916" DurationMax="0.66216445">
+				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.64447916" DurationMax="0.6815673">
 					<MediaRefs>
 						<MediaRef Id="12396239"/>
 						<MediaRef Id="77656098"/>
@@ -316,6 +321,7 @@
 						<MediaRef Id="387463509"/>
 						<MediaRef Id="415126015"/>
 						<MediaRef Id="533701511"/>
+						<MediaRef Id="599692893"/>
 						<MediaRef Id="663953407"/>
 						<MediaRef Id="738363783"/>
 						<MediaRef Id="758476162"/>
@@ -345,39 +351,30 @@
 			</Events>
 			<GameParameters>
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
+				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 				<GameParameter Id="3289214803" Name="RTPC_Time_in_Air" ObjectPath="\Game Parameters\Default Work Unit\Parkour\RTPC_Time_in_Air" GUID="{EA244CFE-2C93-4808-BE87-966632323505}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="387312834" Type="Event" GUID="{12BCF388-3B1D-4636-873A-0653AB150C1F}" Language="SFX" Hash="{2DC1B20E-D21F-4102-F251-B6F05487F24F}">
+		<SoundBank Id="387312834" Type="Event" GUID="{12BCF388-3B1D-4636-873A-0653AB150C1F}" Language="SFX" Hash="{9F3C3BC2-08BC-E914-9FFC-BA9A5F75898C}">
 			<ObjectPath>SX_player_shield_regen</ObjectPath>
 			<ShortName>SX_player_shield_regen</ShortName>
 			<Path>Event/SX_player_shield_regen.bnk</Path>
 			<Media>
-				<File Id="328453384" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>SX_player_shield_regen.wav</ShortName>
-					<Path>Media/328453384.wem</Path>
-					<CachePath>SFX/SX_player_shield_regen_C7E044D2.wem</CachePath>
+				<File Id="749562082" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>shield_feedback_up.wav</ShortName>
+					<Path>Media/749562082.wem</Path>
+					<CachePath>SFX/shield_feedback_up_061A2077.wem</CachePath>
 				</File>
 			</Media>
-			<Plugins>
-				<ShareSets>
-					<Plugin Id="3948262040" Name="Octave_Down" ObjectPath="\Effects\Factory Effects\Pitch Shifter\Harmonize\Octave_Down" GUID="{062EC4B1-5372-4D1E-917B-C757293F2B42}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
-				</ShareSets>
-			</Plugins>
 			<Events>
-				<Event Id="387312834" Name="SX_player_shield_regen" ObjectPath="\Events\Player\Feedback\SX_player_shield_regen" GUID="{12BCF388-3B1D-4636-873A-0653AB150C1F}" DurationType="OneShot" DurationMin="1.59049" DurationMax="1.59049">
+				<Event Id="387312834" Name="SX_player_shield_regen" ObjectPath="\Events\Player\Feedback\SX_player_shield_regen" GUID="{12BCF388-3B1D-4636-873A-0653AB150C1F}" DurationType="OneShot" DurationMin="12.5" DurationMax="12.5">
 					<MediaRefs>
-						<MediaRef Id="328453384"/>
+						<MediaRef Id="749562082"/>
 					</MediaRefs>
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="3948262040"/>
-						</ShareSets>
-					</PluginRefs>
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="412746475" Type="Event" GUID="{C93A5CBE-E6E6-432D-86DC-5C2BB41CD152}" Language="SFX" Hash="{9243A793-3F92-6367-4D01-9B521DE0EEAE}">
+		<SoundBank Id="412746475" Type="Event" GUID="{C93A5CBE-E6E6-432D-86DC-5C2BB41CD152}" Language="SFX" Hash="{0933D7BF-5178-F4BB-674F-C2AA6A256854}">
 			<ObjectPath>Valhalla_Voice</ObjectPath>
 			<ShortName>Valhalla_Voice</ShortName>
 			<Path>Event/Valhalla_Voice.bnk</Path>
@@ -415,12 +412,12 @@
 				<File Id="602625431" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>RESP RAPIDE_104.wav</ShortName>
 					<Path>Media/602625431.wem</Path>
-					<CachePath>SFX/RESP RAPIDE_104_755F56E2.wem</CachePath>
+					<CachePath>SFX/RESP RAPIDE_104_5B0BD1D0.wem</CachePath>
 				</File>
 				<File Id="621655315" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>RESP RAPIDE_102.wav</ShortName>
 					<Path>Media/621655315.wem</Path>
-					<CachePath>SFX/RESP RAPIDE_102_755F56E2.wem</CachePath>
+					<CachePath>SFX/RESP RAPIDE_102_7331A520.wem</CachePath>
 				</File>
 				<File Id="626393891" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>World_Feedback\feedback_valhalla_dune_01.wav</ShortName>
@@ -435,17 +432,17 @@
 				<File Id="673511907" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>RESP RAPIDE_105.wav</ShortName>
 					<Path>Media/673511907.wem</Path>
-					<CachePath>SFX/RESP RAPIDE_105_755F56E2.wem</CachePath>
+					<CachePath>SFX/RESP RAPIDE_105_FCA74510.wem</CachePath>
 				</File>
 				<File Id="676912709" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>RESP RAPIDE_103.wav</ShortName>
 					<Path>Media/676912709.wem</Path>
-					<CachePath>SFX/RESP RAPIDE_103_755F56E2.wem</CachePath>
+					<CachePath>SFX/RESP RAPIDE_103_446E9B1C.wem</CachePath>
 				</File>
 				<File Id="969363843" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>RESP RAPIDE_101.wav</ShortName>
 					<Path>Media/969363843.wem</Path>
-					<CachePath>SFX/RESP RAPIDE_101_755F56E2.wem</CachePath>
+					<CachePath>SFX/RESP RAPIDE_101_69E92250.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -696,13 +693,218 @@
 				<GameParameter Id="3289214803" Name="RTPC_Time_in_Air" ObjectPath="\Game Parameters\Default Work Unit\Parkour\RTPC_Time_in_Air" GUID="{EA244CFE-2C93-4808-BE87-966632323505}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="531482637" Type="Event" GUID="{CBB2737D-23A5-41C6-A490-09CDD11D847E}" Language="SFX" Hash="{0CD303C4-56A2-7A7A-FE67-BC218AEBC81C}">
+		<SoundBank Id="531482637" Type="Event" GUID="{CBB2737D-23A5-41C6-A490-09CDD11D847E}" Language="SFX" Hash="{CC652B86-47E9-617F-EC19-B3D779855079}">
 			<ObjectPath>SX_player_slide_end_loop</ObjectPath>
 			<ShortName>SX_player_slide_end_loop</ShortName>
 			<Path>Event/SX_player_slide_end_loop.bnk</Path>
+			<Media>
+				<File Id="12966641" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_124.wav</ShortName>
+					<Path>Media/12966641.wem</Path>
+					<CachePath>SFX/RESP_124_8BA44ECA.wem</CachePath>
+				</File>
+				<File Id="32410770" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_123.wav</ShortName>
+					<Path>Media/32410770.wem</Path>
+					<CachePath>SFX/RESP_123_8E2C7B04.wem</CachePath>
+				</File>
+				<File Id="85257753" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_110.wav</ShortName>
+					<Path>Media/85257753.wem</Path>
+					<CachePath>SFX/RESP_110_D25730E1.wem</CachePath>
+				</File>
+				<File Id="141975391" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_117.wav</ShortName>
+					<Path>Media/141975391.wem</Path>
+					<CachePath>SFX/RESP_117_A5003B70.wem</CachePath>
+				</File>
+				<File Id="188555620" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_115.wav</ShortName>
+					<Path>Media/188555620.wem</Path>
+					<CachePath>SFX/RESP_115_4C123B3B.wem</CachePath>
+				</File>
+				<File Id="202591642" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_112.wav</ShortName>
+					<Path>Media/202591642.wem</Path>
+					<CachePath>SFX/RESP_112_B586DC0A.wem</CachePath>
+				</File>
+				<File Id="285894827" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_111.wav</ShortName>
+					<Path>Media/285894827.wem</Path>
+					<CachePath>SFX/RESP_111_CDB4562C.wem</CachePath>
+				</File>
+				<File Id="396434332" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_121.wav</ShortName>
+					<Path>Media/396434332.wem</Path>
+					<CachePath>SFX/RESP_121_F58B5E64.wem</CachePath>
+				</File>
+				<File Id="409110550" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_122.wav</ShortName>
+					<Path>Media/409110550.wem</Path>
+					<CachePath>SFX/RESP_122_0F3D3939.wem</CachePath>
+				</File>
+				<File Id="419169775" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_113.wav</ShortName>
+					<Path>Media/419169775.wem</Path>
+					<CachePath>SFX/RESP_113_D687A71C.wem</CachePath>
+				</File>
+				<File Id="441846896" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_116.wav</ShortName>
+					<Path>Media/441846896.wem</Path>
+					<CachePath>SFX/RESP_116_0EC976B4.wem</CachePath>
+				</File>
+				<File Id="467738657" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_119.wav</ShortName>
+					<Path>Media/467738657.wem</Path>
+					<CachePath>SFX/RESP_119_AF8CC001.wem</CachePath>
+				</File>
+				<File Id="517352390" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_109.wav</ShortName>
+					<Path>Media/517352390.wem</Path>
+					<CachePath>SFX/RESP_109_941A640D.wem</CachePath>
+				</File>
+				<File Id="536783136" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_133.wav</ShortName>
+					<Path>Media/536783136.wem</Path>
+					<CachePath>SFX/RESP_133_3C368A38.wem</CachePath>
+				</File>
+				<File Id="588964494" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_128.wav</ShortName>
+					<Path>Media/588964494.wem</Path>
+					<CachePath>SFX/RESP_128_6EFE3712.wem</CachePath>
+				</File>
+				<File Id="626305088" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_134.wav</ShortName>
+					<Path>Media/626305088.wem</Path>
+					<CachePath>SFX/RESP_134_9A688BB3.wem</CachePath>
+				</File>
+				<File Id="678556776" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_107.wav</ShortName>
+					<Path>Media/678556776.wem</Path>
+					<CachePath>SFX/RESP_107_6C36D97C.wem</CachePath>
+				</File>
+				<File Id="724802695" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_127.wav</ShortName>
+					<Path>Media/724802695.wem</Path>
+					<CachePath>SFX/RESP_127_80AC1705.wem</CachePath>
+				</File>
+				<File Id="769248801" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_120.wav</ShortName>
+					<Path>Media/769248801.wem</Path>
+					<CachePath>SFX/RESP_120_4C0F63C3.wem</CachePath>
+				</File>
+				<File Id="769898239" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_137.wav</ShortName>
+					<Path>Media/769898239.wem</Path>
+					<CachePath>SFX/RESP_137_621BAD18.wem</CachePath>
+				</File>
+				<File Id="770333763" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_132.wav</ShortName>
+					<Path>Media/770333763.wem</Path>
+					<CachePath>SFX/RESP_132_970A9405.wem</CachePath>
+				</File>
+				<File Id="779026608" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_118.wav</ShortName>
+					<Path>Media/779026608.wem</Path>
+					<CachePath>SFX/RESP_118_14A30DD0.wem</CachePath>
+				</File>
+				<File Id="868923140" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_108.wav</ShortName>
+					<Path>Media/868923140.wem</Path>
+					<CachePath>SFX/RESP_108_63CBADBE.wem</CachePath>
+				</File>
+				<File Id="875522615" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_126.wav</ShortName>
+					<Path>Media/875522615.wem</Path>
+					<CachePath>SFX/RESP_126_5F962AB2.wem</CachePath>
+				</File>
+				<File Id="927832507" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_125.wav</ShortName>
+					<Path>Media/927832507.wem</Path>
+					<CachePath>SFX/RESP_125_D6793844.wem</CachePath>
+				</File>
+				<File Id="951933254" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_114.wav</ShortName>
+					<Path>Media/951933254.wem</Path>
+					<CachePath>SFX/RESP_114_6FAE1D77.wem</CachePath>
+				</File>
+				<File Id="976866474" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_136.wav</ShortName>
+					<Path>Media/976866474.wem</Path>
+					<CachePath>SFX/RESP_136_96E1F1B9.wem</CachePath>
+				</File>
+				<File Id="1016071549" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_106.wav</ShortName>
+					<Path>Media/1016071549.wem</Path>
+					<CachePath>SFX/RESP_106_F5A4BC35.wem</CachePath>
+				</File>
+				<File Id="1046204253" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_135.wav</ShortName>
+					<Path>Media/1046204253.wem</Path>
+					<CachePath>SFX/RESP_135_38BDEB32.wem</CachePath>
+				</File>
+				<File Id="1046971133" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_131.wav</ShortName>
+					<Path>Media/1046971133.wem</Path>
+					<CachePath>SFX/RESP_131_C5AB14D6.wem</CachePath>
+				</File>
+				<File Id="1056973428" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_129.wav</ShortName>
+					<Path>Media/1056973428.wem</Path>
+					<CachePath>SFX/RESP_129_19FD0E51.wem</CachePath>
+				</File>
+				<File Id="1066951916" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_130.wav</ShortName>
+					<Path>Media/1066951916.wem</Path>
+					<CachePath>SFX/RESP_130_5AB2205E.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="531482637" Name="SX_player_slide_end_loop" ObjectPath="\Events\Player\Movement\SX_player_slide_end_loop" GUID="{CBB2737D-23A5-41C6-A490-09CDD11D847E}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="531482637" Name="SX_player_slide_end_loop" ObjectPath="\Events\Player\Movement\SX_player_slide_end_loop" GUID="{CBB2737D-23A5-41C6-A490-09CDD11D847E}" DurationType="OneShot" DurationMin="0" DurationMax="3.0018122">
+					<MediaRefs>
+						<MediaRef Id="12966641"/>
+						<MediaRef Id="32410770"/>
+						<MediaRef Id="85257753"/>
+						<MediaRef Id="141975391"/>
+						<MediaRef Id="188555620"/>
+						<MediaRef Id="202591642"/>
+						<MediaRef Id="285894827"/>
+						<MediaRef Id="396434332"/>
+						<MediaRef Id="409110550"/>
+						<MediaRef Id="419169775"/>
+						<MediaRef Id="441846896"/>
+						<MediaRef Id="467738657"/>
+						<MediaRef Id="517352390"/>
+						<MediaRef Id="536783136"/>
+						<MediaRef Id="588964494"/>
+						<MediaRef Id="626305088"/>
+						<MediaRef Id="678556776"/>
+						<MediaRef Id="724802695"/>
+						<MediaRef Id="769248801"/>
+						<MediaRef Id="769898239"/>
+						<MediaRef Id="770333763"/>
+						<MediaRef Id="779026608"/>
+						<MediaRef Id="868923140"/>
+						<MediaRef Id="875522615"/>
+						<MediaRef Id="927832507"/>
+						<MediaRef Id="951933254"/>
+						<MediaRef Id="976866474"/>
+						<MediaRef Id="1016071549"/>
+						<MediaRef Id="1046204253"/>
+						<MediaRef Id="1046971133"/>
+						<MediaRef Id="1056973428"/>
+						<MediaRef Id="1066951916"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="435591300" Name="REV_Couloir" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Couloir" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}"/>
+						<AuxBusRef Id="641705904" Name="REV_Arena" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Arena" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}"/>
+						<AuxBusRef Id="3750820532" Name="REV_Large" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"/>
+					</AuxBusRefs>
+				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="534486512" Type="Event" GUID="{A85A1CC9-5884-42CD-B3B0-A7C451B7F79D}" Language="SFX" Hash="{1B821FCD-BC85-15C8-6D31-93244D9D2A0D}">
 			<ObjectPath>MUS_Stop_MainMusic</ObjectPath>
@@ -845,7 +1047,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="858959884" Type="Event" GUID="{45B75918-88DC-4592-9F27-6C746C945B7A}" Language="SFX" Hash="{BAF460AC-3B6C-FFF0-8F69-188461AA6DF1}">
+		<SoundBank Id="858959884" Type="Event" GUID="{45B75918-88DC-4592-9F27-6C746C945B7A}" Language="SFX" Hash="{6E43809C-F3C8-9806-9CC4-4F8518F60306}">
 			<ObjectPath>Amb_Mountain_Wind</ObjectPath>
 			<ShortName>Amb_Mountain_Wind</ShortName>
 			<Path>Event/Amb_Mountain_Wind.bnk</Path>
@@ -991,11 +1193,26 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{244F3108-1062-F571-2D73-18159807FC96}">
+		<SoundBank Id="1030870044" Type="Event" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" Language="SFX" Hash="{CA399EA1-7DBC-2528-61D1-834C4A145B5B}">
 			<ObjectPath>SX_player_shoot</ObjectPath>
 			<ShortName>SX_player_shoot</ShortName>
 			<Path>Event/SX_player_shoot.bnk</Path>
 			<Media>
+				<File Id="12966641" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_124.wav</ShortName>
+					<Path>Media/12966641.wem</Path>
+					<CachePath>SFX/RESP_124_8BA44ECA.wem</CachePath>
+				</File>
+				<File Id="32410770" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_123.wav</ShortName>
+					<Path>Media/32410770.wem</Path>
+					<CachePath>SFX/RESP_123_8E2C7B04.wem</CachePath>
+				</File>
+				<File Id="85257753" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_110.wav</ShortName>
+					<Path>Media/85257753.wem</Path>
+					<CachePath>SFX/RESP_110_D25730E1.wem</CachePath>
+				</File>
 				<File Id="109836773" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\final_Laser Cannon.wav</ShortName>
 					<Path>Media/109836773.wem</Path>
@@ -1005,6 +1222,11 @@
 					<ShortName>Player_Weapon\04_Loop.wav</ShortName>
 					<Path>Media/115262851.wem</Path>
 					<CachePath>SFX/Player_Weapon/04_Loop_EFFDAB80.wem</CachePath>
+				</File>
+				<File Id="141975391" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_117.wav</ShortName>
+					<Path>Media/141975391.wem</Path>
+					<CachePath>SFX/RESP_117_A5003B70.wem</CachePath>
 				</File>
 				<File Id="173154596" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\barrel_SteampunkDeviceClicks_BW.46263.wav</ShortName>
@@ -1016,10 +1238,25 @@
 					<Path>Media/184338529.wem</Path>
 					<CachePath>SFX/Player_Weapon/final_mech_04_755F56E2.wem</CachePath>
 				</File>
+				<File Id="188555620" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_115.wav</ShortName>
+					<Path>Media/188555620.wem</Path>
+					<CachePath>SFX/RESP_115_4C123B3B.wem</CachePath>
+				</File>
+				<File Id="202591642" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_112.wav</ShortName>
+					<Path>Media/202591642.wem</Path>
+					<CachePath>SFX/RESP_112_B586DC0A.wem</CachePath>
+				</File>
 				<File Id="229130795" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\final_GunFoleyShotgun_BW.55904.wav</ShortName>
 					<Path>Media/229130795.wem</Path>
 					<CachePath>SFX/Player_Weapon/final_GunFoleyShotgun_BW.55904_755F56E2.wem</CachePath>
+				</File>
+				<File Id="285894827" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_111.wav</ShortName>
+					<Path>Media/285894827.wem</Path>
+					<CachePath>SFX/RESP_111_CDB4562C.wem</CachePath>
 				</File>
 				<File Id="286227053" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\final_Steampunk Weapons - Shotgun 2 - Shot - 03.wav</ShortName>
@@ -1041,15 +1278,50 @@
 					<Path>Media/376303983.wem</Path>
 					<CachePath>SFX/Player_Weapon/barrel_SteampunkDeviceWind_BW.46333_C8ED93B8.wem</CachePath>
 				</File>
+				<File Id="396434332" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_121.wav</ShortName>
+					<Path>Media/396434332.wem</Path>
+					<CachePath>SFX/RESP_121_F58B5E64.wem</CachePath>
+				</File>
+				<File Id="409110550" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_122.wav</ShortName>
+					<Path>Media/409110550.wem</Path>
+					<CachePath>SFX/RESP_122_0F3D3939.wem</CachePath>
+				</File>
+				<File Id="419169775" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_113.wav</ShortName>
+					<Path>Media/419169775.wem</Path>
+					<CachePath>SFX/RESP_113_D687A71C.wem</CachePath>
+				</File>
+				<File Id="441846896" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_116.wav</ShortName>
+					<Path>Media/441846896.wem</Path>
+					<CachePath>SFX/RESP_116_0EC976B4.wem</CachePath>
+				</File>
+				<File Id="467738657" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_119.wav</ShortName>
+					<Path>Media/467738657.wem</Path>
+					<CachePath>SFX/RESP_119_AF8CC001.wem</CachePath>
+				</File>
 				<File Id="503993839" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\final_SAMPLIFIRE_150_bass_loop_lazer_D#.wav</ShortName>
 					<Path>Media/503993839.wem</Path>
 					<CachePath>SFX/Player_Weapon/final_SAMPLIFIRE_150_bass_loop_lazer_D#_755F56E2.wem</CachePath>
 				</File>
+				<File Id="517352390" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_109.wav</ShortName>
+					<Path>Media/517352390.wem</Path>
+					<CachePath>SFX/RESP_109_941A640D.wem</CachePath>
+				</File>
 				<File Id="535909514" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\barrel_PEGlitch_BW.33155.wav</ShortName>
 					<Path>Media/535909514.wem</Path>
 					<CachePath>SFX/Player_Weapon/barrel_PEGlitch_BW.33155_AED221BD.wem</CachePath>
+				</File>
+				<File Id="536783136" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_133.wav</ShortName>
+					<Path>Media/536783136.wem</Path>
+					<CachePath>SFX/RESP_133_3C368A38.wem</CachePath>
 				</File>
 				<File Id="550411134" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\02_Loop.wav</ShortName>
@@ -1066,6 +1338,11 @@
 					<Path>Media/587923448.wem</Path>
 					<CachePath>SFX/Player_Weapon/player_weapon_shoot_smg_tail_far_676B4017.wem</CachePath>
 				</File>
+				<File Id="588964494" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_128.wav</ShortName>
+					<Path>Media/588964494.wem</Path>
+					<CachePath>SFX/RESP_128_6EFE3712.wem</CachePath>
+				</File>
 				<File Id="611352807" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\final_mech_03.wav</ShortName>
 					<Path>Media/611352807.wem</Path>
@@ -1075,6 +1352,11 @@
 					<ShortName>Player_Weapon\barrel_SteampunkButton_BW.46255.wav</ShortName>
 					<Path>Media/611800409.wem</Path>
 					<CachePath>SFX/Player_Weapon/barrel_SteampunkButton_BW.46255_A159098B.wem</CachePath>
+				</File>
+				<File Id="626305088" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_134.wav</ShortName>
+					<Path>Media/626305088.wem</Path>
+					<CachePath>SFX/RESP_134_9A688BB3.wem</CachePath>
 				</File>
 				<File Id="631027743" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\final_mech_02.wav</ShortName>
@@ -1096,10 +1378,40 @@
 					<Path>Media/674208230.wem</Path>
 					<CachePath>SFX/Player_Weapon/final_GunFoleyShotgun_BW.55987_755F56E2.wem</CachePath>
 				</File>
+				<File Id="678556776" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_107.wav</ShortName>
+					<Path>Media/678556776.wem</Path>
+					<CachePath>SFX/RESP_107_6C36D97C.wem</CachePath>
+				</File>
+				<File Id="724802695" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_127.wav</ShortName>
+					<Path>Media/724802695.wem</Path>
+					<CachePath>SFX/RESP_127_80AC1705.wem</CachePath>
+				</File>
 				<File Id="745198428" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\final_Laser Gun Recharge 10.wav</ShortName>
 					<Path>Media/745198428.wem</Path>
 					<CachePath>SFX/Player_Weapon/final_Laser Gun Recharge 10_755F56E2.wem</CachePath>
+				</File>
+				<File Id="769248801" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_120.wav</ShortName>
+					<Path>Media/769248801.wem</Path>
+					<CachePath>SFX/RESP_120_4C0F63C3.wem</CachePath>
+				</File>
+				<File Id="769898239" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_137.wav</ShortName>
+					<Path>Media/769898239.wem</Path>
+					<CachePath>SFX/RESP_137_621BAD18.wem</CachePath>
+				</File>
+				<File Id="770333763" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_132.wav</ShortName>
+					<Path>Media/770333763.wem</Path>
+					<CachePath>SFX/RESP_132_970A9405.wem</CachePath>
+				</File>
+				<File Id="779026608" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_118.wav</ShortName>
+					<Path>Media/779026608.wem</Path>
+					<CachePath>SFX/RESP_118_14A30DD0.wem</CachePath>
 				</File>
 				<File Id="827291106" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\final_G_AcidGun01.wav</ShortName>
@@ -1111,6 +1423,16 @@
 					<Path>Media/867861264.wem</Path>
 					<CachePath>SFX/Player_Weapon/03_Loop_D1CC47FC.wem</CachePath>
 				</File>
+				<File Id="868923140" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_108.wav</ShortName>
+					<Path>Media/868923140.wem</Path>
+					<CachePath>SFX/RESP_108_63CBADBE.wem</CachePath>
+				</File>
+				<File Id="875522615" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_126.wav</ShortName>
+					<Path>Media/875522615.wem</Path>
+					<CachePath>SFX/RESP_126_5F962AB2.wem</CachePath>
+				</File>
 				<File Id="888338522" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\final_Futuristic_Weapon_Charge_ODS-1573-013.wav</ShortName>
 					<Path>Media/888338522.wem</Path>
@@ -1121,10 +1443,25 @@
 					<Path>Media/908855654.wem</Path>
 					<CachePath>SFX/Player_Weapon/barrel_SteampunkDeviceWind_BW.46331_D72B8179.wem</CachePath>
 				</File>
+				<File Id="927832507" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_125.wav</ShortName>
+					<Path>Media/927832507.wem</Path>
+					<CachePath>SFX/RESP_125_D6793844.wem</CachePath>
+				</File>
+				<File Id="951933254" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_114.wav</ShortName>
+					<Path>Media/951933254.wem</Path>
+					<CachePath>SFX/RESP_114_6FAE1D77.wem</CachePath>
+				</File>
 				<File Id="967984016" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\player_weapon_shoot_smg_sub_01.wav</ShortName>
 					<Path>Media/967984016.wem</Path>
 					<CachePath>SFX/Player_Weapon/player_weapon_shoot_smg_sub_01_4CC5E05E.wem</CachePath>
+				</File>
+				<File Id="976866474" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_136.wav</ShortName>
+					<Path>Media/976866474.wem</Path>
+					<CachePath>SFX/RESP_136_96E1F1B9.wem</CachePath>
 				</File>
 				<File Id="978326419" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\final_MtSw - Designed - the bulky one.wav</ShortName>
@@ -1136,10 +1473,35 @@
 					<Path>Media/1004613868.wem</Path>
 					<CachePath>SFX/Player_Weapon/final_F_Alert_755F56E2.wem</CachePath>
 				</File>
+				<File Id="1016071549" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_106.wav</ShortName>
+					<Path>Media/1016071549.wem</Path>
+					<CachePath>SFX/RESP_106_F5A4BC35.wem</CachePath>
+				</File>
 				<File Id="1035749032" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Weapon\final_Futuristic_Weapon_Charge_ODY-1573-014.wav</ShortName>
 					<Path>Media/1035749032.wem</Path>
 					<CachePath>SFX/Player_Weapon/final_Futuristic_Weapon_Charge_ODY-1573-014_755F56E2.wem</CachePath>
+				</File>
+				<File Id="1046204253" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_135.wav</ShortName>
+					<Path>Media/1046204253.wem</Path>
+					<CachePath>SFX/RESP_135_38BDEB32.wem</CachePath>
+				</File>
+				<File Id="1046971133" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_131.wav</ShortName>
+					<Path>Media/1046971133.wem</Path>
+					<CachePath>SFX/RESP_131_C5AB14D6.wem</CachePath>
+				</File>
+				<File Id="1056973428" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_129.wav</ShortName>
+					<Path>Media/1056973428.wem</Path>
+					<CachePath>SFX/RESP_129_19FD0E51.wem</CachePath>
+				</File>
+				<File Id="1066951916" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_130.wav</ShortName>
+					<Path>Media/1066951916.wem</Path>
+					<CachePath>SFX/RESP_130_5AB2205E.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -1153,35 +1515,67 @@
 			<Events>
 				<Event Id="1030870044" Name="SX_player_shoot" ObjectPath="\Events\Player\Weapon\SX_player_shoot" GUID="{E4E1A1B6-3BFC-4785-A00D-1F87D78299AF}" DurationType="OneShot" DurationMin="2.875" DurationMax="3.6834607">
 					<MediaRefs>
+						<MediaRef Id="12966641"/>
+						<MediaRef Id="32410770"/>
+						<MediaRef Id="85257753"/>
 						<MediaRef Id="109836773"/>
 						<MediaRef Id="115262851"/>
+						<MediaRef Id="141975391"/>
 						<MediaRef Id="173154596"/>
 						<MediaRef Id="184338529"/>
+						<MediaRef Id="188555620"/>
+						<MediaRef Id="202591642"/>
 						<MediaRef Id="229130795"/>
+						<MediaRef Id="285894827"/>
 						<MediaRef Id="286227053"/>
 						<MediaRef Id="287593272"/>
 						<MediaRef Id="352751061"/>
 						<MediaRef Id="376303983"/>
+						<MediaRef Id="396434332"/>
+						<MediaRef Id="409110550"/>
+						<MediaRef Id="419169775"/>
+						<MediaRef Id="441846896"/>
+						<MediaRef Id="467738657"/>
 						<MediaRef Id="503993839"/>
+						<MediaRef Id="517352390"/>
 						<MediaRef Id="535909514"/>
+						<MediaRef Id="536783136"/>
 						<MediaRef Id="550411134"/>
 						<MediaRef Id="566120444"/>
 						<MediaRef Id="587923448"/>
+						<MediaRef Id="588964494"/>
 						<MediaRef Id="611352807"/>
 						<MediaRef Id="611800409"/>
+						<MediaRef Id="626305088"/>
 						<MediaRef Id="631027743"/>
 						<MediaRef Id="651929721"/>
 						<MediaRef Id="672929790"/>
 						<MediaRef Id="674208230"/>
+						<MediaRef Id="678556776"/>
+						<MediaRef Id="724802695"/>
 						<MediaRef Id="745198428"/>
+						<MediaRef Id="769248801"/>
+						<MediaRef Id="769898239"/>
+						<MediaRef Id="770333763"/>
+						<MediaRef Id="779026608"/>
 						<MediaRef Id="827291106"/>
 						<MediaRef Id="867861264"/>
+						<MediaRef Id="868923140"/>
+						<MediaRef Id="875522615"/>
 						<MediaRef Id="888338522"/>
 						<MediaRef Id="908855654"/>
+						<MediaRef Id="927832507"/>
+						<MediaRef Id="951933254"/>
 						<MediaRef Id="967984016"/>
+						<MediaRef Id="976866474"/>
 						<MediaRef Id="978326419"/>
 						<MediaRef Id="1004613868"/>
+						<MediaRef Id="1016071549"/>
 						<MediaRef Id="1035749032"/>
+						<MediaRef Id="1046204253"/>
+						<MediaRef Id="1046971133"/>
+						<MediaRef Id="1056973428"/>
+						<MediaRef Id="1066951916"/>
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
@@ -1191,13 +1585,18 @@
 							<PluginRef Id="3014317828"/>
 						</ShareSets>
 					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="435591300" Name="REV_Couloir" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Couloir" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}"/>
+						<AuxBusRef Id="641705904" Name="REV_Arena" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Arena" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}"/>
+						<AuxBusRef Id="3750820532" Name="REV_Large" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"/>
+					</AuxBusRefs>
 				</Event>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1060363905" Type="Event" GUID="{7E4A6C7B-541E-4F66-A804-807DEC01DB1B}" Language="SFX" Hash="{DA34BF01-ED8A-B1BC-D4ED-C06939D45C96}">
+		<SoundBank Id="1060363905" Type="Event" GUID="{7E4A6C7B-541E-4F66-A804-807DEC01DB1B}" Language="SFX" Hash="{535F27DE-EFBE-FFB4-C43A-37C7A9B9194C}">
 			<ObjectPath>Amb_Mechanism</ObjectPath>
 			<ShortName>Amb_Mechanism</ShortName>
 			<Path>Event/Amb_Mechanism.bnk</Path>
@@ -1216,7 +1615,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1188665612" Type="Event" GUID="{F550970C-A8FC-4520-A4CD-A03DF04BDF72}" Language="SFX" Hash="{F7E92817-817F-A635-47FD-FC7F033C81A2}">
+		<SoundBank Id="1188665612" Type="Event" GUID="{F550970C-A8FC-4520-A4CD-A03DF04BDF72}" Language="SFX" Hash="{C2215A85-31B3-FEFA-A1FA-264D8CA2956D}">
 			<ObjectPath>Amb_Crackling_Slope</ObjectPath>
 			<ShortName>Amb_Crackling_Slope</ShortName>
 			<Path>Event/Amb_Crackling_Slope.bnk</Path>
@@ -1235,7 +1634,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1200988362" Type="Event" GUID="{2278516D-BA2F-4D5D-93F6-5353DF4E1405}" Language="SFX" Hash="{8314297F-B10C-D7C0-9E55-28AE39BBBAF8}">
+		<SoundBank Id="1200988362" Type="Event" GUID="{2278516D-BA2F-4D5D-93F6-5353DF4E1405}" Language="SFX" Hash="{48C6ED82-99AE-3F7D-36C8-8D6BFC055F63}">
 			<ObjectPath>SX_player_hit</ObjectPath>
 			<ShortName>SX_player_hit</ShortName>
 			<Path>Event/SX_player_hit.bnk</Path>
@@ -1506,7 +1905,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1311098982" Type="Event" GUID="{A670372F-931C-41E6-925A-FA1480FED58F}" Language="SFX" Hash="{5D579183-D972-292D-B56C-36B67A593DC4}">
+		<SoundBank Id="1311098982" Type="Event" GUID="{A670372F-931C-41E6-925A-FA1480FED58F}" Language="SFX" Hash="{2EAF935F-5802-C1CF-FFC0-793AC3F65CCF}">
 			<ObjectPath>SX_player_grap_shot</ObjectPath>
 			<ShortName>SX_player_grap_shot</ShortName>
 			<Path>Event/SX_player_grap_shot.bnk</Path>
@@ -2151,15 +2550,30 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{D2E4878E-49EF-E0C4-B0C1-C3546F805F87}">
+		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{E692E76A-09BC-AC09-1EB4-1F09DE6870BA}">
 			<ObjectPath>SX_player_jump</ObjectPath>
 			<ShortName>SX_player_jump</ShortName>
 			<Path>Event/SX_player_jump.bnk</Path>
 			<Media>
+				<File Id="12966641" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_124.wav</ShortName>
+					<Path>Media/12966641.wem</Path>
+					<CachePath>SFX/RESP_124_8BA44ECA.wem</CachePath>
+				</File>
+				<File Id="32410770" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_123.wav</ShortName>
+					<Path>Media/32410770.wem</Path>
+					<CachePath>SFX/RESP_123_8E2C7B04.wem</CachePath>
+				</File>
 				<File Id="76388274" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\woosh_dash_02.wav</ShortName>
 					<Path>Media/76388274.wem</Path>
 					<CachePath>SFX/Player_Movement/woosh_dash_02_F49DF45F.wem</CachePath>
+				</File>
+				<File Id="85257753" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_110.wav</ShortName>
+					<Path>Media/85257753.wem</Path>
+					<CachePath>SFX/RESP_110_D25730E1.wem</CachePath>
 				</File>
 				<File Id="119646491" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>JUMP_18.wav</ShortName>
@@ -2169,17 +2583,87 @@
 				<File Id="138762763" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>JUMP_23.wav</ShortName>
 					<Path>Media/138762763.wem</Path>
-					<CachePath>SFX/JUMP_23_D934F428.wem</CachePath>
+					<CachePath>SFX/JUMP_23_632B3FA8.wem</CachePath>
+				</File>
+				<File Id="141975391" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_117.wav</ShortName>
+					<Path>Media/141975391.wem</Path>
+					<CachePath>SFX/RESP_117_A5003B70.wem</CachePath>
+				</File>
+				<File Id="188555620" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_115.wav</ShortName>
+					<Path>Media/188555620.wem</Path>
+					<CachePath>SFX/RESP_115_4C123B3B.wem</CachePath>
+				</File>
+				<File Id="202591642" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_112.wav</ShortName>
+					<Path>Media/202591642.wem</Path>
+					<CachePath>SFX/RESP_112_B586DC0A.wem</CachePath>
+				</File>
+				<File Id="285894827" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_111.wav</ShortName>
+					<Path>Media/285894827.wem</Path>
+					<CachePath>SFX/RESP_111_CDB4562C.wem</CachePath>
+				</File>
+				<File Id="396434332" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_121.wav</ShortName>
+					<Path>Media/396434332.wem</Path>
+					<CachePath>SFX/RESP_121_F58B5E64.wem</CachePath>
+				</File>
+				<File Id="409110550" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_122.wav</ShortName>
+					<Path>Media/409110550.wem</Path>
+					<CachePath>SFX/RESP_122_0F3D3939.wem</CachePath>
+				</File>
+				<File Id="419169775" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_113.wav</ShortName>
+					<Path>Media/419169775.wem</Path>
+					<CachePath>SFX/RESP_113_D687A71C.wem</CachePath>
 				</File>
 				<File Id="429383514" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>JUMP_21.wav</ShortName>
 					<Path>Media/429383514.wem</Path>
-					<CachePath>SFX/JUMP_21_F90A4115.wem</CachePath>
+					<CachePath>SFX/JUMP_21_0B45E38D.wem</CachePath>
+				</File>
+				<File Id="441846896" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_116.wav</ShortName>
+					<Path>Media/441846896.wem</Path>
+					<CachePath>SFX/RESP_116_0EC976B4.wem</CachePath>
+				</File>
+				<File Id="467738657" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_119.wav</ShortName>
+					<Path>Media/467738657.wem</Path>
+					<CachePath>SFX/RESP_119_AF8CC001.wem</CachePath>
+				</File>
+				<File Id="517352390" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_109.wav</ShortName>
+					<Path>Media/517352390.wem</Path>
+					<CachePath>SFX/RESP_109_941A640D.wem</CachePath>
+				</File>
+				<File Id="536783136" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_133.wav</ShortName>
+					<Path>Media/536783136.wem</Path>
+					<CachePath>SFX/RESP_133_3C368A38.wem</CachePath>
+				</File>
+				<File Id="588964494" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_128.wav</ShortName>
+					<Path>Media/588964494.wem</Path>
+					<CachePath>SFX/RESP_128_6EFE3712.wem</CachePath>
 				</File>
 				<File Id="595308276" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>JUMP_25.wav</ShortName>
 					<Path>Media/595308276.wem</Path>
-					<CachePath>SFX/JUMP_25_C35A57EA.wem</CachePath>
+					<CachePath>SFX/JUMP_25_DBA9898E.wem</CachePath>
+				</File>
+				<File Id="626305088" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_134.wav</ShortName>
+					<Path>Media/626305088.wem</Path>
+					<CachePath>SFX/RESP_134_9A688BB3.wem</CachePath>
+				</File>
+				<File Id="678556776" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_107.wav</ShortName>
+					<Path>Media/678556776.wem</Path>
+					<CachePath>SFX/RESP_107_6C36D97C.wem</CachePath>
 				</File>
 				<File Id="679633165" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\woosh_dash_03.wav</ShortName>
@@ -2189,32 +2673,102 @@
 				<File Id="693232665" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>JUMP_24.wav</ShortName>
 					<Path>Media/693232665.wem</Path>
-					<CachePath>SFX/JUMP_24_937B3445.wem</CachePath>
+					<CachePath>SFX/JUMP_24_343937A7.wem</CachePath>
+				</File>
+				<File Id="724802695" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_127.wav</ShortName>
+					<Path>Media/724802695.wem</Path>
+					<CachePath>SFX/RESP_127_80AC1705.wem</CachePath>
 				</File>
 				<File Id="729647487" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\woosh_dash_05.wav</ShortName>
 					<Path>Media/729647487.wem</Path>
 					<CachePath>SFX/Player_Movement/woosh_dash_05_CA4DF2D6.wem</CachePath>
 				</File>
+				<File Id="769248801" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_120.wav</ShortName>
+					<Path>Media/769248801.wem</Path>
+					<CachePath>SFX/RESP_120_4C0F63C3.wem</CachePath>
+				</File>
+				<File Id="769898239" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_137.wav</ShortName>
+					<Path>Media/769898239.wem</Path>
+					<CachePath>SFX/RESP_137_621BAD18.wem</CachePath>
+				</File>
+				<File Id="770333763" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_132.wav</ShortName>
+					<Path>Media/770333763.wem</Path>
+					<CachePath>SFX/RESP_132_970A9405.wem</CachePath>
+				</File>
+				<File Id="779026608" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_118.wav</ShortName>
+					<Path>Media/779026608.wem</Path>
+					<CachePath>SFX/RESP_118_14A30DD0.wem</CachePath>
+				</File>
+				<File Id="868923140" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_108.wav</ShortName>
+					<Path>Media/868923140.wem</Path>
+					<CachePath>SFX/RESP_108_63CBADBE.wem</CachePath>
+				</File>
 				<File Id="870352394" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\woosh_dash_01.wav</ShortName>
 					<Path>Media/870352394.wem</Path>
 					<CachePath>SFX/Player_Movement/woosh_dash_01_926A9A84.wem</CachePath>
 				</File>
-				<File Id="897766938" Language="SFX" Streaming="false" Location="Loose">
-					<ShortName>JUMP_20.wav</ShortName>
-					<Path>Media/897766938.wem</Path>
-					<CachePath>SFX/JUMP_20_CB98956C.wem</CachePath>
+				<File Id="875522615" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_126.wav</ShortName>
+					<Path>Media/875522615.wem</Path>
+					<CachePath>SFX/RESP_126_5F962AB2.wem</CachePath>
 				</File>
 				<File Id="921146278" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>JUMP_22.wav</ShortName>
 					<Path>Media/921146278.wem</Path>
 					<CachePath>SFX/JUMP_22_66034D7C.wem</CachePath>
 				</File>
+				<File Id="927832507" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_125.wav</ShortName>
+					<Path>Media/927832507.wem</Path>
+					<CachePath>SFX/RESP_125_D6793844.wem</CachePath>
+				</File>
 				<File Id="949832797" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\woosh_dash_04.wav</ShortName>
 					<Path>Media/949832797.wem</Path>
 					<CachePath>SFX/Player_Movement/woosh_dash_04_DBAEB265.wem</CachePath>
+				</File>
+				<File Id="951933254" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_114.wav</ShortName>
+					<Path>Media/951933254.wem</Path>
+					<CachePath>SFX/RESP_114_6FAE1D77.wem</CachePath>
+				</File>
+				<File Id="976866474" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_136.wav</ShortName>
+					<Path>Media/976866474.wem</Path>
+					<CachePath>SFX/RESP_136_96E1F1B9.wem</CachePath>
+				</File>
+				<File Id="1016071549" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_106.wav</ShortName>
+					<Path>Media/1016071549.wem</Path>
+					<CachePath>SFX/RESP_106_F5A4BC35.wem</CachePath>
+				</File>
+				<File Id="1046204253" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_135.wav</ShortName>
+					<Path>Media/1046204253.wem</Path>
+					<CachePath>SFX/RESP_135_38BDEB32.wem</CachePath>
+				</File>
+				<File Id="1046971133" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_131.wav</ShortName>
+					<Path>Media/1046971133.wem</Path>
+					<CachePath>SFX/RESP_131_C5AB14D6.wem</CachePath>
+				</File>
+				<File Id="1056973428" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_129.wav</ShortName>
+					<Path>Media/1056973428.wem</Path>
+					<CachePath>SFX/RESP_129_19FD0E51.wem</CachePath>
+				</File>
+				<File Id="1066951916" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_130.wav</ShortName>
+					<Path>Media/1066951916.wem</Path>
+					<CachePath>SFX/RESP_130_5AB2205E.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -2223,20 +2777,51 @@
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="1532180459" Name="SX_player_jump" ObjectPath="\Events\Player\Movement\SX_player_jump" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" DurationType="OneShot" DurationMin="0.26347265" DurationMax="0.60282296">
+				<Event Id="1532180459" Name="SX_player_jump" ObjectPath="\Events\Player\Movement\SX_player_jump" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" DurationType="OneShot" DurationMin="0.6180201" DurationMax="3.0018122">
 					<MediaRefs>
+						<MediaRef Id="12966641"/>
+						<MediaRef Id="32410770"/>
 						<MediaRef Id="76388274"/>
+						<MediaRef Id="85257753"/>
 						<MediaRef Id="119646491"/>
 						<MediaRef Id="138762763"/>
+						<MediaRef Id="141975391"/>
+						<MediaRef Id="188555620"/>
+						<MediaRef Id="202591642"/>
+						<MediaRef Id="285894827"/>
+						<MediaRef Id="396434332"/>
+						<MediaRef Id="409110550"/>
+						<MediaRef Id="419169775"/>
 						<MediaRef Id="429383514"/>
+						<MediaRef Id="441846896"/>
+						<MediaRef Id="467738657"/>
+						<MediaRef Id="517352390"/>
+						<MediaRef Id="536783136"/>
+						<MediaRef Id="588964494"/>
 						<MediaRef Id="595308276"/>
+						<MediaRef Id="626305088"/>
+						<MediaRef Id="678556776"/>
 						<MediaRef Id="679633165"/>
 						<MediaRef Id="693232665"/>
+						<MediaRef Id="724802695"/>
 						<MediaRef Id="729647487"/>
+						<MediaRef Id="769248801"/>
+						<MediaRef Id="769898239"/>
+						<MediaRef Id="770333763"/>
+						<MediaRef Id="779026608"/>
+						<MediaRef Id="868923140"/>
 						<MediaRef Id="870352394"/>
-						<MediaRef Id="897766938"/>
+						<MediaRef Id="875522615"/>
 						<MediaRef Id="921146278"/>
+						<MediaRef Id="927832507"/>
 						<MediaRef Id="949832797"/>
+						<MediaRef Id="951933254"/>
+						<MediaRef Id="976866474"/>
+						<MediaRef Id="1016071549"/>
+						<MediaRef Id="1046204253"/>
+						<MediaRef Id="1046971133"/>
+						<MediaRef Id="1056973428"/>
+						<MediaRef Id="1066951916"/>
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
@@ -2274,7 +2859,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1692621772" Type="Event" GUID="{7BC5CDA3-ADDA-414C-88EA-DA385A0BB02A}" Language="SFX" Hash="{65D41350-7405-9937-1F24-061A58142617}">
+		<SoundBank Id="1692621772" Type="Event" GUID="{7BC5CDA3-ADDA-414C-88EA-DA385A0BB02A}" Language="SFX" Hash="{47952DD7-D431-F129-CA27-4229F970F863}">
 			<ObjectPath>Amb_Wind_Heavy</ObjectPath>
 			<ShortName>Amb_Wind_Heavy</ShortName>
 			<Path>Event/Amb_Wind_Heavy.bnk</Path>
@@ -2396,7 +2981,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1936453145" Type="Event" GUID="{7CE7E7ED-8F13-426F-BC42-4D730658C8F7}" Language="SFX" Hash="{DD04E2E4-BBDC-4312-BBDB-3FD1319E7618}">
+		<SoundBank Id="1936453145" Type="Event" GUID="{7CE7E7ED-8F13-426F-BC42-4D730658C8F7}" Language="SFX" Hash="{A8D98CD1-E454-048A-8130-2058F369B49B}">
 			<ObjectPath>Amb_Wind_Light</ObjectPath>
 			<ShortName>Amb_Wind_Light</ShortName>
 			<Path>Event/Amb_Wind_Light.bnk</Path>
@@ -2415,7 +3000,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{FA44AA2D-F337-29EC-7655-6D5D5E7E7B89}">
+		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{7935F794-D86C-D1CE-9D95-2985428CD698}">
 			<ObjectPath>SX_player_feedback_death</ObjectPath>
 			<ShortName>SX_player_feedback_death</ShortName>
 			<Path>Event/SX_player_feedback_death.bnk</Path>
@@ -2445,15 +3030,30 @@
 					<Path>Media/462844646.wem</Path>
 					<CachePath>SFX/DEATH_71_068052AE.wem</CachePath>
 				</File>
+				<File Id="569937724" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\Glitch_Skyrunner-01.wav</ShortName>
+					<Path>Media/569937724.wem</Path>
+					<CachePath>SFX/Player_Feedback/Glitch_Skyrunner-01_B9294F64.wem</CachePath>
+				</File>
 				<File Id="576680267" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>DEATH_74.wav</ShortName>
 					<Path>Media/576680267.wem</Path>
 					<CachePath>SFX/DEATH_74_942FA459.wem</CachePath>
 				</File>
+				<File Id="679719115" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\Glitch_Skyrunner-03.wav</ShortName>
+					<Path>Media/679719115.wem</Path>
+					<CachePath>SFX/Player_Feedback/Glitch_Skyrunner-03_77A52C3C.wem</CachePath>
+				</File>
 				<File Id="752836377" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>DEATH_70.wav</ShortName>
 					<Path>Media/752836377.wem</Path>
 					<CachePath>SFX/DEATH_70_A433B99F.wem</CachePath>
+				</File>
+				<File Id="840910180" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\Glitch_Skyrunner-02.wav</ShortName>
+					<Path>Media/840910180.wem</Path>
+					<CachePath>SFX/Player_Feedback/Glitch_Skyrunner-02_34C55980.wem</CachePath>
 				</File>
 				<File Id="876609500" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>DEATH_75.wav</ShortName>
@@ -2482,15 +3082,18 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="1950512069" Name="SX_player_feedback_death" ObjectPath="\Events\Player\Feedback\SX_player_feedback_death" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" DurationType="OneShot" DurationMin="3.4185793" DurationMax="3.4185793">
+				<Event Id="1950512069" Name="SX_player_feedback_death" ObjectPath="\Events\Player\Feedback\SX_player_feedback_death" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" DurationType="OneShot" DurationMin="5.381965" DurationMax="6.6473866">
 					<MediaRefs>
 						<MediaRef Id="246221016"/>
 						<MediaRef Id="313476358"/>
 						<MediaRef Id="400381312"/>
 						<MediaRef Id="404584684"/>
 						<MediaRef Id="462844646"/>
+						<MediaRef Id="569937724"/>
 						<MediaRef Id="576680267"/>
+						<MediaRef Id="679719115"/>
 						<MediaRef Id="752836377"/>
+						<MediaRef Id="840910180"/>
 						<MediaRef Id="876609500"/>
 						<MediaRef Id="1000619729"/>
 						<MediaRef Id="1009670668"/>
@@ -2579,7 +3182,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2041690827" Type="Event" GUID="{499739A7-A19C-4D35-A43D-6E43729F9830}" Language="SFX" Hash="{2BC6C37C-3D7C-5C92-7AEA-A4598CAE0854}">
+		<SoundBank Id="2041690827" Type="Event" GUID="{499739A7-A19C-4D35-A43D-6E43729F9830}" Language="SFX" Hash="{BDB7B166-A3D0-E0A3-E406-C6FCC2D137AE}">
 			<ObjectPath>Amb_Bird</ObjectPath>
 			<ShortName>Amb_Bird</ShortName>
 			<Path>Event/Amb_Bird.bnk</Path>
@@ -2604,7 +3207,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{DECC5F51-34C8-09C8-2136-4A08040902C9}">
+		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{906F850D-C3CB-1F87-499E-577FF2B022A8}">
 			<ObjectPath>SX_player_dash</ObjectPath>
 			<ShortName>SX_player_dash</ShortName>
 			<Path>Event/SX_player_dash.bnk</Path>
@@ -2682,7 +3285,7 @@
 				<File Id="718470895" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>GRAP_97.wav</ShortName>
 					<Path>Media/718470895.wem</Path>
-					<CachePath>SFX/GRAP_97_B50F98A1.wem</CachePath>
+					<CachePath>SFX/GRAP_97_8AA06F05.wem</CachePath>
 				</File>
 				<File Id="729647487" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\woosh_dash_05.wav</ShortName>
@@ -2857,24 +3460,224 @@
 				<Event Id="2484145022" Name="Play_Stop_TestBeep_Loop" ObjectPath="\Events\Test\TestEvents\Play_Stop_TestBeep_Loop" GUID="{A5E90370-96BE-450D-B970-BCFBC429B56F}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2503215874" Type="Event" GUID="{D7F61B65-CFFF-43D3-86C7-ED9354CBDDC3}" Language="SFX" Hash="{55DF22D7-EB9B-ADCE-4903-0BF2B0DBE110}">
+		<SoundBank Id="2503215874" Type="Event" GUID="{D7F61B65-CFFF-43D3-86C7-ED9354CBDDC3}" Language="SFX" Hash="{AD46B388-CB3B-62F7-ED74-31E63D352EA5}">
 			<ObjectPath>SX_lowlife_loop</ObjectPath>
 			<ShortName>SX_lowlife_loop</ShortName>
 			<Path>Event/SX_lowlife_loop.bnk</Path>
 			<Media>
+				<File Id="12966641" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_124.wav</ShortName>
+					<Path>Media/12966641.wem</Path>
+					<CachePath>SFX/RESP_124_8BA44ECA.wem</CachePath>
+				</File>
+				<File Id="32410770" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_123.wav</ShortName>
+					<Path>Media/32410770.wem</Path>
+					<CachePath>SFX/RESP_123_8E2C7B04.wem</CachePath>
+				</File>
+				<File Id="85257753" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_110.wav</ShortName>
+					<Path>Media/85257753.wem</Path>
+					<CachePath>SFX/RESP_110_D25730E1.wem</CachePath>
+				</File>
+				<File Id="141975391" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_117.wav</ShortName>
+					<Path>Media/141975391.wem</Path>
+					<CachePath>SFX/RESP_117_A5003B70.wem</CachePath>
+				</File>
+				<File Id="188555620" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_115.wav</ShortName>
+					<Path>Media/188555620.wem</Path>
+					<CachePath>SFX/RESP_115_4C123B3B.wem</CachePath>
+				</File>
+				<File Id="202591642" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_112.wav</ShortName>
+					<Path>Media/202591642.wem</Path>
+					<CachePath>SFX/RESP_112_B586DC0A.wem</CachePath>
+				</File>
+				<File Id="285894827" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_111.wav</ShortName>
+					<Path>Media/285894827.wem</Path>
+					<CachePath>SFX/RESP_111_CDB4562C.wem</CachePath>
+				</File>
+				<File Id="396434332" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_121.wav</ShortName>
+					<Path>Media/396434332.wem</Path>
+					<CachePath>SFX/RESP_121_F58B5E64.wem</CachePath>
+				</File>
+				<File Id="409110550" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_122.wav</ShortName>
+					<Path>Media/409110550.wem</Path>
+					<CachePath>SFX/RESP_122_0F3D3939.wem</CachePath>
+				</File>
+				<File Id="419169775" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_113.wav</ShortName>
+					<Path>Media/419169775.wem</Path>
+					<CachePath>SFX/RESP_113_D687A71C.wem</CachePath>
+				</File>
+				<File Id="441846896" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_116.wav</ShortName>
+					<Path>Media/441846896.wem</Path>
+					<CachePath>SFX/RESP_116_0EC976B4.wem</CachePath>
+				</File>
+				<File Id="467738657" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_119.wav</ShortName>
+					<Path>Media/467738657.wem</Path>
+					<CachePath>SFX/RESP_119_AF8CC001.wem</CachePath>
+				</File>
+				<File Id="517352390" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_109.wav</ShortName>
+					<Path>Media/517352390.wem</Path>
+					<CachePath>SFX/RESP_109_941A640D.wem</CachePath>
+				</File>
+				<File Id="536783136" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_133.wav</ShortName>
+					<Path>Media/536783136.wem</Path>
+					<CachePath>SFX/RESP_133_3C368A38.wem</CachePath>
+				</File>
+				<File Id="588964494" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_128.wav</ShortName>
+					<Path>Media/588964494.wem</Path>
+					<CachePath>SFX/RESP_128_6EFE3712.wem</CachePath>
+				</File>
 				<File Id="612822625" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>low_life_feedback.wav</ShortName>
 					<Path>Media/612822625.wem</Path>
 					<CachePath>SFX/low_life_feedback_BC842C86.wem</CachePath>
 				</File>
+				<File Id="626305088" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_134.wav</ShortName>
+					<Path>Media/626305088.wem</Path>
+					<CachePath>SFX/RESP_134_9A688BB3.wem</CachePath>
+				</File>
+				<File Id="678556776" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_107.wav</ShortName>
+					<Path>Media/678556776.wem</Path>
+					<CachePath>SFX/RESP_107_6C36D97C.wem</CachePath>
+				</File>
+				<File Id="724802695" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_127.wav</ShortName>
+					<Path>Media/724802695.wem</Path>
+					<CachePath>SFX/RESP_127_80AC1705.wem</CachePath>
+				</File>
+				<File Id="769248801" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_120.wav</ShortName>
+					<Path>Media/769248801.wem</Path>
+					<CachePath>SFX/RESP_120_4C0F63C3.wem</CachePath>
+				</File>
+				<File Id="769898239" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_137.wav</ShortName>
+					<Path>Media/769898239.wem</Path>
+					<CachePath>SFX/RESP_137_621BAD18.wem</CachePath>
+				</File>
+				<File Id="770333763" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_132.wav</ShortName>
+					<Path>Media/770333763.wem</Path>
+					<CachePath>SFX/RESP_132_970A9405.wem</CachePath>
+				</File>
+				<File Id="779026608" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_118.wav</ShortName>
+					<Path>Media/779026608.wem</Path>
+					<CachePath>SFX/RESP_118_14A30DD0.wem</CachePath>
+				</File>
+				<File Id="868923140" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_108.wav</ShortName>
+					<Path>Media/868923140.wem</Path>
+					<CachePath>SFX/RESP_108_63CBADBE.wem</CachePath>
+				</File>
+				<File Id="875522615" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_126.wav</ShortName>
+					<Path>Media/875522615.wem</Path>
+					<CachePath>SFX/RESP_126_5F962AB2.wem</CachePath>
+				</File>
+				<File Id="927832507" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_125.wav</ShortName>
+					<Path>Media/927832507.wem</Path>
+					<CachePath>SFX/RESP_125_D6793844.wem</CachePath>
+				</File>
+				<File Id="951933254" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_114.wav</ShortName>
+					<Path>Media/951933254.wem</Path>
+					<CachePath>SFX/RESP_114_6FAE1D77.wem</CachePath>
+				</File>
+				<File Id="976866474" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_136.wav</ShortName>
+					<Path>Media/976866474.wem</Path>
+					<CachePath>SFX/RESP_136_96E1F1B9.wem</CachePath>
+				</File>
+				<File Id="1016071549" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_106.wav</ShortName>
+					<Path>Media/1016071549.wem</Path>
+					<CachePath>SFX/RESP_106_F5A4BC35.wem</CachePath>
+				</File>
+				<File Id="1046204253" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_135.wav</ShortName>
+					<Path>Media/1046204253.wem</Path>
+					<CachePath>SFX/RESP_135_38BDEB32.wem</CachePath>
+				</File>
+				<File Id="1046971133" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_131.wav</ShortName>
+					<Path>Media/1046971133.wem</Path>
+					<CachePath>SFX/RESP_131_C5AB14D6.wem</CachePath>
+				</File>
+				<File Id="1056973428" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_129.wav</ShortName>
+					<Path>Media/1056973428.wem</Path>
+					<CachePath>SFX/RESP_129_19FD0E51.wem</CachePath>
+				</File>
+				<File Id="1066951916" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_130.wav</ShortName>
+					<Path>Media/1066951916.wem</Path>
+					<CachePath>SFX/RESP_130_5AB2205E.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
 				<Event Id="2503215874" Name="SX_lowlife_loop" ObjectPath="\Events\Player\Feedback\SX_lowlife_loop" GUID="{D7F61B65-CFFF-43D3-86C7-ED9354CBDDC3}" DurationType="Infinite">
 					<MediaRefs>
+						<MediaRef Id="12966641"/>
+						<MediaRef Id="32410770"/>
+						<MediaRef Id="85257753"/>
+						<MediaRef Id="141975391"/>
+						<MediaRef Id="188555620"/>
+						<MediaRef Id="202591642"/>
+						<MediaRef Id="285894827"/>
+						<MediaRef Id="396434332"/>
+						<MediaRef Id="409110550"/>
+						<MediaRef Id="419169775"/>
+						<MediaRef Id="441846896"/>
+						<MediaRef Id="467738657"/>
+						<MediaRef Id="517352390"/>
+						<MediaRef Id="536783136"/>
+						<MediaRef Id="588964494"/>
 						<MediaRef Id="612822625"/>
+						<MediaRef Id="626305088"/>
+						<MediaRef Id="678556776"/>
+						<MediaRef Id="724802695"/>
+						<MediaRef Id="769248801"/>
+						<MediaRef Id="769898239"/>
+						<MediaRef Id="770333763"/>
+						<MediaRef Id="779026608"/>
+						<MediaRef Id="868923140"/>
+						<MediaRef Id="875522615"/>
+						<MediaRef Id="927832507"/>
+						<MediaRef Id="951933254"/>
+						<MediaRef Id="976866474"/>
+						<MediaRef Id="1016071549"/>
+						<MediaRef Id="1046204253"/>
+						<MediaRef Id="1046971133"/>
+						<MediaRef Id="1056973428"/>
+						<MediaRef Id="1066951916"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="435591300" Name="REV_Couloir" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Couloir" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}"/>
+						<AuxBusRef Id="641705904" Name="REV_Arena" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Arena" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}"/>
+						<AuxBusRef Id="3750820532" Name="REV_Large" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"/>
+					</AuxBusRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="2588398148" Type="Bus" GUID="{51D0B729-C328-4E6F-B258-E07D3F07A2FE}" Language="SFX" Hash="{DB682DBA-52DD-6FB9-2E5D-DF0C706647CE}">
 			<ObjectPath>REV_MUSIC</ObjectPath>
@@ -2955,7 +3758,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2872651194" Type="Event" GUID="{97A39C71-6024-4A20-A666-3E641EBF8422}" Language="SFX" Hash="{80287785-C163-F5A1-BB3D-0A7CADAAB78C}">
+		<SoundBank Id="2872651194" Type="Event" GUID="{97A39C71-6024-4A20-A666-3E641EBF8422}" Language="SFX" Hash="{DEA8BEDC-EFF8-65CE-3624-ED1905B95B77}">
 			<ObjectPath>Amb_Creepy</ObjectPath>
 			<ShortName>Amb_Creepy</ShortName>
 			<Path>Event/Amb_Creepy.bnk</Path>
@@ -3048,42 +3851,242 @@
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3129104079" Type="Event" GUID="{6F24A296-5907-4F40-A9D0-16FF5B44660B}" Language="SFX" Hash="{9D9F9B6F-3B3F-784B-A126-41C6EFB9D443}">
+		<SoundBank Id="3129104079" Type="Event" GUID="{6F24A296-5907-4F40-A9D0-16FF5B44660B}" Language="SFX" Hash="{1D2FAD86-507A-7744-B1AD-99F858EB6699}">
 			<ObjectPath>SX_player_metal_enter</ObjectPath>
 			<ShortName>SX_player_metal_enter</ShortName>
 			<Path>Event/SX_player_metal_enter.bnk</Path>
 			<Media>
+				<File Id="12966641" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_124.wav</ShortName>
+					<Path>Media/12966641.wem</Path>
+					<CachePath>SFX/RESP_124_8BA44ECA.wem</CachePath>
+				</File>
+				<File Id="32410770" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_123.wav</ShortName>
+					<Path>Media/32410770.wem</Path>
+					<CachePath>SFX/RESP_123_8E2C7B04.wem</CachePath>
+				</File>
+				<File Id="85257753" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_110.wav</ShortName>
+					<Path>Media/85257753.wem</Path>
+					<CachePath>SFX/RESP_110_D25730E1.wem</CachePath>
+				</File>
+				<File Id="141975391" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_117.wav</ShortName>
+					<Path>Media/141975391.wem</Path>
+					<CachePath>SFX/RESP_117_A5003B70.wem</CachePath>
+				</File>
 				<File Id="143796492" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\slide_metal_enter.wav</ShortName>
 					<Path>Media/143796492.wem</Path>
 					<CachePath>SFX/Player_Movement/slide_metal_enter_891EC41E.wem</CachePath>
+				</File>
+				<File Id="188555620" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_115.wav</ShortName>
+					<Path>Media/188555620.wem</Path>
+					<CachePath>SFX/RESP_115_4C123B3B.wem</CachePath>
+				</File>
+				<File Id="202591642" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_112.wav</ShortName>
+					<Path>Media/202591642.wem</Path>
+					<CachePath>SFX/RESP_112_B586DC0A.wem</CachePath>
 				</File>
 				<File Id="258535358" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\impact_bumper_01.wav</ShortName>
 					<Path>Media/258535358.wem</Path>
 					<CachePath>SFX/Player_Movement/impact_bumper_01_CBA20145.wem</CachePath>
 				</File>
+				<File Id="285894827" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_111.wav</ShortName>
+					<Path>Media/285894827.wem</Path>
+					<CachePath>SFX/RESP_111_CDB4562C.wem</CachePath>
+				</File>
+				<File Id="396434332" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_121.wav</ShortName>
+					<Path>Media/396434332.wem</Path>
+					<CachePath>SFX/RESP_121_F58B5E64.wem</CachePath>
+				</File>
+				<File Id="409110550" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_122.wav</ShortName>
+					<Path>Media/409110550.wem</Path>
+					<CachePath>SFX/RESP_122_0F3D3939.wem</CachePath>
+				</File>
+				<File Id="419169775" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_113.wav</ShortName>
+					<Path>Media/419169775.wem</Path>
+					<CachePath>SFX/RESP_113_D687A71C.wem</CachePath>
+				</File>
 				<File Id="428711483" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\impact_bumper_02.wav</ShortName>
 					<Path>Media/428711483.wem</Path>
 					<CachePath>SFX/Player_Movement/impact_bumper_02_DB47FB7C.wem</CachePath>
+				</File>
+				<File Id="441846896" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_116.wav</ShortName>
+					<Path>Media/441846896.wem</Path>
+					<CachePath>SFX/RESP_116_0EC976B4.wem</CachePath>
+				</File>
+				<File Id="467738657" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_119.wav</ShortName>
+					<Path>Media/467738657.wem</Path>
+					<CachePath>SFX/RESP_119_AF8CC001.wem</CachePath>
+				</File>
+				<File Id="517352390" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_109.wav</ShortName>
+					<Path>Media/517352390.wem</Path>
+					<CachePath>SFX/RESP_109_941A640D.wem</CachePath>
+				</File>
+				<File Id="536783136" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_133.wav</ShortName>
+					<Path>Media/536783136.wem</Path>
+					<CachePath>SFX/RESP_133_3C368A38.wem</CachePath>
+				</File>
+				<File Id="588964494" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_128.wav</ShortName>
+					<Path>Media/588964494.wem</Path>
+					<CachePath>SFX/RESP_128_6EFE3712.wem</CachePath>
+				</File>
+				<File Id="626305088" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_134.wav</ShortName>
+					<Path>Media/626305088.wem</Path>
+					<CachePath>SFX/RESP_134_9A688BB3.wem</CachePath>
+				</File>
+				<File Id="678556776" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_107.wav</ShortName>
+					<Path>Media/678556776.wem</Path>
+					<CachePath>SFX/RESP_107_6C36D97C.wem</CachePath>
+				</File>
+				<File Id="724802695" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_127.wav</ShortName>
+					<Path>Media/724802695.wem</Path>
+					<CachePath>SFX/RESP_127_80AC1705.wem</CachePath>
+				</File>
+				<File Id="769248801" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_120.wav</ShortName>
+					<Path>Media/769248801.wem</Path>
+					<CachePath>SFX/RESP_120_4C0F63C3.wem</CachePath>
+				</File>
+				<File Id="769898239" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_137.wav</ShortName>
+					<Path>Media/769898239.wem</Path>
+					<CachePath>SFX/RESP_137_621BAD18.wem</CachePath>
+				</File>
+				<File Id="770333763" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_132.wav</ShortName>
+					<Path>Media/770333763.wem</Path>
+					<CachePath>SFX/RESP_132_970A9405.wem</CachePath>
+				</File>
+				<File Id="779026608" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_118.wav</ShortName>
+					<Path>Media/779026608.wem</Path>
+					<CachePath>SFX/RESP_118_14A30DD0.wem</CachePath>
+				</File>
+				<File Id="868923140" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_108.wav</ShortName>
+					<Path>Media/868923140.wem</Path>
+					<CachePath>SFX/RESP_108_63CBADBE.wem</CachePath>
+				</File>
+				<File Id="875522615" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_126.wav</ShortName>
+					<Path>Media/875522615.wem</Path>
+					<CachePath>SFX/RESP_126_5F962AB2.wem</CachePath>
+				</File>
+				<File Id="927832507" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_125.wav</ShortName>
+					<Path>Media/927832507.wem</Path>
+					<CachePath>SFX/RESP_125_D6793844.wem</CachePath>
+				</File>
+				<File Id="951933254" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_114.wav</ShortName>
+					<Path>Media/951933254.wem</Path>
+					<CachePath>SFX/RESP_114_6FAE1D77.wem</CachePath>
+				</File>
+				<File Id="976866474" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_136.wav</ShortName>
+					<Path>Media/976866474.wem</Path>
+					<CachePath>SFX/RESP_136_96E1F1B9.wem</CachePath>
+				</File>
+				<File Id="1016071549" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_106.wav</ShortName>
+					<Path>Media/1016071549.wem</Path>
+					<CachePath>SFX/RESP_106_F5A4BC35.wem</CachePath>
 				</File>
 				<File Id="1043703996" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Player_Movement\impact_bumper_03.wav</ShortName>
 					<Path>Media/1043703996.wem</Path>
 					<CachePath>SFX/Player_Movement/impact_bumper_03_C5754ACF.wem</CachePath>
 				</File>
+				<File Id="1046204253" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_135.wav</ShortName>
+					<Path>Media/1046204253.wem</Path>
+					<CachePath>SFX/RESP_135_38BDEB32.wem</CachePath>
+				</File>
+				<File Id="1046971133" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_131.wav</ShortName>
+					<Path>Media/1046971133.wem</Path>
+					<CachePath>SFX/RESP_131_C5AB14D6.wem</CachePath>
+				</File>
+				<File Id="1056973428" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_129.wav</ShortName>
+					<Path>Media/1056973428.wem</Path>
+					<CachePath>SFX/RESP_129_19FD0E51.wem</CachePath>
+				</File>
+				<File Id="1066951916" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>RESP_130.wav</ShortName>
+					<Path>Media/1066951916.wem</Path>
+					<CachePath>SFX/RESP_130_5AB2205E.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
-				<Event Id="3129104079" Name="SX_player_metal_enter" ObjectPath="\Events\Player\Movement\SX_player_metal_enter" GUID="{6F24A296-5907-4F40-A9D0-16FF5B44660B}" DurationType="OneShot" DurationMin="0.70682967" DurationMax="0.79338956">
+				<Event Id="3129104079" Name="SX_player_metal_enter" ObjectPath="\Events\Player\Movement\SX_player_metal_enter" GUID="{6F24A296-5907-4F40-A9D0-16FF5B44660B}" DurationType="OneShot" DurationMin="0.70682967" DurationMax="3.0018122">
 					<MediaRefs>
+						<MediaRef Id="12966641"/>
+						<MediaRef Id="32410770"/>
+						<MediaRef Id="85257753"/>
+						<MediaRef Id="141975391"/>
 						<MediaRef Id="143796492"/>
+						<MediaRef Id="188555620"/>
+						<MediaRef Id="202591642"/>
 						<MediaRef Id="258535358"/>
+						<MediaRef Id="285894827"/>
+						<MediaRef Id="396434332"/>
+						<MediaRef Id="409110550"/>
+						<MediaRef Id="419169775"/>
 						<MediaRef Id="428711483"/>
+						<MediaRef Id="441846896"/>
+						<MediaRef Id="467738657"/>
+						<MediaRef Id="517352390"/>
+						<MediaRef Id="536783136"/>
+						<MediaRef Id="588964494"/>
+						<MediaRef Id="626305088"/>
+						<MediaRef Id="678556776"/>
+						<MediaRef Id="724802695"/>
+						<MediaRef Id="769248801"/>
+						<MediaRef Id="769898239"/>
+						<MediaRef Id="770333763"/>
+						<MediaRef Id="779026608"/>
+						<MediaRef Id="868923140"/>
+						<MediaRef Id="875522615"/>
+						<MediaRef Id="927832507"/>
+						<MediaRef Id="951933254"/>
+						<MediaRef Id="976866474"/>
+						<MediaRef Id="1016071549"/>
 						<MediaRef Id="1043703996"/>
+						<MediaRef Id="1046204253"/>
+						<MediaRef Id="1046971133"/>
+						<MediaRef Id="1056973428"/>
+						<MediaRef Id="1066951916"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="435591300" Name="REV_Couloir" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Couloir" GUID="{EADBB9C8-F672-4CB3-BCF4-DB9D0B403ABF}"/>
+						<AuxBusRef Id="641705904" Name="REV_Arena" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Arena" GUID="{02F57995-C4B2-4F04-BCF6-63E789CC124D}"/>
+						<AuxBusRef Id="3750820532" Name="REV_Large" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX Master\REV_SFX\REV_Large" GUID="{6A0E03DB-6F2B-41C0-9BBA-2CCCBE2E4591}"/>
+					</AuxBusRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="3390387889" Type="Event" GUID="{6D13E3BD-F5FB-4B8B-8184-DB05606BBF7C}" Language="SFX" Hash="{D8604E0D-FECB-438D-904A-A95669B5448F}">
 			<ObjectPath>SX_player_dash_regen</ObjectPath>
@@ -4111,7 +5114,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3755979049" Type="Event" GUID="{A4E26606-8423-4B2B-9B42-08CE1DB084CD}" Language="SFX" Hash="{796F18E1-D75A-A76B-7247-4F64F9ECEAB7}">
+		<SoundBank Id="3755979049" Type="Event" GUID="{A4E26606-8423-4B2B-9B42-08CE1DB084CD}" Language="SFX" Hash="{DF6AE3A9-7181-95F5-DFA0-131C70768DD8}">
 			<ObjectPath>Amb_Cave</ObjectPath>
 			<ShortName>Amb_Cave</ShortName>
 			<Path>Event/Amb_Cave.bnk</Path>
@@ -4130,7 +5133,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3821670275" Type="Event" GUID="{F5B804B1-5506-4197-9ED9-F39E5A921CE8}" Language="SFX" Hash="{70CAF47F-3BB1-ED9D-6EF8-DB8EB4D8837D}">
+		<SoundBank Id="3821670275" Type="Event" GUID="{F5B804B1-5506-4197-9ED9-F39E5A921CE8}" Language="SFX" Hash="{701EE87F-1C9B-061F-E9EC-C9304EB07038}">
 			<ObjectPath>Amb_Bumper_Aura</ObjectPath>
 			<ShortName>Amb_Bumper_Aura</ShortName>
 			<Path>Event/Amb_Bumper_Aura.bnk</Path>
@@ -4155,7 +5158,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3886403915" Type="Event" GUID="{5A25872A-6DFA-4D4C-A12F-D7D666533FE6}" Language="SFX" Hash="{80DB4ECF-19F3-17CD-6A0A-193CBA0B2FC7}">
+		<SoundBank Id="3886403915" Type="Event" GUID="{5A25872A-6DFA-4D4C-A12F-D7D666533FE6}" Language="SFX" Hash="{50860575-E29F-67AF-EA31-9641ABD49086}">
 			<ObjectPath>Play_Splashscreen</ObjectPath>
 			<ShortName>Play_Splashscreen</ShortName>
 			<Path>Event/Play_Splashscreen.bnk</Path>
@@ -4165,11 +5168,17 @@
 					<Path>Media/978787195.wem</Path>
 					<CachePath>SFX/PSX_splashscreen_DC4821A1.wem</CachePath>
 				</File>
+				<File Id="1070764886" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Music\psxstartarp.wav</ShortName>
+					<Path>Media/1070764886.wem</Path>
+					<CachePath>SFX/Music/psxstartarp_5CB4E45D.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
 				<Event Id="3886403915" Name="Play_Splashscreen" ObjectPath="\Events\UI\Play_Splashscreen" GUID="{5A25872A-6DFA-4D4C-A12F-D7D666533FE6}" DurationType="OneShot" DurationMin="10.747877" DurationMax="10.747877">
 					<MediaRefs>
 						<MediaRef Id="978787195"/>
+						<MediaRef Id="1070764886"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -4222,7 +5231,7 @@
 				<Event Id="4142977861" Name="SX_player_game_restart" ObjectPath="\Events\Player\Feedback\SX_player_game_restart" GUID="{8268ED73-B317-4719-887E-F9D8B8D4AA85}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="4239386522" Type="Event" GUID="{AF023191-835D-40F3-B33D-929589737D81}" Language="SFX" Hash="{69616A59-14C5-44F0-2633-0E443DD0AF8E}">
+		<SoundBank Id="4239386522" Type="Event" GUID="{AF023191-835D-40F3-B33D-929589737D81}" Language="SFX" Hash="{8D1DD650-4097-CB48-7D8A-8E84452A0A63}">
 			<ObjectPath>Amb_Wind_Trees</ObjectPath>
 			<ShortName>Amb_Wind_Trees</ShortName>
 			<Path>Event/Amb_Wind_Trees.bnk</Path>
@@ -4242,5 +5251,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{489CA4D3-9CAC-7CC8-8B9B-A4F275DAAFC5}</FileHash>
+	<FileHash>{A2175C4D-CEC4-89FB-DC37-5CCB2D26967A}</FileHash>
 </SoundBanksInfo>

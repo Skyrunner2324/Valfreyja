@@ -7326,6 +7326,11 @@
 						</Sound>
 						<Sound Name="player_shield_regen" ID="{C393DDB2-F61D-459C-B1E8-32F8F0391A6A}" ShortID="131267186">
 							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
@@ -7348,7 +7353,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-96</Value>
+										<Value>-9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -7366,12 +7371,11 @@
 							<ChildrenList>
 								<AudioFileSource Name="SX_player_shield_regen" ID="{AAF8C52B-5A40-45DA-957F-F7A662D35694}">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.993124747050216"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.494479250334672"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.18505164319248"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.18505164319248"/>
 										<Property Name="FadeOutShape" Type="int16" Value="2"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.795244979919678"/>
-										<Property Name="TrimEnd" Type="Real64" Value="2.38573493975904"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.18505164319248"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>SX_player_shield_regen.wav</AudioFile>
@@ -8136,6 +8140,143 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</BlendContainer>
+						<RandomSequenceContainer Name="death_glitch" ID="{2782505A-9246-4E3D-88CF-2351F869CD1A}" ShortID="749087489">
+							<PropertyList>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Master" ID="{B22B8F69-015E-4A85-B8EF-A2F0A4E8D1FC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Glitch_Skyrunner-01" ID="{63DBBCAF-B907-4C2F-819E-6FCE01373E48}" ShortID="223341094">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Glitch_Skyrunner-01" ID="{8996A644-2146-4F8D-AB68-6955BCBFB4BE}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="5.38196526095347"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.38196526095347"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player_Feedback\Glitch_Skyrunner-01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="569937724"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Glitch_Skyrunner-01" ID="{8996A644-2146-4F8D-AB68-6955BCBFB4BE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Glitch_Skyrunner-03" ID="{136FB926-76D3-4E23-A4F2-6130D04D4B56}" ShortID="578274263">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Glitch_Skyrunner-03" ID="{3E0F8B31-7FD3-48F2-AB7B-86BF4A79A971}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="6.19014084507043"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.19014084507043"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player_Feedback\Glitch_Skyrunner-03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="679719115"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Glitch_Skyrunner-03" ID="{3E0F8B31-7FD3-48F2-AB7B-86BF4A79A971}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Glitch_Skyrunner-02" ID="{44DF03F3-9158-4635-8210-BBF7ABE7FECC}" ShortID="538868380">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Glitch_Skyrunner-02" ID="{12B64A4B-DA1A-4210-B984-E8750FEC3DFF}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="6.64738635897014"/>
+												<Property Name="LoopEnd" Type="Real64" Value="5.89044265593561"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.64738635897014"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player_Feedback\Glitch_Skyrunner-02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="840910180"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Glitch_Skyrunner-02" ID="{12B64A4B-DA1A-4210-B984-E8750FEC3DFF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="shield_feedback_up" ID="{C896D03F-E6A1-437E-A9E1-28C879E62E9A}" ShortID="158065034">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="shield_feedback_up" ID="{8A440BCB-6935-43D9-85B7-3197DCCE8142}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.477867203219316"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>shield_feedback_up.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="749562082"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="shield_feedback_up" ID="{8A440BCB-6935-43D9-85B7-3197DCCE8142}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="PlayerVoice" ID="{D8828052-4B5E-42B9-A242-9A234D7F9FFB}" ShortID="29708014">
@@ -8197,7 +8338,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -8766,7 +8907,7 @@
 										</Property>
 										<Property Name="Weight" Type="Real64">
 											<ValueList>
-												<Value>60</Value>
+												<Value>45</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -8784,7 +8925,7 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0834699453551912"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.191803278688525"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.136748633879781"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.12149041791734"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>GRAP_97.wav</AudioFile>
@@ -8806,11 +8947,6 @@
 								<Property Name="UserAuxSendVolume0" Type="Real64">
 									<ValueList>
 										<Value>-20</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -8852,6 +8988,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="JUMP_20" ID="{081AC090-76F6-4BDA-8651-4D78F7FB5893}" ShortID="653404734">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -8866,7 +9009,7 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0573770491803279"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.084016393442623"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.147540983606557"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0540744466800805"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>JUMP_20.wav</AudioFile>
@@ -8894,8 +9037,8 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0737704918032787"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0885245901639344"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0418032786885246"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.376229508196723"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0146403008213214"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.534680212422075"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>JUMP_21.wav</AudioFile>
@@ -8951,7 +9094,7 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.075171107241806"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.115846994535519"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.314535081091144"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.116010600876523"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>JUMP_23.wav</AudioFile>
@@ -8980,7 +9123,7 @@
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.133333333333333"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.0655737704918032"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.286338797814208"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.339994062737079"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>JUMP_24.wav</AudioFile>
@@ -9008,7 +9151,7 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0650273224043716"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.171857923497268"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.139344262295082"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.123666864575431"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>JUMP_25.wav</AudioFile>
@@ -9066,6 +9209,12 @@
 						<RandomSequenceContainer Name="voice_death" ID="{FD1D39A0-BEA3-45AB-B422-CEF0815EA341}" ShortID="388605289">
 							<PropertyList>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="OverridePriority" Type="bool" Value="True"/>
+								<Property Name="Priority" Type="int16">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -10149,7 +10298,7 @@
 										</Property>
 										<Property Name="Weight" Type="Real64">
 											<ValueList>
-												<Value>10</Value>
+												<Value>35</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -10183,6 +10332,12 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="voice_hit" ID="{F322B3AB-C26D-42DF-84F7-B3B378CC9B21}" ShortID="145439588">
 							<PropertyList>
+								<Property Name="OverridePriority" Type="bool" Value="True"/>
+								<Property Name="Priority" Type="int16">
+									<ValueList>
+										<Value>90</Value>
+									</ValueList>
+								</Property>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="5"/>
 							</PropertyList>
 							<ReferenceList>
@@ -11044,6 +11199,15 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="voice_land" ID="{6422A158-190B-46AF-A96F-D35072DC067C}" ShortID="894895673">
+							<PropertyList>
+								<Property Name="OverridePriority" Type="bool" Value="True"/>
+								<Property Name="Priority" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -11135,6 +11299,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="LAND_29" ID="{D7AD71EC-5A18-4E6F-9708-5176043E36F7}" ShortID="148948237">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-130</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -11162,6 +11333,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="LAND_30" ID="{DB3512AA-F868-4889-9083-F4FC549EFE1A}" ShortID="1042239126">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-50</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -11189,6 +11367,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="LAND_31" ID="{0D29178E-6EF7-4A3E-B213-0B2323FB808A}" ShortID="1072349374">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-50</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -11302,8 +11487,8 @@
 									<ChildrenList>
 										<AudioFileSource Name="LAND_37" ID="{3DC899B4-8291-423B-A680-E84C0FF7F826}">
 											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0588531187122736"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.110109289617486"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -11363,9 +11548,10 @@
 									<ChildrenList>
 										<AudioFileSource Name="LAND_39" ID="{20020E14-E40A-43DF-A364-996A797EE949}">
 											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0551643192488263"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.145355191256831"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0997652582159625"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>LAND_39.wav</AudioFile>
@@ -11379,13 +11565,6 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="LAND_40" ID="{1BF4601B-F032-485E-AC6D-B8338C345E9D}" ShortID="80059775">
-									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -11397,8 +11576,8 @@
 									<ChildrenList>
 										<AudioFileSource Name="LAND_40" ID="{0233FDF2-6408-478A-95FB-AE70D7922E7B}">
 											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0729376257545271"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.223360655737705"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -11471,14 +11650,49 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>1.04219</XPos>
+																		<XPos>0.69765</XPos>
 																		<YPos>-200</YPos>
 																		<Flags>0</Flags>
-																		<SegmentShape>Log1</SegmentShape>
+																		<SegmentShape>Log2</SegmentShape>
 																	</Point>
 																	<Point>
 																		<XPos>5</XPos>
-																		<YPos>0</YPos>
+																		<YPos>3.19402</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{500611CB-9599-49CE-954C-7DC616C26C7F}" ShortID="686035235">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="RTPC_PlayerSpeed" ID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{6836E193-428F-4B8D-BD41-E68449AD3F2D}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-2.46368</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3000</XPos>
+																		<YPos>3.61018</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -11493,6 +11707,19 @@
 							</ObjectLists>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="resp_arena_finished" ID="{C8E29CAC-B39B-4C12-BF15-D0823EF2D1B7}" ShortID="924940615">
+							<PropertyList>
+								<Property Name="OverridePriority" Type="bool" Value="True"/>
+								<Property Name="Priority" Type="int16">
+									<ValueList>
+										<Value>51</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -11513,6 +11740,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="RESP RAPIDE_101" ID="{440CE50D-AA36-4A5B-A420-4DED13964E3A}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.843561368209256"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>RESP RAPIDE_101.wav</AudioFile>
 											<MediaIDList>
@@ -11535,6 +11767,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="RESP RAPIDE_102" ID="{5FA98F00-88A7-46AB-AA67-FFF11A0A38F7}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.60965794768612"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>RESP RAPIDE_102.wav</AudioFile>
 											<MediaIDList>
@@ -11557,6 +11794,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="RESP RAPIDE_103" ID="{1270C9B2-81DF-4A77-86AD-70CE685826D4}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.961267605633802"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>RESP RAPIDE_103.wav</AudioFile>
 											<MediaIDList>
@@ -11579,6 +11821,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="RESP RAPIDE_104" ID="{06B844C9-D6A4-4227-8D4F-D75B355F0A97}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.26760563380282"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>RESP RAPIDE_104.wav</AudioFile>
 											<MediaIDList>
@@ -11601,6 +11848,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="RESP RAPIDE_105" ID="{B8BD5E3C-6F47-4DBE-87DE-E114B0E2226F}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.90543259557344"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>RESP RAPIDE_105.wav</AudioFile>
 											<MediaIDList>
@@ -11613,35 +11865,895 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
-							<StateInfo>
-								<StateGroupList>
-									<StateGroupInfo>
-										<StateGroupRef Name="Reverb_States" ID="{1335BED0-6CCC-45E5-9CE4-65918550FB06}"/>
-									</StateGroupInfo>
-								</StateGroupList>
-								<CustomStateList>
-									<CustomState>
-										<StateRef Name="Large" ID="{057D768C-2716-4026-A7C0-F4B42A7F81F5}"/>
-										<CustomState Name="" ID="{055FA877-99BE-42CA-B9F7-A215F8D820C5}" ShortID="467194663">
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="resp_player" ID="{BCD906AC-6F09-45BA-ADB1-14900E22BF82}" ShortID="649222095">
+							<PropertyList>
+								<Property Name="OverridePriority" Type="bool" Value="True"/>
+								<Property Name="Priority" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="RESP_130" ID="{51164D8A-2507-4BDD-89B2-99D3C5E2D322}" ShortID="613696065">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_130" ID="{AE6D8ECE-4292-4758-9572-ED88C41B1E64}">
 											<PropertyList>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.248490945674044"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 											</PropertyList>
-										</CustomState>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="Arena" ID="{D35BDB60-FC6F-461F-A698-9A09DB3C1AAE}"/>
-										<CustomState Name="" ID="{3ADB5C25-61CF-4693-A6CA-F95825A77095}" ShortID="1035320"/>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="Couloir" ID="{A4DBFCF1-CE50-495F-AE1B-13A0F302E73B}"/>
-										<CustomState Name="" ID="{7F711076-D202-4DB4-88AC-0C7D3E761838}" ShortID="430407786">
+											<Language>SFX</Language>
+											<AudioFile>RESP_130.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1066951916"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_130" ID="{AE6D8ECE-4292-4758-9572-ED88C41B1E64}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_131" ID="{D45A255C-9D18-4916-9ED3-452E51556408}" ShortID="391548961">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_131" ID="{2CE93D35-FD38-4AF0-B9C0-83206C47E39B}">
 											<PropertyList>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.116197183098592"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 											</PropertyList>
-										</CustomState>
-									</CustomState>
-								</CustomStateList>
-							</StateInfo>
+											<Language>SFX</Language>
+											<AudioFile>RESP_131.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1046971133"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_131" ID="{2CE93D35-FD38-4AF0-B9C0-83206C47E39B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_132" ID="{B9026C5D-1A32-4620-9AD8-BDF421B22DD3}" ShortID="22909572">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_132" ID="{CFBCFFE2-9D48-44B3-9428-5F9FA3F04BAE}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.177481556002683"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_132.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="770333763"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_132" ID="{CFBCFFE2-9D48-44B3-9428-5F9FA3F04BAE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_133" ID="{A16E3FE3-3B9A-4DCB-B89F-05804FA5EA3C}" ShortID="865241254">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_133" ID="{7A1363B9-1863-498A-8BF1-6CFCA9EF2C55}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.140845070422535"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_133.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="536783136"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_133" ID="{7A1363B9-1863-498A-8BF1-6CFCA9EF2C55}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_134" ID="{7381F452-A70B-4855-8AB2-B149B8FC131D}" ShortID="907849699">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_134" ID="{AFEB387A-BA11-4A38-8387-DF4D76C18A82}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.203219315895372"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_134.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="626305088"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_134" ID="{AFEB387A-BA11-4A38-8387-DF4D76C18A82}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_135" ID="{56B704D1-77C6-4069-91B8-F8A8AAF5C031}" ShortID="441625360">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_135" ID="{13219B5A-CDD6-4CFD-8013-7AE0F7037B77}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.198692152917505"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_135.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1046204253"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_135" ID="{13219B5A-CDD6-4CFD-8013-7AE0F7037B77}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_136" ID="{53C20F89-5714-41C6-8B51-A3342AE3FD1A}" ShortID="227657699">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_136" ID="{FB398A28-DECF-409A-BE83-21CA2CA3BF1D}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.142018779342723"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_136.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="976866474"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_136" ID="{FB398A28-DECF-409A-BE83-21CA2CA3BF1D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_137" ID="{D534FED6-F404-47A8-9A95-91C64152B706}" ShortID="1049342652">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_137" ID="{34C9E766-9507-4028-BF4C-2ED47A3AEB56}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.461770623742455"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_137.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="769898239"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_137" ID="{34C9E766-9507-4028-BF4C-2ED47A3AEB56}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_106" ID="{CAC1C509-3874-47EB-9581-5372375238DF}" ShortID="683818536">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_106" ID="{70F882FB-A977-4F43-A785-C439B4317E33}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0457746478873239"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.106807511737089"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_106.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1016071549"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_106" ID="{70F882FB-A977-4F43-A785-C439B4317E33}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_107" ID="{666728B1-4BCE-4648-AFF3-3DF5E065F299}" ShortID="390854072">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_107" ID="{6550FD59-4CDA-48B9-8A4B-48EA5C6CA73D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0544936284372904"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.16130114017438"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_107.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="678556776"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_107" ID="{6550FD59-4CDA-48B9-8A4B-48EA5C6CA73D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_108" ID="{6ABE9C2C-B21D-4B00-87FA-A0409BB56087}" ShortID="1019741578">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_108" ID="{3749EBE4-A487-48E2-A8BD-561B031FD740}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0774647887323944"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.164319248826291"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_108.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="868923140"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_108" ID="{3749EBE4-A487-48E2-A8BD-561B031FD740}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_109" ID="{8161796F-17EA-4916-AA53-62287D7753EA}" ShortID="995157030">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_109" ID="{5D10B515-34B5-4AAD-AF02-E4F615A776C2}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.090962441314554"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.199530516431925"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_109.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="517352390"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_109" ID="{5D10B515-34B5-4AAD-AF02-E4F615A776C2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_110" ID="{2F0E5D70-9D15-48B3-8CF5-04D46E420C06}" ShortID="204103121">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_110" ID="{41C7208F-A32E-4EB6-A449-CF62AC2378D8}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0544936284372904"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0817404426559356"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_110.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="85257753"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_110" ID="{41C7208F-A32E-4EB6-A449-CF62AC2378D8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_111" ID="{A79C7000-7622-4D4B-940A-79AC36C0E220}" ShortID="432941985">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_111" ID="{1C7A6C2E-C7CD-43BD-B0E2-05922D1E2663}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0928068410462777"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_111.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="285894827"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_111" ID="{1C7A6C2E-C7CD-43BD-B0E2-05922D1E2663}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_112" ID="{DCA6D96C-81B1-44FB-995E-88722A1B7FBD}" ShortID="773079230">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_112" ID="{41C71EB5-1B82-4E40-BD36-183B3AC3617D}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.124413145539906"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_112.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="202591642"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_112" ID="{41C71EB5-1B82-4E40-BD36-183B3AC3617D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_113" ID="{EA490A58-D5D2-4FF3-9ACA-E8FC97DE3957}" ShortID="1032739093">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_113" ID="{7F3238B4-752F-4367-83F4-FB63452D859B}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.162474849094567"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_113.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="419169775"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_113" ID="{7F3238B4-752F-4367-83F4-FB63452D859B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_114" ID="{BEC164B5-FF9B-47DC-9709-977E3CC4C0F5}" ShortID="514764386">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_114" ID="{EC229131-6B08-4FF7-8082-1D76CD507B84}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.142186452045607"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_114.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="951933254"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_114" ID="{EC229131-6B08-4FF7-8082-1D76CD507B84}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_115" ID="{FEEA4B0D-6203-4733-AD25-0C37AA9CDA6F}" ShortID="652985914">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_115" ID="{A7D73448-E37B-4035-8AD5-8DF4998D10AE}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.073775989268947"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_115.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="188555620"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_115" ID="{A7D73448-E37B-4035-8AD5-8DF4998D10AE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_116" ID="{954A3A1D-C595-4571-8008-36BCA070AB09}" ShortID="897815212">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_116" ID="{BEBEE41D-9405-432E-B561-2C1770B10BBA}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0724346076458753"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_116.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="441846896"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_116" ID="{BEBEE41D-9405-432E-B561-2C1770B10BBA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_117" ID="{74AC6CE8-EBD8-4AFF-8DAE-1A7FE7221ACA}" ShortID="188429620">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_117" ID="{8B374D82-FC9C-4B9E-8F46-C6AA93ACF54B}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.119550637156271"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_117.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="141975391"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_117" ID="{8B374D82-FC9C-4B9E-8F46-C6AA93ACF54B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_118" ID="{E2BFF12C-8527-417D-B7F0-405C177CC05B}" ShortID="53956341">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_118" ID="{6058EE69-43C1-481D-92F5-867E898AD686}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.104795439302482"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_118.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="779026608"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_118" ID="{6058EE69-43C1-481D-92F5-867E898AD686}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_119" ID="{C353122E-9900-4BBF-B9E5-B31564C9F934}" ShortID="176797316">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_119" ID="{EEB54FDF-6E83-419C-8C1B-C7C84A5B09F0}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.111837692823608"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_119.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="467738657"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_119" ID="{EEB54FDF-6E83-419C-8C1B-C7C84A5B09F0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_120" ID="{93113DC0-CEC9-4357-9906-0D541C4DA184}" ShortID="549873623">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_120" ID="{C86B9F96-4184-4A5D-BAC7-A332B13EA72E}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.283702213279678"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_120.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="769248801"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_120" ID="{C86B9F96-4184-4A5D-BAC7-A332B13EA72E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_121" ID="{1D7DE459-57EF-4598-A447-F6C1B5339801}" ShortID="253344985">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_121" ID="{09B75C9A-C91F-49A1-BF25-9A86F0A0564F}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.125754527162978"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_121.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="396434332"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_121" ID="{09B75C9A-C91F-49A1-BF25-9A86F0A0564F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_122" ID="{04B133A0-5392-4412-AB6E-9DF983748EBE}" ShortID="209273147">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_122" ID="{173577AB-5988-4EFA-9243-AC3D9BB1B189}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.123239436619718"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_122.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="409110550"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_122" ID="{173577AB-5988-4EFA-9243-AC3D9BB1B189}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_123" ID="{11CD30AB-6466-4B58-9909-1EDF7A8FE8B4}" ShortID="924398931">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_123" ID="{F708BD56-E21A-47C6-B073-88302B569FA5}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.14822266934943"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_123.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="32410770"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_123" ID="{F708BD56-E21A-47C6-B073-88302B569FA5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_124" ID="{45A4E7BD-8B5D-46B0-8503-2CEE0112B6E0}" ShortID="378037135">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_124" ID="{ABCAC242-E521-4210-8C00-4C62F0CB1E2D}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0586854460093897"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_124.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="12966641"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_124" ID="{ABCAC242-E521-4210-8C00-4C62F0CB1E2D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_125" ID="{CDA16EFA-D5D6-4D8A-A971-F5A892C0C70F}" ShortID="461415276">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_125" ID="{3F9FA931-9D18-4D25-B236-7EC263CD00CA}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0482897384305836"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_125.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="927832507"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_125" ID="{3F9FA931-9D18-4D25-B236-7EC263CD00CA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_126" ID="{B7884E25-9136-41F2-B0AA-23ADDB1A6E3B}" ShortID="769349866">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_126" ID="{DF1B3278-3247-4FF8-9664-CD0E379A105A}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.150905432595573"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_126.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="875522615"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_126" ID="{DF1B3278-3247-4FF8-9664-CD0E379A105A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_127" ID="{F446E3F7-93BF-4F54-85DD-2667B187B2BB}" ShortID="823857878">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_127" ID="{34FEC9BF-7510-418D-8D0C-AD15AF2A6452}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.169014084507042"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_127.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="724802695"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_127" ID="{34FEC9BF-7510-418D-8D0C-AD15AF2A6452}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_128" ID="{04AE4C5D-6A11-4ABA-AF7C-2BB27B6437B3}" ShortID="286248709">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_128" ID="{59C71CA1-F42C-4ADC-A9AF-FAF74FA85D1B}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.108987256874581"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_128.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="588964494"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_128" ID="{59C71CA1-F42C-4ADC-A9AF-FAF74FA85D1B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="RESP_129" ID="{B56D356C-65E7-4C6E-AD8A-0B85FEDB72A7}" ShortID="458156072">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RESP_129" ID="{26DA4D98-B47B-42A0-A2D2-DDA855ED4BAA}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.232394366197183"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RESP_129.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1056973428"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RESP_129" ID="{26DA4D98-B47B-42A0-A2D2-DDA855ED4BAA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
 					<ObjectLists>
