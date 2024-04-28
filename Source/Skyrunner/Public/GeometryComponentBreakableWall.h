@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS(meta = (BlueprintSpawnableComponent))
+UCLASS(BlueprintType, meta = (BlueprintSpawnableComponent))
 class SKYRUNNER_API UGeometryComponentBreakableWall : public UGeometryCollectionComponent
 {
 	GENERATED_BODY()

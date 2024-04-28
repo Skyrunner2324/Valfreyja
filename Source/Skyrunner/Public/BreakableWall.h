@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "../Utils/Debuglog.h"
 #include "GeometryCollection/GeometryCollectionComponent.h"
+#include "GeometryComponentBreakableWall.h"
 #include "BreakableWall.generated.h"
 
 UCLASS()
@@ -23,12 +24,33 @@ protected:
 
 public : 
 	//UFUNCTION(BlueprintCallable, Category = "AudioReflectionsPortal")
-	void AddAnchor(UGeometryCollectionComponent* geometryComponent, TArray<AActor*> fieldsActor);
-	void GetAnchor();
+	//void AddAnchor(UGeometryCollectionComponent* geometryComponent, TArray<AActor*> fieldsActor);
+	//void GetAnchor();
 
 	virtual void RegisterAllComponents() override;
 
-private : 
-	TArray<AFieldSystemActor*> anchorField;
+public:
+	//UPROPERTY(BlueprintReadWrite,EditAnywhere)
+	//USceneComponent* anchorContainer;
+	//
+	//UPROPERTY(BlueprintReadWrite,EditAnywhere)
+	//TArray<AActor*> anchors;
+	//
+	UPROPERTY(BlueprintReadWrite,EditAnywhere)
+	UGeometryComponentBreakableWall* instanceGeometryComponent;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int numberOfAnchorToSpawn;
+	
+	//UPROPERTY(config, EditAnywhere, BlueprintReadOnly)
+	//TSubclassOf<AFieldSystemActor> classAnchor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	UChildActorComponent* anchor;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	TArray<AActor*> anchorFields;
+
+private : 
+	//TArray<UGeometryComponentBreakableWall*> GeometryCollectionActors;
 };
