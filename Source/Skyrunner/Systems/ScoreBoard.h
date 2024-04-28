@@ -27,10 +27,10 @@ public:
 		int CurrentScore = 0;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
-		TArray<double> TimeLeaderBoard;
+		TMap<FString, double> TimeLeaderBoard;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = Parameters)
-		TArray<int> ScoreLeaderBoard;
+		TMap<FString, int> ScoreLeaderBoard;
 
 	UFUNCTION(BlueprintCallable)
 		void SortLeaderBoards();
