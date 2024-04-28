@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1219048826" Type="Event" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" Language="SFX" Hash="{22895435-1C42-C10D-8EE7-4E5FE0D1C2D7}">
+		<SoundBank Id="1219048826" Type="Event" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" Language="SFX" Hash="{2F56AC7D-805D-085C-7C42-EAB795F8A9CD}">
 			<ObjectPath>UI_start</ObjectPath>
 			<ShortName>UI_start</ShortName>
 			<Path>Event/UI_start.bnk</Path>
@@ -16,9 +16,15 @@
 					<Path>Media/273426957.wem</Path>
 					<CachePath>SFX/FX_wolf_start_755F56E2.wem</CachePath>
 				</File>
+				<File Id="1015261183" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FX_wolf_start.wav</ShortName>
+					<Path>Media/1015261183.wem</Path>
+					<CachePath>SFX/FX_wolf_start_E3067E6C.wem</CachePath>
+				</File>
 			</Media>
 			<Plugins>
 				<Custom>
+					<Plugin Id="261891877" Name="Pitch Shifter (Custom)" ObjectPath="\Actor-Mixer Hierarchy\UI\UI_MainMixer\ui_start\FX_wolf_start_01\Pitch Shifter (Custom)" GUID="{B46019AA-B421-4BC1-BBFB-150D5D439B7A}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 					<Plugin Id="397214180" Name="Pitch Shifter (Custom)" ObjectPath="\Actor-Mixer Hierarchy\UI\UI_MainMixer\ui_start\FX_wolf_start\Pitch Shifter (Custom)" GUID="{82B901CF-4B51-47E9-948E-222173742D40}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 				</Custom>
 				<ShareSets>
@@ -26,13 +32,15 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="1219048826" Name="UI_start" ObjectPath="\Events\UI\UI_start" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" DurationType="OneShot" DurationMin="2.18725" DurationMax="2.18725">
+				<Event Id="1219048826" Name="UI_start" ObjectPath="\Events\UI\UI_start" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" DurationType="OneShot" DurationMin="4.286659" DurationMax="4.286659">
 					<MediaRefs>
 						<MediaRef Id="94838007"/>
 						<MediaRef Id="273426957"/>
+						<MediaRef Id="1015261183"/>
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
+							<PluginRef Id="261891877"/>
 							<PluginRef Id="397214180"/>
 						</Custom>
 						<ShareSets>
@@ -46,5 +54,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9ACA53A0-7F5E-B74F-2D90-96C91FDBE3FF}</FileHash>
+	<FileHash>{462EFC8B-923F-374A-4E2B-8ECF432873FD}</FileHash>
 </SoundBanksInfo>

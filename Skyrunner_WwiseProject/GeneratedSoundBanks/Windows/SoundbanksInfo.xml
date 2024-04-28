@@ -154,7 +154,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{C29E7958-222B-E72C-B5C7-7083AF11EFFB}">
+		<SoundBank Id="357563848" Type="Event" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" Language="SFX" Hash="{91DAC94D-8D2D-3116-4C07-CC9115AC016D}">
 			<ObjectPath>SX_player_land</ObjectPath>
 			<ShortName>SX_player_land</ShortName>
 			<Path>Event/SX_player_land.bnk</Path>
@@ -301,7 +301,7 @@
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.64447916" DurationMax="0.64447916">
+				<Event Id="357563848" Name="SX_player_land" ObjectPath="\Events\Player\Movement\SX_player_land" GUID="{E922F247-9AC9-4091-A047-4D54AB068BC4}" DurationType="OneShot" DurationMin="0.64447916" DurationMax="0.66216445">
 					<MediaRefs>
 						<MediaRef Id="12396239"/>
 						<MediaRef Id="77656098"/>
@@ -377,7 +377,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="412746475" Type="Event" GUID="{C93A5CBE-E6E6-432D-86DC-5C2BB41CD152}" Language="SFX" Hash="{898F6038-16A7-D4BF-88A3-957D1F663000}">
+		<SoundBank Id="412746475" Type="Event" GUID="{C93A5CBE-E6E6-432D-86DC-5C2BB41CD152}" Language="SFX" Hash="{9243A793-3F92-6367-4D01-9B521DE0EEAE}">
 			<ObjectPath>Valhalla_Voice</ObjectPath>
 			<ShortName>Valhalla_Voice</ShortName>
 			<Path>Event/Valhalla_Voice.bnk</Path>
@@ -1235,7 +1235,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1200988362" Type="Event" GUID="{2278516D-BA2F-4D5D-93F6-5353DF4E1405}" Language="SFX" Hash="{F0C2D5C6-EF80-E45A-0454-6A2294F583B3}">
+		<SoundBank Id="1200988362" Type="Event" GUID="{2278516D-BA2F-4D5D-93F6-5353DF4E1405}" Language="SFX" Hash="{8314297F-B10C-D7C0-9E55-28AE39BBBAF8}">
 			<ObjectPath>SX_player_hit</ObjectPath>
 			<ShortName>SX_player_hit</ShortName>
 			<Path>Event/SX_player_hit.bnk</Path>
@@ -1407,7 +1407,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1200988362" Name="SX_player_hit" ObjectPath="\Events\Player\Feedback\SX_player_hit" GUID="{2278516D-BA2F-4D5D-93F6-5353DF4E1405}" DurationType="OneShot" DurationMin="0.57825" DurationMax="1.5">
+				<Event Id="1200988362" Name="SX_player_hit" ObjectPath="\Events\Player\Feedback\SX_player_hit" GUID="{2278516D-BA2F-4D5D-93F6-5353DF4E1405}" DurationType="OneShot" DurationMin="0.57825" DurationMax="1.5891948">
 					<MediaRefs>
 						<MediaRef Id="39695019"/>
 						<MediaRef Id="78331148"/>
@@ -1454,7 +1454,7 @@
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1219048826" Type="Event" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" Language="SFX" Hash="{22895435-1C42-C10D-8EE7-4E5FE0D1C2D7}">
+		<SoundBank Id="1219048826" Type="Event" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" Language="SFX" Hash="{2F56AC7D-805D-085C-7C42-EAB795F8A9CD}">
 			<ObjectPath>UI_start</ObjectPath>
 			<ShortName>UI_start</ShortName>
 			<Path>Event/UI_start.bnk</Path>
@@ -1469,9 +1469,15 @@
 					<Path>Media/273426957.wem</Path>
 					<CachePath>SFX/FX_wolf_start_755F56E2.wem</CachePath>
 				</File>
+				<File Id="1015261183" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>FX_wolf_start.wav</ShortName>
+					<Path>Media/1015261183.wem</Path>
+					<CachePath>SFX/FX_wolf_start_E3067E6C.wem</CachePath>
+				</File>
 			</Media>
 			<Plugins>
 				<Custom>
+					<Plugin Id="261891877" Name="Pitch Shifter (Custom)" ObjectPath="\Actor-Mixer Hierarchy\UI\UI_MainMixer\ui_start\FX_wolf_start_01\Pitch Shifter (Custom)" GUID="{B46019AA-B421-4BC1-BBFB-150D5D439B7A}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 					<Plugin Id="397214180" Name="Pitch Shifter (Custom)" ObjectPath="\Actor-Mixer Hierarchy\UI\UI_MainMixer\ui_start\FX_wolf_start\Pitch Shifter (Custom)" GUID="{82B901CF-4B51-47E9-948E-222173742D40}" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 				</Custom>
 				<ShareSets>
@@ -1479,13 +1485,15 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="1219048826" Name="UI_start" ObjectPath="\Events\UI\UI_start" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" DurationType="OneShot" DurationMin="2.18725" DurationMax="2.18725">
+				<Event Id="1219048826" Name="UI_start" ObjectPath="\Events\UI\UI_start" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" DurationType="OneShot" DurationMin="4.286659" DurationMax="4.286659">
 					<MediaRefs>
 						<MediaRef Id="94838007"/>
 						<MediaRef Id="273426957"/>
+						<MediaRef Id="1015261183"/>
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
+							<PluginRef Id="261891877"/>
 							<PluginRef Id="397214180"/>
 						</Custom>
 						<ShareSets>
@@ -1498,7 +1506,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1311098982" Type="Event" GUID="{A670372F-931C-41E6-925A-FA1480FED58F}" Language="SFX" Hash="{12662824-5FF4-8E1E-67EC-BCAE2F948179}">
+		<SoundBank Id="1311098982" Type="Event" GUID="{A670372F-931C-41E6-925A-FA1480FED58F}" Language="SFX" Hash="{5D579183-D972-292D-B56C-36B67A593DC4}">
 			<ObjectPath>SX_player_grap_shot</ObjectPath>
 			<ShortName>SX_player_grap_shot</ShortName>
 			<Path>Event/SX_player_grap_shot.bnk</Path>
@@ -1601,7 +1609,7 @@
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="1311098982" Name="SX_player_grap_shot" ObjectPath="\Events\Player\Movement\SX_player_grap_shot" GUID="{A670372F-931C-41E6-925A-FA1480FED58F}" DurationType="OneShot" DurationMin="0.77955216" DurationMax="3">
+				<Event Id="1311098982" Name="SX_player_grap_shot" ObjectPath="\Events\Player\Movement\SX_player_grap_shot" GUID="{A670372F-931C-41E6-925A-FA1480FED58F}" DurationType="OneShot" DurationMin="0.77955216" DurationMax="3.1783895">
 					<MediaRefs>
 						<MediaRef Id="46735831"/>
 						<MediaRef Id="72868155"/>
@@ -2143,7 +2151,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{40FBF09F-0DB2-DEA8-FDF2-7A74DCF184F6}">
+		<SoundBank Id="1532180459" Type="Event" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" Language="SFX" Hash="{D2E4878E-49EF-E0C4-B0C1-C3546F805F87}">
 			<ObjectPath>SX_player_jump</ObjectPath>
 			<ShortName>SX_player_jump</ShortName>
 			<Path>Event/SX_player_jump.bnk</Path>
@@ -2215,7 +2223,7 @@
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="1532180459" Name="SX_player_jump" ObjectPath="\Events\Player\Movement\SX_player_jump" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" DurationType="OneShot" DurationMin="0.26347265" DurationMax="0.5689891">
+				<Event Id="1532180459" Name="SX_player_jump" ObjectPath="\Events\Player\Movement\SX_player_jump" GUID="{A070E3C3-67C1-4FFE-846E-631BD136D358}" DurationType="OneShot" DurationMin="0.26347265" DurationMax="0.60282296">
 					<MediaRefs>
 						<MediaRef Id="76388274"/>
 						<MediaRef Id="119646491"/>
@@ -2407,7 +2415,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{A4D0E8C9-8201-AC3D-8A36-1C7F0D4BDE88}">
+		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{FA44AA2D-F337-29EC-7655-6D5D5E7E7B89}">
 			<ObjectPath>SX_player_feedback_death</ObjectPath>
 			<ShortName>SX_player_feedback_death</ShortName>
 			<Path>Event/SX_player_feedback_death.bnk</Path>
@@ -2596,7 +2604,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{8BB7AD66-0AA9-6E94-67F5-20F51A157912}">
+		<SoundBank Id="2162617371" Type="Event" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" Language="SFX" Hash="{DECC5F51-34C8-09C8-2136-4A08040902C9}">
 			<ObjectPath>SX_player_dash</ObjectPath>
 			<ShortName>SX_player_dash</ShortName>
 			<Path>Event/SX_player_dash.bnk</Path>
@@ -2753,7 +2761,7 @@
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="2162617371" Name="SX_player_dash" ObjectPath="\Events\Player\Movement\SX_player_dash" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" DurationType="OneShot" DurationMin="0.38701168" DurationMax="0.6666667">
+				<Event Id="2162617371" Name="SX_player_dash" ObjectPath="\Events\Player\Movement\SX_player_dash" GUID="{F4227598-B79C-47C2-A22C-C305F4B1E5C2}" DurationType="OneShot" DurationMin="0.38701168" DurationMax="0.7063088">
 					<MediaRefs>
 						<MediaRef Id="76388274"/>
 						<MediaRef Id="120214767"/>
@@ -4234,5 +4242,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F7C88A47-D34F-6F9F-B1B5-3B02EC40C593}</FileHash>
+	<FileHash>{12382AF5-0361-655B-7082-A2BE90C60D93}</FileHash>
 </SoundBanksInfo>
