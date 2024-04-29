@@ -8281,6 +8281,7 @@
 				</ActorMixer>
 				<ActorMixer Name="PlayerVoice" ID="{D8828052-4B5E-42B9-A242-9A234D7F9FFB}" ShortID="29708014">
 					<PropertyList>
+						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
@@ -8290,7 +8291,7 @@
 						</Property>
 						<Property Name="Pitch" Type="int32">
 							<ValueList>
-								<Value>-100</Value>
+								<Value>-200</Value>
 							</ValueList>
 						</Property>
 						<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -8329,7 +8330,7 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="voice_dash" ID="{8E91037B-2AC2-4934-A7C7-04F41D1F117C}" ShortID="626273179">
 							<PropertyList>
-								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="10"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
 									<ValueList>
@@ -8447,6 +8448,7 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0344262295081967"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0459016393442623"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0435198469631755"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>DASH_04.wav</AudioFile>
@@ -8472,8 +8474,10 @@
 										<AudioFileSource Name="DASH_05" ID="{DC84BF73-46FC-4D29-ADA0-B03181555C95}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0204918032786885"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.165300546448087"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.142874222859876"/>
+												<Property Name="FadeOutShape" Type="int16" Value="0"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.358680057388809"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>DASH_05.wav</AudioFile>
@@ -8554,6 +8558,7 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0278688524590164"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.101639344262295"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0602582496413199"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>DASH_08.wav</AudioFile>
@@ -8662,6 +8667,7 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0586065573770491"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.213114754098361"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0691654710664754"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>DASH_12.wav</AudioFile>
@@ -8686,9 +8692,10 @@
 									<ChildrenList>
 										<AudioFileSource Name="DASH_13" ID="{6E8AB273-26E6-4973-BAAB-D282EB42796F}">
 											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0418460066953611"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.26775956284153"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0142276422764227"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>DASH_13.wav</AudioFile>
@@ -8713,8 +8720,10 @@
 									<ChildrenList>
 										<AudioFileSource Name="DASH_14" ID="{F69FEB7A-B674-4B7C-A04C-2FC45ACA8538}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0991803278688525"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0552367288378766"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.210968945755031"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0565518890483022"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>DASH_14.wav</AudioFile>
@@ -8742,6 +8751,7 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0631147540983606"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.10068306010929"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0512912482065997"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>DASH_15.wav</AudioFile>
@@ -8755,6 +8765,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="vocie design-016" ID="{DD9632F2-0E70-4278-A227-93030CEB27C6}" ShortID="192519365">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -8766,7 +8783,6 @@
 									<ChildrenList>
 										<AudioFileSource Name="DASH_16" ID="{C0F52E8D-DD2B-470B-9BB3-C0FDC4CF4C4D}">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0612021857923497"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.162568306010929"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 											</PropertyList>
@@ -8793,8 +8809,10 @@
 									<ChildrenList>
 										<AudioFileSource Name="DASH_17" ID="{A1F2ED0D-6060-4B6B-888B-82B974F2117F}">
 											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0416068866571019"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.109289617486339"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0425633668101387"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>DASH_17.wav</AudioFile>
@@ -8942,7 +8960,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="voice_jump" ID="{FB7E47F6-CDB7-4F22-BE84-889E3A40E3A1}" ShortID="269302984">
 							<PropertyList>
-								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
 									<ValueList>
@@ -9037,7 +9055,7 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0737704918032787"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0885245901639344"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0146403008213214"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0619860683966442"/>
 												<Property Name="TrimEnd" Type="Real64" Value="0.534680212422075"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -9080,6 +9098,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="JUMP_23" ID="{10CBB938-C0A7-4D0C-A329-A9DAFFF9CC12}" ShortID="143910790">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-200</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -9094,7 +9119,7 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.075171107241806"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.115846994535519"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.116010600876523"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.182964211589101"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>JUMP_23.wav</AudioFile>
@@ -9122,7 +9147,7 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0633879781420765"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.133333333333333"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0655737704918032"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.177481948397112"/>
 												<Property Name="TrimEnd" Type="Real64" Value="0.339994062737079"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -9149,9 +9174,10 @@
 										<AudioFileSource Name="JUMP_25" ID="{424A46D9-3353-4881-B420-22AAF86468F9}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0650273224043716"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.171857923497268"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.165967281766033"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.123666864575431"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.14195954750226"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.321138211382114"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>JUMP_25.wav</AudioFile>
@@ -9215,7 +9241,7 @@
 										<Value>100</Value>
 									</ValueList>
 								</Property>
-								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="7"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-4</Value>
@@ -9384,9 +9410,11 @@
 										<AudioFileSource Name="DEATH_75" ID="{0F2D02E2-9D72-4F60-B9D1-E802689C2ADC}">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0925684702738811"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="1.26610601092896"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.287947706987385"/>
+												<Property Name="FadeOutShape" Type="int16" Value="0"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.488761523046092"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.592146028067612"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.33604591104735"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>DEATH_75.wav</AudioFile>
@@ -9598,7 +9626,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="voice_grap" ID="{50C18AFC-5618-4519-A247-34BA790C6B85}" ShortID="937302458">
 							<PropertyList>
-								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="10"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -10218,11 +10246,6 @@
 												<Value>-2</Value>
 											</ValueList>
 										</Property>
-										<Property Name="Weight" Type="Real64">
-											<ValueList>
-												<Value>75</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -10252,6 +10275,11 @@
 								</Sound>
 								<Sound Name="GRAP_98" ID="{B9CF5268-F8BE-487D-A705-5AE31B25C97D}" ShortID="875678655">
 									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="InitialDelay" Type="Real64">
 											<ValueList>
 												<Value>0.15</Value>
@@ -10291,6 +10319,11 @@
 								</Sound>
 								<Sound Name="SACRED HOOK_100" ID="{5B6004DE-BDB6-4DC4-9F06-66BFC694864B}" ShortID="354128754">
 									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>300</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-7</Value>
@@ -10298,7 +10331,7 @@
 										</Property>
 										<Property Name="Weight" Type="Real64">
 											<ValueList>
-												<Value>35</Value>
+												<Value>10</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -10338,7 +10371,7 @@
 										<Value>90</Value>
 									</ValueList>
 								</Property>
-								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="5"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="20"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -10835,6 +10868,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="HIT_59" ID="{A55A1871-9D81-4475-93C8-D3B72AF02350}" ShortID="840048869">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -10862,6 +10902,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="HIT_60" ID="{3C4439AA-4164-41CF-AC00-AE9339E1EFE0}" ShortID="1003137312">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -10916,6 +10963,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="HIT_62" ID="{4972BFA3-1D72-4DD7-971F-CADF0865C9C2}" ShortID="704587015">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -10970,6 +11024,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="HIT_66" ID="{9300BF2D-52BB-4037-85A8-D2BD1FA689B6}" ShortID="279571166">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -10997,6 +11058,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="HIT_67" ID="{93B2CAAA-672D-401B-B9E5-F797589AF44B}" ShortID="193032294">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -11024,6 +11092,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="HIT_68" ID="{F16CCB1F-E6D6-4687-BF3E-76AAB0C2D304}" ShortID="658044906">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -11206,7 +11281,7 @@
 										<Value>1</Value>
 									</ValueList>
 								</Property>
-								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="6"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -11368,6 +11443,11 @@
 								</Sound>
 								<Sound Name="LAND_31" ID="{0D29178E-6EF7-4A3E-B213-0B2323FB808A}" ShortID="1072349374">
 									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>-50</Value>
@@ -11386,8 +11466,8 @@
 										<AudioFileSource Name="LAND_31" ID="{2F996636-B9F8-40DD-A19B-C5E289A183C3}">
 											<PropertyList>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.209016393442623"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0824964131994262"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>LAND_31.wav</AudioFile>
@@ -11454,6 +11534,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="LAND_36" ID="{2B2265D7-BBAE-405D-AEFF-BFEE74B6F2BD}" ShortID="80846380">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -11537,6 +11624,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="LAND_39" ID="{4F2C83C3-E4DE-47C5-8E22-AB8CE621775F}" ShortID="496064904">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -11565,6 +11659,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="LAND_40" ID="{1BF4601B-F032-485E-AC6D-B8338C345E9D}" ShortID="80059775">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -11714,11 +11815,7 @@
 										<Value>51</Value>
 									</ValueList>
 								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>4</Value>
-									</ValueList>
-								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -11741,8 +11838,8 @@
 									<ChildrenList>
 										<AudioFileSource Name="RESP RAPIDE_101" ID="{440CE50D-AA36-4A5B-A420-4DED13964E3A}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.843561368209256"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="9.75"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -11768,8 +11865,8 @@
 									<ChildrenList>
 										<AudioFileSource Name="RESP RAPIDE_102" ID="{5FA98F00-88A7-46AB-AA67-FFF11A0A38F7}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="1.60965794768612"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="10.6666666666667"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -11795,8 +11892,8 @@
 									<ChildrenList>
 										<AudioFileSource Name="RESP RAPIDE_103" ID="{1270C9B2-81DF-4A77-86AD-70CE685826D4}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.961267605633802"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="9.75"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -11822,8 +11919,8 @@
 									<ChildrenList>
 										<AudioFileSource Name="RESP RAPIDE_104" ID="{06B844C9-D6A4-4227-8D4F-D75B355F0A97}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="1.26760563380282"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="10"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -11849,8 +11946,8 @@
 									<ChildrenList>
 										<AudioFileSource Name="RESP RAPIDE_105" ID="{B8BD5E3C-6F47-4DBE-87DE-E114B0E2226F}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.90543259557344"/>
-												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="10"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -11874,6 +11971,7 @@
 										<Value>1</Value>
 									</ValueList>
 								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="15"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-5</Value>
