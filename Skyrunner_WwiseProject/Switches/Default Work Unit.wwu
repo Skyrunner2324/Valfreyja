@@ -102,6 +102,59 @@
 						</Curve>
 					</SwitchOnRTPC>
 				</SwitchGroup>
+				<SwitchGroup Name="PV" ID="{86C9DA51-E935-4CFA-B539-F71516E6E1F6}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="20"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="_1" ID="{F3EB4B6A-6CAC-41D1-9003-DEC3FEB5F7F8}"/>
+						<Switch Name="_2" ID="{1C549B27-1DA1-4629-8E79-9CE0A23BAB75}"/>
+						<Switch Name="_3" ID="{CCBE38F7-6262-440F-BE0D-14DF7E83EF7C}"/>
+						<Switch Name="_4" ID="{47019743-601E-406E-A133-67A4587A29D3}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_Life_Player_PV" ID="{6886A60F-DDA7-47A0-8284-7D719C2D4936}"/>
+						<Curve Name="" ID="{5330F0A0-BE1B-47ED-AB60-AE3C166F7A37}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>0</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>1.998</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>2</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>3</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>4</XPos>
+									<YPos>4</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

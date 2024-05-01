@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{BF21BED8-4213-73CB-3BA6-0DD131331F77}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{7251D964-49E0-C153-B32C-47BAAA51A126}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -188,6 +188,7 @@
 				<GameParameter Id="1006694123" Name="Music_Volume" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Volumes\Music_Volume" GUID="{E99B18A0-3F76-4D04-8C37-D87E540781AA}"/>
 				<GameParameter Id="1524814686" Name="RTPC_Parkour_Flow" ObjectPath="\Game Parameters\Default Work Unit\Parkour\RTPC_Parkour_Flow" GUID="{D4EDFB9F-0AB6-4E18-A9CB-0F34B34DEA44}"/>
 				<GameParameter Id="1564184899" Name="SFX_Volume" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Volumes\SFX_Volume" GUID="{2C10916C-C952-4AB6-B234-07816DF05541}"/>
+				<GameParameter Id="1575814076" Name="RTPC_Life_Player_PV" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Life_Player_PV" GUID="{6886A60F-DDA7-47A0-8284-7D719C2D4936}"/>
 				<GameParameter Id="1645844663" Name="RTPC_PlayerMovement" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerMovement" GUID="{69938F6B-7537-4ED3-81D7-5AD4F5FEAEDB}"/>
 				<GameParameter Id="2064543165" Name="RTPC_Hitmarker_Volume" ObjectPath="\Game Parameters\Default Work Unit\RTPC_Hitmarker_Volume" GUID="{881B885B-5371-4C1C-8523-6D6EDC0BE6F9}"/>
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
@@ -238,6 +239,7 @@
 						<State Id="84696446" Name="A" ObjectPath="\States\Default Work Unit\Music\Music_Zone\A" GUID="{A2C4D1B0-2D1F-4275-A355-154B8983B6A4}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music\Music_Zone\None" GUID="{8020DD83-D1BB-454B-9683-5AD687222066}"/>
 						<State Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\Music\Music_Zone\Menu" GUID="{013BA24D-2D5A-4A3B-970D-1E27311ADAA7}"/>
+						<State Id="3140745524" Name="Splashscreen" ObjectPath="\States\Default Work Unit\Music\Music_Zone\Splashscreen" GUID="{95A1094C-2534-481C-A3F1-F10C4C7745A5}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="3032194118" Name="Wallrun_Side" ObjectPath="\States\Default Work Unit\Wallrun_Side" GUID="{B78D3E07-DB70-40EE-8D91-0EF8E08B108A}">
@@ -273,6 +275,15 @@
 						<Switch Id="2043403997" Name="Rail" ObjectPath="\Switches\Default Work Unit\PlayerMovementSwitch\Rail" GUID="{37DD7533-473B-4644-905E-CEB116EB2545}"/>
 						<Switch Id="2108779961" Name="Wall" ObjectPath="\Switches\Default Work Unit\PlayerMovementSwitch\Wall" GUID="{7232886A-CF99-4D7B-8D3F-9EE6543A6E43}"/>
 						<Switch Id="2528658256" Name="Ground" ObjectPath="\Switches\Default Work Unit\PlayerMovementSwitch\Ground" GUID="{FE8392A7-A0C0-4D8D-925E-68CC1666748E}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1635194315" Name="PV" ObjectPath="\Switches\Default Work Unit\PV" GUID="{86C9DA51-E935-4CFA-B539-F71516E6E1F6}">
+					<GameParameterRef Id="1575814076"/>
+					<Switches>
+						<Switch Id="846646257" Name="_1" ObjectPath="\Switches\Default Work Unit\PV\_1" GUID="{F3EB4B6A-6CAC-41D1-9003-DEC3FEB5F7F8}"/>
+						<Switch Id="846646258" Name="_2" ObjectPath="\Switches\Default Work Unit\PV\_2" GUID="{1C549B27-1DA1-4629-8E79-9CE0A23BAB75}"/>
+						<Switch Id="846646259" Name="_3" ObjectPath="\Switches\Default Work Unit\PV\_3" GUID="{CCBE38F7-6262-440F-BE0D-14DF7E83EF7C}"/>
+						<Switch Id="846646260" Name="_4" ObjectPath="\Switches\Default Work Unit\PV\_4" GUID="{47019743-601E-406E-A133-67A4587A29D3}"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="2262403497" Name="ParkourSwitch" ObjectPath="\Switches\Default Work Unit\ParkourSwitch" GUID="{702787C3-E2B6-4E60-A266-37C30239657B}">
@@ -404,5 +415,5 @@
 			</AcousticTextures>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{80196D32-DE7D-EE6F-BE54-49369685F98B}</FileHash>
+	<FileHash>{B25BBAA7-A343-636E-1D0B-E6001710B820}</FileHash>
 </SoundBanksInfo>
