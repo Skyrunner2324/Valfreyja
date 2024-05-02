@@ -7646,6 +7646,11 @@
 														<MusicSegment Name="Arena 3 - Loop" ID="{45C417A9-726C-4702-AB03-43299E5041E0}" ShortID="401130201">
 															<PropertyList>
 																<Property Name="EndPosition" Type="Real64" Value="22413.7931034483"/>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-3</Value>
+																	</ValueList>
+																</Property>
 															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
@@ -9735,6 +9740,13 @@
 													</Playlist>
 												</MusicPlaylistContainer>
 												<MusicPlaylistContainer Name="C_Arena_Finished" ID="{BE828B8D-64E1-4488-9AB4-FD4ED779FFB4}" ShortID="829546186">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
@@ -16006,7 +16018,7 @@
 											<ChildrenList>
 												<MusicSegment Name="Sky_Splash" ID="{C4444EDA-42E0-4CD8-B1E3-F7257BD830E6}" ShortID="1021753760">
 													<PropertyList>
-														<Property Name="EndPosition" Type="Real64" Value="49655.1724137932"/>
+														<Property Name="EndPosition" Type="Real64" Value="49655.1724137934"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -16018,6 +16030,13 @@
 													</ReferenceList>
 													<ChildrenList>
 														<MusicTrack Name="Sky_Splash" ID="{46496572-A3F7-47EB-AE62-FCDE36B83FD6}" ShortID="640594610">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-5</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
 															<ReferenceList>
 																<Reference Name="OutputBus">
 																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
@@ -16051,9 +16070,12 @@
 																							<Local>
 																								<MusicClip Name="Sky_Splash" ID="{2FA0957F-9DAD-48D8-98E3-FC190DC24072}">
 																									<PropertyList>
-																										<Property Name="EndTrimOffset" Type="Real64" Value="49655.1724137932"/>
-																										<Property Name="FadeInMode" Type="int16" Value="0"/>
-																										<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																										<Property Name="BeginTrimOffset" Type="Real64" Value="19310.3448275863"/>
+																										<Property Name="EndTrimOffset" Type="Real64" Value="37988.6836767376"/>
+																										<Property Name="FadeInDuration" Type="Real64" Value="6251.73481370772"/>
+																										<Property Name="FadeInShape" Type="int16" Value="7"/>
+																										<Property Name="FadeOutDuration" Type="Real64" Value="2152.23657521085"/>
+																										<Property Name="PlayAt" Type="Real64" Value="-8510.72915554613"/>
 																									</PropertyList>
 																									<AudioSourceRef Name="Sky_Splash" ID="{B92D12E0-94F4-4A27-B0E8-4ABFD38E0AE7}"/>
 																									<PropertyCurveList>
@@ -16064,12 +16086,12 @@
 																												</PropertyList>
 																												<PointList>
 																													<Point>
-																														<XPos>0</XPos>
+																														<XPos>19.31034</XPos>
 																														<YPos>0</YPos>
 																														<Flags>5</Flags>
 																													</Point>
 																													<Point>
-																														<XPos>49.65517</XPos>
+																														<XPos>37.98868</XPos>
 																														<YPos>0</YPos>
 																														<Flags>37</Flags>
 																													</Point>
@@ -16083,12 +16105,12 @@
 																												</PropertyList>
 																												<PointList>
 																													<Point>
-																														<XPos>0</XPos>
+																														<XPos>19.31034</XPos>
 																														<YPos>0</YPos>
 																														<Flags>5</Flags>
 																													</Point>
 																													<Point>
-																														<XPos>49.65517</XPos>
+																														<XPos>37.98868</XPos>
 																														<YPos>0</YPos>
 																														<Flags>37</Flags>
 																													</Point>
@@ -16102,12 +16124,12 @@
 																												</PropertyList>
 																												<PointList>
 																													<Point>
-																														<XPos>0</XPos>
+																														<XPos>19.31034</XPos>
 																														<YPos>0</YPos>
 																														<Flags>5</Flags>
 																													</Point>
 																													<Point>
-																														<XPos>49.65517</XPos>
+																														<XPos>37.98868</XPos>
 																														<YPos>0</YPos>
 																														<Flags>37</Flags>
 																													</Point>
@@ -16115,6 +16137,57 @@
 																											</Curve>
 																										</PropertyCurve>
 																									</PropertyCurveList>
+																								</MusicClip>
+																							</Local>
+																						</Reference>
+																					</ObjectList>
+																				</ObjectLists>
+																			</MusicTrackSequence>
+																		</Local>
+																	</Reference>
+																</ObjectList>
+															</ObjectLists>
+														</MusicTrack>
+														<MusicTrack Name="splash + cine (sans oiseaux)" ID="{34B5D0D7-B952-4D90-B84E-189FC1A7A180}" ShortID="699841376">
+															<ReferenceList>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="splash + cine (sans oiseaux)" ID="{6FF2384E-1322-4031-AA9E-4BE5C4168801}">
+																	<Language>SFX</Language>
+																	<AudioFile>splash + cine (sans oiseaux).wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="991162318"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<TransitionList>
+																<MusicTransition Name="Root" ID="{9FC7F859-DC22-417A-B30D-54FA55BB103F}">
+																	<PropertyList>
+																		<Property Name="IsFolder" Type="bool" Value="True"/>
+																	</PropertyList>
+																	<TransitionInfo/>
+																</MusicTransition>
+															</TransitionList>
+															<ObjectLists>
+																<ObjectList Name="Sequences">
+																	<Reference>
+																		<Local>
+																			<MusicTrackSequence Name="" ID="{0C1B4EBA-1888-4457-9E75-46D3928E1F2F}">
+																				<ObjectLists>
+																					<ObjectList Name="Clips">
+																						<Reference>
+																							<Local>
+																								<MusicClip Name="splash + cine (sans oiseaux)" ID="{F65432D9-B7BD-4BB5-A479-FF869AA851FA}">
+																									<PropertyList>
+																										<Property Name="EndTrimOffset" Type="Real64" Value="36000"/>
+																										<Property Name="FadeInMode" Type="int16" Value="0"/>
+																										<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																										<Property Name="PlayAt" Type="Real64" Value="1891.74762463969"/>
+																									</PropertyList>
+																									<AudioSourceRef Name="splash + cine (sans oiseaux)" ID="{6FF2384E-1322-4031-AA9E-4BE5C4168801}"/>
 																								</MusicClip>
 																							</Local>
 																						</Reference>
