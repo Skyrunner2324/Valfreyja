@@ -172,6 +172,11 @@
 								</Sound>
 								<Sound Name="XG_one_shot_stutter_pluck_Dbmin" ID="{266BF47F-4955-43B1-AB84-C2BB94871D37}" ShortID="108794446">
 									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
@@ -227,6 +232,11 @@
 										<Property Name="BypassEffect0" Type="bool">
 											<ValueList>
 												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
 											</ValueList>
 										</Property>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
@@ -1334,6 +1344,13 @@
 							</ChildrenList>
 						</BlendContainer>
 						<BlendContainer Name="PSX" ID="{729C7914-50DF-488F-94D4-76ECADA75E87}" ShortID="69985140">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-96</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>

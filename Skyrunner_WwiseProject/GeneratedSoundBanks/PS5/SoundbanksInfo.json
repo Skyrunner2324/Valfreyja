@@ -14,6 +14,43 @@
   "DialogueEvents": [],
   "SoundBanks": [
    {
+    "Id": "43106962",
+    "Type": "Event",
+    "GUID": "{504A5EB2-558E-4A39-ABF8-7222C11BF2C6}",
+    "Language": "SFX",
+    "Hash": "{CA8D07E5-5660-6A1C-F5F1-07006BAA320D}",
+    "ObjectPath": "SX_splashscreen",
+    "ShortName": "SX_splashscreen",
+    "Path": "Event/SX_splashscreen.bnk",
+    "Media": [
+     {
+      "Id": "549943413",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BeginPlay\\SD_splashscreen.wav",
+      "Path": "Media/549943413.wem",
+      "CachePath": "SFX/BeginPlay/SD_splashscreen_0C76D335.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "43106962",
+      "Name": "SX_splashscreen",
+      "ObjectPath": "\\Events\\BeginPlay\\SX_splashscreen",
+      "GUID": "{504A5EB2-558E-4A39-ABF8-7222C11BF2C6}",
+      "DurationType": "OneShot",
+      "DurationMin": "16.680063",
+      "DurationMax": "16.680063",
+      "MediaRefs": [
+       {
+        "Id": "549943413"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "Id": "183167143",
     "Type": "Event",
     "GUID": "{6F843338-8506-42BF-867D-169F4A0DAA16}",
@@ -2269,6 +2306,28 @@
     ]
    },
    {
+    "Id": "764821621",
+    "Type": "Event",
+    "GUID": "{949F6198-4518-4D3F-A367-8F9D77D6AD32}",
+    "Language": "SFX",
+    "Hash": "{A3EC12A2-05F9-E7F5-9E1E-4BD09B94E004}",
+    "ObjectPath": "SX_cinematic_stop",
+    "ShortName": "SX_cinematic_stop",
+    "Path": "Event/SX_cinematic_stop.bnk",
+    "Events": [
+     {
+      "Id": "764821621",
+      "Name": "SX_cinematic_stop",
+      "ObjectPath": "\\Events\\BeginPlay\\SX_cinematic_stop",
+      "GUID": "{949F6198-4518-4D3F-A367-8F9D77D6AD32}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   },
+   {
     "Id": "858959884",
     "Type": "Event",
     "GUID": "{45B75918-88DC-4592-9F27-6C746C945B7A}",
@@ -3467,7 +3526,7 @@
     "Type": "Event",
     "GUID": "{2278516D-BA2F-4D5D-93F6-5353DF4E1405}",
     "Language": "SFX",
-    "Hash": "{973D0AA7-3DEF-48C3-D965-B8307799EDF0}",
+    "Hash": "{B6DDE33D-2DF3-4EA7-9713-B643DE58607B}",
     "ObjectPath": "SX_player_hit",
     "ShortName": "SX_player_hit",
     "Path": "Event/SX_player_hit.bnk",
@@ -3759,28 +3818,28 @@
       },
       "Switches": [
        {
-        "Id": "846646257",
-        "Name": "_1",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\_1",
-        "GUID": "{F3EB4B6A-6CAC-41D1-9003-DEC3FEB5F7F8}"
+        "Id": "730513419",
+        "Name": "HP4",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\HP4",
+        "GUID": "{47019743-601E-406E-A133-67A4587A29D3}"
        },
        {
-        "Id": "846646258",
-        "Name": "_2",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\_2",
-        "GUID": "{1C549B27-1DA1-4629-8E79-9CE0A23BAB75}"
-       },
-       {
-        "Id": "846646259",
-        "Name": "_3",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\_3",
+        "Id": "730513420",
+        "Name": "HP3",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\HP3",
         "GUID": "{CCBE38F7-6262-440F-BE0D-14DF7E83EF7C}"
        },
        {
-        "Id": "846646260",
-        "Name": "_4",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\_4",
-        "GUID": "{47019743-601E-406E-A133-67A4587A29D3}"
+        "Id": "730513421",
+        "Name": "HP2",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\HP2",
+        "GUID": "{1C549B27-1DA1-4629-8E79-9CE0A23BAB75}"
+       },
+       {
+        "Id": "730513422",
+        "Name": "HP1",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\HP1",
+        "GUID": "{F3EB4B6A-6CAC-41D1-9003-DEC3FEB5F7F8}"
        }
       ]
      }
@@ -3791,20 +3850,11 @@
     "Type": "Event",
     "GUID": "{59E0340B-B7CC-40AB-A104-B35788A5DFFB}",
     "Language": "SFX",
-    "Hash": "{2F56AC7D-805D-085C-7C42-EAB795F8A9CD}",
+    "Hash": "{A023197B-2667-3F70-9506-CE16F0F668BB}",
     "ObjectPath": "UI_start",
     "ShortName": "UI_start",
     "Path": "Event/UI_start.bnk",
     "Media": [
-     {
-      "Id": "94838007",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Placeholders\\XG_one_shot_stutter_pluck_Dbmin.wav",
-      "Path": "Media/94838007.wem",
-      "CachePath": "SFX/Placeholders/XG_one_shot_stutter_pluck_Dbmin_0ECBFDB8.wem"
-     },
      {
       "Id": "273426957",
       "Language": "SFX",
@@ -3813,27 +3863,10 @@
       "ShortName": "FX_wolf_start.wav",
       "Path": "Media/273426957.wem",
       "CachePath": "SFX/FX_wolf_start_755F56E2.wem"
-     },
-     {
-      "Id": "1015261183",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "FX_wolf_start.wav",
-      "Path": "Media/1015261183.wem",
-      "CachePath": "SFX/FX_wolf_start_E3067E6C.wem"
      }
     ],
     "Plugins": {
      "Custom": [
-      {
-       "Id": "261891877",
-       "Name": "Pitch Shifter (Custom)",
-       "ObjectPath": "\\Actor-Mixer Hierarchy\\UI\\UI_MainMixer\\ui_start\\FX_wolf_start_01\\Pitch Shifter (Custom)",
-       "GUID": "{B46019AA-B421-4BC1-BBFB-150D5D439B7A}",
-       "LibName": "Wwise Pitch Shifter",
-       "LibId": "8912899"
-      },
       {
        "Id": "397214180",
        "Name": "Pitch Shifter (Custom)",
@@ -3841,16 +3874,6 @@
        "GUID": "{82B901CF-4B51-47E9-948E-222173742D40}",
        "LibName": "Wwise Pitch Shifter",
        "LibId": "8912899"
-      }
-     ],
-     "ShareSets": [
-      {
-       "Id": "1443902288",
-       "Name": "_1_Second_Delay",
-       "ObjectPath": "\\Effects\\Factory Effects\\Stereo Delay\\_1_Second_Delay",
-       "GUID": "{5AAB81A5-3444-4DE7-AEB3-2DDBB33D455B}",
-       "LibName": "Wwise Stereo Delay",
-       "LibId": "8847363"
       }
      ]
     },
@@ -3861,42 +3884,20 @@
       "ObjectPath": "\\Events\\UI\\UI_start",
       "GUID": "{59E0340B-B7CC-40AB-A104-B35788A5DFFB}",
       "DurationType": "OneShot",
-      "DurationMin": "4.286659",
-      "DurationMax": "4.286659",
+      "DurationMin": "2.18725",
+      "DurationMax": "2.18725",
       "MediaRefs": [
        {
-        "Id": "94838007"
-       },
-       {
         "Id": "273426957"
-       },
-       {
-        "Id": "1015261183"
        }
       ],
       "PluginRefs": {
        "Custom": [
         {
-         "Id": "261891877"
-        },
-        {
          "Id": "397214180"
         }
-       ],
-       "ShareSets": [
-        {
-         "Id": "1443902288"
-        }
        ]
-      },
-      "AuxBusRefs": [
-       {
-        "Id": "641705904",
-        "Name": "REV_Arena",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX Master\\REV_SFX\\REV_Arena",
-        "GUID": "{02F57995-C4B2-4F04-BCF6-63E789CC124D}"
-       }
-      ]
+      }
      }
     ]
    },
@@ -4204,7 +4205,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{7251D964-49E0-C153-B32C-47BAAA51A126}",
+    "Hash": "{B9B884B7-6819-F5A6-FFEE-E108012AA645}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -5174,28 +5175,28 @@
       },
       "Switches": [
        {
-        "Id": "846646257",
-        "Name": "_1",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\_1",
-        "GUID": "{F3EB4B6A-6CAC-41D1-9003-DEC3FEB5F7F8}"
+        "Id": "730513419",
+        "Name": "HP4",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\HP4",
+        "GUID": "{47019743-601E-406E-A133-67A4587A29D3}"
        },
        {
-        "Id": "846646258",
-        "Name": "_2",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\_2",
-        "GUID": "{1C549B27-1DA1-4629-8E79-9CE0A23BAB75}"
-       },
-       {
-        "Id": "846646259",
-        "Name": "_3",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\_3",
+        "Id": "730513420",
+        "Name": "HP3",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\HP3",
         "GUID": "{CCBE38F7-6262-440F-BE0D-14DF7E83EF7C}"
        },
        {
-        "Id": "846646260",
-        "Name": "_4",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\_4",
-        "GUID": "{47019743-601E-406E-A133-67A4587A29D3}"
+        "Id": "730513421",
+        "Name": "HP2",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\HP2",
+        "GUID": "{1C549B27-1DA1-4629-8E79-9CE0A23BAB75}"
+       },
+       {
+        "Id": "730513422",
+        "Name": "HP1",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PV\\HP1",
+        "GUID": "{F3EB4B6A-6CAC-41D1-9003-DEC3FEB5F7F8}"
        }
       ]
      },
@@ -7085,6 +7086,43 @@
         }
        ]
       }
+     }
+    ]
+   },
+   {
+    "Id": "2029682727",
+    "Type": "Event",
+    "GUID": "{C890D458-9CC9-4E28-9185-ADF4E0217490}",
+    "Language": "SFX",
+    "Hash": "{16683A8B-5850-DA48-4879-0D306DF2B5F0}",
+    "ObjectPath": "SX_cinematic_play",
+    "ShortName": "SX_cinematic_play",
+    "Path": "Event/SX_cinematic_play.bnk",
+    "Media": [
+     {
+      "Id": "725034032",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BeginPlay\\SD_cinematic.wav",
+      "Path": "Media/725034032.wem",
+      "CachePath": "SFX/BeginPlay/SD_cinematic_45D7EA8F.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2029682727",
+      "Name": "SX_cinematic_play",
+      "ObjectPath": "\\Events\\BeginPlay\\SX_cinematic_play",
+      "GUID": "{C890D458-9CC9-4E28-9185-ADF4E0217490}",
+      "DurationType": "OneShot",
+      "DurationMin": "26.75",
+      "DurationMax": "26.75",
+      "MediaRefs": [
+       {
+        "Id": "725034032"
+       }
+      ]
      }
     ]
    },
@@ -8998,7 +9036,7 @@
     "Type": "Event",
     "GUID": "{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}",
     "Language": "SFX",
-    "Hash": "{8D68B44E-EC66-132E-8FE0-67153337B96B}",
+    "Hash": "{1AD4D248-3CA5-755C-194B-2F37E989A698}",
     "ObjectPath": "MUS_Play_MainMusic",
     "ShortName": "MUS_Play_MainMusic",
     "Path": "Event/MUS_Play_MainMusic.bnk",
@@ -9452,15 +9490,6 @@
       "ShortName": "Music\\Halftime Neuro.wav",
       "Path": "Media/953954063.wem",
       "CachePath": "SFX/Music/Halftime Neuro_073B4D0C.wem"
-     },
-     {
-      "Id": "991162318",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "splash + cine (sans oiseaux).wav",
-      "Path": "Media/991162318.wem",
-      "CachePath": "SFX/splash + cine (sans oiseaux)_073B4D0C.wem"
      },
      {
       "Id": "993285591",
@@ -10741,9 +10770,6 @@
         "MediaRefs": [
          {
           "Id": "654016927"
-         },
-         {
-          "Id": "991162318"
          }
         ]
        }
@@ -11317,7 +11343,7 @@
     "Type": "Event",
     "GUID": "{5A25872A-6DFA-4D4C-A12F-D7D666533FE6}",
     "Language": "SFX",
-    "Hash": "{50860575-E29F-67AF-EA31-9641ABD49086}",
+    "Hash": "{0D68BFDD-4BFE-C451-F368-FB8CE282F181}",
     "ObjectPath": "Play_Splashscreen",
     "ShortName": "Play_Splashscreen",
     "Path": "Event/Play_Splashscreen.bnk",
@@ -11501,6 +11527,6 @@
     ]
    }
   ],
-  "FileHash": "{32CDC649-BC7E-3ACB-DCA4-D916849F1F1E}"
+  "FileHash": "{353D062E-6A6A-32D4-BAD7-BFFD8AAAD796}"
  }
 }

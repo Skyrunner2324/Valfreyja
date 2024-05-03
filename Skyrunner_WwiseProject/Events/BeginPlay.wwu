@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{30736B07-CFD6-476E-B880-0A3D02788892}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="BeginPlay" ID="{30736B07-CFD6-476E-B880-0A3D02788892}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="17"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Event Name="SX_splashscreen" ID="{504A5EB2-558E-4A39-ABF8-7222C11BF2C6}">
+					<ChildrenList>
+						<Action Name="" ID="{99FBD27B-DA74-4268-AEC6-4064226FBD31}" ShortID="1016929242">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SD_splashscreen" ID="{BFA675E9-F23C-4318-BDD2-C301A07B54B0}" WorkUnitID="{9474294B-4DDB-46C2-9610-320166320E0F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SX_cinematic_play" ID="{C890D458-9CC9-4E28-9185-ADF4E0217490}">
+					<ChildrenList>
+						<Action Name="" ID="{EE2D0C6E-96B4-4CCA-93F7-2A777A538D12}" ShortID="461984840">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SD_cinematic" ID="{4EDDD53D-6948-490A-862B-D95AB804C84E}" WorkUnitID="{9474294B-4DDB-46C2-9610-320166320E0F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SX_cinematic_stop" ID="{949F6198-4518-4D3F-A367-8F9D77D6AD32}">
+					<ChildrenList>
+						<Action Name="" ID="{7C902B30-CB03-493E-B701-B0659722D9E5}" ShortID="934474914">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SD_cinematic" ID="{4EDDD53D-6948-490A-862B-D95AB804C84E}" WorkUnitID="{9474294B-4DDB-46C2-9610-320166320E0F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
