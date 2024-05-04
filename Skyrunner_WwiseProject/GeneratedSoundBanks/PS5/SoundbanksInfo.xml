@@ -28,7 +28,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="183167143" Type="Event" GUID="{6F843338-8506-42BF-867D-169F4A0DAA16}" Language="SFX" Hash="{BCB2AB4E-A001-F55F-DA30-25F21FE6749F}">
+		<SoundBank Id="183167143" Type="Event" GUID="{6F843338-8506-42BF-867D-169F4A0DAA16}" Language="SFX" Hash="{B568F894-D365-60DF-CDBF-0BE2AE7A6426}">
 			<ObjectPath>UI_unpause</ObjectPath>
 			<ShortName>UI_unpause</ShortName>
 			<Path>Event/UI_unpause.bnk</Path>
@@ -100,7 +100,7 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="216067002" Type="Event" GUID="{FC9252BB-4746-4A62-AB71-565BBB37F6D2}" Language="SFX" Hash="{119A84BD-69BC-E756-A55C-74C4B6558985}">
+		<SoundBank Id="216067002" Type="Event" GUID="{FC9252BB-4746-4A62-AB71-565BBB37F6D2}" Language="SFX" Hash="{47496E35-8A64-04A0-1E9A-FC6048880374}">
 			<ObjectPath>UI_confirm</ObjectPath>
 			<ShortName>UI_confirm</ShortName>
 			<Path>Event/UI_confirm.bnk</Path>
@@ -379,6 +379,53 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 				<GameParameter Id="3289214803" Name="RTPC_Time_in_Air" ObjectPath="\Game Parameters\Default Work Unit\Parkour\RTPC_Time_in_Air" GUID="{EA244CFE-2C93-4808-BE87-966632323505}"/>
 			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="387218196" Type="Event" GUID="{A3282C1C-5DD5-49EC-9074-59B19849C12E}" Language="SFX" Hash="{CF56C2B0-586A-0D29-E3EB-D5926087EF9C}">
+			<ObjectPath>SX_Helmet_ON</ObjectPath>
+			<ShortName>SX_Helmet_ON</ShortName>
+			<Path>Event/SX_Helmet_ON.bnk</Path>
+			<Media>
+				<File Id="286758640" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\Phil Michalski - UI - Glitchy Counter.wav</ShortName>
+					<Path>Media/286758640.wem</Path>
+					<CachePath>SFX/Player_Feedback/Phil Michalski - UI - Glitchy Counter_BFC2DA86.wem</CachePath>
+				</File>
+				<File Id="433337947" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>IB_Glitch_MultiformRiser_FA.wav</ShortName>
+					<Path>Media/433337947.wem</Path>
+					<CachePath>SFX/IB_Glitch_MultiformRiser_FA_990ED1EE.wem</CachePath>
+				</File>
+				<File Id="802440363" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\Phil Michalski - UI - Glitchy Counter.wav</ShortName>
+					<Path>Media/802440363.wem</Path>
+					<CachePath>SFX/Player_Feedback/Phil Michalski - UI - Glitchy Counter_7B8D4ABF.wem</CachePath>
+				</File>
+				<File Id="1028985839" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Player_Feedback\Phil Michalski - UI - Glitchy Counter.wav</ShortName>
+					<Path>Media/1028985839.wem</Path>
+					<CachePath>SFX/Player_Feedback/Phil Michalski - UI - Glitchy Counter_AE25479A.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="701863527" Name="Inside_My_Head" ObjectPath="\Effects\Factory Effects\RoomVerb\Claustrophobia\Inside_My_Head" GUID="{94B53301-9AA1-468F-8419-92AEDAAE39DF}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="387218196" Name="SX_Helmet_ON" ObjectPath="\Events\Player\Feedback\SX_Helmet_ON" GUID="{A3282C1C-5DD5-49EC-9074-59B19849C12E}" DurationType="OneShot" DurationMin="6.1923075" DurationMax="6.1923075">
+					<MediaRefs>
+						<MediaRef Id="286758640"/>
+						<MediaRef Id="433337947"/>
+						<MediaRef Id="802440363"/>
+						<MediaRef Id="1028985839"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="701863527"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+			</Events>
 		</SoundBank>
 		<SoundBank Id="387312834" Type="Event" GUID="{12BCF388-3B1D-4636-873A-0653AB150C1F}" Language="SFX" Hash="{BC647DE3-690D-1595-D1E4-D3ECE571AC54}">
 			<ObjectPath>SX_player_shield_regen</ObjectPath>
@@ -939,7 +986,7 @@
 				<Event Id="534486512" Name="MUS_Stop_MainMusic" ObjectPath="\Events\Music\MUS_Stop_MainMusic" GUID="{A85A1CC9-5884-42CD-B3B0-A7C451B7F79D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="618588564" Type="Event" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" Language="SFX" Hash="{01F6EB3B-0C35-D4FE-73D0-E427D36F3393}">
+		<SoundBank Id="618588564" Type="Event" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" Language="SFX" Hash="{DC601243-248C-4E68-E068-8F6CDE01BE2D}">
 			<ObjectPath>SX_player_death_notifier</ObjectPath>
 			<ShortName>SX_player_death_notifier</ShortName>
 			<Path>Event/SX_player_death_notifier.bnk</Path>
@@ -967,7 +1014,7 @@
 				<File Id="787685429" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Enemies\death_enemy_Explosion_BW.4961.wav</ShortName>
 					<Path>Media/787685429.wem</Path>
-					<CachePath>SFX/Enemies/death_enemy_Explosion_BW.4961_886842FD.wem</CachePath>
+					<CachePath>SFX/Enemies/death_enemy_Explosion_BW.4961_EC002AA2.wem</CachePath>
 				</File>
 				<File Id="890875566" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Enemies\death_enemy_Rupture - Concrete_Impact_B02.wav</ShortName>
@@ -977,7 +1024,7 @@
 				<File Id="950667887" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Enemies\death_enemy_Distant Blast 05.wav</ShortName>
 					<Path>Media/950667887.wem</Path>
-					<CachePath>SFX/Enemies/death_enemy_Distant Blast 05_A6264A90.wem</CachePath>
+					<CachePath>SFX/Enemies/death_enemy_Distant Blast 05_2193A788.wem</CachePath>
 				</File>
 				<File Id="952769434" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>Ennemy_Death_04.wav</ShortName>
@@ -986,7 +1033,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="618588564" Name="SX_player_death_notifier" ObjectPath="\Events\Player\Feedback\SX_player_death_notifier" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" MaxAttenuation="10000" DurationType="OneShot" DurationMin="2.4103208" DurationMax="2.4103208">
+				<Event Id="618588564" Name="SX_player_death_notifier" ObjectPath="\Events\Player\Feedback\SX_player_death_notifier" GUID="{095480AE-B62A-4DB8-80EC-3AF54A959CDA}" MaxAttenuation="10000" DurationType="OneShot" DurationMin="2.7402465" DurationMax="4.882564">
 					<MediaRefs>
 						<MediaRef Id="325108499"/>
 						<MediaRef Id="416565235"/>
@@ -1814,7 +1861,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1219048826" Type="Event" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" Language="SFX" Hash="{A023197B-2667-3F70-9506-CE16F0F668BB}">
+		<SoundBank Id="1219048826" Type="Event" GUID="{59E0340B-B7CC-40AB-A104-B35788A5DFFB}" Language="SFX" Hash="{86857BA8-E068-D2E5-3F52-57309AD5C70F}">
 			<ObjectPath>UI_start</ObjectPath>
 			<ShortName>UI_start</ShortName>
 			<Path>Event/UI_start.bnk</Path>
@@ -2905,7 +2952,7 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed" ObjectPath="\Game Parameters\Default Work Unit\RTPC_PlayerSpeed" GUID="{7C66D89E-2FDF-4ABE-958A-B27E42B72AD5}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1889967430" Type="Event" GUID="{021EA252-4F76-49F3-B5CC-94B86C367796}" Language="SFX" Hash="{C7C35ADD-A4C8-D655-0404-EBD9EE249ECF}">
+		<SoundBank Id="1889967430" Type="Event" GUID="{021EA252-4F76-49F3-B5CC-94B86C367796}" Language="SFX" Hash="{DC20DC2F-0D8E-7B8A-CB65-928950F2145E}">
 			<ObjectPath>UI_move_values</ObjectPath>
 			<ShortName>UI_move_values</ShortName>
 			<Path>Event/UI_move_values.bnk</Path>
@@ -2943,7 +2990,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{F39EAF0C-3D80-F20A-3821-412F76857AB3}">
+		<SoundBank Id="1950512069" Type="Event" GUID="{7B6982F6-686A-493A-8518-52B50A5890B9}" Language="SFX" Hash="{E92BC487-CABF-118D-7A36-AEA3CC4CF796}">
 			<ObjectPath>SX_player_feedback_death</ObjectPath>
 			<ShortName>SX_player_feedback_death</ShortName>
 			<Path>Event/SX_player_feedback_death.bnk</Path>
@@ -3590,7 +3637,7 @@
 				<AuxBus Id="2588398148" Name="REV_MUSIC" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC Master\REV_MUSIC" GUID="{51D0B729-C328-4E6F-B258-E07D3F07A2FE}"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="2640457287" Type="Event" GUID="{E6BD66A9-980B-41F5-8391-C0CDA93F3275}" Language="SFX" Hash="{A697E298-4047-1590-1D54-AECF9063BB39}">
+		<SoundBank Id="2640457287" Type="Event" GUID="{E6BD66A9-980B-41F5-8391-C0CDA93F3275}" Language="SFX" Hash="{48285B21-18CD-1025-F316-EFEBD842F085}">
 			<ObjectPath>UI_wave_clear_feedback</ObjectPath>
 			<ShortName>UI_wave_clear_feedback</ShortName>
 			<Path>Event/UI_wave_clear_feedback.bnk</Path>
@@ -3609,7 +3656,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2644790697" Type="Event" GUID="{528674B7-E690-4AD6-8217-32726F835B11}" Language="SFX" Hash="{1445DC4A-B875-5492-4299-0B1104A14F1F}">
+		<SoundBank Id="2644790697" Type="Event" GUID="{528674B7-E690-4AD6-8217-32726F835B11}" Language="SFX" Hash="{3F698D1F-E6CD-C900-CEA0-F455887B96E9}">
 			<ObjectPath>UI_move</ObjectPath>
 			<ShortName>UI_move</ShortName>
 			<Path>Event/UI_move.bnk</Path>
@@ -3642,7 +3689,7 @@
 				<Event Id="2731311753" Name="Stop_wind_blast" ObjectPath="\Events\Hoverboots\Hoverboots\Stop_wind_blast" GUID="{0ABAE37C-66CF-4C93-B479-0F0A80566DCC}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2792155208" Type="Event" GUID="{194991E3-9D95-4E83-BAAB-87D009E9C2CB}" Language="SFX" Hash="{75880582-E6A3-E7AB-9278-1374A052BD7B}">
+		<SoundBank Id="2792155208" Type="Event" GUID="{194991E3-9D95-4E83-BAAB-87D009E9C2CB}" Language="SFX" Hash="{C1142B8B-45BF-68A2-2B20-D1636037CF54}">
 			<ObjectPath>UI_pause</ObjectPath>
 			<ShortName>UI_pause</ShortName>
 			<Path>Event/UI_pause.bnk</Path>
@@ -3702,7 +3749,7 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="2906678251" Type="Event" GUID="{3C49ADFF-B1CB-43E0-8205-894DA98875AC}" Language="SFX" Hash="{4EA807E8-F6BA-0863-5EAF-5838837A3C19}">
+		<SoundBank Id="2906678251" Type="Event" GUID="{3C49ADFF-B1CB-43E0-8205-894DA98875AC}" Language="SFX" Hash="{D5A65B81-CBC2-E78D-C9CE-4B6C432F1F97}">
 			<ObjectPath>UI_reset</ObjectPath>
 			<ShortName>UI_reset</ShortName>
 			<Path>Event/UI_reset.bnk</Path>
@@ -4010,7 +4057,7 @@
 				<GameParameter Id="2565740352" Name="RTPC_SlowMo" ObjectPath="\Game Parameters\Default Work Unit\RTPC_SlowMo" GUID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3275497351" Type="Event" GUID="{2FE719E2-7D22-4B57-B2F8-52C077A6F860}" Language="SFX" Hash="{7080A259-18BA-FD9E-58D8-E9AED041381D}">
+		<SoundBank Id="3275497351" Type="Event" GUID="{2FE719E2-7D22-4B57-B2F8-52C077A6F860}" Language="SFX" Hash="{74C2D733-E544-1AB8-0651-B3F56F64650F}">
 			<ObjectPath>UI_Valfreyja_Impact</ObjectPath>
 			<ShortName>UI_Valfreyja_Impact</ShortName>
 			<Path>Event/UI_Valfreyja_Impact.bnk</Path>
@@ -4049,7 +4096,7 @@
 				<Event Id="3390387889" Name="SX_player_dash_regen" ObjectPath="\Events\Player\Feedback\SX_player_dash_regen" GUID="{6D13E3BD-F5FB-4B8B-8184-DB05606BBF7C}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{728566E4-BCB9-0C56-B5F7-03C70406A424}">
+		<SoundBank Id="3441789682" Type="Event" GUID="{B7B742A7-3A06-49EA-A1F1-9B594A24B31D}" Language="SFX" Hash="{BC7F648F-003C-6545-CA39-D9E37485B0F6}">
 			<ObjectPath>MUS_Play_MainMusic</ObjectPath>
 			<ShortName>MUS_Play_MainMusic</ShortName>
 			<Path>Event/MUS_Play_MainMusic.bnk</Path>
@@ -4456,10 +4503,8 @@
 										<SwitchContainer>
 											<SwitchValue GroupType="State" GroupId="2368434850" Id="1454074649" GUID="{C10D7FC3-6D0F-4995-AC4E-F6BDEA9EDF37}"/>
 											<MediaRefs>
-												<MediaRef Id="189204732"/>
-												<MediaRef Id="466991223"/>
-												<MediaRef Id="482939136"/>
-												<MediaRef Id="602494106"/>
+												<MediaRef Id="132075390"/>
+												<MediaRef Id="506963029"/>
 											</MediaRefs>
 										</SwitchContainer>
 									</Children>
@@ -4541,6 +4586,7 @@
 											<MediaRefs>
 												<MediaRef Id="132075390"/>
 												<MediaRef Id="506963029"/>
+												<MediaRef Id="641832513"/>
 												<MediaRef Id="714854420"/>
 												<MediaRef Id="804491443"/>
 												<MediaRef Id="950595867"/>
@@ -4567,6 +4613,7 @@
 											<MediaRefs>
 												<MediaRef Id="132075390"/>
 												<MediaRef Id="506963029"/>
+												<MediaRef Id="641832513"/>
 												<MediaRef Id="714854420"/>
 												<MediaRef Id="804491443"/>
 												<MediaRef Id="950595867"/>
@@ -4582,6 +4629,7 @@
 											<MediaRefs>
 												<MediaRef Id="132075390"/>
 												<MediaRef Id="506963029"/>
+												<MediaRef Id="641832513"/>
 												<MediaRef Id="714854420"/>
 												<MediaRef Id="804491443"/>
 												<MediaRef Id="950595867"/>
@@ -5123,7 +5171,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3886403915" Type="Event" GUID="{5A25872A-6DFA-4D4C-A12F-D7D666533FE6}" Language="SFX" Hash="{0D68BFDD-4BFE-C451-F368-FB8CE282F181}">
+		<SoundBank Id="3886403915" Type="Event" GUID="{5A25872A-6DFA-4D4C-A12F-D7D666533FE6}" Language="SFX" Hash="{DC664766-4C9E-32F7-8A00-6E0B0676141D}">
 			<ObjectPath>Play_Splashscreen</ObjectPath>
 			<ShortName>Play_Splashscreen</ShortName>
 			<Path>Event/Play_Splashscreen.bnk</Path>
@@ -5216,5 +5264,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DCD01F22-CD07-4F2A-5F44-ABD2FB925663}</FileHash>
+	<FileHash>{4E98BE3B-6591-AFB3-4E11-F802DB35A3AE}</FileHash>
 </SoundBanksInfo>
