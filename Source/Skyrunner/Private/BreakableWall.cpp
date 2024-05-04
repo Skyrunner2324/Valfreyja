@@ -77,7 +77,7 @@ void ABreakableWall::RegisterAllComponents()
 	/*for (int i = 0; i < GeometryCollectionActors.Num(); ++i)
 	{
 		UGeometryCollectionComponent* geometryCollectionComp = Cast<UGeometryCollectionComponent>(GeometryCollectionActors[i]);*/
-		if (instanceGeometryComponent != nullptr)
+		if (instanceGeometryComponent != nullptr || !anchorFields.IsEmpty())
 		{
 			instanceGeometryComponent->InitializationFields.Empty();
 			for (int j = 0; j < anchorFields.Num(); j++)
