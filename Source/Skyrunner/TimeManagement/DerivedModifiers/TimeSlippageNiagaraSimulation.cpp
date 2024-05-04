@@ -30,13 +30,11 @@ void UTimeSlippageNiagaraSimulation::TickComponent(float DeltaTime, ELevelTick T
 	//if (!timeSlippage->bIsDilated)
 	//	return;
 
-	for (auto& c : niagaraComponents)
+	for (UNiagaraComponent* c : niagaraComponents)
 	{
-		// TODO : find a way to remove casting
-		auto n = Cast<UNiagaraComponent>(c);
-		n->SetPaused(false);
-		n->AdvanceSimulation(1, localManagedDeltaTime);
-		n->SetPaused(true);
+		c->SetPaused(false);
+		c->AdvanceSimulation(1, localManagedDeltaTime);
+		c->SetPaused(true);
 	}
 }
 
