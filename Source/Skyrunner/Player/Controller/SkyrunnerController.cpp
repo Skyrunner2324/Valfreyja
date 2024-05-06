@@ -5,12 +5,23 @@
 
 #include "../../Utils/DebugLog.h"
 #include "Skyrunner/SkyrunnerGameMode.h"
+#include "SlateBasics.h"
 
 
 void ASkyrunnerController::FellOutOfWorld(const UDamageType& dmgType)
 {
 	//DebugLogRed(TEXT("Fell out of world : calling implementation"));
 	FellOutOfWorldImpl(&dmgType);
+}
+
+bool ASkyrunnerController::IsGamePadConnected()
+{
+	auto genericApplication = FSlateApplication::Get().GetPlatformApplication();
+	if (genericApplication.Get() != nullptr && genericApplication->IsGamepadAttached())
+	{
+		return true;
+	}
+	return false;
 }
 
 ASpectatorPawn* ASkyrunnerController::SpawnSpectatorPawn()

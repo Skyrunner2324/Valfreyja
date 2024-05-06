@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "SkyrunnerController.generated.h"
 
 /**
@@ -19,6 +20,10 @@ public:
 
 	UFUNCTION(BlueprintNativeEvent)
 	void FellOutOfWorldImpl(const class UDamageType* dmgType);
+
+	/* Check if gamepad is connected at Runtime. */
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "GamepadConnected"), Category = "System Information")
+	static bool IsGamePadConnected();
 
 	ASpectatorPawn* SpawnSpectatorPawn() override;
 };
