@@ -66,7 +66,7 @@ public:
 	 * Possess and Reset the player and actors that have OnPlayerReset functions bound
 	 */
 	UFUNCTION(BlueprintCallable)
-	void ResetPlayer(class APawn* player, AActor* oldCameraObject = nullptr);
+	void ResetPlayer(class APawn* player, AActor* oldCameraObject = nullptr, bool bFlushInput = true);
 
 
 	UFUNCTION(BlueprintCallable)

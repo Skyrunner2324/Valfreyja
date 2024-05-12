@@ -87,11 +87,24 @@ APawn* ASkyrunnerGameMode::SpawnPlayer(const FOnPlayerSpawned OnSpawned,
 	return player;
 }
 
-void ASkyrunnerGameMode::ResetPlayer(APawn* player, AActor* oldCameraObject)
+void ASkyrunnerGameMode::ResetPlayer(APawn* player, AActor* oldCameraObject, bool bFlushInput)
 {
 	auto controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
 	controller->Possess(player);
-	controller->SetInputMode(FInputModeGameOnly());
+
+	if (bFlushInput)
+	{
+		controller->SetInputMode(FInputModeGameOnly());
+	}
+	else
+	{
+		struct FInputModeGameOnlyNoFlush : public FInputModeGameOnly
+		{
+			virtual bool ShouldFlushInputOnViewportFocus() const { return false; };
+		};
+		controller->SetInputMode(FInputModeGameOnlyNoFlush());
+	}
+
 	controller->SetShowMouseCursor(false);
 	if (oldCameraObject)
 		controller->SetViewTarget(oldCameraObject);
