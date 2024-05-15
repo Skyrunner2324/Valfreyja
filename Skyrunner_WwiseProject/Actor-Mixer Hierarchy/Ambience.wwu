@@ -699,11 +699,214 @@
 							</CustomState>
 							<CustomState>
 								<StateRef Name="inMainMenu" ID="{18341FDE-395F-4F6D-B379-4D49483C72B3}"/>
-								<CustomState Name="" ID="{B4B04049-A638-489B-A096-56635DDEF9A0}" ShortID="1047158444">
+								<CustomState Name="" ID="{B4B04049-A638-489B-A096-56635DDEF9A0}" ShortID="1047158444"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+				</ActorMixer>
+				<ActorMixer Name="AmbienceMainMenuMixer" ID="{1C2088CC-9C71-483B-8F42-9299B72B4912}" ShortID="701652675">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="AmbienceMainMenu" ID="{A80EC0C5-B947-443D-81C3-BA5A81C2AA2C}" ShortID="609259474">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ambiance_wind_trees" ID="{4591C7D6-BC53-422E-9C24-B7A48DDE622F}" ShortID="669863232">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ambiance_wind_trees" ID="{72AB3B74-1C5C-4D4C-A64B-4A154B0CDCD4}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\ambiance_wind_trees.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="210933079"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ambiance_wind_trees" ID="{72AB3B74-1C5C-4D4C-A64B-4A154B0CDCD4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ambience_mountain_wind" ID="{974DBFF1-087C-4467-874C-1D68058F5F9B}" ShortID="65335040">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ambience_mountain_wind" ID="{E2BE7B20-DA34-4EF2-9985-CFCF346E26CE}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\ambience_mountain_wind.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="799016928"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ambience_mountain_wind" ID="{E2BE7B20-DA34-4EF2-9985-CFCF346E26CE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ambiance_wind_light" ID="{F7E76FA0-FE33-4223-A7CE-6DAC75B88778}" ShortID="912238737">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ambiance_wind_light" ID="{8937CAB8-0375-4511-B8B5-F927F2DFCDED}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\ambiance_wind_light.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="149253133"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ambiance_wind_light" ID="{8937CAB8-0375-4511-B8B5-F927F2DFCDED}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<Sound Name="raven_01" ID="{69864630-0B8E-4966-9EB8-8A7DD59BE578}" ShortID="206578321">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8CA3A1D0-A13A-4D2A-BDF9-3F3BEEE08184}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="raven_01" ID="{93492DE1-AE23-4574-BDB9-18EBD02A5D61}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Ambience\raven_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="637746278"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="raven_01" ID="{93492DE1-AE23-4574-BDB9-18EBD02A5D61}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="GameStatus" ID="{B166225D-6EEC-4395-A414-2DC03ECCF043}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="InGame" ID="{EC4A1A3A-9F40-4265-A536-AB6230BB833D}"/>
+								<CustomState Name="" ID="{9C44C494-C0D9-4D1D-B6B1-240A6373D2A9}" ShortID="985685448">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64" Value="-108"/>
 									</PropertyList>
 								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="InMenu" ID="{B2F321F7-4EE8-4AFD-AE95-8524E71A2A7B}"/>
+								<CustomState Name="" ID="{2BB391B7-8B4E-4749-9305-9C1612AD8568}" ShortID="69134970">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="InFTUE" ID="{B7AE7D30-166A-4B19-9781-BB5E7EC54760}"/>
+								<CustomState Name="" ID="{1069BCC8-83E3-4E9B-A8D3-422299B6C11A}" ShortID="294747241">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="inMainMenu" ID="{18341FDE-395F-4F6D-B379-4D49483C72B3}"/>
+								<CustomState Name="" ID="{F22895B2-5947-4A7D-BB4F-E30A12957504}" ShortID="24036321"/>
 							</CustomState>
 						</CustomStateList>
 					</StateInfo>

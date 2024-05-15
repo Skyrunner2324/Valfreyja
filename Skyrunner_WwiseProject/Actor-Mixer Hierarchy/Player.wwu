@@ -3669,8 +3669,8 @@
 															<Modifier Name="" ID="{8C2A38E2-1BBE-4A8B-809E-D0C4F306468E}">
 																<PropertyList>
 																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="100"/>
-																	<Property Name="Min" Type="Real64" Value="-100"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
 																</PropertyList>
 															</Modifier>
 														</ModifierInfo>
@@ -3684,7 +3684,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-8</Value>
+														<Value>-10</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3817,6 +3817,432 @@
 													</ChildrenList>
 													<ActiveSourceList>
 														<ActiveSource Name="impact_bumper_03" ID="{B4971756-2986-4596-A2CB-F4A825D1CD0B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="voice_land" ID="{537DA311-2656-4559-A007-67F65EA5AD79}" ShortID="773093923">
+											<PropertyList>
+												<Property Name="OverridePriority" Type="bool" Value="True"/>
+												<Property Name="Priority" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="6"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PLYR Feedback" ID="{EAA397D9-9FDF-4DB0-8C66-3E560973EBEC}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="LAND_26" ID="{126F49B5-95CF-482C-B3EA-7EA93B83CC6B}" ShortID="61700659">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="LAND_26" ID="{7F76EF6E-DC1C-4F8A-8895-253C1C06180B}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.360655737704918"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>LAND_26.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="148953074"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="LAND_26" ID="{7F76EF6E-DC1C-4F8A-8895-253C1C06180B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="LAND_27" ID="{544B9FD9-2C59-4AAD-89FE-D6CA1D1251B7}" ShortID="316285672">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="LAND_27" ID="{2D806026-4B18-474E-9B30-37E11A6A9054}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.267213114754098"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>LAND_27.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="146877165"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="LAND_27" ID="{2D806026-4B18-474E-9B30-37E11A6A9054}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="LAND_28" ID="{D5E5CF6E-2DAF-41BF-9830-340F8425B0A9}" ShortID="845733640">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="LAND_28" ID="{3EC117AE-B5E7-4F91-BBFB-61BC90161B8D}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.141256830601093"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>LAND_28.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="899874129"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="LAND_28" ID="{3EC117AE-B5E7-4F91-BBFB-61BC90161B8D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="LAND_29" ID="{B35C1205-C0C1-4821-B6C3-E9A3CC7B7390}" ShortID="932989332">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-130</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="LAND_29" ID="{47A350D3-607F-4042-886B-99927CD54E9F}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.152459016393443"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>LAND_29.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="777584142"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="LAND_29" ID="{47A350D3-607F-4042-886B-99927CD54E9F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="LAND_30" ID="{7BB0E256-46F6-445F-B841-575FA66EA5FC}" ShortID="133278050">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-50</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="LAND_30" ID="{F203B263-1794-4F55-B0FD-894C9897AD21}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.29344262295082"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>LAND_30.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="387463509"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="LAND_30" ID="{F203B263-1794-4F55-B0FD-894C9897AD21}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="LAND_31" ID="{F818150C-CFE5-43D5-8510-AE2B812C8D9D}" ShortID="88200207">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>-50</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="LAND_31" ID="{B39F3F7E-59EF-4901-9457-5878F56B5631}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.209016393442623"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0824964131994262"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>LAND_31.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="113288032"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="LAND_31" ID="{B39F3F7E-59EF-4901-9457-5878F56B5631}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="LAND_34" ID="{7E6C7294-92E3-481B-A0E8-496120184D8E}" ShortID="345816288">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="LAND_34" ID="{9984CC26-E090-4CA1-B26F-FD05767B8DA8}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0819672131147541"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>LAND_34.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="77656098"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="LAND_34" ID="{9984CC26-E090-4CA1-B26F-FD05767B8DA8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="LAND_35" ID="{6C57FEC0-4E51-42A0-B17B-B094ABC3DA7D}" ShortID="346461963">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="LAND_35" ID="{A0160DF1-024A-4A51-97C3-CCA41109A871}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.14207650273224"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>LAND_35.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="758476162"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="LAND_35" ID="{A0160DF1-024A-4A51-97C3-CCA41109A871}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="LAND_36" ID="{45D8037B-24CE-4178-8388-8EDBEB368E86}" ShortID="356257196">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="LAND_36" ID="{93D313C7-B13B-43D8-BA98-0DCA597525C5}">
+															<Language>SFX</Language>
+															<AudioFile>LAND_36.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="280546425"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="LAND_36" ID="{93D313C7-B13B-43D8-BA98-0DCA597525C5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="LAND_37" ID="{FBFF1F0B-67BB-4FD0-861B-77C2A5DB173A}" ShortID="49586175">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="LAND_37" ID="{BE994173-ADFD-49E3-BB8E-7B7C56ED0B8E}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0588531187122736"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.110109289617486"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>LAND_37.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="738363783"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="LAND_37" ID="{BE994173-ADFD-49E3-BB8E-7B7C56ED0B8E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="LAND_38" ID="{93584CF1-81FB-492A-A1CB-696CFDACB14D}" ShortID="1047079398">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="LAND_38" ID="{35F63EF3-A780-4B2B-8083-370A4DCACB9E}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.177868852459016"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>LAND_38.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="508403727"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="LAND_38" ID="{35F63EF3-A780-4B2B-8083-370A4DCACB9E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="LAND_39" ID="{A40D4045-3597-481A-960B-AD6F0E1537A4}" ShortID="825445806">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="LAND_39" ID="{64D156C7-AF59-49A8-BF6A-2CA0E3FFB9C0}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0551643192488263"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.145355191256831"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0997652582159625"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>LAND_39.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="893342093"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="LAND_39" ID="{64D156C7-AF59-49A8-BF6A-2CA0E3FFB9C0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="LAND_40" ID="{F00C6F8E-B869-4DD5-869C-03C78E93B41E}" ShortID="11878414">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="LAND_40" ID="{FFEA4217-561E-4849-993B-072DB2BB6999}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0729376257545271"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.223360655737705"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>LAND_40.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="599692893"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="LAND_40" ID="{FFEA4217-561E-4849-993B-072DB2BB6999}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
@@ -8451,7 +8877,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+													<ObjectRef Name="SlowMotion_NonAffected" ID="{61AB3DD8-DD98-4ACB-893F-5E71BD5AEDA5}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -8566,7 +8992,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+													<ObjectRef Name="SlowMotion_NonAffected" ID="{61AB3DD8-DD98-4ACB-893F-5E71BD5AEDA5}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -8642,6 +9068,120 @@
 										</ObjectList>
 									</ObjectLists>
 								</BlendContainer>
+								<Sound Name="ambiance_wind_heavy" ID="{AB4B8399-689A-4C0C-995A-79681521D046}" ShortID="711448749">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>30</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{CC08D705-E217-4F80-A566-0FC320C49FB2}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="200"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-20</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{CCB11BB0-FC10-4407-83B9-36556734E396}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SlowMotion_NonAffected" ID="{61AB3DD8-DD98-4ACB-893F-5E71BD5AEDA5}" WorkUnitID="{05960EF2-846C-4440-B200-DA936247A2CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ambiance_wind_heavy" ID="{DA972FE7-3CFD-4956-8D8C-7F248E6E0C8D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.458558365139949"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.183423346055982"/>
+												<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="23.5738025925776"/>
+												<Property Name="TrimEnd" Type="Real64" Value="49.0657450699746"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Ambience\ambiance_wind_heavy.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="596986241"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{30E9957F-7908-4410-859D-FB7E736DA3D0}" ShortID="497451356">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="RTPC_SlowMo" ID="{00FBE171-C3D7-472E-B9A1-2FBE705B470A}" WorkUnitID="{389B2961-7BF7-4743-B6DA-F786C8031F16}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{7415BF97-FE7A-4CC9-981B-4731F40AC74C}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>-1</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																				<SegmentShape>Exp3</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>-0.05</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp3</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Log2</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>0.05</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp3</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="ambiance_wind_heavy" ID="{DA972FE7-3CFD-4956-8D8C-7F248E6E0C8D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 						<BlendContainer Name="player_hit" ID="{F2FA2740-C390-4EE0-8FB9-ED60F071D1B8}" ShortID="221341882">
@@ -11439,6 +11979,8 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="voice_land" ID="{6422A158-190B-46AF-A96F-D35072DC067C}" ShortID="894895673">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="OverridePriority" Type="bool" Value="True"/>
 								<Property Name="Priority" Type="int16">
 									<ValueList>

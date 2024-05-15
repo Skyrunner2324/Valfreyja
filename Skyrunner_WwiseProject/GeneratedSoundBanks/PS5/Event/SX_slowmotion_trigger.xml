@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="PS5" BasePlatform="PS5" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="911678423" Type="Event" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" Language="SFX" Hash="{332F25C5-2749-1663-B29B-0D59A56C44F9}">
+		<SoundBank Id="911678423" Type="Event" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" Language="SFX" Hash="{C155E03E-DEFD-FF05-2F91-190D80A3E16F}">
 			<ObjectPath>SX_slowmotion_trigger</ObjectPath>
 			<ShortName>SX_slowmotion_trigger</ShortName>
 			<Path>Event/SX_slowmotion_trigger.bnk</Path>
@@ -21,6 +21,11 @@
 					<Path>Media/336499936.wem</Path>
 					<CachePath>SFX/slowmo_random_02_755F56E2.wem</CachePath>
 				</File>
+				<File Id="596986241" Language="SFX" Streaming="false" Location="Loose">
+					<ShortName>Ambience\ambiance_wind_heavy.wav</ShortName>
+					<Path>Media/596986241.wem</Path>
+					<CachePath>SFX/Ambience/ambiance_wind_heavy_851B0ECC.wem</CachePath>
+				</File>
 				<File Id="731755744" Language="SFX" Streaming="false" Location="Loose">
 					<ShortName>slowmo_tictac.wav</ShortName>
 					<Path>Media/731755744.wem</Path>
@@ -33,11 +38,12 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="911678423" Name="SX_slowmotion_trigger" ObjectPath="\Events\Slowmotion\SX_slowmotion_trigger" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" DurationType="OneShot" DurationMin="4.2042084" DurationMax="4.2042084">
+				<Event Id="911678423" Name="SX_slowmotion_trigger" ObjectPath="\Events\Slowmotion\SX_slowmotion_trigger" GUID="{2CA54BC4-90CA-4B42-9465-B41131C52A7C}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="81565075"/>
 						<MediaRef Id="330224296"/>
 						<MediaRef Id="336499936"/>
+						<MediaRef Id="596986241"/>
 						<MediaRef Id="731755744"/>
 						<MediaRef Id="1020341242"/>
 					</MediaRefs>
@@ -48,5 +54,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0D5B5084-A8E7-A311-F8BA-1462BA5D06DB}</FileHash>
+	<FileHash>{6F8C2713-19A0-55A6-4C8B-2AA3CF43731B}</FileHash>
 </SoundBanksInfo>
